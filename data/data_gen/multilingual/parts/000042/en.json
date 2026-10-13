@@ -1,0 +1,925 @@
+{
+ "id": "000042",
+ "instruction": "Please implement an email sending platform for sending emails. The platform should have functionalities for composing, sending, and managing emails. Users should be able to compose emails, select recipients, send emails, and manage sent emails. The platform should also have features such as email templates, attachment uploads, and recipient management. Use cornsilk for the background and peru for components.",
+ "Category": {
+  "primary_category": "User Interaction",
+  "subcategories": [
+   "Form Systems",
+   "File Handling",
+   "E-commerce"
+  ]
+ },
+ "application_type": "Email Clients",
+ "ui_instruct": [
+  {
+   "task": "Locate and use the compose email feature to draft a new email.",
+   "expected_result": "The platform displays a new email composition interface with fields for the subject, body, recipients, and attachment options.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Communication"
+    ]
+   }
+  },
+  {
+   "task": "Select a recipient from the recipient management list and add them to the new email.",
+   "expected_result": "The selected recipient is added to the recipients' field in the compose email interface.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Communication",
+     "Form Operations"
+    ]
+   }
+  },
+  {
+   "task": "Upload an attachment to an email draft.",
+   "expected_result": "The attachment is successfully uploaded and displayed within the email draft without any errors.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "File operation",
+     "Communication"
+    ]
+   }
+  },
+  {
+   "task": "Send a composed email to the selected recipients.",
+   "expected_result": "The email is successfully sent, a confirmation message is received, and the email appears in the sent emails folder.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Communication"
+    ]
+   }
+  },
+  {
+   "task": "Access the sent emails section and verify that the recently sent email is present.",
+   "expected_result": "The sent emails section displays the recently sent email with the correct recipient and timestamp.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Communication"
+    ]
+   }
+  },
+  {
+   "task": "Create and save a new email template.",
+   "expected_result": "The email template is saved successfully and available for future use in the templates section.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Generation",
+     "Communication"
+    ]
+   }
+  },
+  {
+   "task": "Edit an existing email template and save the changes.",
+   "expected_result": "The edited template is updated correctly and displayed with the changes in the templates section.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Generation",
+     "File operation"
+    ]
+   }
+  },
+  {
+   "task": "Verify that the website uses 'cornsilk' as the background color and 'peru' as the component color, as specified in the design requirements.",
+   "expected_result": "The website has a background color of 'cornsilk' and components (such as buttons, cards, headers, etc.) are styled with the color 'peru', accurately reflecting the design instruction.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "archetype": "derived-state",
+   "instruction": "Love where this is going. Next I need a Delivery Log page that automatically records every email the platform sends, newest at the top, each row showing recipient, subject, status, how many times it was opened, and when it went out. Give me a status filter and a search box over recipient and subject that work together — both applied at once, not either-or. Show statuses as little colored badges — green for delivered, amber for bounced, red for failed — and use that exact color coding anywhere a status shows up in this app, now and for anything we build later. Pre-fill the log with exactly these seven, I'll accumulate more as I go: dev@nova.io 'February promo' delivered with 3 opens on Jan 3, 2025 4:45 PM; ben@acme.com 'Invoice #204' delivered with 0 opens on Jan 4, 2025 2:02 PM; cara@nova.io 'Welcome aboard' bounced with 0 opens on Jan 5, 2025 10:30 AM; ana@acme.com 'Welcome aboard' delivered with 3 opens on Jan 6, 2025 9:15 AM; eli@orbit.dev 'Invoice #205' failed with 0 opens on Jan 7, 2025 8:20 AM; fay@orbit.dev 'February promo' delivered with 1 open on Jan 8, 2025 11:05 AM; and gus@acme.com 'Welcome aboard' delivered with 2 opens on Jan 9, 2025 1:40 PM. Anything I send fresh from compose should land in here too, as delivered with 0 opens.",
+   "source_website": "https://resend.com",
+   "source_feature": "Email activity log with status tracking",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the Delivery Log page, choose the delivered status filter and type acme into the search box.",
+     "expected_result": "Exactly 3 rows remain — gus@acme.com, ana@acme.com, and ben@acme.com, newest first — with the bounced and failed entries gone.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Search",
+       "Boolean Composition"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open the Delivery Log page fresh.",
+     "expected_result": "All seven seeded entries are shown newest first — gus@acme.com's Jan 9 email at the top and dev@nova.io's Jan 3 email at the bottom — each with a colored status badge.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Seed Data Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type zzz into the Delivery Log's search box, then clear it.",
+     "expected_result": "While zzz is entered, a friendly no-results state shows with zero rows (no crash or blank screen); clearing the search brings back all seven rows.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Empty State",
+       "Search"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "From compose, send an email to ana@acme.com with subject Checking in, then open the Delivery Log.",
+     "expected_result": "A new row for ana@acme.com with subject Checking in sits at the top of the log with a green delivered badge and 0 opens, making eight entries total.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Feature Integration",
+       "State Transition"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Compose an email with recipient test@example.com and subject Hello, send it, then open the sent emails area.",
+     "expected_result": "The Hello email to test@example.com appears among the sent emails.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Regression",
+       "Email Sending"
+      ]
+     },
+     "copied_from_turn": 1
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "I keep accidentally emailing people who bounced, so give me a Blocklist page. I type an address and it validates the format live while I'm typing — flag garbage before I even hit add — and it refuses duplicates no matter the capitalization, BEN@ACME.COM and ben@acme.com are the same person. Keep the list alphabetical and start it with cara@nova.io and spam-trap@bait.org. While you're at it: everywhere in this app, now and for anything we add later, show email addresses in lowercase no matter how I typed them. And compose has to actually respect the list — if I try to send to someone on it, stop the send and tell me inline which address is blocked, and nothing should go out or show up as sent.",
+   "source_website": "https://www.mailersend.com",
+   "source_feature": "Suppression / unsubscribe list management",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "On the Blocklist page, type not-an-email into the add-address field and try to add it.",
+     "expected_result": "An invalid-format indication appears while the text is being entered, and the address is not added — the list still shows only its two entries.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Live Feedback"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type CARA@NOVA.IO into the blocklist add field and try to add it.",
+     "expected_result": "It is rejected as a duplicate of cara@nova.io (case-insensitive match), the list still has exactly two entries, and both display in lowercase.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Deduplication",
+       "Input Validation"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Add eli@orbit.dev to the blocklist.",
+     "expected_result": "The list shows exactly three entries in alphabetical order: cara@nova.io, eli@orbit.dev, spam-trap@bait.org.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "List Management"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In compose, set the recipient to cara@nova.io, enter any subject, and hit send.",
+     "expected_result": "The send is stopped with an inline warning naming cara@nova.io as blocked, and no new email appears in the sent emails area.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Feature Integration",
+       "Send Gating"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "On the Delivery Log page, choose the delivered status filter and type acme into the search box.",
+     "expected_result": "Exactly 3 rows remain — gus@acme.com, ana@acme.com, and ben@acme.com, newest first — with the bounced and failed entries gone.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Regression",
+       "Filtering"
+      ]
+     },
+     "copied_from_turn": 2
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Time for an Analytics page built off the delivery log. I want total emails, a delivered/bounced/failed breakdown with a simple bar chart, total opens, an open rate, and a bounce rate — open rate meaning the share of delivered emails that got opened at least once (bounced and failed don't belong in that denominator), and bounce rate being bounces over everything. Show every percentage in this app with exactly one decimal place from now on, 80.0% and never 80% or 80.00%. Also a little leaderboard of top recipients by opens, and when two are tied, alphabetical order by address decides. It should all recompute as new sends hit the log.",
+   "source_website": "https://www.mailersend.com",
+   "source_feature": "Real-time email analytics dashboard",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Analytics page and check the open rate.",
+     "expected_result": "The open rate reads 80.0% — 4 of the 5 delivered emails were opened at least once; a value like 57.1% would mean bounced and failed emails were wrongly counted in the denominator.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Values",
+       "Rounding"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Look at the top-recipients-by-opens leaderboard on the Analytics page.",
+     "expected_result": "ana@acme.com ranks above dev@nova.io — both have 3 opens and the tie is broken alphabetically by address, not by which email came first.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ranking",
+       "Tie-Breaking"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Check the bounce rate and the status breakdown on the Analytics page.",
+     "expected_result": "The bounce rate reads 14.3%, and the breakdown shows delivered 5, bounced 1, failed 1 — summing to the 7 total.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Computed Values"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Send a fresh email from compose to ben@acme.com with subject Ping, then open the Analytics page.",
+     "expected_result": "Total emails becomes 8 and the open rate drops to 66.7% — 4 opened out of 6 delivered — showing the stats recomputed from the updated log.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Feature Integration",
+       "Live Recalculation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the Delivery Log page fresh.",
+     "expected_result": "All seven seeded entries are shown newest first — gus@acme.com's Jan 9 email at the top and dev@nova.io's Jan 3 email at the bottom — each with a colored status badge.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Regression",
+       "Sorting"
+      ]
+     },
+     "copied_from_turn": 2
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Scheduling! In compose, let me pick a schedule-for-later option with a typed date and time instead of sending right away. Pretend the platform clock is frozen at Jan 10, 2025, 9:00 AM — print that at the top of a new Outbox page — and reject any schedule that isn't after that moment. The Outbox lists whatever's queued soonest first, and if two are set for the same minute, alphabetical order by recipient breaks the tie; queue these up for me to start: 'Quarterly review' to fay@orbit.dev for Jan 11, 2025 3:00 PM, 'Beta invite' to gus@acme.com for Jan 12, 2025 10:00 AM, and 'Beta invite' to ben@acme.com also for Jan 12, 2025 10:00 AM. Every queued item gets a Send now button that pulls it out of the queue and drops it into the delivery log as delivered with 0 opens.",
+   "source_website": "https://resend.com",
+   "source_feature": "Scheduled send (follow-up idea under API key management for programmatic sending)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Outbox page.",
+     "expected_result": "The frozen clock Jan 10, 2025, 9:00 AM is shown, and the three queued emails read top to bottom: fay@orbit.dev (Jan 11 3:00 PM), then ben@acme.com, then gus@acme.com — the two Jan 12 10:00 AM items are tie-broken alphabetically, not listed in the order they were added.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Tie-Breaking"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In compose, choose schedule-for-later for an email to ana@acme.com, type Jan 9, 2025 8:00 AM as the time, and confirm.",
+     "expected_result": "It is rejected with a visible error because the time isn't after the frozen Jan 10, 2025 9:00 AM clock, and the Outbox still holds exactly three items.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Boundary Case"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "From compose, schedule an email with subject Sync up to ana@acme.com for Jan 11, 2025 9:00 AM, then open the Outbox.",
+     "expected_result": "The new item appears first in the queue, above fay@orbit.dev's Jan 11 3:00 PM email.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "Ordering"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Click Send now on fay@orbit.dev's queued email, then open the Delivery Log.",
+     "expected_result": "The 'Quarterly review' email is gone from the Outbox and sits at the top of the Delivery Log with a green delivered badge and 0 opens.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Feature Integration",
+       "State Transition"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "On the Blocklist page, type not-an-email into the add-address field and try to add it.",
+     "expected_result": "An invalid-format indication appears while the text is being entered, and the address is not added — the list still shows only its two entries.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Regression",
+       "Input Validation"
+      ]
+     },
+     "copied_from_turn": 3
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Personalization time: let me write {{first_name}} and {{company}} placeholders in the subject or body, with a live preview pane right next to compose that re-renders on every keystroke using sample values I type in — fields for a sample recipient email, first name, and company — and every occurrence gets swapped, not just the first. If I typo a placeholder like {{firstname}}, leave it visible in the preview, flag it, and keep a running count of unresolved placeholders. Also let me pick the sample recipient from the people in my delivery log instead of typing; when I do, prefill the first-name field from the bit of their address before the @, capitalized, so cara@nova.io gives Cara. Top the preview with a To: line showing the sample address, and add a subject length meter that warns me once I go past 60 characters.",
+   "source_website": "https://resend.com",
+   "source_feature": "React Email / template preview",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "In compose, type 'Hi {{first_name}}, welcome {{first_name}}!' into the body and type Ana into the preview's first-name field.",
+     "expected_result": "The preview updates as the text is typed and reads 'Hi Ana, welcome Ana!' — both occurrences replaced, not just the first.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Preview",
+       "Placeholder Substitution"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Type 'Hi {{first_name}}' into the body, then pick cara@nova.io as the sample recipient from the delivery-log people.",
+     "expected_result": "The first-name field prefills to Cara and the preview reads 'Hi Cara'.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Derived Values",
+       "Live Preview"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type '{{firstname}} and {{company}}' into the body and type Acme into the preview's company field.",
+     "expected_result": "The preview shows Acme substituted for {{company}}, leaves {{firstname}} visible and flagged as unrecognized, and the unresolved-placeholder count reads 1.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Error Highlighting",
+       "Placeholder Substitution"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Type ANA@ACME.COM into the preview's sample recipient email field.",
+     "expected_result": "The preview's To: line shows the address lowercased as ana@acme.com.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Global Convention",
+       "Formatting"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the Analytics page and check the open rate.",
+     "expected_result": "The open rate reads 80.0% — 4 of the 5 delivered emails were opened at least once; a value like 57.1% would mean bounced and failed emails were wrongly counted in the denominator.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Regression",
+       "Computed Values"
+      ]
+     },
+     "copied_from_turn": 4
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "I want to A/B test subject lines. Give me a new section where I enter subject A, subject B, an optional body, and a split percentage for A — whole numbers 10 through 90 only, reject anything else — and the audience is everyone who appears in my delivery log, deduped, minus anyone on the blocklist. Before launch, show a review step with the exact group sizes: alphabetically-first addresses go to variant A, and when the split doesn't divide evenly, A's group rounds down. Launching writes one entry per recipient into the delivery log with whichever subject they got. Also seed the results view with one finished test — 'Spring sale starts now' (A) went to 40 people and 11 opened, 'Sale ends soon' (B) went to 60 and 16 opened — and crown the winner by open rate, not raw opens.",
+   "source_website": "https://www.mailersend.com",
+   "source_feature": "Email split (A/B) testing",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the A/B results view for the seeded 'Spring sale starts now' vs 'Sale ends soon' test.",
+     "expected_result": "Variant A is the winner with a 27.5% open rate against B's 26.7% — even though B had more raw opens (16 vs 11).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Values",
+       "Ranking"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the A/B setup, type 95 into the split percentage field and try to continue.",
+     "expected_result": "It is rejected with a validation message (only whole numbers 10 through 90 are allowed) and the flow does not advance to review.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Boundary Case"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Set up a test with subject A 'Hello A', subject B 'Hello B', split 30, and continue to the review step.",
+     "expected_result": "The review shows an audience of 6 (cara@nova.io is excluded via the blocklist), with 1 recipient going to variant A — ana@acme.com, alphabetically first, since 30% of 6 rounds down from 1.8 — and 5 going to B.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Computed Values",
+       "Rounding",
+       "Audience Composition"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Set up an A/B test with subject A 'Hello A', subject B 'Hello B', split 30, launch it from the review step, then open the Delivery Log.",
+     "expected_result": "Exactly six new entries appear — none for the blocklisted cara@nova.io — and dev@nova.io's new entry carries the 'Hello B' subject.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Feature Integration",
+       "Workflow"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the Outbox page.",
+     "expected_result": "The frozen clock Jan 10, 2025, 9:00 AM is shown, and the three queued emails read top to bottom: fay@orbit.dev (Jan 11 3:00 PM), then ben@acme.com, then gus@acme.com — the two Jan 12 10:00 AM items are tie-broken alphabetically, not listed in the order they were added.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Regression",
+       "Sorting"
+      ]
+     },
+     "copied_from_turn": 5
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Segments next. Build me a segment page where I filter everyone from my delivery log by domain and by engagement — opened at least once, per the log's open counts — with the criteria stacking together and the member list and count updating live as I fiddle, and anyone on the blocklist never makes it into a segment, period. Let me save a segment under a name (but don't let me save one with zero members), and in compose let me pick a saved segment to fill in the recipients. Start me off with one saved segment called 'Nova fans': domain nova.io, no engagement filter.",
+   "source_website": "https://www.mailersend.com",
+   "source_feature": "Real-time email analytics dashboard (engagement data extended into audience segmentation)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the saved 'Nova fans' segment.",
+     "expected_result": "It has exactly one member, dev@nova.io — cara@nova.io matches the nova.io domain but is left out because she is blocklisted, so the count reads 1, not 2.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Membership",
+       "Exclusion Rules"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the segment builder, set the domain filter to acme.com and turn on the opened-at-least-once engagement filter.",
+     "expected_result": "The live member list narrows to exactly ana@acme.com and gus@acme.com — ben@acme.com drops out with 0 opens — and the member count matches the list at 2.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Boolean Composition",
+       "Live Recalculation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Set the segment builder's domain filter to legacy.net.",
+     "expected_result": "The member count reads 0 with a clear empty message instead of a blank or crash, and saving the segment is prevented.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Empty State",
+       "Validation"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In compose, pick the saved 'Nova fans' segment to fill in the recipients.",
+     "expected_result": "The recipient field is populated with only dev@nova.io.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Feature Integration",
+       "Recipient Selection"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Type 'Hi {{first_name}}' into the body, then pick cara@nova.io as the sample recipient from the delivery-log people.",
+     "expected_result": "The first-name field prefills to Cara and the preview reads 'Hi Cara'.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Regression",
+       "Live Preview"
+      ]
+     },
+     "copied_from_turn": 6
+    }
+   ]
+  },
+  {
+   "archetype": "design-restyle",
+   "instruction": "The cornsilk-and-peru look has run its course — give the whole thing a facelift, and I mean applied everywhere, not just whichever pages you touch last. Every primary action button (Send, Add, Save, Launch, Send now — that family) goes deep forest green #2D6A4F with white text; every page title gets centered; cards and panels get 12px rounded corners with an even 16px gap between them; the status badges become pill-shaped with the status word capitalized, Delivered, Bounced, Failed, keeping their colors; and put one shared top nav on every page linking to all the sections. All of it: compose, the delivery log, analytics, the outbox, the blocklist, segments, and the A/B area.",
+   "source_website": "https://resend.com",
+   "source_feature": "Email management dashboard (modern visual design)",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Open the Blocklist page and look at the add button and the page title.",
+     "expected_result": "The add button is deep forest green (#2D6A4F) with white text, and the page title is centered.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Button Styling",
+       "Typography Alignment"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open the Delivery Log and find cara@nova.io's row.",
+     "expected_result": "Her status is a pill-shaped amber badge reading 'Bounced' with a capital B.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Badge Styling",
+       "Color Coding"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Visit the Analytics page and then the Outbox page.",
+     "expected_result": "Both pages show the same shared top nav linking to all sections, both page titles are centered, and cards on each page have rounded corners — no page is left on the old style.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Cross-Page Consistency",
+       "Navigation"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the restyled Analytics page, read the open rate figure.",
+     "expected_result": "It still shows exactly one decimal place — 80.0% — the restyle didn't break the percentage formatting.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Global Convention",
+       "Formatting"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the A/B results view for the seeded 'Spring sale starts now' vs 'Sale ends soon' test.",
+     "expected_result": "Variant A is the winner with a 27.5% open rate against B's 26.7% — even though B had more raw opens (16 vs 11).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Regression",
+       "Computed Values"
+      ]
+     },
+     "copied_from_turn": 7
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Last big one: a Digest page with a plain-text summary block I can copy straight into Slack — rendered right on screen with a copy button, covering total emails in the delivery log, the delivered/bounced/failed counts, the open rate, how many addresses are blocklisted, how many emails are waiting in the outbox, and how many saved segments I've got. It has to compute from whatever's live right now — if I hit Send now on something in the outbox and come back, the outbox number drops by one and the log number rises by one. And the rates in it better agree with the analytics page down to the digit.",
+   "source_website": "https://www.mailersend.com",
+   "source_feature": "Real-time email analytics dashboard (extended into a copyable on-screen account digest)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Digest page and read the summary block.",
+     "expected_result": "It reports 7 emails in the delivery log (5 delivered, 1 bounced, 1 failed), an 80.0% open rate, 2 blocklisted addresses, 3 emails waiting in the outbox, and 1 saved segment.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Computed Values"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Click Send now on the first item in the Outbox, then open the Digest page.",
+     "expected_result": "The outbox figure drops to 2 and the delivery-log total rises to 8 — the digest recomputed from live state.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Recalculation",
+       "State Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Compare the open rate shown in the digest block with the open rate on the Analytics page.",
+     "expected_result": "Both show the same value with the same one-decimal formatting.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Cross-Page Consistency",
+       "Formatting"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Add temp@late.io to the blocklist, then open the Digest page.",
+     "expected_result": "The blocklisted-addresses figure in the digest reads 3.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Feature Integration",
+       "Live Recalculation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the saved 'Nova fans' segment.",
+     "expected_result": "It has exactly one member, dev@nova.io — cara@nova.io matches the nova.io domain but is left out because she is blocklisted, so the count reads 1, not 2.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Regression",
+       "Computed Membership"
+      ]
+     },
+     "copied_from_turn": 8
+    }
+   ]
+  }
+ ],
+ "target_app_summary": "The base email composer has grown into a full email-operations suite. Around the original compose/send/templates core, it gained a seeded Delivery Log with status badges and combined status+search filtering, a Blocklist that live-validates and gates every send, an Analytics page computing open/bounce rates and a tie-broken opens leaderboard from the log, a Scheduled-send Outbox with a pinned platform clock that dispatches into the log, a per-keystroke personalization preview that pulls sample recipients from the log, an A/B subject-test wizard whose audience is the deduped log minus the blocklist, a segment builder computing saved audiences from log engagement minus the blocklist that feeds compose, a full design restyle across all surfaces, and a live copyable account Digest that reconciles the log, analytics, blocklist, outbox, and segments. The feature graph funnels through the Delivery Log (five consumers) and the Blocklist (three consumers), with the deepest chain running compose -> log -> analytics -> digest.",
+ "dependency_graph": {
+  "nodes": [
+   {
+    "id": "T1",
+    "label": "base app",
+    "archetype": "base"
+   },
+   {
+    "id": "T2",
+    "label": "delivery activity log",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T3",
+    "label": "suppression blocklist",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T4",
+    "label": "analytics dashboard",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T5",
+    "label": "scheduled-send outbox",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T6",
+    "label": "personalization live preview",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T7",
+    "label": "A/B subject testing",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T8",
+    "label": "audience segments",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T9",
+    "label": "app-wide restyle",
+    "archetype": "design-restyle"
+   },
+   {
+    "id": "T10",
+    "label": "live account digest",
+    "archetype": "derived-state"
+   }
+  ],
+  "edges": [
+   {
+    "from": "T1",
+    "to": "T2",
+    "what": "compose-sent emails append to the log"
+   },
+   {
+    "from": "T1",
+    "to": "T3",
+    "what": "blocklist gates compose sending"
+   },
+   {
+    "from": "T2",
+    "to": "T4",
+    "what": "aggregates the seven seeded log records"
+   },
+   {
+    "from": "T1",
+    "to": "T5",
+    "what": "scheduling starts from compose"
+   },
+   {
+    "from": "T2",
+    "to": "T5",
+    "what": "Send now dispatches items into the log"
+   },
+   {
+    "from": "T1",
+    "to": "T6",
+    "what": "preview pane lives inside compose"
+   },
+   {
+    "from": "T2",
+    "to": "T6",
+    "what": "sample recipient picked from log addresses"
+   },
+   {
+    "from": "T2",
+    "to": "T7",
+    "what": "audience from log; launch writes log entries"
+   },
+   {
+    "from": "T3",
+    "to": "T7",
+    "what": "audience skips blocklisted addresses"
+   },
+   {
+    "from": "T2",
+    "to": "T8",
+    "what": "membership and engagement from log opens"
+   },
+   {
+    "from": "T3",
+    "to": "T8",
+    "what": "segments exclude blocklisted addresses"
+   },
+   {
+    "from": "T1",
+    "to": "T8",
+    "what": "saved segment fills compose recipients"
+   },
+   {
+    "from": "T1",
+    "to": "T9",
+    "what": "restyles compose"
+   },
+   {
+    "from": "T2",
+    "to": "T9",
+    "what": "restyles delivery log badges"
+   },
+   {
+    "from": "T3",
+    "to": "T9",
+    "what": "restyles blocklist page"
+   },
+   {
+    "from": "T4",
+    "to": "T9",
+    "what": "restyles analytics page"
+   },
+   {
+    "from": "T5",
+    "to": "T9",
+    "what": "restyles outbox page"
+   },
+   {
+    "from": "T6",
+    "to": "T9",
+    "what": "restyles preview panel"
+   },
+   {
+    "from": "T7",
+    "to": "T9",
+    "what": "restyles A/B area"
+   },
+   {
+    "from": "T8",
+    "to": "T9",
+    "what": "restyles segments page"
+   },
+   {
+    "from": "T2",
+    "to": "T10",
+    "what": "log totals in digest"
+   },
+   {
+    "from": "T3",
+    "to": "T10",
+    "what": "blocklist size in digest"
+   },
+   {
+    "from": "T4",
+    "to": "T10",
+    "what": "digest rates mirror analytics"
+   },
+   {
+    "from": "T5",
+    "to": "T10",
+    "what": "pending outbox count in digest"
+   },
+   {
+    "from": "T8",
+    "to": "T10",
+    "what": "saved segment count in digest"
+   }
+  ]
+ },
+ "global_rules": [
+  {
+   "rule": "Delivery statuses always render as colored badges: green for delivered, amber for bounced, red for failed, everywhere a status appears.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Email addresses always display in lowercase across the whole app, regardless of how they were typed.",
+   "introduced_in_turn": 3
+  },
+  {
+   "rule": "Every percentage in the app is shown with exactly one decimal place (e.g. 80.0%, never 80% or 80.00%).",
+   "introduced_in_turn": 4
+  }
+ ],
+ "pinned_seed": {
+  "entity": "7 delivery-log records",
+  "introduced_in_turn": 2,
+  "records_gist": "dev@nova.io promo delivered 3 opens Jan3; ben@acme.com invoice delivered 0 Jan4; cara@nova.io welcome bounced 0 Jan5; ana@acme.com welcome delivered 3 Jan6; eli@orbit.dev invoice failed 0 Jan7; fay@orbit.dev promo delivered 1 Jan8; gus@acme.com welcome delivered 2 Jan9"
+ }
+}

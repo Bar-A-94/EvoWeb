@@ -1,0 +1,575 @@
+{
+  "index": 11,
+  "status": "success",
+  "model": "anthropic/claude-haiku-4-5-20251001",
+  "generator": "openhands",
+  "base_trajectory": {
+    "source": "none",
+    "messages": 0
+  },
+  "artifacts": {
+    "zip": null,
+    "run_json": null,
+    "generator": "openhands",
+    "screenshots": [
+      "/output/000011/screenshots/task000011_0.png",
+      "/output/000011/screenshots/task000011_1.png",
+      "/output/000011/screenshots/task000011_2.png",
+      "/output/000011/screenshots/task000011_3.png"
+    ],
+    "output_dir": "/output/000011"
+  },
+  "ladder": {
+    "turns_expected": 10,
+    "turns_completed": 10,
+    "complete": true
+  },
+  "eval_model": "claude-sonnet-4-6",
+  "accuracy": 81.6,
+  "yes": 39,
+  "partial": 2,
+  "no": 8,
+  "total": 49,
+  "tasks": [
+    {
+      "task_idx": 0,
+      "task": "Navigate to the technical articles section using the main navigation menu.",
+      "expected": "The technical articles section loads correctly, displaying available articles with a clear and accessible layout.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 1,
+      "task": "Use the search functionality to find a specific technical topic.",
+      "expected": "Relevant search results are displayed matching the query, and the results are relevant to technical information.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 2,
+      "task": "Open a technical article and verify its content.",
+      "expected": "The article loads without errors and the content displayed is technical in nature, accurate, and complete based on the article’s title.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 3,
+      "task": "Verify that the website uses 'lavender' as the background color and 'indigo' as the component color, as specified in the design requirements.",
+      "expected": "The website has a background color of 'lavender' and components (such as buttons, cards, headers, etc.) are styled with the color 'indigo', accurately reflecting the design instruction.",
+      "verdict": "no"
+    }
+  ],
+  "turns": [
+    {
+      "turn": 1,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": false,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Navigate to the technical articles section using the main navigation menu.",
+          "expected": "The technical articles section loads correctly, displaying available articles with a clear and accessible layout.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Use the search functionality to find a specific technical topic.",
+          "expected": "Relevant search results are displayed matching the query, and the results are relevant to technical information.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open a technical article and verify its content.",
+          "expected": "The article loads without errors and the content displayed is technical in nature, accurate, and complete based on the article’s title.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Verify that the website uses 'lavender' as the background color and 'indigo' as the component color, as specified in the design requirements.",
+          "expected": "The website has a background color of 'lavender' and components (such as buttons, cards, headers, etc.) are styled with the color 'indigo', accurately reflecting the design instruction.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 3,
+      "partial": 0,
+      "no": 1,
+      "total": 4,
+      "accuracy": 75.0,
+      "cost": {
+        "generation_usd": 0.116128,
+        "model_calls": 12,
+        "input_tokens_total": 259011,
+        "output_tokens": 11509,
+        "judge_usd": 0.1794
+      }
+    },
+    {
+      "turn": 2,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "In the article screener, set the category control to Web Development and click the #performance tag chip.",
+          "expected": "Exactly two articles remain: Taming React Re-renders and Debugging Memory Leaks in Node. SQL Indexing Demystified (which has #performance but lives in Databases) is NOT listed.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "With no filters applied, set the sort control to this week's views.",
+          "expected": "Debugging Memory Leaks in Node appears above Intro to Binary Trees — both have 540 views this week and the tie breaks alphabetically by title — with Taming React Re-renders (320) next.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Set the category to Databases, save the current filter combo under the name 'db picks', change the category to Algorithms, then recall the 'db picks' preset.",
+          "expected": "Recalling the preset restores the category control to Databases and the list again shows only SQL Indexing Demystified.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Set the category control to Networking, then click the one remaining article.",
+          "expected": "Only Understanding TCP Handshakes matches the filter, and clicking it opens its article detail page with the article's content.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Type 'SQL' into the site's search.",
+          "expected": "Search results include the article SQL Indexing Demystified.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 4,
+      "partial": 0,
+      "no": 1,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.167146,
+        "model_calls": 9,
+        "input_tokens_total": 392502,
+        "output_tokens": 15217,
+        "judge_usd": 0.3111
+      }
+    },
+    {
+      "turn": 3,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the Understanding TCP Handshakes article, click the 🔥 reaction, then click 🔥 again.",
+          "expected": "After the first click the 🔥 count goes from 0 to 1 and the combined total from 2 to 3, updating immediately; the second click returns them to 0 and 2.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the SQL Indexing Demystified article detail page and look at its reaction bar.",
+          "expected": "It shows 💡 30, 🔥 2, 🤯 1 with a combined total of 33.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "From the article list, click 💡 on the Intro to Binary Trees card, then open that article's detail page.",
+          "expected": "The card's combined total went from 7 to 8 the moment you clicked, and the detail page shows the same updated numbers (💡 5, total 8) — card and detail stay in sync.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the article screener, set the category control to Web Development and click the #api tag chip, then look at the reaction numbers on the one remaining article.",
+          "expected": "Only REST vs GraphQL matches, and its card shows the seeded reactions 💡 20, 🔥 5, 🤯 15 with a combined total of 40 — the screener's filtered cards carry the same live reaction bar as the rest of the app.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the article screener, set the category control to Web Development and click the #performance tag chip.",
+          "expected": "Exactly two articles remain: Taming React Re-renders and Debugging Memory Leaks in Node. SQL Indexing Demystified (which has #performance but lives in Databases) is NOT listed.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.193907,
+        "model_calls": 13,
+        "input_tokens_total": 795889,
+        "output_tokens": 8791,
+        "judge_usd": 0.653
+      }
+    },
+    {
+      "turn": 4,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Start the Share a Solution flow, type 'Tips' as the title, leave the code block empty, and try to continue to the review step.",
+          "expected": "It refuses to advance and visibly flags both problems — the title being under 10 characters and the missing code block.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "In Share a Solution, type the title 'Handling Async Race Conditions', pick the category Web Development and the difficulty Advanced, type 'await mutex.lock()' into the code block, continue to review, then publish.",
+          "expected": "The review screen shows exactly the typed title and code snippet before publishing, and after publishing the new solution appears on the Community Solutions page.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open the Community Solutions page without publishing anything new.",
+          "expected": "Exactly three solutions are listed: Fixing CORS Errors Once and For All and Zero-Downtime Postgres Migrations by Elena Fox, and Docker Layer Caching Tips by Priya Nair.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Look at the difficulty badges on the three seeded community solutions.",
+          "expected": "Fixing CORS Errors Once and For All shows an amber Intermediate badge, Docker Layer Caching Tips a green Beginner badge, and Zero-Downtime Postgres Migrations a red Advanced badge.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the Understanding TCP Handshakes article, click the 🔥 reaction, then click 🔥 again.",
+          "expected": "After the first click the 🔥 count goes from 0 to 1 and the combined total from 2 to 3, updating immediately; the second click returns them to 0 and 2.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.204216,
+        "model_calls": 9,
+        "input_tokens_total": 694270,
+        "output_tokens": 9924,
+        "judge_usd": 0.2758
+      }
+    },
+    {
+      "turn": 5,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Trending This Week dashboard and read the ranked list.",
+          "expected": "The top five in order: Debugging Memory Leaks in Node (score 840), Intro to Binary Trees (610), Taming React Re-renders (610), REST vs GraphQL (490), SQL Indexing Demystified (480) — NOT the all-time-views order that would put REST vs GraphQL first.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Compare the two trending entries that both show a score of 610.",
+          "expected": "Intro to Binary Trees ranks above Taming React Re-renders because its 540 views this week beat 320 — the tie is not broken by all-time views or alphabetically.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Find the Networking row in the per-category rollup.",
+          "expected": "It shows 210 views this week and 2 reactions — matching Understanding TCP Handshakes, the only Networking article — not zeros and not all-time numbers.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Open SQL Indexing Demystified, add a 💡 reaction, then return to the trending dashboard.",
+          "expected": "SQL Indexing Demystified's score rises to 490, tying REST vs GraphQL, and it now sits above REST vs GraphQL in 4th place (150 weekly views beats 90).",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Set the category to Databases, save the current filter combo under the name 'db picks', change the category to Algorithms, then recall the 'db picks' preset.",
+          "expected": "Recalling the preset restores the category control to Databases and the list again shows only SQL Indexing Demystified.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.229873,
+        "model_calls": 9,
+        "input_tokens_total": 818389,
+        "output_tokens": 8994,
+        "judge_usd": 0.3582
+      }
+    },
+    {
+      "turn": 6,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Visit the articles screener page and then the Community Solutions page, looking at the header and the primary action buttons on each.",
+          "expected": "Both pages show the dark slate header bar with the site name on the left, and the primary action buttons are teal on both — neither page kept the old styling.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open any article's detail page and then the trending dashboard.",
+          "expected": "Both show a centered page title under the same dark slate header, matching the rest of the site.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the articles list, compare the cards for Debugging Memory Leaks in Node and Intro to Binary Trees.",
+          "expected": "The Memory Leaks card has a red left accent stripe (Advanced) and the Binary Trees card a green one (Beginner), both on rounded cards.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Look at the difficulty badges on the trending dashboard's ranked entries.",
+          "expected": "Badges still follow green Beginner / amber Intermediate / red Advanced after the restyle — e.g. Debugging Memory Leaks in Node shows red and Intro to Binary Trees green.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Start the Share a Solution flow, type 'Tips' as the title, leave the code block empty, and try to continue to the review step.",
+          "expected": "It refuses to advance and visibly flags both problems — the title being under 10 characters and the missing code block.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 0,
+      "no": 1,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.388716,
+        "model_calls": 11,
+        "input_tokens_total": 1326763,
+        "output_tokens": 22061,
+        "judge_usd": 0.4962
+      }
+    },
+    {
+      "turn": 7,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Reading List page as seeded.",
+          "expected": "Debugging Memory Leaks in Node shows an 11 min read (2,100 words rounded up, not 10 or 10.5), SQL Indexing Demystified shows 6 min, and the remaining total reads 17 min with 2 items unread.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the Reading List, mark Debugging Memory Leaks in Node as read.",
+          "expected": "The remaining time drops to 6 min and the unread count to 1, while the item stays visible in a read state.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Remove both seeded items from the Reading List using their bookmark/remove controls.",
+          "expected": "The page shows a friendly empty-state message instead of a blank or broken page, with no leftover totals.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "On the Community Solutions page, bookmark Fixing CORS Errors Once and For All, then open the Reading List.",
+          "expected": "The solution appears in the reading list still carrying its Community label.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Trending This Week dashboard and read the ranked list.",
+          "expected": "The top five in order: Debugging Memory Leaks in Node (score 840), Intro to Binary Trees (610), Taming React Re-renders (610), REST vs GraphQL (490), SQL Indexing Demystified (480) — NOT the all-time-views order that would put REST vs GraphQL first.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 1,
+      "no": 0,
+      "total": 5,
+      "accuracy": 90.0,
+      "cost": {
+        "generation_usd": 0.429863,
+        "model_calls": 13,
+        "input_tokens_total": 1925313,
+        "output_tokens": 13490,
+        "judge_usd": 0.137
+      }
+    },
+    {
+      "turn": 8,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the Featured Queue page, click the up button on Fixing CORS Errors Once and For All.",
+          "expected": "It swaps to position 1 and REST vs GraphQL to position 2 — the numbering stays exactly 1 and 2 with no duplicates.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Remove REST vs GraphQL from the queue.",
+          "expected": "Fixing CORS Errors Once and For All renumbers to position 1 — it does not stay labeled 2.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "With the queue as seeded, publish it and look at the homepage's featured card.",
+          "expected": "The featured card shows REST vs GraphQL with its view count shortened as 15.6k.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Click the 'Pull this week's #1' control on the Featured Queue page.",
+          "expected": "Debugging Memory Leaks in Node — the trending dashboard's current top item — lands at position 1, and the seeded entries bump down to 2 and 3.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "With no filters applied, set the sort control to this week's views.",
+          "expected": "Debugging Memory Leaks in Node appears above Intro to Binary Trees — both have 540 views this week and the tie breaks alphabetically by title — with Taming React Re-renders (320) next.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 0,
+      "no": 1,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.555127,
+        "model_calls": 15,
+        "input_tokens_total": 1630982,
+        "output_tokens": 17968,
+        "judge_usd": 0.2841
+      }
+    },
+    {
+      "turn": 9,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Contributors page and read each card's level.",
+          "expected": "Priya Nair (36 reactions, 1 solution) and Elena Fox (32 reactions, 2 solutions) both show the Expert level, while Marcus Webb shows only Rising despite having by far the most reactions (73) — he has zero published solutions, so Expert stays out of reach.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Look at the missing-for-next-level line on Marcus Webb's card and on Elena Fox's card.",
+          "expected": "Marcus's card says a published solution is what he's missing for Expert — not more reactions — while Elena's says she needs 28 more reactions for Legend, her 2 solutions already covering that half.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Click 💡 on the Taming React Re-renders article, then check Priya Nair's card on the Contributors page.",
+          "expected": "Her reactions received tick up from 36 to 37 without a reload, and her next-level hint recomputes live — Legend now wants 23 more reactions plus 1 more solution.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Run the Share a Solution flow: type the title 'Profiling Slow Endpoints in Node', pick Marcus Webb in the author picker, leave the preselected category and difficulty as they are, type 'console.time()' into the code block, then review, publish, and open the Contributors page.",
+          "expected": "Marcus Webb's card now shows 1 published solution and his level jumps from Rising to Expert — his 73 reactions plus the fresh publish clear both Expert requirements.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Reading List page as seeded.",
+          "expected": "Debugging Memory Leaks in Node shows an 11 min read (2,100 words rounded up, not 10 or 10.5), SQL Indexing Demystified shows 6 min, and the remaining total reads 17 min with 2 items unread.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 1,
+      "partial": 1,
+      "no": 3,
+      "total": 5,
+      "accuracy": 30.0,
+      "cost": {
+        "generation_usd": 0.384601,
+        "model_calls": 20,
+        "input_tokens_total": 2080137,
+        "output_tokens": 11361,
+        "judge_usd": 0.568
+      }
+    },
+    {
+      "turn": 10,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Weekly Digest builder and look at the auto-pulled trending section.",
+          "expected": "It lists exactly three articles in this order: Debugging Memory Leaks in Node, Intro to Binary Trees, Taming React Re-renders.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Flip the featured section's toggle off while watching the copyable plain-text block, then flip it back on.",
+          "expected": "The featured pick vanishes from the plain-text block the moment the toggle goes off — the three trending titles and the spotlight stay put — and it reappears when the toggle comes back on.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Turn the contributor spotlight's toggle off, publish the digest, and open the published digest's own page.",
+          "expected": "The page carries the trending and featured sections but no contributor spotlight, and its plain-text block likewise has no contributor line — the published digest respects the toggles as assembled.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Check the contributor spotlight and the featured section inside the digest builder.",
+          "expected": "The spotlight names Priya Nair at the Expert level — she edges out fellow Expert Elena Fox on reactions received (36 vs 32), and Marcus Webb's 73 reactions don't count because he's still Rising — and the featured section shows REST vs GraphQL, the Featured Queue's current number 1.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "With the queue as seeded, publish it and look at the homepage's featured card.",
+          "expected": "The featured card shows REST vs GraphQL with its view count shortened as 15.6k.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 0,
+      "no": 1,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.2784,
+        "model_calls": 8,
+        "input_tokens_total": 958142,
+        "output_tokens": 9774,
+        "judge_usd": 0.2669
+      }
+    }
+  ]
+}

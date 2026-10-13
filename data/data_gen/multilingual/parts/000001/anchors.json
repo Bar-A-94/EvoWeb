@@ -1,0 +1,1113 @@
+{
+ "anchors": [
+  {
+   "en": "Screener",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    9
+   ],
+   "translations": {
+    "es": "Filtro de acciones",
+    "zh": "选股器",
+    "he": "מסנן מניות",
+    "hi": "स्टॉक स्क्रीनर",
+    "sw": "Kichujio cha hisa",
+    "de": "Aktienfilter",
+    "fr": "Filtre d'actions"
+   }
+  },
+  {
+   "en": "Dividend Payers",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2
+   ],
+   "translations": {
+    "es": "Pagadores de dividendos",
+    "zh": "股息支付股",
+    "he": "משלמות דיבידנד",
+    "hi": "डिविडेंड देने वाले",
+    "sw": "Wanaolipa gawio",
+    "de": "Dividendenzahler",
+    "fr": "Payeurs de dividendes"
+   }
+  },
+  {
+   "en": "Cheap Tech",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2
+   ],
+   "translations": {
+    "es": "Tecnología barata",
+    "zh": "低估科技股",
+    "he": "טכנולוגיה זולה",
+    "hi": "सस्ता टेक",
+    "sw": "Teknolojia ya bei nafuu",
+    "de": "Günstige Technologie",
+    "fr": "Technologie bon marché"
+   }
+  },
+  {
+   "en": "Technology",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    5
+   ],
+   "translations": {
+    "es": "Tecnología",
+    "zh": "科技",
+    "he": "טכנולוגיה",
+    "hi": "टेक्नोलॉजी",
+    "sw": "Teknolojia",
+    "de": "Technologie",
+    "fr": "Technologie"
+   }
+  },
+  {
+   "en": "Healthcare",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    5
+   ],
+   "translations": {
+    "es": "Salud",
+    "zh": "医疗保健",
+    "he": "בריאות",
+    "hi": "हेल्थकेयर",
+    "sw": "Afya",
+    "de": "Gesundheitswesen",
+    "fr": "Santé"
+   }
+  },
+  {
+   "en": "Industrials",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2
+   ],
+   "translations": {
+    "es": "Industriales",
+    "zh": "工业",
+    "he": "תעשייה",
+    "hi": "औद्योगिक",
+    "sw": "Viwanda",
+    "de": "Industrie",
+    "fr": "Industrie"
+   }
+  },
+  {
+   "en": "Consumer Goods",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2
+   ],
+   "translations": {
+    "es": "Bienes de consumo",
+    "zh": "消费品",
+    "he": "מוצרי צריכה",
+    "hi": "उपभोक्ता वस्तुएं",
+    "sw": "Bidhaa za walaji",
+    "de": "Konsumgüter",
+    "fr": "Biens de consommation"
+   }
+  },
+  {
+   "en": "P/E",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    5,
+    6,
+    8
+   ],
+   "translations": {
+    "es": "P/E",
+    "zh": "市盈率",
+    "he": "מכפיל רווח",
+    "hi": "P/E",
+    "sw": "P/E",
+    "de": "KGV",
+    "fr": "PER"
+   }
+  },
+  {
+   "en": "Dividend Yield",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    5,
+    6,
+    8
+   ],
+   "translations": {
+    "es": "Rendimiento de dividendo",
+    "zh": "股息率",
+    "he": "תשואת דיבידנד",
+    "hi": "डिविडेंड यील्ड",
+    "sw": "Mavuno ya gawio",
+    "de": "Dividendenrendite",
+    "fr": "Rendement du dividende"
+   }
+  },
+  {
+   "en": "Dividend",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    5,
+    6,
+    8
+   ],
+   "translations": {
+    "es": "dividendo",
+    "zh": "股息",
+    "he": "דיבידנד",
+    "hi": "डिविडेंड",
+    "sw": "gawio",
+    "de": "Dividende",
+    "fr": "dividende"
+   }
+  },
+  {
+   "en": "2 of 8",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    5
+   ],
+   "translations": {
+    "es": "2 de 8",
+    "zh": "8 只中 2 只匹配",
+    "he": "2 מתוך 8",
+    "hi": "8 में से 2",
+    "sw": "2 kati ya 8",
+    "de": "2 von 8",
+    "fr": "2 sur 8"
+   }
+  },
+  {
+   "en": "Watchlist",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    4,
+    6,
+    9,
+    10
+   ],
+   "translations": {
+    "es": "Lista de seguimiento",
+    "zh": "关注列表",
+    "he": "רשימת מעקב",
+    "hi": "वॉचलिस्ट",
+    "sw": "Orodha ya kufuatilia",
+    "de": "Merkliste",
+    "fr": "Liste de suivi"
+   }
+  },
+  {
+   "en": "Core",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    10
+   ],
+   "translations": {
+    "es": "Núcleo",
+    "zh": "核心",
+    "he": "ליבה",
+    "hi": "कोर",
+    "sw": "Kuu",
+    "de": "Kern",
+    "fr": "Noyau"
+   }
+  },
+  {
+   "en": "Speculative",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    10
+   ],
+   "translations": {
+    "es": "Especulativas",
+    "zh": "投机",
+    "he": "ספקולטיבי",
+    "hi": "सट्टा",
+    "sw": "Kubahatisha",
+    "de": "Spekulativ",
+    "fr": "Spéculatif"
+   }
+  },
+  {
+   "en": "watch Q3 margins",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    3,
+    9
+   ],
+   "translations": {
+    "es": "vigilar márgenes del Q3",
+    "zh": "关注 Q3 利润率",
+    "he": "לעקוב אחרי מרווחי Q3",
+    "hi": "Q3 मार्जिन पर नज़र रखें",
+    "sw": "fuatilia ukingo wa faida wa Q3",
+    "de": "Q3-Margen beobachten",
+    "fr": "surveiller les marges du Q3"
+   }
+  },
+  {
+   "en": "Add to Watchlist",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    4,
+    9
+   ],
+   "translations": {
+    "es": "Agregar a Lista de seguimiento",
+    "zh": "加入关注列表",
+    "he": "הוספה לרשימת מעקב",
+    "hi": "वॉचलिस्ट में जोड़ें",
+    "sw": "Ongeza kwenye Orodha ya kufuatilia",
+    "de": "Zur Merkliste hinzufügen",
+    "fr": "Ajouter à la Liste de suivi"
+   }
+  },
+  {
+   "en": "Positions",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4,
+    6,
+    10
+   ],
+   "translations": {
+    "es": "Posiciones",
+    "zh": "持仓",
+    "he": "פוזיציות",
+    "hi": "पोज़िशन",
+    "sw": "Nafasi za uwekezaji",
+    "de": "Positionen",
+    "fr": "Positions"
+   }
+  },
+  {
+   "en": "Shares",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4,
+    6,
+    10
+   ],
+   "translations": {
+    "es": "Acciones",
+    "zh": "股数",
+    "he": "מניות",
+    "hi": "शेयर",
+    "sw": "Hisa",
+    "de": "Stückzahl",
+    "fr": "Actions"
+   }
+  },
+  {
+   "en": "Buy Price",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4
+   ],
+   "translations": {
+    "es": "Precio de compra",
+    "zh": "买入价格",
+    "he": "מחיר קנייה",
+    "hi": "खरीद कीमत",
+    "sw": "Bei ya ununuzi",
+    "de": "Preis beim Kauf",
+    "fr": "Prix d'achat"
+   }
+  },
+  {
+   "en": "Price",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4,
+    6,
+    8
+   ],
+   "translations": {
+    "es": "Precio",
+    "zh": "价格",
+    "he": "מחיר",
+    "hi": "कीमत",
+    "sw": "Bei",
+    "de": "Preis",
+    "fr": "Prix"
+   }
+  },
+  {
+   "en": "Market Value",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4,
+    6
+   ],
+   "translations": {
+    "es": "Valor de mercado",
+    "zh": "市场价值",
+    "he": "ערך שוק",
+    "hi": "बाज़ार मूल्य",
+    "sw": "Thamani ya soko",
+    "de": "Wert am Markt",
+    "fr": "Valeur de marché"
+   }
+  },
+  {
+   "en": "Value",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4,
+    5,
+    6
+   ],
+   "translations": {
+    "es": "Valor",
+    "zh": "价值",
+    "he": "ערך",
+    "hi": "मूल्य",
+    "sw": "Thamani",
+    "de": "Wert",
+    "fr": "Valeur"
+   }
+  },
+  {
+   "en": "Weight",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4,
+    6
+   ],
+   "translations": {
+    "es": "Peso",
+    "zh": "权重",
+    "he": "משקל",
+    "hi": "भार",
+    "sw": "Uzito",
+    "de": "Gewichtung",
+    "fr": "Poids"
+   }
+  },
+  {
+   "en": "Gain",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4,
+    10
+   ],
+   "translations": {
+    "es": "Ganancia",
+    "zh": "收益",
+    "he": "רווח",
+    "hi": "लाभ",
+    "sw": "Faida",
+    "de": "Gewinn",
+    "fr": "Gain"
+   }
+  },
+  {
+   "en": "Ratings",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5,
+    7,
+    9
+   ],
+   "translations": {
+    "es": "Calificaciones",
+    "zh": "评级",
+    "he": "דירוגים",
+    "hi": "रेटिंग",
+    "sw": "Ukadiriaji",
+    "de": "Bewertungen",
+    "fr": "Notations"
+   }
+  },
+  {
+   "en": "Growth",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5
+   ],
+   "translations": {
+    "es": "Crecimiento",
+    "zh": "成长",
+    "he": "צמיחה",
+    "hi": "ग्रोथ",
+    "sw": "Ukuaji",
+    "de": "Wachstum",
+    "fr": "Croissance"
+   }
+  },
+  {
+   "en": "Profitability",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5
+   ],
+   "translations": {
+    "es": "Rentabilidad",
+    "zh": "盈利能力",
+    "he": "רווחיות",
+    "hi": "मुनाफ़ा",
+    "sw": "Faida ya biashara",
+    "de": "Profitabilität",
+    "fr": "Rentabilité"
+   }
+  },
+  {
+   "en": "Financial Health",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5
+   ],
+   "translations": {
+    "es": "Salud financiera",
+    "zh": "财务健康",
+    "he": "איתנות פיננסית",
+    "hi": "वित्तीय सेहत",
+    "sw": "Afya ya kifedha",
+    "de": "Finanzielle Gesundheit",
+    "fr": "Santé financière"
+   }
+  },
+  {
+   "en": "Health Score",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5,
+    8,
+    10
+   ],
+   "translations": {
+    "es": "Puntaje de salud",
+    "zh": "健康评分",
+    "he": "ציון בריאות",
+    "hi": "हेल्थ स्कोर",
+    "sw": "Alama ya afya",
+    "de": "Gesundheits-Score",
+    "fr": "Score de santé"
+   }
+  },
+  {
+   "en": "Alerts Center",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    6,
+    9,
+    10
+   ],
+   "translations": {
+    "es": "Centro de alertas",
+    "zh": "提醒中心",
+    "he": "מרכז ההתראות",
+    "hi": "अलर्ट सेंटर",
+    "sw": "Kituo cha arifa",
+    "de": "Zentrale für Alarme",
+    "fr": "Centre d'alertes"
+   }
+  },
+  {
+   "en": "Alerts",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    6,
+    9,
+    10
+   ],
+   "translations": {
+    "es": "alertas",
+    "zh": "提醒",
+    "he": "התראות",
+    "hi": "अलर्ट",
+    "sw": "arifa",
+    "de": "Alarme",
+    "fr": "alertes"
+   }
+  },
+  {
+   "en": "set-alert",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    6
+   ],
+   "translations": {
+    "es": "Crear alerta",
+    "zh": "设置提醒",
+    "he": "הגדרת התראה",
+    "hi": "अलर्ट सेट करें",
+    "sw": "Weka arifa",
+    "de": "Alarm setzen",
+    "fr": "Créer une alerte"
+   }
+  },
+  {
+   "en": "Triggered",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    6,
+    10
+   ],
+   "translations": {
+    "es": "Activada",
+    "zh": "已触发",
+    "he": "הופעלה",
+    "hi": "ट्रिगर हुआ",
+    "sw": "Imewashwa",
+    "de": "Ausgelöst",
+    "fr": "Déclenchée"
+   }
+  },
+  {
+   "en": "Watching",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    6,
+    8
+   ],
+   "translations": {
+    "es": "En vigilancia",
+    "zh": "监控中",
+    "he": "במעקב",
+    "hi": "निगरानी में",
+    "sw": "Inafuatiliwa",
+    "de": "Beobachtet",
+    "fr": "En surveillance"
+   }
+  },
+  {
+   "en": "History",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    6
+   ],
+   "translations": {
+    "es": "Historial",
+    "zh": "历史记录",
+    "he": "היסטוריה",
+    "hi": "इतिहास",
+    "sw": "Historia",
+    "de": "Verlauf",
+    "fr": "Historique"
+   }
+  },
+  {
+   "en": "Earnings Call Highlights",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    7
+   ],
+   "translations": {
+    "es": "Destacados de llamadas de resultados",
+    "zh": "财报电话会议要点",
+    "he": "עיקרי שיחות הדוחות",
+    "hi": "अर्निंग कॉल हाइलाइट्स",
+    "sw": "Mambo muhimu ya simu za mapato",
+    "de": "Höhepunkte der Quartalskonferenzen",
+    "fr": "Points clés des conférences de résultats"
+   }
+  },
+  {
+   "en": "Earnings Highlights",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    7,
+    9
+   ],
+   "translations": {
+    "es": "Destacados de resultados",
+    "zh": "财报要点",
+    "he": "עיקרי הדוחות",
+    "hi": "अर्निंग हाइलाइट्स",
+    "sw": "Mambo muhimu ya mapato",
+    "de": "Höhepunkte der Quartalsberichte",
+    "fr": "Points clés des résultats"
+   }
+  },
+  {
+   "en": "automation",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    7,
+    9
+   ],
+   "translations": {
+    "es": "automatización",
+    "zh": "自动化",
+    "he": "אוטומציה",
+    "hi": "ऑटोमेशन",
+    "sw": "otomatiki",
+    "de": "Automatisierung",
+    "fr": "automatisation"
+   }
+  },
+  {
+   "en": "tariffs",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    7
+   ],
+   "translations": {
+    "es": "aranceles",
+    "zh": "关税",
+    "he": "מכסים",
+    "hi": "टैरिफ",
+    "sw": "ushuru",
+    "de": "Zölle",
+    "fr": "droits de douane"
+   }
+  },
+  {
+   "en": "crypto",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    7
+   ],
+   "translations": {
+    "es": "cripto",
+    "zh": "加密货币",
+    "he": "קריפטו",
+    "hi": "क्रिप्टो",
+    "sw": "kripto",
+    "de": "Krypto",
+    "fr": "crypto"
+   }
+  },
+  {
+   "en": "Compare",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8,
+    10
+   ],
+   "translations": {
+    "es": "Comparar",
+    "zh": "对比",
+    "he": "השוואה",
+    "hi": "तुलना",
+    "sw": "Linganisha",
+    "de": "Vergleich",
+    "fr": "Comparaison"
+   }
+  },
+  {
+   "en": "Market Cap",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "Capitalización de mercado",
+    "zh": "市值",
+    "he": "שווי שוק",
+    "hi": "मार्केट कैप",
+    "sw": "Mtaji wa soko",
+    "de": "Marktkapitalisierung",
+    "fr": "Capitalisation boursière"
+   }
+  },
+  {
+   "en": "Command Center",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    10
+   ],
+   "translations": {
+    "es": "Centro de mando",
+    "zh": "指挥中心",
+    "he": "מרכז הפיקוד",
+    "hi": "कमांड सेंटर",
+    "sw": "Kituo cha amri",
+    "de": "Kommandozentrale",
+    "fr": "Centre de commande"
+   }
+  },
+  {
+   "en": "Portfolio",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    10
+   ],
+   "translations": {
+    "es": "Portafolio",
+    "zh": "投资组合",
+    "he": "תיק ההשקעות",
+    "hi": "पोर्टफोलियो",
+    "sw": "Portfolio",
+    "de": "Portfolio",
+    "fr": "Portefeuille"
+   }
+  },
+  {
+   "en": "Top Rated",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    10
+   ],
+   "translations": {
+    "es": "Mejor calificada",
+    "zh": "评级最高",
+    "he": "המדורגת הגבוהה ביותר",
+    "hi": "टॉप रेटेड",
+    "sw": "Iliyokadiriwa juu zaidi",
+    "de": "Bestbewertet",
+    "fr": "Mieux notée"
+   }
+  },
+  {
+   "en": "Generate Report",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    1,
+    2,
+    9
+   ],
+   "translations": {
+    "es": "Generar informe",
+    "zh": "生成报告",
+    "he": "הפקת דוח",
+    "hi": "रिपोर्ट बनाएं",
+    "sw": "Tengeneza ripoti",
+    "de": "Bericht erstellen",
+    "fr": "Générer le rapport"
+   }
+  },
+  {
+   "en": "Basic Stock Information",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    1,
+    2
+   ],
+   "translations": {
+    "es": "Información básica de la acción",
+    "zh": "股票基本信息",
+    "he": "מידע בסיסי על המניה",
+    "hi": "स्टॉक की बुनियादी जानकारी",
+    "sw": "Taarifa za msingi za hisa",
+    "de": "Basisinformationen zur Aktie",
+    "fr": "Informations de base sur l'action"
+   }
+  },
+  {
+   "en": "Market Trends",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    1,
+    2
+   ],
+   "translations": {
+    "es": "Tendencias del mercado",
+    "zh": "市场趋势",
+    "he": "מגמות שוק",
+    "hi": "बाज़ार रुझान",
+    "sw": "Mwenendo wa soko",
+    "de": "Markttrends",
+    "fr": "Tendances du marché"
+   }
+  },
+  {
+   "en": "Financial Data",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    1,
+    2
+   ],
+   "translations": {
+    "es": "Datos financieros",
+    "zh": "财务数据",
+    "he": "נתונים פיננסיים",
+    "hi": "वित्तीय डेटा",
+    "sw": "Data za kifedha",
+    "de": "Finanzdaten",
+    "fr": "Données financières"
+   }
+  },
+  {
+   "en": "Argent Micro",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    5,
+    6,
+    7,
+    8
+   ]
+  },
+  {
+   "en": "Baltic Freight",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  {
+   "en": "Comet Energy",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  {
+   "en": "Driftwood Retail",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    5
+   ]
+  },
+  {
+   "en": "Ember Semiconductor",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    5,
+    7
+   ]
+  },
+  {
+   "en": "Fjord Pharma",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  {
+   "en": "Greenline Utilities",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    5,
+    6
+   ]
+  },
+  {
+   "en": "Helix Software",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    9
+   ]
+  },
+  {
+   "en": "ARGN",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    2,
+    7
+   ]
+  },
+  {
+   "en": "BLTC",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    2
+   ]
+  },
+  {
+   "en": "CMET",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    10
+   ]
+  },
+  {
+   "en": "DRFT",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    2
+   ]
+  },
+  {
+   "en": "EMBR",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    2,
+    7
+   ]
+  },
+  {
+   "en": "FJRD",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    2,
+    3,
+    4,
+    6,
+    7,
+    9
+   ]
+  },
+  {
+   "en": "GRNL",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    2
+   ]
+  },
+  {
+   "en": "HLXS",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    2,
+    4,
+    6,
+    7
+   ]
+  },
+  {
+   "en": "navy",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    1,
+    3,
+    7,
+    9
+   ]
+  },
+  {
+   "en": "white",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    1
+   ]
+  },
+  {
+   "en": "#0B1B33",
+   "class": "keep",
+   "kind": "value_format",
+   "turns": [
+    9
+   ]
+  },
+  {
+   "en": "#F0A92D",
+   "class": "keep",
+   "kind": "value_format",
+   "turns": [
+    9
+   ]
+  }
+ ]
+}

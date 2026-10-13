@@ -1,0 +1,849 @@
+{
+ "id": "000038",
+ "instruction": "Please implement a short-term apartment rental website for showcasing and renting apartments. The website should have functionalities for searching, filtering, and booking apartments. Users should be able to browse different types of apartments, search and filter apartments that meet their criteria, book selected apartments, and view booking records. Use linen as the screen background and maroon for component highlights.",
+ "Category": {
+  "primary_category": "User Interaction",
+  "subcategories": [
+   "E-commerce",
+   "Form Systems",
+   "Data Visualization"
+  ]
+ },
+ "application_type": "E-commerce Web Applications",
+ "ui_instruct": [
+  {
+   "task": "Perform a search for apartments using a specific location keyword.",
+   "expected_result": "A list of apartments relevant to the search keyword is displayed.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Searching"
+    ]
+   }
+  },
+  {
+   "task": "Apply a filter to the apartment search results by selecting one-bedroom.",
+   "expected_result": "Only apartments that match the one-bedroom are displayed in the search results.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Filtering"
+    ]
+   }
+  },
+  {
+   "task": "Book an apartment by selecting available dates and confirming the booking.",
+   "expected_result": "Booking confirmation is displayed, and the selected dates are marked as unavailable in the calendar.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "E-commerce",
+     "Form Operations"
+    ]
+   }
+  },
+  {
+   "task": "View booking records from the user account section.",
+   "expected_result": "The booking records show accurate information of all past and current bookings made by the user.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Authentication Flows",
+     "E-commerce"
+    ]
+   }
+  },
+  {
+   "task": "Navigate to the homepage from a different page (e.g., booking confirmation page) using the website's main navigation menu.",
+   "expected_result": "The user is redirected to the homepage, which is fully loaded and functional.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering"
+    ]
+   }
+  },
+  {
+   "task": "Verify that the website uses 'linen' as the background color and 'maroon' as the component color, as specified in the design requirements.",
+   "expected_result": "The website has a background color of 'linen' and components (such as buttons, cards, headers, etc.) are styled with the color 'maroon', accurately reflecting the design instruction.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "archetype": "derived-state",
+   "instruction": "Let's rebuild the catalog properly — replace whatever's in there with exactly these seven, I'll grow it later: Harbor Loft in Old Port ($145/night, 1 bedroom, rated 4.8, tagged Waterfront and Pet-friendly), Garden Studio in Midtown ($95, studio, 4.6, Pet-friendly), Sunset Flat in Old Port ($145, 2 bedrooms, 4.4, Waterfront), Maple Suite in Midtown ($120, 1 bedroom, 4.8, Family-friendly), Cedar Corner in Riverside ($180, 3 bedrooms, 4.9, Family-friendly and Pet-friendly), Dockside Nook in Old Port ($95, studio, 4.2, Waterfront and Budget), and Willow Walk-up in Riverside ($120, 2 bedrooms, 4.6, Budget). The browse page already searches and filters, so leave all that alone — what I want layered on top is a fit ranker: clickable preference chips for the four tags plus a nightly budget box I can type into, and instead of hiding anything, every listing stays on screen and wears a live fit score — 2 points for each picked chip it carries, plus 1 point if its rate is at or under the typed budget — shown on its card like 'Fit 3/5', where the denominator is the best score currently possible (2 per picked chip, plus 1 whenever a budget is set). The grid reorders by score high-to-low the moment anything changes, falling back to price low-to-high and then alphabetical by name on ties, and a line above the grid like '3 top fits of 7' counts how many listings share the current best score. When no chips are picked and the budget box is empty, drop the scores, show the line as just '7 stays', and leave the grid in that price low-to-high, alphabetical-on-ties order. One convention for everywhere in this app, now and for anything we build later: an apartment is always labeled with its name and neighborhood together, like 'Harbor Loft · Old Port'.",
+   "source_website": "https://www.airbnb.com",
+   "source_feature": "Category/tag browsing chips (adapted into a match-score ranking over the catalog)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the fit ranker, click the Pet-friendly chip, click the Budget chip, and type 130 into the nightly budget box.",
+     "expected_result": "All seven listings stay on screen — nothing gets hidden — with the line reading 3 top fits of 7: Dockside Nook · Old Port, Garden Studio · Midtown, and Willow Walk-up · Riverside rank on top, each scored Fit 3/5, the $95 tie putting Dockside before Garden alphabetically, while Sunset Flat · Old Port sits last at Fit 0/5.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Sorting"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the fit ranker, click only the Waterfront chip, then click it again to turn it off.",
+     "expected_result": "With the chip on, all seven listings remain visible, the line reads 3 top fits of 7, and Dockside Nook, Harbor Loft, and Sunset Flat rise to the top each scored Fit 2/2, Harbor before Sunset on the $145 price tie; turning the chip off drops the scores, returns the plain 7 stays line, and leaves the grid in price low-to-high order.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Sorting",
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the fit ranker, with no chips picked, type 100 into the nightly budget box.",
+     "expected_result": "All seven listings stay visible; Dockside Nook · Old Port and Garden Studio · Midtown move to the top each scored Fit 1/1, the line reads 2 top fits of 7, and the rest follow in price low-to-high order with Maple Suite before Willow Walk-up on the $120 tie.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Sorting"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Open the fit ranker page and look at its overall styling and how listings are labeled.",
+     "expected_result": "The page keeps the linen background with maroon component highlights, and every apartment is labeled with its name and neighborhood together, like Harbor Loft · Old Port.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Color Scheme",
+       "Labeling Conventions"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 1,
+     "task": "Perform a search for apartments using a specific location keyword.",
+     "expected_result": "A list of apartments relevant to the search keyword is displayed.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Searching"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "People keep asking what a stay actually costs, so add a trip cost estimator — its own page with an apartment picker plus check-in and check-out fields — that recalculates the instant any field changes, no calculate button anywhere. The math: nightly rate × nights, then 10% off that subtotal for stays of 7 nights or longer, plus a flat $60 cleaning fee, plus an 11% service fee on the discounted subtotal plus cleaning, rounded to the nearest dollar, every line itemized. If someone types a check-out that isn't after the check-in, show a clear message instead of a weird negative total. And from here on out, anywhere this app shows a date range — this page, bookings, whatever comes later — write it like 'Sep 1 → Sep 8', abbreviated month with an arrow.",
+   "source_website": "https://www.vrbo.com",
+   "source_feature": "Price breakdown and fee transparency panel",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the trip cost estimator, pick Cedar Corner, and type Sep 1 2026 as check-in and Sep 8 2026 as check-out.",
+     "expected_result": "It shows 7 nights with a $1,260 nightly subtotal, a $126 long-stay discount taken off, a $60 cleaning fee, a $131 service fee, and a $1,325 total — not 8 nights, and not a total missing the discount.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Form Operations"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "With Cedar Corner selected and check-in Sep 1 2026, type Sep 7 2026 as check-out, then change the check-out to Sep 8 2026.",
+     "expected_result": "At 6 nights the breakdown shows no discount line and a $1,265 total; the instant the check-out makes it 7 nights, a $126 long-stay discount line appears and the total reads $1,325 — all without pressing any calculate button.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the estimator, type a check-out date that is earlier than the check-in date.",
+     "expected_result": "A clear validation message appears and no negative or nonsense total is shown; entering a valid later check-out makes the breakdown reappear.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Open the apartment picker inside the trip cost estimator.",
+     "expected_result": "Every option is labeled with name and neighborhood together, like Cedar Corner · Riverside.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Labeling Conventions"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "On the fit ranker, click the Pet-friendly chip, click the Budget chip, and type 130 into the nightly budget box.",
+     "expected_result": "All seven listings stay on screen — nothing gets hidden — with the line reading 3 top fits of 7: Dockside Nook · Old Port, Garden Studio · Midtown, and Willow Walk-up · Riverside rank on top, each scored Fit 3/5, the $95 tie putting Dockside before Garden alphabetically, while Sunset Flat · Old Port sits last at Fit 0/5.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Sorting"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Big one: I want an approval flow for bookings. Mark Harbor Loft, Garden Studio, and Cedar Corner as Instant Book with a little lightning badge — booking those confirms on the spot — while booking any other apartment creates a request that sits as Pending until I deal with it on a new Host Inbox page, where each row shows the guest, the apartment, the date range, the night count, and the nightly subtotal (rate × nights), with approve and decline actions. Statuses show as badges — amber for Pending, green for Confirmed, gray for Declined — both in the inbox and in the booking records. Start the inbox with two pending requests: Priya asking for Sunset Flat, Aug 12 → Aug 15 2026, and Marco asking for Maple Suite, Sep 3 → Sep 6 2026. Also, house rule for the whole app forever: declining or cancelling anything should always ask me to confirm first.",
+   "source_website": "https://www.vrbo.com",
+   "source_feature": "Instant Book badge and flow",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the host inbox and look at Priya's request for Sunset Flat.",
+     "expected_result": "The row reads Aug 12 → Aug 15 with 3 nights and a $435 nightly subtotal (3 × $145), carrying an amber Pending badge — not 4 nights or $580.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Calculation",
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the host inbox, approve Priya's request for Sunset Flat, then open the booking records.",
+     "expected_result": "The request switches to a green Confirmed badge in the inbox, and the same booking appears as Confirmed in the booking records too.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "State Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the host inbox, click decline on Marco's Maple Suite request.",
+     "expected_result": "A confirmation prompt appears before anything happens; after confirming, the request shows a gray Declined badge.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "Confirmation Dialogs"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Book Harbor Loft, which carries the Instant Book badge, for Oct 20 2026 to Oct 22 2026.",
+     "expected_result": "No approval step happens: the booking is immediately Confirmed with a green badge in the booking records, and it never shows up as Pending in the host inbox.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "E-commerce",
+       "Workflow"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "Open the trip cost estimator, pick Cedar Corner, and type Sep 1 2026 as check-in and Sep 8 2026 as check-out.",
+     "expected_result": "It shows 7 nights with a $1,260 nightly subtotal, a $126 long-stay discount taken off, a $60 cleaning fee, a $131 service fee, and a $1,325 total — not 8 nights, and not a total missing the discount.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Form Operations"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Every listing page should now carry an availability calendar covering August, September, and October 2026, and that calendar becomes how dates get picked when booking. Nights covered by a Confirmed stay show as blocked — pending requests don't block anything — and the checkout day itself stays open, since that guest is out in the morning. If someone tries to book a range that runs over a blocked night, stop them with a friendly message rather than letting it through or blowing up. Seed one confirmed stay so there's something to see right away: Harbor Loft, Aug 10 → Aug 14 2026.",
+   "source_website": "https://www.vrbo.com",
+   "source_feature": "Monthly/yearly availability calendar on listing pages",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open Harbor Loft's listing page and look at its August 2026 availability calendar.",
+     "expected_result": "Exactly four nights are blocked — Aug 10, 11, 12, and 13 — while Aug 14 is still open, because that's the checkout day.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Calendar Rendering",
+       "Calculation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On Harbor Loft's listing page, try to book Aug 8 2026 to Aug 12 2026.",
+     "expected_result": "The booking is stopped with a message about unavailable nights; no booking is created and the page does not crash.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "E-commerce"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open Maple Suite's listing page and look at Sep 3 through Sep 5 on its calendar.",
+     "expected_result": "Those nights show as available — Marco's request is only Pending, and pending requests don't block the calendar.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Calendar Rendering",
+       "State Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the host inbox, approve Priya's Sunset Flat request, then open Sunset Flat's listing page and look at its August calendar.",
+     "expected_result": "Aug 12, 13, and 14 are now blocked on Sunset Flat's calendar, while Aug 15 stays open as the checkout day.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "Calendar Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "On the fit ranker, with no chips picked, type 100 into the nightly budget box.",
+     "expected_result": "All seven listings stay visible; Dockside Nook · Old Port and Garden Studio · Midtown move to the top each scored Fit 1/1, the line reads 2 top fits of 7, and the rest follow in price low-to-high order with Maple Suite before Willow Walk-up on the $120 tie.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Sorting"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "design-restyle",
+   "instruction": "Time for a facelift across the fit ranker, the trip cost estimator, the listing pages, the host inbox, and the booking records: keep the linen background everywhere, but make every primary action button a pill-shaped maroon button with white text, put all page headings left-aligned in a serif typeface, give apartment and request cards rounded corners with a soft shadow, and switch every badge — Instant Book, the preference chips, and the Pending/Confirmed/Declined statuses — to outlined pills that keep their meaning colors (amber, green, gray for the statuses) instead of solid fills. Same treatment on every one of those pages, no stragglers.",
+   "source_website": "https://www.airbnb.com",
+   "source_feature": "Airbnb's card-based listing visual language (rounded cards, pill buttons and badges)",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Open the fit ranker page and then the trip cost estimator page and compare their styling.",
+     "expected_result": "On both pages the primary action buttons are pill-shaped maroon with white text and the page headings are left-aligned in a serif typeface — the same treatment on both.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Typography",
+       "Component Styling",
+       "Cross-page Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the host inbox and the booking records and look at the status badges on each.",
+     "expected_result": "On both pages the status badges are outlined pills — amber outline for Pending, green for Confirmed, gray for Declined — instead of solid fills, styled the same in both places.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Component Styling",
+       "Cross-page Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open the fit ranker with no chips picked and nothing typed in the budget box.",
+     "expected_result": "All 7 apartments appear as rounded soft-shadow cards with the plain 7 stays line above them, still in price low-to-high order starting with Dockside Nook, then Garden Studio, then Maple Suite.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Component Styling",
+       "Data Display Testing"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the restyled host inbox, approve Marco's Maple Suite request.",
+     "expected_result": "Its outlined amber Pending pill switches to an outlined green Confirmed pill, and the booking shows as Confirmed in the booking records as well.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "Component Styling"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 5,
+     "task": "Open Harbor Loft's listing page and look at its August 2026 availability calendar.",
+     "expected_result": "Exactly four nights are blocked — Aug 10, 11, 12, and 13 — while Aug 14 is still open, because that's the checkout day.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Calendar Rendering",
+       "Calculation"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Let me shortlist places: a little heart on every card in the fit ranker that toggles a listing saved or un-saved, and a shortlist page that collects them — start it off with Willow Walk-up already saved. At the top of the shortlist I want to type trip dates once, and every saved apartment shows its total for those dates side by side, using the exact same math as the trip cost estimator — the long-stay discount, the $60 cleaning fee, the 11% service fee rounded to the nearest dollar. Highlight whichever stay comes out cheapest for those dates, and if two tie, highlight them both. If I've saved nothing, the page should say so nicely instead of showing an empty husk.",
+   "source_website": "https://www.airbnb.com",
+   "source_feature": "Wishlist / saved apartments (extended with Vrbo's price breakdown for date-priced comparison)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the shortlist page, where Willow Walk-up starts out saved, and type Sep 1 2026 to Sep 6 2026 as the trip dates.",
+     "expected_result": "Willow Walk-up · Riverside shows a $733 total — $600 for 5 nights plus the $60 cleaning fee plus a $73 service fee, with $72.60 rounded up to $73, not a $732 total.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Data Display Testing"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the fit ranker, click Willow Walk-up's save toggle to remove it, then open the shortlist page.",
+     "expected_result": "The shortlist shows a friendly empty message — no blank screen, no leftover comparison table, no crash.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Empty State Handling",
+       "State Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the fit ranker, save Maple Suite, then on the shortlist page type Sep 1 2026 to Sep 6 2026 as the trip dates.",
+     "expected_result": "Maple Suite and Willow Walk-up both show a $733 total and both carry the cheapest-stay highlight — the tie doesn't leave one of them unmarked.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Sorting"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the fit ranker, save Cedar Corner, then on the shortlist page type Sep 1 2026 to Sep 8 2026 as the trip dates.",
+     "expected_result": "Cedar Corner's total reads $1,325 — the same figure the trip cost estimator produces for those dates, long-stay discount included.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "State Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 4,
+     "task": "Open the host inbox and look at Priya's request for Sunset Flat.",
+     "expected_result": "The row reads Aug 12 → Aug 15 with 3 nights and a $435 nightly subtotal (3 × $145), carrying an amber Pending badge — not 4 nights or $580.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Calculation",
+       "Dynamic Content Rendering"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Now the fun part — a trip planner for multi-stop trips. On a new planner page I build a plan by adding stops pulled from my shortlist (toss Cedar Corner and Harbor Loft onto the shortlist for me too), each stop being an apartment plus a date range, and a review step lists every stop with its estimator-style price breakdown and a grand total. Two guardrails: a stop's nights have to actually be open on that apartment's availability calendar, and stops can't overlap each other — though checking out of one place and into the next on the same day is fine. Finalizing takes me to a confirmation view with the whole itinerary as plain text in a copyable block right on screen.",
+   "source_website": "https://www.airbnb.com",
+   "source_feature": "Wishlist / saved apartments (extended into itinerary building, fused with Vrbo's price breakdown panel)",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "In the trip planner, add a stop with Willow Walk-up for Sep 1 2026 to Sep 4 2026, then finalize the plan.",
+     "expected_result": "The review shows the stop with its price breakdown, and finalizing leads to a confirmation view with the itinerary as plain text in a copyable block on screen.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "Data Display Testing"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "In the trip planner, add Willow Walk-up for Sep 1 2026 to Sep 4 2026 and Cedar Corner for Sep 4 2026 to Sep 7 2026, then look at the review totals.",
+     "expected_result": "No overlap complaint appears — checking out and into the next place on Sep 4 is allowed — and the grand total reads $1,132, which is $466 for Willow plus $666 for Cedar.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Input Validation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the trip planner, add Willow Walk-up for Sep 1 2026 to Sep 4 2026 and Cedar Corner for Sep 3 2026 to Sep 7 2026.",
+     "expected_result": "The planner flags the overlap between the two stops and blocks finalizing until it's fixed.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Workflow"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the trip planner, try to add a stop with Harbor Loft for Aug 11 2026 to Aug 13 2026.",
+     "expected_result": "The planner rejects the stop because those nights are blocked by Harbor Loft's confirmed Aug 10 → Aug 14 stay on its availability calendar.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "State Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 5,
+     "task": "On Harbor Loft's listing page, try to book Aug 8 2026 to Aug 12 2026.",
+     "expected_result": "The booking is stopped with a message about unavailable nights; no booking is created and the page does not crash.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "E-commerce"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "I want a neighborhood insights page: one card per neighborhood showing how many listings it has, its average nightly rate to the nearest dollar, its average rating to one decimal — round half up, so 4.466 becomes 4.5, not 4.4 — how many Confirmed stays it has (pending and declined don't count), and its most-booked listing, with ties broken alphabetically. Order the cards by listing count, most first, alphabetical when tied. And add two more confirmed stays to the books while you're at it: Dockside Nook Sep 20 → Sep 23 2026 and Cedar Corner Oct 2 → Oct 5 2026.",
+   "source_website": "https://www.airbnb.com",
+   "source_feature": "Interactive map view for listings (adapted into a neighborhood-level aggregate explorer)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the neighborhood insights page and look at the Old Port card.",
+     "expected_result": "It shows 3 listings, a $128 average nightly rate, a 4.5 average rating (4.466 rounded up, not 4.4), and 2 confirmed stays — Priya's pending request doesn't count.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Calculation",
+       "Aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Look at the order of the neighborhood cards on the insights page.",
+     "expected_result": "Old Port comes first with 3 listings, then Midtown, then Riverside — the two-listing tie between Midtown and Riverside is broken alphabetically.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Old Port card, check which listing is named most-booked.",
+     "expected_result": "It reads Dockside Nook — tied with Harbor Loft at one confirmed stay each, and the tie goes alphabetically, so it is not Harbor Loft.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Sorting"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the host inbox, approve Marco's Maple Suite request, then return to the neighborhood insights page.",
+     "expected_result": "Midtown's confirmed-stay count rises from 0 to 1 and its most-booked listing now reads Maple Suite.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "Aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 7,
+     "task": "Open the shortlist page, where Willow Walk-up starts out saved, and type Sep 1 2026 to Sep 6 2026 as the trip dates.",
+     "expected_result": "Willow Walk-up · Riverside shows a $733 total — $600 for 5 nights plus the $60 cleaning fee plus a $73 service fee, with $72.60 rounded up to $73, not a $732 total.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Data Display Testing"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Last thing: a flexible-stay finder for people who know how long they're staying but not when. A page where I pick a month — August, September, or October 2026 — and type a number of nights, and as I type it live-updates the list of apartments that have that many consecutive free nights inside that month, going by the same blocked nights the listing calendars show, with each result showing its earliest possible check-in. Sort results by nightly rate low-to-high, alphabetical on ties, and remember a checkout day counts as free for the next guest. A blank or impossible number of nights (longer than the month has) should get a clear message, not a blank page.",
+   "source_website": "https://www.airbnb.com",
+   "source_feature": "Flexible date search with an interactive calendar",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "In the flexible-stay finder, choose August 2026 and type 10 into the nights box.",
+     "expected_result": "Harbor Loft's row shows Aug 14 as its earliest possible check-in — the stretch before the booking is only 9 nights, and checkout day Aug 14 counts as free — not Aug 15.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Searching"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "With August 2026 chosen in the finder, type 31 into the nights box, then change it to 32.",
+     "expected_result": "At 31 nights six apartments qualify and Harbor Loft is missing from the list; at 32 a clear no-results or validation message appears instead of a crash, updating live as the number changes.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the finder, choose September 2026 and type 4 into the nights box.",
+     "expected_result": "All seven apartments are listed, ordered by nightly rate low-to-high, with Dockside Nook before Garden Studio on the $95 tie.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Sorting",
+       "Searching"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the host inbox, approve Priya's Sunset Flat request, then in the finder choose August 2026 and type 20 into the nights box.",
+     "expected_result": "Sunset Flat is not in the results — once Aug 12 through 14 are blocked its longest open August stretch is 17 nights, too short for 20.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "Calculation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "On the fit ranker, click only the Waterfront chip, then click it again to turn it off.",
+     "expected_result": "With the chip on, all seven listings remain visible, the line reads 3 top fits of 7, and Dockside Nook, Harbor Loft, and Sunset Flat rise to the top each scored Fit 2/2, Harbor before Sunset on the $145 price tie; turning the chip off drops the scores, returns the plain 7 stays line, and leaves the grid in price low-to-high order.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Sorting",
+       "Dynamic Content Rendering"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "target_app_summary": "What began as a simple linen-and-maroon apartment rental site has grown into a full short-stay platform. Discovery grew a chip-scored fit ranker over a pinned seven-apartment catalog, a heart-saved shortlist with date-priced comparison, and a flexible-stay finder that searches for open stretches of nights; money runs through a live trip cost estimator whose fee math feeds both the shortlist compare and a multi-stop trip planner with an on-screen copyable itinerary. Operations gained an Instant Book vs request-approval pipeline with a host inbox, whose confirmed stays drive per-listing availability calendars, neighborhood insight rollups, and the finder's gap search. A warm restyle unified pill buttons, serif headings, and outlined status pills across every surface. The feature graph runs deep: base booking flow into the request pipeline into availability calendars into the trip planner and stay finder, alongside fit ranker into shortlist into planner.",
+ "dependency_graph": {
+  "nodes": [
+   {
+    "id": "T1",
+    "label": "base app",
+    "archetype": "base"
+   },
+   {
+    "id": "T2",
+    "label": "seeded catalog fit ranker",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T3",
+    "label": "trip cost estimator",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T4",
+    "label": "booking request pipeline",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T5",
+    "label": "availability calendars",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T6",
+    "label": "warm cross-page restyle",
+    "archetype": "design-restyle"
+   },
+   {
+    "id": "T7",
+    "label": "shortlist and compare",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T8",
+    "label": "multi-stop trip planner",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T9",
+    "label": "neighborhood insights",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T10",
+    "label": "flexible-stay finder",
+    "archetype": "interactive-tool"
+   }
+  ],
+  "edges": [
+   {
+    "from": "T1",
+    "to": "T4",
+    "what": "base booking flow and records extended with request statuses"
+   },
+   {
+    "from": "T4",
+    "to": "T5",
+    "what": "confirmed bookings block calendar nights"
+   },
+   {
+    "from": "T1",
+    "to": "T5",
+    "what": "calendar gates the base booking date selection"
+   },
+   {
+    "from": "T1",
+    "to": "T6",
+    "what": "restyles base browse and booking records pages"
+   },
+   {
+    "from": "T2",
+    "to": "T6",
+    "what": "restyles fit ranker chips and cards"
+   },
+   {
+    "from": "T3",
+    "to": "T6",
+    "what": "restyles estimator page"
+   },
+   {
+    "from": "T4",
+    "to": "T6",
+    "what": "restyles host inbox status badges"
+   },
+   {
+    "from": "T5",
+    "to": "T6",
+    "what": "restyles listing calendar pages"
+   },
+   {
+    "from": "T2",
+    "to": "T7",
+    "what": "save toggle lives on fit ranker result cards"
+   },
+   {
+    "from": "T3",
+    "to": "T7",
+    "what": "compare totals reuse estimator fee math"
+   },
+   {
+    "from": "T7",
+    "to": "T8",
+    "what": "planner stops are picked from the shortlist"
+   },
+   {
+    "from": "T5",
+    "to": "T8",
+    "what": "stop dates validated against availability calendars"
+   },
+   {
+    "from": "T3",
+    "to": "T8",
+    "what": "stop breakdowns use estimator pricing"
+   },
+   {
+    "from": "T4",
+    "to": "T9",
+    "what": "confirmed-stay counts come from inbox statuses"
+   },
+   {
+    "from": "T5",
+    "to": "T10",
+    "what": "gap search runs over calendar blocked nights"
+   }
+  ]
+ },
+ "global_rules": [
+  {
+   "rule": "Apartments are always labeled with name and neighborhood together, like 'Harbor Loft · Old Port', on every surface of the app.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Date ranges are always shown as abbreviated month with an arrow, like 'Sep 1 → Sep 8', everywhere in the app.",
+   "introduced_in_turn": 3
+  },
+  {
+   "rule": "Declining or cancelling anything always asks for confirmation first, app-wide.",
+   "introduced_in_turn": 4
+  }
+ ],
+ "pinned_seed": {
+  "entity": "7 apartments",
+  "introduced_in_turn": 2,
+  "records_gist": "Harbor Loft/Old Port $145 1bd 4.8 Waterfront+Pet; Garden Studio/Midtown $95 studio 4.6 Pet; Sunset Flat/Old Port $145 2bd 4.4 Waterfront; Maple Suite/Midtown $120 1bd 4.8 Family; Cedar Corner/Riverside $180 3bd 4.9 Family+Pet; Dockside Nook/Old Port $95 studio 4.2 Waterfront+Budget; Willow Walk-up/Riverside $120 2bd 4.6 Budget"
+ }
+}

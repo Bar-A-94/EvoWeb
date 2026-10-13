@@ -1,0 +1,881 @@
+{
+ "id": "000073",
+ "instruction": "Please implement a link tree website for displaying and managing links. The website should have functionalities for adding, editing, and deleting links. Users should be able to create and manage their own link tree, including adding new links, editing existing links, deleting unnecessary links, and sharing their link tree with others through link tree's shareable link. Set overall background to papaya whip, then style components with dark orange.",
+ "Category": {
+  "primary_category": "Data Management",
+  "subcategories": [
+   "CRUD Operations",
+   "File Handling"
+  ]
+ },
+ "application_type": "Personal Portfolio Sites",
+ "ui_instruct": [
+  {
+   "task": "Test the link addition functionality by adding a new link to the user’s link tree.",
+   "expected_result": "The newly added link appears in the user's link tree with the inputted title and URL.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Communication"
+    ]
+   }
+  },
+  {
+   "task": "Test the link editing functionality by modifying the title and URL of an existing link in the user’s link tree.",
+   "expected_result": "The link displays updated information in the link tree after saving changes.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations",
+     "File operation"
+    ]
+   }
+  },
+  {
+   "task": "Test the link deletion functionality by deleting an existing link from the user’s link tree.",
+   "expected_result": "The link is removed from the link tree, and there is no residual data displayed regarding the deleted link.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "File operation"
+    ]
+   }
+  },
+  {
+   "task": "Test the sharing functionality by copying the link tree's shareable link.",
+   "expected_result": "The shareable link is copied to the clipboard without errors, enabling sharing with others.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Communication"
+    ]
+   }
+  },
+  {
+   "task": "Test the form validation by attempting to add a new link with incomplete fields.",
+   "expected_result": "A validation error message is displayed, preventing the user from adding the link until all required fields are completed.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations"
+    ]
+   }
+  },
+  {
+   "task": "Test website navigation by navigating between the home page, link tree dashboard, and user profile.",
+   "expected_result": "Each navigation click takes the user to the correct page, without any errors.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering"
+    ]
+   }
+  },
+  {
+   "task": "Verify that the website uses 'papaya whip' as the background color and 'dark orange' as the component color, as specified in the design requirements.",
+   "expected_result": "The website has a background color of 'papaya whip' and components (such as buttons, cards, headers, etc.) are styled with the color 'dark orange', accurately reflecting the design instruction.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "archetype": "derived-state",
+   "instruction": "The tree's getting real traction and I want numbers. Add an Analytics page showing each link's click count and its share of all clicks to one decimal (a link with no clicks reads 0.0%, not blank), plus the total across the whole tree and a Top 3 leaderboard — when two links are tied on clicks, put them in alphabetical order by title. Start me off with exactly these seven links and counts, I'll grow it from there: My Portfolio (myportfolio.dev) 2450 clicks, YouTube Channel (youtube.com/@casey) 1204, Newsletter (caseywrites.substack.com) 987, Merch Store (shop.casey.co) 987, Podcast (pod.casey.co) 640, Discord (discord.gg/casey) 88, and Book a Call (cal.com/casey) with 0. One thing about numbers: everywhere in this app, now and for anything we add later, click counts get comma separators and the word 'clicks' after them — '2,450 clicks', never bare digits. And any link I add in the manager should show up on Analytics too, starting from zero.",
+   "source_website": "Linktree",
+   "source_feature": "Link click analytics and view tracking",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Analytics page and read the Top 3 leaderboard.",
+     "expected_result": "The Top 3 reads My Portfolio, YouTube Channel, Merch Store in that order — Merch Store (not Newsletter) takes third place because the 987-click tie breaks alphabetically by title.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ranking",
+       "Sorting"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open the Analytics page and find the total clicks across the whole tree.",
+     "expected_result": "The total reads 6,356 clicks, with the comma separator.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Formatting"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Analytics page, scroll to the row for Book a Call.",
+     "expected_result": "It shows 0 clicks and a 0.0% share — no blank cell, NaN, or missing row.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Edge Cases",
+       "Calculations"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the link manager, add a new link titled Blog with URL blog.casey.co, then open the Analytics page.",
+     "expected_result": "A Blog row appears on Analytics showing 0 clicks and 0.0%, and the overall total still reads 6,356 clicks.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "CRUD Operations",
+       "Data Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 1,
+     "task": "In the link manager, use the add link form to create a link titled Gallery with URL gallery.casey.co.",
+     "expected_result": "Gallery appears in the link list showing the title Gallery and the URL gallery.casey.co.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "CRUD Operations"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Now I want to see the tree the way a visitor does. Add a Preview page I can reach from the nav that shows just the tappable link buttons, and clicking a button there counts as a click on that link — the numbers should land back in Analytics. Give every link in the manager a Live/Hidden toggle; hidden links stay off the Preview but their click history still counts toward every total, and Discord should start out Hidden. Show each link's status everywhere as a little colored pill badge — green when it's live, gray when it isn't, never plain text — and keep that style for anything we add down the road. Also, from now on, anywhere in this app a new link gets created it should start out Hidden, so nothing goes public before I'm ready.",
+   "source_website": "Carrd",
+   "source_feature": "Shareable public profile URL with copy-to-clipboard (fused with Linktree's show/hide link toggle)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Preview page from the nav and count the link buttons.",
+     "expected_result": "Exactly 6 buttons show — every link except Discord, which starts Hidden.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Filtering",
+       "Visibility"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open the Analytics page and find the total clicks figure.",
+     "expected_result": "The total still reads 6,356 clicks — Discord's 88 historical clicks count toward the total even while it is Hidden.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Data Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the link manager, add a new link titled Freebies with URL free.casey.co, then open the Preview page.",
+     "expected_result": "Freebies appears in the manager with a gray Hidden pill badge and does not appear among the Preview buttons.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Default State",
+       "Visibility"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the Preview page, click the YouTube Channel button once, then open the Analytics page.",
+     "expected_result": "YouTube Channel now shows 1,205 clicks and the tree total reads 6,357 clicks.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Page Consistency",
+       "Counting"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "Open the Analytics page and read the Top 3 leaderboard.",
+     "expected_result": "The Top 3 reads My Portfolio, YouTube Channel, Merch Store in that order — Merch Store (not Newsletter) takes third place because the 987-click tie breaks alphabetically by title.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ranking",
+       "Sorting"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Some of my links are time-limited promos, so let me give any link an optional schedule: a start date and an end date typed into date fields, and don't let me save an end date that's earlier than the start. A scheduled link shows on the Preview from its start date through its end date inclusive, on top of the Live/Hidden rule — Hidden always wins. Since there's no real 'today' in this thing, put a viewing-as-of date box on the Preview that starts at July 1, 2026 and re-filters the buttons the moment I change it, no reload. Set Merch Store to run August 1 through August 31, 2026, and Book a Call June 1 through July 10, 2026.",
+   "source_website": "Linktree",
+   "source_feature": "Link scheduling (start and end date/time)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Preview page with the viewing-as-of date at its default of July 1, 2026 and look over the buttons.",
+     "expected_result": "Exactly 5 buttons show: Merch Store is missing (its window starts August 1) while Book a Call is present (its window runs through July 10).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Filtering",
+       "Date Logic"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Preview page, type July 10, 2026 into the viewing-as-of date box, then change it to July 11, 2026.",
+     "expected_result": "Book a Call is still shown on July 10 (the end date is inclusive) and disappears on July 11, updating live without a page reload.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Boundary Conditions",
+       "Live Updates"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the link manager, open the schedule fields for Podcast and try to save a start date of August 10, 2026 with an end date of August 1, 2026.",
+     "expected_result": "The schedule is rejected with a visible validation message because the end date is before the start date, and no window gets saved on Podcast.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Validation"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the Preview page type August 5, 2026 into the viewing-as-of box, then in the link manager toggle Merch Store to Hidden and return to the Preview.",
+     "expected_result": "Merch Store no longer appears even though August 5 falls inside its scheduled window — Hidden overrides the schedule.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Rule Precedence",
+       "Cross-Page Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "Open the Analytics page and find the total clicks figure.",
+     "expected_result": "The total still reads 6,356 clicks — Discord's 88 historical clicks count toward the total even while it is Hidden.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Data Consistency"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Time to get organized: I want link groups. Put My Portfolio and Book a Call in Work, YouTube Channel and Podcast in Content, Newsletter and Merch Store in Offers, and Discord in Community — the manager and the Preview should show them as sections in that order, but if a group has nothing currently visible the Preview shouldn't render an empty header for it. And on Analytics give me a group rollup: each group's combined clicks, ranked highest first, counting every link's history whether it's hidden or not.",
+   "source_website": "Carrd",
+   "source_feature": "Drag-and-drop link reordering (reshaped into click-based grouping into ordered sections)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Analytics page and read the group rollup.",
+     "expected_result": "Groups rank Work (2,450 clicks), Offers (1,974 clicks), Content (1,844 clicks), then Community (88 clicks) — Offers sits above Content.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Ranking"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "On the Analytics group rollup, find the Community group.",
+     "expected_result": "Community shows 88 clicks even though Discord, its only link, is Hidden.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Edge Cases"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the Preview page (viewing-as-of left at July 1, 2026) and look at the section headers.",
+     "expected_result": "Work, Content, and Offers appear as sections in that order, and no Community header shows because nothing in it is visible — no empty section.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Empty States",
+       "Grouping"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the link manager toggle Discord to Live, then open the Preview page.",
+     "expected_result": "A Community section now appears on the Preview with the Discord button inside it.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Page Consistency",
+       "Visibility"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "On the Analytics page, scroll to the row for Book a Call.",
+     "expected_result": "It shows 0 clicks and a 0.0% share — no blank cell, NaN, or missing row.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Edge Cases",
+       "Calculations"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "I keep wanting my best stuff on top. Add a pin toggle on each link that floats it to the top of its group everywhere links are listed, plus Move Up and Move Down buttons that reorder links within their group — and the Preview should follow whatever order the manager shows. Unpinning a link should drop it back where it used to sit, not to the bottom, and nudging a link that's already at the top of its group shouldn't do anything weird. Pin Merch Store for me so it sits above Newsletter in Offers.",
+   "source_website": "Linktree",
+   "source_feature": "Priority / pinned links (fused with Carrd's link reordering, adapted to click buttons)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "In the link manager, look at the Offers group section.",
+     "expected_result": "Merch Store is listed above Newsletter — the pin floats it over the original order, which had Newsletter first.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Ordering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the link manager's Content section, click Move Up on Podcast, then click Move Up on Podcast again.",
+     "expected_result": "The first click puts Podcast above YouTube Channel; the second click leaves the order unchanged with no error, since Podcast is already at the top of its group.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Boundary Conditions",
+       "Ordering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the link manager, click the pin toggle on Podcast, then click it again to unpin.",
+     "expected_result": "Pinning moves Podcast to the top of the Content section; unpinning returns it below YouTube Channel — back to its former spot, not to the bottom.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Management",
+       "Ordering"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the link manager click Move Up on Podcast in the Content section, then open the Preview page.",
+     "expected_result": "In the Preview's Content section the Podcast button now sits above the YouTube Channel button.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Page Consistency",
+       "Ordering"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 4,
+     "task": "On the Preview page, type July 10, 2026 into the viewing-as-of date box, then change it to July 11, 2026.",
+     "expected_result": "Book a Call is still shown on July 10 (the end date is inclusive) and disappears on July 11, updating live without a page reload.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Boundary Conditions",
+       "Live Updates"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "design-restyle",
+   "instruction": "Big rebrand time, and I want it applied everywhere — the link manager, Analytics, and the Preview, no page left on the old look. Swap the papaya whip background for plain white on every page, turn the dark orange buttons and toggles teal (#0F766E), make every link card and Preview button a fully rounded pill, and center each page's main heading. While you're at it, give the group section headers a thin teal underline in both the manager and the Preview.",
+   "source_website": "Carrd",
+   "source_feature": "Fully customizable profile page styling",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Open the link manager page and look at its overall styling.",
+     "expected_result": "The background is plain white (no papaya whip), the main heading is centered, and the primary add-link action is teal rather than dark orange.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Color Scheme",
+       "Layout"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open the restyled Analytics page and read the Top 3 leaderboard.",
+     "expected_result": "The page carries the rebrand — white background, centered main heading, teal action buttons with no dark orange remnants — and the Top 3 still reads My Portfolio, YouTube Channel, Merch Store in that order: the 987-click tie keeps breaking alphabetically by title, so Merch Store (not Newsletter) holds third.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ranking",
+       "Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the Preview page and look at the link buttons and section headers.",
+     "expected_result": "Every link button is a fully rounded pill, the group section headers have a thin teal underline, and the background is white.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Component Styling",
+       "Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the restyled link manager, toggle My Portfolio to Hidden.",
+     "expected_result": "Its status switches to a gray pill badge — still a colored pill badge on the new white design, not plain text.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Component Styling",
+       "State Display"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "Open the Analytics page and find the total clicks figure.",
+     "expected_result": "The total still reads 6,356 clicks — Discord's 88 historical clicks count toward the total even while it is Hidden.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Data Consistency"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "I want targets to chase. Give me a Goals page where I pick one of my links and type in a click target — reject anything that isn't a whole number above that link's current clicks — and each goal shows its progress as a percent with one decimal plus a progress bar, flipping to a Reached state once the link gets there. Clicks I rack up over on the Preview should move these bars. Seed two goals for me: YouTube Channel to 1,500 clicks and Discord to 100.",
+   "source_website": "Linktree",
+   "source_feature": "Link click analytics and view tracking (extended into click goals with progress)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Goals page and read the YouTube Channel goal.",
+     "expected_result": "It shows progress of 80.3% (1,204 of 1,500 clicks) — one decimal, not 80% or 80.27%.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Calculations",
+       "Rounding"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "On the Goals page, read the Discord goal.",
+     "expected_result": "It shows 88.0% toward 100 clicks — Discord's clicks keep counting even though the link is Hidden.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Calculations",
+       "Edge Cases"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Goals page, create a goal for My Portfolio with a target of 2000.",
+     "expected_result": "It is rejected with a visible message because 2,000 is below My Portfolio's current 2,450 clicks, and no goal is added to the list.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Validation"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the link manager toggle Discord to Live, click the Discord button once on the Preview page, then open the Goals page.",
+     "expected_result": "The Discord goal now reads 89.0% (89 of 100 clicks).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Page Consistency",
+       "Calculations"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 5,
+     "task": "Open the Analytics page and read the group rollup.",
+     "expected_result": "Groups rank Work (2,450 clicks), Offers (1,974 clicks), Content (1,844 clicks), then Community (88 clicks) — Offers sits above Content.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Ranking"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Before I post my weekly update I want a Digest page that builds a copyable text summary right on screen: the tree's total clicks and how many links there are, the top link with its count, how many of my goals are reached versus still going, and a Coming up list of any links whose scheduled window hasn't opened yet as of a chosen date — give the Digest its own as-of date box starting at July 1, 2026, and recompute the summary when I change it. If nothing's coming up, the section should say so plainly instead of just vanishing.",
+   "source_website": "Linktree",
+   "source_feature": "Link click analytics + link scheduling (fused into a composed weekly digest)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Digest page with its as-of date at the default July 1, 2026 and read the summary.",
+     "expected_result": "The top-link line names My Portfolio with 2,450 clicks, and the goals line says 0 of 2 goals reached.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Report Generation"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "On the Digest page (as-of July 1, 2026), read the Coming up section.",
+     "expected_result": "It lists exactly one link — Merch Store, whose window opens August 1, 2026; Book a Call does not appear since its window already started.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Filtering",
+       "Date Logic"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Digest page, type September 1, 2026 into its as-of date box.",
+     "expected_result": "The Coming up section switches to an explicit nothing-coming-up message rather than going blank or disappearing, and the rest of the summary still renders.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Empty States",
+       "Live Updates"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the Digest page, find the total-clicks line of the summary.",
+     "expected_result": "The total is written as 6,356 clicks — comma separator plus the word 'clicks', not bare digits.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Formatting",
+       "Conventions"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 6,
+     "task": "In the link manager, look at the Offers group section.",
+     "expected_result": "Merch Store is listed above Newsletter — the pin floats it over the original order, which had Newsletter first.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Ordering"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Last thing — give my page an identity. Add a Profile setup that walks me through steps: name first (required, 30 characters tops, and build my avatar from my initials so 'Casey Quinn' becomes CQ), then a bio capped at 160 characters with a live countdown of what's left as I type, then a review step where going Back doesn't lose anything I entered. Publishing should put the avatar, name, and bio in a header at the top of the Preview, and once it's published, sign the Digest with my display name too.",
+   "source_website": "Carrd",
+   "source_feature": "Profile header with avatar and bio text",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Start the profile setup, type Casey Quinn as the display name, continue to the bio step, and type Links for everything I make into the bio field.",
+     "expected_result": "The remaining-character countdown updates live while typing and reads 133 after that 27-character bio.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Updates",
+       "Calculations"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Start the profile setup and try to continue past the name step with the display name left empty.",
+     "expected_result": "It refuses to advance and shows a validation message; the bio step is not reached.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Validation"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Complete the profile setup with display name Casey Quinn and bio Maker of things, publish it, then open the Preview page.",
+     "expected_result": "A header shows the CQ initials avatar, the name Casey Quinn, and the bio, with exactly 5 link buttons below it (the viewing-as-of date at its July 1, 2026 default).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Page Consistency",
+       "Data Display"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Complete the profile setup with display name Casey Quinn and bio Maker of things, publish it, then open the Digest page.",
+     "expected_result": "The digest summary is now signed with the display name Casey Quinn.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Page Consistency",
+       "Report Generation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 7,
+     "task": "Open the Preview page and look at the link buttons and section headers.",
+     "expected_result": "Every link button is a fully rounded pill, the group section headers have a thin teal underline, and the background is white.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Component Styling",
+       "Consistency"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "target_app_summary": "The one-page link tree has grown into a full creator link-in-bio platform. A click analytics dashboard (seeded with seven exact links and counts) feeds nearly everything: a public visitor Preview whose button clicks increment the counts, schedule windows with a typed viewing-as-of date simulator, group sections with click rollups, pin/move ordering that the Preview mirrors, a click-goals tracker whose bars move when visitors click, and a copyable weekly Digest that composes totals, top link, goal progress, and upcoming scheduled links. A teal-on-white rebrand restyles the manager, Analytics, and Preview, and a multi-step profile wizard publishes an initials-avatar header onto the Preview and signs the Digest. The graph has two deep chains (analytics -> preview -> scheduling -> digest -> profile, and analytics -> preview -> groups -> ordering), so early breakage compounds through the ladder.",
+ "dependency_graph": {
+  "nodes": [
+   {
+    "id": "T1",
+    "label": "base app",
+    "archetype": "base"
+   },
+   {
+    "id": "T2",
+    "label": "click analytics dashboard",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T3",
+    "label": "public preview + visibility",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T4",
+    "label": "scheduling + date simulator",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T5",
+    "label": "link groups + rollups",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T6",
+    "label": "pin and reorder manager",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T7",
+    "label": "teal rebrand",
+    "archetype": "design-restyle"
+   },
+   {
+    "id": "T8",
+    "label": "click goals tracker",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T9",
+    "label": "weekly digest report",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T10",
+    "label": "profile setup wizard",
+    "archetype": "multi-surface-workflow"
+   }
+  ],
+  "edges": [
+   {
+    "from": "T1",
+    "to": "T2",
+    "what": "analytics rows mirror the manager's link list"
+   },
+   {
+    "from": "T1",
+    "to": "T3",
+    "what": "preview renders the manager's links as buttons"
+   },
+   {
+    "from": "T2",
+    "to": "T3",
+    "what": "preview clicks increment analytics counts and totals"
+   },
+   {
+    "from": "T3",
+    "to": "T4",
+    "what": "as-of date control filters the preview's visible buttons"
+   },
+   {
+    "from": "T2",
+    "to": "T5",
+    "what": "group rollups aggregate analytics click totals"
+   },
+   {
+    "from": "T3",
+    "to": "T5",
+    "what": "preview sections hide when no link is visible"
+   },
+   {
+    "from": "T5",
+    "to": "T6",
+    "what": "pins and move buttons operate within group sections"
+   },
+   {
+    "from": "T3",
+    "to": "T6",
+    "what": "preview button order mirrors the manager's order"
+   },
+   {
+    "from": "T1",
+    "to": "T7",
+    "what": "restyles the link manager page"
+   },
+   {
+    "from": "T2",
+    "to": "T7",
+    "what": "restyles the Analytics page"
+   },
+   {
+    "from": "T3",
+    "to": "T7",
+    "what": "restyles the Preview page"
+   },
+   {
+    "from": "T5",
+    "to": "T7",
+    "what": "teal underline restyles the group section headers"
+   },
+   {
+    "from": "T2",
+    "to": "T8",
+    "what": "goal progress computed from tracked click counts"
+   },
+   {
+    "from": "T3",
+    "to": "T8",
+    "what": "preview clicks advance goal progress bars"
+   },
+   {
+    "from": "T2",
+    "to": "T9",
+    "what": "digest totals and top link from click data"
+   },
+   {
+    "from": "T4",
+    "to": "T9",
+    "what": "Coming up section reads schedule windows vs as-of date"
+   },
+   {
+    "from": "T8",
+    "to": "T9",
+    "what": "digest counts goals reached vs in progress"
+   },
+   {
+    "from": "T3",
+    "to": "T10",
+    "what": "wizard publishes header onto the Preview page"
+   },
+   {
+    "from": "T4",
+    "to": "T10",
+    "what": "the published header sits above the Preview's schedule-filtered buttons at the as-of date"
+   },
+   {
+    "from": "T9",
+    "to": "T10",
+    "what": "digest signed with the published display name"
+   }
+  ]
+ },
+ "global_rules": [
+  {
+   "rule": "Click counts are always written with comma thousands separators followed by the word 'clicks' (e.g. '2,450 clicks'), never bare digits, on every surface now and later.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "A link's status is always shown as a colored pill badge — green when publicly visible, gray when not — never plain text, on every surface now and later.",
+   "introduced_in_turn": 3
+  },
+  {
+   "rule": "Any newly created link starts as Hidden until explicitly toggled Live, wherever in the app it gets created.",
+   "introduced_in_turn": 3
+  }
+ ],
+ "pinned_seed": {
+  "entity": "7 link-tree links with click counts",
+  "introduced_in_turn": 2,
+  "records_gist": "My Portfolio 2450, YouTube Channel 1204, Newsletter 987, Merch Store 987 (tie), Podcast 640, Discord 88, Book a Call 0 — total 6,356; tie forces alphabetical tiebreak, zero-click link forces 0.0% boundary",
+  "records": "My Portfolio (myportfolio.dev) 2450 clicks; YouTube Channel (youtube.com/@casey) 1204; Newsletter (caseywrites.substack.com) 987; Merch Store (shop.casey.co) 987; Podcast (pod.casey.co) 640; Discord (discord.gg/casey) 88; Book a Call (cal.com/casey) 0"
+ }
+}

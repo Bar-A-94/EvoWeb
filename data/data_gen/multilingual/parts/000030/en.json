@@ -1,0 +1,845 @@
+{
+ "id": "000030",
+ "instruction": "Please implement a technical website to display technical information and solutions. The website should have functionalities for browsing technical articles, searching technical information, and viewing solutions. Users should be able to browse technical articles, search technical information, view solutions, and communicate with other users.",
+ "Category": {
+  "primary_category": "Content Presentation",
+  "subcategories": [
+   "Dynamic Content Rendering",
+   "User Interaction"
+  ]
+ },
+ "application_type": "Discussion Forums",
+ "ui_instruct": [
+  {
+   "task": "Navigate to the technical articles section using the main navigation menu.",
+   "expected_result": "The technical articles section loads correctly, displaying available articles with a clear and accessible layout.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering"
+    ]
+   }
+  },
+  {
+   "task": "Use the search functionality to find a specific technical topic.",
+   "expected_result": "Relevant search results are displayed matching the query, and the results are relevant to technical information.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Searching"
+    ]
+   }
+  },
+  {
+   "task": "Open a technical article and verify its content.",
+   "expected_result": "The article loads without errors and the content displayed is technical in nature, accurate, and complete based on the article’s title.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering",
+     "Details Information"
+    ]
+   }
+  },
+  {
+   "task": "Verify that the website uses 'lavender' as the background color and 'indigo' as the component color, as specified in the design requirements.",
+   "expected_result": "The website has a background color of 'lavender' and components (such as buttons, cards, headers, etc.) are styled with the color 'indigo', accurately reflecting the design instruction.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "archetype": "derived-state",
+   "instruction": "The article list needs a proper screener, not just that search box. Start me off with exactly these six articles, I'll add more later: 'Taming React Re-renders' by Priya Nair (Web Development, #react #performance, Advanced, 8,400 views all-time with 320 this week, 1,800 words); 'SQL Indexing Demystified' by Marcus Webb (Databases, #sql #performance, Intermediate, 12,100 views with 150 this week, 1,200 words); 'Intro to Binary Trees' by Priya Nair (Algorithms, #datastructures, Beginner, 3,300 views with 540 this week, 900 words); 'Debugging Memory Leaks in Node' by Elena Fox (Web Development, #node #performance, Advanced, 6,750 views with 540 this week, 2,100 words); 'REST vs GraphQL' by Marcus Webb (Web Development, #api, Intermediate, 15,600 views with 90 this week, 1,500 words); and 'Understanding TCP Handshakes' by Elena Fox (Networking, #networking, Beginner, 980 views with 210 this week, 600 words). I want a category picker, clickable tag chips, and a minimum-views box I can type a number into — picking two tags should widen things (either tag matches) but the other controls narrow (category AND tags AND views), with a live count of matches, plus let me save a filter combo under a name and pull it back later, and a sort control for all-time views, this week's views, or title, where tied view counts fall back to alphabetical by title. Oh and two things I want everywhere in this app from now on, including anything we add later: view counts of a thousand or more get shortened like 12.1k (one decimal), and anything with a difficulty level wears a colored badge — green for Beginner, amber for Intermediate, red for Advanced.",
+   "source_website": "https://dev.to",
+   "source_feature": "Tag-based filtering and topic browsing (fused with GeeksforGeeks topic-based category navigation and dev.to feed sorting controls)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "In the article screener, set the category control to Web Development and click the #performance tag chip.",
+     "expected_result": "Exactly two articles remain: Taming React Re-renders and Debugging Memory Leaks in Node. SQL Indexing Demystified (which has #performance but lives in Databases) is NOT listed.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Boolean Composition"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "With no filters applied, set the sort control to this week's views.",
+     "expected_result": "Debugging Memory Leaks in Node appears above Intro to Binary Trees — both have 540 views this week and the tie breaks alphabetically by title — with Taming React Re-renders (320) next.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Sorting",
+       "Tie-breaking"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Set the category to Databases, save the current filter combo under the name 'db picks', change the category to Algorithms, then recall the 'db picks' preset.",
+     "expected_result": "Recalling the preset restores the category control to Databases and the list again shows only SQL Indexing Demystified.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Saved Presets",
+       "State Restoration"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Set the category control to Networking, then click the one remaining article.",
+     "expected_result": "Only Understanding TCP Handshakes matches the filter, and clicking it opens its article detail page with the article's content.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Navigation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 1,
+     "task": "Type 'SQL' into the site's search.",
+     "expected_result": "Search results include the article SQL Indexing Demystified.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Searching"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Plain upvoting is boring — give every article a reaction bar with three emoji: 💡 insightful, 🔥 fire, and 🤯 mind-blown, shown on the article cards and on the detail page, always in sync, with a combined total next to them. I can toggle each emoji once per article — clicking again takes mine back — and the numbers should move the instant I click, no page reload. Seed the counts like so (that's 💡/🔥/🤯): Taming React Re-renders 12/8/9, SQL Indexing Demystified 30/2/1, Intro to Binary Trees 4/3/0, Debugging Memory Leaks in Node 10/10/10, REST vs GraphQL 20/5/15, Understanding TCP Handshakes 1/0/1.",
+   "source_website": "https://dev.to",
+   "source_feature": "Emoji reaction system",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "On the Understanding TCP Handshakes article, click the 🔥 reaction, then click 🔥 again.",
+     "expected_result": "After the first click the 🔥 count goes from 0 to 1 and the combined total from 2 to 3, updating immediately; the second click returns them to 0 and 2.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Toggle Interaction",
+       "Count Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open the SQL Indexing Demystified article detail page and look at its reaction bar.",
+     "expected_result": "It shows 💡 30, 🔥 2, 🤯 1 with a combined total of 33.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Details Information",
+       "Aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "From the article list, click 💡 on the Intro to Binary Trees card, then open that article's detail page.",
+     "expected_result": "The card's combined total went from 7 to 8 the moment you clicked, and the detail page shows the same updated numbers (💡 5, total 8) — card and detail stay in sync.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Synchronization"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the article screener, set the category control to Web Development and click the #api tag chip, then look at the reaction numbers on the one remaining article.",
+     "expected_result": "Only REST vs GraphQL matches, and its card shows the seeded reactions 💡 20, 🔥 5, 🤯 15 with a combined total of 40 — the screener's filtered cards carry the same live reaction bar as the rest of the app.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Integration",
+       "Filtering"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "In the article screener, set the category control to Web Development and click the #performance tag chip.",
+     "expected_result": "Exactly two articles remain: Taming React Re-renders and Debugging Memory Leaks in Node. SQL Indexing Demystified (which has #performance but lives in Databases) is NOT listed.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Boolean Composition"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Let's open up solutions to the community: a 'Share a Solution' flow where I write a title, pick a category and a difficulty, and put at least one code snippet in a code block — then a review screen that shows exactly what I typed before I hit publish. It should refuse to move to review if the title is under 10 characters or the code block is empty, and tell me which of the two is the problem. Published ones land on a Community Solutions page, and anything community-written should carry a visible 'Community' label wherever it shows up across the app, now and in whatever we build later. Pre-load three already published: 'Fixing CORS Errors Once and For All' by Elena Fox (Intermediate), 'Docker Layer Caching Tips' by Priya Nair (Beginner), and 'Zero-Downtime Postgres Migrations' by Elena Fox (Advanced).",
+   "source_website": "https://www.geeksforgeeks.org",
+   "source_feature": "Inline code examples within articles (extended into a validated community authoring flow)",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Start the Share a Solution flow, type 'Tips' as the title, leave the code block empty, and try to continue to the review step.",
+     "expected_result": "It refuses to advance and visibly flags both problems — the title being under 10 characters and the missing code block.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In Share a Solution, type the title 'Handling Async Race Conditions', pick the category Web Development and the difficulty Advanced, type 'await mutex.lock()' into the code block, continue to review, then publish.",
+     "expected_result": "The review screen shows exactly the typed title and code snippet before publishing, and after publishing the new solution appears on the Community Solutions page.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Multi-step Workflow",
+       "Data Persistence"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open the Community Solutions page without publishing anything new.",
+     "expected_result": "Exactly three solutions are listed: Fixing CORS Errors Once and For All and Zero-Downtime Postgres Migrations by Elena Fox, and Docker Layer Caching Tips by Priya Nair.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Seeded Data",
+       "List Contents"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Look at the difficulty badges on the three seeded community solutions.",
+     "expected_result": "Fixing CORS Errors Once and For All shows an amber Intermediate badge, Docker Layer Caching Tips a green Beginner badge, and Zero-Downtime Postgres Migrations a red Advanced badge.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Badge Coding",
+       "UI Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "On the Understanding TCP Handshakes article, click the 🔥 reaction, then click 🔥 again.",
+     "expected_result": "After the first click the 🔥 count goes from 0 to 1 and the combined total from 2 to 3, updating immediately; the second click returns them to 0 and 2.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Toggle Interaction",
+       "Count Consistency"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "I want a Trending This Week dashboard on the homepage: rank the articles by an engagement score — this week's views plus ten points for every reaction they've collected — and show the top five with their scores. When two scores tie, the one with more views this week goes first. Under it, give me a per-category rollup of this week's views and total reactions. And it has to be live: if someone adds or removes a reaction, the scores and the order follow immediately.",
+   "source_website": "https://www.geeksforgeeks.org",
+   "source_feature": "Trending / Popular content section",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Trending This Week dashboard and read the ranked list.",
+     "expected_result": "The top five in order: Debugging Memory Leaks in Node (score 840), Intro to Binary Trees (610), Taming React Re-renders (610), REST vs GraphQL (490), SQL Indexing Demystified (480) — NOT the all-time-views order that would put REST vs GraphQL first.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ranking",
+       "Computed Values"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Compare the two trending entries that both show a score of 610.",
+     "expected_result": "Intro to Binary Trees ranks above Taming React Re-renders because its 540 views this week beat 320 — the tie is not broken by all-time views or alphabetically.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Tie-breaking",
+       "Ranking"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Find the Networking row in the per-category rollup.",
+     "expected_result": "It shows 210 views this week and 2 reactions — matching Understanding TCP Handshakes, the only Networking article — not zeros and not all-time numbers.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Rollups"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Open SQL Indexing Demystified, add a 💡 reaction, then return to the trending dashboard.",
+     "expected_result": "SQL Indexing Demystified's score rises to 490, tying REST vs GraphQL, and it now sits above REST vs GraphQL in 4th place (150 weekly views beats 90).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Recomputation",
+       "Cross-feature Integration"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "Set the category to Databases, save the current filter combo under the name 'db picks', change the category to Algorithms, then recall the 'db picks' preset.",
+     "expected_result": "Recalling the preset restores the category control to Databases and the list again shows only SQL Indexing Demystified.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Saved Presets",
+       "State Restoration"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "design-restyle",
+   "instruction": "Time for a facelift — the lavender thing feels dated, let's make it read like a developer tool. I want a dark slate header bar with the site name on the left on every page, teal for all primary action buttons, cards with 12px rounded corners and a left accent stripe in that card's difficulty color, tags as monospace pill chips, and page titles centered. Apply it consistently across the articles/screener page, article detail pages, the Community Solutions page, and the trending dashboard — don't leave any of them on the old look.",
+   "source_website": "https://dev.to",
+   "source_feature": "dev.to's dark developer-oriented visual styling (adapted into a site-wide restyle)",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Visit the articles screener page and then the Community Solutions page, looking at the header and the primary action buttons on each.",
+     "expected_result": "Both pages show the dark slate header bar with the site name on the left, and the primary action buttons are teal on both — neither page kept the old styling.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "UI Consistency",
+       "Cross-page Styling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open any article's detail page and then the trending dashboard.",
+     "expected_result": "Both show a centered page title under the same dark slate header, matching the rest of the site.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Typography",
+       "UI Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "On the articles list, compare the cards for Debugging Memory Leaks in Node and Intro to Binary Trees.",
+     "expected_result": "The Memory Leaks card has a red left accent stripe (Advanced) and the Binary Trees card a green one (Beginner), both on rounded cards.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Color Coding",
+       "Card Styling"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Look at the difficulty badges on the trending dashboard's ranked entries.",
+     "expected_result": "Badges still follow green Beginner / amber Intermediate / red Advanced after the restyle — e.g. Debugging Memory Leaks in Node shows red and Intro to Binary Trees green.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Badge Coding",
+       "Convention Persistence"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 4,
+     "task": "Start the Share a Solution flow, type 'Tips' as the title, leave the code block empty, and try to continue to the review step.",
+     "expected_result": "It refuses to advance and visibly flags both problems — the title being under 10 characters and the missing code block.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Give me a personal reading list: a bookmark toggle on every article and on every community solution, and a Reading List page showing what I've saved. Each saved article shows an estimated read time — its word count divided by 200, rounded UP to whole minutes — and the page shows a total time remaining plus mark-as-read checkboxes, with read items dropping out of the remaining total (community solutions don't have word counts, so no minutes for those). If the list ever goes empty it should say so nicely, not blank out. Start with Debugging Memory Leaks in Node and SQL Indexing Demystified already saved and unread.",
+   "source_website": "https://dev.to",
+   "source_feature": "Reading list / bookmark functionality",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Reading List page as seeded.",
+     "expected_result": "Debugging Memory Leaks in Node shows an 11 min read (2,100 words rounded up, not 10 or 10.5), SQL Indexing Demystified shows 6 min, and the remaining total reads 17 min with 2 items unread.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Values",
+       "Rounding"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Reading List, mark Debugging Memory Leaks in Node as read.",
+     "expected_result": "The remaining time drops to 6 min and the unread count to 1, while the item stays visible in a read state.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Progress Tracking",
+       "Count Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Remove both seeded items from the Reading List using their bookmark/remove controls.",
+     "expected_result": "The page shows a friendly empty-state message instead of a blank or broken page, with no leftover totals.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Empty State",
+       "Boundary Handling"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the Community Solutions page, bookmark Fixing CORS Errors Once and For All, then open the Reading List.",
+     "expected_result": "The solution appears in the reading list still carrying its Community label.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Integration",
+       "Labeling Conventions"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 5,
+     "task": "Open the Trending This Week dashboard and read the ranked list.",
+     "expected_result": "The top five in order: Debugging Memory Leaks in Node (score 840), Intro to Binary Trees (610), Taming React Re-renders (610), REST vs GraphQL (490), SQL Indexing Demystified (480) — NOT the all-time-views order that would put REST vs GraphQL first.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ranking",
+       "Computed Values"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Let's curate a featured spot for the homepage. Build a Featured Queue page: every article and community solution gets a 'Feature this' button that drops it into the queue, the queue shows entries numbered from 1 with up/down buttons and a remove button, and there's a preview plus a publish action — whatever sits at number 1 becomes the homepage's featured card when I publish, and that card should show the item's title, its author, and (for articles) its view count. I also want a one-click 'Pull this week's #1' that grabs the current top item from the trending dashboard and inserts it at position 1, bumping everything else down. Positions must always read 1, 2, 3... with no gaps or duplicates, even right after a remove or reorder. Start the queue with REST vs GraphQL at 1 and Fixing CORS Errors Once and For All at 2.",
+   "source_website": "https://www.geeksforgeeks.org",
+   "source_feature": "Problem of the Day (daily challenge) — reshaped into a curated featured-content queue",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "On the Featured Queue page, click the up button on Fixing CORS Errors Once and For All.",
+     "expected_result": "It swaps to position 1 and REST vs GraphQL to position 2 — the numbering stays exactly 1 and 2 with no duplicates.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Reordering",
+       "Position Integrity"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Remove REST vs GraphQL from the queue.",
+     "expected_result": "Fixing CORS Errors Once and For All renumbers to position 1 — it does not stay labeled 2.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Deletion",
+       "Renumbering"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "With the queue as seeded, publish it and look at the homepage's featured card.",
+     "expected_result": "The featured card shows REST vs GraphQL with its view count shortened as 15.6k.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Publishing",
+       "Formatting Conventions"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Click the 'Pull this week's #1' control on the Featured Queue page.",
+     "expected_result": "Debugging Memory Leaks in Node — the trending dashboard's current top item — lands at position 1, and the seeded entries bump down to 2 and 3.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Integration",
+       "Queue Insertion"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "With no filters applied, set the sort control to this week's views.",
+     "expected_result": "Debugging Memory Leaks in Node appears above Intro to Binary Trees — both have 540 views this week and the tie breaks alphabetically by title — with Taming React Re-renders (320) next.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Sorting",
+       "Tie-breaking"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Contributors deserve credit. Give me a Contributors page with a card for every author showing the reactions their articles have collected, how many community solutions they've published, and a level: everyone starts as Reader, 10 or more reactions makes you Rising, Expert takes at least 30 reactions AND at least one published solution, and Legend needs 60 reactions and two solutions — both parts required, so piling up reactions alone never gets anyone past Rising. Each card should also spell out exactly what's still missing for the next level. Two more things: the Share a Solution form needs an author picker so new solutions get credited to a contributor — and have the form come up with Web Development and Intermediate already selected so a quick share is just a title, an author, and a snippet — and the page has to track live — a new reaction or a fresh publish updates the stats, the missing-for-next-level hint, and the level itself on the spot, no reload.",
+   "source_website": "https://dev.to",
+   "source_feature": "Badges and achievement milestones on contributor profiles (reshaped into a threshold-gated contributor level system)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Contributors page and read each card's level.",
+     "expected_result": "Priya Nair (36 reactions, 1 solution) and Elena Fox (32 reactions, 2 solutions) both show the Expert level, while Marcus Webb shows only Rising despite having by far the most reactions (73) — he has zero published solutions, so Expert stays out of reach.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Values",
+       "Threshold Logic"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Look at the missing-for-next-level line on Marcus Webb's card and on Elena Fox's card.",
+     "expected_result": "Marcus's card says a published solution is what he's missing for Expert — not more reactions — while Elena's says she needs 28 more reactions for Legend, her 2 solutions already covering that half.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Values",
+       "Breakdown Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Click 💡 on the Taming React Re-renders article, then check Priya Nair's card on the Contributors page.",
+     "expected_result": "Her reactions received tick up from 36 to 37 without a reload, and her next-level hint recomputes live — Legend now wants 23 more reactions plus 1 more solution.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Recomputation",
+       "Cross-feature Integration"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Run the Share a Solution flow: type the title 'Profiling Slow Endpoints in Node', pick Marcus Webb in the author picker, leave the preselected category and difficulty as they are, type 'console.time()' into the code block, then review, publish, and open the Contributors page.",
+     "expected_result": "Marcus Webb's card now shows 1 published solution and his level jumps from Rising to Expert — his 73 reactions plus the fresh publish clear both Expert requirements.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Integration",
+       "Live Recomputation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 7,
+     "task": "Open the Reading List page as seeded.",
+     "expected_result": "Debugging Memory Leaks in Node shows an 11 min read (2,100 words rounded up, not 10 or 10.5), SQL Indexing Demystified shows 6 min, and the remaining total reads 17 min with 2 items unread.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Values",
+       "Rounding"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Cap it off with a Weekly Digest builder. It auto-pulls three sections: this week's top three trending articles in their exact trending order, whatever currently sits at number 1 in the Featured Queue, and a contributor spotlight — the highest-level person from the Contributors page, and if several share the top level, the one with more reactions received. Each section gets its own include/exclude toggle so I can drop one from an issue, and a plain-text version of the digest sits in a copyable block right in the builder that rebuilds itself the instant I flip any toggle. Publishing gives the digest its own page carrying exactly the sections I left switched on, copy block included.",
+   "source_website": "https://www.geeksforgeeks.org",
+   "source_feature": "Trending / Popular content section (fused with Solution of the Day into a composed weekly digest)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Weekly Digest builder and look at the auto-pulled trending section.",
+     "expected_result": "It lists exactly three articles in this order: Debugging Memory Leaks in Node, Intro to Binary Trees, Taming React Re-renders.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Values",
+       "Ordering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Flip the featured section's toggle off while watching the copyable plain-text block, then flip it back on.",
+     "expected_result": "The featured pick vanishes from the plain-text block the moment the toggle goes off — the three trending titles and the spotlight stay put — and it reappears when the toggle comes back on.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Feedback",
+       "Section Toggling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Turn the contributor spotlight's toggle off, publish the digest, and open the published digest's own page.",
+     "expected_result": "The page carries the trending and featured sections but no contributor spotlight, and its plain-text block likewise has no contributor line — the published digest respects the toggles as assembled.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Multi-step Workflow",
+       "Data Persistence"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Check the contributor spotlight and the featured section inside the digest builder.",
+     "expected_result": "The spotlight names Priya Nair at the Expert level — she edges out fellow Expert Elena Fox on reactions received (36 vs 32), and Marcus Webb's 73 reactions don't count because he's still Rising — and the featured section shows REST vs GraphQL, the Featured Queue's current number 1.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Integration",
+       "Data Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 8,
+     "task": "With the queue as seeded, publish it and look at the homepage's featured card.",
+     "expected_result": "The featured card shows REST vs GraphQL with its view count shortened as 15.6k.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Publishing",
+       "Formatting Conventions"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "target_app_summary": "The little technical-articles site grows into a full developer knowledge hub. Discovery gets deep: a multi-criteria article screener with saved presets and tie-aware sorting, plus a Trending This Week dashboard that scores articles from weekly views and emoji reactions. Community output becomes first-class: an emoji reaction system, a validated multi-step Share-a-Solution publishing flow, a contributor level system where reactions received and published solutions jointly gate Reader/Rising/Expert/Legend tiers (both conditions required, so the most-reacted author can still sit at Rising), and a curated Featured Queue that feeds the homepage. Personal tooling arrives with a bookmark-driven Reading List with rounded-up read times and progress tracking, and everything is capped by a Weekly Digest builder that auto-assembles trending, featured, and contributor-spotlight content behind per-section include/exclude toggles into a publishable digest with a live-rebuilding plain-text copy block. A mid-ladder site-wide restyle (dark slate header, teal actions, difficulty-colored card accents) must land consistently on every earlier surface. The feature graph runs deep: reactions feed trending, trending feeds the featured queue, and trending + featured + contributor levels all converge in the digest (T1->T3->T5->T8->T10).",
+ "dependency_graph": {
+  "nodes": [
+   {
+    "id": "T1",
+    "label": "base app",
+    "archetype": "base"
+   },
+   {
+    "id": "T2",
+    "label": "article screener + seed",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T3",
+    "label": "emoji reaction system",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T4",
+    "label": "share-a-solution workflow",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T5",
+    "label": "trending dashboard",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T6",
+    "label": "dark developer restyle",
+    "archetype": "design-restyle"
+   },
+   {
+    "id": "T7",
+    "label": "reading list",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T8",
+    "label": "featured queue curation",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T9",
+    "label": "contributor levels",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T10",
+    "label": "weekly digest builder",
+    "archetype": "multi-surface-workflow"
+   }
+  ],
+  "edges": [
+   {
+    "from": "T1",
+    "to": "T2",
+    "what": "article list & detail the screener filters and opens"
+   },
+   {
+    "from": "T1",
+    "to": "T3",
+    "what": "article cards/detail host the reaction bars"
+   },
+   {
+    "from": "T1",
+    "to": "T4",
+    "what": "extends base solutions area with community publishing"
+   },
+   {
+    "from": "T3",
+    "to": "T5",
+    "what": "trending score adds 10 points per reaction, live"
+   },
+   {
+    "from": "T1",
+    "to": "T5",
+    "what": "trending panel sits on the base homepage"
+   },
+   {
+    "from": "T1",
+    "to": "T6",
+    "what": "restyles article list & detail pages"
+   },
+   {
+    "from": "T2",
+    "to": "T6",
+    "what": "restyles the screener page"
+   },
+   {
+    "from": "T4",
+    "to": "T6",
+    "what": "restyles the Community Solutions page"
+   },
+   {
+    "from": "T5",
+    "to": "T6",
+    "what": "restyles the trending dashboard"
+   },
+   {
+    "from": "T1",
+    "to": "T7",
+    "what": "bookmarks base articles into the reading list"
+   },
+   {
+    "from": "T4",
+    "to": "T7",
+    "what": "community solutions bookmarkable, keep Community label"
+   },
+   {
+    "from": "T5",
+    "to": "T8",
+    "what": "'Pull this week's #1' grabs trending top item"
+   },
+   {
+    "from": "T1",
+    "to": "T8",
+    "what": "published featured card lands on the homepage"
+   },
+   {
+    "from": "T4",
+    "to": "T8",
+    "what": "community solutions get 'Feature this' buttons; queue seeds the CORS solution"
+   },
+   {
+    "from": "T3",
+    "to": "T9",
+    "what": "reactions received feed the level thresholds, live"
+   },
+   {
+    "from": "T4",
+    "to": "T9",
+    "what": "published solutions gate Expert/Legend; share flow gains an author picker"
+   },
+   {
+    "from": "T5",
+    "to": "T10",
+    "what": "digest embeds trending top-3 in score order"
+   },
+   {
+    "from": "T8",
+    "to": "T10",
+    "what": "digest embeds the queue's #1 featured item"
+   },
+   {
+    "from": "T9",
+    "to": "T10",
+    "what": "digest spotlights the highest-level contributor"
+   }
+  ]
+ },
+ "global_rules": [
+  {
+   "rule": "View counts of 1,000 or more are always shortened to one decimal with a 'k' (e.g. 12.1k) everywhere in the app.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Anything with a difficulty level wears a colored badge everywhere it appears: green Beginner, amber Intermediate, red Advanced.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Community-authored solutions carry a visible 'Community' label anywhere they show up across the app.",
+   "introduced_in_turn": 4
+  }
+ ],
+ "pinned_seed": {
+  "entity": "6 technical articles",
+  "introduced_in_turn": 2,
+  "records_gist": "Taming React Re-renders/Priya/WebDev/#react#performance/Adv/8400+320wk/1800w; SQL Indexing Demystified/Marcus/Databases/#sql#performance/Int/12100+150wk/1200w; Intro to Binary Trees/Priya/Algorithms/#datastructures/Beg/3300+540wk/900w; Debugging Memory Leaks in Node/Elena/WebDev/#node#performance/Adv/6750+540wk/2100w; REST vs GraphQL/Marcus/WebDev/#api/Int/15600+90wk/1500w; Understanding TCP Handshakes/Elena/Networking/#networking/Beg/980+210wk/600w"
+ }
+}

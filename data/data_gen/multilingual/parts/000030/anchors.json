@@ -1,0 +1,783 @@
+{
+  "anchors": [
+    {
+      "en": "technical articles",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        1
+      ],
+      "translations": {
+        "es": "artículos técnicos",
+        "zh": "技术文章",
+        "he": "מאמרים טכניים",
+        "hi": "तकनीकी लेख",
+        "sw": "makala za kiufundi",
+        "de": "technische Artikel",
+        "fr": "articles techniques"
+      }
+    },
+    {
+      "en": "Web Development",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        2,
+        3,
+        4,
+        9
+      ],
+      "translations": {
+        "es": "Desarrollo Web",
+        "zh": "网页开发",
+        "he": "פיתוח ווב",
+        "hi": "वेब डेवलपमेंट",
+        "sw": "Uendelezaji wa Wavuti",
+        "de": "Webentwicklung",
+        "fr": "Développement Web"
+      }
+    },
+    {
+      "en": "Databases",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        2,
+        3,
+        5
+      ],
+      "translations": {
+        "es": "Bases de Datos",
+        "zh": "数据库",
+        "he": "מסדי נתונים",
+        "hi": "डेटाबेस",
+        "sw": "Hifadhidata",
+        "de": "Datenbanken",
+        "fr": "Bases de Données"
+      }
+    },
+    {
+      "en": "Algorithms",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        2,
+        5
+      ],
+      "translations": {
+        "es": "Algoritmos",
+        "zh": "算法",
+        "he": "אלגוריתמים",
+        "hi": "एल्गोरिदम",
+        "sw": "Algoridhimu",
+        "de": "Algorithmen",
+        "fr": "Algorithmes"
+      }
+    },
+    {
+      "en": "Networking",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        2,
+        5
+      ],
+      "translations": {
+        "es": "Redes",
+        "zh": "网络",
+        "he": "רשתות",
+        "hi": "नेटवर्किंग",
+        "sw": "Mitandao",
+        "de": "Netzwerke",
+        "fr": "Réseaux"
+      }
+    },
+    {
+      "en": "Beginner",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        2,
+        4,
+        6
+      ],
+      "translations": {
+        "es": "Principiante",
+        "zh": "初级",
+        "he": "מתחיל",
+        "hi": "शुरुआती",
+        "sw": "Msingi",
+        "de": "Anfänger",
+        "fr": "Débutant"
+      }
+    },
+    {
+      "en": "Intermediate",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        2,
+        4,
+        6,
+        9
+      ],
+      "translations": {
+        "es": "Intermedio",
+        "zh": "中级",
+        "he": "בינוני",
+        "hi": "मध्यम",
+        "sw": "Wastani",
+        "de": "Mittelstufe",
+        "fr": "Intermédiaire"
+      }
+    },
+    {
+      "en": "Advanced",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        2,
+        4,
+        6
+      ],
+      "translations": {
+        "es": "Avanzado",
+        "zh": "高级",
+        "he": "מתקדם",
+        "hi": "उन्नत",
+        "sw": "Juu",
+        "de": "Fortgeschritten",
+        "fr": "Avancé"
+      }
+    },
+    {
+      "en": "this week's views",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        2,
+        5,
+        8
+      ],
+      "translations": {
+        "es": "vistas de esta semana",
+        "zh": "本周浏览量",
+        "he": "צפיות השבוע",
+        "hi": "इस हफ़्ते के व्यू",
+        "sw": "mionekano ya wiki hii",
+        "de": "Aufrufe dieser Woche",
+        "fr": "vues de cette semaine"
+      }
+    },
+    {
+      "en": "all-time views",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        2,
+        5
+      ],
+      "translations": {
+        "es": "vistas totales",
+        "zh": "总浏览量",
+        "he": "צפיות מכל הזמנים",
+        "hi": "कुल व्यू",
+        "sw": "mionekano ya jumla",
+        "de": "Aufrufe insgesamt",
+        "fr": "vues totales"
+      }
+    },
+    {
+      "en": "Share a Solution",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        4,
+        6,
+        9
+      ],
+      "translations": {
+        "es": "Compartir una Solución",
+        "zh": "分享解决方案",
+        "he": "שיתוף פתרון",
+        "hi": "समाधान साझा करें",
+        "sw": "Shiriki Suluhisho",
+        "de": "Lösung teilen",
+        "fr": "Partager une Solution"
+      }
+    },
+    {
+      "en": "Community Solutions",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        4,
+        6,
+        7
+      ],
+      "translations": {
+        "es": "Soluciones de la Comunidad",
+        "zh": "社区解决方案",
+        "he": "פתרונות קהילה",
+        "hi": "कम्युनिटी समाधान",
+        "sw": "Suluhisho za Jamii",
+        "de": "Gemeinschaftslösungen",
+        "fr": "Solutions de la Communauté"
+      }
+    },
+    {
+      "en": "Community",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        4,
+        6,
+        7
+      ],
+      "translations": {
+        "es": "Comunidad",
+        "zh": "社区",
+        "he": "קהילה",
+        "hi": "कम्युनिटी",
+        "sw": "Jamii",
+        "de": "Gemeinschaft",
+        "fr": "Communauté"
+      }
+    },
+    {
+      "en": "Trending This Week",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        5,
+        7
+      ],
+      "translations": {
+        "es": "Tendencias de la Semana",
+        "zh": "本周热门",
+        "he": "מגמות השבוע",
+        "hi": "इस हफ़्ते ट्रेंडिंग",
+        "sw": "Maarufu Wiki Hii",
+        "de": "Trends dieser Woche",
+        "fr": "Tendances de la Semaine"
+      }
+    },
+    {
+      "en": "Reading List",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        7,
+        9
+      ],
+      "translations": {
+        "es": "Lista de Lectura",
+        "zh": "阅读清单",
+        "he": "רשימת קריאה",
+        "hi": "पढ़ने की सूची",
+        "sw": "Orodha ya Kusoma",
+        "de": "Leseliste",
+        "fr": "Liste de Lecture"
+      }
+    },
+    {
+      "en": "Featured Queue",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        8,
+        10
+      ],
+      "translations": {
+        "es": "Cola de Destacados",
+        "zh": "精选队列",
+        "he": "תור מומלצים",
+        "hi": "फ़ीचर्ड कतार",
+        "sw": "Foleni ya Vilivyoangaziwa",
+        "de": "Empfehlungs-Warteschlange",
+        "fr": "File des Sélections"
+      }
+    },
+    {
+      "en": "Feature this",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        8
+      ],
+      "translations": {
+        "es": "Destacar esto",
+        "zh": "加入精选",
+        "he": "הוסף למומלצים",
+        "hi": "इसे फ़ीचर करें",
+        "sw": "Angazia hii",
+        "de": "Hervorheben",
+        "fr": "Mettre en avant"
+      }
+    },
+    {
+      "en": "Pull this week's #1",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        8
+      ],
+      "translations": {
+        "es": "Traer el #1 de la semana",
+        "zh": "拉取本周#1",
+        "he": "משוך את #1 של השבוע",
+        "hi": "इस हफ़्ते का #1 लाएँ",
+        "sw": "Vuta #1 ya wiki hii",
+        "de": "Nr. 1 dieser Woche holen",
+        "fr": "Récupérer le #1 de la semaine"
+      }
+    },
+    {
+      "en": "Contributors",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        9,
+        10
+      ],
+      "translations": {
+        "es": "Colaboradores",
+        "zh": "贡献者",
+        "he": "תורמים",
+        "hi": "योगदानकर्ता",
+        "sw": "Wachangiaji",
+        "de": "Mitwirkende",
+        "fr": "Contributeurs"
+      }
+    },
+    {
+      "en": "Reader",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        9
+      ],
+      "translations": {
+        "es": "Lector",
+        "zh": "读者",
+        "he": "קורא",
+        "hi": "रीडर",
+        "sw": "Msomaji",
+        "de": "Leser",
+        "fr": "Lecteur"
+      }
+    },
+    {
+      "en": "Rising",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        9,
+        10
+      ],
+      "translations": {
+        "es": "En Ascenso",
+        "zh": "新秀",
+        "he": "עולה",
+        "hi": "उभरता",
+        "sw": "Anayepanda",
+        "de": "Aufsteiger",
+        "fr": "En Progression"
+      }
+    },
+    {
+      "en": "Expert",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        9,
+        10
+      ],
+      "translations": {
+        "es": "Experto",
+        "zh": "专家",
+        "he": "מומחה",
+        "hi": "विशेषज्ञ",
+        "sw": "Mtaalamu",
+        "de": "Experte",
+        "fr": "Expert"
+      }
+    },
+    {
+      "en": "Legend",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        9
+      ],
+      "translations": {
+        "es": "Leyenda",
+        "zh": "传奇",
+        "he": "אגדה",
+        "hi": "लेजेंड",
+        "sw": "Gwiji",
+        "de": "Legende",
+        "fr": "Légende"
+      }
+    },
+    {
+      "en": "author picker",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        9
+      ],
+      "translations": {
+        "es": "selector de autor",
+        "zh": "作者选择器",
+        "he": "בורר מחבר",
+        "hi": "लेखक चयनकर्ता",
+        "sw": "kichagua mwandishi",
+        "de": "Autorenauswahl",
+        "fr": "sélecteur d'auteur"
+      }
+    },
+    {
+      "en": "Weekly Digest",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        10
+      ],
+      "translations": {
+        "es": "Resumen Semanal",
+        "zh": "每周摘要",
+        "he": "תקציר שבועי",
+        "hi": "साप्ताहिक डाइजेस्ट",
+        "sw": "Muhtasari wa Wiki",
+        "de": "Wochenrückblick",
+        "fr": "Résumé Hebdomadaire"
+      }
+    },
+    {
+      "en": "contributor spotlight",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        10
+      ],
+      "translations": {
+        "es": "foco del colaborador",
+        "zh": "贡献者聚焦",
+        "he": "זרקור תורם",
+        "hi": "योगदानकर्ता स्पॉटलाइट",
+        "sw": "mwangaza wa mchangiaji",
+        "de": "Spotlight auf Mitwirkende",
+        "fr": "coup de projecteur sur un contributeur"
+      }
+    },
+    {
+      "en": "Priya Nair",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        4,
+        9,
+        10
+      ]
+    },
+    {
+      "en": "Marcus Webb",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        9,
+        10
+      ]
+    },
+    {
+      "en": "Elena Fox",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        4,
+        9,
+        10
+      ]
+    },
+    {
+      "en": "Taming React Re-renders",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        3,
+        5,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "en": "SQL Indexing Demystified",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        3,
+        5,
+        7,
+        9
+      ]
+    },
+    {
+      "en": "Intro to Binary Trees",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        10
+      ]
+    },
+    {
+      "en": "Debugging Memory Leaks in Node",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "en": "REST vs GraphQL",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        3,
+        5,
+        7,
+        8,
+        10
+      ]
+    },
+    {
+      "en": "Understanding TCP Handshakes",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "en": "Fixing CORS Errors Once and For All",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        4,
+        7,
+        8
+      ]
+    },
+    {
+      "en": "Docker Layer Caching Tips",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        4
+      ]
+    },
+    {
+      "en": "Zero-Downtime Postgres Migrations",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        4
+      ]
+    },
+    {
+      "en": "Handling Async Race Conditions",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        4
+      ]
+    },
+    {
+      "en": "Profiling Slow Endpoints in Node",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        9
+      ]
+    },
+    {
+      "en": "await mutex.lock()",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        4
+      ]
+    },
+    {
+      "en": "console.time()",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        9
+      ]
+    },
+    {
+      "en": "db picks",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        2,
+        5
+      ]
+    },
+    {
+      "en": "SQL",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        2,
+        3,
+        5,
+        7,
+        9
+      ]
+    },
+    {
+      "en": "#react",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        2
+      ]
+    },
+    {
+      "en": "#performance",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        2,
+        3
+      ]
+    },
+    {
+      "en": "#sql",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        2
+      ]
+    },
+    {
+      "en": "#datastructures",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        2
+      ]
+    },
+    {
+      "en": "#node",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        2
+      ]
+    },
+    {
+      "en": "#api",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        2,
+        3
+      ]
+    },
+    {
+      "en": "#networking",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        2
+      ]
+    },
+    {
+      "en": "lavender",
+      "class": "keep",
+      "kind": "css_visual",
+      "turns": [
+        1,
+        6
+      ]
+    },
+    {
+      "en": "indigo",
+      "class": "keep",
+      "kind": "css_visual",
+      "turns": [
+        1
+      ]
+    },
+    {
+      "en": "teal",
+      "class": "keep",
+      "kind": "css_visual",
+      "turns": [
+        6
+      ]
+    },
+    {
+      "en": "dark slate",
+      "class": "keep",
+      "kind": "css_visual",
+      "turns": [
+        6
+      ]
+    },
+    {
+      "en": "💡",
+      "class": "keep",
+      "kind": "value_format",
+      "turns": [
+        3,
+        5,
+        9
+      ]
+    },
+    {
+      "en": "🔥",
+      "class": "keep",
+      "kind": "value_format",
+      "turns": [
+        3,
+        4
+      ]
+    },
+    {
+      "en": "🤯",
+      "class": "keep",
+      "kind": "value_format",
+      "turns": [
+        3
+      ]
+    }
+  ]
+}

@@ -1,0 +1,826 @@
+{
+ "id": "000014",
+ "instruction": "Please implement a website for a credit repair company to generate leads. The website should have a form-filling function, allowing users to input personal information and credit status. The website should also have a credit score inquiry function and an introduction to credit repair services. Users can browse the website, learn about credit repair services, and fill out the form to submit lead information. Set old lace as the body background and use rosy brown for the UI.",
+ "Category": {
+  "primary_category": "User Interaction",
+  "subcategories": [
+   "Form Systems",
+   "E-commerce",
+   "Data Visualization"
+  ]
+ },
+ "application_type": "Company Brochure Sites",
+ "ui_instruct": [
+  {
+   "task": "Test the form submission functionality by inputting valid personal information and credit status details.",
+   "expected_result": "The form should submit successfully without errors, and a confirmation message should display indicating the lead information was recorded.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations"
+    ]
+   }
+  },
+  {
+   "task": "Verify the credit score inquiry function by accessing the feature and submitting a valid input.",
+   "expected_result": "The system should process the inquiry without errors and provide appropriate feedback or next steps for the user regarding their credit score.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations"
+    ]
+   }
+  },
+  {
+   "task": "Ensure content accuracy by reviewing the informational text on credit repair services presented on the homepage.",
+   "expected_result": "The content should be relevant, free of grammatical errors, and provide a clear introduction and explanation of the credit repair services offered by the company.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering",
+     "Details Information"
+    ]
+   }
+  },
+  {
+   "task": "Check and navigate to an introduction to credit repair services.",
+   "expected_result": "The website shows an introduction to credit repair services.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering",
+     "Details Information"
+    ]
+   }
+  },
+  {
+   "task": "Verify that the website uses 'old lace' as the background color and 'rosy brown' as the component color, as specified in the design requirements.",
+   "expected_result": "The website has a background color of 'old lace' and components (such as buttons, cards, headers, etc.) are styled with the color 'rosy brown', accurately reflecting the design instruction.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "archetype": "interactive-tool",
+   "instruction": "People who run the credit score inquiry always ask the same thing next — okay, but how much could it actually go up? Give me a Score Improvement Estimator page: they type a current score (only accept 300 through 850) plus how many collections, late payments, and hard inquiries they've got, and the projected score recalculates live as they type — +25 points per collection we'd remove, +15 per late payment, +5 per inquiry, but never past 850 — then it recommends a plan off the total gain: under 40 points is Basic, 40 to 75 is Standard, over 75 is Premium. Wire it into the credit score inquiry you already built: after someone submits an inquiry, offer a 'project my improvement' button that opens the estimator with their score carried over (add a current-score field to the inquiry if it doesn't already ask for one). And two house rules for everything in this app from here on out, including whatever we add later: any credit score shown anywhere gets its band right next to it — under 580 Poor, 580-669 Fair, 670-739 Good, 740-799 Very Good, 800 and up Excellent, like '612 (Fair)' — and every form or tool keeps a visible 'Start over' that wipes it back to a fresh blank state.",
+   "source_website": "Lexington Law",
+   "source_feature": "Free credit assessment CTA with multi-step intake form",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Open the Score Improvement Estimator, type 820 as the current score, and type 3 into the collections field, leaving late payments and hard inquiries at 0.",
+     "expected_result": "The projected score displays as 850 (Excellent) — capped at the maximum — not 895.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Boundary Handling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Score Improvement Estimator, type 545 as the current score, then type 2 into the collections field, without clicking any calculate or submit button.",
+     "expected_result": "The projection updates by itself as values are typed: the current score is shown as 545 (Poor) and the projected score as 595 (Fair).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Interaction",
+       "Calculation Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Score Improvement Estimator, enter 600 as the current score, 1 collection, and 1 late payment.",
+     "expected_result": "The projected score reads 640 (Fair) and the recommended plan is Standard — the 40-point gain falls in the 40-75 range, not in Basic.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Boundary Handling",
+       "Business Logic"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Submit a credit score inquiry entering 640 as the current score along with any other required details, then click the 'project my improvement' option it offers.",
+     "expected_result": "The Score Improvement Estimator opens with 640 already filled in as the current score, displayed as 640 (Fair).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Feature Integration",
+       "Form Operations"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Fill out the lead form with valid personal information and credit status details and submit it.",
+     "expected_result": "The form submits successfully and a confirmation message appears indicating the lead information was recorded.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Operations"
+      ]
+     },
+     "copied_from_turn": 1
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Time for a Client Success Stories page to build trust. Start it with exactly these seven, I'll add more later: Marcus from Atlanta, Premium plan, 6 months, 5 stars, went 541 to 625; Denise from Tampa, Standard, 9 months, 4 stars, 588 to 655; Priya from Austin, Premium, 4 months, 5 stars, 612 to 679; Walter from Cleveland, Basic, 3 months, 3 stars, 601 to 639; Sofia from Phoenix, Premium, 12 months, 5 stars, 559 to 671; James from Baltimore, Standard, 7 months, 4 stars, 566 to 621; and Keisha from Memphis, Basic, 5 months, 4 stars, 597 to 626. Visitors should be able to filter by plan and by typing a minimum points gained, and sort by biggest gain — when two people gained the same, the one with the shorter program takes the higher spot. Always show the average gain for whichever stories are currently visible, to one decimal place. One more thing that applies everywhere in this app from now on, including anything we add later: score gains always read like '+84 pts', plus sign and all.",
+   "source_website": "Lexington Law",
+   "source_feature": "Client testimonials carousel with score improvements",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Client Success Stories page and sort by biggest gain with no filters applied.",
+     "expected_result": "The list starts Sofia (+112 pts), Marcus (+84 pts), then Priya (+67 pts) ahead of Denise (+67 pts) because Priya's 4-month program is shorter, and the average gain for the visible stories reads +64.6 pts — not +64 or +64.57.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Calculation Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Client Success Stories page, filter to the Premium plan only.",
+     "expected_result": "Only Sofia, Marcus, and Priya remain visible, and the average gain updates to +87.7 pts.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Calculation Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Client Success Stories page, type 60 into the minimum points gained filter.",
+     "expected_result": "Only the four stories with gains of 60 or more remain (Sofia, Marcus, Priya, Denise), and the average gain reads +82.5 pts.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Calculation Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the Client Success Stories page, look at Sofia from Phoenix's entry and how her two scores are displayed.",
+     "expected_result": "Both scores carry band labels — the starting score shows as 559 (Poor) and the current score as 671 (Good).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Formatting Conventions"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the Score Improvement Estimator, type 820 as the current score, and type 3 into the collections field, leaving late payments and hard inquiries at 0.",
+     "expected_result": "The projected score displays as 850 (Excellent) — capped at the maximum — not 895.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Boundary Handling"
+      ]
+     },
+     "copied_from_turn": 2
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Next: a Dispute Letter Builder page so visitors can draft their own bureau dispute letters. They pick a bureau (Equifax, Experian, or TransUnion), pick a reason — not my account, paid in full, incorrect balance, duplicate entry, or identity theft — then type the creditor name and account number, and the letter preview rebuilds itself as they type, ending in a copyable text block. Account numbers are digits only, 4 to 16 of them; anything else gets flagged with an error and no usable letter comes out. Stamp each valid letter with a reference code: the bureau prefix (EQ, EX, or TU), a dash, the first four letters of the creditor in caps, a dash, then the count of digits in the account number — so Equifax plus Capital One plus 44127788 comes out EQ-CAPI-8. One more thing: tie it back to the lead form on the home page — once somebody's submitted the lead form, the letter's signature line signs off with the name they gave there automatically, and until anyone has, it shows a '[Your Name]' placeholder in the signature spot.",
+   "source_website": "Credit Repair Cloud",
+   "source_feature": "Downloadable lead magnet (dispute letter templates)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "In the Dispute Letter Builder, select Equifax as the bureau, choose 'Not my account' as the reason, type 'Capital One' as the creditor name, and type '44127788' as the account number.",
+     "expected_result": "A valid letter preview is produced whose reference code reads exactly EQ-CAPI-8.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Form Operations"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the Dispute Letter Builder, type 'Midland' into the creditor name field and watch the letter preview, without clicking any generate or submit button.",
+     "expected_result": "The letter preview updates on its own to include the creditor name Midland as it is typed.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Interaction"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the Dispute Letter Builder, select Experian, pick any reason, type 'Cavalry' as the creditor, and type '12ab' as the account number.",
+     "expected_result": "A validation message flags the account number (digits only, 4 to 16 digits) and no valid copyable letter or reference code is produced.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Error Handling"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the home page, submit the lead form with the name 'Gloria Mendez' and valid details in the other fields, then open the Dispute Letter Builder and build a valid letter: Equifax, any reason, creditor 'Midland', account number '12345678'.",
+     "expected_result": "The letter preview's signature line reads 'Gloria Mendez', carried over from the lead form submission instead of the '[Your Name]' placeholder.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Feature Integration",
+       "Form Operations"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the Client Success Stories page and sort by biggest gain with no filters applied.",
+     "expected_result": "The list starts Sofia (+112 pts), Marcus (+84 pts), then Priya (+67 pts) ahead of Denise (+67 pts) because Priya's 4-month program is shorter, and the average gain for the visible stories reads +64.6 pts — not +64 or +64.57.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Calculation Accuracy"
+      ]
+     },
+     "copied_from_turn": 3
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Those letters shouldn't vanish after someone copies them — I want a Dispute Tracker. Put a 'save to my disputes' action on the letter builder that files the letter as a Draft case, and build a tracker page where every case moves Draft, then Sent, then Resolved, strictly in that order — no resolving something that was never sent — with each status group showing its cases. Preload five cases so it isn't empty: Midland Funding at TransUnion (Sent), LVNV Funding at Equifax (Sent), Portfolio Recovery at Experian (Draft), First Premier Bank at Equifax (Resolved), and Midland Funding again, this time at Equifax (Draft).",
+   "source_website": "Credit Repair Cloud",
+   "source_feature": "Three-step visual process flow (Submit Info, We Analyze, We Dispute)",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Open the dispute tracker and check the available status actions on the Portfolio Recovery case, which starts as a Draft.",
+     "expected_result": "The only forward move offered is to Sent — there is no option to mark a Draft case as Resolved directly.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Business Logic",
+       "State Transitions"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open the dispute tracker and look at the Sent status group.",
+     "expected_result": "It contains exactly two cases: Midland Funding (TransUnion) and LVNV Funding (Equifax).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Grouping"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the dispute tracker, move the Midland Funding (TransUnion) case from Sent to Resolved.",
+     "expected_result": "The case now appears under Resolved alongside First Premier Bank, the Sent group contains only LVNV Funding, and any displayed group tallies stay consistent with that (1 Sent, 2 Resolved).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Transitions",
+       "Data Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the Dispute Letter Builder, build a valid letter for TransUnion, creditor 'Cavalry', account number '55661234', any reason, use the save-to-my-disputes action, then open the dispute tracker.",
+     "expected_result": "A new Draft case for Cavalry at TransUnion appears in the tracker's Draft group alongside the two preloaded drafts.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Feature Integration",
+       "Workflow"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "In the Dispute Letter Builder, select Equifax as the bureau, choose 'Not my account' as the reason, type 'Capital One' as the creditor name, and type '44127788' as the account number.",
+     "expected_result": "A valid letter preview is produced whose reference code reads exactly EQ-CAPI-8.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Form Operations"
+      ]
+     },
+     "copied_from_turn": 4
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Give me an Impact Dashboard page that brags about our numbers. From the success stories it should show clients helped, total points recovered, the average gain to one decimal — don't let it get rounded into a whole number — and a spotlight on the single best result with the client's name and city. Pull in the dispute side too: an 'items resolved' stat counting resolved cases in the tracker, and it has to move the moment another case gets resolved over there.",
+   "source_website": "Credit Repair Cloud",
+   "source_feature": "Impact metrics counter display",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Impact Dashboard and read the average gain stat.",
+     "expected_result": "The average gain reads +64.6 pts — not +64, +64.5, or +64.57.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Rounding"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "On the Impact Dashboard, read the clients-helped and total-points-recovered stats.",
+     "expected_result": "Clients helped shows 7 and total points recovered shows +452 pts.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Impact Dashboard, check the best-result spotlight.",
+     "expected_result": "It highlights Sofia from Phoenix with +112 pts.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ranking",
+       "Details Information"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Note the items-resolved stat on the Impact Dashboard, then go to the dispute tracker, move the LVNV Funding case from Sent to Resolved, and return to the dashboard.",
+     "expected_result": "The items-resolved stat has increased from 1 to 2.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Feature Integration",
+       "Data Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "On the Score Improvement Estimator, type 545 as the current score, then type 2 into the collections field, without clicking any calculate or submit button.",
+     "expected_result": "The projection updates by itself as values are typed: the current score is shown as 545 (Poor) and the projected score as 595 (Fair).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Interaction",
+       "Calculation Accuracy"
+      ]
+     },
+     "copied_from_turn": 2
+    }
+   ]
+  },
+  {
+   "archetype": "design-restyle",
+   "instruction": "The site's looking patchy, so let's do a visual refresh applied identically everywhere — home page, the estimator, success stories, the letter builder, the dispute tracker, and the impact dashboard. Primary action buttons go saddle brown with white text, every page title gets centered, cards and panels get 12px rounded corners with a thin rosy brown border, and any status or plan badge becomes a pill shape with white text on rosy brown. Also add a centered footer tagline to every one of those pages: 'Rebuild. Restore. Rise.' No page keeps the old look — that's the whole point.",
+   "source_website": "Lexington Law",
+   "source_feature": "Brand-consistent CTA and badge styling across marketing pages",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Visit the success stories page, the dispute tracker, and the impact dashboard, checking each page's title and footer.",
+     "expected_result": "On all three pages the page title is centered and a centered footer tagline reading exactly 'Rebuild. Restore. Rise.' is present.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Cross-Page Consistency",
+       "Typography"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Look at the lead form's submit button on the home page and the main action button (copy or save) on the Dispute Letter Builder.",
+     "expected_result": "Both buttons have a saddle brown background with white text.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Color Scheme",
+       "Cross-Page Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Look at the plan badges on the success stories page and the status badges on the dispute tracker.",
+     "expected_result": "Both render as pill-shaped badges with white text on rosy brown, consistent across the two pages.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Component Styling",
+       "Cross-Page Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the Dispute Letter Builder, build a valid letter (TransUnion, creditor 'Cavalry', account number '55661234', any reason), save it to disputes, and find the new case in the dispute tracker.",
+     "expected_result": "The newly created Draft case's status badge already uses the pill style with white text on rosy brown, matching the preloaded cases.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Component Styling",
+       "Cross-Feature Integration"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the dispute tracker and check the available status actions on the Portfolio Recovery case, which starts as a Draft.",
+     "expected_result": "The only forward move offered is to Sent — there is no option to mark a Draft case as Resolved directly.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Business Logic",
+       "State Transitions"
+      ]
+     },
+     "copied_from_turn": 5
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Let's actually let people sign up. Build an enrollment flow: first pick a plan — Basic $49.99/mo, Standard $89.99/mo, Premium $129.99/mo — with optional add-ons rush processing ($19.99/mo) and credit monitoring ($9.99/mo); then contact details, where they need a name and a real-looking email before moving on; then a review step showing the monthly total and the first payment, which adds a one-time $25.00 setup fee — except Premium, where we waive it. And wire in the estimator: its plan recommendation should carry an enroll button that lands here with that plan already selected.",
+   "source_website": "Lexington Law",
+   "source_feature": "Online sign-up forms converting visitors into paying clients",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Start the enrollment flow, pick the Standard plan, add the credit monitoring add-on, enter name 'Dana Cole' and email 'dana@mail.com' in the contact step, and continue to the review step.",
+     "expected_result": "The review shows a monthly total of $99.98 and a first payment of $124.98, which includes the $25.00 one-time setup fee.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Workflow"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Go through the enrollment flow choosing Premium with the rush processing add-on, enter name 'Dana Cole' and email 'dana@mail.com', and reach the review step.",
+     "expected_result": "The monthly total shows $149.98 and the first payment also equals $149.98 — no $25.00 setup fee is added because Premium waives it.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Business Logic"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the enrollment contact step, enter name 'Bo' and email 'bo@' and try to continue, then correct the email to 'bo@mail.com' and continue again.",
+     "expected_result": "The invalid email blocks progression with a validation error, and after the correction the review step is reachable.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Workflow"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the Score Improvement Estimator, enter current score 600, 1 collection, and 1 late payment, then use the enroll option on its plan recommendation.",
+     "expected_result": "The enrollment flow opens with the Standard plan already selected, matching the estimator's recommendation for the 40-point gain.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Feature Integration",
+       "Business Logic"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "On the Client Success Stories page, filter to the Premium plan only.",
+     "expected_result": "Only Sofia, Marcus, and Priya remain visible, and the average gain updates to +87.7 pts.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Calculation Accuracy"
+      ]
+     },
+     "copied_from_turn": 3
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "The tracker tells clients where each case sits, but not what to actually do next — so add a Dispute Strategy Advisor page. It reads the tracker as it stands right now, never a stale snapshot, and rolls the cases up by creditor: Midland gets one card even though we're fighting them at two bureaus. Each creditor card works out the next move — if any of their cases is still a Draft, it says 'Send the pending letter'; otherwise if anything's Sent, 'Await the bureau's response'; and once everything with that creditor is Resolved, 'Request an updated credit report'. Rank the cards by a priority score shown on the card: 2 points for every case of theirs that isn't resolved yet, plus a 3-point bonus when we're disputing them at more than one bureau — tag those cards 'multi-bureau' — and break ties alphabetically by creditor name. Change a case over in the tracker and the advisor better show it the moment you come back.",
+   "source_website": "Credit Repair Cloud",
+   "source_feature": "Automated dispute workflow with recommended next actions per creditor",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Dispute Strategy Advisor page, count the creditor cards, and check which card sits on top.",
+     "expected_result": "Exactly 4 creditor cards appear — Midland Funding's two cases roll into one card, not 5 per-case cards — and Midland Funding sits first with a 'multi-bureau' tag and a priority of 7 (2 points each for its two unresolved cases plus the 3-point multi-bureau bonus), not 4.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Deduplication",
+       "Calculation Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Dispute Strategy Advisor, check the order and priority scores of the cards below Midland Funding.",
+     "expected_result": "LVNV Funding and Portfolio Recovery both show priority 2, with LVNV Funding listed first on the alphabetical tie-break, and First Premier Bank sits last at priority 0.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Calculation Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Dispute Strategy Advisor, read the next-move line on the Midland Funding, LVNV Funding, and First Premier Bank cards.",
+     "expected_result": "Midland Funding says 'Send the pending letter' — its Equifax case is still a Draft even though its TransUnion case was Sent — LVNV Funding says 'Await the bureau's response', and First Premier Bank says 'Request an updated credit report'.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Business Logic",
+       "Details Information"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the dispute tracker, move the Portfolio Recovery case from Draft to Sent, then open the Dispute Strategy Advisor page.",
+     "expected_result": "Portfolio Recovery's card now reads 'Await the bureau's response' instead of 'Send the pending letter', its priority stays 2, and it still sits after LVNV Funding.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Feature Integration",
+       "Data Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the Impact Dashboard and read the average gain stat.",
+     "expected_result": "The average gain reads +64.6 pts — not +64, +64.5, or +64.57.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Rounding"
+      ]
+     },
+     "copied_from_turn": 6
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Last big one for now: free consultation booking. Two advisors — Angela Ruiz, senior credit advisor, with Monday 9:00 AM, Monday 2:00 PM, and Tuesday 10:00 AM; and Marcus Webb, dispute specialist, with Monday 9:00 AM and Wednesday 4:00 PM. Visitors pick an advisor, pick one of that advisor's open slots, leave a name and a valid email, review it, and confirm to get a booking code; a booked slot only disappears for that advisor, every booking shows in a consultations list, and canceling one puts its slot back. Start with one already on the books: Robert M. holding Angela's Tuesday 10:00 AM.",
+   "source_website": "Lexington Law",
+   "source_feature": "Live chat support widget (adapted into advisor consultation scheduling)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the consultation booking page and view Angela Ruiz's available slots.",
+     "expected_result": "Exactly two open slots show for Angela — Monday 9:00 AM and Monday 2:00 PM — because Robert M.'s existing booking takes Tuesday 10:00 AM.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Consistency",
+       "Boundary Handling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the consultations list, cancel Robert M.'s booking, then view Angela Ruiz's available slots.",
+     "expected_result": "Tuesday 10:00 AM is offered again among Angela's open slots.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Transitions",
+       "Data Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Start booking Marcus Webb's Wednesday 4:00 PM slot, enter name 'Lena' and email 'lena@', try to continue, then correct the email to 'lena@mail.com' and continue again.",
+     "expected_result": "The invalid email blocks progress with a validation error, and after the correction the review step is reachable.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Workflow"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Pick Angela Ruiz and select her Monday 9:00 AM slot, then click the booking flow's 'Start over' control.",
+     "expected_result": "The flow resets to its initial state with no advisor or slot selected, and Monday 9:00 AM remains available since nothing was booked.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Interaction Conventions",
+       "State Reset"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Start the enrollment flow, pick the Standard plan, add the credit monitoring add-on, enter name 'Dana Cole' and email 'dana@mail.com' in the contact step, and continue to the review step.",
+     "expected_result": "The review shows a monthly total of $99.98 and a first payment of $124.98, which includes the $25.00 one-time setup fee.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Workflow"
+      ]
+     },
+     "copied_from_turn": 8
+    }
+   ]
+  }
+ ],
+ "target_app_summary": "What began as an old-lace-and-rosy-brown lead-gen brochure site for a credit repair company has grown into a full client acquisition and service portal. Discovery and conversion now run through a live score-improvement estimator wired to the original credit score inquiry, a tie-aware filterable success-stories directory, and a checkout-style plan enrollment flow that inherits the estimator's plan recommendation. Service delivery grew its own arm rooted in the original lead form: the form's submitted name auto-signs the dispute letter builder's letters, saved letters feed a Draft/Sent/Resolved dispute tracker, and the tracker in turn drives both an impact dashboard and a per-creditor dispute strategy advisor that rolls cases up by creditor, ranks them by a priority score with a multi-bureau bonus, and derives each creditor's next move. A consultation scheduler with per-advisor slot availability and a site-wide brand restyle round it out. The feature graph has one deep service chain (lead form -> letter builder -> tracker -> dashboard/advisor), a conversion chain (inquiry -> estimator -> enrollment), and three silent app-wide conventions (score band labels, '+N pts' gain formatting, Start-over resets) tested across every new surface.",
+ "dependency_graph": {
+  "nodes": [
+   {
+    "id": "T1",
+    "label": "base app",
+    "archetype": "base"
+   },
+   {
+    "id": "T2",
+    "label": "Score improvement estimator",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T3",
+    "label": "Client success stories",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T4",
+    "label": "Dispute letter builder",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T5",
+    "label": "Dispute case tracker",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T6",
+    "label": "Impact dashboard",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T7",
+    "label": "Brand restyle",
+    "archetype": "design-restyle"
+   },
+   {
+    "id": "T8",
+    "label": "Plan enrollment flow",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T9",
+    "label": "Dispute strategy advisor",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T10",
+    "label": "Consultation booking",
+    "archetype": "multi-surface-workflow"
+   }
+  ],
+  "edges": [
+   {
+    "from": "T1",
+    "to": "T2",
+    "what": "inquiry's captured score prefills the estimator"
+   },
+   {
+    "from": "T1",
+    "to": "T4",
+    "what": "lead form's submitted name auto-signs the generated dispute letters"
+   },
+   {
+    "from": "T4",
+    "to": "T5",
+    "what": "saved letters become Draft dispute cases"
+   },
+   {
+    "from": "T3",
+    "to": "T6",
+    "what": "aggregates the seven pinned success stories"
+   },
+   {
+    "from": "T5",
+    "to": "T6",
+    "what": "items-resolved stat counts tracker's resolved cases live"
+   },
+   {
+    "from": "T1",
+    "to": "T7",
+    "what": "restyles home page and lead form"
+   },
+   {
+    "from": "T2",
+    "to": "T7",
+    "what": "restyles estimator page"
+   },
+   {
+    "from": "T3",
+    "to": "T7",
+    "what": "restyles success stories page and plan badges"
+   },
+   {
+    "from": "T4",
+    "to": "T7",
+    "what": "restyles letter builder page"
+   },
+   {
+    "from": "T5",
+    "to": "T7",
+    "what": "restyles dispute tracker and status badges"
+   },
+   {
+    "from": "T6",
+    "to": "T7",
+    "what": "restyles impact dashboard page"
+   },
+   {
+    "from": "T2",
+    "to": "T8",
+    "what": "estimator's plan recommendation preselects the enrollment plan"
+   },
+   {
+    "from": "T5",
+    "to": "T9",
+    "what": "advisor rolls live tracker cases into per-creditor next actions and priority rankings"
+   }
+  ]
+ },
+ "global_rules": [
+  {
+   "rule": "Every displayed credit score carries its band label next to it — under 580 Poor, 580-669 Fair, 670-739 Good, 740-799 Very Good, 800+ Excellent — e.g. '612 (Fair)'.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Every form or tool surface keeps a visible 'Start over' control that resets it to its initial blank state.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Score gains always render with a leading plus sign and 'pts' suffix, e.g. '+84 pts'.",
+   "introduced_in_turn": 3
+  }
+ ],
+ "pinned_seed": {
+  "entity": "7 client success stories",
+  "introduced_in_turn": 3,
+  "records_gist": "Marcus/Atlanta Premium 6mo 5-star 541->625 (+84); Denise/Tampa Standard 9mo 4-star 588->655 (+67); Priya/Austin Premium 4mo 5-star 612->679 (+67); Walter/Cleveland Basic 3mo 3-star 601->639 (+38); Sofia/Phoenix Premium 12mo 5-star 559->671 (+112); James/Baltimore Standard 7mo 4-star 566->621 (+55); Keisha/Memphis Basic 5mo 4-star 597->626 (+29) — total +452, avg +64.6, Premium avg +87.7"
+ }
+}

@@ -1,0 +1,879 @@
+{
+ "id": "000048",
+ "instruction": "Please implement a time attendance system to record employee attendance. The system should have functionalities for employee clocking in and out, and viewing attendance records. Employees should be able to clock in and out, and view their own attendance records, including attendance time and absence time. Administrators should be able to view all employees' attendance records, perform statistics, and analysis. Specify papaya whip as the base color and dark orange for all components.",
+ "Category": {
+  "primary_category": "Data Management",
+  "subcategories": [
+   "CRUD Operations",
+   "API Integration"
+  ]
+ },
+ "application_type": "Internal Tools",
+ "ui_instruct": [
+  {
+   "task": "Clock in for the start of a work shift.",
+   "expected_result": "The system records the clock-in time, and confirmation is displayed to the employee on their dashboard.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Authentication Flows"
+    ]
+   }
+  },
+  {
+   "task": "Clock out at the end of a work shift.",
+   "expected_result": "The system records the clock-out time, and confirmation is displayed to the employee on their dashboard.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations"
+    ]
+   }
+  },
+  {
+   "task": "View your personal attendance record.",
+   "expected_result": "The attendance records, including attendance time and any absence time, are accurately displayed.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering",
+     "Details Information"
+    ]
+   }
+  },
+  {
+   "task": "View the attendance records of all employees as dministrators.",
+   "expected_result": "A complete list of attendance records for all employees is displayed in the admin panel.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering",
+     "Details Information"
+    ]
+   }
+  },
+  {
+   "task": "Perform a statistical analysis of employee attendance.",
+   "expected_result": "The system generates and displays statistical data regarding overall attendance trends without errors.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Data Visualization",
+     "Details Information"
+    ]
+   }
+  },
+  {
+   "task": "Verify that the website uses 'papaya whip' as the background color and 'dark orange' as the component color, as specified in the design requirements.",
+   "expected_result": "The website has a background color of 'papaya whip' and components (such as buttons, cards, headers, etc.) are styled with the color 'dark orange', accurately reflecting the design instruction.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "archetype": "derived-state",
+   "instruction": "Before anything else, load in my actual crew with their real week of Mar 2 through Mar 7: Maya Chen (Front Desk, $22/hr, 12 PTO days) worked 8h every weekday; Leo Vance (Warehouse, $19/hr, 8 PTO days) put in 7h every day Monday through Saturday; Priya Nair (Front Desk, $24/hr, 15 PTO days) did 9h 30m Mon, 6h Tue, 8h Wed, 7h 30m Thu, 6h Fri; Sam Ortiz (Warehouse, $19/hr, 10 PTO days) did 8h on Mon, Tue, Thu and Fri but missed Wednesday completely; Ana Beck (Sales, $28/hr, 12 PTO days) did 7h 15m Mon, 7h 45m Tue, 8h Wed, 6h Thu, 8h Fri; and Omar Diaz (Sales, $26/hr, 6 PTO days) did 4h each weekday - exactly these six, I'll grow the team later. Give each person a proper timesheet history page showing that week day by day, and build me a weekly rollup board ranking everyone by total hours for the week, biggest first - when two people land on the same total, just go alphabetically. One thing I care about everywhere in this app, now and for anything we add later: show durations as hours and minutes like '7h 30m', never as decimals.",
+   "source_website": "https://www.ontheclock.com/",
+   "source_feature": "Live punch feed dashboard",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the weekly rollup board and read the ranking from top to bottom.",
+     "expected_result": "Leo Vance (42h 0m), Maya Chen (40h 0m), Ana Beck (37h 0m), Priya Nair (37h 0m), Sam Ortiz (32h 0m), Omar Diaz (20h 0m) - Ana Beck sits above Priya Nair because the 37h 0m tie breaks alphabetically.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Tie-breaking",
+       "Aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Find Leo Vance on the weekly rollup board and read his weekly total.",
+     "expected_result": "42h 0m - his Saturday 7h is counted, so it is not 35h 0m.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Boundary handling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open Sam Ortiz's timesheet history for the week of Mar 2.",
+     "expected_result": "Wednesday shows no worked hours (an empty/absent state, not a crash or a wrong number), and his weekly total reads 32h 0m.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Empty state",
+       "Aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Clock in as Maya Chen using the clock-in the app already has, then open her timesheet history.",
+     "expected_result": "A new in-progress entry (clocked in, no clock-out yet) appears in Maya's timesheet alongside her seeded week.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature integration",
+       "State update"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Clock in as any employee and then clock out, then open that employee's attendance records.",
+     "expected_result": "A completed attendance entry for that session appears in the employee's records.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Core flow"
+      ]
+     },
+     "copied_from_turn": 1
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Set up a shared kiosk page so people can punch without logging in - just a 4-digit PIN typed on a big pad: Maya is 4217, Leo 8830, Priya 1159, Sam 7702, Ana 3384, Omar 6045. I want live feedback as digits go in - show how many of the four are entered so far, keep the punch action dead until all four are typed, and if the code matches nobody, say so plainly instead of doing nothing. When a PIN matches, show whose it is and offer exactly one action based on where they stand right now - 'Clock In' if they're out, 'Clock Out' if they're in - and a kiosk punch should flow into their timesheet just like any other punch.",
+   "source_website": "https://www.opentimeclock.com/",
+   "source_feature": "PIN / QR code clock-in",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "On the kiosk, type just 42 into the PIN entry.",
+     "expected_result": "No employee is matched yet and the punch action is unavailable - the kiosk shows two of four digits entered, nothing more.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live input feedback",
+       "Input validation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type 9999 on the kiosk.",
+     "expected_result": "A clear no-match message appears and no punch action is offered.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input validation",
+       "Error state"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type 4217, use the offered Clock In, then enter 4217 again.",
+     "expected_result": "The second entry identifies Maya Chen again but now offers Clock Out instead of Clock In - her status toggled.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State toggle",
+       "Live input feedback"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Type 8830 on the kiosk and clock Leo Vance in, then open Leo's timesheet history.",
+     "expected_result": "A new in-progress entry (clock-in with no clock-out yet) appears in Leo's timesheet history.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature integration",
+       "State update"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the weekly rollup board and read the ranking from top to bottom.",
+     "expected_result": "Leo Vance (42h 0m), Maya Chen (40h 0m), Ana Beck (37h 0m), Priya Nair (37h 0m), Sam Ortiz (32h 0m), Omar Diaz (20h 0m) - Ana Beck sits above Priya Nair because the 37h 0m tie breaks alphabetically.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Tie-breaking",
+       "Aggregation"
+      ]
+     },
+     "copied_from_turn": 2
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Now build the admin side an overtime and exceptions board over that seeded week: flag any single day someone went past 8 hours, showing how far past, and separately flag anyone whose whole week topped 40 hours, showing the overage. Someone like Leo can be over for the week without one long day, and someone can have a long Monday yet be fine for the week, so both checks have to work independently - and exactly 8 in a day or exactly 40 in a week is fine, not flagged. Oh, and from here on, everywhere a date shows up in this app, write it weekday-first like 'Mon, Mar 2' - always.",
+   "source_website": "https://www.opentimeclock.com/",
+   "source_feature": "Overtime detection and flagging",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Find Leo Vance on the overtime board.",
+     "expected_result": "He carries a weekly overtime flag of 2h 0m over, and no daily flags at all (every day was 7h) - a build that only checks days over 8h shows Leo clean, which is wrong.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Threshold flagging",
+       "Aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Find Priya Nair on the overtime board.",
+     "expected_result": "A daily flag of 1h 30m over on Mon, Mar 2, and no weekly flag - her 37h 0m week is under 40.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Threshold flagging",
+       "Date formatting"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Find Maya Chen on the overtime board.",
+     "expected_result": "No flags of any kind - 8h days and an exactly-40h week are not overtime.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Boundary handling"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Check Leo Vance's total on the weekly rollup board, then his weekly overtime amount on the overtime board.",
+     "expected_result": "The rollup shows 42h 0m and the overtime board shows 2h 0m over - the overage is exactly his rollup total minus 40h.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Cross-feature consistency",
+       "Aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Type 4217, use the offered Clock In, then enter 4217 again.",
+     "expected_result": "The second entry identifies Maya Chen again but now offers Clock Out instead of Clock In - her status toggled.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State toggle",
+       "Live input feedback"
+      ]
+     },
+     "copied_from_turn": 3
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Time to handle leave properly: give each person a leave view showing PTO days remaining out of their allowance, plus a form to request Vacation or Sick days with typed start and end dates - count the days inclusive, and don't let anyone request more days than they have left. Admins get a separate pending-requests view to approve or reject; only an approval actually takes days off the balance - a request just sitting in the queue shouldn't touch it. Start it off with Omar asking for 2 vacation days Mar 12 to Mar 13 and Sam asking for 1 sick day on Mar 4 (both still waiting), plus Priya already approved for 3 vacation days Mar 16 to Mar 18. And listen - anywhere in this app where something gets approved or rejected, now or in anything we build later, ask me to confirm before it goes through.",
+   "source_website": "https://www.ontheclock.com/",
+   "source_feature": "PTO balance display for employees",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the leave view and read Priya Nair's and Omar Diaz's remaining PTO balances.",
+     "expected_result": "Priya shows 12 of 15 remaining (her 3 approved vacation days deducted); Omar still shows 6 of 6 - his pending request deducts nothing, so not 4.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Derived balance",
+       "Pending vs approved state"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the admin pending-requests view, approve Sam Ortiz's sick day.",
+     "expected_result": "A confirmation is asked first; after confirming, the request leaves the pending list and Sam's balance drops from 10 to 9.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Approval workflow",
+       "Confirmation",
+       "Balance update"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Submit a vacation request for Omar Diaz from Mar 23 to Mar 31.",
+     "expected_result": "It is blocked with a message - that's 9 inclusive days against his 6 remaining - and his balance stays at 6.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input validation",
+       "Boundary handling"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Look at Sam Ortiz's pending sick-day request in the admin view.",
+     "expected_result": "Its date is written weekday-first as 'Wed, Mar 4', following the app-wide date style.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Global convention",
+       "Date formatting"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Find Leo Vance on the weekly rollup board and read his weekly total.",
+     "expected_result": "42h 0m - his Saturday 7h is counted, so it is not 35h 0m.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Boundary handling"
+      ]
+     },
+     "copied_from_turn": 2
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Build the admin a pay-stub calculator page: pick one of the crew and it works out their seeded week - regular pay at their hourly rate, overtime paid at a multiplier I can type into a box (start it at 1.5). Overtime hours are whichever is bigger: the total of their over-8-hour daily excesses, or how far the week went past 40 - everything else is regular. It all recalculates the moment I change the employee or the multiplier, no save button anywhere, amounts to the cent like $817.00, and if I type garbage in the multiplier box, tell me instead of showing nonsense.",
+   "source_website": "https://www.ontheclock.com/",
+   "source_feature": "Customizable attendance reports with export (payroll-ready reports)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Select Leo Vance in the pay calculator with the multiplier at its starting 1.5.",
+     "expected_result": "Total gross is $817.00 - regular $760.00 plus overtime $57.00 - not the flat $798.00 you'd get by ignoring his 2h of weekly overtime.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed values",
+       "Rounding",
+       "Overtime split"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Select Priya Nair with the multiplier at 1.5.",
+     "expected_result": "Total gross is $906.00 with an overtime portion of $54.00 - her Monday excess counts even though her week is under 40h.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed values",
+       "Overtime split"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "With Leo Vance selected, clear the multiplier box and type 2.",
+     "expected_result": "Figures update immediately as typed with no submit step - overtime pay becomes $76.00 and the total $836.00.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live recalculation",
+       "Input handling"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Select Leo Vance and find where the calculator shows his overtime hours.",
+     "expected_result": "They read '2h 0m' in the app-wide hours-and-minutes style, not a decimal like 2.0.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Global convention",
+       "Duration formatting"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Find Leo Vance on the overtime board.",
+     "expected_result": "He carries a weekly overtime flag of 2h 0m over, and no daily flags at all (every day was 7h) - a build that only checks days over 8h shows Leo clean, which is wrong.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Threshold flagging",
+       "Aggregation"
+      ]
+     },
+     "copied_from_turn": 4
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "I need a payroll report builder now: let me narrow by department and by a single person - both filters stacking together - and toggle whether approved leave shows up, then render the whole thing as a plain-text export block right on the page that I can copy, no downloads. The export has to mirror exactly what the filters say: each matching person's weekly hours, and a leave line only for leave that's actually been approved - anything still waiting in the queue stays out of the export entirely.",
+   "source_website": "https://www.ontheclock.com/",
+   "source_feature": "Customizable attendance reports with export",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Set the department filter to Warehouse with leave included, and read the export block.",
+     "expected_result": "Only Leo Vance (42h 0m) and Sam Ortiz (32h 0m) appear, and there is no leave line for Sam - his sick day is still pending and pending never exports.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Filtering",
+       "Pending vs approved state",
+       "Export consistency"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Set the department filter to Front Desk with leave included, and read the export block.",
+     "expected_result": "Maya Chen at 40h 0m and Priya Nair at 37h 0m, plus a leave line for Priya's 3 approved vacation days (Mar 16 to Mar 18).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Filtering",
+       "Export consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Filter department to Sales, then also pick Omar Diaz as the specific person.",
+     "expected_result": "The export narrows to just Omar Diaz (20h 0m) - the two filters combine with AND, so Ana Beck drops out.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Boolean composition",
+       "Filtering"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Approve Sam Ortiz's pending sick day in the leave area (confirming it), then set the report to Warehouse with leave included and read the export block.",
+     "expected_result": "Sam now has a sick-leave line for Wed, Mar 4 that was absent while the request was pending.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature integration",
+       "State propagation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the leave view and read Priya Nair's and Omar Diaz's remaining PTO balances.",
+     "expected_result": "Priya shows 12 of 15 remaining (her 3 approved vacation days deducted); Omar still shows 6 of 6 - his pending request deducts nothing, so not 4.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Derived balance",
+       "Pending vs approved state"
+      ]
+     },
+     "copied_from_turn": 5
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "People keep botching punches, so let them flag a specific day on their own timesheet with a correction - what the hours should have been and why - and give admins a corrections queue that shows the day's currently logged hours right next to the claimed ones. Approving one actually rewrites that day in the timesheet, so the rollup ranking and the overtime board follow suit; rejecting leaves everything exactly as it was. Seed two waiting corrections: Ana Beck says her Thu Mar 5 should be 9h 30m instead of the 6h logged (inventory ran late), and Omar Diaz claims his Fri Mar 6 was 8h, not 4h.",
+   "source_website": "https://www.opentimeclock.com/",
+   "source_feature": "Approval workflow for time records",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "In the corrections queue, approve Ana Beck's request (confirming it), then open her timesheet history.",
+     "expected_result": "A confirmation was required before it went through, and her Thursday now reads 9h 30m where 6h 0m used to be.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Approval workflow",
+       "Confirmation",
+       "Record rewrite"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Approve Ana Beck's correction, then open the weekly rollup board.",
+     "expected_result": "Ana Beck now shows 40h 30m and sits 2nd, between Leo Vance (42h 0m) and Maya Chen (40h 0m) - no longer tied with Priya Nair at 37h 0m.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "State propagation",
+       "Re-ranking",
+       "Aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Reject Omar Diaz's correction (confirming it), then check his timesheet.",
+     "expected_result": "The request leaves the queue but his Friday still reads 4h 0m and his weekly total stays 20h 0m - nothing changed.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Rejection path",
+       "State integrity"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Approve Ana Beck's correction, then open the overtime board.",
+     "expected_result": "Ana - previously flag-free - is now flagged: 1h 30m over on Thu, Mar 5 and 0h 30m over for the week.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature integration",
+       "Threshold flagging"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Select Leo Vance in the pay calculator with the multiplier at its starting 1.5.",
+     "expected_result": "Total gross is $817.00 - regular $760.00 plus overtime $57.00 - not the flat $798.00 you'd get by ignoring his 2h of weekly overtime.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed values",
+       "Rounding",
+       "Overtime split"
+      ]
+     },
+     "copied_from_turn": 6
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Give me an adherence scoreboard for that Mar 2 to Mar 7 week: everyone is scheduled Monday through Friday, except Leo and Omar who are both down for Monday through Saturday. Score each person as the share of their scheduled days they either actually worked or had approved leave covering, shown as a whole percent - a day covered by an approved leave request counts, but one still sitting pending in the queue absolutely doesn't. List each person's uncovered days too, and make sure a perfect record looks clean - just 100% with nothing listed, not a blank or broken row.",
+   "source_website": "https://www.opentimeclock.com/",
+   "source_feature": "Attendance irregularity notifications",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Find Sam Ortiz on the adherence scoreboard.",
+     "expected_result": "He scores 80% with Wed, Mar 4 listed as uncovered - his sick request is still pending, and pending leave doesn't count as coverage (so not 100%).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Derived score",
+       "Pending vs approved state"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Find Omar Diaz on the adherence scoreboard.",
+     "expected_result": "Exactly 83% - he worked 5 of his 6 scheduled days (Saturday missed) and 5/6 rounds to 83, not 84 and not 83.3%.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Rounding",
+       "Derived score"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Look at Maya Chen, Leo Vance, Priya Nair and Ana Beck on the scoreboard.",
+     "expected_result": "All four show 100% with no uncovered days listed - clean rows, nothing blank or broken.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Empty state",
+       "Boundary handling"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Approve Sam Ortiz's pending sick day in the leave area (confirming it), then return to the adherence scoreboard.",
+     "expected_result": "Sam now scores 100% and Wed, Mar 4 is no longer listed as uncovered - the approved leave covers it.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature integration",
+       "State propagation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "On the kiosk, type just 42 into the PIN entry.",
+     "expected_result": "No employee is matched yet and the punch action is unavailable - the kiosk shows two of four digits entered, nothing more.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live input feedback",
+       "Input validation"
+      ]
+     },
+     "copied_from_turn": 3
+    }
+   ]
+  },
+  {
+   "archetype": "design-restyle",
+   "instruction": "The papaya whip look has run its course - refresh the whole thing: a deep navy top bar with cream-colored text on every page, dark orange kept only for the primary actions (punching, approving, submitting) and those buttons reshaped as fully rounded pills, every page's main heading in uppercase, all status and flag badges as rounded pills, and zebra-striped rows on every table. I mean everywhere - the kiosk, the weekly rollup, the overtime board, the leave center, the pay calculator, and the original dashboard too - not one page left on the old look.",
+   "source_website": "https://www.ontheclock.com/",
+   "source_feature": "Live punch feed dashboard (its clean admin visual language)",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Open the kiosk page and look at its top bar and punch button.",
+     "expected_result": "The top bar is deep navy with cream text, and the punch action is a dark orange fully-rounded pill button.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Color scheme",
+       "Button styling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the overtime board and look at its heading, flags, and table.",
+     "expected_result": "The main heading is uppercase, overtime flags render as rounded pill badges, and the table rows are zebra-striped.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Typography",
+       "Badge styling",
+       "Table styling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the leave center's admin view and look at the approve control and the top bar.",
+     "expected_result": "The navy top bar with cream text is present and the approve action is a dark orange pill-shaped button.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Color scheme",
+       "Button styling"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Open the weekly rollup board and then the pay calculator, checking the top bar and main heading on each.",
+     "expected_result": "Both pages show the same deep navy top bar with cream text and an uppercase main heading - no page missed by the restyle.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Cross-page consistency",
+       "Color scheme",
+       "Typography"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Find Omar Diaz on the adherence scoreboard.",
+     "expected_result": "Exactly 83% - he worked 5 of his 6 scheduled days (Saturday missed) and 5/6 rounds to 83, not 84 and not 83.3%.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Rounding",
+       "Derived score"
+      ]
+     },
+     "copied_from_turn": 9
+    }
+   ]
+  }
+ ],
+ "target_app_summary": "The base time-attendance app grows into a full workforce operations suite for a small company. A pinned six-person roster with an exact seeded week of hours (Mar 2-7, 2026) feeds a ranked weekly rollup, an overtime/exceptions board, a live pay-stub calculator, a filterable payroll report with on-screen export, and a schedule-adherence scoreboard. Around that analytics core sit workflows and tools: a PIN kiosk that punches straight into timesheets, a PTO/leave center with request-approve-deduct mechanics, and a punch-correction queue whose approvals rewrite timesheet days and cascade through the rollup and overtime flags. The graph runs deep: roster/timesheets (T2) feed overtime (T4) which feeds payroll (T6) and correction propagation (T8), while leave (T5) feeds both the report export (T7) and adherence scoring (T9); a final restyle (T10) sweeps six surfaces. App-wide conventions - 'Xh Ym' durations, 'Mon, Mar 2' dates, and confirm-before-approve/reject - are introduced early and silently enforced on every later surface.",
+ "dependency_graph": {
+  "nodes": [
+   {
+    "id": "T1",
+    "label": "base app",
+    "archetype": "base"
+   },
+   {
+    "id": "T2",
+    "label": "roster + weekly rollup",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T3",
+    "label": "PIN kiosk",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T4",
+    "label": "overtime exceptions board",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T5",
+    "label": "leave & PTO center",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T6",
+    "label": "pay-stub calculator",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T7",
+    "label": "payroll report export",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T8",
+    "label": "punch correction queue",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T9",
+    "label": "adherence scoreboard",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T10",
+    "label": "navy restyle",
+    "archetype": "design-restyle"
+   }
+  ],
+  "edges": [
+   {
+    "from": "T1",
+    "to": "T2",
+    "what": "rolls up the base app's attendance records"
+   },
+   {
+    "from": "T1",
+    "to": "T3",
+    "what": "kiosk punches toggle the base clock-in/out status"
+   },
+   {
+    "from": "T2",
+    "to": "T3",
+    "what": "PINs resolve against the seeded roster; punches land in timesheets"
+   },
+   {
+    "from": "T2",
+    "to": "T4",
+    "what": "overtime computed over the seeded week's timesheets"
+   },
+   {
+    "from": "T2",
+    "to": "T5",
+    "what": "PTO balances start from the roster's seeded allowances"
+   },
+   {
+    "from": "T2",
+    "to": "T6",
+    "what": "wages and weekly hours from roster/timesheets"
+   },
+   {
+    "from": "T4",
+    "to": "T6",
+    "what": "regular/overtime hour split from the overtime classification"
+   },
+   {
+    "from": "T2",
+    "to": "T7",
+    "what": "report rows built from timesheet weekly hours"
+   },
+   {
+    "from": "T5",
+    "to": "T7",
+    "what": "approved (never pending) leave lines in the export"
+   },
+   {
+    "from": "T2",
+    "to": "T8",
+    "what": "approved corrections rewrite timesheet days and re-rank the rollup"
+   },
+   {
+    "from": "T4",
+    "to": "T8",
+    "what": "approved corrections re-trigger overtime flags"
+   },
+   {
+    "from": "T2",
+    "to": "T9",
+    "what": "adherence compares schedule against timesheet punches"
+   },
+   {
+    "from": "T5",
+    "to": "T9",
+    "what": "approved leave counts as covered days in the score"
+   },
+   {
+    "from": "T1",
+    "to": "T10",
+    "what": "restyles the base dashboard"
+   },
+   {
+    "from": "T2",
+    "to": "T10",
+    "what": "restyles the weekly rollup"
+   },
+   {
+    "from": "T3",
+    "to": "T10",
+    "what": "restyles the kiosk"
+   },
+   {
+    "from": "T4",
+    "to": "T10",
+    "what": "restyles the overtime board"
+   },
+   {
+    "from": "T5",
+    "to": "T10",
+    "what": "restyles the leave center"
+   },
+   {
+    "from": "T6",
+    "to": "T10",
+    "what": "restyles the pay calculator"
+   }
+  ]
+ },
+ "global_rules": [
+  {
+   "rule": "Durations are always displayed as hours and minutes like '7h 30m' - never decimal hours - everywhere in the app, now and for anything added later.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Dates are always written weekday-first like 'Mon, Mar 2' everywhere in the app from turn 4 onward.",
+   "introduced_in_turn": 4
+  },
+  {
+   "rule": "Any approve or reject action anywhere in the app asks for confirmation before it goes through.",
+   "introduced_in_turn": 5
+  }
+ ],
+ "pinned_seed": {
+  "entity": "6 employees with department, hourly wage, PTO allowance, and exact daily hours for the week of Mon Mar 2 - Sat Mar 7, 2026",
+  "introduced_in_turn": 2,
+  "records_gist": "Maya Chen FrontDesk $22 12PTO 8h x5 (40h); Leo Vance Warehouse $19 8PTO 7h x6 Mon-Sat (42h); Priya Nair FrontDesk $24 15PTO 9h30/6/8/7h30/6 (37h); Sam Ortiz Warehouse $19 10PTO 8h Mon,Tue,Thu,Fri, missed Wed (32h); Ana Beck Sales $28 12PTO 7h15/7h45/8/6/8 (37h, ties Priya); Omar Diaz Sales $26 6PTO 4h x5 (20h)"
+ }
+}

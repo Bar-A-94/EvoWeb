@@ -1,0 +1,45 @@
+# EvoWeb: one Kubernetes Indexed Job per run (model x replicate), one pod per app ladder.
+# Rendered by infra/launch.sh, which replaces every ${...} below. The image's entrypoint
+# (harness/run_sample.sh) carries the paper's sampling policy as defaults, so the pod only needs
+# the model, the endpoints, the keys and where to put the results.
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ${JOB_NAME}
+  namespace: ${NAMESPACE}
+  labels: {app: evoweb, run-id: "${RUN_ID}"}
+spec:
+  completions: ${NUM_APPS}
+  parallelism: ${PARALLELISM}
+  completionMode: Indexed
+  backoffLimitPerIndex: 2          # a pod evicted mid-ladder resumes from its S3 checkpoint
+  maxFailedIndexes: ${NUM_APPS}
+  ttlSecondsAfterFinished: 86400
+  template:
+    metadata:
+      labels: {app: evoweb, run-id: "${RUN_ID}"}
+    spec:
+      restartPolicy: Never
+      serviceAccountName: ${SERVICE_ACCOUNT}    # needs write access to the results bucket
+      containers:
+      - name: ladder
+        image: ${IMAGE}
+        imagePullPolicy: IfNotPresent
+        command: ["bash", "-c"]
+        args:
+        - export SAMPLE_INDEX=$((JOB_COMPLETION_INDEX + ${START_APP})) && exec bash /app/harness/run_sample.sh
+        env:
+        - {name: RUN_ID, value: "${RUN_ID}"}
+        - {name: MODEL, value: "${MODEL}"}
+        - {name: PROVIDER, value: "${PROVIDER}"}
+        - {name: API_URL, value: "${API_URL}"}
+        - {name: WEBGEN_NAV_GUIDANCE, value: "${NAV_GUIDANCE}"}
+        - {name: S3_BUCKET, value: "${S3_BUCKET}"}   # results + per-request checkpoints
+        - name: API_KEY
+          valueFrom: {secretKeyRef: {name: ${SECRET_NAME}, key: model-api-key}}
+        - name: EVAL_API_KEY
+          valueFrom: {secretKeyRef: {name: ${SECRET_NAME}, key: anthropic-api-key}}
+        resources:
+          # Chrome (judge) + Vite + the agent's `npm run build` in one pod.
+          requests: {cpu: "6", memory: 16Gi}
+          limits: {cpu: "6", memory: 24Gi}

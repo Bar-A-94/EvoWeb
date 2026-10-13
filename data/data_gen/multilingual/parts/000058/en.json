@@ -1,0 +1,867 @@
+{
+ "id": "000058",
+ "instruction": "Please implement a web application for one-to-one coaching sessions to match coaches and users. The application should have functionalities such as personality assessment, user profiles, coaching and mentorship matching, scheduling and session management, and goal setting and progress tracking. Users should be able to complete a personality assessment, create and manage their profiles, search for and select suitable coaches, schedule coaching sessions, and set and track goals. Set the background to beige, and apply saddle brown to components.",
+ "Category": {
+  "primary_category": "User Interaction",
+  "subcategories": [
+   "Form Systems",
+   "Real-time Features",
+   "AI Integration"
+  ]
+ },
+ "application_type": "Learning Platforms",
+ "ui_instruct": [
+  {
+   "task": "Assess the personality assessment functionality by completing the full assessment.",
+   "expected_result": "The system should display an assessment summary or results, and these results should be saved to the user’s profile.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations",
+     "Generation"
+    ]
+   }
+  },
+  {
+   "task": "Examine the profile creation feature by updating the user profile information.",
+   "expected_result": "Updated profile details should be saved correctly and displayed on the user profile page.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations",
+     "Authentication Flows"
+    ]
+   }
+  },
+  {
+   "task": "Check the coaching and mentorship matching feature by searching for available coaches.",
+   "expected_result": "The system should list suitable coaches based on user preferences and assessment results.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Searching",
+     "Filtering"
+    ]
+   }
+  },
+  {
+   "task": "Test scheduling a new coaching session with a selected coach.",
+   "expected_result": "The session should be added to the user’s and coach’s calendars, and both parties should receive a confirmation notification.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "E-commerce",
+     "Form Operations",
+     "Communication"
+    ]
+   }
+  },
+  {
+   "task": "Evaluate goal-setting and progress tracking by creating and updating a personal goal.",
+   "expected_result": "The goal should be saved successfully, and progress updates should reflect accurately in the system.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations",
+     "Generation"
+    ]
+   }
+  },
+  {
+   "task": "Verify that the website uses 'beige' as the background color and 'saddle brown' as the component color, as specified in the design requirements.",
+   "expected_result": "The website has a background color of 'beige' and components (such as buttons, cards, headers, etc.) are styled with the color 'saddle brown', accurately reflecting the design instruction.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "archetype": "derived-state",
+   "instruction": "The coach search page needs to become a real screener. Load it with exactly these seven to start — I'll add more later: Ben Whitaker (Interview Prep + Resume, $75 per session, 3 years, 57 sessions run), Derek Okafor (Career + Interview Prep, $95, 5 years, 162), Tom Alvarez (Wellness + Mindfulness, $95, 6 years, 98), Maya Chen (Career + Leadership, $120, 8 years, 214), Hana Suzuki (Wellness + Leadership, $120, 9 years, 187), Priya Nair (Executive + Leadership, $150, 12 years, 340), Sofia Ricci (Executive + Career, $180, 15 years, 421). Give me specialty checkboxes — a coach qualifies if they cover any one of the ticked specialties — plus boxes where I type a max price and a minimum years of experience, and all of those narrow the list together, with a live 'Showing X of 7 coaches' line and results ordered cheapest first (same price, go A to Z by first name). Clicking a coach should still take me through to their full profile like before. One rule for the whole app while we're at it, now and for anything we add later: any time a coach's rate appears, spell it out like '$120 per session' — never a bare number.",
+   "source_website": "https://mentorcruise.com/",
+   "source_feature": "Skill/expertise tags on profile cards",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the coach screener, check the Career and Wellness specialty boxes and type 120 into the max price field.",
+     "expected_result": "Exactly four coaches remain, listed cheapest-first as Derek Okafor, Tom Alvarez, Hana Suzuki, Maya Chen (each price tie A-to-Z by first name); Sofia Ricci, who has Career but costs $180, is filtered out.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Sorting",
+       "Boolean Composition"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Check only the Executive specialty box and look at the result list and the 'Showing X of 7 coaches' line.",
+     "expected_result": "Only Priya Nair and Sofia Ricci are listed, Priya first ($150 before $180), and the counter line agrees with the two visible cards.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Count Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "With no specialty boxes checked, type 50 into the max price field, then clear the field.",
+     "expected_result": "At 50 no coaches match and a friendly empty state shows instead of cards or a crash; clearing the field brings all seven coaches back.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Empty State",
+       "Filtering"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "From the screener results, click Maya Chen's card.",
+     "expected_result": "Her full profile opens with her details — rate shown as $120 per session — and the usual profile actions like scheduling a session are still available.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Navigation",
+       "Cross-Feature Integration"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 1,
+     "task": "Open the goal tracking area and add a new goal named 'Improve delegation'.",
+     "expected_result": "The new goal appears in the goal list right after being added.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Regression",
+       "CRUD"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Before I book anyone I want to know what it'll cost me — put a cost estimator on each coach's profile, reachable from their screener card too. I type how many sessions I'm thinking: 4 or more knocks 10% off, 8 or more knocks 15% off, and the total, the amount I'm saving, and the effective per-session rate down to the penny should all refresh with every keystroke — no calculate button. Derek at 8 sessions, for instance, should come out to $646.00 total and $80.75 per session. If I type zero, a negative, or anything that isn't a whole number, show me a gentle note instead of numbers. And a standing preference: any percentage this app ever shows — this discount or whatever we add later — is a whole number with a % sign, no decimals.",
+   "source_website": "https://mentorcruise.com/",
+   "source_feature": "Flexible session pricing tiers (subscription vs. one-off)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the cost estimator on Derek Okafor's profile and type 8 into the sessions field.",
+     "expected_result": "The 15% tier applies: total $646.00, savings $114.00, and an effective rate of $80.75 per session — all shown without pressing any calculate button.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Live Update"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In Derek Okafor's estimator, type 3 into the sessions field, then change it to 4.",
+     "expected_result": "At 3 the total is $285.00 with no discount; at 4 it becomes $342.00 with the 10% tier shown — the figures update as the number changes.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Boundary Condition",
+       "Live Update"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type 0 into the sessions field of Derek Okafor's estimator.",
+     "expected_result": "No totals are shown — a friendly validation note appears instead, with no NaN, crash, or bogus $0.00 breakdown.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the screener, check only the Mindfulness specialty, then open the cost estimator for the one coach that remains.",
+     "expected_result": "Tom Alvarez is the only coach shown, and his estimator is based on his $95 per session rate (typing 1 gives a $95.00 total).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Feature Integration",
+       "Calculation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "On the coach screener, check the Career and Wellness specialty boxes and type 120 into the max price field.",
+     "expected_result": "Exactly four coaches remain, listed cheapest-first as Derek Okafor, Tom Alvarez, Hana Suzuki, Maya Chen (each price tie A-to-Z by first name); Sofia Ricci, who has Career but costs $180, is filtered out.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Regression",
+       "Filtering"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Let people test the waters before committing: every coach profile gets a 'Request free intro call' button where I pick one of three time slots the coach offers and write a short message — it shouldn't send with the message empty. Requests land in a Coach Inbox screen as Pending, where they can be Accepted or Declined, and whatever happens there has to show up identically under a 'My requests' list on my side. Start with one already sitting in the inbox: a pending request to Priya Nair that says 'Hoping to prep for a VP-level move this fall.' Also, from here on out across the whole app: anything that cancels, declines, or deletes should ask me to confirm before it goes through.",
+   "source_website": "https://mentorcruise.com/",
+   "source_feature": "Free trial intro call before commitment",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Open Sofia Ricci's profile, start a free intro call request, pick a time slot, and click send with the message box empty; then type 'Excited to explore executive coaching' and send again.",
+     "expected_result": "The empty attempt is blocked with a validation message and nothing is created; the second attempt goes through and shows up as Pending under My requests.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Workflow"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open the Coach Inbox screen for intro-call requests.",
+     "expected_result": "Exactly one request is waiting: a Pending request to Priya Nair with the message 'Hoping to prep for a VP-level move this fall.'",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Seeded Data",
+       "Status Display"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the Coach Inbox, click Decline on the Priya Nair request, then back out of the confirmation instead of confirming.",
+     "expected_result": "A confirmation prompt appears before anything changes; after backing out, the request still shows Pending in both the Coach Inbox and My requests.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Confirmation Dialog",
+       "State Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the screener, check only the Resume specialty, open the single coach that matches, and send an intro call request with the message 'Quick resume review please'.",
+     "expected_result": "Ben Whitaker is the only coach that matches, and the new request appears as Pending in both My requests and the Coach Inbox.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Feature Integration",
+       "Workflow"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "Open the cost estimator on Derek Okafor's profile and type 8 into the sessions field.",
+     "expected_result": "The 15% tier applies: total $646.00, savings $114.00, and an effective rate of $80.75 per session — all shown without pressing any calculate button.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Regression",
+       "Calculation"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Time for ratings. Once a session is marked complete I can give the coach 1 to 5 stars with a short comment — upcoming ones can't be rated, like the Derek Okafor session I've got on the calendar for Aug 5. Backfill my history so the cards aren't empty: Maya 5, 4, 5; Tom 5, 4, 5; Priya 5, 5, 4, 5; Sofia 5, 4, 5, 4; Hana 4, 5; Derek 4, 4; Ben nothing yet. Every coach card — screener included — shows the average to one decimal rounded the normal way (Maya's works out to 4.7, not 4.6), and a coach with no reviews says 'No reviews yet' rather than showing a zero. Give the screener a sort-by-rating option and a minimum-rating box too; when ratings tie, more reviews wins, and if still tied just go A to Z by first name.",
+   "source_website": "https://mentorcruise.com/",
+   "source_feature": "Star rating and review display on mentor cards",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the screener, switch the sort to rating, highest first, with no filters applied.",
+     "expected_result": "The order reads Priya Nair 4.8, Maya Chen 4.7, Tom Alvarez 4.7, Sofia Ricci 4.5, Hana Suzuki 4.5, Derek Okafor 4.0, then Ben Whitaker with no rating — Sofia sits above Hana because her 4.5 comes from four reviews versus Hana's two, and Maya sits above Tom on the first-name tiebreak.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Tie-Breaking",
+       "Rounding"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Look at Maya Chen's and Ben Whitaker's coach cards.",
+     "expected_result": "Maya's average shows 4.7 (not 4.6 or 4.67); Ben's card says 'No reviews yet' or similar wording rather than 0, 0.0, or a blank/NaN.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Rounding",
+       "Empty State"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the upcoming Aug 5 session with Derek Okafor and look for a way to rate it.",
+     "expected_result": "No rating can be submitted on an upcoming session — the star input is absent or disabled until the session is completed.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Gating",
+       "State Rules"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the screener, check the Leadership specialty and type 4.5 into the minimum rating box, then change the minimum to 4.6.",
+     "expected_result": "At 4.5 all three Leadership coaches remain — Maya Chen, Hana Suzuki, Priya Nair (4.5 counts as meeting a 4.5 minimum); at 4.6 Hana drops out, leaving Maya and Priya.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Feature Integration",
+       "Boolean Composition",
+       "Boundary Condition"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 4,
+     "task": "Open the Coach Inbox screen for intro-call requests.",
+     "expected_result": "Exactly one request is waiting: a Pending request to Priya Nair with the message 'Hoping to prep for a VP-level move this fall.'",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Regression",
+       "Seeded Data"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Booking sessions one at a time is getting old — I want a planner that sketches out a whole coaching block before I commit to anything. Give me a spot where I type a start date and how many sessions I'm after, and pick a rhythm — weekly or every two weeks — and the full list of proposed dates plus a 'wraps up on' line redraws the instant any of those change, no generate button anywhere. Every proposed date has to be checked against sessions already booked on my calendar, and a clash gets called out right on that row with which booked session it collides with — and if I book something new afterwards, the planner has to notice that too, not keep working off a stale copy. The month math needs to be honest across boundaries (two weeks after Jul 22 is Aug 5, not some 36th of July), and a session count of zero, a negative, or anything with a decimal point should get a gentle note instead of a date list.",
+   "source_website": "https://www.coaching.com/coaching-management-software",
+   "source_feature": "Recurring session scheduling across a coaching engagement",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the session planner, set the start date to Jul 22, pick the every-two-weeks rhythm, and type 4 for the number of sessions.",
+     "expected_result": "Four dates appear — Jul 22, Aug 5, Aug 19, Sep 2 — with the wraps-up line reading Sep 2, and the Aug 5 row flagged as clashing with the Derek Okafor session already on the calendar.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Date Arithmetic",
+       "Conflict Detection"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "With Jul 22, every two weeks and 4 sessions still set, change the session count from 4 to 5.",
+     "expected_result": "A fifth row for Sep 16 appears the moment the digit changes — no button press — and the wraps-up line moves from Sep 2 to Sep 16.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Update",
+       "Date Arithmetic"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type 2.5 into the session count field of the planner.",
+     "expected_result": "The date list gives way to a gentle validation note — no crash, no NaN, and no half-session schedule rendered.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Schedule a new session with Tom Alvarez for Aug 19 from his profile like usual, then return to the planner with Jul 22, every two weeks and 4 sessions set.",
+     "expected_result": "The Aug 19 row now carries a clash flag naming the new Tom Alvarez session, alongside the existing Aug 5 Derek Okafor flag — the planner reads the live calendar, not a stale snapshot.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Feature Integration",
+       "Conflict Detection"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "With no specialty boxes checked, type 50 into the max price field, then clear the field.",
+     "expected_result": "At 50 no coaches match and a friendly empty state shows instead of cards or a crash; clearing the field brings all seven coaches back.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Regression",
+       "Empty State"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Pull it all together into a 'My coaching hub' home screen with three tiles. Next sessions in date order — besides that Derek session on Aug 5 I've also booked Maya Chen for Jul 30 and Priya Nair for Aug 14. Then intro-call requests still waiting on an answer, with a way to accept right from the tile (the Priya one is still sitting there). And completed sessions I haven't rated — there are exactly two of those, Ben Whitaker from Mar 12 and Sofia Ricci from Apr 2 — with stars I can tap on the spot. The hub is only useful if it never lies: accept a request or drop a rating there and the tile counts, the inbox, and the coach cards all have to move in lockstep.",
+   "source_website": "https://www.coaching.com/coaching-management-software",
+   "source_feature": "Centralized coach dashboard with upcoming sessions and to-dos",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open My coaching hub and read the upcoming-sessions tile.",
+     "expected_result": "The sessions are in date order — Maya Chen Jul 30 first, then Derek Okafor Aug 5, then Priya Nair Aug 14 — not in the order they were booked or mentioned.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the hub's awaiting-rating tile, rate the Ben Whitaker session from Mar 12 with 4 stars, then find Ben's card on the screener.",
+     "expected_result": "The tile immediately shrinks to just the Sofia Ricci session (its count matching what's visible), and Ben's card now shows a 4.0 average instead of 'No reviews yet'.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Count Consistency",
+       "Live Update"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Look at the intro-call tile on the hub.",
+     "expected_result": "The pending Priya Nair request is shown there with an accept action available directly on the tile.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Seeded Data"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Accept the Priya Nair request from the hub tile, then open the Coach Inbox and My requests.",
+     "expected_result": "The request leaves the pending tile, and both the Coach Inbox and My requests now show it as Accepted — the hub and the request screens agree.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Feature Integration",
+       "State Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 5,
+     "task": "On the screener, switch the sort to rating, highest first, with no filters applied.",
+     "expected_result": "The order reads Priya Nair 4.8, Maya Chen 4.7, Tom Alvarez 4.7, Sofia Ricci 4.5, Hana Suzuki 4.5, Derek Okafor 4.0, then Ben Whitaker with no rating — Sofia sits above Hana because her 4.5 comes from four reviews versus Hana's two, and Maya sits above Tom on the first-name tiebreak.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Regression",
+       "Sorting"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "I keep losing track of what we covered — give every session a notes box on its detail page, and then a per-coach 'engagement journal' that lines up all their completed sessions oldest-first with the date, the stars I gave, and my note (just a dash where something's missing). Under the timeline put a 'Copy summary' block that renders the whole journal as plain text right on the screen. For Maya, backfill it: the Mar 10 session was the 4-star one with my note 'Practiced difficult feedback conversation', Feb 3 was a 5-star with 'Set a 90-day leadership plan', and Apr 21 was the other 5-star that I never wrote anything for.",
+   "source_website": "https://www.coaching.com/coaching-management-software",
+   "source_feature": "Session notes captured within each engagement",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open Maya Chen's engagement journal.",
+     "expected_result": "Three entries appear oldest first: Feb 3 (5 stars, 'Set a 90-day leadership plan'), then Mar 10 (4 stars, 'Practiced difficult feedback conversation'), then Apr 21 (5 stars, a dash where the note would be) — Feb 3 on top even though Mar 10 was mentioned first.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Placeholder Handling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In Maya Chen's journal, look at the Copy summary block beneath the timeline.",
+     "expected_result": "A plain-text rendering of the same three entries appears on screen, in the same oldest-first order, including the Apr 21 entry with its dash — nothing skipped.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Export Preview",
+       "Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the Apr 21 session with Maya Chen, type 'Wrapped up quarterly review prep' into its notes box, save, then return to her journal.",
+     "expected_result": "The Apr 21 entry now shows that note in place of the dash, still third in the timeline, and the Copy summary text reflects it too.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "State Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Open Sofia Ricci's engagement journal and find her Apr 2 session.",
+     "expected_result": "The Apr 2 entry appears with a dash where its stars would be — it was never rated — and the journal renders without a crash or a fake 0 rating.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Feature Integration",
+       "Empty State"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "In Derek Okafor's estimator, type 3 into the sessions field, then change it to 4.",
+     "expected_result": "At 3 the total is $285.00 with no discount; at 4 it becomes $342.00 with the 10% tier shown — the figures update as the number changes.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Regression",
+       "Boundary Condition"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Goals need real teeth: let me split each goal into milestones I check off, with a per-goal progress bar and percent, a ranking of which goals are closest to done, and one overall number up top that counts milestones — not goals — so it can't be skewed by tiny goals. Set mine up: 'Get promoted to Senior PM' with 4 milestones and 3 already done, 'Improve public speaking' with 3 and 1 done, 'Build a morning routine' with 2 and both done, and 'Find a mentor in fintech' with none yet — that last one should just say it has no milestones, not show some broken bar, and it shouldn't skew the overall number either. Adding a milestone with an empty name shouldn't save, and let me delete a milestone outright when I change my mind — the goal's percent and the overall number should snap to whatever's left. If my math's right, the overall today is 6 of 9 done.",
+   "source_website": "https://www.coaching.com/coaching-management-software",
+   "source_feature": "Goal milestones with stakeholder feedback and progress reports",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the goals page and read the overall progress figure at the top.",
+     "expected_result": "It reads 67% (6 of 9 milestones done) — not 69%, which is what averaging the three goals' own percentages would give.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Rounding"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Check off one unchecked milestone under 'Improve public speaking'.",
+     "expected_result": "That goal's percent moves from 33% to 67% and the overall figure moves from 67% to 78%, both without a page reload.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Update",
+       "Calculation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Look at 'Find a mentor in fintech', then try to add a milestone to it with the name left empty.",
+     "expected_result": "The goal shows a clear no-milestones-yet state (no 0-of-0 bar or NaN), and the empty milestone is rejected with a message rather than saved.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Empty State",
+       "Input Validation"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Delete one of the milestones under 'Get promoted to Senior PM' and confirm when asked.",
+     "expected_result": "A confirmation prompt appears before the delete happens; after confirming, the milestone is gone and the goal's percent recalculates to match its remaining milestones.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Global Convention",
+       "Confirmation Dialog"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 6,
+     "task": "On the session planner, set the start date to Jul 22, pick the every-two-weeks rhythm, and type 4 for the number of sessions.",
+     "expected_result": "Four dates appear — Jul 22, Aug 5, Aug 19, Sep 2 — with the wraps-up line reading Sep 2, and the Aug 5 row flagged as clashing with the Derek Okafor session already on the calendar.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Regression",
+       "Date Arithmetic"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "design-restyle",
+   "instruction": "Last thing for this stretch: a visual tightening pass — same beige-and-saddle-brown soul, but consistent everywhere. Every primary action button (search, book, request, rate, save, all of them) becomes a pill-shaped saddle-brown button with white text; every page's main heading gets a short saddle-brown underline accent; coach cards, hub tiles, and goal cards share one card treatment with softly rounded corners and a light shadow; stars and rating numbers render in a warm amber/gold wherever ratings show up; and every status word (pending, accepted, declined, completed, cancelled) becomes a small rounded chip — amber for pending, green for accepted or completed, red for declined or cancelled. Sweep the screener, the hub, the goals page, the trial-request screens, and the coach profiles — if even one of those keeps the old look we're not done.",
+   "source_website": "https://mentorcruise.com/",
+   "source_feature": "Star rating and review display on mentor cards (card visual language extended into a full app-wide design system)",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Visit the screener, My coaching hub, and the goals page and look at the main action button on each.",
+     "expected_result": "All three pages show pill-shaped saddle-brown buttons with white text for their primary actions — no page keeps the old button style.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Cross-Page Consistency",
+       "Button Style"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Find Priya Nair's card on the screener.",
+     "expected_result": "Her rating reads 4.8 in the warm amber/gold treatment, her rate still reads $150 per session, and the card has the new rounded-corner, light-shadow look.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Card Style",
+       "Rating Color"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the trial-request screens and look at the Priya Nair request's status label.",
+     "expected_result": "The status is a small rounded chip — amber while it's pending — rather than plain text.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Status Chips",
+       "Color Coding"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Compare a coach card on the screener with a tile on My coaching hub, and check each page's main heading.",
+     "expected_result": "Cards and tiles share the same rounded-corner, light-shadow treatment, and both pages' main headings carry the short saddle-brown underline accent.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Cross-Page Consistency",
+       "Typography"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 7,
+     "task": "Open My coaching hub and read the upcoming-sessions tile.",
+     "expected_result": "The sessions are in date order — Maya Chen Jul 30 first, then Derek Okafor Aug 5, then Priya Nair Aug 14 — not in the order they were booked or mentioned.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Regression",
+       "Sorting"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "target_app_summary": "The one-to-one coaching matcher has grown into a full coaching marketplace and management suite. Discovery grew a real screener over a pinned seven-coach directory (specialty OR-checkboxes ANDed with typed price/experience caps) and a per-keystroke booking cost estimator with tiered discounts, while scheduling grew a per-keystroke block planner that lays out a whole run of proposed session dates (weekly or every-two-weeks), does honest month-boundary date math, and flags clashes against the live booking calendar. Relationship workflows grew a free intro-call request pipeline (user request -> coach inbox -> accept/decline with confirmations), post-session star ratings that feed averages, sorting and a minimum-rating filter back into the screener, and a per-coach engagement journal with an on-screen plain-text export. Planning grew milestone-based goal tracking with a milestone-weighted overall rollup, and everything converges on a coaching hub whose tiles (upcoming sessions, pending intro requests, unrated sessions) stay in lockstep with the underlying pages. A final visual system pass unifies buttons, cards, rating colors, and status chips across all surfaces. The graph runs two deep chains — directory -> trial requests -> hub, and directory -> ratings -> journal — so early breakage compounds.",
+ "dependency_graph": {
+  "nodes": [
+   {
+    "id": "T1",
+    "label": "base app",
+    "archetype": "base"
+   },
+   {
+    "id": "T2",
+    "label": "coach screener directory",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T3",
+    "label": "booking cost estimator",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T4",
+    "label": "intro-call request workflow",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T5",
+    "label": "ratings and reviews",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T6",
+    "label": "session block planner",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T7",
+    "label": "coaching hub dashboard",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T8",
+    "label": "engagement journal and export",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T9",
+    "label": "goal milestone rollups",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T10",
+    "label": "unified visual system",
+    "archetype": "design-restyle"
+   }
+  ],
+  "edges": [
+   {
+    "from": "T1",
+    "to": "T2",
+    "what": "coach search surface extended into the screener; cards open base profiles"
+   },
+   {
+    "from": "T2",
+    "to": "T3",
+    "what": "estimator opens from directory cards and uses seeded per-session rates"
+   },
+   {
+    "from": "T2",
+    "to": "T4",
+    "what": "intro-call request button lives on each directory coach's profile"
+   },
+   {
+    "from": "T1",
+    "to": "T5",
+    "what": "session completion state gates which sessions can be rated"
+   },
+   {
+    "from": "T2",
+    "to": "T5",
+    "what": "averages on screener cards; rating sort and min-rating filter added to screener"
+   },
+   {
+    "from": "T1",
+    "to": "T6",
+    "what": "planner clash flags are checked live against sessions booked on the base calendar"
+   },
+   {
+    "from": "T1",
+    "to": "T7",
+    "what": "upcoming-sessions tile draws on base scheduling"
+   },
+   {
+    "from": "T4",
+    "to": "T7",
+    "what": "pending intro-request tile with inline accept synced to the inbox"
+   },
+   {
+    "from": "T5",
+    "to": "T7",
+    "what": "unrated-completed-sessions tile with inline rating that updates averages"
+   },
+   {
+    "from": "T1",
+    "to": "T8",
+    "what": "notes attach to base session detail pages"
+   },
+   {
+    "from": "T5",
+    "to": "T8",
+    "what": "journal timeline and export show submitted star ratings, dash when unrated"
+   },
+   {
+    "from": "T1",
+    "to": "T9",
+    "what": "milestones extend the base goal tracker"
+   },
+   {
+    "from": "T2",
+    "to": "T10",
+    "what": "restyles screener cards, buttons, rating badges"
+   },
+   {
+    "from": "T4",
+    "to": "T10",
+    "what": "restyles trial-request status words into colored chips"
+   },
+   {
+    "from": "T7",
+    "to": "T10",
+    "what": "restyles hub tiles to the shared card treatment"
+   },
+   {
+    "from": "T9",
+    "to": "T10",
+    "what": "restyles goal cards and progress surfaces"
+   },
+   {
+    "from": "T1",
+    "to": "T10",
+    "what": "restyles base profile pages and page headings"
+   }
+  ]
+ },
+ "global_rules": [
+  {
+   "rule": "Any coach rate shown anywhere is spelled out like '$120 per session', never a bare number.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Every percentage anywhere in the app (discounts, goal progress, anything else) is a whole number with a % sign, no decimals.",
+   "introduced_in_turn": 3
+  },
+  {
+   "rule": "Any cancel, decline, or delete action anywhere asks for confirmation before it goes through.",
+   "introduced_in_turn": 4
+  }
+ ],
+ "pinned_seed": {
+  "entity": "7 coaches in the screener directory",
+  "introduced_in_turn": 2,
+  "records_gist": "Ben Whitaker $75/3yr (Interview Prep+Resume), Derek Okafor $95/5yr (Career+Interview Prep), Tom Alvarez $95/6yr (Wellness+Mindfulness), Maya Chen $120/8yr (Career+Leadership), Hana Suzuki $120/9yr (Wellness+Leadership), Priya Nair $150/12yr (Executive+Leadership), Sofia Ricci $180/15yr (Executive+Career)"
+ }
+}

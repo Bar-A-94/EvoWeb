@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use EvoWeb, its data or this code, please cite the paper below."
+title: "EvoWeb: A Benchmark for Coding Agents on Evolving Web Applications"
+type: software
+authors:
+  # Double-blind review: replace with the author list at camera-ready.
+  - name: "Anonymous authors"
+date-released: 2026-10-04
+keywords:
+  - benchmark
+  - coding agents
+  - web applications
+  - long-horizon evaluation
+preferred-citation:
+  type: conference-paper
+  title: "EvoWeb: A Benchmark for Coding Agents on Evolving Web Applications"
+  authors:
+    - name: "Anonymous authors"
+  collection-title: "International Conference on Learning Representations (ICLR), under review"
+  year: 2027

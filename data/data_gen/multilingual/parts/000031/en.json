@@ -1,0 +1,872 @@
+{
+ "id": "000031",
+ "instruction": "Please implement an anonymous campus discussion platform for students to communicate and discuss. The platform should have a discussion forum feature that allows students to anonymously post, reply to posts, and participate in discussions. Students should be able to browse and search posts, follow topics of interest, and receive notifications. The platform should ensure user privacy and security, protecting students' personal information. Configure your theme with honeydew as background and dark olive green as component color.",
+ "Category": {
+  "primary_category": "User Interaction",
+  "subcategories": [
+   "Form Systems",
+   "Authentication",
+   "Real-time Features"
+  ]
+ },
+ "application_type": "Discussion Forums",
+ "ui_instruct": [
+  {
+   "task": "Post an anonymous message in the discussion forum.",
+   "expected_result": "The message appears in the forum without displaying any personal information about the sender.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Communication"
+    ]
+   }
+  },
+  {
+   "task": "Reply anonymously to an existing post in the discussion forum.",
+   "expected_result": "The reply is successfully added and visible under the original post, maintaining the anonymity of the responder.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Communication"
+    ]
+   }
+  },
+  {
+   "task": "Search for a post using a specific keyword such as math.",
+   "expected_result": "The search results display relevant posts containing the keyword entered, and irrelevant posts are not shown.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Searching"
+    ]
+   }
+  },
+  {
+   "task": "Follow a topic of interest.",
+   "expected_result": "The user interface indicates that the topic is being followed, and related notifications are received if this is part of the system design.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Communication"
+    ]
+   }
+  },
+  {
+   "task": "Navigate through different topics and the home page without errors or dead ends.",
+   "expected_result": "All navigation actions direct the user to the intended pages without loading errors or broken links.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering"
+    ]
+   }
+  },
+  {
+   "task": "Test the notification feature by simulating a new post in a followed topic.",
+   "expected_result": "The user receives a notification about the new post without revealing any user's personal details.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Communication"
+    ]
+   }
+  },
+  {
+   "task": "Verify that the website uses 'honeydew' as the background color and 'dark olive green' as the component color, as specified in the design requirements.",
+   "expected_result": "The website has a background color of 'honeydew' and components (such as buttons, cards, headers, etc.) are styled with the color 'dark olive green', accurately reflecting the design instruction.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "archetype": "derived-state",
+   "instruction": "Time to add voting like Yik Yak — up and down arrows on every post, one vote per person per post (let me switch my vote though), with the net score shown next to the arrows, always with a plus sign when it's positive, like +22 — that's how I want scores styled everywhere in this app from here on out, whatever we build next. Same deal with topics: render every topic or category label lowercase with a # in front, like #housing, app-wide forever. Give the feed a sort toggle: New (latest Day first) and Top (highest net score first — and when two posts tie on score, the one with more replies goes first). Also wipe the feed and start it with exactly these seven so we have something real to sort, each with a posted-on Day label (Day 5 is the most recent): 'Library 3rd floor is a zoo during finals' (#campus, 41 up / 3 down, Day 2, 12 replies); 'Did anyone actually pass the Econ 201 midterm?' (#academics, 30 up / 22 down, Day 4, 25 replies); 'Lost a blue keychain near the dining hall' (#help, 9 up / 1 down, Day 5, 4 replies); 'Best cheap eats within walking distance?' (#food, 24 up / 2 down, Day 5, 18 replies); 'My roommate keeps eating my leftovers' (#housing, 15 up / 15 down, Day 1, 31 replies); 'Summer sublet available, 2 blocks from the quad' (#housing, 6 up / 2 down, Day 3, 2 replies); 'Wi-Fi in North Hall is down AGAIN' (#campus, 24 up / 2 down, Day 5, 7 replies) — exactly these, I'll add more later.",
+   "source_website": "Yik Yak",
+   "source_feature": "Upvote/Downvote Voting System (fused with Fizz's multi-mode feed sorting)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "In the feed, switch the sort to Top and read the first three posts.",
+     "expected_result": "'Library 3rd floor is a zoo during finals' (+38) first, then 'Best cheap eats within walking distance?' (+22, 18 replies), then 'Wi-Fi in North Hall is down AGAIN' (+22, 7 replies) — the Econ post's 30 upvotes only net +8 so it is not in the top three, and the reply-count tiebreak puts cheap eats above Wi-Fi.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "sorting",
+       "tie-breaking",
+       "computed values"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Find the roommate-leftovers post and the Econ midterm post in the feed and check the score each one displays.",
+     "expected_result": "The roommate post (15 up / 15 down) shows 0 with no sign, and the Econ post (30 up / 22 down) shows +8 with the plus sign — not raw upvote counts like 15 or 30.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "computed values",
+       "value formatting"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Switch the feed to Top, then click the upvote arrow on the lost-keychain post once.",
+     "expected_result": "Its score updates immediately from +8 to +9 and the post moves above the Econ midterm post (also previously tied territory at +8) in the Top ordering without a page reload.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "voting",
+       "live re-sorting"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Use the composer to publish a new post reading 'does anyone tutor stats?' with topic help, then switch the feed to Top and scroll to the bottom.",
+     "expected_result": "The new post shows a score of 0 and sits at the very bottom of the Top ordering — below the roommate post, which also scores 0 but wins the reply-count tiebreak (31 replies vs 0).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "posting",
+       "sorting",
+       "tie-breaking"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 1,
+     "task": "Post a new discussion containing the word quantum, then type quantum into the search.",
+     "expected_result": "The just-posted discussion shows up in the search results.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "posting",
+       "search"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Polls! Let people attach a poll while writing a post — a question plus 2 to 4 options, each option capped at 30 characters with a live remaining-character count as you type, no blank options and no duplicates (Pizza and pizza are the same thing) — and keep a live preview of the poll while I'm building it, with publishing blocked until it's valid. On published polls: one vote per person (switching your vote is fine, but you only ever count once), percentage bars to one decimal place like 52.9%, and a running total like '17 votes' — and while we're at it, a pet peeve: '1 vote' not '1 votes', get singular versus plural right on every count across this whole app, now and for everything we add later. Seed one poll on the Wi-Fi post: 'How long has your dorm Wi-Fi been out this week?' with Under an hour at 9 votes, Half a day at 5, and Days at 3.",
+   "source_website": "Yik Yak",
+   "source_feature": "Upvote/Downvote Voting System (extended into attachable per-post opinion polls)",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "In the composer, add a poll with the question 'Best pizza?' and two options: Pomodoro and pomodoro.",
+     "expected_result": "The duplicate options are flagged (case-insensitive match) and publishing stays blocked; after changing the second option to Sal's, publishing becomes available.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "form validation",
+       "live feedback"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open the Wi-Fi in North Hall post and look at its poll before voting.",
+     "expected_result": "'Under an hour' shows 52.9% and the total reads 17 votes.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "computed values",
+       "rounding"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Wi-Fi post's poll, vote for Days, then click a different option once more.",
+     "expected_result": "After the first vote the total reads 18 votes and Days shows 22.2%; the second click never pushes the total past 18 — the voter is only counted once (either the vote switches or the click is ignored).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "vote deduplication",
+       "live updates",
+       "rounding"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Compose a new post reading 'Where to study for finals?' with a poll asking 'Best study spot?' with options Library and Union, publish it, then open the new post from the feed.",
+     "expected_result": "The post appears with its poll attached, the total reads 0 votes, and no percentage is broken or NaN before anyone votes — nothing crashes on the zero-vote case.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "posting",
+       "boundary case",
+       "empty state"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "In the feed, switch the sort to Top and read the first three posts.",
+     "expected_result": "'Library 3rd floor is a zoo during finals' (+38) first, then 'Best cheap eats within walking distance?' (+22, 18 replies), then 'Wi-Fi in North Hall is down AGAIN' (+22, 7 replies) — the Econ post's 30 upvotes only net +8 so it is not in the top three, and the reply-count tiebreak puts cheap eats above Wi-Fi.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "sorting",
+       "tie-breaking",
+       "computed values"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "I want a Trending tab next to the main feed, Yik Yak 'Hot' style. Treat Day 5 as today and only consider posts from Day 3 or later that have a positive net score; rank them by score with the same more-replies-wins tiebreak, cap the list at five, and put rank badges #1 through #5 on the entries. It should react instantly when votes change, and give it a topic dropdown to spotlight one topic at a time — and when I narrow it, renumber the rank badges for what's actually shown, don't keep the old numbers.",
+   "source_website": "Yik Yak",
+   "source_feature": "Hot / Trending Feed",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Trending tab and read the top three entries.",
+     "expected_result": "#1 'Best cheap eats within walking distance?' (+22, 18 replies), #2 'Wi-Fi in North Hall is down AGAIN' (+22, 7 replies), #3 the Econ midterm post (+8) — the library post is absent even at +38 because Day 2 falls outside the Day 3-or-later window.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "windowed ranking",
+       "tie-breaking"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Trending tab, scroll through the whole list.",
+     "expected_result": "Exactly five entries appear, badged #1 through #5; neither the roommate post (Day 1) nor the library post (Day 2) is anywhere in the list.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "windowing",
+       "list cap"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Trending tab, pick campus in the topic dropdown.",
+     "expected_result": "Only the Wi-Fi in North Hall post remains and it is re-badged #1 — it does not keep its old #2 badge, and the library post (also #campus but Day 2) does not sneak in.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "filtering",
+       "rank recomputation"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the main feed, click the upvote arrow on the lost-keychain post once, then open the Trending tab.",
+     "expected_result": "The keychain post now ranks #3 at +9, above the Econ midterm post (+8) — the vote cast in the feed immediately reorders Trending.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "cross-feature consistency",
+       "live re-ranking"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "Open the Wi-Fi in North Hall post and look at its poll before voting.",
+     "expected_result": "'Under an hour' shows 52.9% and the total reads 17 votes.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "computed values",
+       "rounding"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Big one: a Marketplace section, like Fizz has. Selling is a three-step thing — fill the form (title required; price must be a positive number with at most two decimals; pick a category from textbooks, electronics, furniture, tickets, bikes; pick a condition from New, Like New, Good, Fair), then a review screen showing the listing exactly as it will appear, then publish it into the marketplace. Show every price as dollars-and-cents like $45.00, let people filter by category and sort by price low to high, and stock it with these five to start: Calc 2 textbook Stewart 9th ed (textbooks, $45, Good), Mini fridge works great (furniture, $60, Fair), TI-84 Plus calculator (electronics, $70, Like New), Fixie bike needs new tires (bikes, $180, Fair), and 2 tickets to the State rivalry game (tickets, $50, New).",
+   "source_website": "Fizz",
+   "source_feature": "Student Marketplace",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Start a new listing: type the title 'Desk lamp' and the price -5, then try to continue to the review step; then change the price to 15.",
+     "expected_result": "-5 is rejected as an invalid price and the review step will not open; after changing the price to 15 the price error clears.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "form validation",
+       "multi-step gating"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "In the Marketplace, sort by price low to high and read the first two listings.",
+     "expected_result": "Calc 2 textbook at $45.00 first and the State rivalry game tickets at $50.00 second — not the seeded order (which would put the mini fridge second).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "sorting",
+       "value formatting"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Create a listing titled 'Desk lamp' priced 15, category electronics, condition Good; continue to the review screen and publish it.",
+     "expected_result": "The review screen shows the price formatted as $15.00 before publishing, and after publishing the Desk lamp listing appears in the marketplace.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "multi-step workflow",
+       "value formatting"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Find the TI-84 Plus calculator listing in the Marketplace and look at its category badge.",
+     "expected_result": "The category reads #electronics — lowercase with the leading #, matching how topic tags look everywhere else in the app.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "global convention",
+       "labeling"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "Find the roommate-leftovers post and the Econ midterm post in the feed and check the score each one displays.",
+     "expected_result": "The roommate post (15 up / 15 down) shows 0 with no sign, and the Econ post (30 up / 22 down) shows +8 with the plus sign — not raw upvote counts like 15 or 30.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "computed values",
+       "value formatting"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "The feed is getting busy — build me a proper screener panel on it: tick any number of topics (a post counts if it matches ANY ticked topic), a minimum score box I type a number into, and a keyword field — and a post has to clear ALL the active filters at once to stay visible. Keep a live 'N matches' readout that always agrees with what's actually listed, show a friendly message when nothing survives instead of a blank page, and let me save the current combo as a named preset I can reapply with one click after clearing everything.",
+   "source_website": "Yik Yak",
+   "source_feature": "Topic-Based Community Spaces (extended into a multi-criteria screener with saved presets)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "In the screener panel, tick the campus and housing topics and type 1 into the minimum score box.",
+     "expected_result": "Exactly three posts remain — the library post, the Wi-Fi post, and the summer sublet; the roommate #housing post is excluded because its score is 0, below the minimum of 1.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "boolean composition",
+       "threshold filtering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "With campus and housing ticked and 1 in the minimum score box, type north into the keyword field.",
+     "expected_result": "Only the 'Wi-Fi in North Hall is down AGAIN' post remains and the readout says '1 match' — singular, not '1 matches'.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "boolean composition",
+       "pluralization"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Tick only the campus topic, type 'quiet study' as the preset name and save it; then clear everything so no filters are active, and click the saved 'quiet study' preset.",
+     "expected_result": "After clearing, all posts return; clicking the preset re-applies the campus filter so only the library and Wi-Fi posts are listed again.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "saved presets",
+       "state management"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Upvote the roommate-leftovers post once in the feed, then in the screener tick housing and type 1 into the minimum score box.",
+     "expected_result": "Both #housing posts now qualify — the roommate post (now at +1) appears alongside the summer sublet.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "cross-feature consistency",
+       "threshold filtering"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 4,
+     "task": "Open the Trending tab and read the top three entries.",
+     "expected_result": "#1 'Best cheap eats within walking distance?' (+22, 18 replies), #2 'Wi-Fi in North Hall is down AGAIN' (+22, 7 replies), #3 the Econ midterm post (+8) — the library post is absent even at +38 because Day 2 falls outside the Day 3-or-later window.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "windowed ranking",
+       "tie-breaking"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "We need moderation. Put a report option on every post with a reason picker (spam, harassment, cheating, other), and a Moderation Queue page that automatically pulls in any post that reaches 2 or more reports OR whose net score falls to -4 or lower — flagged posts stay visible in the feed until someone acts on them. Each queue entry shows the post, its net score, and its reports with reasons, plus two actions: Restore (clears the reports, everything back to normal) and Remove (the post disappears from the feed and lands in a Removed log). To start us off, seed one more post — 'Selling my old exam answers for Chem 110' (#academics, 2 up / 5 down, Day 5, 0 replies), sitting right at -3 — and put two 'other' reports on the roommate-leftovers post so the queue isn't empty.",
+   "source_website": "Yik Yak",
+   "source_feature": "Upvote/Downvote Voting System (its auto-removal community-moderation mechanism, extended into a review queue)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Moderation Queue and note what's in it; then go to the feed, downvote the 'Selling my old exam answers for Chem 110' post once, and check the queue again.",
+     "expected_result": "At first the queue holds only the roommate-leftovers post with 2 reports; the single downvote takes the chem post from -3 to -4, and it then appears in the queue as well.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "threshold boundary",
+       "auto-flagging"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Report the summer sublet post, picking spam as the reason, then open the Moderation Queue.",
+     "expected_result": "The sublet post is not in the queue — one report is not enough, since flagging requires 2+ reports or a score of -4 or lower.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "boolean composition",
+       "thresholds"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the Moderation Queue, open the roommate-leftovers entry and click Remove.",
+     "expected_result": "Before acting, the entry shows the post with its 2 'other' reports and its net score; after Remove, the post is gone from the feed and appears in the Removed log.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "review workflow",
+       "state transitions"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Upvote the roommate-leftovers post once in the feed, then open its entry in the Moderation Queue.",
+     "expected_result": "The queue entry shows the score as +1 — with the plus sign, exactly matching the score shown in the feed.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "global convention",
+       "cross-surface consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 5,
+     "task": "Find the TI-84 Plus calculator listing in the Marketplace and look at its category badge.",
+     "expected_result": "The category reads #electronics — lowercase with the leading #, matching how topic tags look everywhere else in the app.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "global convention",
+       "labeling"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Let's do Yik Yak-style thread identities: inside any thread, every distinct participant gets their own emoji persona that stays identical across all their replies in that thread, and whoever started the thread always wears a 🎓 badge on their post and replies there. Replies get a 280-character limit with a live countdown, plus a live preview above the reply box showing exactly how the reply will land — persona and all — updating as I type; and add a 'sign this one' toggle with a nickname field (nickname required whenever the toggle is on) for anyone who wants credit, Fizz-style. Fill in the four replies on the lost-keychain thread: 'Was it near the salad bar entrance?' and 'Never mind — just spotted a blue keychain at the front desk!' are the first and third replies and come from the same person; 'Check the front desk lost and found' (second) and 'Good luck, those things vanish' (fourth) are two other people.",
+   "source_website": "Yik Yak",
+   "source_feature": "Anonymous Emoji Identity per Thread (fused with Fizz's Optional Identity Reveal)",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Open the lost-keychain thread and compare the emoji badges on the four replies.",
+     "expected_result": "The first reply ('Was it near the salad bar entrance?') and the third ('Never mind — just spotted a blue keychain at the front desk!') share one identical emoji; the second and fourth replies each carry a different emoji from that one and from each other.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "identity consistency",
+       "deduplication"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "In the lost-keychain thread, click into the reply box and type hey.",
+     "expected_result": "The live countdown reads 277 (280 minus 3) and the preview above the box already shows 'hey' with an emoji persona attached.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "live preview",
+       "computed values"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type a reply reading 'found it thanks' in the lost-keychain thread, switch the 'sign this one' toggle on while leaving the nickname empty, then try to post; then type dave as the nickname and post.",
+     "expected_result": "Posting is blocked while the toggle is on with an empty nickname; once dave is entered the reply posts and the nickname dave is visible on the posted reply.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "form validation",
+       "conditional requirements"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Use the composer to publish a new post reading 'testing personas' with topic help, then open that post's thread.",
+     "expected_result": "In the thread view, the post you started carries the 🎓 badge as its author marker.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "posting",
+       "identity assignment"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 6,
+     "task": "In the screener panel, tick the campus and housing topics and type 1 into the minimum score box.",
+     "expected_result": "Exactly three posts remain — the library post, the Wi-Fi post, and the summer sublet; the roommate #housing post is excluded because its score is 0, below the minimum of 1.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "boolean composition",
+       "threshold filtering"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Now a Campus Digest builder, three steps: pick sections with checkboxes — 'Trending now' pulls the current top three from the Trending tab with their scores and topic tags, 'Marketplace picks' pulls the three cheapest listings with their prices, cheapest first — give the edition a typed title, preview the assembled digest as a formatted text block right on screen that I can copy, then publish it to a Digest Board page that lists every published edition. Published digests are frozen: reopening one shows exactly what things looked like at publish time, even if votes have moved since. And publish the first edition for me yourself, titled 'Week 1 Digest', with both sections included, so the board isn't empty.",
+   "source_website": "Yik Yak",
+   "source_feature": "Hot / Trending Feed (extended into a publishable campus digest that also aggregates the marketplace)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the digest builder, tick only 'Trending now', type 'test run' as the title, and go to the preview.",
+     "expected_result": "The trending section lists exactly: 'Best cheap eats within walking distance?' at +22, 'Wi-Fi in North Hall is down AGAIN' at +22, then the Econ midterm post at +8, in that order — the library post is not pulled in despite +38.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "aggregation",
+       "ranking"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open the Digest Board, open 'Week 1 Digest', and read its marketplace picks section.",
+     "expected_result": "Calc 2 textbook $45.00, State rivalry game tickets $50.00, Mini fridge $60.00 — the three cheapest in ascending price order, not the first three seeded and not the TI-84 or the bike.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "aggregation",
+       "sorting"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the feed, upvote the Econ midterm post once, then open 'Week 1 Digest' from the Digest Board.",
+     "expected_result": "The published digest still shows the Econ post at +8 — frozen at publish time — even though the feed now shows +9.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "snapshot semantics",
+       "state isolation"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Downvote the Wi-Fi post once in the feed, then open the digest builder, tick 'Trending now', type 'after votes' as the title, and preview.",
+     "expected_result": "The freshly built preview shows the Wi-Fi post at +21 — the builder pulls live from Trending, unlike published editions.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "cross-feature consistency",
+       "live aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 7,
+     "task": "Open the Moderation Queue and note what's in it; then go to the feed, downvote the 'Selling my old exam answers for Chem 110' post once, and check the queue again.",
+     "expected_result": "At first the queue holds only the roommate-leftovers post with 2 reports; the single downvote takes the chem post from -3 to -4, and it then appears in the queue as well.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "threshold boundary",
+       "auto-flagging"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "design-restyle",
+   "instruction": "Time for a visual pass so this feels like one product — apply all of this consistently on the main feed, the Trending tab, the Marketplace, and the Moderation Queue, no page skipped: page headings centered and in all caps; every primary action button (posting, publishing, restore/remove, saving) becomes a dark olive green pill with white text; every post, listing, and queue card gets softly rounded corners with a 4px dark olive accent stripe down its left edge; topic and category tags become pill badges with a dark olive green background and honeydew text; and net scores render bold — green when positive, red when negative, gray at zero.",
+   "source_website": "Fizz",
+   "source_feature": "Verified campus badge next to posts (badge/pill visual language extended into an app-wide design system)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the main feed, look at the Wi-Fi in North Hall post's card.",
+     "expected_result": "Its score +22 is bold and green, its tag is a pill reading #campus with a dark olive background and honeydew text, and the card has the dark olive accent stripe along its left edge.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "badge styling",
+       "color coding",
+       "card styling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the Marketplace and start a new listing to reach its form.",
+     "expected_result": "The Marketplace page heading is centered and all-caps, and the primary continue/publish buttons in the sell flow are dark olive green pills with white text.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "typography",
+       "button styling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the Moderation Queue and look at the page heading and the roommate-leftovers entry.",
+     "expected_result": "The heading is centered and all-caps, the entry's card carries the left accent stripe, and its score 0 renders bold gray — not green or red.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "typography",
+       "color coding",
+       "card styling"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Open the Trending tab and look at its heading and its entries.",
+     "expected_result": "The heading is centered and all-caps, each entry's positive score is bold green, and topic tags appear as dark olive pills with honeydew text — the same treatment as the main feed.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "cross-page consistency",
+       "color coding"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "In the feed, switch the sort to Top and read the first three posts.",
+     "expected_result": "'Library 3rd floor is a zoo during finals' (+38) first, then 'Best cheap eats within walking distance?' (+22, 18 replies), then 'Wi-Fi in North Hall is down AGAIN' (+22, 7 replies) — the Econ post's 30 upvotes only net +8 so it is not in the top three, and the reply-count tiebreak puts cheap eats above Wi-Fi.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "sorting",
+       "tie-breaking",
+       "computed values"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "target_app_summary": "The anonymous campus forum grows into a full campus community platform. Discovery gets serious: an up/down voting system with net scores and tie-aware Top/New sorting feeds a windowed Trending tab, a multi-criteria screener with saved presets, and a publishable Campus Digest that snapshots trending posts and marketplace deals into frozen editions. Community tooling arrives via attachable opinion polls with live one-decimal percentage bars, per-thread emoji personas with an optional identity-reveal signature, and a report-driven Moderation Queue whose auto-flagging fires off vote-score thresholds. A three-step Marketplace adds practical campus utility with validated listings, category badges and price sorting. A final design pass unifies feed, Trending, Marketplace and Moderation Queue under one pill-badge, accent-stripe, signed-score visual language. The graph runs deep: voting (T2) powers Trending (T4), the screener (T6) and moderation auto-flagging (T7), while the Digest (T9) aggregates Trending and Marketplace output — a 3-deep chain T1-T2-T4-T9.",
+ "dependency_graph": {
+  "nodes": [
+   {
+    "id": "T1",
+    "label": "base app",
+    "archetype": "base"
+   },
+   {
+    "id": "T2",
+    "label": "voting & Top/New sort",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T3",
+    "label": "opinion polls",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T4",
+    "label": "Trending tab",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T5",
+    "label": "Marketplace",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T6",
+    "label": "feed screener & presets",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T7",
+    "label": "Moderation Queue",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T8",
+    "label": "thread emoji personas",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T9",
+    "label": "Campus Digest builder",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T10",
+    "label": "unified visual restyle",
+    "archetype": "design-restyle"
+   }
+  ],
+  "edges": [
+   {
+    "from": "T1",
+    "to": "T2",
+    "what": "up/down votes and sort modes attach to the base feed's posts"
+   },
+   {
+    "from": "T1",
+    "to": "T3",
+    "what": "polls ride on the base composer and published posts"
+   },
+   {
+    "from": "T2",
+    "to": "T4",
+    "what": "trending ranks by the voting system's net scores"
+   },
+   {
+    "from": "T1",
+    "to": "T6",
+    "what": "screener filters the base feed's post list and keyword search"
+   },
+   {
+    "from": "T2",
+    "to": "T6",
+    "what": "minimum-score filter reads net vote scores"
+   },
+   {
+    "from": "T1",
+    "to": "T7",
+    "what": "reports are filed on base feed posts"
+   },
+   {
+    "from": "T2",
+    "to": "T7",
+    "what": "auto-flagging fires when net score hits the threshold"
+   },
+   {
+    "from": "T1",
+    "to": "T8",
+    "what": "personas attach to base threads and replies"
+   },
+   {
+    "from": "T4",
+    "to": "T9",
+    "what": "digest embeds the current trending top-3 with scores"
+   },
+   {
+    "from": "T5",
+    "to": "T9",
+    "what": "digest pulls the three cheapest marketplace listings"
+   },
+   {
+    "from": "T1",
+    "to": "T10",
+    "what": "restyles the main feed's cards, tags and buttons"
+   },
+   {
+    "from": "T2",
+    "to": "T10",
+    "what": "restyles the voting system's net scores (bold, green/red/gray by sign)"
+   },
+   {
+    "from": "T4",
+    "to": "T10",
+    "what": "restyles the Trending tab"
+   },
+   {
+    "from": "T5",
+    "to": "T10",
+    "what": "restyles the Marketplace"
+   },
+   {
+    "from": "T6",
+    "to": "T10",
+    "what": "the screener's preset-save button gets the primary-action pill styling"
+   },
+   {
+    "from": "T7",
+    "to": "T10",
+    "what": "restyles the Moderation Queue"
+   }
+  ]
+ },
+ "global_rules": [
+  {
+   "rule": "Net vote scores are always displayed with an explicit + sign when positive (e.g. +22), a plain 0 at zero, and a minus when negative — on every surface, including features added later.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Every topic or category label anywhere in the app is rendered lowercase with a leading # (e.g. #housing, #electronics) — app-wide, now and for anything added later.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Every count in the app is correctly pluralized ('1 vote' / '2 votes', '1 match', '1 report') — never '1 votes' — everywhere, forever.",
+   "introduced_in_turn": 3
+  }
+ ],
+ "pinned_seed": {
+  "entity": "7 forum posts (title, #topic, up/down votes, Day label, reply count)",
+  "introduced_in_turn": 2,
+  "records_gist": "Library zoo #campus 41/3 Day2 12r; Econ midterm #academics 30/22 Day4 25r; Lost keychain #help 9/1 Day5 4r; Cheap eats #food 24/2 Day5 18r; Roommate leftovers #housing 15/15 Day1 31r; Summer sublet #housing 6/2 Day3 2r; Wi-Fi North Hall #campus 24/2 Day5 7r"
+ }
+}

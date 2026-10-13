@@ -1,0 +1,1063 @@
+{
+ "anchors": [
+  {
+   "en": "Home",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    9,
+    10
+   ],
+   "translations": {
+    "es": "Inicio",
+    "zh": "首页",
+    "he": "דף הבית",
+    "hi": "होम",
+    "sw": "Mwanzo",
+    "de": "Startseite",
+    "fr": "Accueil"
+   }
+  },
+  {
+   "en": "About Us",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    1,
+    2
+   ],
+   "translations": {
+    "es": "Sobre Nosotros",
+    "zh": "关于我们",
+    "he": "עלינו",
+    "hi": "हमारे बारे में",
+    "sw": "Kutuhusu",
+    "de": "Über uns",
+    "fr": "À propos"
+   }
+  },
+  {
+   "en": "Services",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    1,
+    2,
+    6
+   ],
+   "translations": {
+    "es": "Servicios",
+    "zh": "服务项目",
+    "he": "שירותים",
+    "hi": "सेवाएँ",
+    "sw": "Huduma",
+    "de": "Leistungen",
+    "fr": "Services"
+   }
+  },
+  {
+   "en": "Contact Us",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    1,
+    2,
+    10
+   ],
+   "translations": {
+    "es": "Contáctanos",
+    "zh": "联系我们",
+    "he": "צור קשר",
+    "hi": "संपर्क करें",
+    "sw": "Wasiliana Nasi",
+    "de": "Kontakt",
+    "fr": "Contactez-nous"
+   }
+  },
+  {
+   "en": "Meet Our Team",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    9,
+    10
+   ],
+   "translations": {
+    "es": "Conoce a Nuestro Equipo",
+    "zh": "认识我们的团队",
+    "he": "הכירו את הצוות שלנו",
+    "hi": "हमारी टीम से मिलें",
+    "sw": "Kutana na Timu Yetu",
+    "de": "Unser Team",
+    "fr": "Notre équipe"
+   }
+  },
+  {
+   "en": "Cost Estimator",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    4,
+    9
+   ],
+   "translations": {
+    "es": "Estimador de Costos",
+    "zh": "费用估算器",
+    "he": "מחשבון עלויות",
+    "hi": "लागत अनुमानक",
+    "sw": "Kikadiriaji cha Gharama",
+    "de": "Kostenrechner",
+    "fr": "Estimateur de coûts"
+   }
+  },
+  {
+   "en": "Plan Your Visit",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4,
+    6,
+    9,
+    10
+   ],
+   "translations": {
+    "es": "Planifica tu Visita",
+    "zh": "规划您的就诊",
+    "he": "תכננו את הביקור",
+    "hi": "अपनी विज़िट की योजना बनाएँ",
+    "sw": "Panga Ziara Yako",
+    "de": "Besuch planen",
+    "fr": "Préparer votre visite"
+   }
+  },
+  {
+   "en": "Request an Appointment",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5,
+    7,
+    9
+   ],
+   "translations": {
+    "es": "Solicitar una Cita",
+    "zh": "预约申请",
+    "he": "בקשת תור",
+    "hi": "अपॉइंटमेंट का अनुरोध करें",
+    "sw": "Omba Miadi",
+    "de": "Termin anfragen",
+    "fr": "Demander un rendez-vous"
+   }
+  },
+  {
+   "en": "My Requests",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5,
+    7,
+    9,
+    10
+   ],
+   "translations": {
+    "es": "Mis Solicitudes",
+    "zh": "我的申请",
+    "he": "הבקשות שלי",
+    "hi": "मेरे अनुरोध",
+    "sw": "Maombi Yangu",
+    "de": "Meine Anfragen",
+    "fr": "Mes demandes"
+   }
+  },
+  {
+   "en": "Requests Board",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    7,
+    10
+   ],
+   "translations": {
+    "es": "Panel de Solicitudes",
+    "zh": "申请看板",
+    "he": "לוח הבקשות",
+    "hi": "अनुरोध बोर्ड",
+    "sw": "Ubao wa Maombi",
+    "de": "Anfragen-Board",
+    "fr": "Tableau des demandes"
+   }
+  },
+  {
+   "en": "Notices",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "Avisos",
+    "zh": "通知",
+    "he": "הודעות",
+    "hi": "सूचनाएँ",
+    "sw": "Matangazo",
+    "de": "Mitteilungen",
+    "fr": "Avis"
+   }
+  },
+  {
+   "en": "Pediatrics",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    6,
+    8
+   ],
+   "translations": {
+    "es": "Pediatría",
+    "zh": "儿科",
+    "he": "פדיאטריה",
+    "hi": "बाल रोग",
+    "sw": "Afya ya Watoto",
+    "de": "Kinderheilkunde",
+    "fr": "Pédiatrie"
+   }
+  },
+  {
+   "en": "Family Medicine",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    5
+   ],
+   "translations": {
+    "es": "Medicina Familiar",
+    "zh": "家庭医学",
+    "he": "רפואת משפחה",
+    "hi": "फैमिली मेडिसिन",
+    "sw": "Tiba ya Familia",
+    "de": "Familienmedizin",
+    "fr": "Médecine familiale"
+   }
+  },
+  {
+   "en": "Internal Medicine",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    9
+   ],
+   "translations": {
+    "es": "Medicina Interna",
+    "zh": "内科医学",
+    "he": "רפואה פנימית",
+    "hi": "इंटरनल मेडिसिन",
+    "sw": "Tiba ya Ndani",
+    "de": "Innere Medizin",
+    "fr": "Médecine interne"
+   }
+  },
+  {
+   "en": "Sports Medicine",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    6
+   ],
+   "translations": {
+    "es": "Medicina Deportiva",
+    "zh": "运动医学",
+    "he": "רפואת ספורט",
+    "hi": "स्पोर्ट्स मेडिसिन",
+    "sw": "Tiba ya Michezo",
+    "de": "Sportmedizin",
+    "fr": "Médecine du sport"
+   }
+  },
+  {
+   "en": "Dermatology",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3
+   ],
+   "translations": {
+    "es": "Dermatología",
+    "zh": "皮肤科",
+    "he": "דרמטולוגיה",
+    "hi": "त्वचा रोग",
+    "sw": "Magonjwa ya Ngozi",
+    "de": "Dermatologie",
+    "fr": "Dermatologie"
+   }
+  },
+  {
+   "en": "medicine",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    6,
+    8
+   ],
+   "translations": {
+    "es": "medicina",
+    "zh": "医学",
+    "he": "רפוא",
+    "hi": "मेडिसिन",
+    "sw": "tiba",
+    "de": "medizin",
+    "fr": "médecine"
+   }
+  },
+  {
+   "en": "Accepting",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2
+   ],
+   "translations": {
+    "es": "Acepta Pacientes",
+    "zh": "接受新患者",
+    "he": "מקבל מטופלים",
+    "hi": "नए मरीज़ ले रहे हैं",
+    "sw": "Anapokea Wagonjwa",
+    "de": "Nimmt neue Patienten auf",
+    "fr": "Accepte de nouveaux patients"
+   }
+  },
+  {
+   "en": "waitlist",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    5,
+    7
+   ],
+   "translations": {
+    "es": "lista de espera",
+    "zh": "候补名单",
+    "he": "רשימת המתנה",
+    "hi": "प्रतीक्षा सूची",
+    "sw": "orodha ya kusubiri",
+    "de": "Warteliste",
+    "fr": "liste d'attente"
+   }
+  },
+  {
+   "en": "Pending",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5,
+    7,
+    9
+   ],
+   "translations": {
+    "es": "Pendiente",
+    "zh": "待处理",
+    "he": "ממתין",
+    "hi": "लंबित",
+    "sw": "Inasubiri",
+    "de": "Ausstehend",
+    "fr": "En attente"
+   }
+  },
+  {
+   "en": "Confirmed",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5,
+    7,
+    9,
+    10
+   ],
+   "translations": {
+    "es": "Confirmada",
+    "zh": "已确认",
+    "he": "אושר",
+    "hi": "पुष्ट",
+    "sw": "Imethibitishwa",
+    "de": "Bestätigt",
+    "fr": "Confirmée"
+   }
+  },
+  {
+   "en": "Declined",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5,
+    7,
+    9
+   ],
+   "translations": {
+    "es": "Rechazada",
+    "zh": "已拒绝",
+    "he": "נדחה",
+    "hi": "अस्वीकृत",
+    "sw": "Imekataliwa",
+    "de": "Abgelehnt",
+    "fr": "Refusée"
+   }
+  },
+  {
+   "en": "Confirm",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    7,
+    10
+   ],
+   "translations": {
+    "es": "Confirmar",
+    "zh": "确认",
+    "he": "אישור",
+    "hi": "पुष्टि करें",
+    "sw": "Thibitisha",
+    "de": "Bestätigen",
+    "fr": "Confirmer"
+   }
+  },
+  {
+   "en": "Decline",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    7
+   ],
+   "translations": {
+    "es": "Rechazar",
+    "zh": "拒绝",
+    "he": "דחייה",
+    "hi": "अस्वीकार करें",
+    "sw": "Kataa",
+    "de": "Ablehnen",
+    "fr": "Refuser"
+   }
+  },
+  {
+   "en": "self-pay",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    4,
+    5
+   ],
+   "translations": {
+    "es": "pago particular",
+    "zh": "自费",
+    "he": "תשלום עצמי",
+    "hi": "स्व-भुगतान",
+    "sw": "malipo binafsi",
+    "de": "Selbstzahler",
+    "fr": "paiement direct"
+   }
+  },
+  {
+   "en": "flu shot",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3
+   ],
+   "translations": {
+    "es": "vacuna contra la gripe",
+    "zh": "流感疫苗",
+    "he": "חיסון שפעת",
+    "hi": "फ्लू शॉट",
+    "sw": "chanjo ya homa",
+    "de": "Grippeimpfung",
+    "fr": "vaccin contre la grippe"
+   }
+  },
+  {
+   "en": "basic blood panel",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3
+   ],
+   "translations": {
+    "es": "análisis de sangre básico",
+    "zh": "基础血液检查",
+    "he": "בדיקת דם בסיסית",
+    "hi": "बेसिक ब्लड पैनल",
+    "sw": "kipimo cha msingi cha damu",
+    "de": "einfaches Blutbild",
+    "fr": "bilan sanguin de base"
+   }
+  },
+  {
+   "en": "sports physical form",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3
+   ],
+   "translations": {
+    "es": "formulario de aptitud deportiva",
+    "zh": "运动体检表",
+    "he": "טופס בדיקה ספורטיבית",
+    "hi": "स्पोर्ट्स फिजिकल फॉर्म",
+    "sw": "fomu ya uchunguzi wa michezo",
+    "de": "Sporttauglichkeitsformular",
+    "fr": "formulaire d'aptitude sportive"
+   }
+  },
+  {
+   "en": "Monday",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4,
+    5,
+    6,
+    10
+   ],
+   "translations": {
+    "es": "lunes",
+    "zh": "周一",
+    "he": "יום שני",
+    "hi": "सोमवार",
+    "sw": "Jumatatu",
+    "de": "Montag",
+    "fr": "lundi"
+   }
+  },
+  {
+   "en": "Tuesday",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    4,
+    6,
+    10
+   ],
+   "translations": {
+    "es": "martes",
+    "zh": "周二",
+    "he": "יום שלישי",
+    "hi": "मंगलवार",
+    "sw": "Jumanne",
+    "de": "Dienstag",
+    "fr": "mardi"
+   }
+  },
+  {
+   "en": "Wednesday",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4,
+    5,
+    6
+   ],
+   "translations": {
+    "es": "miércoles",
+    "zh": "周三",
+    "he": "יום רביעי",
+    "hi": "बुधवार",
+    "sw": "Jumatano",
+    "de": "Mittwoch",
+    "fr": "mercredi"
+   }
+  },
+  {
+   "en": "Thursday",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4,
+    5,
+    6
+   ],
+   "translations": {
+    "es": "jueves",
+    "zh": "周四",
+    "he": "יום חמישי",
+    "hi": "गुरुवार",
+    "sw": "Alhamisi",
+    "de": "Donnerstag",
+    "fr": "jeudi"
+   }
+  },
+  {
+   "en": "Friday",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4,
+    5,
+    6,
+    10
+   ],
+   "translations": {
+    "es": "viernes",
+    "zh": "周五",
+    "he": "יום שישי",
+    "hi": "शुक्रवार",
+    "sw": "Ijumaa",
+    "de": "Freitag",
+    "fr": "vendredi"
+   }
+  },
+  {
+   "en": "Saturday",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4,
+    6,
+    9,
+    10
+   ],
+   "translations": {
+    "es": "sábado",
+    "zh": "周六",
+    "he": "יום שבת",
+    "hi": "शनिवार",
+    "sw": "Jumamosi",
+    "de": "Samstag",
+    "fr": "samedi"
+   }
+  },
+  {
+   "en": "Sunday",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4,
+    9
+   ],
+   "translations": {
+    "es": "domingo",
+    "zh": "周日",
+    "he": "יום ראשון",
+    "hi": "रविवार",
+    "sw": "Jumapili",
+    "de": "Sonntag",
+    "fr": "dimanche"
+   }
+  },
+  {
+   "en": "Flu Shot Clinic Saturdays",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "Clínica de Vacunación contra la Gripe los Sábados",
+    "zh": "周六流感疫苗门诊",
+    "he": "מרפאת חיסוני שפעת בימי שבת",
+    "hi": "शनिवार को फ्लू शॉट क्लिनिक",
+    "sw": "Kliniki ya Chanjo ya Homa Jumamosi",
+    "de": "Grippeimpfung-Sprechstunde an Samstagen",
+    "fr": "Clinique de vaccin contre la grippe le samedi"
+   }
+  },
+  {
+   "en": "Holiday Closure July 3",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "Cierre por Festivo el 3 de julio",
+    "zh": "7月3日节日停诊",
+    "he": "סגירה לרגל החג ב-3 ביולי",
+    "hi": "3 जुलाई अवकाश बंदी",
+    "sw": "Kufungwa kwa Sikukuu Julai 3",
+    "de": "Feiertagsschließung am 3. Juli",
+    "fr": "Fermeture pour le 3 juillet"
+   }
+  },
+  {
+   "en": "Measles Advisory",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "Alerta de Sarampión",
+    "zh": "麻疹健康提示",
+    "he": "התרעת חצבת",
+    "hi": "खसरा परामर्श",
+    "sw": "Tahadhari ya Surua",
+    "de": "Masern-Warnung",
+    "fr": "Avis de rougeole"
+   }
+  },
+  {
+   "en": "New Provider Welcome",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "Bienvenida a Nueva Doctora",
+    "zh": "新医生欢迎",
+    "he": "ברוכה הבאה לרופאה החדשה",
+    "hi": "नई डॉक्टर का स्वागत",
+    "sw": "Karibu Daktari Mpya",
+    "de": "Willkommen der neuen Ärztin",
+    "fr": "Bienvenue à notre nouvelle médecin"
+   }
+  },
+  {
+   "en": "Parking Lot Repaving",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "Repavimentación del Estacionamiento",
+    "zh": "停车场重铺路面",
+    "he": "ריבוד מחדש של החניה",
+    "hi": "पार्किंग लॉट की रीपेविंग",
+    "sw": "Kuwekwa Lami Upya kwa Maegesho",
+    "de": "Neuasphaltierung des Parkplatzes",
+    "fr": "Réfection du parking"
+   }
+  },
+  {
+   "en": "Closure",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "Cierre",
+    "zh": "停诊",
+    "he": "סגירה",
+    "hi": "बंदी",
+    "sw": "Kufungwa",
+    "de": "Schließung",
+    "fr": "Fermeture"
+   }
+  },
+  {
+   "en": "Health Alert",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "Alerta de Salud",
+    "zh": "健康警报",
+    "he": "התרעת בריאות",
+    "hi": "स्वास्थ्य चेतावनी",
+    "sw": "Tahadhari ya Afya",
+    "de": "Gesundheitswarnung",
+    "fr": "Alerte santé"
+   }
+  },
+  {
+   "en": "General",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "General",
+    "zh": "一般",
+    "he": "כללי",
+    "hi": "सामान्य",
+    "sw": "Kawaida",
+    "de": "Allgemein",
+    "fr": "Général"
+   }
+  },
+  {
+   "en": "June",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "junio",
+    "zh": "6月",
+    "he": "יוני",
+    "hi": "जून",
+    "sw": "Juni",
+    "de": "Juni",
+    "fr": "juin"
+   }
+  },
+  {
+   "en": "July",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "julio",
+    "zh": "7月",
+    "he": "יולי",
+    "hi": "जुलाई",
+    "sw": "Julai",
+    "de": "Juli",
+    "fr": "juillet"
+   }
+  },
+  {
+   "en": "Dr.",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  {
+   "en": "Chen",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "en": "Reyes",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  {
+   "en": "Hardin",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ]
+  },
+  {
+   "en": "Webb",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  {
+   "en": "Natarajan",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  {
+   "en": "Vasquez",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    10
+   ]
+  },
+  {
+   "en": "Okafor",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    5,
+    7,
+    10
+   ]
+  },
+  {
+   "en": "Lucy",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2
+   ]
+  },
+  {
+   "en": "Samuel",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2
+   ]
+  },
+  {
+   "en": "Tom",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2
+   ]
+  },
+  {
+   "en": "Marcus",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2
+   ]
+  },
+  {
+   "en": "Priya",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2
+   ]
+  },
+  {
+   "en": "Elena",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2
+   ]
+  },
+  {
+   "en": "Amara",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2
+   ]
+  },
+  {
+   "en": "light cyan",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    1,
+    9
+   ]
+  },
+  {
+   "en": "cadet blue",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    1
+   ]
+  },
+  {
+   "en": "AM",
+   "class": "keep",
+   "kind": "value_format",
+   "turns": [
+    4,
+    8
+   ]
+  },
+  {
+   "en": "PM",
+   "class": "keep",
+   "kind": "value_format",
+   "turns": [
+    4,
+    8
+   ]
+  },
+  {
+   "en": "(555) 210-4477",
+   "class": "keep",
+   "kind": "value_format",
+   "turns": [
+    4
+   ]
+  },
+  {
+   "en": "English",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    10
+   ]
+  },
+  {
+   "en": "Español",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    10
+   ]
+  }
+ ]
+}

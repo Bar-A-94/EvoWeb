@@ -1,0 +1,640 @@
+{
+  "index": 4,
+  "status": "success",
+  "model": "anthropic/claude-haiku-4-5-20251001",
+  "generator": "openhands",
+  "base_trajectory": {
+    "source": "none",
+    "messages": 0
+  },
+  "artifacts": {
+    "zip": null,
+    "run_json": null,
+    "generator": "openhands",
+    "screenshots": [
+      "/output/000004/screenshots/task000004_0.png",
+      "/output/000004/screenshots/task000004_1.png",
+      "/output/000004/screenshots/task000004_2.png",
+      "/output/000004/screenshots/task000004_3.png",
+      "/output/000004/screenshots/task000004_4.png",
+      "/output/000004/screenshots/task000004_5.png",
+      "/output/000004/screenshots/task000004_6.png",
+      "/output/000004/screenshots/task000004_7.png",
+      "/output/000004/screenshots/task000004_8.png"
+    ],
+    "output_dir": "/output/000004"
+  },
+  "ladder": {
+    "turns_expected": 10,
+    "turns_completed": 10,
+    "complete": true
+  },
+  "eval_model": "claude-sonnet-4-6",
+  "accuracy": 63.9,
+  "yes": 28,
+  "partial": 13,
+  "no": 13,
+  "total": 54,
+  "tasks": [
+    {
+      "task_idx": 0,
+      "task": "Navigate to the \"Choose Race\" page and select each race (Humans, Dragonborns, Elves, Dwarfs) one by one and back to the homepage after selecting for another select.",
+      "expected": "Each click on a race should display specific attributes unique to that race, and the selection should be confirmed on the page.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 1,
+      "task": "On the base page, attempt to allocate resources (gold, iron, wood, wheat) to upgrade the city.",
+      "expected": "The resources should be deducted from the total, and an upgrade confirmation message should appear with visible changes to the city level or attributes.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 2,
+      "task": "Visit the \"Ranking Page\" and verify the rank listing of players.",
+      "expected": "The page should display a sorted list of players by rank, with accurate and clear presentation relevant to their performance metrics.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 3,
+      "task": "Go to the \"Store\" and purchase an item using available resources.",
+      "expected": "The selected item should be removed from the store and added to your inventory, with the appropriate deduction in resources.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 4,
+      "task": "Access the \"Train Page\" and begin training workers or soldiers.",
+      "expected": "Training should commence with a status update visible, and there should be an indication of resource consumption related to this activity.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 5,
+      "task": "Navigate to the \"Workers Page\" and assign a task to workers.",
+      "expected": "The task should be acknowledged by the system with relevant feedback on expected completion, and any resource costs should be visibly deducted.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 6,
+      "task": "Visit the \"Upgrades Page\" and attempt to upgrade a soldier.",
+      "expected": "The upgrade should succeed, show updated soldier stats, and the necessary resources should be spent.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 7,
+      "task": "Access the \"Bank Page\" and deposit gold.",
+      "expected": "The deposited gold should reflect in the bank balance, deducting from available on-hand funds with confirmation of the transaction.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 8,
+      "task": "Verify that the website uses 'seashell' as the background color and 'crimson' as the component color, as specified in the design requirements.",
+      "expected": "The website has a background color of 'seashell' and components (such as buttons, cards, headers, etc.) are styled with the color 'crimson', accurately reflecting the design instruction.",
+      "verdict": "yes"
+    }
+  ],
+  "turns": [
+    {
+      "turn": 1,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": false,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Navigate to the \"Choose Race\" page and select each race (Humans, Dragonborns, Elves, Dwarfs) one by one and back to the homepage after selecting for another select.",
+          "expected": "Each click on a race should display specific attributes unique to that race, and the selection should be confirmed on the page.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the base page, attempt to allocate resources (gold, iron, wood, wheat) to upgrade the city.",
+          "expected": "The resources should be deducted from the total, and an upgrade confirmation message should appear with visible changes to the city level or attributes.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 2,
+          "task": "Visit the \"Ranking Page\" and verify the rank listing of players.",
+          "expected": "The page should display a sorted list of players by rank, with accurate and clear presentation relevant to their performance metrics.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Go to the \"Store\" and purchase an item using available resources.",
+          "expected": "The selected item should be removed from the store and added to your inventory, with the appropriate deduction in resources.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "Access the \"Train Page\" and begin training workers or soldiers.",
+          "expected": "Training should commence with a status update visible, and there should be an indication of resource consumption related to this activity.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 5,
+          "task": "Navigate to the \"Workers Page\" and assign a task to workers.",
+          "expected": "The task should be acknowledged by the system with relevant feedback on expected completion, and any resource costs should be visibly deducted.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 6,
+          "task": "Visit the \"Upgrades Page\" and attempt to upgrade a soldier.",
+          "expected": "The upgrade should succeed, show updated soldier stats, and the necessary resources should be spent.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 7,
+          "task": "Access the \"Bank Page\" and deposit gold.",
+          "expected": "The deposited gold should reflect in the bank balance, deducting from available on-hand funds with confirmation of the transaction.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 8,
+          "task": "Verify that the website uses 'seashell' as the background color and 'crimson' as the component color, as specified in the design requirements.",
+          "expected": "The website has a background color of 'seashell' and components (such as buttons, cards, headers, etc.) are styled with the color 'crimson', accurately reflecting the design instruction.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 4,
+      "no": 0,
+      "total": 9,
+      "accuracy": 77.8,
+      "cost": {
+        "generation_usd": 0.312105,
+        "model_calls": 17,
+        "input_tokens_total": 710529,
+        "output_tokens": 32421,
+        "judge_usd": 0.749
+      }
+    },
+    {
+      "turn": 2,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Go to the bank page, choose the iron-to-gold exchange, and type 100 into the amount field.",
+          "expected": "The live preview shows exactly 30 gold to be received (the 10% merchant cut is applied before rounding down), not 29 or 33.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the bank page's merchant exchange, type 2000 into the iron-to-gold amount field.",
+          "expected": "The exchange refuses the amount because only 1,800 iron is held: an error indication appears and no gold conversion is offered.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the wood-to-gold exchange, type 30 into the amount field, then add a 0 to make it 300.",
+          "expected": "The preview updates while typing without any submit action: it reads 6 gold at 30 wood, then 67 gold at 300 wood (cut applied before rounding down each time).",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Convert 100 iron to gold on the bank page and complete the action.",
+          "expected": "Before anything changes, a confirmation showing the exact numbers (100 iron for 30 gold) appears and requires approval; after confirming, the stockpile reads 2,530 gold and 1,700 iron.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Go to the race selection and choose Dwarfs.",
+          "expected": "Dwarfs is shown as the selected race and its unique attributes are displayed.",
+          "verdict": "partial"
+        }
+      ],
+      "yes": 3,
+      "partial": 2,
+      "no": 0,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.361812,
+        "model_calls": 15,
+        "input_tokens_total": 1362119,
+        "output_tokens": 20744,
+        "judge_usd": 0.3186
+      }
+    },
+    {
+      "turn": 3,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the reports page and read the chronicle's summary figures.",
+          "expected": "All-time win rate reads 67% while recent form reads 50% (the three most recent battle days are Day 5, 7 and 9, which take in four battles — two wins, two defeats — not the 33% a last-three-battles reading would give); total plunder reads 1,560 gold and 785 iron, and total soldiers lost reads 133.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the reports page and read the order of the six battle entries from top to bottom.",
+          "expected": "Ironhold Clan (Day 9) first, then the two Day 7 battles with Duskwing Riders before Silverpine Sentinels (alphabetical tiebreak, not the order they were fought in), then Stonebeard Clan (Day 5), Grimfang Horde (Day 4), and Ashen Elves (Day 2) last.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Scroll through the six battle entries on the reports page.",
+          "expected": "Each entry carries an outcome badge — green Victory on the four wins, red Defeat on Duskwing Riders and Ironhold Clan — and each is stamped in game-day form like 'Day 7', with no calendar dates anywhere.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Note the iron-haul gold value shown in the chronicle summary, then go to the bank's merchant exchange and type 785 into the iron-to-gold amount field.",
+          "expected": "Both places show the same figure: 235 gold (785/3 with the 10% cut taken before rounding down — not 234).",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Go to the bank page, choose the iron-to-gold exchange, and type 100 into the amount field.",
+          "expected": "The live preview shows exactly 30 gold to be received (the 10% merchant cut is applied before rounding down), not 29 or 33.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.246082,
+        "model_calls": 6,
+        "input_tokens_total": 682530,
+        "output_tokens": 9378,
+        "judge_usd": 0.1579
+      }
+    },
+    {
+      "turn": 4,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "From the reports page, start a salvage on the Silverpine Sentinels victory and type 10 into the workers field to reach the review step.",
+          "expected": "The review lays out a haul of 101 gold and 105 iron (20% of 505 rounded down; 5 iron times 21 lost) against a cost of 150 wheat.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the reports page and look at the Duskwing Riders defeat entry.",
+          "expected": "No salvage option is offered on the Duskwing Riders entry (defeats leave no lootable field), while victory entries do show one.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 2,
+          "task": "Start a salvage on the Ashen Elves victory and type 4 into the workers field.",
+          "expected": "The expedition is refused with an indication that at least 5 workers are required; it cannot proceed to the review step with 4.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Salvage the Stonebeard Clan battlefield with 5 workers, approve it, then check the stockpile and the Stonebeard entry.",
+          "expected": "The stockpile reads 2,582 gold, 1,845 iron and 825 wheat (plus 82 gold and 45 iron, minus 75 wheat), and the Stonebeard entry is marked salvaged with no way to run it again.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the reports page and read the chronicle's summary figures.",
+          "expected": "All-time win rate reads 67% while recent form reads 50% (the three most recent battle days are Day 5, 7 and 9, which take in four battles — two wins, two defeats — not the 33% a last-three-battles reading would give); total plunder reads 1,560 gold and 785 iron, and total soldiers lost reads 133.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 3,
+      "partial": 1,
+      "no": 1,
+      "total": 5,
+      "accuracy": 70.0,
+      "cost": {
+        "generation_usd": 0.141331,
+        "model_calls": 6,
+        "input_tokens_total": 748849,
+        "output_tokens": 7405,
+        "judge_usd": 0.6014
+      }
+    },
+    {
+      "turn": 5,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Hall of Plaques page and look at the Plunderer plaque.",
+          "expected": "Plunderer shows the Bronze tier with progress 1,560 gold toward the 1,600 needed for Silver (40 more needed) — salvage gold is not counted.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the Hall of Plaques page, look at the Warlord plaque.",
+          "expected": "Warlord shows Bronze from 4 victories, with 1 more victory needed for the Silver tier at 5.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the Hall of Plaques page, look at the Veteran plaque.",
+          "expected": "Veteran shows Bronze from 133 soldiers lost, with 67 more needed for the Silver tier at 200.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 3,
+          "task": "From the reports page, salvage the Silverpine Sentinels battlefield with 5 workers and approve it, then open the Hall of Plaques and check the Plunderer plaque.",
+          "expected": "Plunderer still shows Bronze at 1,560 toward 1,600 — the 101 salvaged gold did not move the plaque.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the bank page's merchant exchange, type 2000 into the iron-to-gold amount field.",
+          "expected": "The exchange refuses the amount because only 1,800 iron is held: an error indication appears and no gold conversion is offered.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 1,
+      "partial": 1,
+      "no": 3,
+      "total": 5,
+      "accuracy": 30.0,
+      "cost": {
+        "generation_usd": 0.289707,
+        "model_calls": 6,
+        "input_tokens_total": 823925,
+        "output_tokens": 8441,
+        "judge_usd": 0.2642
+      }
+    },
+    {
+      "turn": 6,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the battle simulator, type 100 into the attacker field and 80 into the defender field, then type 2 into the luck field and add a 0 to make it 20.",
+          "expected": "The round-by-round log regenerates while typing with no submit action: with the counts in place, morale shows 80 and round one shows my side losing 22 to their bonus-boosted defense of 88; at luck 2 round one shows 21 defender casualties, which becomes 24 the moment the field reads 20.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the battle simulator, pick Ironhold Clan from the rematch picker, type 200 into the attacker field and 0 into the luck field.",
+          "expected": "The defender field pre-fills with 80 (double the 40 soldiers lost to them, not 40 itself), morale shows 40, and round one of the log shows the outnumbered defenders trading up: 20 defender casualties (a quarter of 200 times morale 0.40) against 22 attacker casualties (a quarter of their bonus-boosted 88).",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the battle simulator, type 150 into the attacker field and 0 into the defender field.",
+          "expected": "The projection shows an instant walkover Victory with no rounds fought — no crash, blank screen, error, or NaN from the zero-defender morale division.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Open the rematch picker on the battle simulator and choose Silverpine Sentinels.",
+          "expected": "The picker lists exactly the six chronicle opponents, and choosing Silverpine Sentinels pre-fills the defender count with 42 (double the 21 soldiers lost to them).",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the reports page and look at the Duskwing Riders defeat entry.",
+          "expected": "No salvage option is offered on the Duskwing Riders entry (defeats leave no lootable field), while victory entries do show one.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 2,
+      "partial": 1,
+      "no": 2,
+      "total": 5,
+      "accuracy": 50.0,
+      "cost": {
+        "generation_usd": 0.16807,
+        "model_calls": 6,
+        "input_tokens_total": 909023,
+        "output_tokens": 9009,
+        "judge_usd": 0.7078
+      }
+    },
+    {
+      "turn": 7,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "From the messages page, send a join request to the Iron Oath and open the letter that was sent.",
+          "expected": "The letter quotes 4 victories and 1,560 gold plundered from the chronicle — not 6 battles and not any other totals.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 1,
+          "task": "From the messages page, send a join request to the Crimson Pact and wait for the reply.",
+          "expected": "An acceptance reply appears in the messages list, and the Crimson Pact roster now lists Ravenspire with the member count reading 4.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Join the Crimson Pact, then send a join request to the Iron Oath and confirm the warning that appears.",
+          "expected": "A warning about leaving the Crimson Pact requires explicit confirmation before switching; after confirming, Ravenspire appears only on the Iron Oath roster and the Crimson Pact is back to 3 members.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Join the Crimson Pact and open the acceptance letter in the messages page.",
+          "expected": "The acceptance letter is stamped in game-day form like 'Day 9' — no real calendar date anywhere on it.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the reports page and read the order of the six battle entries from top to bottom.",
+          "expected": "Ironhold Clan (Day 9) first, then the two Day 7 battles with Duskwing Riders before Silverpine Sentinels (alphabetical tiebreak, not the order they were fought in), then Stonebeard Clan (Day 5), Grimfang Horde (Day 4), and Ashen Elves (Day 2) last.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 3,
+      "partial": 1,
+      "no": 1,
+      "total": 5,
+      "accuracy": 70.0,
+      "cost": {
+        "generation_usd": 0.729829,
+        "model_calls": 13,
+        "input_tokens_total": 1830956,
+        "output_tokens": 15042,
+        "judge_usd": 0.7941
+      }
+    },
+    {
+      "turn": 8,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the bank page's merchant exchange, then the battle simulator page, and look at the primary action buttons on each.",
+          "expected": "On both pages the primary action buttons are dark goldenrod with white text — the same treatment, not just one page updated.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the reports page and look at the outcome badges and the page heading.",
+          "expected": "Victory and Defeat badges render as rounded pills with white text (still green for Victory, red for Defeat), and the page heading is centered and set in small caps.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open the Hall of Plaques page and look at the Plunderer plaque's progress numbers.",
+          "expected": "The progress reads 1,560 toward 1,600, and the digits are rendered in the monospace, tabular-figure stat style.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Visit the base page, the reports page and the battle simulator, looking at the content blocks on each.",
+          "expected": "On all three pages the crimson content blocks have 12px rounded corners with even padding — none of the pages still shows the old sharp-cornered blocks.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Hall of Plaques page and look at the Plunderer plaque.",
+          "expected": "Plunderer shows the Bronze tier with progress 1,560 gold toward the 1,600 needed for Silver (40 more needed) — salvage gold is not counted.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 1,
+      "partial": 1,
+      "no": 3,
+      "total": 5,
+      "accuracy": 30.0,
+      "cost": {
+        "generation_usd": 0.481941,
+        "model_calls": 20,
+        "input_tokens_total": 2451409,
+        "output_tokens": 15725,
+        "judge_usd": 0.3802
+      }
+    },
+    {
+      "turn": 9,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the ranking page before founding anything and find Ravenspire.",
+          "expected": "Ravenspire sits 5th with power 1,000 (900 plus 25 for each of the 4 victories — not 1,050 from counting all six battles), below Karzok, Lady Maren, Thorgrim and Vex, with the Thorgrim/Vex 1,150 tie ordered alphabetically.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the Territories page, found a Watchtower and confirm it, then open the ranking page.",
+          "expected": "Ravenspire's power reads 1,150 and it now sits 3rd — in the three-way 1,150 tie the alphabetical order runs Ravenspire, Thorgrim, Vex.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the Territories page, found a Deep Mine and complete the action, then check the stockpile.",
+          "expected": "A confirmation states the exact cost of 600 gold and 400 iron before anything is spent; after approving, the stockpile reads 1,900 gold and 1,400 iron.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 3,
+          "task": "Found a Watchtower on the Territories page, confirm it, and look at the rows around Ravenspire on the ranking page.",
+          "expected": "Ravenspire has moved up to 3rd, directly above Thorgrim and Vex, and both of those rivals still display their CP alliance tag after the re-sort.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the battle simulator, pick Ironhold Clan from the rematch picker, type 200 into the attacker field and 0 into the luck field.",
+          "expected": "The defender field pre-fills with 80 (double the 40 soldiers lost to them, not 40 itself), morale shows 40, and round one of the log shows the outnumbered defenders trading up: 20 defender casualties (a quarter of 200 times morale 0.40) against 22 attacker casualties (a quarter of their bonus-boosted 88).",
+          "verdict": "no"
+        }
+      ],
+      "yes": 3,
+      "partial": 1,
+      "no": 1,
+      "total": 5,
+      "accuracy": 70.0,
+      "cost": {
+        "generation_usd": 0.424679,
+        "model_calls": 13,
+        "input_tokens_total": 1973969,
+        "output_tokens": 10493,
+        "judge_usd": 0.526
+      }
+    },
+    {
+      "turn": 10,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the proclamation compose page, switch all four sections on, then switch the Alliance section off.",
+          "expected": "With all four on the preview shows content for all four sections; the moment Alliance is switched off its lines disappear from the preview while the other three remain.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the proclamation compose page, switch on the Battle Record section and read the preview.",
+          "expected": "The preview states 4 victories, 2 defeats and a 67% win rate — the chronicle's real totals, not 6 wins or the 50% recent-form figure.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the proclamation compose page, switch every section off and try to publish.",
+          "expected": "Publishing is refused with a message about having nothing selected, and no proclamation gets posted to the messages page.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Switch on the Plaques and the Power & Rank sections and read the preview.",
+          "expected": "The preview shows Plunderer, Warlord and Veteran all at Bronze and a power of 1,000 with a 5th-place ranking — matching what the Hall of Plaques and the ranking page show on a fresh start.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "From the messages page, send a join request to the Crimson Pact and wait for the reply.",
+          "expected": "An acceptance reply appears in the messages list, and the Crimson Pact roster now lists Ravenspire with the member count reading 4.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 2,
+      "partial": 1,
+      "no": 2,
+      "total": 5,
+      "accuracy": 50.0,
+      "cost": {
+        "generation_usd": 0.381171,
+        "model_calls": 6,
+        "input_tokens_total": 556931,
+        "output_tokens": 9411,
+        "judge_usd": 0.8969
+      }
+    }
+  ]
+}

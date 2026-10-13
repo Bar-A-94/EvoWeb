@@ -1,0 +1,860 @@
+{
+ "id": "000070",
+ "instruction": "Please implement a poetry blog website for displaying and sharing poetry content. The website should have functionalities for browsing poetry, searching poetry, posting poetry, and commenting on poetry. Users should be able to browse different types of poetry, search for specific poetry, post their own poetry, and comment on others' poetry. Apply light goldenrod for layout; use olive drab for buttons and cards.",
+ "Category": {
+  "primary_category": "Content Presentation",
+  "subcategories": [
+   "Dynamic Content Rendering",
+   "Static Page Generation",
+   "User Interaction"
+  ]
+ },
+ "application_type": "Personal Blog Sites",
+ "ui_instruct": [
+  {
+   "task": "Verify the poetry browsing functionality.",
+   "expected_result": "The user can access a list of poetry, with each entry displaying the title and author clearly.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering",
+     "Details Information"
+    ]
+   }
+  },
+  {
+   "task": "Test the search function by searching for a specific poem title.",
+   "expected_result": "The search returns results that include the poem with the matching title and no unrelated results.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Searching"
+    ]
+   }
+  },
+  {
+   "task": "Test the process of posting new poetry.",
+   "expected_result": "The user can fill out a form to input poetry title, content, and tags, then submit it successfully; the new poem should appear on the website.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Communication",
+     "Form Operations"
+    ]
+   }
+  },
+  {
+   "task": "Test the functionality for posting a comment on an existing poem.",
+   "expected_result": "The user can submit a comment, and it appears under the poem along with the user's name and timestamp.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Communication"
+    ]
+   }
+  },
+  {
+   "task": "Verify that users can navigate to different types of poetry categories.",
+   "expected_result": "Clicking on a category correctly filters and displays poems belonging to that category only.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering",
+     "Details Information"
+    ]
+   }
+  },
+  {
+   "task": "Verify that the website uses 'light goldenrod' as the background color and 'olive drab' as the component color, as specified in the design requirements.",
+   "expected_result": "The website has a background color of 'light goldenrod' and components (such as buttons, cards, headers, etc.) are styled with the color 'olive drab', accurately reflecting the design instruction.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Readers keep telling me they want to cheer a poem without writing a comment, so let's add sparkles: a sparkle button on every poem wherever it shows up, with a running count, capped at 3 sparkles per reader per poem — after the third the button should clearly show they're maxed out, and there should be a way to take a sparkle back after a misclick. Wipe whatever demo poems are in there and start us with exactly these seven, I'll add more later: Cinders by Mara Voss (haiku, 3 lines, 12 sparkles, 1 comment), Harbor Glass by Theo Rin (sonnet, 14 lines, 9 sparkles, 4 comments), Wren Song by Mara Voss (free verse, 21 lines, 7 sparkles, 5 comments), Salt Meadow by Ivy Chen (haiku, 3 lines, 12 sparkles, 0 comments), The Unsent Letter by Theo Rin (free verse, 30 lines, 6 sparkles, 2 comments), Juniper by Ivy Chen (limerick, 5 lines, 8 sparkles, 3 comments), and Night Ferry by Priya Anand (sonnet, 14 lines, 15 sparkles, 0 comments). Make up the poem text and comment text, but keep those numbers exact, and show each poem's line count with its details. One house style I want everywhere in this app, now and for anything we add later: a poem's form (Haiku, Sonnet, Limerick, Free Verse) shows as a little pill badge right next to its title, wherever the poem appears.",
+   "source_website": "https://hellopoetry.com/",
+   "source_feature": "Sparkle voting system",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Open the browse list and click the sparkle button on Salt Meadow four times.",
+     "expected_result": "The sparkle count climbs from 12 to 13, 14, then 15, and the fourth click does not raise it past 15 — the control indicates the 3-sparkle limit is reached.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "User Interaction",
+       "Boundary Handling"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "On Cinders, click the sparkle button twice, then use the take-back control once.",
+     "expected_result": "Cinders' sparkle count reads exactly 13 (12 seeded + 2 given - 1 taken back).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "User Interaction",
+       "State Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Find Juniper in the browse list.",
+     "expected_result": "A pill badge reading Limerick sits next to Juniper's title, and the poem shows its line count of 5 lines.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Details Information",
+       "UI Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Click the sparkle button once on Harbor Glass in the browse list, then open Harbor Glass's own page.",
+     "expected_result": "The poem's page shows 10 sparkles — the same count as the browse card after the click, not the seeded 9.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Consistency",
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 1,
+     "task": "Type Night Ferry into the search box.",
+     "expected_result": "Night Ferry by Priya Anand appears in the results, and poems that don't match are not shown.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Searching"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Homepage time: give me a This Week's Board that ranks every poem by a buzz score — sparkles plus two points per comment — with the top three shown big with their rank and score, and the rest listed in order underneath. Sparkling or commenting should move the board immediately, no refresh dance. And whenever two poems tie on anything we rank, list them alphabetically by title — make that the rule anywhere this app ranks things, now and for anything we add later.",
+   "source_website": "https://allpoetry.com/",
+   "source_feature": "Trending section (fused with Hello Poetry's competitive voting boards)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the homepage and read the This Week's Board top three on a fresh load.",
+     "expected_result": "The top three read, in order: Harbor Glass (score 17), Wren Song (score 17), Night Ferry (score 15) — Harbor Glass beats Wren Song alphabetically on the tie, and Night Ferry is not first despite having the most sparkles.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ranking",
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Scroll down the board past the top three.",
+     "expected_result": "Cinders and Juniper both show score 14, with Cinders listed above Juniper (alphabetical on the tie).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ranking",
+       "Details Information"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open Salt Meadow, post a comment signed Noor reading 'Lovely turn in the last line.', then return to the homepage board.",
+     "expected_result": "Salt Meadow's score reads 14 (12 sparkles + 2 for the new comment) and it now sits below Cinders and Juniper, the other poems at 14, per the alphabetical tie order.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Operations",
+       "State Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Click the sparkle button on Night Ferry three times, then check the board.",
+     "expected_result": "Night Ferry's score reads 18 and it moves to the #1 spot, above Harbor Glass and Wren Song.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "User Interaction",
+       "Ranking"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "Open the browse list and click the sparkle button on Salt Meadow four times.",
+     "expected_result": "The sparkle count climbs from 12 to 13, 14, then 15, and the fourth click does not raise it past 15 — the control indicates the 3-sparkle limit is reached.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "User Interaction",
+       "Boundary Handling"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "The site needs a Form Lab — its own page — where a poem's structure gets checked, not just admired. I pick a target form (haiku, sonnet, limerick, free verse), and next to each choice show how many published poems of that form the site already has; then as I type or paste a draft into the checker, a live line count and word count update with every keystroke — blank lines are just stanza breaks and mustn't count as lines. Haiku means exactly 3 lines, limerick 5, sonnet 14, free verse anything of at least 1, and a Certify button stays off until the line count matches the chosen form. I should also be able to load any published poem into the checker, and certifying one stamps a form-true mark next to its pill badge everywhere that poem appears.",
+   "source_website": "https://allpoetry.com/",
+   "source_feature": "Extensive category and tag taxonomy (poetic forms)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Form Lab and look at the form picker.",
+     "expected_result": "Haiku shows 2 published poems already on the site, Sonnet shows 2, Free Verse shows 2, and Limerick shows 1.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Details Information",
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the Form Lab pick Haiku and type four lines into the checker: 'cold stars', 'a lantern gutters', a blank line, then 'snow begins'.",
+     "expected_result": "The live line counter reads 3 — the blank line is not counted — and the Certify button becomes enabled.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Boundary Handling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the Form Lab pick Haiku and type just two lines into the checker: 'cold stars' and 'a lantern gutters'.",
+     "expected_result": "While typing, the line counter reads 2, the word count reads 5, and the Certify button stays disabled — all without pressing any submit.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "User Interaction"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the Form Lab pick Limerick, load Juniper into the checker, certify it, then find Juniper in the browse list.",
+     "expected_result": "The checker counts Juniper's 5 lines so the limerick requirement is met and Certify enables; after certifying, Juniper's browse entry shows a form-true mark next to its Limerick pill badge.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Operations",
+       "UI Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "Open the homepage and read the This Week's Board top three on a fresh load.",
+     "expected_result": "The top three read, in order: Harbor Glass (score 17), Wren Song (score 17), Night Ferry (score 15) — Harbor Glass beats Wren Song alphabetically on the tie, and Night Ferry is not first despite having the most sparkles.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ranking",
+       "Dynamic Content Rendering"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Let's run our first contest: a Contests page hosting 'The Turning Tide', haiku only, one entry per poet — you can enter one of your existing haiku or write a fresh one right there on the Contests page, and a fresh entry can't be submitted until it passes the Form Lab's haiku line check, live as you type. Salt Meadow got its entry in first and Cinders right after; entries rank by their sparkle counts. A Close Voting button crowns the top entry as winner and shows it off on the homepage. Oh, and from here on out, anywhere in this app something gets closed out or deleted for good, ask me to confirm before it happens.",
+   "source_website": "https://allpoetry.com/",
+   "source_feature": "Poetry contests",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Contests page on a fresh load.",
+     "expected_result": "The Turning Tide shows two entries with Cinders listed above Salt Meadow, both at 12 sparkles — alphabetical order on the tie, even though Salt Meadow entered first.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ranking",
+       "Details Information"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Try to enter Wren Song into the contest.",
+     "expected_result": "The entry is refused with a clear message that the contest accepts haiku only, and the entries list still shows only the existing entries.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Click Close Voting on The Turning Tide and confirm.",
+     "expected_result": "A confirmation is asked before voting closes; after confirming, Cinders is crowned winner (taking the 12-12 tie alphabetically) and the winner is shown off on the homepage.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "User Interaction",
+       "State Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Start a fresh contest entry on the Contests page as poet Lena Brook titled Tideline and type two lines, 'grey tide turning' and 'a gull writes its name'; then add a third line 'on the wet sand' and submit.",
+     "expected_result": "With only two lines the submit stays disabled per the haiku line check; after the third line it enables, and Tideline joins the entries list with 0 sparkles, below the two 12-sparkle entries.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Form Operations"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 4,
+     "task": "In the Form Lab pick Haiku and type four lines into the checker: 'cold stars', 'a lantern gutters', a blank line, then 'snow begins'.",
+     "expected_result": "The live line counter reads 3 — the blank line is not counted — and the Certify button becomes enabled.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Boundary Handling"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Poets deserve their own space. Build a Poets roster where every poet appears exactly once — even the ones with several poems — showing their poem count and total sparkles across all their work, ranked by total sparkles, highest first. Clicking a poet opens their profile with the same rollup and their poems, each linking back to its own page. Totals should track live: if someone sparkles a poem, the poet's number moves with it.",
+   "source_website": "https://hellopoetry.com/",
+   "source_feature": "Sparkle voting system (aggregated into a poet leaderboard)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Poets page on a fresh load.",
+     "expected_result": "The roster reads, in order: Ivy Chen (20 sparkles), Mara Voss (19), Priya Anand (15), Theo Rin (15) — Priya listed above Theo on the alphabetical tie.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ranking",
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Look for Mara Voss on the Poets page.",
+     "expected_result": "She appears exactly once — not once per poem — with a poem count of 2 and a total of 19 sparkles, and the roster lists four poets in all.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Details Information",
+       "State Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open Ivy Chen's profile and click Salt Meadow in her poem list.",
+     "expected_result": "Her profile shows Salt Meadow and Juniper with a total of 20 sparkles, and clicking Salt Meadow opens that poem's own page.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Navigation",
+       "Details Information"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Click the sparkle button once on Wren Song, then open the Poets page.",
+     "expected_result": "Mara Voss's total reads 20, tying Ivy Chen, and she sits below Ivy (alphabetical on the tie) but above Priya and Theo.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Consistency",
+       "Ranking"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "Find Juniper in the browse list.",
+     "expected_result": "A pill badge reading Limerick sits next to Juniper's title, and the poem shows its line count of 5 lines.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Details Information",
+       "UI Consistency"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "design-restyle",
+   "instruction": "The look is feeling flat, so let's warm it up — keep the light goldenrod background, but on the browse page, the homepage board, the Contests page, and the Poets page all together: every button goes deep plum with white text, page headings get centered and set in a serif face, cards go cream with olive drab borders and clearly rounded corners, every sparkle count renders in warm amber, and the form badges switch to an outlined style — olive drab text and border on a transparent fill. All four pages, uniformly — nothing half-done.",
+   "source_website": "https://hellopoetry.com/",
+   "source_feature": "Competitive voting boards (front-page presentation, restyled)",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Open the Poets page.",
+     "expected_result": "Buttons are deep plum with white text, the page heading is centered and set in a serif face, and the cards are cream with olive drab borders and clearly rounded corners.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "UI Consistency",
+       "Styling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the browse page.",
+     "expected_result": "The background is still light goldenrod, form badges are outlined — olive drab text and border on a transparent fill — and buttons are deep plum with white text.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "UI Consistency",
+       "Styling"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open the homepage.",
+     "expected_result": "The #1 board card still reads Harbor Glass with score 17, now on a cream rounded card, with sparkle counts rendered in warm amber and the page heading centered in a serif face.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "UI Consistency",
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Open the Contests page.",
+     "expected_result": "Entry cards are cream with rounded corners, sparkle counts are warm amber, buttons are deep plum with white text, and the heading is centered serif — matching the other restyled pages.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "UI Consistency",
+       "Styling"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 5,
+     "task": "Open the Contests page on a fresh load.",
+     "expected_result": "The Turning Tide shows two entries with Cinders listed above Salt Meadow, both at 12 sparkles — alphabetical order on the tie, even though Salt Meadow entered first.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ranking",
+       "Details Information"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Applause is nice, but poets want real notes. Add a feedback-welcome switch when posting and on a poem's page, which badges the poem and lists it in a new Critique Corner; a critique there is its own structured thing — critic's name, a focus (imagery, rhythm, or word choice), and notes of at least 30 characters, with anything shorter turned away with a clear message. Order the corner by fewest critiques first so neglected poems surface. Start it off with Wren Song and The Unsent Letter marked feedback-welcome — Rhea Solano has already critiqued both, and Sam Kade left one on The Unsent Letter — and when a poet feels done, they mark the request resolved, which retires it from the corner and stamps the poem 'Critiqued'.",
+   "source_website": "https://allpoetry.com/",
+   "source_feature": "Comment trading for peer feedback",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Critique Corner on a fresh load.",
+     "expected_result": "Wren Song sits above The Unsent Letter, showing 1 critique and 2 critiques respectively — ordered by fewest critiques first, not by their comment counts (5 and 2) and not alphabetically.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ranking",
+       "Details Information"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On Wren Song's critique form enter the name Ada, pick rhythm as the focus, type 'Nice.' and submit; then replace the note with 'The middle stanza loses momentum but the closing image really lands well.' and submit again.",
+     "expected_result": "The short note is rejected with a clear too-short message and no critique is added; the longer note submits, and Wren Song's critique count reads 2.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Form Operations"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open Juniper's page, switch on its feedback-welcome toggle, then open the Critique Corner.",
+     "expected_result": "Juniper shows a feedback-welcome badge and appears at the top of the corner with 0 critiques, ahead of the poems that already have critiques.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "User Interaction",
+       "Ranking"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the Critique Corner, mark The Unsent Letter's request as resolved.",
+     "expected_result": "A confirmation is asked before it is retired; after confirming, The Unsent Letter leaves the corner and its poem page shows a Critiqued stamp.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "User Interaction",
+       "State Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 6,
+     "task": "Open the Poets page on a fresh load.",
+     "expected_result": "The roster reads, in order: Ivy Chen (20 sparkles), Mara Voss (19), Priya Anand (15), Theo Rin (15) — Priya listed above Theo on the alphabetical tie.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ranking",
+       "Dynamic Content Rendering"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Readers should get to bind their own little chapbook. Give every poem an add-to-my-anthology control and build a My Anthology page with a live compiled preview: total line count, a breakdown by form, and a read-time estimate at four seconds per line rounded up to the nearest half minute — 196 seconds should read 3.5 min, and even a lone haiku shows 0.5 min, never zero. Include a copyable table-of-contents text block grouped by form — form groups in alphabetical order, titles alphabetical inside each group, plus a one-click add-this-week's-top-three that pulls in whatever currently tops the board. And an empty anthology should show a friendly nudge, not blank space or zeroed stats.",
+   "source_website": "https://allpoetry.com/",
+   "source_feature": "Book-publishing services (chapbook compilation)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On a fresh load, open My Anthology and click the add-this-week's-top-three control.",
+     "expected_result": "The anthology holds Harbor Glass, Night Ferry, and Wren Song; total lines reads 49 and read time reads 3.5 min (196 seconds rounded up to the half minute), and the table of contents groups Free Verse: Wren Song, then Sonnet: Harbor Glass, Night Ferry — form groups alphabetical, titles alphabetical inside each group, not board order.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Details Information"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open My Anthology on a fresh load, before adding anything.",
+     "expected_result": "A friendly nudge to add poems shows instead of a blank page — no zeroed totals or empty table of contents rendered as if poems existed.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Empty State",
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Add only Cinders to the anthology and look at the compiled preview.",
+     "expected_result": "The preview shows 1 poem, 3 total lines, a haiku-only form breakdown, and a read time of 0.5 min — the 12-second estimate rounds up to the half minute, never to zero.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Aggregation",
+       "Boundary Handling"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Click the sparkle button on Cinders three times, then open My Anthology and click the add-this-week's-top-three control.",
+     "expected_result": "The anthology pulls in Cinders, Harbor Glass, and Wren Song — Night Ferry is not among them, because Cinders' boosted score re-ranked the board's top three.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Consistency",
+       "Ranking"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 7,
+     "task": "Open the Poets page.",
+     "expected_result": "Buttons are deep plum with white text, the page heading is centered and set in a serif face, and the cards are cream with olive drab borders and clearly rounded corners.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "UI Consistency",
+       "Styling"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Season finale: build a Season Laurels page that gathers four laurels automatically — Most Sparkled (highest sparkle count), Board Champion (whoever sits #1 on this week's board), Contest Laureate (the closed contest's winner — if voting is still open, say so and leave that laurel waiting), and Top Critic (whoever has written the most critiques in the corner) — each shown with its number so I can sanity-check. After a review step, a Publish Laurels button (that's final, so treat it accordingly) puts a laurels banner on the homepage and a laurel mark on each winning poem's page. Until it's published, nothing laurel-ish should show anywhere.",
+   "source_website": "https://hellopoetry.com/",
+   "source_feature": "Competitive voting boards (top-voted poems surface to the front page)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Season Laurels page on a fresh load.",
+     "expected_result": "Most Sparkled shows Night Ferry (15 sparkles), Board Champion shows Harbor Glass (the board's #1, not the most-sparkled poem), Top Critic shows Rhea Solano (2 critiques), and Contest Laureate shows a voting-still-open notice instead of a name.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Details Information"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Before publishing any laurels, check the homepage and Night Ferry's page.",
+     "expected_result": "No laurels banner appears on the homepage and no laurel mark appears on Night Ferry — laurels only show up after publishing.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Empty State",
+       "State Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Go through the review step and click Publish Laurels, confirming when asked.",
+     "expected_result": "A confirmation is required before publishing; after it, the homepage shows the laurels banner and Night Ferry's page carries a laurel mark.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "User Interaction",
+       "State Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the Contests page click Close Voting and confirm, then return to the Season Laurels page.",
+     "expected_result": "Contest Laureate now shows Cinders — the closed contest's winner — replacing the voting-still-open notice.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Consistency",
+       "Navigation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 8,
+     "task": "Open the Critique Corner on a fresh load.",
+     "expected_result": "Wren Song sits above The Unsent Letter, showing 1 critique and 2 critiques respectively — ordered by fewest critiques first, not by their comment counts (5 and 2) and not alphabetically.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ranking",
+       "Details Information"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "target_app_summary": "The poetry blog has grown into a full community poetry platform. Readers cheer poems with capped, retractable sparkles; a homepage This Week's Board ranks poems by a buzz score of sparkles plus weighted comments; and a Form Lab checks haiku/limerick/sonnet line counts live per keystroke and certifies poems as form-true. On top of these grew a haiku contest with sparkle-driven voting and a crowned winner, a deduplicated Poets roster ranked by rolled-up sparkle totals, a structured Critique Corner peer-feedback workflow, a chapbook anthology builder with computed line totals, rounded read times, and a grouped table-of-contents export, and a Season Laurels ceremony that reconciles the board, contest, sparkles, and critiques into published awards. A mid-ladder restyle (plum buttons, centered serif headings, cream cards, amber sparkle counts, outlined form badges) sweeps four pages. The graph runs deep: sparkles feed the board, roster, contest, and laurels; the Form Lab's line check gates fresh contest entries; and the board's top three feed the anthology importer — so early breakage compounds through the late turns.",
+ "dependency_graph": {
+  "nodes": [
+   {
+    "id": "T1",
+    "label": "base app",
+    "archetype": "base"
+   },
+   {
+    "id": "T2",
+    "label": "sparkle voting + seed",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T3",
+    "label": "This Week's Board",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T4",
+    "label": "Form Lab line checker",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T5",
+    "label": "haiku contest",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T6",
+    "label": "poets roster",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T7",
+    "label": "plum-and-cream restyle",
+    "archetype": "design-restyle"
+   },
+   {
+    "id": "T8",
+    "label": "Critique Corner",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T9",
+    "label": "anthology builder",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T10",
+    "label": "Season Laurels ceremony",
+    "archetype": "multi-surface-workflow"
+   }
+  ],
+  "edges": [
+   {
+    "from": "T1",
+    "to": "T2",
+    "what": "adds sparkle controls to base poem cards and pages"
+   },
+   {
+    "from": "T2",
+    "to": "T3",
+    "what": "board score aggregates live sparkle counts"
+   },
+   {
+    "from": "T1",
+    "to": "T4",
+    "what": "Form Lab loads and certifies poems from the base catalog"
+   },
+   {
+    "from": "T4",
+    "to": "T5",
+    "what": "fresh contest entries must pass the Form Lab's haiku line check"
+   },
+   {
+    "from": "T2",
+    "to": "T5",
+    "what": "entries ranked and winner picked by sparkle counts"
+   },
+   {
+    "from": "T2",
+    "to": "T6",
+    "what": "roster aggregates sparkle totals per poet, live"
+   },
+   {
+    "from": "T1",
+    "to": "T7",
+    "what": "restyles the browse page"
+   },
+   {
+    "from": "T2",
+    "to": "T7",
+    "what": "restyles sparkle counts to amber"
+   },
+   {
+    "from": "T3",
+    "to": "T7",
+    "what": "restyles the homepage board"
+   },
+   {
+    "from": "T5",
+    "to": "T7",
+    "what": "restyles the Contests page"
+   },
+   {
+    "from": "T6",
+    "to": "T7",
+    "what": "restyles the Poets page"
+   },
+   {
+    "from": "T1",
+    "to": "T8",
+    "what": "feedback-welcome switch in posting flow and poem pages"
+   },
+   {
+    "from": "T3",
+    "to": "T9",
+    "what": "imports the board's current top three"
+   },
+   {
+    "from": "T2",
+    "to": "T10",
+    "what": "Most Sparkled laurel from sparkle counts"
+   },
+   {
+    "from": "T3",
+    "to": "T10",
+    "what": "Board Champion laurel from board rank #1"
+   },
+   {
+    "from": "T5",
+    "to": "T10",
+    "what": "Contest Laureate from the closed contest's winner"
+   },
+   {
+    "from": "T8",
+    "to": "T10",
+    "what": "Top Critic from critique authorship counts"
+   }
+  ]
+ },
+ "global_rules": [
+  {
+   "rule": "Every poem's form (Haiku, Sonnet, Limerick, Free Verse) is shown as a small pill badge next to its title, everywhere a poem appears.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Any ranked or ordered list breaks ties alphabetically (by poem title or poet name).",
+   "introduced_in_turn": 3
+  },
+  {
+   "rule": "Anything closed out or deleted for good asks for confirmation before it happens.",
+   "introduced_in_turn": 5
+  }
+ ],
+ "pinned_seed": {
+  "entity": "7 seeded poems",
+  "introduced_in_turn": 2,
+  "records_gist": "Cinders/Mara Voss/haiku/3ln/12sp/1cm; Harbor Glass/Theo Rin/sonnet/14ln/9sp/4cm; Wren Song/Mara Voss/free verse/21ln/7sp/5cm; Salt Meadow/Ivy Chen/haiku/3ln/12sp/0cm; The Unsent Letter/Theo Rin/free verse/30ln/6sp/2cm; Juniper/Ivy Chen/limerick/5ln/8sp/3cm; Night Ferry/Priya Anand/sonnet/14ln/15sp/0cm"
+ }
+}

@@ -1,0 +1,18 @@
+# Generated outputs: tables, figures and local runs are rebuilt by the commands in README.md.
+artifacts/
+runs/
+# the generator workflows' per-app part files; the assembled datasets carry everything in them
+data/evoweb_main_dataset/
+data/ablation_dataset_no_grounding/
+# unpacked from examples_artifacts/{traces,examples}.zip on first use
+examples_artifacts/traces/
+examples_artifacts/traces.unpacking/
+examples_artifacts/examples/
+.ruff_cache/
+.pytest_cache/
+__pycache__/
+*.pyc
+# written by harness/make_tasksets.py
+tests/smoke_sets/
+.nfs*
+.DS_Store

@@ -1,0 +1,884 @@
+{
+ "id": "000091",
+ "instruction": "Please implement a smart matrimonial website for users to find partners. The website should have user registration and login functionality, allowing users to create profiles, including uploading photos and filling out personal information. The website should have advanced search and filtering options, enabling users to find suitable partners based on different criteria. The website should also have messaging and chat functionality, allowing users to communicate with each other. Design the site using lemon chiffon as the background and chocolate for content blocks.",
+ "Category": {
+  "primary_category": "User Interaction",
+  "subcategories": [
+   "Authentication",
+   "Form Systems",
+   "Real-time Features"
+  ]
+ },
+ "application_type": "Social Media Platforms",
+ "ui_instruct": [
+  {
+   "task": "Test the user registration form for creating a new account.",
+   "expected_result": "The form should accept valid inputs, and submit successfully, creating a new user account. An error message should appear for invalid inputs.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Authentication Flows",
+     "Form Operations"
+    ]
+   }
+  },
+  {
+   "task": "Verify the login functionality with valid credentials.",
+   "expected_result": "The user should successfully log in and be redirected to their dashboard or homepage.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Authentication Flows"
+    ]
+   }
+  },
+  {
+   "task": "Check the advanced search feature for looking up potential partners based on specific criteria (e.g., age, location, interests).",
+   "expected_result": "The search results should accurately reflect users that meet the specified criteria.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Filtering"
+    ]
+   }
+  },
+  {
+   "task": "Validate the chat functionality by initiating a private chat between two users.",
+   "expected_result": "Messages should be sent and received in real-time without errors and the chat should remain private.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Communication"
+    ]
+   }
+  },
+  {
+   "task": "Test the logout process to ensure users can safely exit their accounts.",
+   "expected_result": "The user should be logged out immediately and redirected to the homepage or login page.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Authentication Flows"
+    ]
+   }
+  },
+  {
+   "task": "Verify that error messages and prompts provide clear, user-friendly instructions when users perform invalid login actions (e.g., incorrect password).",
+   "expected_result": "Error messages should clearly explain the issue and provide guidance for resolution without technical jargon.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Authentication Flows"
+    ]
+   }
+  },
+  {
+   "task": "Verify that the website uses 'lemon chiffon' as the background color and 'chocolate' as the component color, as specified in the design requirements.",
+   "expected_result": "The website has a background color of 'lemon chiffon' and components (such as buttons, cards, headers, etc.) are styled with the color 'chocolate', accurately reflecting the design instruction.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Let's add a kundali matching tool on its own page — for each of two people I pick a moon sign, a gana (Deva, Manushya, or Rakshasa), and a nadi (Adi, Madhya, or Antya), and the score recalculates the instant any field changes, no submit button. Scoring works like this: nadi gives 8 points when the two nadis differ (otherwise 0); gana gives 6 for the same gana, 5 for Deva with Manushya, 1 for Manushya with Rakshasa, 0 for Deva with Rakshasa; and matching elements give 7 — fire is Aries/Leo/Sagittarius, earth is Taurus/Virgo/Capricorn, air is Gemini/Libra/Aquarius, water is Cancer/Scorpio/Pisces. That's 21 raw points, but display it the traditional way out of 36 — scale it up and round to the nearest whole number. Until all six fields are filled in, show a friendly prompt instead of any number. And one thing I want everywhere in this app from now on, for any compatibility or match score we ever show: tag it Strong when it's at least two-thirds of its maximum, Weak when it's under one-third, and Moderate in between.",
+   "source_website": "Shaadi.com",
+   "source_feature": "Kundali / Horoscope Compatibility Score",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Open the kundali matching tool and set the first person's moon sign to Cancer, gana to Manushya, and nadi to Madhya, then set the second person's moon sign to Libra, gana to Deva, and nadi to Adi.",
+     "expected_result": "The score reads 22 out of 36 (nadi 8 for differing nadis + gana 5 for the Deva-Manushya pairing + 0 for mismatched elements = 13 raw, scaled to 36 and rounded) and it carries a Moderate tag.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculator Logic",
+       "Computed Values"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the kundali matching tool, set the first person to Taurus moon sign, Manushya gana, Adi nadi, and the second person to Gemini moon sign, Rakshasa gana, Adi nadi.",
+     "expected_result": "The score reads 2 out of 36 with a Weak tag — 1 raw point (gana only) scales to 1.71 which rounds up to 2, not down to 1.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculator Logic",
+       "Rounding"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the kundali matching tool fresh and fill in only the first person's three fields, leaving the second person blank.",
+     "expected_result": "No score is shown — a prompt to complete the fields appears instead of a number, NaN, or 0 out of 36.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Empty State",
+       "Input Validation"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the kundali matching tool, set the first person to Aries moon sign, Deva gana, Adi nadi, and the second person to Leo moon sign, Rakshasa gana, Adi nadi.",
+     "expected_result": "The score reads 12 out of 36 and is tagged Moderate, not Weak — 12 is exactly one-third of 36 and only scores strictly under one-third are Weak.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Boundary Conditions",
+       "Verdict Tagging"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 1,
+     "task": "Use the search or filtering controls to filter member profiles by a single criterion such as age or location.",
+     "expected_result": "Only profiles matching the chosen criterion remain in the results; profiles that do not match are no longer shown.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "People are reaching out, so build a proper interests system: an Interests area with Received, Sent, and Connections tabs, plus a Send Interest action on every member profile in browse/search that flips to a sent state so I can't send twice to the same person. Start me off with exactly these seven members and nothing else — Ananya Iyer (27, Chennai, Hindu, Tamil, Software Engineer, 5'4\"), Rohan Mehta (31, Mumbai, Hindu, Gujarati, Chartered Accountant, 5'11\"), Sara Khan (29, Delhi, Muslim, Urdu, Pediatrician, 5'6\"), Vikram Singh (33, Jaipur, Hindu, Hindi, Architect, 6'0\"), Meera Nair (26, Kochi, Hindu, Malayalam, Teacher, 5'3\"), Daniel D'Souza (34, Goa, Christian, Konkani, Chef, 5'9\"), and Priya Reddy (29, Hyderabad, Hindu, Telugu, Data Analyst, 5'5\") — I'll grow the list later. Rohan, Sara, and Vikram have already sent me interests that sit pending in Received; I've sent interests to Meera (still waiting) and to Priya, who accepted, so Priya is already in Connections. Accepting someone moves them out of Received and into Connections on the spot. Oh, and whenever I decline, withdraw, or remove anything anywhere in this app — now or in whatever we build later — ask me to confirm before it happens.",
+   "source_website": "Jeevansathi.com",
+   "source_feature": "Anonymous Calling (Number Masking) — mutual-connection gating, extended into a full interests/connections workflow",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Interests area and click through the Received, Sent, and Connections tabs.",
+     "expected_result": "Received lists exactly Rohan Mehta, Sara Khan, and Vikram Singh; Sent lists only Meera Nair; Connections lists only Priya Reddy.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Seeded Data",
+       "List Membership"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the Received tab, accept Sara Khan's interest.",
+     "expected_result": "Sara disappears from Received (leaving Rohan and Vikram) and immediately appears in Connections alongside Priya.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "State Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the Received tab, decline Rohan Mehta's interest.",
+     "expected_result": "A confirmation prompt appears before anything happens; after confirming, Rohan is removed from Received and does not appear in Connections.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Confirmation Dialogs",
+       "Workflow"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Find Daniel D'Souza in browse/search, click his Send Interest action, then open the Sent tab.",
+     "expected_result": "The action on Daniel's profile flips to a sent/disabled state, and Daniel now appears in the Sent tab along with Meera.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-surface Flow",
+       "Duplicate Prevention"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the kundali matching tool and set the first person's moon sign to Cancer, gana to Manushya, and nadi to Madhya, then set the second person's moon sign to Libra, gana to Deva, and nadi to Adi.",
+     "expected_result": "The score reads 22 out of 36 (nadi 8 for differing nadis + gana 5 for the Deva-Manushya pairing + 0 for mismatched elements = 13 raw, scaled to 36 and rounded) and it carries a Moderate tag.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculator Logic",
+       "Computed Values"
+      ]
+     },
+     "copied_from_turn": 2
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Now give me a Partner Preferences page: I type an age range, pick a religion, multi-select mother tongues, and type a minimum height, and every member's profile card everywhere in the app gets a match meter — each of the four criteria met is worth 25%. Preload my preferences: ages 26 to 30 with both ends counting, Hindu, mother tongue Tamil or Telugu or Malayalam, and height at least 5'4\" — someone exactly 5'4\" or exactly 30 qualifies. The page should also rank all members by match percent, and when people tie, the younger one goes first. Meters and the ranking recalculate the moment I change a preference. Also, from here on, ages everywhere in this app — cards, lists, anything we add down the road — should read like '27 yrs'.",
+   "source_website": "Shaadi.com",
+   "source_feature": "Community-Specific Search Filters — multi-criteria community/religion/mother-tongue preferences, extended into a scored match meter",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Partner Preferences page and read the ranked list of members from top to bottom.",
+     "expected_result": "The order is Ananya Iyer 100%, Priya Reddy 100%, Meera Nair 75%, Sara Khan 50%, Rohan Mehta 50%, Vikram Singh 50%, Daniel D'Souza 25% — ties broken younger-first, so Ananya (27) sits above Priya (29) and the 50% group runs Sara (29), Rohan (31), Vikram (33), not alphabetically.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ranking",
+       "Tie-breaking"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Look at Meera Nair's and Daniel D'Souza's match meters wherever their cards appear.",
+     "expected_result": "Meera shows 75% — her age 26 counts as inside 26-30 and only her 5'3\" height fails — while Daniel shows 25% with only height passing.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Boundary Conditions",
+       "Computed Values"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Partner Preferences page, change the minimum height to 5'6\".",
+     "expected_result": "Ananya's and Priya's meters drop to 75% immediately (still tagged Strong) while Sara's stays at 50% since 5'6\" exactly still qualifies.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Recalculation",
+       "Boundary Conditions"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In browse/search, find Priya Reddy's profile card.",
+     "expected_result": "Her card shows a 100% match meter tagged Strong, and her age reads '29 yrs'.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Cross-surface Display",
+       "Formatting"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the Interests area and click through the Received, Sent, and Connections tabs.",
+     "expected_result": "Received lists exactly Rohan Mehta, Sara Khan, and Vikram Singh; Sent lists only Meera Nair; Connections lists only Priya Reddy.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Seeded Data",
+       "List Membership"
+      ]
+     },
+     "copied_from_turn": 3
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "I want a Quick Connect night: a lobby that lines up my five best matches who aren't already connections, in match-meter order with the same younger-first tie-breaking as the preferences ranking, then walks me through them one at a time with Interested and Pass buttons and a '2 of 5' style progress marker — plus an end-early option that jumps me to results for just the ones I've answered. For tonight, Meera, Sara, and Vikram have flagged that they'd like to meet me; the results page only counts a mutual when I said Interested AND they had flagged me. Mutuals go straight into my Connections, and if a mutual had an interest sitting pending in my Received or Sent lists, clear it out automatically since we're connected now. And once I answer the last profile, land me on results — don't let it run off the end or go blank.",
+   "source_website": "Shaadi.com",
+   "source_feature": "Shaadi Live (Speed Matching Sessions)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Quick Connect lobby and read tonight's lineup in order.",
+     "expected_result": "Exactly five profiles appear in the order Ananya Iyer, Meera Nair, Sara Khan, Rohan Mehta, Vikram Singh — Priya is absent because she's already a connection, and Daniel (the lowest match) didn't make the five.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ranking",
+       "Derived Ordering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Start the Quick Connect session, mark Interested on Ananya Iyer, then use the end-early option and look at the results.",
+     "expected_result": "The results show zero mutual matches — Ananya had not flagged interest in me, so my Interested alone does not create a mutual.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Matching Logic",
+       "Boolean Composition"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Start the session and mark Pass on all five profiles one after another, watching the progress marker.",
+     "expected_result": "The marker advances 1 of 5 through 5 of 5, then the session lands on the results view with no blank screen or sixth profile; results show no mutuals.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Progress Tracking",
+       "Boundary Conditions"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Start the session, Pass Ananya, mark Interested on Meera Nair, use the end-early option, then open the Connections tab in the Interests area.",
+     "expected_result": "Meera shows as a mutual on the results and appears in Connections, and her old pending entry is gone from the Sent list.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-surface Flow",
+       "State Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the Partner Preferences page and read the ranked list of members from top to bottom.",
+     "expected_result": "The order is Ananya Iyer 100%, Priya Reddy 100%, Meera Nair 75%, Sara Khan 50%, Rohan Mehta 50%, Vikram Singh 50%, Daniel D'Souza 25% — ties broken younger-first, so Ananya (27) sits above Priya (29) and the 50% group runs Sara (29), Rohan (31), Vikram (33), not alphabetically.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ranking",
+       "Tie-breaking"
+      ]
+     },
+     "copied_from_turn": 4
+    }
+   ]
+  },
+  {
+   "archetype": "design-restyle",
+   "instruction": "The lemon-and-chocolate look feels dated — let's go wedding-royal everywhere: ivory page backgrounds, deep maroon content blocks with cream text, and every primary action button in gold with dark text. Round all profile cards and content panels with softly rounded corners, center every page heading, and turn those Strong/Moderate/Weak tags into little pill-shaped badges. Apply it consistently across search/browse, the kundali tool, the Interests area, the Partner Preferences page, and the Quick Connect screens — not just some of them.",
+   "source_website": "Shaadi.com",
+   "source_feature": "Profile Boost — premium gold treatment, reinterpreted as an app-wide royal visual identity",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Open the search/browse page, then open the Interests area, and look at each page's background, content blocks, and heading.",
+     "expected_result": "Both pages use an ivory page background with deep maroon content blocks in cream text, and the page headings are centered on both.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Theme Consistency",
+       "Cross-page Styling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the kundali matching tool and then the Quick Connect lobby.",
+     "expected_result": "Both show deep maroon content panels with rounded corners on an ivory background, and the lobby's primary start button is gold with dark text.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Theme Consistency",
+       "Component Styling"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Find Priya Reddy's profile card in browse/search.",
+     "expected_result": "Her card is rounded and maroon-styled, her match meter reads 100% with a pill-shaped Strong badge, and her age reads '29 yrs'.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Component Styling",
+       "Data Display"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the Partner Preferences page, change the minimum height to 5'6\" and watch the ranked list's verdict tags.",
+     "expected_result": "The tags render as pill-shaped badges and stay correct through the recalculation — Ananya and Priya move to 75% and still show Strong pills.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Live Recalculation",
+       "Badge Styling"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "In the kundali matching tool, set the first person to Taurus moon sign, Manushya gana, Adi nadi, and the second person to Gemini moon sign, Rakshasa gana, Adi nadi.",
+     "expected_result": "The score reads 2 out of 36 with a Weak tag — 1 raw point (gana only) scales to 1.71 which rounds up to 2, not down to 1.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculator Logic",
+       "Rounding"
+      ]
+     },
+     "copied_from_turn": 2
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Give me an activity dashboard: tiles for pending received interests, pending sent interests, total connections, my acceptance rate — of all the interests I've ever sent, the share that got accepted, shown as a percent — and the average match percent across my connections with its tag. Everything must stay in lockstep with the Interests area as I accept and decline, and nobody gets counted twice even if they reached me more than one way. On a fresh load that acceptance rate is 50% — Priya said yes to my interest, Meera hasn't answered — not 100%.",
+   "source_website": "Shaadi.com",
+   "source_feature": "Profile Boost — dashboard status view, extended into a full activity/engagement dashboard",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the activity dashboard on a fresh load and read the tiles.",
+     "expected_result": "Pending received interests shows 3, pending sent shows 1, connections shows 1, the acceptance rate reads 50% (Priya accepted, Meera still pending), and the average match of connections reads 100% with a Strong tag.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Seeded Data"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the Interests area, accept Vikram Singh's received interest, then open the dashboard.",
+     "expected_result": "Connections shows 2 and pending received drops to 2, but the acceptance rate still reads 50% — accepting an interest I received doesn't change how many of my sent interests were accepted.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Aggregation Semantics",
+       "State Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the Interests area, accept Rohan Mehta's received interest, then open the dashboard and read the average match tile.",
+     "expected_result": "The average match of connections now reads 75% (Priya's 100% and Rohan's 50% averaged) and is tagged Strong.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Computed Values"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Start a Quick Connect session, Pass Ananya, Pass Meera, mark Interested on Sara Khan, end early, then open the dashboard.",
+     "expected_result": "Connections shows 2 (Priya plus the new mutual Sara), pending received drops to 2 because Sara's old interest was cleared, and the average match of connections reads 75% tagged Strong.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Flow",
+       "Aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Start the Quick Connect session, mark Interested on Ananya Iyer, then use the end-early option and look at the results.",
+     "expected_result": "The results show zero mutual matches — Ananya had not flagged interest in me, so my Interested alone does not create a mutual.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Matching Logic",
+       "Boolean Composition"
+      ]
+     },
+     "copied_from_turn": 5
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "We need trust signals. Build a Verification Center where I pick an ID type and type the number — an Aadhaar has to be exactly 12 digits, a PAN exactly 5 letters then 4 digits then 1 letter, and anything else gets rejected with a clear message. A valid submission sits as 'Under review' on a status page with a demo Approve button and a withdraw option, and once approved my own profile card gets a gold-check Verified badge. Ananya, Sara, Vikram, and Priya are already verified — badge them everywhere their cards show up — and add a 'Verified only' toggle to search, plus a religion filter there if search doesn't have one yet — the toggle has to stack on top of whatever other filters I've already set.",
+   "source_website": "Jeevansathi.com",
+   "source_feature": "ID-Verified Member Badge",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "In the Verification Center, choose PAN and enter ABCDE12345, then try again with ABCDE1234F.",
+     "expected_result": "ABCDE12345 is rejected with a clear message (it ends in a digit, not a letter), while ABCDE1234F is accepted and the request shows as Under review.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Form Operations"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Choose Aadhaar, submit 123456789012, then on the status page click the demo Approve button.",
+     "expected_result": "The 12-digit number is accepted, and after approving, the status shows approved and my own profile card displays the gold-check Verified badge.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "Badge Display"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "In search, turn on the Verified only toggle and also filter religion to Hindu.",
+     "expected_result": "Exactly Ananya Iyer, Vikram Singh, and Priya Reddy remain — Sara is excluded despite being verified (she's Muslim) and Rohan is excluded despite being Hindu (unverified).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Boolean Composition",
+       "Filtering"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Submit a valid Aadhaar number 123456789012, then use the withdraw option on the pending request.",
+     "expected_result": "A confirmation prompt appears before the withdrawal happens; after confirming, the request is gone and the status returns to unverified.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Confirmation Dialogs",
+       "Workflow"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the search/browse page, then open the Interests area, and look at each page's background, content blocks, and heading.",
+     "expected_result": "Both pages use an ivory page background with deep maroon content blocks in cream text, and the page headings are centered on both.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Theme Consistency",
+       "Cross-page Styling"
+      ]
+     },
+     "copied_from_turn": 6
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Privacy time: a settings panel with a live 'how others see me' preview card that updates the instant I flip anything — photo shown to everyone, connections only, or hidden (show a silhouette when it's hidden), my name displayed in full or as initials like 'A.K.', and who can message me: anyone, verified members only, or connections only. My profile name should read Arjun Kapoor, by the way. When I pick verified-only or connections-only, the message button on every member who doesn't qualify shows a lock and won't open a chat, while qualifying members' buttons keep working.",
+   "source_website": "Jeevansathi.com",
+   "source_feature": "Granular Privacy Controls",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Open the privacy settings and switch photo visibility to hidden.",
+     "expected_result": "The preview card immediately swaps my photo for a silhouette/placeholder, with no save or reload needed.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Preview",
+       "State Updates"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In privacy settings, switch the name display to initials.",
+     "expected_result": "The preview card instantly shows 'A.K.' in place of Arjun Kapoor.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Preview",
+       "Computed Display"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Set who-can-message to connections only, then look at the message controls on member profiles in browse/search.",
+     "expected_result": "Only Priya Reddy's message control stays active; the other six members all show a locked message control that won't open a chat.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Access Gating",
+       "Seeded Data"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Set who-can-message to verified members only, then check the message controls on Rohan Mehta's and Sara Khan's profiles.",
+     "expected_result": "Rohan's message control is locked (he's unverified) while Sara's remains active (she's verified).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Gating",
+       "Access Control"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "In the Received tab, decline Rohan Mehta's interest.",
+     "expected_result": "A confirmation prompt appears before anything happens; after confirming, Rohan is removed from Received and does not appear in Connections.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Confirmation Dialogs",
+       "Workflow"
+      ]
+     },
+     "copied_from_turn": 3
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Big finish: a Compatibility Report builder where I pick any one of my connections and it lays out an on-screen, copy-ready text summary — both our names and ages, their match-meter percent with its tag, whether they're verified, and our kundali score out of 36 computed with the same rules as the matching tool. Use my chart — Cancer moon, Manushya gana, Madhya nadi — and theirs: Ananya is Virgo/Deva/Adi, Rohan Leo/Rakshasa/Madhya, Sara Pisces/Manushya/Antya, Vikram Aries/Rakshasa/Adi, Meera Scorpio/Deva/Madhya, Daniel Gemini/Manushya/Antya, and Priya Libra/Deva/Adi. Every number in the report has to agree with whatever the meters and badges say at that moment, and if I somehow have no connections at all, show a gentle nudge instead of a broken picker.",
+   "source_website": "Shaadi.com",
+   "source_feature": "Kundali / Horoscope Compatibility Score — the detailed compatibility report, fused with the match meter and verified badge",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the report builder, pick Priya Reddy, and generate the report.",
+     "expected_result": "The report shows a kundali score of 22 out of 36 tagged Moderate, a match meter of 100% tagged Strong, Priya marked as Verified, and her age as '29 yrs'.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Values",
+       "Report Generation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Partner Preferences page, change the minimum height to 5'6\", then generate Priya Reddy's report again.",
+     "expected_result": "The report's match line now reads 75% tagged Strong — it reflects the meter's current value rather than a stale 100%.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Data Consistency",
+       "Live Recalculation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Generate Priya Reddy's report and look at how the output is presented.",
+     "expected_result": "The summary appears directly on the page as a readable text block containing both Arjun Kapoor and Priya Reddy — shown on screen, not delivered as a file download.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Report Generation",
+       "Output Format"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Accept Rohan Mehta's interest in the Received tab, then pick Rohan in the report builder and generate.",
+     "expected_result": "Rohan is now selectable as a connection and his report shows a kundali score of 2 out of 36 tagged Weak, a 50% match tagged Moderate, and no Verified mark.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Flow",
+       "Computed Values"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the activity dashboard on a fresh load and read the tiles.",
+     "expected_result": "Pending received interests shows 3, pending sent shows 1, connections shows 1, the acceptance rate reads 50% (Priya accepted, Meera still pending), and the average match of connections reads 100% with a Strong tag.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Seeded Data"
+      ]
+     },
+     "copied_from_turn": 7
+    }
+   ]
+  }
+ ],
+ "target_app_summary": "The matrimonial site has grown from a profile-search-and-chat app into a full matchmaking suite. Discovery got deeper: a live Ashtakoota kundali calculator, a partner-preferences match meter that scores and ranks every member, and a verified-only trust layer stacked onto search. Relationship workflows grew around a pinned seven-member community: an interests hub with received/sent/connection states, a Quick Connect speed-matching night whose mutuals feed straight into connections, and an activity dashboard that rolls all of it up (acceptance rate, average match of connections). Privacy controls with a live self-preview gate messaging by verification or connection status, and a compatibility report builder fuses the kundali rules, match meter, verified badges, and connections into one on-screen shareable document. A royal ivory-maroon-gold restyle mid-way re-skins every surface built so far. The graph runs several chains deep: interests -> speed matching -> dashboard, and calculator/preferences/verification all converge into the final report.",
+ "dependency_graph": {
+  "nodes": [
+   {
+    "id": "T1",
+    "label": "base app",
+    "archetype": "base"
+   },
+   {
+    "id": "T2",
+    "label": "kundali calculator",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T3",
+    "label": "interests & connections hub",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T4",
+    "label": "preference match meter",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T5",
+    "label": "Quick Connect sessions",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T6",
+    "label": "royal theme restyle",
+    "archetype": "design-restyle"
+   },
+   {
+    "id": "T7",
+    "label": "activity dashboard",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T8",
+    "label": "verification center",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T9",
+    "label": "privacy panel & gates",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T10",
+    "label": "compatibility report builder",
+    "archetype": "derived-state"
+   }
+  ],
+  "edges": [
+   {
+    "from": "T1",
+    "to": "T3",
+    "what": "Send Interest action on base browse/search profiles"
+   },
+   {
+    "from": "T1",
+    "to": "T4",
+    "what": "match meter rendered on base profile cards"
+   },
+   {
+    "from": "T3",
+    "to": "T5",
+    "what": "mutuals become connections and clear pending interests"
+   },
+   {
+    "from": "T4",
+    "to": "T5",
+    "what": "lineup picked and ordered by match meter"
+   },
+   {
+    "from": "T1",
+    "to": "T6",
+    "what": "restyles base search/browse pages"
+   },
+   {
+    "from": "T2",
+    "to": "T6",
+    "what": "restyles kundali tool panels"
+   },
+   {
+    "from": "T3",
+    "to": "T6",
+    "what": "restyles Interests area"
+   },
+   {
+    "from": "T4",
+    "to": "T6",
+    "what": "restyles preferences page and verdict pills"
+   },
+   {
+    "from": "T5",
+    "to": "T6",
+    "what": "restyles Quick Connect screens"
+   },
+   {
+    "from": "T3",
+    "to": "T7",
+    "what": "aggregates interest/connection states"
+   },
+   {
+    "from": "T4",
+    "to": "T7",
+    "what": "averages match percent of connections"
+   },
+   {
+    "from": "T5",
+    "to": "T7",
+    "what": "session mutuals flow into dashboard counts"
+   },
+   {
+    "from": "T1",
+    "to": "T8",
+    "what": "verified badge and toggle in base search"
+   },
+   {
+    "from": "T3",
+    "to": "T9",
+    "what": "connections-only messaging gate"
+   },
+   {
+    "from": "T8",
+    "to": "T9",
+    "what": "verified-only messaging gate"
+   },
+   {
+    "from": "T1",
+    "to": "T9",
+    "what": "preview renders the base profile card"
+   },
+   {
+    "from": "T2",
+    "to": "T10",
+    "what": "report recomputes kundali score with calculator rules"
+   },
+   {
+    "from": "T3",
+    "to": "T10",
+    "what": "report picker limited to connections"
+   },
+   {
+    "from": "T4",
+    "to": "T10",
+    "what": "match meter percent and tag in report"
+   },
+   {
+    "from": "T8",
+    "to": "T10",
+    "what": "verified status line in report"
+   }
+  ]
+ },
+ "global_rules": [
+  {
+   "rule": "Every compatibility or match score anywhere in the app carries a verdict tag: Strong when at least two-thirds of its maximum, Weak when under one-third, Moderate in between.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Any decline, withdraw, or remove action anywhere in the app asks for confirmation before it happens.",
+   "introduced_in_turn": 3
+  },
+  {
+   "rule": "Ages are always displayed in the form '27 yrs' everywhere in the app.",
+   "introduced_in_turn": 4
+  }
+ ],
+ "pinned_seed": {
+  "entity": "7 member profiles",
+  "introduced_in_turn": 3,
+  "records_gist": "Ananya Iyer 27 Chennai Hindu Tamil 5'4\"; Rohan Mehta 31 Mumbai Hindu Gujarati 5'11\"; Sara Khan 29 Delhi Muslim Urdu 5'6\"; Vikram Singh 33 Jaipur Hindu Hindi 6'0\"; Meera Nair 26 Kochi Hindu Malayalam 5'3\"; Daniel D'Souza 34 Goa Christian Konkani 5'9\"; Priya Reddy 29 Hyderabad Hindu Telugu 5'5\"; received interests from Rohan/Sara/Vikram, sent to Meera (pending) and Priya (accepted -> connection)"
+ }
+}

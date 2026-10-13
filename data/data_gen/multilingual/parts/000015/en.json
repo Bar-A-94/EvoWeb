@@ -1,0 +1,847 @@
+{
+ "id": "000015",
+ "instruction": "Please implement a website for a clinical office to display office information and services. The website should have basic pages, including a homepage, about us, services, and contact us. Users should be able to browse the website, learn about the office's information, view the services provided, and contact the office through the contact page. The website should also have a simple navigation menu to help users quickly find the information they need. Style all pages with a light cyan background and cadet blue components.",
+ "Category": {
+  "primary_category": "Content Presentation",
+  "subcategories": [
+   "Static Page Generation",
+   "Data Visualization"
+  ]
+ },
+ "application_type": "Company Brochure Sites",
+ "ui_instruct": [
+  {
+   "task": "Click on the \"About Us\" page link in the navigation menu.",
+   "expected_result": "The \"About Us\" page loads, providing accurate information about the clinical office, such as its history, mission, and team, without any broken links or missing images.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering"
+    ]
+   }
+  },
+  {
+   "task": "Click on the \"Services\" page link in the navigation menu.",
+   "expected_result": "The \"Services\" page loads, detailing the services provided by the clinical office, with each service accurately described and no content overlap or errors.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering"
+    ]
+   }
+  },
+  {
+   "task": "Click on the \"Contact Us\" page link in the navigation menu.",
+   "expected_result": "The \"Contact Us\" page loads correctly and includes a form with fields for the user's name, email, phone number, and message, with clear instructions for submission.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Navigation"
+    ]
+   }
+  },
+  {
+   "task": "Fill out the contact form on the \"Contact Us\" page with valid input and submit.",
+   "expected_result": "The form submits successfully, with a confirmation message displayed indicating that the office received the user's inquiry.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations",
+     "Communication"
+    ]
+   }
+  },
+  {
+   "task": "Verify that the website uses 'light cyan' as the background color and 'cadet blue' as the component color, as specified in the design requirements.",
+   "expected_result": "The website has a background color of 'light cyan' and components (such as buttons, cards, headers, etc.) are styled with the color 'cadet blue', accurately reflecting the design instruction.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "archetype": "derived-state",
+   "source_website": "https://familypracticegi.com/",
+   "source_feature": "Provider/team carousel with photos and credentials",
+   "instruction": "Patients keep asking who they'd actually see, so let's add a Meet Our Team page reachable from the nav. Start me off with exactly these seven, I'll add more later — and fair warning, I'm dumping them in no particular order straight from my notes, the page has to do the sorting itself: Dr. Lucy Chen (Pediatrics, 6 years with us, on-site Tue/Wed/Fri, speaks English & Mandarin, accepting new patients, $180 new-patient visit), Dr. Samuel Reyes (Family Medicine, 15 years, Mon/Wed/Fri, English & Spanish, accepting, $160), Dr. Tom Hardin (Sports Medicine, 3 years, Mon/Fri, English, accepting, $195), Dr. Marcus Webb (Family Medicine, 8 years, Wed/Thu/Fri, English, accepting, $160), Dr. Priya Natarajan (Internal Medicine, 15 years, Tue/Thu, English, waitlist-only, $175), Dr. Elena Vasquez (Dermatology, 8 years, Tuesdays only, English & Spanish, waitlist-only, $210), and Dr. Amara Okafor (Pediatrics, 12 years, Mon/Tue/Thu, English & Spanish, accepting, $180). Each card should show all of that, with the most experienced doctors first — and when two tie on years just go alphabetically by last name, so Natarajan sits ahead of Reyes and Vasquez ahead of Webb, even though that's not how I listed them. Give me specialty filter buttons up top, and a badge on each card for accepting-new-patients versus waitlist-only. One convention while we're at it: anywhere a doctor's name shows up in this app, now and in anything we build later, write it as 'Dr. Lastname' with their specialty right next to it.",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Meet Our Team page from the navigation menu and look at the order of the provider cards.",
+     "expected_result": "The cards run Dr. Natarajan (Internal Medicine), Dr. Reyes (Family Medicine), Dr. Okafor (Pediatrics), Dr. Vasquez (Dermatology), Dr. Webb (Family Medicine), Dr. Chen (Pediatrics), Dr. Hardin (Sports Medicine) — years of experience descending, with the 15-year tie putting Natarajan before Reyes and the 8-year tie putting Vasquez before Webb alphabetically — clearly not the shuffled order the providers were originally given in.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Meet Our Team page, click the Family Medicine specialty filter.",
+     "expected_result": "Only Dr. Reyes and Dr. Webb remain visible, with Dr. Reyes (15 years) listed before Dr. Webb (8 years); the other five providers are no longer shown.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Meet Our Team page, find Dr. Vasquez's card.",
+     "expected_result": "Her card shows Dermatology, 8 years, a $210 new-patient visit fee, Tuesday as her only on-site day, and a waitlist badge that looks clearly different from the Accepting badge on Dr. Okafor's card.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Starting on the homepage, use the navigation menu to open the Meet Our Team page.",
+     "expected_result": "The team page opens from the existing site navigation and shows all seven seeded providers, while Home, About Us, Services, and Contact Us remain reachable from the same menu.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Navigation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Click on the Contact Us link in the navigation menu.",
+     "expected_result": "The Contact Us page loads and displays a way to contact the office, and the navigation menu is still visible on that page.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Navigation"
+      ]
+     },
+     "copied_from_turn": 1
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "source_website": "https://www.fpcdoctors.com/",
+   "source_feature": "Patient resources quick-action section (portal and bill pay), extended into a self-serve cost estimator",
+   "instruction": "People call all day asking what a visit will run them, so give me a Cost Estimator page. You pick one of our doctors and their new-patient fee from the team page is the starting amount, then there are optional add-ons — flu shot $42, basic blood panel $89, sports physical form $25 — and a self-pay checkbox that takes 15% off the whole thing. The total has to recalculate the instant anything is clicked, no calculate button, and show exact cents: Dr. Hardin on self-pay comes out to $165.75, not $166. Before any doctor is picked it should just sit at $0.00, even if someone ticks boxes first.",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Cost Estimator page, select Dr. Hardin as the provider, and check the self-pay option.",
+     "expected_result": "The total reads exactly $165.75 (Dr. Hardin's $195 fee minus 15%), displayed to the cent — not rounded to $166 and not shown as $165.8.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Instant Feedback"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Cost Estimator, select Dr. Okafor, then add the flu shot add-on.",
+     "expected_result": "The total shows $180.00 immediately after picking Dr. Okafor, then updates to $222.00 the moment the flu shot is added, with no separate calculate or submit button needed.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Instant Feedback",
+       "Calculation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the Cost Estimator fresh and check the self-pay option before selecting any provider.",
+     "expected_result": "The total stays at $0.00 (or an equivalent pick-a-provider placeholder) — it never shows NaN, a negative number, or a blank/broken page.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Edge Case Handling"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the Cost Estimator, select Dr. Vasquez and compare the starting amount with her card on the Meet Our Team page.",
+     "expected_result": "The estimator's base amount for Dr. Vasquez is $210, matching the new-patient visit fee shown on her Meet Our Team card.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Cross-Feature Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the Meet Our Team page from the navigation menu and look at the order of the provider cards.",
+     "expected_result": "The cards run Dr. Natarajan (Internal Medicine), Dr. Reyes (Family Medicine), Dr. Okafor (Pediatrics), Dr. Vasquez (Dermatology), Dr. Webb (Family Medicine), Dr. Chen (Pediatrics), Dr. Hardin (Sports Medicine) — years of experience descending, with the 15-year tie putting Natarajan before Reyes and the 8-year tie putting Vasquez before Webb alphabetically — clearly not the shuffled order the providers were originally given in.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Dynamic Content Rendering"
+      ]
+     },
+     "copied_from_turn": 2
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "source_website": "https://familypracticegi.com/",
+   "source_feature": "Office hours displayed with after-hours contact",
+   "instruction": "Next up: a Plan Your Visit page. Top half is our hours table — Monday through Friday 8:00 AM to 5:00 PM except Wednesday when we stay open until 7:00 PM, Saturday 9:00 AM to 1:00 PM walk-ins only with no scheduled doctors, closed Sundays — plus our after-hours line (555) 210-4477. And everywhere in this app, now and for anything we add later, times go in 12-hour format with AM/PM, never 24-hour. Below the table build a weekly coverage grid: one row per doctor in the same most-experienced-first order as the team page, columns Monday through Saturday, with a clear mark in each of that doctor's on-site days, and a totals row along the bottom counting how many doctors we've got in each day. Highlight whichever day has the most doctors — and if several days tie for the most, highlight all of them, don't just grab the first. Saturday's column should total zero with a little walk-ins-only reminder instead of a bare 0, and don't give Sunday a column at all — just a friendly closed-Sundays note under the grid.",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Plan Your Visit page and read the totals row at the bottom of the weekly coverage grid.",
+     "expected_result": "The totals read Monday 3, Tuesday 4, Wednesday 3, Thursday 3, Friday 4, Saturday 0 — and both Tuesday and Friday carry the fullest-coverage highlight (the two-way tie means both are marked, not just one).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Tie-Breaking"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Plan Your Visit page, look at the Saturday column of the coverage grid and look for Sunday anywhere on the page.",
+     "expected_result": "Saturday's column totals zero and shows a walk-ins-only reminder instead of a bare 0, while Sunday has no column in the grid at all — only a friendly closed-on-Sundays note appears, and the page does not go blank or crash.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Edge Case Handling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Plan Your Visit page, read the hours table rows for Wednesday and Saturday.",
+     "expected_result": "Wednesday shows 8:00 AM to 7:00 PM and Saturday shows 9:00 AM to 1:00 PM, in 12-hour AM/PM format (never 17:00 or 19:00).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Formatting"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the Plan Your Visit page, find Dr. Vasquez's row in the coverage grid and compare it with her card on the Meet Our Team page.",
+     "expected_result": "Her row is marked under Tuesday only, matching the Tuesdays-only schedule on her Meet Our Team card, and the grid rows run most-experienced-first with Dr. Natarajan's row at the top and Dr. Hardin's at the bottom.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Cross-Feature Consistency",
+       "Sorting"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the Cost Estimator page, select Dr. Hardin as the provider, and check the self-pay option.",
+     "expected_result": "The total reads exactly $165.75 (Dr. Hardin's $195 fee minus 15%), displayed to the cent — not rounded to $166 and not shown as $165.8.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Instant Feedback"
+      ]
+     },
+     "copied_from_turn": 3
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "source_website": "https://familypracticegi.com/",
+   "source_feature": "Appointment request call-to-action button",
+   "instruction": "Time for online appointment requests — put a Request an Appointment button in the nav that's always there. The form: pick a doctor, but only ones accepting new patients are pickable (waitlist doctors show up disabled with a little note), then a day — restricted to days that doctor is actually on-site — patient name, and a phone number that must be exactly 10 digits or it won't go through. There's also a self-pay checkbox, and as soon as a doctor's picked the form shows the estimated visit cost right there, applying the same 15% self-pay discount the estimator uses. After that a review screen summarizing everything before the final submit, which lands you on a My Requests page; seed that page with three so it isn't empty — Dr. Reyes on a Wednesday marked Confirmed, Dr. Chen on a Friday marked Declined, and Dr. Webb on a Thursday still Pending. From here on, any request status anywhere in the app shows as a colored pill: Pending amber, Confirmed green, Declined red.",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Click the Request an Appointment button and look at the provider choices in the form.",
+     "expected_result": "Exactly five providers are selectable — Dr. Okafor, Dr. Reyes, Dr. Webb, Dr. Chen, and Dr. Hardin; Dr. Natarajan and Dr. Vasquez appear as waitlist-only and cannot be chosen.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Operations",
+       "Validation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the appointment request form, select Dr. Hardin and look at which days can be picked.",
+     "expected_result": "Only Monday and Friday are offered or accepted as day choices for Dr. Hardin; picking any other weekday is impossible or clearly rejected with a message.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Validation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the My Requests page.",
+     "expected_result": "Three seeded requests are visible: Dr. Reyes' Wednesday request with a green Confirmed pill, Dr. Chen's Friday request with a red Declined pill, and Dr. Webb's Thursday request with an amber Pending pill.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Status Indicators"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the appointment request form, select Dr. Okafor and check the self-pay option.",
+     "expected_result": "The estimated visit cost shown on the form reads exactly $153.00 — Dr. Okafor's $180 fee with the estimator's 15% self-pay discount applied.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Cross-Feature Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "On the Meet Our Team page, click the Family Medicine specialty filter.",
+     "expected_result": "Only Dr. Reyes and Dr. Webb remain visible, with Dr. Reyes (15 years) listed before Dr. Webb (8 years); the other five providers are no longer shown.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering"
+      ]
+     },
+     "copied_from_turn": 2
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "source_website": "https://www.fpcdoctors.com/",
+   "source_feature": "Site-wide search",
+   "instruction": "The site's getting big — add a search bar to the header on every page. Results should appear live as I type, no search button: doctors matching on name or specialty (case-insensitive, so typing 'medicine' in lowercase catches the Family, Internal and Sports Medicine folks), services from the Services page, and site pages like Plan Your Visit, grouped by type. Doctors in the results stay sorted most-experienced-first like everywhere else, and when nothing matches I want a friendly no-matches note, not an empty void.",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Type 'medicine' (all lowercase) into the header search bar.",
+     "expected_result": "The doctor results are exactly Dr. Natarajan, Dr. Reyes, Dr. Webb, and Dr. Hardin in that order — the four whose specialties contain 'Medicine', sorted most-experienced-first with the 15-year tie broken alphabetically — matched despite the lowercase query, with no other doctors listed.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Search",
+       "Case Insensitivity"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type 'zzzz' into the header search bar.",
+     "expected_result": "A friendly no-matches message appears instead of a blank results area, and the page does not crash.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Edge Case Handling",
+       "Search"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type 'vasq' into the header search bar without clicking any button.",
+     "expected_result": "Dr. Vasquez appears in the results while typing, without needing to press a separate search button or submit anything.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Instant Feedback",
+       "Search"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Type 'chen' into the header search bar and read Dr. Chen's result entry.",
+     "expected_result": "The result is written as 'Dr. Chen' with her Pediatrics specialty shown right alongside, following the app's provider labeling convention.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Labeling Convention"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the Plan Your Visit page and read the totals row at the bottom of the weekly coverage grid.",
+     "expected_result": "The totals read Monday 3, Tuesday 4, Wednesday 3, Thursday 3, Friday 4, Saturday 0 — and both Tuesday and Friday carry the fullest-coverage highlight (the two-way tie means both are marked, not just one).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Tie-Breaking"
+      ]
+     },
+     "copied_from_turn": 4
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "source_website": "https://familypracticegi.com/",
+   "source_feature": "Appointment request call-to-action, extended into a front-desk triage board",
+   "instruction": "The front desk needs a Requests Board page to triage what comes in from the appointment form. Give every doctor a row with their request tally — even doctors with zero requests stay on the board with a 0, don't drop them — and summary counts of Pending, Confirmed and Declined across the top. Each pending request gets Confirm and Decline buttons, and when we act on one the summary counts and the patient's My Requests page have to update immediately, no reload; if nothing's left pending, show a nice all-caught-up note there instead of empty space.",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Requests Board page and look at the per-provider tallies.",
+     "expected_result": "All seven providers have a row, including zero-request ones — Dr. Natarajan, Dr. Okafor, Dr. Vasquez, and Dr. Hardin each show a tally of 0, while Dr. Reyes, Dr. Chen, and Dr. Webb each show 1.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Requests Board, click Confirm on Dr. Webb's pending request and watch the summary counts.",
+     "expected_result": "Without any reload, Pending drops from 1 to 0 and Confirmed rises from 1 to 2, while Declined stays at 1.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Consistency",
+       "Aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Requests Board, click Confirm on Dr. Webb's pending request, then look at the pending area.",
+     "expected_result": "The pending area shows a clear empty-state note (nothing left to triage) rather than a blank space or an error.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Edge Case Handling"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the Requests Board, click Confirm on Dr. Webb's pending request, then open the My Requests page and find Dr. Webb's request.",
+     "expected_result": "Dr. Webb's request now shows a green Confirmed pill on My Requests, matching the action taken on the board.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Feature Consistency",
+       "Status Indicators"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Click the Request an Appointment button and look at the provider choices in the form.",
+     "expected_result": "Exactly five providers are selectable — Dr. Okafor, Dr. Reyes, Dr. Webb, Dr. Chen, and Dr. Hardin; Dr. Natarajan and Dr. Vasquez appear as waitlist-only and cannot be chosen.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Operations",
+       "Validation"
+      ]
+     },
+     "copied_from_turn": 5
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "source_website": "https://www.fpcdoctors.com/",
+   "source_feature": "News and notices section",
+   "instruction": "Let's get office notices going: a Notices page where staff can post one with a title, a category (Closure, Health Alert, or General), and a pin-to-top toggle, plus the homepage shows the top three. Ordering matters — pinned notices first, then newest by date, and if two share a date go alphabetically by title. Start with these four: 'Flu Shot Clinic Saturdays' (General, June 10, pinned), 'Holiday Closure July 3' (Closure, June 18 — mention in it that we close early at 12:30 that afternoon), 'Measles Advisory' (Health Alert, June 14), and 'New Provider Welcome' introducing Dr. Chen (General, June 14). Anything newly posted just counts as the newest.",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Open the homepage and read the notices section from top to bottom.",
+     "expected_result": "The top three notices are 'Flu Shot Clinic Saturdays' first (pinned despite its older June 10 date), then 'Holiday Closure July 3' (June 18), then 'Measles Advisory' (June 14, ahead of the other June 14 notice alphabetically).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Tie-Breaking"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Notices page, post a new notice titled 'Parking Lot Repaving' with category Closure and no pin, then look at the notices order.",
+     "expected_result": "'Parking Lot Repaving' appears below the pinned 'Flu Shot Clinic Saturdays' but above 'Holiday Closure July 3', since new posts count as newest among unpinned notices.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Operations",
+       "Sorting"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open the Notices page and read the 'New Provider Welcome' notice.",
+     "expected_result": "The notice introduces Dr. Chen written as 'Dr. Chen' with her Pediatrics specialty shown alongside her name.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Labeling Convention"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Open the 'Holiday Closure July 3' notice and read the closing time it mentions.",
+     "expected_result": "The early closing time is displayed as 12:30 PM in 12-hour AM/PM format, not as 12:30 in 24-hour style or an unformatted phrase.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Formatting Convention"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Type 'medicine' (all lowercase) into the header search bar.",
+     "expected_result": "The doctor results are exactly Dr. Natarajan, Dr. Reyes, Dr. Webb, and Dr. Hardin in that order — the four whose specialties contain 'Medicine', sorted most-experienced-first with the 15-year tie broken alphabetically — matched despite the lowercase query, with no other doctors listed.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Search",
+       "Case Insensitivity"
+      ]
+     },
+     "copied_from_turn": 6
+    }
+   ]
+  },
+  {
+   "archetype": "design-restyle",
+   "source_website": "https://www.fpcdoctors.com/",
+   "source_feature": "Card-based quick-action homepage section, fused with a site-wide brand refresh",
+   "instruction": "Our brand refresh landed, so restyle the whole thing — Home, Meet Our Team, Cost Estimator, Plan Your Visit, My Requests, everywhere: swap the light cyan background for clean white, make the header/nav deep teal with white text, turn primary action buttons into pill shapes in deep teal with white text, center every page heading and give it a short teal underline accent, and give all cards rounded corners with a soft shadow. While you're on the homepage, add a row of quick-link cards — Meet Our Team, Cost Estimator, Request an Appointment — in that same new card style. Don't touch the status pill colors or how doctor names are written; this is purely a new coat of paint.",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Open the Meet Our Team page and then the Plan Your Visit page, looking at the header and background on each.",
+     "expected_result": "Both pages show a deep teal header/nav with white text on a white page background — the old light cyan background is gone on both.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Cross-Page Consistency",
+       "Color Scheme"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the homepage, click the quick-link card for requesting an appointment, then look at the form's main action button and the page heading.",
+     "expected_result": "The quick-link card opens the appointment request flow, where the primary action button is pill-shaped deep teal with white text and the page heading is centered with a short teal underline accent.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Component Styling",
+       "Navigation"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open the restyled Meet Our Team page and look at the first provider card.",
+     "expected_result": "The cards have rounded corners with a soft shadow, and the first card is still Dr. Natarajan (Internal Medicine, 15 years) — the restyle did not change the ordering.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Component Styling",
+       "Data Integrity"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Open the My Requests page and look at the seeded requests' status pills.",
+     "expected_result": "The page carries the new look (white background, deep teal header) while the status pills keep their original colors — green Confirmed for Dr. Reyes, red Declined for Dr. Chen, amber Pending for Dr. Webb.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Cross-Feature Consistency",
+       "Status Indicators"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "On the Plan Your Visit page, look at the Saturday column of the coverage grid and look for Sunday anywhere on the page.",
+     "expected_result": "Saturday's column totals zero and shows a walk-ins-only reminder instead of a bare 0, while Sunday has no column in the grid at all — only a friendly closed-on-Sundays note appears, and the page does not go blank or crash.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Edge Case Handling"
+      ]
+     },
+     "copied_from_turn": 4
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "source_website": "https://www.fpcdoctors.com/",
+   "source_feature": "Multi-language support",
+   "instruction": "We serve a lot of Spanish-speaking families, so add an English/Español switch in the header. In Spanish mode the nav, page headings and main labels on Home, Meet Our Team, Plan Your Visit and Contact Us show in Spanish, and the choice sticks as you move between pages. Also, while in Spanish mode the team page should bump our Spanish-speaking doctors to the top of the list — still most-experienced-first within each group, so it leads with Dr. Reyes, then Dr. Okafor, then Dr. Vasquez before the others. Flip back to English and everything returns exactly to how it was, order included.",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Click the Español option in the header, then navigate to the Plan Your Visit page.",
+     "expected_result": "The navigation labels and page headings switch to Spanish on the current page and remain in Spanish after navigating to Plan Your Visit — the language choice sticks across pages.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Persistence",
+       "Localization"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Switch the site to Español and open the Meet Our Team page.",
+     "expected_result": "The Spanish-speaking doctors lead the list in the order Dr. Reyes, Dr. Okafor, Dr. Vasquez, followed by the non-Spanish-speaking doctors; in English mode Dr. Natarajan is first instead.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Localization"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Switch to Español, then switch back to English and open the Meet Our Team page.",
+     "expected_result": "The navigation and headings are back in English and the team list returns to its original order with Dr. Natarajan first — nothing stays stuck in Spanish.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Restoration",
+       "Localization"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In Español mode, open the Plan Your Visit page and read the totals row of the weekly coverage grid.",
+     "expected_result": "The page headings show in Spanish while the totals still read 3, 4, 3, 3, 4, 0 for Monday through Saturday with Tuesday and Friday both highlighted — translation does not change the availability data.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Cross-Feature Consistency",
+       "Localization"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "On the Requests Board, click Confirm on Dr. Webb's pending request, then open the My Requests page and find Dr. Webb's request.",
+     "expected_result": "Dr. Webb's request now shows a green Confirmed pill on My Requests, matching the action taken on the board.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Feature Consistency",
+       "Status Indicators"
+      ]
+     },
+     "copied_from_turn": 7
+    }
+   ]
+  }
+ ],
+ "target_app_summary": "The clinical office brochure site grows into a full patient-facing clinic hub. Discovery grows through a seeded seven-provider team directory with tie-aware experience ordering, a live header search over doctors, services and pages, and a Plan Your Visit page pairing the hours table with a weekly doctor-coverage grid (per-day totals and tie-aware fullest-day highlight); self-service grows through a live visit cost estimator and a validated appointment-request workflow (accepting-only providers, on-site-day and phone validation, self-pay pricing reuse, review step, My Requests statuses); operations grow through a front-desk Requests Board that tallies and resolves those requests, and a pinned/date-ordered notices center feeding the homepage. A site-wide brand restyle with homepage quick-link cards and an English/Espanol mode that reorders the directory for Spanish-speaking doctors round it out. The feature graph fans out from the provider directory (feeding estimator, planner, requests, search, board and language mode), with a three-deep chain from base nav through the directory and appointment workflow into the triage board.",
+ "dependency_graph": {
+  "nodes": [
+   {
+    "id": "T1",
+    "label": "base app",
+    "archetype": "base"
+   },
+   {
+    "id": "T2",
+    "label": "team directory",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T3",
+    "label": "cost estimator",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T4",
+    "label": "visit planner",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T5",
+    "label": "appointment requests",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T6",
+    "label": "site-wide search",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T7",
+    "label": "requests board",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T8",
+    "label": "notices center",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T9",
+    "label": "brand restyle",
+    "archetype": "design-restyle"
+   },
+   {
+    "id": "T10",
+    "label": "language toggle",
+    "archetype": "derived-state"
+   }
+  ],
+  "edges": [
+   {
+    "from": "T1",
+    "to": "T2",
+    "what": "nav menu hosts the team page"
+   },
+   {
+    "from": "T2",
+    "to": "T3",
+    "what": "provider new-patient fees seed the estimator"
+   },
+   {
+    "from": "T2",
+    "to": "T4",
+    "what": "provider on-site days drive the weekly coverage grid"
+   },
+   {
+    "from": "T2",
+    "to": "T5",
+    "what": "accepting status and on-site days gate the request form"
+   },
+   {
+    "from": "T3",
+    "to": "T5",
+    "what": "self-pay 15% pricing reused in the form's cost preview"
+   },
+   {
+    "from": "T2",
+    "to": "T6",
+    "what": "search indexes the provider directory"
+   },
+   {
+    "from": "T1",
+    "to": "T6",
+    "what": "search indexes base services and pages"
+   },
+   {
+    "from": "T4",
+    "to": "T6",
+    "what": "search indexes the Plan Your Visit page"
+   },
+   {
+    "from": "T5",
+    "to": "T7",
+    "what": "board aggregates and resolves appointment requests"
+   },
+   {
+    "from": "T2",
+    "to": "T7",
+    "what": "board rows for all seven providers incl. zero tallies"
+   },
+   {
+    "from": "T1",
+    "to": "T8",
+    "what": "homepage hosts the top-3 notices"
+   },
+   {
+    "from": "T2",
+    "to": "T8",
+    "what": "welcome notice introduces Dr. Chen per the roster's labeling rule"
+   },
+   {
+    "from": "T1",
+    "to": "T9",
+    "what": "restyles base pages + homepage quick-link cards"
+   },
+   {
+    "from": "T2",
+    "to": "T9",
+    "what": "restyles team directory cards"
+   },
+   {
+    "from": "T3",
+    "to": "T9",
+    "what": "restyles estimator page"
+   },
+   {
+    "from": "T4",
+    "to": "T9",
+    "what": "restyles Plan Your Visit page"
+   },
+   {
+    "from": "T5",
+    "to": "T9",
+    "what": "restyles My Requests while preserving pills"
+   },
+   {
+    "from": "T1",
+    "to": "T10",
+    "what": "translates base pages (Home, Contact)"
+   },
+   {
+    "from": "T2",
+    "to": "T10",
+    "what": "reorders directory for Spanish speakers"
+   },
+   {
+    "from": "T4",
+    "to": "T10",
+    "what": "translates Plan Your Visit headings"
+   }
+  ]
+ },
+ "global_rules": [
+  {
+   "rule": "Any doctor shown anywhere in the app is written as 'Dr. Lastname' with their specialty displayed alongside.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "All times of day are displayed in 12-hour format with AM/PM, never 24-hour.",
+   "introduced_in_turn": 4
+  },
+  {
+   "rule": "Request statuses always render as colored pills: Pending amber, Confirmed green, Declined red.",
+   "introduced_in_turn": 5
+  }
+ ],
+ "pinned_seed": {
+  "entity": "7 clinic providers",
+  "introduced_in_turn": 2,
+  "records_gist": "Seeded shuffled (display must re-sort): Chen/Peds/6y/Tue,Wed,Fri/ZH/accepting/$180; Reyes/Family/15y/Mon,Wed,Fri/ES/accepting/$160; Hardin/Sports/3y/Mon,Fri/accepting/$195; Webb/Family/8y/Wed,Thu,Fri/accepting/$160; Natarajan/Internal/15y/Tue,Thu/waitlist/$175; Vasquez/Derm/8y/Tue/ES/waitlist/$210; Okafor/Peds/12y/Mon,Tue,Thu/ES/accepting/$180 — display order is experience-desc with alphabetical last-name tie-break: Natarajan, Reyes, Okafor, Vasquez, Webb, Chen, Hardin"
+ }
+}

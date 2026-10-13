@@ -1,0 +1,891 @@
+{
+ "id": "000051",
+ "instruction": "Please implement a recruitment website for hiring drivers and posting job listings. The website should have functionalities for user registration, job posting, job application, and contact form. Users should be able to register and create profiles, apply for jobs, and manage their contact information. Clients should be able to view their active job postings. The website should include pages such as home, about us, clients, drivers, jobs, and contact. Design the site using white as the background and navy for content blocks.",
+ "Category": {
+  "primary_category": "User Interaction",
+  "subcategories": [
+   "Form Systems",
+   "Authentication",
+   "E-commerce"
+  ]
+ },
+ "application_type": "Job Search Platforms",
+ "ui_instruct": [
+  {
+   "task": "Test user registration form submission.",
+   "expected_result": "A new user profile is created successfully, and a confirmation message is displayed indicating registration completion.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations",
+     "Authentication Flows"
+    ]
+   }
+  },
+  {
+   "task": "Test job posting functionality for clients.",
+   "expected_result": "A new job listing is created and appears in the list of active job postings with correct details.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations",
+     "E-commerce",
+     "Communication"
+    ]
+   }
+  },
+  {
+   "task": "Verify that users can apply for a job listing.",
+   "expected_result": "The user's application is submitted successfully, and confirmation is displayed to the user.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations",
+     "Communication"
+    ]
+   }
+  },
+  {
+   "task": "Check that users can update their contact information.",
+   "expected_result": "Changes to the contact information are saved, and a confirmation message is displayed to the user.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Authentication Flows"
+    ]
+   }
+  },
+  {
+   "task": "Validate that the contact form can be submitted.",
+   "expected_result": "The contact form submission succeeds, and a thank you message is displayed to the user.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations"
+    ]
+   }
+  },
+  {
+   "task": "Confirm navigation from the home page to the 'About Us' page.",
+   "expected_result": "Clicking the 'About Us' link takes the user to the 'About Us' page without any errors.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering"
+    ]
+   }
+  },
+  {
+   "task": "Verify accessibility of the home page.",
+   "expected_result": "The home page is accessible.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency",
+     "Responsive Behavior"
+    ]
+   }
+  },
+  {
+   "task": "Check the ability for clients to view all their active job postings.",
+   "expected_result": "The client can see a list of all active job postings with correct and up-to-date information.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering",
+     "Details Information"
+    ]
+   }
+  },
+  {
+   "task": "Verify that the website uses 'white' as the background color and 'navy' as the component color, as specified in the design requirements.",
+   "expected_result": "The website has a background color of 'white' and components (such as buttons, cards, headers, etc.) are styled with the color 'navy', accurately reflecting the design instruction.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "archetype": "derived-state",
+   "instruction": "The jobs page is getting crowded — give it a proper screener. I want filters for state, job type, and CDL class (picking two states should show jobs from either one, but stacking a job type on top should narrow within those), plus a box where I type a minimum weekly pay — and a job paying exactly what I type still counts. Start me off with exactly these seven listings, I'll add more later: Redline Freight (OTR, Class A, Ohio, $1,560/wk, featured), Summit Logistics (OTR, Class A, Texas, $1,560/wk), Prairie Tankers (Regional, Class A, Texas, $1,480/wk, featured), Northgate Carriers (OTR, Class B, Ohio, $1,340/wk), Bluegrass Haulers (Regional, Class A, Kentucky, $1,340/wk), Metro Movers (Local, Class B, Ohio, $1,120/wk), Harbor Express (Local, Class B, Texas, $980/wk). If nothing matches, say so nicely instead of showing a blank page, and give me a clear-all that brings everything back. Two things I care about everywhere in this app, now and for anything we add later: weekly pay always written like $1,560/wk — whole dollars, comma, the /wk tacked on — and job type always shown as a little colored tag: green for Local, amber for Regional, blue for OTR.",
+   "source_website": "CDLjobs.com",
+   "source_feature": "Advanced job search filters",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the jobs page, type 1340 into the minimum weekly pay input and select Ohio in the state filter.",
+     "expected_result": "Exactly two listings remain: Redline Freight ($1,560/wk) and Northgate Carriers ($1,340/wk) — Northgate, which pays exactly $1,340, is included.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "filtering",
+       "boundary values"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the jobs page, select Kentucky as the state and Local as the job type.",
+     "expected_result": "No listings match; a friendly no-results message is shown and the page does not go blank or crash.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "filtering",
+       "empty state"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the jobs page, select both Ohio and Texas as states and OTR as the job type, then use the clear-all control.",
+     "expected_result": "With the filters on, only Redline Freight, Summit Logistics, and Northgate Carriers are shown (jobs from either state, but only OTR); after clear-all, all seven listings return.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "boolean filter composition",
+       "reset behavior"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "From the site navigation, open the jobs page and look at the listings.",
+     "expected_result": "All seven seeded listings appear, each showing pay in the $X,XXX/wk style and a colored job type tag (green for Local, amber for Regional, blue for OTR).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "seed data rendering",
+       "formatting conventions"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 1,
+     "task": "From the site navigation, open the About Us page.",
+     "expected_result": "The About Us page loads with visible content and the site navigation remains available.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "navigation"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Drivers keep asking what a load rate actually works out to — build a pay calculator page. They type cents per mile, average miles per week, and weeks on the road per year, and it figures the weekly gross (cents times miles, so 63 cents at 2,470 miles is $1,556 — round to the nearest dollar) plus the annual on top, updating as they type with no submit button. While they're at it, show how many current openings on our board pay at least that computed weekly figure — an opening paying exactly the same number counts. Garbage input like negatives or letters should get a friendly note, never a NaN or a crash. And add a save-as-my-pay-target button that remembers the weekly figure and shows it on the page — I've got plans for it.",
+   "source_website": "CDLjobs.com",
+   "source_feature": "Advanced job search filters (pay criteria, extended into a live pay calculator)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the pay calculator, type 67 into cents per mile and 2000 into miles per week.",
+     "expected_result": "Weekly gross shows $1,340/wk, and the openings readout says 5 openings pay at least that — Bluegrass Haulers and Northgate Carriers at exactly $1,340/wk are counted.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "calculation",
+       "inclusive boundary"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the pay calculator, type 63 into cents per mile and 2470 into miles per week, then change the miles to 2400.",
+     "expected_result": "Weekly gross updates live without any submit: $1,556/wk after typing 2470, changing to $1,512/wk once miles reads 2400.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "live updates",
+       "rounding"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the pay calculator, type -5 into the cents per mile field.",
+     "expected_result": "A friendly validation note appears and no output shows NaN, a negative pay, or a crash.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "input validation",
+       "error state"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the pay calculator, type 62 into cents per mile and 2500 into miles per week, then look at the weekly gross.",
+     "expected_result": "It reads $1,550/wk — whole dollars with a comma and the /wk suffix, matching how pay is written everywhere in the app.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "formatting conventions"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "On the jobs page, type 1340 into the minimum weekly pay input and select Ohio in the state filter.",
+     "expected_result": "Exactly two listings remain: Redline Freight ($1,560/wk) and Northgate Carriers ($1,340/wk) — Northgate, which pays exactly $1,340, is included.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "filtering",
+       "boundary values"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Time to make those featured listings earn their keep. Redline and Prairie should sit pinned in their own highlighted spot at the top of the jobs page with a featured badge, ordered by pay, and everything else below sorted highest weekly pay first — when two pay the same, alphabetical by company name settles it, so Bluegrass Haulers lands above Northgate Carriers even though Northgate went onto the board first. Give me a toggle to flip the regular section to lowest-first (the featured spot stays put up top, highest-first). And this all has to respect whatever the screener is currently showing — if a featured job doesn't match the filters it disappears like anything else, no ghost pins.",
+   "source_website": "CDLjobs.com",
+   "source_feature": "Featured/highlighted job listings",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the jobs page with no filters applied and read the order of the listings.",
+     "expected_result": "The featured spot on top shows Redline Freight then Prairie Tankers, each with a featured badge; the regular section starts Summit Logistics, then Bluegrass Haulers, then Northgate Carriers — Bluegrass above Northgate even though both pay $1,340/wk and Northgate was seeded first (alphabetical tiebreak, not seed order).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "sorting",
+       "tie-breaking"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the jobs page, flip the sort toggle to lowest pay first.",
+     "expected_result": "The regular section reorders with Harbor Express first and Metro Movers second, while the featured spot stays pinned on top unchanged.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "sorting",
+       "pinned items"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the jobs page, filter job type to Local.",
+     "expected_result": "No featured pins remain (neither featured job is Local); the regular section shows Metro Movers then Harbor Express, and nothing crashes.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "empty state",
+       "filter interaction"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the jobs page, type 1480 into the minimum weekly pay input.",
+     "expected_result": "The featured spot shows Redline Freight and Prairie Tankers (Prairie pays exactly $1,480/wk so it stays); the regular section shows only Summit Logistics.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "filter interaction",
+       "boundary values"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "On the pay calculator, type 63 into cents per mile and 2470 into miles per week, then change the miles to 2400.",
+     "expected_result": "Weekly gross updates live without any submit: $1,556/wk after typing 2470, changing to $1,512/wk once miles reads 2400.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "live updates",
+       "rounding"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Drivers fire applications into the void and then lose track of them — give them a My Applications page. Set up a sample driver for me, Marcus Webb, phone 555-0142, Class A, and seed him with applications already in at Redline Freight and Summit Logistics, both sitting at Submitted. Each row shows the job with its colored type tag, its pay, and the status. The jobs page has to stay in sync with it: any listing Marcus has an application in for wears an Applied marker on its card, and trying to apply there again gets stopped with a note pointing him at My Applications instead. Withdrawing works from My Applications — pick a row, get shown exactly which job's application is being pulled, and once it's done the row disappears, that listing's Applied marker clears, and the job takes applications from him again. Which reminds me — one rule for the whole app going forward: anything that withdraws, removes, or cancels something asks me to confirm first.",
+   "source_website": "CDLjobs.com",
+   "source_feature": "Driver application status tracking (applied-state markers and withdrawal)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the My Applications page, then go to the jobs page and check which cards carry the Applied marker.",
+     "expected_result": "My Applications shows exactly two rows — Redline Freight and Summit Logistics, each at $1,560/wk with a blue OTR tag and a Submitted status — and on the jobs page exactly those two cards wear the Applied marker while the other five listings don't.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "seed data rendering",
+       "cross-page consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On My Applications, withdraw the Summit Logistics application, watching what the app shows before it goes through.",
+     "expected_result": "A confirmation step spells out that the Summit Logistics application is the one being pulled before anything changes; after confirming, the Summit row is gone from My Applications, and on the jobs page Summit's Applied marker has cleared and the listing accepts an application from Marcus again.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "confirmation gating",
+       "workflow",
+       "cross-page consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the jobs page, try to apply to Redline Freight as Marcus.",
+     "expected_result": "The app stops it with a note that Marcus already has an application in for that job and points him to My Applications; no second Redline Freight row shows up there.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "duplicate prevention"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the jobs page, apply to Prairie Tankers as Marcus and submit it, then open My Applications.",
+     "expected_result": "Prairie Tankers now wears the Applied marker on the jobs page, and its new My Applications row shows $1,480/wk, an amber Regional tag, and a Submitted status — pay and tag following the app-wide conventions.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "cross-feature flow",
+       "formatting conventions"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "On the jobs page, select both Ohio and Texas as states and OTR as the job type, then use the clear-all control.",
+     "expected_result": "With the filters on, only Redline Freight, Summit Logistics, and Northgate Carriers are shown (jobs from either state, but only OTR); after clear-all, all seven listings return.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "boolean filter composition",
+       "reset behavior"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Clients need eyes on their pipeline — build them an applications dashboard. Every posting gets its own card with how many applications it has and a status breakdown, plus overall numbers up top: total applications and how many distinct drivers that actually is (folks apply to multiple jobs — don't double count them). Statuses run Submitted, Under Review, Interview, Hired, Rejected, and the client can move any application along right from the card, with every number staying honest as they do; the driver should see the new status on their My Applications page too. Besides the Redline and Summit applications Marcus already has in, seed these: Dana Ortiz on Redline Freight (Interview), Dana Ortiz on Bluegrass Haulers (Submitted), Luis Romero on Metro Movers (Submitted), and Priya Nair on Prairie Tankers (Under Review). Postings with nothing yet should still show their card with a zero, not vanish.",
+   "source_website": "JobsInTrucks.com",
+   "source_feature": "Employer resume database access (client dashboard)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the client applications dashboard and read the overall numbers at the top.",
+     "expected_result": "Total applications is 6 and distinct drivers is 4 — Marcus Webb and Dana Ortiz each applied twice but are counted once in the driver figure.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "aggregation",
+       "deduplication"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "On the client dashboard, find the Redline Freight card and the Harbor Express card.",
+     "expected_result": "Redline Freight shows 2 applications (one Submitted, one Interview); Harbor Express still shows a card with 0 applications rather than disappearing.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "per-item rollups",
+       "zero state"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the client dashboard, move Marcus Webb's Summit Logistics application from Submitted to Under Review, then open My Applications.",
+     "expected_result": "The dashboard's breakdown updates immediately — Submitted drops to 3 and Under Review rises to 2 while total stays 6 — and the Summit Logistics row on My Applications now reads Under Review.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "state management",
+       "cross-page consistency"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the jobs page, apply to Metro Movers as the saved driver Marcus Webb and submit it, then open the client dashboard.",
+     "expected_result": "Metro Movers' card now shows 2 applications, total applications reads 7, and distinct drivers stays 4 since Marcus was already counted.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "aggregation",
+       "cross-feature flow"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 4,
+     "task": "Open the jobs page with no filters applied and read the order of the listings.",
+     "expected_result": "The featured spot on top shows Redline Freight then Prairie Tankers, each with a featured badge; the regular section starts Summit Logistics, then Bluegrass Haulers, then Northgate Carriers — Bluegrass above Northgate even though both pay $1,340/wk and Northgate was seeded first (alphabetical tiebreak, not seed order).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "sorting",
+       "tie-breaking"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Drivers want to know which jobs actually fit them — add a match tuner to the drivers page. They pick a license class and a preferred state and type a minimum weekly pay, and every job on the board gets a live score: 50 points for the class matching, 30 for the state, 20 if the pay meets the minimum (exactly meeting it counts), re-ranking the list as they change anything — no apply button. Highest score on top; equal scores go alphabetical by company name. The minimum-pay box should come pre-loaded with whatever target they saved over on the pay calculator, or just sit at zero if they never saved one.",
+   "source_website": "JobsInTrucks.com",
+   "source_feature": "Driver profile matching system",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the drivers page match tuner, choose Class A, choose Ohio, and type 1340 into the minimum pay box.",
+     "expected_result": "Redline Freight tops the list at 100 points; next come Bluegrass Haulers, Prairie Tankers, and Summit Logistics all at 70, in that alphabetical order — not in the order the jobs were added.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "scoring",
+       "tie-breaking"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "With Class A, Ohio, and 1340 set in the match tuner, change the state to Texas.",
+     "expected_result": "Scores re-rank live with no apply step: Prairie Tankers and Summit Logistics rise to 100 with Prairie listed first (alphabetical tie), and Redline Freight drops to 70.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "live updates",
+       "scoring"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the match tuner, set Class A and Texas and type 1480 into the minimum pay box.",
+     "expected_result": "Prairie Tankers still earns the full pay points — a job paying exactly the typed minimum counts — so Prairie and Summit both show 100.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "inclusive boundary",
+       "scoring"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the pay calculator, type 67 into cents per mile and 2000 into miles per week, click the save-target button, then open the match tuner on the drivers page.",
+     "expected_result": "The minimum pay box arrives pre-filled with 1340, the target just saved on the calculator.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "cross-feature flow",
+       "prefill"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 5,
+     "task": "On the jobs page, try to apply to Redline Freight as Marcus.",
+     "expected_result": "The app stops it with a note that Marcus already has an application in for that job and points him to My Applications; no second Redline Freight row shows up there.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "duplicate prevention"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Give our client companies real profiles. Turn the clients page into a directory of all seven carriers, sorted by rating, best first — here are the ratings: Redline Freight 4.6, Prairie Tankers 4.6, Summit Logistics 4.5, Bluegrass Haulers 4.2, Northgate Carriers 4.0, Metro Movers 3.9, Harbor Express 3.4 — ties go alphabetical, so Prairie edges out Redline. Clicking one opens a profile with its rating, its open positions, the average weekly pay of those openings rounded to the nearest dollar, and how many applications it's received — the same number the client dashboard shows. Also, Redline just opened a second run: Regional, Class A, Texas, $1,325/wk, a regular listing not featured — get it on the board so it shows up through the screener like anything else; that puts Redline's average at $1,443/wk, not $1,442.",
+   "source_website": "CDLjobs.com",
+   "source_feature": "Carrier profile pages (fused with JobsInTrucks featured company showcase)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the clients directory and read the order of the company cards.",
+     "expected_result": "Prairie Tankers is first and Redline Freight second — both rated 4.6, alphabetical breaks the tie — followed by Summit Logistics at 4.5.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "sorting",
+       "tie-breaking"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "From the directory, open Redline Freight's profile.",
+     "expected_result": "It shows 2 open positions, 2 applications received, and an average weekly pay of $1,443/wk — rounded up from $1,442.50, not shown as $1,442.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "aggregation",
+       "rounding"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "From the directory, open Harbor Express's profile.",
+     "expected_result": "It shows its 1 opening at $980/wk, rating 3.4, and 0 applications received — the zero renders cleanly instead of a blank or an error.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "zero state"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the jobs page, filter state to Texas and job type to Regional.",
+     "expected_result": "Both Prairie Tankers and Redline Freight's new Regional run ($1,325/wk) appear — the newly added listing flows through the screener like any other.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "filtering",
+       "cross-feature flow"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "On the pay calculator, type 67 into cents per mile and 2000 into miles per week.",
+     "expected_result": "Weekly gross shows $1,340/wk, and the openings readout says 5 openings pay at least that — Bluegrass Haulers and Northgate Carriers at exactly $1,340/wk are counted.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "calculation",
+       "inclusive boundary"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "design-restyle",
+   "instruction": "The site's looking dated — freshen it up, and do it consistently everywhere: the jobs page, the pay calculator, My Applications, the client dashboard, the company directory, and home. Primary action buttons — applying to a job, saving a pay target, confirm buttons — go solid amber with navy text. Every page heading gets left-aligned with a short navy accent bar underneath it. All cards — job cards, company cards, application rows, dashboard cards — get 12px rounded corners and a thin navy border. The featured badge becomes a gold star badge, and the nav links go uppercase across the site. Keep the white background with navy content blocks, and don't touch the job-type tag colors.",
+   "source_website": "CDLjobs.com",
+   "source_feature": "Featured/highlighted job listings (visual identity refresh across the site)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the jobs page, then the clients directory, and look at the cards and the page headings.",
+     "expected_result": "All 8 job listing cards and all 7 company cards have rounded corners with a thin navy border — none left in the old style — and each page heading is left-aligned with a short navy accent bar beneath it.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "cross-page consistency",
+       "card styling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Look at the apply button on a jobs-page card, then open the pay calculator and look at the save-target button.",
+     "expected_result": "Both buttons are solid amber with navy text — the same treatment on both pages.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "button styling",
+       "cross-page consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the My Applications page and the client dashboard and check their headings and the navigation links.",
+     "expected_result": "Both headings carry the left-aligned navy accent bar style, and the navigation links read in uppercase on both pages.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "typography",
+       "cross-page consistency"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the jobs page, find Redline Freight in the featured spot and check its badge and its job type tag.",
+     "expected_result": "The featured badge now uses the gold star style while Redline still sits pinned in the featured spot, and its OTR tag is still blue — the restyle didn't break the tag color convention.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "badge styling",
+       "color and badge conventions"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 6,
+     "task": "Open the client applications dashboard and read the overall numbers at the top.",
+     "expected_result": "Total applications is 6 and distinct drivers is 4 — Marcus Webb and Dana Ortiz each applied twice but are counted once in the driver figure.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "aggregation",
+       "deduplication"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Last piece: interviews. When an application hits the Interview stage, its card on the client dashboard should offer to schedule against three fixed slots — Mon 9:00 AM, Tue 2:00 PM, Thu 10:30 AM — with a quick review-and-confirm, and the booked slot then shows both on that dashboard card and on the driver's My Applications row for that job. A slot that's already booked can't be double-booked — Dana Ortiz's Redline interview is already set for Mon 9:00 AM, and I've since moved Marcus's Summit application and Priya's Prairie application to Interview too, so seed all of that. Applications that aren't at Interview don't get the scheduling option at all, and a booked interview can be cancelled from the dashboard.",
+   "source_website": "JobsInTrucks.com",
+   "source_feature": "Employer resume database access (proactive recruiter outreach, extended into interview scheduling)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the client dashboard and read the status breakdown.",
+     "expected_result": "It reads 3 Submitted and 3 Interview with 0 Under Review (6 total) — reflecting Marcus's Summit and Priya's Prairie applications now at Interview alongside Dana's Redline one.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "aggregation",
+       "seed data rendering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the client dashboard, look at Luis Romero's Metro Movers application, then move its status to Interview.",
+     "expected_result": "Before the change it offers no scheduling option; the moment its status is Interview, the schedule action appears.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "workflow gating",
+       "state management"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Schedule Priya Nair's Prairie Tankers interview: pick Mon 9:00 AM first, then pick Thu 10:30 AM and confirm.",
+     "expected_result": "Mon 9:00 AM is rejected as already booked (Dana's Redline interview holds it); Thu 10:30 AM goes through review-and-confirm and shows as booked on Priya's card.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "conflict detection",
+       "workflow"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the client dashboard, schedule Marcus Webb's Summit Logistics interview for Tue 2:00 PM and confirm, then open Marcus's My Applications page.",
+     "expected_result": "The Summit Logistics row shows the interview booked for Tue 2:00 PM — the slot picked on the dashboard lands on the driver's side.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "cross-page consistency",
+       "cross-feature flow"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 7,
+     "task": "On the drivers page match tuner, choose Class A, choose Ohio, and type 1340 into the minimum pay box.",
+     "expected_result": "Redline Freight tops the list at 100 points; next come Bluegrass Haulers, Prairie Tankers, and Summit Logistics all at 70, in that alphabetical order — not in the order the jobs were added.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "scoring",
+       "tie-breaking"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "target_app_summary": "The driver recruitment site grows from a simple job board with registration and a contact form into a full two-sided hiring platform. Drivers get a multi-criteria job screener over a pinned board of carrier listings, a live pay calculator that saves a personal pay target, a match-score tuner that ranks every job against their preferences, and a My Applications tracker that mirrors applied state onto the job board with Applied markers and handles confirm-gated withdrawals. Clients get an applications dashboard with per-posting rollups, a status pipeline, company profile pages with rating-ranked directory and pay averages, and an interview scheduling flow with slot-conflict handling that writes back to the driver's side. A late full-site restyle unifies buttons, headings, cards, and badges across every surface. The feature graph has two deep spines: jobs-page features stack screener -> featured ranking -> company listings, and the hiring pipeline stacks the base apply flow -> application tracker -> client dashboard -> interview scheduling (4 deep), with the calculator's saved target feeding the match tuner.",
+ "dependency_graph": {
+  "nodes": [
+   {
+    "id": "T1",
+    "label": "base app",
+    "archetype": "base"
+   },
+   {
+    "id": "T2",
+    "label": "job screener",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T3",
+    "label": "pay calculator",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T4",
+    "label": "featured ranking",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T5",
+    "label": "my applications tracker",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T6",
+    "label": "client applications dashboard",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T7",
+    "label": "match score tuner",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T8",
+    "label": "company directory profiles",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T9",
+    "label": "full-site restyle",
+    "archetype": "design-restyle"
+   },
+   {
+    "id": "T10",
+    "label": "interview scheduling",
+    "archetype": "multi-surface-workflow"
+   }
+  ],
+  "edges": [
+   {
+    "from": "T1",
+    "to": "T2",
+    "what": "jobs page hosts the screener"
+   },
+   {
+    "from": "T2",
+    "to": "T4",
+    "what": "featured pinning and ranking apply within the screener's filtered set"
+   },
+   {
+    "from": "T1",
+    "to": "T5",
+    "what": "tracker rows and Applied markers reflect applications made through the base apply flow"
+   },
+   {
+    "from": "T5",
+    "to": "T6",
+    "what": "dashboard aggregates the tracked applications and its status moves show on My Applications rows"
+   },
+   {
+    "from": "T1",
+    "to": "T7",
+    "what": "drivers page hosts the match tuner"
+   },
+   {
+    "from": "T3",
+    "to": "T7",
+    "what": "saved pay target pre-fills the tuner's minimum-pay box"
+   },
+   {
+    "from": "T2",
+    "to": "T8",
+    "what": "new Redline listing must surface through the screener"
+   },
+   {
+    "from": "T6",
+    "to": "T8",
+    "what": "profile application counts mirror the dashboard pipeline"
+   },
+   {
+    "from": "T1",
+    "to": "T9",
+    "what": "restyles home/nav headings and links"
+   },
+   {
+    "from": "T2",
+    "to": "T9",
+    "what": "restyles the jobs/screener page cards"
+   },
+   {
+    "from": "T3",
+    "to": "T9",
+    "what": "restyles the calculator's save-target button"
+   },
+   {
+    "from": "T4",
+    "to": "T9",
+    "what": "restyles the featured badge"
+   },
+   {
+    "from": "T5",
+    "to": "T9",
+    "what": "restyles My Applications rows"
+   },
+   {
+    "from": "T6",
+    "to": "T9",
+    "what": "restyles dashboard cards"
+   },
+   {
+    "from": "T8",
+    "to": "T9",
+    "what": "restyles directory company cards"
+   },
+   {
+    "from": "T6",
+    "to": "T10",
+    "what": "scheduling launches from dashboard's Interview-stage applications"
+   },
+   {
+    "from": "T5",
+    "to": "T10",
+    "what": "booked slot lands on the driver's My Applications row"
+   }
+  ]
+ },
+ "global_rules": [
+  {
+   "rule": "Weekly pay is always written as whole dollars with a comma and a /wk suffix (e.g. $1,560/wk) everywhere in the app.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Job type is always shown as a colored tag wherever a job appears: green for Local, amber for Regional, blue for OTR.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Any action that withdraws, removes, or cancels something asks for confirmation first, app-wide.",
+   "introduced_in_turn": 5
+  }
+ ],
+ "pinned_seed": {
+  "entity": "7 driver job listings",
+  "introduced_in_turn": 2,
+  "records_gist": "Redline Freight OTR/A/OH $1,560 featured; Summit Logistics OTR/A/TX $1,560; Prairie Tankers Regional/A/TX $1,480 featured; Northgate Carriers OTR/B/OH $1,340; Bluegrass Haulers Regional/A/KY $1,340; Metro Movers Local/B/OH $1,120; Harbor Express Local/B/TX $980"
+ }
+}

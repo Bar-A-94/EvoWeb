@@ -1,0 +1,7 @@
+# Scoring, the ablations and the test suite (Python >= 3.10).
+numpy
+matplotlib
+pytest
+# The judge experiment (ablations/grounding/judge) and the harness's own requirements are
+# separate: see ablations/grounding/judge/README.md and harness/requirements.txt (the
+# harness runs inside its Docker image).

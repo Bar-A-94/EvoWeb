@@ -1,0 +1,707 @@
+{
+  "anchors": [
+    {
+      "en": "data management",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [1],
+      "translations": {
+        "es": "gestión de datos",
+        "zh": "数据管理",
+        "he": "ניהול נתונים",
+        "hi": "डेटा प्रबंधन",
+        "sw": "usimamizi wa data",
+        "de": "Datenverwaltung",
+        "fr": "gestion des données"
+      }
+    },
+    {
+      "en": "cohort screener",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [2, 3, 4, 5, 6, 8],
+      "translations": {
+        "es": "selector de cohorte",
+        "zh": "队列筛选器",
+        "he": "מסנן קוהורטה",
+        "hi": "कोहॉर्ट स्क्रीनर",
+        "sw": "kichujio cha kundi",
+        "de": "Kohorten-Screener",
+        "fr": "sélecteur de cohorte"
+      }
+    },
+    {
+      "en": "age group",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [2, 3, 4, 5, 6, 7, 9],
+      "translations": {
+        "es": "grupo de edad",
+        "zh": "年龄组",
+        "he": "קבוצת גיל",
+        "hi": "आयु वर्ग",
+        "sw": "kundi la umri",
+        "de": "Altersgruppe",
+        "fr": "tranche d'âge"
+      }
+    },
+    {
+      "en": "ethnicity",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [2, 3, 4, 5, 6, 7, 9],
+      "translations": {
+        "es": "etnia",
+        "zh": "族裔",
+        "he": "מוצא אתני",
+        "hi": "जातीयता",
+        "sw": "kabila",
+        "de": "Ethnie",
+        "fr": "origine ethnique"
+      }
+    },
+    {
+      "en": "Black",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [2, 3, 5],
+      "translations": {
+        "es": "Negra",
+        "zh": "黑人",
+        "he": "שחורה",
+        "hi": "अश्वेत",
+        "sw": "Mweusi",
+        "de": "Schwarz",
+        "fr": "Noire"
+      }
+    },
+    {
+      "en": "Hispanic",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [2, 4, 5, 6],
+      "translations": {
+        "es": "Hispana",
+        "zh": "拉丁裔",
+        "he": "היספנית",
+        "hi": "हिस्पैनिक",
+        "sw": "Mhispania",
+        "de": "Hispanisch",
+        "fr": "Hispanique"
+      }
+    },
+    {
+      "en": "Asian",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [2, 7],
+      "translations": {
+        "es": "Asiática",
+        "zh": "亚裔",
+        "he": "אסייתית",
+        "hi": "एशियाई",
+        "sw": "Mwasia",
+        "de": "Asiatisch",
+        "fr": "Asiatique"
+      }
+    },
+    {
+      "en": "White",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [2],
+      "translations": {
+        "es": "Blanca",
+        "zh": "白人",
+        "he": "לבנה",
+        "hi": "श्वेत",
+        "sw": "Mzungu",
+        "de": "Weiß",
+        "fr": "Blanche"
+      }
+    },
+    {
+      "en": "Week",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [2],
+      "translations": {
+        "es": "Semana",
+        "zh": "周",
+        "he": "שבוע",
+        "hi": "सप्ताह",
+        "sw": "Wiki",
+        "de": "Woche",
+        "fr": "Semaine"
+      }
+    },
+    {
+      "en": "matching X of Y",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [2],
+      "translations": {
+        "es": "coincidencias X de Y",
+        "zh": "匹配 X / 共 Y",
+        "he": "תואמות X מתוך Y",
+        "hi": "Y में से X मेल",
+        "sw": "zinazolingana X kati ya Y",
+        "de": "Treffer X von Y",
+        "fr": "correspondances X sur Y"
+      }
+    },
+    {
+      "en": "clear-all",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [2],
+      "translations": {
+        "es": "borrar todo",
+        "zh": "全部清除",
+        "he": "נקה הכול",
+        "hi": "सब हटाएँ",
+        "sw": "futa yote",
+        "de": "Alles löschen",
+        "fr": "tout effacer"
+      }
+    },
+    {
+      "en": "Wellness Self-Check",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [3, 4, 10],
+      "translations": {
+        "es": "Autoevaluación de Bienestar",
+        "zh": "健康自测",
+        "he": "בדיקה עצמית לרווחה",
+        "hi": "वेलनेस स्व-जाँच",
+        "sw": "Kujipima Ustawi",
+        "de": "Wellness-Selbstcheck",
+        "fr": "Auto-évaluation du Bien-être"
+      }
+    },
+    {
+      "en": "Needs attention",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [3],
+      "translations": {
+        "es": "Necesita atención",
+        "zh": "需要关注",
+        "he": "דורש תשומת לב",
+        "hi": "ध्यान चाहिए",
+        "sw": "Inahitaji uangalizi",
+        "de": "Braucht Aufmerksamkeit",
+        "fr": "Nécessite une attention"
+      }
+    },
+    {
+      "en": "needs attention",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [5],
+      "translations": {
+        "es": "necesita atención",
+        "zh": "需要关注",
+        "he": "דורש תשומת לב",
+        "hi": "ध्यान चाहिए",
+        "sw": "inahitaji uangalizi",
+        "de": "braucht Aufmerksamkeit",
+        "fr": "nécessite une attention"
+      }
+    },
+    {
+      "en": "Fair",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [3, 4, 10],
+      "translations": {
+        "es": "Aceptable",
+        "zh": "一般",
+        "he": "בינוני",
+        "hi": "ठीक-ठाक",
+        "sw": "Wastani",
+        "de": "Akzeptabel",
+        "fr": "Correct"
+      }
+    },
+    {
+      "en": "Thriving",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [3, 10],
+      "translations": {
+        "es": "Excelente",
+        "zh": "蓬勃",
+        "he": "משגשג",
+        "hi": "उत्कृष्ट",
+        "sw": "Bora",
+        "de": "Hervorragend",
+        "fr": "Excellent"
+      }
+    },
+    {
+      "en": "Section A",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [4, 6, 9],
+      "translations": {
+        "es": "Sección A",
+        "zh": "第 A 部分",
+        "he": "חלק A",
+        "hi": "खंड A",
+        "sw": "Sehemu A",
+        "de": "Abschnitt A",
+        "fr": "Section A"
+      }
+    },
+    {
+      "en": "Section B",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [4, 6],
+      "translations": {
+        "es": "Sección B",
+        "zh": "第 B 部分",
+        "he": "חלק B",
+        "hi": "खंड B",
+        "sw": "Sehemu B",
+        "de": "Abschnitt B",
+        "fr": "Section B"
+      }
+    },
+    {
+      "en": "Section C",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [4],
+      "translations": {
+        "es": "Sección C",
+        "zh": "第 C 部分",
+        "he": "חלק C",
+        "hi": "खंड C",
+        "sw": "Sehemu C",
+        "de": "Abschnitt C",
+        "fr": "Section C"
+      }
+    },
+    {
+      "en": "General Health",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [4],
+      "translations": {
+        "es": "Salud General",
+        "zh": "总体健康",
+        "he": "בריאות כללית",
+        "hi": "सामान्य स्वास्थ्य",
+        "sw": "Afya kwa Ujumla",
+        "de": "Allgemeine Gesundheit",
+        "fr": "Santé Générale"
+      }
+    },
+    {
+      "en": "Reproductive Health",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [4],
+      "translations": {
+        "es": "Salud Reproductiva",
+        "zh": "生殖健康",
+        "he": "בריאות הרבייה",
+        "hi": "प्रजनन स्वास्थ्य",
+        "sw": "Afya ya Uzazi",
+        "de": "Reproduktive Gesundheit",
+        "fr": "Santé Reproductive"
+      }
+    },
+    {
+      "en": "Mental Health",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [4],
+      "translations": {
+        "es": "Salud Mental",
+        "zh": "心理健康",
+        "he": "בריאות הנפש",
+        "hi": "मानसिक स्वास्थ्य",
+        "sw": "Afya ya Akili",
+        "de": "Psychische Gesundheit",
+        "fr": "Santé Mentale"
+      }
+    },
+    {
+      "en": "Next",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [4, 6, 8],
+      "translations": {
+        "es": "Siguiente",
+        "zh": "下一步",
+        "he": "הבא",
+        "hi": "आगे",
+        "sw": "Endelea",
+        "de": "Weiter",
+        "fr": "Suivant"
+      }
+    },
+    {
+      "en": "Yes",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [4, 6],
+      "translations": {
+        "es": "Sí",
+        "zh": "是",
+        "he": "כן",
+        "hi": "हाँ",
+        "sw": "Ndiyo",
+        "de": "Ja",
+        "fr": "Oui"
+      }
+    },
+    {
+      "en": "No",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [4],
+      "translations": {
+        "es": "No",
+        "zh": "否",
+        "he": "לא",
+        "hi": "नहीं",
+        "sw": "Hapana",
+        "de": "Nein",
+        "fr": "Non"
+      }
+    },
+    {
+      "en": "Have you ever been pregnant?",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [4],
+      "translations": {
+        "es": "¿Alguna vez has estado embarazada?",
+        "zh": "您曾经怀孕过吗？",
+        "he": "האם היית בהריון אי פעם?",
+        "hi": "क्या आप कभी गर्भवती हुई हैं?",
+        "sw": "Je, umewahi kuwa mjamzito?",
+        "de": "Waren Sie jemals schwanger?",
+        "fr": "Avez-vous déjà été enceinte ?"
+      }
+    },
+    {
+      "en": "Fill with sample answers",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [4],
+      "translations": {
+        "es": "Rellenar con respuestas de ejemplo",
+        "zh": "填入示例答案",
+        "he": "מלא בתשובות לדוגמה",
+        "hi": "नमूना उत्तरों से भरें",
+        "sw": "Jaza kwa majibu ya mfano",
+        "de": "Mit Beispielantworten füllen",
+        "fr": "Remplir avec des réponses d'exemple"
+      }
+    },
+    {
+      "en": "insights strip",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [5, 7, 8],
+      "translations": {
+        "es": "franja de estadísticas",
+        "zh": "洞察条",
+        "he": "רצועת תובנות",
+        "hi": "इनसाइट्स पट्टी",
+        "sw": "ukanda wa takwimu",
+        "de": "Kennzahlenleiste",
+        "fr": "bandeau de statistiques"
+      }
+    },
+    {
+      "en": "Follow-Up Queue",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [6, 8, 10],
+      "translations": {
+        "es": "Cola de Seguimiento",
+        "zh": "跟进队列",
+        "he": "תור מעקב",
+        "hi": "फ़ॉलो-अप कतार",
+        "sw": "Foleni ya Ufuatiliaji",
+        "de": "Nachverfolgungs-Warteschlange",
+        "fr": "File de Suivi"
+      }
+    },
+    {
+      "en": "Pending",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [6, 8, 10],
+      "translations": {
+        "es": "Pendiente",
+        "zh": "待处理",
+        "he": "ממתין",
+        "hi": "लंबित",
+        "sw": "Inasubiri",
+        "de": "Ausstehend",
+        "fr": "En attente"
+      }
+    },
+    {
+      "en": "Contacted",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [6, 8, 10],
+      "translations": {
+        "es": "Contactada",
+        "zh": "已联系",
+        "he": "נוצר קשר",
+        "hi": "संपर्क किया",
+        "sw": "Amefikiwa",
+        "de": "Kontaktiert",
+        "fr": "Contactée"
+      }
+    },
+    {
+      "en": "Resolved",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [6, 8, 10],
+      "translations": {
+        "es": "Resuelta",
+        "zh": "已解决",
+        "he": "טופל",
+        "hi": "हल हुआ",
+        "sw": "Imetatuliwa",
+        "de": "Erledigt",
+        "fr": "Résolue"
+      }
+    },
+    {
+      "en": "score under 5",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [6, 8],
+      "translations": {
+        "es": "puntaje bajo 5",
+        "zh": "评分低于 5",
+        "he": "ציון מתחת ל-5",
+        "hi": "स्कोर 5 से कम",
+        "sw": "alama chini ya 5",
+        "de": "Punktzahl unter 5",
+        "fr": "score inférieur à 5"
+      }
+    },
+    {
+      "en": "left voicemail",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [6, 8],
+      "translations": {
+        "es": "dejé mensaje de voz",
+        "zh": "已留语音留言",
+        "he": "הושארה הודעה קולית",
+        "hi": "वॉइसमेल छोड़ा",
+        "sw": "niliacha ujumbe wa sauti",
+        "de": "Sprachnachricht hinterlassen",
+        "fr": "message vocal laissé"
+      }
+    },
+    {
+      "en": "all good",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [6, 8],
+      "translations": {
+        "es": "todo bien",
+        "zh": "一切正常",
+        "he": "הכול תקין",
+        "hi": "सब ठीक है",
+        "sw": "kila kitu sawa",
+        "de": "alles in Ordnung",
+        "fr": "tout va bien"
+      }
+    },
+    {
+      "en": "check sleep",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [6],
+      "translations": {
+        "es": "revisar sueño",
+        "zh": "检查睡眠",
+        "he": "לבדוק שינה",
+        "hi": "नींद जाँचें",
+        "sw": "angalia usingizi",
+        "de": "Schlaf prüfen",
+        "fr": "vérifier le sommeil"
+      }
+    },
+    {
+      "en": "flag control",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [6],
+      "translations": {
+        "es": "control de marcado",
+        "zh": "标记控件",
+        "he": "פקד סימון",
+        "hi": "फ़्लैग नियंत्रण",
+        "sw": "kidhibiti cha alama",
+        "de": "Markierungssteuerung",
+        "fr": "contrôle de signalement"
+      }
+    },
+    {
+      "en": "survey wizard",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [4, 8, 9],
+      "translations": {
+        "es": "asistente de encuesta",
+        "zh": "问卷向导",
+        "he": "אשף הסקר",
+        "hi": "सर्वे विज़ार्ड",
+        "sw": "kiongozi wa utafiti",
+        "de": "Umfrage-Assistent",
+        "fr": "assistant d'enquête"
+      }
+    },
+    {
+      "en": "export composer",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [7, 9],
+      "translations": {
+        "es": "compositor de exportación",
+        "zh": "导出编排器",
+        "he": "מחולל הייצוא",
+        "hi": "निर्यात संयोजक",
+        "sw": "kiunzi cha kusafirisha data",
+        "de": "Export-Zusammensteller",
+        "fr": "compositeur d'export"
+      }
+    },
+    {
+      "en": "Question Bank",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [9],
+      "translations": {
+        "es": "Banco de Preguntas",
+        "zh": "题库",
+        "he": "מאגר שאלות",
+        "hi": "प्रश्न बैंक",
+        "sw": "Benki ya Maswali",
+        "de": "Fragenkatalog",
+        "fr": "Banque de Questions"
+      }
+    },
+    {
+      "en": "How healthy do you feel overall?",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [9],
+      "translations": {
+        "es": "¿Qué tan saludable te sientes en general?",
+        "zh": "您总体上觉得自己有多健康？",
+        "he": "עד כמה את מרגישה בריאה באופן כללי?",
+        "hi": "कुल मिलाकर आप खुद को कितना स्वस्थ महसूस करती हैं?",
+        "sw": "Kwa ujumla, unajisikia mwenye afya kiasi gani?",
+        "de": "Wie gesund fühlen Sie sich insgesamt?",
+        "fr": "Dans l'ensemble, à quel point vous sentez-vous en bonne santé ?"
+      }
+    },
+    {
+      "en": "Program Outcomes",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [10],
+      "translations": {
+        "es": "Resultados del Programa",
+        "zh": "项目成果",
+        "he": "תוצאות התוכנית",
+        "hi": "कार्यक्रम परिणाम",
+        "sw": "Matokeo ya Programu",
+        "de": "Programmergebnisse",
+        "fr": "Résultats du Programme"
+      }
+    },
+    {
+      "en": "resolution rate",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [10],
+      "translations": {
+        "es": "tasa de resolución",
+        "zh": "解决率",
+        "he": "שיעור פתרון",
+        "hi": "समाधान दर",
+        "sw": "kiwango cha utatuzi",
+        "de": "Erledigungsquote",
+        "fr": "taux de résolution"
+      }
+    },
+    {
+      "en": "outcome funnel",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [10],
+      "translations": {
+        "es": "embudo de resultados",
+        "zh": "成果漏斗",
+        "he": "משפך תוצאות",
+        "hi": "परिणाम फ़नल",
+        "sw": "faneli ya matokeo",
+        "de": "Ergebnistrichter",
+        "fr": "entonnoir de résultats"
+      }
+    },
+    {
+      "en": "suggested flags",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [10],
+      "translations": {
+        "es": "marcas sugeridas",
+        "zh": "建议标记",
+        "he": "סימונים מוצעים",
+        "hi": "सुझाए गए फ़्लैग",
+        "sw": "alama zinazopendekezwa",
+        "de": "vorgeschlagene Markierungen",
+        "fr": "signalements suggérés"
+      }
+    },
+
+    {"en": "WHS-####", "class": "keep", "kind": "tech", "turns": [2, 7]},
+    {"en": "WHS-1001", "class": "keep", "kind": "tech", "turns": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
+    {"en": "WHS-1002", "class": "keep", "kind": "tech", "turns": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
+    {"en": "WHS-1003", "class": "keep", "kind": "tech", "turns": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
+    {"en": "WHS-1004", "class": "keep", "kind": "tech", "turns": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
+    {"en": "WHS-1005", "class": "keep", "kind": "tech", "turns": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
+    {"en": "WHS-1006", "class": "keep", "kind": "tech", "turns": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
+    {"en": "WHS-1007", "class": "keep", "kind": "tech", "turns": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
+    {"en": "WHS-1008", "class": "keep", "kind": "tech", "turns": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
+    {"en": "WHS-1009", "class": "keep", "kind": "tech", "turns": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
+    {"en": "whitesmoke", "class": "keep", "kind": "css_visual", "turns": [1]},
+    {"en": "dark cyan", "class": "keep", "kind": "css_visual", "turns": [1, 6, 8]},
+    {"en": "light-cyan", "class": "keep", "kind": "css_visual", "turns": [8]},
+    {"en": "white", "class": "keep", "kind": "css_visual", "turns": [8]},
+    {"en": "amber", "class": "keep", "kind": "css_visual", "turns": [6]},
+    {"en": "green", "class": "keep", "kind": "css_visual", "turns": [6]},
+    {"en": "monospace", "class": "keep", "kind": "tech", "turns": [8]},
+    {"en": "12px", "class": "keep", "kind": "value_format", "turns": [8]},
+    {"en": "18-29", "class": "keep", "kind": "value_format", "turns": [2, 3]},
+    {"en": "30-44", "class": "keep", "kind": "value_format", "turns": [2, 3, 4, 6]},
+    {"en": "45-59", "class": "keep", "kind": "value_format", "turns": [2]},
+    {"en": "60+", "class": "keep", "kind": "value_format", "turns": [2, 5, 7]},
+    {"en": "0-7", "class": "keep", "kind": "value_format", "turns": [3]},
+    {"en": "/ 10", "class": "keep", "kind": "value_format", "turns": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
+    {"en": "v1", "class": "keep", "kind": "tech", "turns": [9]},
+    {"en": "v2", "class": "keep", "kind": "tech", "turns": [9]},
+    {"en": "v3", "class": "keep", "kind": "tech", "turns": [9]}
+  ]
+}

@@ -1,0 +1,511 @@
+{
+  "anchors": [
+    {
+      "en": "calculator",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [2, 3, 4, 5, 6, 9, 10],
+      "translations": {
+        "es": "calculadora",
+        "zh": "计算器",
+        "he": "מחשבון",
+        "hi": "कैलकुलेटर",
+        "sw": "kikokotoo",
+        "de": "Rechner",
+        "fr": "calculatrice"
+      }
+    },
+    {
+      "en": "Basic Arithmetic",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [1, 2],
+      "translations": {
+        "es": "Aritmética básica",
+        "zh": "基础算术",
+        "he": "אריתמטיקה בסיסית",
+        "hi": "मूल अंकगणित",
+        "sw": "Aritmetiki ya Msingi",
+        "de": "Grundlegende Arithmetik",
+        "fr": "Arithmétique de base"
+      }
+    },
+    {
+      "en": "Arithmetic",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [2, 5, 6],
+      "translations": {
+        "es": "Aritmética",
+        "zh": "算术",
+        "he": "אריתמטיקה",
+        "hi": "अंकगणित",
+        "sw": "Aritmetiki",
+        "de": "Arithmetik",
+        "fr": "Arithmétique"
+      }
+    },
+    {
+      "en": "ARITHMETIC",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [2, 6],
+      "translations": {
+        "es": "ARITMÉTICA",
+        "zh": "算术",
+        "he": "אריתמטיקה",
+        "hi": "अंकगणित",
+        "sw": "ARITMETIKI",
+        "de": "ARITHMETIK",
+        "fr": "ARITHMÉTIQUE"
+      }
+    },
+    {
+      "en": "Scientific",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [2, 5, 6],
+      "translations": {
+        "es": "Científico",
+        "zh": "科学",
+        "he": "מדעי",
+        "hi": "वैज्ञानिक",
+        "sw": "Kisayansi",
+        "de": "Wissenschaftlich",
+        "fr": "Scientifique"
+      }
+    },
+    {
+      "en": "SCIENTIFIC",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [2, 6],
+      "translations": {
+        "es": "CIENTÍFICO",
+        "zh": "科学",
+        "he": "מדעי",
+        "hi": "वैज्ञानिक",
+        "sw": "KISAYANSI",
+        "de": "WISSENSCHAFTLICH",
+        "fr": "SCIENTIFIQUE"
+      }
+    },
+    {
+      "en": "Percent",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [2, 5, 6],
+      "translations": {
+        "es": "Porcentaje",
+        "zh": "百分比",
+        "he": "אחוז",
+        "hi": "प्रतिशत",
+        "sw": "Asilimia",
+        "de": "Prozent",
+        "fr": "Pourcentage"
+      }
+    },
+    {
+      "en": "PERCENT",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [6],
+      "translations": {
+        "es": "PORCENTAJE",
+        "zh": "百分比",
+        "he": "אחוז",
+        "hi": "प्रतिशत",
+        "sw": "ASILIMIA",
+        "de": "PROZENT",
+        "fr": "POURCENTAGE"
+      }
+    },
+    {
+      "en": "history panel",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [2, 3],
+      "translations": {
+        "es": "panel de historial",
+        "zh": "历史面板",
+        "he": "לוח היסטוריה",
+        "hi": "हिस्ट्री पैनल",
+        "sw": "paneli ya historia",
+        "de": "Verlaufspanel",
+        "fr": "panneau d'historique"
+      }
+    },
+    {
+      "en": "history page",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [8, 10],
+      "translations": {
+        "es": "página de historial",
+        "zh": "历史页面",
+        "he": "עמוד היסטוריה",
+        "hi": "हिस्ट्री पेज",
+        "sw": "ukurasa wa historia",
+        "de": "Verlaufsseite",
+        "fr": "page d'historique"
+      }
+    },
+    {
+      "en": "variables page",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [3],
+      "translations": {
+        "es": "página de variables",
+        "zh": "变量页面",
+        "he": "עמוד משתנים",
+        "hi": "वेरिएबल पेज",
+        "sw": "ukurasa wa vigeu",
+        "de": "Variablenseite",
+        "fr": "page des variables"
+      }
+    },
+    {
+      "en": "Saved",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [4, 6],
+      "translations": {
+        "es": "Guardados",
+        "zh": "已保存",
+        "he": "שמורים",
+        "hi": "सहेजे गए",
+        "sw": "Zilizohifadhiwa",
+        "de": "Gespeichert",
+        "fr": "Enregistrés"
+      }
+    },
+    {
+      "en": "Report",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [8],
+      "translations": {
+        "es": "Informe",
+        "zh": "报告",
+        "he": "דוח",
+        "hi": "रिपोर्ट",
+        "sw": "Ripoti",
+        "de": "Bericht",
+        "fr": "Rapport"
+      }
+    },
+    {
+      "en": "display settings",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [5, 7, 8],
+      "translations": {
+        "es": "configuración de pantalla",
+        "zh": "显示设置",
+        "he": "הגדרות תצוגה",
+        "hi": "डिस्प्ले सेटिंग्स",
+        "sw": "mipangilio ya onyesho",
+        "de": "Anzeigeeinstellungen",
+        "fr": "paramètres d'affichage"
+      }
+    },
+    {
+      "en": "stats page",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [6, 8],
+      "translations": {
+        "es": "página de estadísticas",
+        "zh": "统计页面",
+        "he": "עמוד סטטיסטיקה",
+        "hi": "स्टैट्स पेज",
+        "sw": "ukurasa wa takwimu",
+        "de": "Statistikseite",
+        "fr": "page de statistiques"
+      }
+    },
+    {
+      "en": "search page",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [9],
+      "translations": {
+        "es": "página de búsqueda",
+        "zh": "搜索页面",
+        "he": "עמוד חיפוש",
+        "hi": "सर्च पेज",
+        "sw": "ukurasa wa utafutaji",
+        "de": "Suchseite",
+        "fr": "page de recherche"
+      }
+    },
+    {
+      "en": "converter",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [7, 9, 10],
+      "translations": {
+        "es": "conversor",
+        "zh": "换算器",
+        "he": "ממיר",
+        "hi": "कन्वर्टर",
+        "sw": "kibadilishaji",
+        "de": "Umrechner",
+        "fr": "convertisseur"
+      }
+    },
+    {
+      "en": "Grid area",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [4, 6, 9],
+      "translations": {
+        "es": "Área de cuadrícula",
+        "zh": "网格面积",
+        "he": "שטח רשת",
+        "hi": "ग्रिड क्षेत्रफल",
+        "sw": "Eneo la Gridi",
+        "de": "Gitterfläche",
+        "fr": "Aire de la grille"
+      }
+    },
+    {
+      "en": "garden plot",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [4, 9],
+      "translations": {
+        "es": "parcela de jardín",
+        "zh": "花园地块",
+        "he": "חלקת גינה",
+        "hi": "बगीचा प्लॉट",
+        "sw": "kiwanja cha bustani",
+        "de": "Gartenbeet",
+        "fr": "parcelle de jardin"
+      }
+    },
+    {
+      "en": "GARDEN",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [9],
+      "translations": {
+        "es": "JARDÍN",
+        "zh": "花园",
+        "he": "גינה",
+        "hi": "बगीचा",
+        "sw": "BUSTANI",
+        "de": "GARTEN",
+        "fr": "JARDIN"
+      }
+    },
+    {
+      "en": "temperature",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [7, 9],
+      "translations": {
+        "es": "temperatura",
+        "zh": "温度",
+        "he": "טמפרטורה",
+        "hi": "तापमान",
+        "sw": "halijoto",
+        "de": "Temperatur",
+        "fr": "température"
+      }
+    },
+    {
+      "en": "Fahrenheit",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [7, 9],
+      "translations": {
+        "es": "Fahrenheit",
+        "zh": "华氏度",
+        "he": "פרנהייט",
+        "hi": "फ़ारेनहाइट",
+        "sw": "Fahrenheit",
+        "de": "Fahrenheit",
+        "fr": "Fahrenheit"
+      }
+    },
+    {
+      "en": "Celsius",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [7, 9],
+      "translations": {
+        "es": "Celsius",
+        "zh": "摄氏度",
+        "he": "צלזיוס",
+        "hi": "सेल्सियस",
+        "sw": "Selsiasi",
+        "de": "Celsius",
+        "fr": "Celsius"
+      }
+    },
+    {
+      "en": "length",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [7],
+      "translations": {
+        "es": "longitud",
+        "zh": "长度",
+        "he": "אורך",
+        "hi": "लंबाई",
+        "sw": "urefu",
+        "de": "Länge",
+        "fr": "longueur"
+      }
+    },
+    {
+      "en": "inches",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [7],
+      "translations": {
+        "es": "pulgadas",
+        "zh": "英寸",
+        "he": "אינצ'ים",
+        "hi": "इंच",
+        "sw": "inchi",
+        "de": "Zoll",
+        "fr": "pouces"
+      }
+    },
+    {
+      "en": "centimeters",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [7],
+      "translations": {
+        "es": "centímetros",
+        "zh": "厘米",
+        "he": "סנטימטרים",
+        "hi": "सेंटीमीटर",
+        "sw": "sentimita",
+        "de": "Zentimeter",
+        "fr": "centimètres"
+      }
+    },
+    {
+      "en": "weight",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [7],
+      "translations": {
+        "es": "peso",
+        "zh": "重量",
+        "he": "משקל",
+        "hi": "वज़न",
+        "sw": "uzito",
+        "de": "Gewicht",
+        "fr": "poids"
+      }
+    },
+    {
+      "en": "pounds",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [7],
+      "translations": {
+        "es": "libras",
+        "zh": "磅",
+        "he": "ליברות",
+        "hi": "पाउंड",
+        "sw": "pauni",
+        "de": "Pfund",
+        "fr": "livres"
+      }
+    },
+    {
+      "en": "grams",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [7],
+      "translations": {
+        "es": "gramos",
+        "zh": "克",
+        "he": "גרמים",
+        "hi": "ग्राम",
+        "sw": "gramu",
+        "de": "Gramm",
+        "fr": "grammes"
+      }
+    },
+    {
+      "en": "tax",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [3, 4, 10]
+    },
+    {
+      "en": "dozen",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [3, 9]
+    },
+    {
+      "en": "width",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [3]
+    },
+    {
+      "en": "sqrt",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [2, 3, 5]
+    },
+    {
+      "en": "pi",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [3]
+    },
+    {
+      "en": "2fast",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [3]
+    },
+    {
+      "en": "mint cream",
+      "class": "keep",
+      "kind": "css_visual",
+      "turns": [1, 10]
+    },
+    {
+      "en": "teal",
+      "class": "keep",
+      "kind": "css_visual",
+      "turns": [1, 10]
+    },
+    {
+      "en": "soft ivory",
+      "class": "keep",
+      "kind": "css_visual",
+      "turns": [10]
+    },
+    {
+      "en": "#FAFAF7",
+      "class": "keep",
+      "kind": "css_visual",
+      "turns": [10]
+    },
+    {
+      "en": "#0F766E",
+      "class": "keep",
+      "kind": "css_visual",
+      "turns": [10]
+    },
+    {
+      "en": "12px",
+      "class": "keep",
+      "kind": "value_format",
+      "turns": [10]
+    }
+  ]
+}

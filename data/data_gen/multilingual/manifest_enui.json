@@ -1,0 +1,36 @@
+{
+ "parent": "evoweb_benchmark.jsonl",
+ "parent_sha256": "7d038d9e52031827cbd98ebd5f99ce4f47e58fab5e10ea0825cf8e15d963de79",
+ "date": "2026-09-24",
+ "translator": "claude-opus (workflow evoweb-translate-enui)",
+ "files": {
+  "evoweb_benchmark_es.jsonl": {
+   "sha256": "7a21b88a0299cad0e168c1c82e9e01d556d002ddb38c8930d4ca3dc48cd71975",
+   "rows": 32
+  },
+  "evoweb_benchmark_zh.jsonl": {
+   "sha256": "9319c1c6359fad9bed4165724e31ad4663650c26955a4c5be8542114d9d34726",
+   "rows": 32
+  },
+  "evoweb_benchmark_he.jsonl": {
+   "sha256": "1a6defd3e30fa68f4fabcd8b5034f052d5f70fa42dfc1a5ae70e2694cb4b473b",
+   "rows": 32
+  },
+  "evoweb_benchmark_hi.jsonl": {
+   "sha256": "6c4c1cc5eac56818ae31869b189a0744ac60c0378f1f36de910ff3ca0daba0e6",
+   "rows": 32
+  },
+  "evoweb_benchmark_sw.jsonl": {
+   "sha256": "d01a3da7402d8d17112606a9a9f6fd5643fd2b0b741a38307ad00aad412ac640",
+   "rows": 32
+  },
+  "evoweb_benchmark_de.jsonl": {
+   "sha256": "c892636a5626cbe9cdcf0ea00a4a59dea4b09e4d99c33365724aac9fb34675b7",
+   "rows": 32
+  },
+  "evoweb_benchmark_fr.jsonl": {
+   "sha256": "d7f8391b20f7a24465c71b20584794182dc09e6c7e402bb03685c0ba08c609c4",
+   "rows": 32
+  }
+ }
+}

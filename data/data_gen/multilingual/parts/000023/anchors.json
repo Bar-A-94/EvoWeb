@@ -1,0 +1,1267 @@
+{
+ "anchors": [
+  {
+   "en": "Add New Lead",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    1
+   ],
+   "translations": {
+    "es": "Agregar nuevo prospecto",
+    "zh": "添加新线索",
+    "he": "הוספת ליד חדש",
+    "hi": "नया लीड जोड़ें",
+    "sw": "Ongeza Mteja Mtarajiwa",
+    "de": "Neuen Lead hinzufügen",
+    "fr": "Ajouter un nouveau prospect"
+   }
+  },
+  {
+   "en": "best practice and integration advice",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    1
+   ],
+   "translations": {
+    "es": "mejores prácticas y consejos de integración",
+    "zh": "最佳实践与集成建议",
+    "he": "שיטות עבודה מומלצות וייעוץ אינטגרציה",
+    "hi": "सर्वोत्तम प्रथाएं और एकीकरण सलाह",
+    "sw": "mbinu bora na ushauri wa muunganisho",
+    "de": "bewährte Methoden und Integrationshinweise",
+    "fr": "conseils de bonnes pratiques et d'intégration"
+   }
+  },
+  {
+   "en": "leads page",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    6,
+    7,
+    9
+   ],
+   "translations": {
+    "es": "página de prospectos",
+    "zh": "线索页面",
+    "he": "עמוד הלידים",
+    "hi": "लीड पेज",
+    "sw": "ukurasa wa wateja watarajiwa",
+    "de": "Leads-Seite",
+    "fr": "page des prospects"
+   }
+  },
+  {
+   "en": "reports page",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4,
+    6,
+    8
+   ],
+   "translations": {
+    "es": "página de reportes",
+    "zh": "报告页面",
+    "he": "עמוד הדוחות",
+    "hi": "रिपोर्ट पेज",
+    "sw": "ukurasa wa ripoti",
+    "de": "Berichtsseite",
+    "fr": "page des rapports"
+   }
+  },
+  {
+   "en": "tasks page",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5,
+    6
+   ],
+   "translations": {
+    "es": "página de tareas",
+    "zh": "任务页面",
+    "he": "עמוד המשימות",
+    "hi": "टास्क पेज",
+    "sw": "ukurasa wa kazi",
+    "de": "Aufgabenseite",
+    "fr": "page des tâches"
+   }
+  },
+  {
+   "en": "settings",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    1,
+    4,
+    5,
+    6,
+    8,
+    9
+   ],
+   "translations": {
+    "es": "configuración",
+    "zh": "设置",
+    "he": "הגדרות",
+    "hi": "सेटिंग्स",
+    "sw": "mipangilio",
+    "de": "Einstellungen",
+    "fr": "paramètres"
+   }
+  },
+  {
+   "en": "reports dashboard",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8,
+    10
+   ],
+   "translations": {
+    "es": "tablero de reportes",
+    "zh": "报告仪表板",
+    "he": "לוח המחוונים של הדוחות",
+    "hi": "रिपोर्ट डैशबोर्ड",
+    "sw": "dashibodi ya ripoti",
+    "de": "Berichts-Dashboard",
+    "fr": "tableau de bord des rapports"
+   }
+  },
+  {
+   "en": "template studio",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    6
+   ],
+   "translations": {
+    "es": "estudio de plantillas",
+    "zh": "模板工作室",
+    "he": "סטודיו התבניות",
+    "hi": "टेम्पलेट स्टूडियो",
+    "sw": "studio ya violezo",
+    "de": "Vorlagenstudio",
+    "fr": "studio de modèles"
+   }
+  },
+  {
+   "en": "template editor",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    8
+   ],
+   "translations": {
+    "es": "editor de plantillas",
+    "zh": "模板编辑器",
+    "he": "עורך התבניות",
+    "hi": "टेम्पलेट एडिटर",
+    "sw": "kihariri cha violezo",
+    "de": "Vorlageneditor",
+    "fr": "éditeur de modèles"
+   }
+  },
+  {
+   "en": "form builder",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    9,
+    10
+   ],
+   "translations": {
+    "es": "constructor de formularios",
+    "zh": "表单构建器",
+    "he": "בונה הטפסים",
+    "hi": "फ़ॉर्म बिल्डर",
+    "sw": "kijenzi cha fomu",
+    "de": "Formular-Builder",
+    "fr": "générateur de formulaires"
+   }
+  },
+  {
+   "en": "outreach hub",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    7,
+    9
+   ],
+   "translations": {
+    "es": "centro de contacto",
+    "zh": "外联中心",
+    "he": "מרכז הפניות",
+    "hi": "आउटरीच हब",
+    "sw": "kitovu cha mawasiliano",
+    "de": "Outreach-Zentrale",
+    "fr": "centre de prospection"
+   }
+  },
+  {
+   "en": "automation rules panel",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5
+   ],
+   "translations": {
+    "es": "panel de reglas de automatización",
+    "zh": "自动化规则面板",
+    "he": "לוח כללי האוטומציה",
+    "hi": "ऑटोमेशन नियम पैनल",
+    "sw": "paneli ya kanuni za otomatiki",
+    "de": "Automatisierungsregeln-Panel",
+    "fr": "panneau de règles d'automatisation"
+   }
+  },
+  {
+   "en": "message history",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5,
+    7
+   ],
+   "translations": {
+    "es": "historial de mensajes",
+    "zh": "消息历史",
+    "he": "היסטוריית ההודעות",
+    "hi": "संदेश इतिहास",
+    "sw": "historia ya jumbe",
+    "de": "Nachrichtenverlauf",
+    "fr": "historique des messages"
+   }
+  },
+  {
+   "en": "message-sending flow",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3
+   ],
+   "translations": {
+    "es": "flujo de envío de mensajes",
+    "zh": "消息发送流程",
+    "he": "תהליך שליחת ההודעות",
+    "hi": "संदेश भेजने का फ़्लो",
+    "sw": "mtiririko wa kutuma jumbe",
+    "de": "Nachrichtenversand-Ablauf",
+    "fr": "flux d'envoi de messages"
+   }
+  },
+  {
+   "en": "activity log",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    5
+   ],
+   "translations": {
+    "es": "registro de actividad",
+    "zh": "活动记录",
+    "he": "יומן פעילות",
+    "hi": "गतिविधि लॉग",
+    "sw": "kumbukumbu ya shughuli",
+    "de": "Aktivitätsprotokoll",
+    "fr": "journal d'activité"
+   }
+  },
+  {
+   "en": "preview pane",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    9
+   ],
+   "translations": {
+    "es": "panel de vista previa",
+    "zh": "预览面板",
+    "he": "חלונית התצוגה המקדימה",
+    "hi": "प्रीव्यू पैनल",
+    "sw": "kidirisha cha onyesho la awali",
+    "de": "Vorschaubereich",
+    "fr": "volet d'aperçu"
+   }
+  },
+  {
+   "en": "embed snippet",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    9
+   ],
+   "translations": {
+    "es": "fragmento de inserción",
+    "zh": "嵌入代码片段",
+    "he": "קטע ההטמעה",
+    "hi": "एम्बेड स्निपेट",
+    "sw": "kijisehemu cha kupachika",
+    "de": "Einbettungscode",
+    "fr": "extrait d'intégration"
+   }
+  },
+  {
+   "en": "simulate-open control",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    7,
+    9
+   ],
+   "translations": {
+    "es": "control de simular apertura",
+    "zh": "模拟打开控件",
+    "he": "פקד הדמיית פתיחה",
+    "hi": "ओपन सिम्युलेट कंट्रोल",
+    "sw": "kidhibiti cha kuiga ufunguzi",
+    "de": "Öffnen-simulieren-Schalter",
+    "fr": "commande de simulation d'ouverture"
+   }
+  },
+  {
+   "en": "Inbox",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    10
+   ],
+   "translations": {
+    "es": "Bandeja de entrada",
+    "zh": "收件箱",
+    "he": "תיבת נכנסים",
+    "hi": "इनबॉक्स",
+    "sw": "Kikasha",
+    "de": "Posteingang",
+    "fr": "Boîte de réception"
+   }
+  },
+  {
+   "en": "Pipeline",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    10
+   ],
+   "translations": {
+    "es": "Embudo de ventas",
+    "zh": "销售管道",
+    "he": "פייפליין",
+    "hi": "पाइपलाइन",
+    "sw": "Bomba la Mauzo",
+    "de": "Vertriebspipeline",
+    "fr": "Pipeline commercial"
+   }
+  },
+  {
+   "en": "engagement score",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    7,
+    8,
+    9,
+    10
+   ],
+   "translations": {
+    "es": "puntaje de interacción",
+    "zh": "互动评分",
+    "he": "ציון מעורבות",
+    "hi": "एंगेजमेंट स्कोर",
+    "sw": "alama ya mwingiliano",
+    "de": "Interaktionswert",
+    "fr": "score d'engagement"
+   }
+  },
+  {
+   "en": "weighted pipeline forecast",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4,
+    6
+   ],
+   "translations": {
+    "es": "pronóstico ponderado del pipeline",
+    "zh": "加权管道预测",
+    "he": "תחזית פייפליין משוקללת",
+    "hi": "भारित पाइपलाइन पूर्वानुमान",
+    "sw": "utabiri wenye uzani wa bomba la mauzo",
+    "de": "gewichtete Pipeline-Prognose",
+    "fr": "prévision pondérée du pipeline"
+   }
+  },
+  {
+   "en": "weighted forecast",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "pronóstico ponderado",
+    "zh": "加权预测",
+    "he": "תחזית משוקללת",
+    "hi": "भारित पूर्वानुमान",
+    "sw": "utabiri wenye uzani",
+    "de": "gewichtete Prognose",
+    "fr": "prévision pondérée"
+   }
+  },
+  {
+   "en": "average deal size",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8,
+    10
+   ],
+   "translations": {
+    "es": "tamaño promedio del trato",
+    "zh": "平均交易金额",
+    "he": "גודל עסקה ממוצע",
+    "hi": "औसत डील साइज़",
+    "sw": "wastani wa ukubwa wa mpango",
+    "de": "durchschnittliche Deal-Größe",
+    "fr": "taille moyenne des affaires"
+   }
+  },
+  {
+   "en": "leads by stage",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "prospectos por etapa",
+    "zh": "按阶段划分的线索",
+    "he": "לידים לפי שלב",
+    "hi": "चरण के अनुसार लीड",
+    "sw": "wateja watarajiwa kwa hatua",
+    "de": "Leads nach Phase",
+    "fr": "prospects par étape"
+   }
+  },
+  {
+   "en": "leads-by-stage",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "prospectos por etapa",
+    "zh": "按阶段划分的线索",
+    "he": "לידים לפי שלב",
+    "hi": "चरण के अनुसार लीड",
+    "sw": "wateja watarajiwa kwa hatua",
+    "de": "Leads nach Phase",
+    "fr": "prospects par étape"
+   }
+  },
+  {
+   "en": "deal value",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    4,
+    5,
+    9,
+    10
+   ],
+   "translations": {
+    "es": "valor del trato",
+    "zh": "交易金额",
+    "he": "שווי עסקה",
+    "hi": "डील वैल्यू",
+    "sw": "thamani ya mpango",
+    "de": "Deal-Wert",
+    "fr": "valeur de l'affaire"
+   }
+  },
+  {
+   "en": "estimated deal value",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    9
+   ],
+   "translations": {
+    "es": "valor del trato estimado",
+    "zh": "预估交易金额",
+    "he": "שווי עסקה משוער",
+    "hi": "अनुमानित डील वैल्यू",
+    "sw": "thamani ya mpango inayokadiriwa",
+    "de": "geschätzter Deal-Wert",
+    "fr": "valeur de l'affaire estimée"
+   }
+  },
+  {
+   "en": "first name",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    9,
+    10
+   ],
+   "translations": {
+    "es": "nombre",
+    "zh": "名字",
+    "he": "שם פרטי",
+    "hi": "पहला नाम",
+    "sw": "jina la kwanza",
+    "de": "Vorname",
+    "fr": "prénom"
+   }
+  },
+  {
+   "en": "last name",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    9,
+    10
+   ],
+   "translations": {
+    "es": "apellido",
+    "zh": "姓氏",
+    "he": "שם משפחה",
+    "hi": "अंतिम नाम",
+    "sw": "jina la mwisho",
+    "de": "Nachname",
+    "fr": "nom de famille"
+   }
+  },
+  {
+   "en": "company",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4,
+    9,
+    10
+   ],
+   "translations": {
+    "es": "empresa",
+    "zh": "公司",
+    "he": "חברה",
+    "hi": "कंपनी",
+    "sw": "kampuni",
+    "de": "Firma",
+    "fr": "entreprise"
+   }
+  },
+  {
+   "en": "email",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    9
+   ],
+   "translations": {
+    "es": "correo electrónico",
+    "zh": "邮箱",
+    "he": "אימייל",
+    "hi": "ईमेल",
+    "sw": "barua pepe",
+    "de": "E-Mail",
+    "fr": "e-mail"
+   }
+  },
+  {
+   "en": "New",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    4,
+    8,
+    10
+   ],
+   "translations": {
+    "es": "Nuevo",
+    "zh": "新建",
+    "he": "חדש",
+    "hi": "नया",
+    "sw": "Mpya",
+    "de": "Neu",
+    "fr": "Nouveau"
+   }
+  },
+  {
+   "en": "Contacted",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    4,
+    8,
+    10
+   ],
+   "translations": {
+    "es": "Contactado",
+    "zh": "已联系",
+    "he": "נוצר קשר",
+    "hi": "संपर्क किया",
+    "sw": "Amewasiliwa",
+    "de": "Kontaktiert",
+    "fr": "Contacté"
+   }
+  },
+  {
+   "en": "Qualified",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    4,
+    5,
+    8
+   ],
+   "translations": {
+    "es": "Calificado",
+    "zh": "合格",
+    "he": "מוסמך",
+    "hi": "योग्य",
+    "sw": "Amehitimu",
+    "de": "Qualifiziert",
+    "fr": "Qualifié"
+   }
+  },
+  {
+   "en": "Proposal",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    7,
+    8
+   ],
+   "translations": {
+    "es": "Propuesta",
+    "zh": "提案",
+    "he": "הצעה",
+    "hi": "प्रस्ताव",
+    "sw": "Pendekezo",
+    "de": "Angebot",
+    "fr": "Proposition"
+   }
+  },
+  {
+   "en": "Won",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4,
+    8
+   ],
+   "translations": {
+    "es": "Ganado",
+    "zh": "已成交",
+    "he": "זכייה",
+    "hi": "जीता",
+    "sw": "Imeshinda",
+    "de": "Gewonnen",
+    "fr": "Gagné"
+   }
+  },
+  {
+   "en": "Lost",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    4,
+    6,
+    8,
+    10
+   ],
+   "translations": {
+    "es": "Perdido",
+    "zh": "已流失",
+    "he": "הפסד",
+    "hi": "खोया",
+    "sw": "Imepotea",
+    "de": "Verloren",
+    "fr": "Perdu"
+   }
+  },
+  {
+   "en": "Cold",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    5,
+    6,
+    9
+   ],
+   "translations": {
+    "es": "Frío",
+    "zh": "冷淡",
+    "he": "קר",
+    "hi": "ठंडा",
+    "sw": "Baridi",
+    "de": "Kalt",
+    "fr": "Froid"
+   }
+  },
+  {
+   "en": "Warm",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "translations": {
+    "es": "Tibio",
+    "zh": "温热",
+    "he": "פושר",
+    "hi": "गुनगुना",
+    "sw": "Vuguvugu",
+    "de": "Warm",
+    "fr": "Tiède"
+   }
+  },
+  {
+   "en": "Hot",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    6,
+    7,
+    9
+   ],
+   "translations": {
+    "es": "Caliente",
+    "zh": "火热",
+    "he": "חם",
+    "hi": "गर्म",
+    "sw": "Moto",
+    "de": "Heiß",
+    "fr": "Chaud"
+   }
+  },
+  {
+   "en": "Sent",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    7
+   ],
+   "translations": {
+    "es": "Enviado",
+    "zh": "已发送",
+    "he": "נשלח",
+    "hi": "भेजा गया",
+    "sw": "Imetumwa",
+    "de": "Gesendet",
+    "fr": "Envoyé"
+   }
+  },
+  {
+   "en": "Opened",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    7
+   ],
+   "translations": {
+    "es": "Abierto",
+    "zh": "已打开",
+    "he": "נפתח",
+    "hi": "खोला गया",
+    "sw": "Imefunguliwa",
+    "de": "Geöffnet",
+    "fr": "Ouvert"
+   }
+  },
+  {
+   "en": "Intro Outreach",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    3,
+    5,
+    7
+   ],
+   "translations": {
+    "es": "Contacto inicial",
+    "zh": "初次联络",
+    "he": "פנייה ראשונית",
+    "hi": "परिचय संपर्क",
+    "sw": "Mawasiliano ya Utangulizi",
+    "de": "Erstkontakt",
+    "fr": "Prise de contact"
+   }
+  },
+  {
+   "en": "Proposal Follow-Up",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    3,
+    4,
+    5,
+    7
+   ],
+   "translations": {
+    "es": "Seguimiento de Propuesta",
+    "zh": "提案跟进",
+    "he": "מעקב הצעה",
+    "hi": "प्रस्ताव फ़ॉलो-अप",
+    "sw": "Ufuatiliaji wa Pendekezo",
+    "de": "Angebots-Nachfassen",
+    "fr": "Relance de Proposition"
+   }
+  },
+  {
+   "en": "Follow up on proposal",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    5
+   ],
+   "translations": {
+    "es": "Dar seguimiento a la propuesta",
+    "zh": "跟进提案",
+    "he": "מעקב אחר ההצעה",
+    "hi": "प्रस्ताव पर फ़ॉलो-अप करें",
+    "sw": "Fuatilia pendekezo",
+    "de": "Angebot nachfassen",
+    "fr": "Relancer la proposition"
+   }
+  },
+  {
+   "en": "Get a Quote",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    9
+   ],
+   "translations": {
+    "es": "Obtener una cotización",
+    "zh": "获取报价",
+    "he": "קבלת הצעת מחיר",
+    "hi": "कोटेशन प्राप्त करें",
+    "sw": "Pata Nukuu",
+    "de": "Angebot anfordern",
+    "fr": "Obtenir un devis"
+   }
+  },
+  {
+   "en": "Get a Quote Now",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    9
+   ],
+   "translations": {
+    "es": "Obtener una cotización ahora",
+    "zh": "现在获取报价",
+    "he": "קבלת הצעת מחיר עכשיו",
+    "hi": "अभी कोटेशन प्राप्त करें",
+    "sw": "Pata Nukuu Sasa",
+    "de": "Jetzt Angebot anfordern",
+    "fr": "Obtenir un devis maintenant"
+   }
+  },
+  {
+   "en": "Web Form",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    9
+   ],
+   "translations": {
+    "es": "Formulario web",
+    "zh": "网页表单",
+    "he": "טופס אינטרנט",
+    "hi": "वेब फ़ॉर्म",
+    "sw": "Fomu ya Wavuti",
+    "de": "Webformular",
+    "fr": "Formulaire web"
+   }
+  },
+  {
+   "en": "Hi Rosa, I'd love to connect about Brightline Media.",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    3
+   ],
+   "translations": {
+    "es": "Hola Rosa, me encantaría conversar sobre Brightline Media.",
+    "zh": "你好 Rosa，我很想和你聊聊 Brightline Media。",
+    "he": "שלום Rosa, אשמח לדבר איתך על Brightline Media.",
+    "hi": "नमस्ते Rosa, मैं Brightline Media के बारे में बात करना चाहूँगा।",
+    "sw": "Habari Rosa, ningependa kuzungumza nawe kuhusu Brightline Media.",
+    "de": "Hallo Rosa, ich würde mich gerne mit Ihnen über Brightline Media austauschen.",
+    "fr": "Bonjour Rosa, j'aimerais beaucoup échanger avec vous au sujet de Brightline Media."
+   }
+  },
+  {
+   "en": "Hi Priya, checking in on the $22,000 proposal for Cobalt Analytics.",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    3,
+    4
+   ],
+   "translations": {
+    "es": "Hola Priya, te escribo para dar seguimiento a la propuesta de $22,000 para Cobalt Analytics.",
+    "zh": "你好 Priya，我想跟进 Cobalt Analytics 的 $22,000 提案。",
+    "he": "שלום Priya, אני בודק מה קורה עם ההצעה על סך $22,000 עבור Cobalt Analytics.",
+    "hi": "नमस्ते Priya, Cobalt Analytics के लिए $22,000 के प्रस्ताव पर फ़ॉलो-अप कर रहा हूँ।",
+    "sw": "Habari Priya, nafuatilia pendekezo la $22,000 kwa Cobalt Analytics.",
+    "de": "Hallo Priya, ich melde mich wegen des Angebots über $22,000 für Cobalt Analytics.",
+    "fr": "Bonjour Priya, je reviens vers vous au sujet de la proposition de $22,000 pour Cobalt Analytics."
+   }
+  },
+  {
+   "en": "Hi Rosa, checking in on the $12,000 proposal for Brightline Media.",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    5,
+    7
+   ],
+   "translations": {
+    "es": "Hola Rosa, te escribo para dar seguimiento a la propuesta de $12,000 para Brightline Media.",
+    "zh": "你好 Rosa，我想跟进 Brightline Media 的 $12,000 提案。",
+    "he": "שלום Rosa, אני בודק מה קורה עם ההצעה על סך $12,000 עבור Brightline Media.",
+    "hi": "नमस्ते Rosa, Brightline Media के लिए $12,000 के प्रस्ताव पर फ़ॉलो-अप कर रहा हूँ।",
+    "sw": "Habari Rosa, nafuatilia pendekezo la $12,000 kwa Brightline Media.",
+    "de": "Hallo Rosa, ich melde mich wegen des Angebots über $12,000 für Brightline Media.",
+    "fr": "Bonjour Rosa, je reviens vers vous au sujet de la proposition de $12,000 pour Brightline Media."
+   }
+  },
+  {
+   "en": "Marcus Webb",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    5,
+    6,
+    7,
+    9
+   ]
+  },
+  {
+   "en": "Rosa Delgado",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    5,
+    6,
+    7
+   ]
+  },
+  {
+   "en": "Lena Fischer",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    6,
+    7
+   ]
+  },
+  {
+   "en": "Priya Nair",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  },
+  {
+   "en": "Tom Okafor",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    6
+   ]
+  },
+  {
+   "en": "Diego Santos",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    4,
+    5,
+    6
+   ]
+  },
+  {
+   "en": "Nadia Boone",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    10
+   ]
+  },
+  {
+   "en": "Omar Haddad",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    10
+   ]
+  },
+  {
+   "en": "Alex",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    9,
+    10
+   ]
+  },
+  {
+   "en": "Rivera",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    9,
+    10
+   ]
+  },
+  {
+   "en": "Ironpeak Logistics",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    5,
+    7
+   ]
+  },
+  {
+   "en": "Brightline Media",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    5,
+    7
+   ]
+  },
+  {
+   "en": "Quartzline Systems",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    7
+   ]
+  },
+  {
+   "en": "Cobalt Analytics",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "en": "Harbor & Finch",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2
+   ]
+  },
+  {
+   "en": "Alturas Group",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2
+   ]
+  },
+  {
+   "en": "Skylark Dental",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    10
+   ]
+  },
+  {
+   "en": "Petra Foods",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    10
+   ]
+  },
+  {
+   "en": "Rivertown Co",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    9,
+    10
+   ]
+  },
+  {
+   "en": "{{first_name}}",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    3
+   ]
+  },
+  {
+   "en": "{{last_name}}",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    3
+   ]
+  },
+  {
+   "en": "{{company}}",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    3
+   ]
+  },
+  {
+   "en": "{{deal_value}}",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    3
+   ]
+  },
+  {
+   "en": "{{firstname}}",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    3,
+    8
+   ]
+  },
+  {
+   "en": "HTML",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    9
+   ]
+  },
+  {
+   "en": "CRM",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    9
+   ]
+  },
+  {
+   "en": "papaya whip",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    1
+   ]
+  },
+  {
+   "en": "dark orange",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    1
+   ]
+  },
+  {
+   "en": "dark-orange",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    6
+   ]
+  },
+  {
+   "en": "deep teal",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    6
+   ]
+  },
+  {
+   "en": "light blue",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    6
+   ]
+  },
+  {
+   "en": "amber",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    6
+   ]
+  },
+  {
+   "en": "red",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    6
+   ]
+  },
+  {
+   "en": "white",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    6
+   ]
+  }
+ ]
+}

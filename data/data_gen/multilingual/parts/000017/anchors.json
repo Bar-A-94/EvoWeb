@@ -1,0 +1,1103 @@
+{
+  "anchors": [
+    {
+      "en": "Fundraiser Day",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        1,
+        5
+      ],
+      "translations": {
+        "es": "Día de Recaudación",
+        "zh": "募捐日",
+        "he": "יום ההתרמה",
+        "hi": "धन संग्रह दिवस",
+        "sw": "Siku ya Uchangishaji",
+        "de": "Spendentag",
+        "fr": "Journée de Collecte"
+      }
+    },
+    {
+      "en": "Supporter Wall",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        2,
+        3,
+        6,
+        9
+      ],
+      "translations": {
+        "es": "Muro de Donantes",
+        "zh": "支持者墙",
+        "he": "קיר התומכים",
+        "hi": "समर्थक दीवार",
+        "sw": "Ukuta wa Wafadhili",
+        "de": "Unterstützerwand",
+        "fr": "Mur des Donateurs"
+      }
+    },
+    {
+      "en": "supporter wall",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        3,
+        5,
+        6,
+        8,
+        9
+      ],
+      "translations": {
+        "es": "Muro de Donantes",
+        "zh": "支持者墙",
+        "he": "קיר התומכים",
+        "hi": "समर्थक दीवार",
+        "sw": "Ukuta wa Wafadhili",
+        "de": "Unterstützerwand",
+        "fr": "Mur des Donateurs"
+      }
+    },
+    {
+      "en": "Campaign Pulse",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        4,
+        5,
+        9
+      ],
+      "translations": {
+        "es": "Pulso de la Campaña",
+        "zh": "活动脉搏",
+        "he": "דופק הקמפיין",
+        "hi": "अभियान की धड़कन",
+        "sw": "Mapigo ya Kampeni",
+        "de": "Kampagnenpuls",
+        "fr": "Pouls de la Campagne"
+      }
+    },
+    {
+      "en": "Day Schedule",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        5
+      ],
+      "translations": {
+        "es": "Programa del Día",
+        "zh": "当日日程",
+        "he": "לוח היום",
+        "hi": "दिन का कार्यक्रम",
+        "sw": "Ratiba ya Siku",
+        "de": "Tagesprogramm",
+        "fr": "Programme de la Journée"
+      }
+    },
+    {
+      "en": "My Day",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        5
+      ],
+      "translations": {
+        "es": "Mi Día",
+        "zh": "我的一天",
+        "he": "היום שלי",
+        "hi": "मेरा दिन",
+        "sw": "Siku Yangu",
+        "de": "Mein Tag",
+        "fr": "Ma Journée"
+      }
+    },
+    {
+      "en": "Share Studio",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        7,
+        10
+      ],
+      "translations": {
+        "es": "Estudio de Difusión",
+        "zh": "分享工作室",
+        "he": "סטודיו השיתוף",
+        "hi": "शेयर स्टूडियो",
+        "sw": "Studio ya Kushiriki",
+        "de": "Teilen-Studio",
+        "fr": "Studio de Partage"
+      }
+    },
+    {
+      "en": "Updates Hub",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        8
+      ],
+      "translations": {
+        "es": "Centro de Novedades",
+        "zh": "更新中心",
+        "he": "מרכז העדכונים",
+        "hi": "अपडेट केंद्र",
+        "sw": "Kituo cha Masasisho",
+        "de": "Neuigkeiten-Zentrale",
+        "fr": "Centre des Actualités"
+      }
+    },
+    {
+      "en": "Subscribers",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        8
+      ],
+      "translations": {
+        "es": "Suscriptores",
+        "zh": "订阅者",
+        "he": "מנויים",
+        "hi": "सब्सक्राइबर",
+        "sw": "Wanaojiandikisha",
+        "de": "Abonnenten",
+        "fr": "Abonnés"
+      }
+    },
+    {
+      "en": "Impact Report",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        10
+      ],
+      "translations": {
+        "es": "Informe de Impacto",
+        "zh": "影响力报告",
+        "he": "דוח ההשפעה",
+        "hi": "प्रभाव रिपोर्ट",
+        "sw": "Ripoti ya Athari",
+        "de": "Wirkungsbericht",
+        "fr": "Rapport d'Impact"
+      }
+    },
+    {
+      "en": "partner directory",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        6,
+        8,
+        9
+      ],
+      "translations": {
+        "es": "directorio de socios",
+        "zh": "合作伙伴目录",
+        "he": "מדריך השותפים",
+        "hi": "साझेदार निर्देशिका",
+        "sw": "orodha ya washirika",
+        "de": "Partnerverzeichnis",
+        "fr": "annuaire des partenaires"
+      }
+    },
+    {
+      "en": "pledge form",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10
+      ],
+      "translations": {
+        "es": "formulario de donación",
+        "zh": "捐赠表单",
+        "he": "טופס התרומה",
+        "hi": "दान फ़ॉर्म",
+        "sw": "fomu ya kuchangia",
+        "de": "Spendenformular",
+        "fr": "formulaire de don"
+      }
+    },
+    {
+      "en": "Gold",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        2,
+        3,
+        6,
+        9
+      ],
+      "translations": {
+        "es": "Oro",
+        "zh": "金级",
+        "he": "זהב",
+        "hi": "स्वर्ण",
+        "sw": "Dhahabu",
+        "de": "Gold",
+        "fr": "Or"
+      }
+    },
+    {
+      "en": "Silver",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        2,
+        3,
+        9
+      ],
+      "translations": {
+        "es": "Plata",
+        "zh": "银级",
+        "he": "כסף",
+        "hi": "रजत",
+        "sw": "Fedha",
+        "de": "Silber",
+        "fr": "Argent"
+      }
+    },
+    {
+      "en": "Bronze",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        2,
+        3,
+        9
+      ],
+      "translations": {
+        "es": "Bronce",
+        "zh": "铜级",
+        "he": "ארד",
+        "hi": "कांस्य",
+        "sw": "Shaba",
+        "de": "Bronze",
+        "fr": "Bronze"
+      }
+    },
+    {
+      "en": "Clean Water",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        2,
+        3,
+        5,
+        6,
+        8,
+        10
+      ],
+      "translations": {
+        "es": "Agua Limpia",
+        "zh": "清洁水",
+        "he": "מים נקיים",
+        "hi": "स्वच्छ जल",
+        "sw": "Maji Safi",
+        "de": "Sauberes Wasser",
+        "fr": "Eau Potable"
+      }
+    },
+    {
+      "en": "Education",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10
+      ],
+      "translations": {
+        "es": "Educación",
+        "zh": "教育",
+        "he": "חינוך",
+        "hi": "शिक्षा",
+        "sw": "Elimu",
+        "de": "Bildung",
+        "fr": "Éducation"
+      }
+    },
+    {
+      "en": "Food Relief",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        2,
+        3,
+        5,
+        6,
+        8,
+        9,
+        10
+      ],
+      "translations": {
+        "es": "Ayuda Alimentaria",
+        "zh": "食品援助",
+        "he": "סיוע מזון",
+        "hi": "भोजन सहायता",
+        "sw": "Msaada wa Chakula",
+        "de": "Lebensmittelhilfe",
+        "fr": "Aide Alimentaire"
+      }
+    },
+    {
+      "en": "Event news",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        8
+      ],
+      "translations": {
+        "es": "Noticias del evento",
+        "zh": "活动资讯",
+        "he": "חדשות האירוע",
+        "hi": "कार्यक्रम समाचार",
+        "sw": "Habari za tukio",
+        "de": "Neuigkeiten zur Veranstaltung",
+        "fr": "Actualités de l'événement"
+      }
+    },
+    {
+      "en": "Opening Ceremony",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        5
+      ],
+      "translations": {
+        "es": "Ceremonia de Apertura",
+        "zh": "开幕式",
+        "he": "טקס הפתיחה",
+        "hi": "उद्घाटन समारोह",
+        "sw": "Sherehe ya Ufunguzi",
+        "de": "Eröffnungsfeier",
+        "fr": "Cérémonie d'Ouverture"
+      }
+    },
+    {
+      "en": "Bake Sale Kickoff",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        5
+      ],
+      "translations": {
+        "es": "Inicio de la Venta de Pasteles",
+        "zh": "烘焙义卖启动",
+        "he": "פתיחת מכירת המאפים",
+        "hi": "बेक सेल शुरुआत",
+        "sw": "Uzinduzi wa Mauzo ya Keki",
+        "de": "Auftakt des Kuchenverkaufs",
+        "fr": "Lancement de la Vente de Gâteaux"
+      }
+    },
+    {
+      "en": "Charity Fun Run",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        5
+      ],
+      "translations": {
+        "es": "Carrera Solidaria",
+        "zh": "慈善趣味跑",
+        "he": "ריצת הצדקה",
+        "hi": "चैरिटी फन रन",
+        "sw": "Mbio za Hisani",
+        "de": "Wohltätigkeitslauf",
+        "fr": "Course Solidaire"
+      }
+    },
+    {
+      "en": "Silent Auction Preview",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        5,
+        7
+      ],
+      "translations": {
+        "es": "Vista Previa de la Subasta Silenciosa",
+        "zh": "无声拍卖预展",
+        "he": "תצוגה מקדימה של המכירה השקטה",
+        "hi": "साइलेंट नीलामी पूर्वावलोकन",
+        "sw": "Onyesho la Awali la Mnada Kimya",
+        "de": "Vorschau der Stillen Auktion",
+        "fr": "Avant-première de la Vente aux Enchères Silencieuse"
+      }
+    },
+    {
+      "en": "Donor Lunch",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        5,
+        7
+      ],
+      "translations": {
+        "es": "Almuerzo de Donantes",
+        "zh": "捐赠者午宴",
+        "he": "ארוחת התורמים",
+        "hi": "दानदाता भोज",
+        "sw": "Chakula cha Mchana cha Wafadhili",
+        "de": "Spender-Mittagessen",
+        "fr": "Déjeuner des Donateurs"
+      }
+    },
+    {
+      "en": "Closing Concert",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        5
+      ],
+      "translations": {
+        "es": "Concierto de Clausura",
+        "zh": "闭幕音乐会",
+        "he": "קונצרט הסיום",
+        "hi": "समापन संगीत कार्यक्रम",
+        "sw": "Tamasha la Kufunga",
+        "de": "Abschlusskonzert",
+        "fr": "Concert de Clôture"
+      }
+    },
+    {
+      "en": "water filter",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        10
+      ],
+      "translations": {
+        "es": "filtro de agua",
+        "zh": "净水滤芯",
+        "he": "מסנן מים",
+        "hi": "पानी का फ़िल्टर",
+        "sw": "kichujio cha maji",
+        "de": "Wasserfilter",
+        "fr": "filtre à eau"
+      }
+    },
+    {
+      "en": "water filters",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        10
+      ],
+      "translations": {
+        "es": "filtros de agua",
+        "zh": "净水滤芯",
+        "he": "מסנני מים",
+        "hi": "पानी के फ़िल्टर",
+        "sw": "vichujio vya maji",
+        "de": "Wasserfilter",
+        "fr": "filtres à eau"
+      }
+    },
+    {
+      "en": "book bundle",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        10
+      ],
+      "translations": {
+        "es": "paquete de libros",
+        "zh": "图书包",
+        "he": "חבילת ספרים",
+        "hi": "पुस्तक बंडल",
+        "sw": "kifurushi cha vitabu",
+        "de": "Bücherpaket",
+        "fr": "lot de livres"
+      }
+    },
+    {
+      "en": "book bundles",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        10
+      ],
+      "translations": {
+        "es": "paquetes de libros",
+        "zh": "图书包",
+        "he": "חבילות ספרים",
+        "hi": "पुस्तक बंडल",
+        "sw": "vifurushi vya vitabu",
+        "de": "Bücherpakete",
+        "fr": "lots de livres"
+      }
+    },
+    {
+      "en": "meal box",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        10
+      ],
+      "translations": {
+        "es": "caja de comida",
+        "zh": "餐食箱",
+        "he": "ארגז מזון",
+        "hi": "भोजन बॉक्स",
+        "sw": "boksi la chakula",
+        "de": "Essenspaket",
+        "fr": "boîte-repas"
+      }
+    },
+    {
+      "en": "meal boxes",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        10
+      ],
+      "translations": {
+        "es": "cajas de comida",
+        "zh": "餐食箱",
+        "he": "ארגזי מזון",
+        "hi": "भोजन बॉक्स",
+        "sw": "maboksi ya chakula",
+        "de": "Essenspakete",
+        "fr": "boîtes-repas"
+      }
+    },
+    {
+      "en": "total raised",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        4,
+        5,
+        7,
+        9
+      ],
+      "translations": {
+        "es": "total recaudado",
+        "zh": "已筹总额",
+        "he": "סך הכל שגויס",
+        "hi": "कुल जुटाई गई राशि",
+        "sw": "jumla iliyokusanywa",
+        "de": "gesammelte Gesamtsumme",
+        "fr": "total collecté"
+      }
+    },
+    {
+      "en": "supporter count",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        4,
+        7
+      ],
+      "translations": {
+        "es": "número de donantes",
+        "zh": "支持者人数",
+        "he": "מספר התומכים",
+        "hi": "समर्थकों की संख्या",
+        "sw": "idadi ya wafadhili",
+        "de": "Anzahl der Unterstützer",
+        "fr": "nombre de donateurs"
+      }
+    },
+    {
+      "en": "team leaderboard",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        4
+      ],
+      "translations": {
+        "es": "tabla de posiciones de equipos",
+        "zh": "团队排行榜",
+        "he": "טבלת הקבוצות",
+        "hi": "टीम लीडरबोर्ड",
+        "sw": "jedwali la timu",
+        "de": "Team-Rangliste",
+        "fr": "classement des équipes"
+      }
+    },
+    {
+      "en": "custom amount",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        3
+      ],
+      "translations": {
+        "es": "monto personalizado",
+        "zh": "自定义金额",
+        "he": "סכום מותאם אישית",
+        "hi": "कस्टम राशि",
+        "sw": "kiasi maalum",
+        "de": "eigener Betrag",
+        "fr": "montant libre"
+      }
+    },
+    {
+      "en": "processing fee",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        3,
+        4
+      ],
+      "translations": {
+        "es": "comisión de procesamiento",
+        "zh": "手续费",
+        "he": "עמלת עיבוד",
+        "hi": "प्रोसेसिंग शुल्क",
+        "sw": "ada ya uchakataji",
+        "de": "Bearbeitungsgebühr",
+        "fr": "frais de traitement"
+      }
+    },
+    {
+      "en": "Showing X of 9",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        6
+      ],
+      "translations": {
+        "es": "Mostrando X de 9",
+        "zh": "显示 X 个，共 9 个",
+        "he": "מציג X מתוך 9",
+        "hi": "9 में से X दिखा रहे हैं",
+        "sw": "Inaonyesha X kati ya 9",
+        "de": "Zeige X von 9",
+        "fr": "Affichage de X sur 9"
+      }
+    },
+    {
+      "en": "Showing 3 of 9",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        6
+      ],
+      "translations": {
+        "es": "Mostrando 3 de 9",
+        "zh": "显示 3 个，共 9 个",
+        "he": "מציג 3 מתוך 9",
+        "hi": "9 में से 3 दिखा रहे हैं",
+        "sw": "Inaonyesha 3 kati ya 9",
+        "de": "Zeige 3 von 9",
+        "fr": "Affichage de 3 sur 9"
+      }
+    },
+    {
+      "en": "North",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        6,
+        8
+      ],
+      "translations": {
+        "es": "Norte",
+        "zh": "北部",
+        "he": "צפון",
+        "hi": "उत्तर",
+        "sw": "Kaskazini",
+        "de": "Norden",
+        "fr": "Nord"
+      }
+    },
+    {
+      "en": "South",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        6
+      ],
+      "translations": {
+        "es": "Sur",
+        "zh": "南部",
+        "he": "דרום",
+        "hi": "दक्षिण",
+        "sw": "Kusini",
+        "de": "Süden",
+        "fr": "Sud"
+      }
+    },
+    {
+      "en": "East",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        6
+      ],
+      "translations": {
+        "es": "Este",
+        "zh": "东部",
+        "he": "מזרח",
+        "hi": "पूर्व",
+        "sw": "Mashariki",
+        "de": "Osten",
+        "fr": "Est"
+      }
+    },
+    {
+      "en": "weekly",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        8
+      ],
+      "translations": {
+        "es": "semanal",
+        "zh": "每周",
+        "he": "שבועי",
+        "hi": "साप्ताहिक",
+        "sw": "kila wiki",
+        "de": "wöchentlich",
+        "fr": "hebdomadaire"
+      }
+    },
+    {
+      "en": "monthly",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        8
+      ],
+      "translations": {
+        "es": "mensual",
+        "zh": "每月",
+        "he": "חודשי",
+        "hi": "मासिक",
+        "sw": "kila mwezi",
+        "de": "monatlich",
+        "fr": "mensuel"
+      }
+    },
+    {
+      "en": "cornsilk",
+      "class": "keep",
+      "kind": "css_visual",
+      "turns": [
+        1,
+        9
+      ]
+    },
+    {
+      "en": "peru",
+      "class": "keep",
+      "kind": "css_visual",
+      "turns": [
+        1,
+        9
+      ]
+    },
+    {
+      "en": "steel blue",
+      "class": "keep",
+      "kind": "css_visual",
+      "turns": [
+        3,
+        5,
+        8
+      ]
+    },
+    {
+      "en": "plum purple",
+      "class": "keep",
+      "kind": "css_visual",
+      "turns": [
+        3
+      ]
+    },
+    {
+      "en": "olive green",
+      "class": "keep",
+      "kind": "css_visual",
+      "turns": [
+        3,
+        6
+      ]
+    },
+    {
+      "en": "goldenrod",
+      "class": "keep",
+      "kind": "css_visual",
+      "turns": [
+        9
+      ]
+    },
+    {
+      "en": "slate gray",
+      "class": "keep",
+      "kind": "css_visual",
+      "turns": [
+        9
+      ]
+    },
+    {
+      "en": "chocolate brown",
+      "class": "keep",
+      "kind": "css_visual",
+      "turns": [
+        9
+      ]
+    },
+    {
+      "en": "Maria Alvarez",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        3,
+        4,
+        6,
+        9
+      ]
+    },
+    {
+      "en": "James O'Neil",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2
+      ]
+    },
+    {
+      "en": "Priya Shah",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        9
+      ]
+    },
+    {
+      "en": "Tom Becker",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        3
+      ]
+    },
+    {
+      "en": "Lena Fischer",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        9
+      ]
+    },
+    {
+      "en": "Sam Waters",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2
+      ]
+    },
+    {
+      "en": "Dana Cole",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2
+      ]
+    },
+    {
+      "en": "Rita Vale",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        3
+      ]
+    },
+    {
+      "en": "Noah Kim",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        3
+      ]
+    },
+    {
+      "en": "Ivy Chen",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        4
+      ]
+    },
+    {
+      "en": "Ava Long",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        7
+      ]
+    },
+    {
+      "en": "Omar Reyes",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        10
+      ]
+    },
+    {
+      "en": "River Runners",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        4
+      ]
+    },
+    {
+      "en": "Bright Sparks",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        4
+      ]
+    },
+    {
+      "en": "Green Hearts",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        4
+      ]
+    },
+    {
+      "en": "Clearwater Trust",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        6,
+        8
+      ]
+    },
+    {
+      "en": "BlueDrop Foundation",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        6
+      ]
+    },
+    {
+      "en": "Riverside Rotary",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        6
+      ]
+    },
+    {
+      "en": "ReadRight Alliance",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        6,
+        8
+      ]
+    },
+    {
+      "en": "Book Bridge Co.",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        6
+      ]
+    },
+    {
+      "en": "ScholarWorks",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        6
+      ]
+    },
+    {
+      "en": "Meal Makers Guild",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        6,
+        9
+      ]
+    },
+    {
+      "en": "Harvest Hands",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        6,
+        9
+      ]
+    },
+    {
+      "en": "PantryLink",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        6,
+        9
+      ]
+    },
+    {
+      "en": "ross@maplemail.org",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        8
+      ]
+    },
+    {
+      "en": "amina@riverpost.net",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        8
+      ]
+    },
+    {
+      "en": "kai@sunmail.co",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        8
+      ]
+    },
+    {
+      "en": "jamie@site",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        8
+      ]
+    },
+    {
+      "en": "jamie@hillpost.org",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        8
+      ]
+    }
+  ]
+}

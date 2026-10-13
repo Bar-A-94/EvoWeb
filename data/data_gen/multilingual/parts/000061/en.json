@@ -1,0 +1,909 @@
+{
+ "id": "000061",
+ "instruction": "Please develop a children's recycling game website to educate kids on proper waste recycling. The game should include competitive elements such as a leaderboard to keep kids engaged and motivated. The game should use a cartoon-style visual design to make it visually appealing to children. Kids should be able to play the game, receive feedback, learn how to correctly sort waste into the corresponding containers, and receive rewards and recognition through the game. Use seashell for container backgrounds and crimson for component visuals.",
+ "Category": {
+  "primary_category": "User Interaction",
+  "subcategories": [
+   "Form Systems",
+   "AI Integration",
+   "Real-time Features"
+  ]
+ },
+ "application_type": "Learning Platforms",
+ "ui_instruct": [
+  {
+   "task": "Test the functionality of starting a new game.",
+   "expected_result": "The game should initialize with an introductory screen displaying instructions on how to play, including sorting waste into correct containers.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Generation"
+    ]
+   }
+  },
+  {
+   "task": "Check the leaderboard feature to ensure it displays scores correctly.",
+   "expected_result": "The leaderboard should show a list of players with their respective scores in descending order without any visual errors.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering",
+     "Data Visualization"
+    ]
+   }
+  },
+  {
+   "task": "Assess the cartoon-style visual design for appropriateness.",
+   "expected_result": "The visuals should be colorful, child-friendly, and consistent throughout the website, with no inappropriate or non-cartoonish elements present.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  },
+  {
+   "task": "Test the feedback system for incorrect sorting.",
+   "expected_result": "Placing a waste item in the wrong container should trigger a gentle correction prompt explaining the correct choice without being discouraging.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Filtering"
+    ]
+   }
+  },
+  {
+   "task": "Verify the awarding of rewards and recognition within the game.",
+   "expected_result": "After correctly sorting a designated number of items or reaching a specific score, the game should display a reward screen or badge to acknowledge the player’s achievement.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Authentication Flows",
+     "Generation"
+    ]
+   }
+  },
+  {
+   "task": "Verify that the website uses 'seashell' as the background color and 'crimson' as the component color, as specified in the design requirements.",
+   "expected_result": "The website has a background color of 'seashell' and components (such as buttons, cards, headers, etc.) are styled with the color 'crimson', accurately reflecting the design instruction.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "archetype": "interactive-tool",
+   "instruction": "The kids want their own characters! Add an Avatar Studio page where they build a buddy: pick one of six animals (raccoon, frog, robot, turtle, panda, fox), a color, and an accessory like a cape or goggles, with a big live preview that changes the instant they tap anything or type. Nicknames need rules though — 2 to 12 characters, letters, numbers and spaces only, and not one of the taken demo names RECYCLERAY or GREENGRETA no matter how it's capitalized — keep saving blocked with a friendly note until it's all good. One thing for everywhere in this app, now and for anything we add later: kids' nicknames always display in ALL CAPS. And put the saved buddy — avatar plus nickname — right at the top of the leaderboard page next to the scores.",
+   "source_website": "EPA Recycle City Challenge",
+   "source_feature": "Avatar selection before play",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "In the Avatar Studio, type 'Z' into the nickname field, then add more letters to make it 'Ziggy'.",
+     "expected_result": "With just 'Z' saving is blocked with a friendly note (names need 2-12 characters); once it reads 'Ziggy' the block lifts and saving becomes possible.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Systems",
+       "Input Validation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the Avatar Studio, type 'greengreta' into the nickname field.",
+     "expected_result": "The name is rejected as already taken even though it's typed in lowercase, and saving stays blocked with a friendly message.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Systems",
+       "Input Validation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the Avatar Studio, click a different animal and then a different accessory without saving.",
+     "expected_result": "The big preview updates immediately after each click, showing the newly chosen animal and accessory.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Real-time Features"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Type the lowercase nickname 'ziggy' in the Avatar Studio, pick the frog, save, then open the leaderboard page.",
+     "expected_result": "The saved buddy appears at the top of the leaderboard page showing the frog avatar and the name as ZIGGY in all caps, despite being typed lowercase.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Dynamic Content Rendering",
+       "UI Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 1,
+     "task": "Open the leaderboard from the main screen.",
+     "expected_result": "Players are listed with their scores in descending order, highest first.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Dynamic Content Rendering"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Parents asked for progress, so build a 'My Journey' page: every finished game gets logged as a round there, and start the history off with exactly these six, oldest to newest — Park Patrol 180 pts (9 of 12 sorted right, 4 stars), Kitchen Cleanup 260 pts (13 of 15, 6 stars), Park Patrol 140 pts (6 of 10, 3 stars), Kitchen Cleanup 260 pts (14 of 15, 7 stars), Park Patrol 220 pts (11 of 12, 5 stars), Park Patrol 90 pts (5 of 8, 2 stars) — I'll add more just by playing. Show the rounds newest first, plus an all-time average score shown to one decimal place, a 'recent form' number averaging only the last three rounds, overall accuracy figured from total correct out of total items (one decimal place), total stars banked, and a best-round spotlight where a score tie goes to the more accurate round. From here on, everywhere in the app and in whatever we build next, scores should always read with 'pts' after the number, like 260 pts. Also make the game itself tap-friendly — tap an item then tap a bin to sort it — and give kids a big 'Done for now' button that ends a round early and still banks it into the journey.",
+   "source_website": "National Geographic Kids: Recycle Roundup",
+   "source_feature": "High-score tracking",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the My Journey page and look at the overall accuracy stat.",
+     "expected_result": "It reads 80.6% — computed as 58 correct out of 72 total items across the six seeded rounds, not 78.2% (the average of the per-round percentages).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Visualization",
+       "Computed Values"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "On the My Journey page, look at the best-round spotlight.",
+     "expected_result": "It shows the Kitchen Cleanup round with 260 pts and 14 of 15 correct (93.3%) — the score tie with the other 260 pts round is broken by accuracy.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Values",
+       "Sorting"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Scroll the rounds list on the My Journey page.",
+     "expected_result": "All six seeded rounds appear newest first — the 90 pts Park Patrol at the top and the 180 pts Park Patrol at the bottom.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Look at how every score is written on the My Journey page — averages, recent form, and each round in the list.",
+     "expected_result": "Every score carries the pts suffix (all-time average 191.7 pts, recent form 190 pts, rounds like 260 pts) — and recent form is visibly a different number from the all-time average.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "UI Consistency",
+       "Computed Values"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "In the Avatar Studio, type 'greengreta' into the nickname field.",
+     "expected_result": "The name is rejected as already taken even though it's typed in lowercase, and saving stays blocked with a friendly message.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Systems",
+       "Input Validation"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Big one: turn the game into a Recycle City map with four spots — Park, Kitchen, School, Factory — each with its own themed pile (School gets things like crumpled paper, juice boxes and broken crayons; Kitchen gets banana peels, glass jars, milk jugs). Park is always open, Kitchen opens once any Park round in the journey hits 150 pts, School opens once a Kitchen round hits 250 pts, and Factory opens once a School round hits 250 pts — judge all that from the journey history, so with my seeded rounds three spots should already be open. Tapping a spot shows a little intro with its item pile and a start button, playing runs the same tap-to-sort game there (Done button included), and a finished round gets logged in the journey tagged with that spot's name. Oh, and whenever anything in this app is locked — now or in whatever we add later — show a little padlock plus exactly what's needed to open it.",
+   "source_website": "EPA Recycle City Challenge",
+   "source_feature": "Multi-location narrative map structure",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Recycle City map fresh.",
+     "expected_result": "Park, Kitchen and School are open while Factory is the only locked spot — School counts as open because a Kitchen round hit 250 pts, even though School has never been played.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Values",
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the map, click the locked Factory spot.",
+     "expected_result": "It shows a padlock and states the exact requirement — a School round reaching 250 pts — rather than opening the game or crashing.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Display",
+       "Edge Cases"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Click the School spot and view its intro.",
+     "expected_result": "The intro lists school-themed items such as crumpled paper, juice boxes and broken crayons — a different pile from Park's — along with a start button.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Enter Park from the map, start the round, sort one item, press the Done button, then open My Journey.",
+     "expected_result": "A new round tagged Park sits at the top of the history, above the six seeded rounds.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "Data Persistence"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "Open the My Journey page and look at the overall accuracy stat.",
+     "expected_result": "It reads 80.6% — computed as 58 correct out of 72 total items across the six seeded rounds, not 78.2% (the average of the per-round percentages).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Visualization",
+       "Computed Values"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "My daughter keeps asking 'did we actually help?' — so add an Impact Calculator page. Three boxes to type counts into — aluminium cans, plastic bottles, paper sheets — and while you type it live-updates: energy saved in kWh (cans count 0.2 each, bottles 0.08, paper 0.01, shown with two decimals), TV hours (3 per can), and an eco points total worth 3 per can, 2 per bottle, plus 1 point for every full 10 sheets of paper. An empty box just means zero — don't let the math blank out or go weird. Top the page with a lifetime line pulled from the journey: how many items in total this kid has sorted right across all their rounds.",
+   "source_website": "National Geographic Kids: Recycle Roundup",
+   "source_feature": "In-game environmental fact pop-ups",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "On the Impact Calculator, type 7 into the aluminium cans box.",
+     "expected_result": "Without pressing anything else, energy saved shows 1.40 kWh and TV hours shows 21 — the results update as you type.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Real-time Features",
+       "Computed Values"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Impact Calculator, type a number into the aluminium cans box, then clear it out completely.",
+     "expected_result": "The results treat the empty box as zero and show clean numbers — no NaN, blank, or frozen values.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Edge Cases",
+       "Input Validation"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Look at the lifetime line at the top of the Impact Calculator.",
+     "expected_result": "It says 58 items sorted right — the total correct sorts across the six seeded journey rounds, not 72 (the total items faced).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Values"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Start a game, sort exactly one item correctly, press Done, then return to the Impact Calculator.",
+     "expected_result": "The lifetime line now reads 59 — it grew by exactly the one correct sort banked from that round.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "Computed Values"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "In the Avatar Studio, click a different animal and then a different accessory without saving.",
+     "expected_result": "The big preview updates immediately after each click, showing the newly chosen animal and accessory.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Real-time Features"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Stars should buy something! Open a Sticker Shop with exactly these five: Super Worm 3 stars, Rainbow Frog 8, Dancing Banana 10, Golden Raccoon 15, Diamond Turtle 22. The spending balance isn't just every star in the journey though — only rounds where at least three quarters of the items got sorted right bank their stars as spendable (a round sitting exactly on three quarters still counts), sloppier rounds keep their stars on the journey page but those can't be spent — and whatever's already been spent comes off. If a sticker costs exactly what's left that's still a yes, but anything pricier than the balance simply can't be bought. Once a sticker is owned it shows as owned in the shop and can never be bought twice, and the balance everywhere updates the moment a purchase goes through. And let's make earning simple from here on: any round played from now on pays out one star per correctly sorted item, credited to the journey the moment I press Done — the seeded history keeps its listed stars as-is.",
+   "source_website": "EPA Recycle City Challenge",
+   "source_feature": "Token-based multi-answer scoring (up to 45 tokens)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Sticker Shop for the first time.",
+     "expected_result": "The spendable balance shows 22 stars — only the four seeded rounds at or above three-quarters accuracy bank spendable stars (4+6+7+5, with the 9-of-12 round counting because it sits exactly on the bar), not 27 (the plain sum of all six rounds' stars) — and all five stickers are listed with none owned.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Values"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Buy the Diamond Turtle sticker (22 stars).",
+     "expected_result": "The purchase goes through since it costs exactly the balance; the balance drops to 0 and every remaining sticker becomes unbuyable.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Edge Cases",
+       "State Management"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Buy the Super Worm sticker (3 stars), then try to buy it again.",
+     "expected_result": "After the first purchase the balance reads 19 and Super Worm shows as owned; a second purchase of the same sticker is impossible.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Management",
+       "Input Validation"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Start a game, sort one item correctly with no mistakes, press Done, then open the Sticker Shop.",
+     "expected_result": "The balance now sits above 22 — higher by exactly the stars that round banked, since the mistake-free round clears the three-quarters accuracy bar.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "Computed Values"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 4,
+     "task": "Open the Recycle City map fresh.",
+     "expected_result": "Park, Kitchen and School are open while Factory is the only locked spot — School counts as open because a Kitchen round hit 250 pts, even though School has never been played.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Values",
+       "Dynamic Content Rendering"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "design-restyle",
+   "instruction": "Summer refresh — we're going Deep Sea Rescue! Across the game screen, the Recycle City map, My Journey, and the Sticker Shop: swap the seashell backgrounds for a soft aqua (#E0F7FA), make every primary action button deep teal (#00695C) with white text, give all cards 16px rounded corners with a thin navy (#1A237E) border, and center every page heading with a little wave 🌊 in front of it. Also, wherever a star amount appears, sit it on a small gold circle badge. Same treatment on every one of those pages please — don't leave any of them on the old look.",
+   "source_website": "National Geographic Kids: Recycle Roundup",
+   "source_feature": "Cartoon-style game presentation",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Open My Journey and then the Sticker Shop.",
+     "expected_result": "Both pages show the soft aqua background and deep teal primary buttons with white text — neither page is left on the old seashell/crimson look.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "UI Consistency",
+       "Theme Application"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Visit the Recycle City map, My Journey, and the Sticker Shop and look at each page heading.",
+     "expected_result": "Every heading is centered with the wave mark in front of it, consistently on all three pages.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "UI Consistency",
+       "Typography"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "On My Journey, find the total stars banked.",
+     "expected_result": "It still reads 27 and now sits on a small gold circle badge.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Theme Application",
+       "Computed Values"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the restyled map, click the locked Factory spot.",
+     "expected_result": "Under the new theme the padlock and the exact unlock requirement (a School round reaching 250 pts) still show.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "UI Consistency",
+       "State Display"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "On the My Journey page, look at the best-round spotlight.",
+     "expected_result": "It shows the Kitchen Cleanup round with 260 pts and 14 of 15 correct (93.3%) — the score tie with the other 260 pts round is broken by accuracy.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Values",
+       "Sorting"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Teachers keep asking for custom rounds, so add a Challenge Builder. Step one: pick which city spot's item pile to use, type how many items (5 to 15, box starts at 10) and a target score — 50 to 500 with the ends included, anything outside gets a friendly nudge instead of a crash — and pre-fill that target with the kid's best journey score so far. Step two is a review screen that echoes every choice plus the star reward on offer: one star per full 50 pts of target, so 300 gives 6. Then they play it — tap-to-sort, Done button and all — and the finished challenge lands in the journey tagged as a Challenge.",
+   "source_website": "National Geographic Kids: Recycle Roundup",
+   "source_feature": "High-score tracking",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Challenge Builder's first step.",
+     "expected_result": "The target score field comes pre-filled with 260 — the best score in the journey — not blank, zero, or the most recent round's score.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Values",
+       "Form Systems"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the builder, type 40 as the target score, then change it to 500.",
+     "expected_result": "40 gets a friendly rejection since the range is 50-500; 500 is accepted because the ends are included.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Edge Cases"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Pick the Kitchen pile, type 8 items and a 300 target, and continue to the review step.",
+     "expected_result": "The review echoes Kitchen, 8 items and 300 pts, and lists the reward as 6 stars (one per full 50 pts).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "Computed Values"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Build a challenge with the Kitchen pile, continue past review, start it, press Done right away, then open My Journey.",
+     "expected_result": "The finished round appears at the top of the journey history tagged as a Challenge.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "Data Persistence"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 5,
+     "task": "On the Impact Calculator, type a number into the aluminium cans box, then clear it out completely.",
+     "expected_result": "The results treat the empty box as zero and show clean numbers — no NaN, blank, or frozen values.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Edge Cases",
+       "Input Validation"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Let's make the fun facts collectible: a Fact Card Album with twelve cards, three per city spot (stuff like 'one recycled can runs a TV for three hours'). Finishing any round at a spot — even a quick Done — banks that spot's three cards, but each card only ever once; my seeded journey already covers Park and Kitchen, so the album should open with exactly those six collected no matter how many times Park was played. Group the album by spot, show a completion percent, and cards not yet earned sit face-down so kids can see what's still out there and which spot earns them.",
+   "source_website": "National Geographic Kids: Recycle Roundup",
+   "source_feature": "In-game environmental fact pop-ups",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Fact Card Album fresh.",
+     "expected_result": "It shows 6 of 12 cards collected (50%) — Park's three and Kitchen's three from the seeded rounds — not a count inflated by the repeated Park rounds.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Values",
+       "Deduplication"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Look at the Park group in the album.",
+     "expected_result": "Exactly three Park cards appear, each shown once, even though the journey holds four Park rounds.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Deduplication",
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Look at the Factory group in the album.",
+     "expected_result": "Its three cards sit face-down with a padlock and say a Factory round earns them — no blanks or crashes for a never-visited spot.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Edge Cases",
+       "State Display"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Open School on the map, start a round, press Done, then open the Fact Card Album.",
+     "expected_result": "School's three cards flip to collected and the album count reads 9 of 12 (75%).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "Computed Values"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 6,
+     "task": "Open the Sticker Shop for the first time.",
+     "expected_result": "The spendable balance shows 22 stars — only the four seeded rounds at or above three-quarters accuracy bank spendable stars (4+6+7+5, with the 9-of-12 round counting because it sits exactly on the bar), not 27 (the plain sum of all six rounds' stars) — and all five stickers are listed with none owned.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Values"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "To wrap up the school year: an Eco Hero Certificate maker. First screen picks one of three border styles and has checkboxes for what to feature — total stars banked, best round, fact cards collected, stickers owned — all ticked to start; the second screen is a live preview of the certificate plus a plain-text version in a copy-friendly block, and both must change the instant a box is ticked or unticked. The certificate stars the kid's buddy — avatar and nickname from the studio, or a friendly ECO HERO placeholder if they haven't made one — and pulls real numbers: stars from the journey, the best-round spotlight, fact cards as collected-out-of-twelve, and the sticker count, where a plain 0 is fine but never a blank.",
+   "source_website": "EPA Recycle City Challenge",
+   "source_feature": "Public 3-day rolling leaderboard with initials entry",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the certificate preview with all the achievement boxes ticked.",
+     "expected_result": "It shows 27 stars banked, the best round as Kitchen Cleanup at 260 pts, fact cards 6 of 12, and a sticker count of 0 — real numbers, no blanks.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Values",
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the certificate maker, untick the fact cards checkbox, then tick it again.",
+     "expected_result": "The fact-card line vanishes instantly from both the rendered certificate and the plain-text copy block, and reappears in both when re-ticked — the two stay in sync.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Real-time Features",
+       "UI Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the Avatar Studio save a buddy named 'milo', then open the certificate maker.",
+     "expected_result": "The certificate stars MILO in all caps with the chosen avatar instead of the ECO HERO placeholder.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Dynamic Content Rendering",
+       "UI Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Buy the Super Worm sticker in the Sticker Shop, then open the certificate with the stickers box ticked.",
+     "expected_result": "The sticker line on the certificate now reads 1 instead of 0.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "Computed Values"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 8,
+     "task": "Open the Challenge Builder's first step.",
+     "expected_result": "The target score field comes pre-filled with 260 — the best score in the journey — not blank, zero, or the most recent round's score.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Values",
+       "Form Systems"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "target_app_summary": "The little sorting game has grown into a full kids' eco-arcade. Identity and progression came first: an Avatar Studio with validated nicknames, then a My Journey stats page that logs every finished round (seeded with six exact rounds) and computes weighted accuracy, recent-form vs all-time averages, and a tie-broken best-round spotlight. On top of the journey grew a Recycle City map whose four themed spots unlock from history scores, an Impact Calculator with a lifetime counter, a star-currency Sticker Shop, a teacher-facing Challenge Builder that draws item piles from the map and pre-fills targets from the journey, and a dedup-collectible Fact Card Album banked by spot visits. A Deep Sea Rescue restyle swept the game, map, journey and shop, and everything converges in an Eco Hero Certificate maker that renders the buddy, stars, best round, sticker count and fact completion in a live preview plus copyable text block. The graph is journey-centric: T3 feeds T4, T5, T6, T8, T9 and T10, with a four-deep chain T1-T3-T4-T9-T10.",
+ "dependency_graph": {
+  "nodes": [
+   {
+    "id": "T1",
+    "label": "base app",
+    "archetype": "base"
+   },
+   {
+    "id": "T2",
+    "label": "Avatar Studio",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T3",
+    "label": "My Journey dashboard",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T4",
+    "label": "Recycle City map",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T5",
+    "label": "Impact Calculator",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T6",
+    "label": "Sticker Shop",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T7",
+    "label": "Deep Sea restyle",
+    "archetype": "design-restyle"
+   },
+   {
+    "id": "T8",
+    "label": "Challenge Builder",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T9",
+    "label": "Fact Card Album",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T10",
+    "label": "Certificate Maker",
+    "archetype": "multi-surface-workflow"
+   }
+  ],
+  "edges": [
+   {
+    "from": "T1",
+    "to": "T2",
+    "what": "leaderboard page hosts the saved buddy profile"
+   },
+   {
+    "from": "T1",
+    "to": "T3",
+    "what": "finished games log rounds into the journey"
+   },
+   {
+    "from": "T1",
+    "to": "T4",
+    "what": "each map spot runs the core tap-to-sort game"
+   },
+   {
+    "from": "T3",
+    "to": "T4",
+    "what": "spot unlocks judged from journey round scores; spot rounds log there"
+   },
+   {
+    "from": "T3",
+    "to": "T5",
+    "what": "lifetime correct-sorts counter from journey history"
+   },
+   {
+    "from": "T3",
+    "to": "T6",
+    "what": "spendable balance = stars from three-quarters-accurate journey rounds minus spends"
+   },
+   {
+    "from": "T1",
+    "to": "T7",
+    "what": "restyles the game screen"
+   },
+   {
+    "from": "T3",
+    "to": "T7",
+    "what": "restyles My Journey"
+   },
+   {
+    "from": "T4",
+    "to": "T7",
+    "what": "restyles the city map"
+   },
+   {
+    "from": "T6",
+    "to": "T7",
+    "what": "restyles the Sticker Shop"
+   },
+   {
+    "from": "T4",
+    "to": "T8",
+    "what": "builder uses the map spots' item piles"
+   },
+   {
+    "from": "T3",
+    "to": "T8",
+    "what": "target pre-fills from journey best; challenges log to journey"
+   },
+   {
+    "from": "T3",
+    "to": "T9",
+    "what": "seeded journey rounds (Park and Kitchen spots) determine which cards start collected"
+   },
+   {
+    "from": "T4",
+    "to": "T9",
+    "what": "finishing a spot's round banks that spot's fact cards"
+   },
+   {
+    "from": "T2",
+    "to": "T10",
+    "what": "certificate stars the studio buddy (avatar + nickname)"
+   },
+   {
+    "from": "T3",
+    "to": "T10",
+    "what": "certificate pulls stars banked and best-round spotlight"
+   },
+   {
+    "from": "T6",
+    "to": "T10",
+    "what": "certificate shows stickers owned count"
+   },
+   {
+    "from": "T9",
+    "to": "T10",
+    "what": "certificate shows fact-card completion"
+   }
+  ]
+ },
+ "global_rules": [
+  {
+   "rule": "Kids' nicknames always display in ALL CAPS everywhere in the app, now and for anything added later.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Scores always read with a 'pts' suffix after the number (like '260 pts') everywhere in the app.",
+   "introduced_in_turn": 3
+  },
+  {
+   "rule": "Anything locked, anywhere in the app now or later, shows a little padlock plus exactly what's needed to unlock it.",
+   "introduced_in_turn": 4
+  }
+ ],
+ "pinned_seed": {
+  "entity": "six logged game rounds in the My Journey history",
+  "introduced_in_turn": 3,
+  "records_gist": "oldest to newest: Park Patrol 180pts 9/12 4 stars; Kitchen Cleanup 260pts 13/15 6 stars; Park Patrol 140pts 6/10 3 stars; Kitchen Cleanup 260pts 14/15 7 stars; Park Patrol 220pts 11/12 5 stars; Park Patrol 90pts 5/8 2 stars",
+  "records": [
+   {
+    "round": 1,
+    "location": "Park Patrol",
+    "score_pts": 180,
+    "items": 12,
+    "correct": 9,
+    "stars": 4
+   },
+   {
+    "round": 2,
+    "location": "Kitchen Cleanup",
+    "score_pts": 260,
+    "items": 15,
+    "correct": 13,
+    "stars": 6
+   },
+   {
+    "round": 3,
+    "location": "Park Patrol",
+    "score_pts": 140,
+    "items": 10,
+    "correct": 6,
+    "stars": 3
+   },
+   {
+    "round": 4,
+    "location": "Kitchen Cleanup",
+    "score_pts": 260,
+    "items": 15,
+    "correct": 14,
+    "stars": 7
+   },
+   {
+    "round": 5,
+    "location": "Park Patrol",
+    "score_pts": 220,
+    "items": 12,
+    "correct": 11,
+    "stars": 5
+   },
+   {
+    "round": 6,
+    "location": "Park Patrol",
+    "score_pts": 90,
+    "items": 8,
+    "correct": 5,
+    "stars": 2
+   }
+  ]
+ }
+}

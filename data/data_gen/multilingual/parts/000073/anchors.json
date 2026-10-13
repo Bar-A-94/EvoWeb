@@ -1,0 +1,617 @@
+{
+ "anchors": [
+  {
+   "en": "Analytics",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    7,
+    8
+   ],
+   "translations": {
+    "es": "Analíticas",
+    "zh": "数据分析",
+    "he": "אנליטיקס",
+    "hi": "एनालिटिक्स",
+    "sw": "Takwimu",
+    "de": "Statistiken",
+    "fr": "Statistiques"
+   }
+  },
+  {
+   "en": "Preview",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    10
+   ],
+   "translations": {
+    "es": "Vista previa",
+    "zh": "预览",
+    "he": "תצוגה מקדימה",
+    "hi": "पूर्वावलोकन",
+    "sw": "Onyesho la Awali",
+    "de": "Vorschau",
+    "fr": "Aperçu"
+   }
+  },
+  {
+   "en": "Goals",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "Metas",
+    "zh": "目标",
+    "he": "יעדים",
+    "hi": "लक्ष्य",
+    "sw": "Malengo",
+    "de": "Ziele",
+    "fr": "Objectifs"
+   }
+  },
+  {
+   "en": "Digest",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    9,
+    10
+   ],
+   "translations": {
+    "es": "Resumen",
+    "zh": "摘要",
+    "he": "תקציר",
+    "hi": "सारांश",
+    "sw": "Muhtasari",
+    "de": "Zusammenfassung",
+    "fr": "Résumé"
+   }
+  },
+  {
+   "en": "link manager",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "translations": {
+    "es": "gestor de enlaces",
+    "zh": "链接管理器",
+    "he": "מנהל קישורים",
+    "hi": "लिंक मैनेजर",
+    "sw": "kidhibiti cha viungo",
+    "de": "Linkverwaltung",
+    "fr": "gestionnaire de liens"
+   }
+  },
+  {
+   "en": "Top 3",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    7
+   ],
+   "translations": {
+    "es": "Los 3 mejores",
+    "zh": "前3名",
+    "he": "3 המובילים",
+    "hi": "शीर्ष 3",
+    "sw": "3 Bora",
+    "de": "Top 3",
+    "fr": "Top 3"
+   }
+  },
+  {
+   "en": "Live",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    4,
+    5,
+    8
+   ],
+   "translations": {
+    "es": "Activo",
+    "zh": "上线",
+    "he": "פעיל",
+    "hi": "लाइव",
+    "sw": "Hai",
+    "de": "Aktiv",
+    "fr": "Actif"
+   }
+  },
+  {
+   "en": "Hidden",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    4,
+    5,
+    7,
+    8
+   ],
+   "translations": {
+    "es": "Oculto",
+    "zh": "隐藏",
+    "he": "מוסתר",
+    "hi": "छिपा",
+    "sw": "Fiche",
+    "de": "Versteckt",
+    "fr": "Masqué"
+   }
+  },
+  {
+   "en": "Move Up",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    6
+   ],
+   "translations": {
+    "es": "Subir",
+    "zh": "上移",
+    "he": "הזז למעלה",
+    "hi": "ऊपर ले जाएँ",
+    "sw": "Sogeza Juu",
+    "de": "Nach oben",
+    "fr": "Monter"
+   }
+  },
+  {
+   "en": "Move Down",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    6
+   ],
+   "translations": {
+    "es": "Bajar",
+    "zh": "下移",
+    "he": "הזז למטה",
+    "hi": "नीचे ले जाएँ",
+    "sw": "Sogeza Chini",
+    "de": "Nach unten",
+    "fr": "Descendre"
+   }
+  },
+  {
+   "en": "Reached",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "Alcanzada",
+    "zh": "已达成",
+    "he": "הושג",
+    "hi": "पूरा हुआ",
+    "sw": "Imefikiwa",
+    "de": "Erreicht",
+    "fr": "Atteint"
+   }
+  },
+  {
+   "en": "Coming up",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    9
+   ],
+   "translations": {
+    "es": "Próximamente",
+    "zh": "即将开始",
+    "he": "בקרוב",
+    "hi": "आने वाले",
+    "sw": "Zinazokuja",
+    "de": "Demnächst",
+    "fr": "À venir"
+   }
+  },
+  {
+   "en": "Work",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5,
+    8
+   ],
+   "translations": {
+    "es": "Trabajo",
+    "zh": "工作",
+    "he": "עבודה",
+    "hi": "काम",
+    "sw": "Kazi",
+    "de": "Arbeit",
+    "fr": "Travail"
+   }
+  },
+  {
+   "en": "Content",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5,
+    6,
+    8
+   ],
+   "translations": {
+    "es": "Contenido",
+    "zh": "内容",
+    "he": "תוכן",
+    "hi": "कंटेंट",
+    "sw": "Maudhui",
+    "de": "Inhalte",
+    "fr": "Contenu"
+   }
+  },
+  {
+   "en": "Offers",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5,
+    6,
+    8,
+    9
+   ],
+   "translations": {
+    "es": "Ofertas",
+    "zh": "优惠",
+    "he": "מבצעים",
+    "hi": "ऑफर",
+    "sw": "Ofa",
+    "de": "Angebote",
+    "fr": "Offres"
+   }
+  },
+  {
+   "en": "Community",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5,
+    8
+   ],
+   "translations": {
+    "es": "Comunidad",
+    "zh": "社区",
+    "he": "קהילה",
+    "hi": "कम्युनिटी",
+    "sw": "Jamii",
+    "de": "Community",
+    "fr": "Communauté"
+   }
+  },
+  {
+   "en": "clicks",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9
+   ],
+   "translations": {
+    "es": "clics",
+    "zh": "次点击",
+    "he": "קליקים",
+    "hi": "क्लिक",
+    "sw": "mibofyo",
+    "de": "Klicks",
+    "fr": "clics"
+   }
+  },
+  {
+   "en": "viewing-as-of",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4,
+    5,
+    6,
+    10
+   ],
+   "translations": {
+    "es": "Ver con fecha de",
+    "zh": "查看日期",
+    "he": "צפייה נכון לתאריך",
+    "hi": "देखने की तारीख",
+    "sw": "Tarehe ya Kuangalia",
+    "de": "Anzeigen zum Datum",
+    "fr": "Afficher à la date du"
+   }
+  },
+  {
+   "en": "profile setup",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    10
+   ],
+   "translations": {
+    "es": "configuración del perfil",
+    "zh": "个人资料设置",
+    "he": "הגדרת פרופיל",
+    "hi": "प्रोफ़ाइल सेटअप",
+    "sw": "Usanidi wa Wasifu",
+    "de": "Profil-Einrichtung",
+    "fr": "configuration du profil"
+   }
+  },
+  {
+   "en": "My Portfolio",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    5,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "en": "YouTube Channel",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    5,
+    6,
+    7,
+    8
+   ]
+  },
+  {
+   "en": "Newsletter",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    5,
+    6,
+    7,
+    9
+   ]
+  },
+  {
+   "en": "Merch Store",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    9
+   ]
+  },
+  {
+   "en": "Podcast",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    4,
+    5,
+    6
+   ]
+  },
+  {
+   "en": "Discord",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    7,
+    8
+   ]
+  },
+  {
+   "en": "Book a Call",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    4,
+    5,
+    6,
+    9
+   ]
+  },
+  {
+   "en": "Casey Quinn",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    10
+   ]
+  },
+  {
+   "en": "CQ",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    10
+   ]
+  },
+  {
+   "en": "myportfolio.dev",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    2
+   ]
+  },
+  {
+   "en": "youtube.com/@casey",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    2
+   ]
+  },
+  {
+   "en": "caseywrites.substack.com",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    2
+   ]
+  },
+  {
+   "en": "shop.casey.co",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    2
+   ]
+  },
+  {
+   "en": "pod.casey.co",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    2
+   ]
+  },
+  {
+   "en": "discord.gg/casey",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    2
+   ]
+  },
+  {
+   "en": "cal.com/casey",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    2
+   ]
+  },
+  {
+   "en": "blog.casey.co",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    2
+   ]
+  },
+  {
+   "en": "gallery.casey.co",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    2
+   ]
+  },
+  {
+   "en": "free.casey.co",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    3
+   ]
+  },
+  {
+   "en": "papaya whip",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    1,
+    7
+   ]
+  },
+  {
+   "en": "dark orange",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    1,
+    7
+   ]
+  },
+  {
+   "en": "teal",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    7,
+    10
+   ]
+  },
+  {
+   "en": "white",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    7,
+    10
+   ]
+  },
+  {
+   "en": "green",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    3
+   ]
+  },
+  {
+   "en": "gray",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    3,
+    7
+   ]
+  },
+  {
+   "en": "#0F766E",
+   "class": "keep",
+   "kind": "value_format",
+   "turns": [
+    7
+   ]
+  }
+ ]
+}

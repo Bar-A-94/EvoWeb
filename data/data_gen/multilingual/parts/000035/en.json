@@ -1,0 +1,852 @@
+{
+ "id": "000035",
+ "instruction": "Please implement a cryptocurrency escrow system for secure cryptocurrency transactions. Buyers should be able to browse and select sellers' cryptocurrency products, conduct transactions, and deposit cryptocurrencies into an escrow account. Sellers should be able to view and manage their products and transaction records. The system should also have transaction confirmation, cryptocurrency release, and dispute resolution functionalities. Initialize the background color with light gray and component color with dark red.",
+ "Category": {
+  "primary_category": "User Interaction",
+  "subcategories": [
+   "E-commerce",
+   "Authentication",
+   "API Integration"
+  ]
+ },
+ "application_type": "E-commerce Web Applications",
+ "ui_instruct": [
+  {
+   "task": "Browse the list of available cryptocurrency products.",
+   "expected_result": "The buyer can view a list of products with clear details like name, price, and seller information.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering",
+     "Details Information"
+    ]
+   }
+  },
+  {
+   "task": "Initiate a transaction by selecting a cryptocurrency product and attempting to deposit the equivalent amount into the escrow account.",
+   "expected_result": "The system successfully processes the deposit into the escrow account.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "E-commerce",
+     "Payment"
+    ]
+   }
+  },
+  {
+   "task": "Add a new cryptocurrency product.",
+   "expected_result": "The product is successfully added and immediately appears in the seller's product list.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "E-commerce",
+     "Form Operations"
+    ]
+   }
+  },
+  {
+   "task": "Submit a dispute for a transaction.",
+   "expected_result": "The dispute is lodged successfully, and the status of the transaction is updated to 'disputed'.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "E-commerce"
+    ]
+   }
+  },
+  {
+   "task": "Verify that the website uses 'light gray' as the background color and 'dark red' as the component color, as specified in the design requirements.",
+   "expected_result": "The website has a background color of 'light gray' and components (such as buttons, cards, headers, etc.) are styled with the color 'dark red', accurately reflecting the design instruction.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Before people commit to a trade they keep asking me what it'll actually cost, so give us a Fee Calculator page. I type a USD amount and pick a coin - BTC, ETH or SOL, at fixed reference prices of $60,000, $2,500 and $140 - and as I type it live-updates the whole breakdown: our 1.5% platform fee split evenly between the two sides, a flat network fee on the buyer (BTC $2.50, ETH $1.20, SOL $0.10), what the buyer pays in total, what the seller actually pockets, and how much crypto that dollar amount buys at the reference price. Anything under $100 or over $250,000 should just show a friendly note instead of numbers - no NaN weirdness, please. And one bit of house style for everywhere in this app, now and for anything we add later: crypto amounts always to exactly 8 decimal places with the ticker after the number, like 0.16666667 BTC, and dollar figures always like $1,234.56.",
+   "source_website": "https://hodlhodl.com/",
+   "source_feature": "Transparent Fee Breakdown",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "On the Fee Calculator page, type 10000 into the USD amount box and pick BTC as the coin.",
+     "expected_result": "The breakdown updates as the amount is entered, with no separate submit step: the buyer's total reads $10,077.50 and the seller's take reads $9,925.00.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Data Calculation",
+       "State Management"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Fee Calculator page, type 10000 into the USD amount box, pick BTC, and look at the crypto amount readout.",
+     "expected_result": "It reads 0.16666667 BTC - eight decimal places correctly rounded to end in 67, not truncated to 0.16666666, with the ticker after the number.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Data Calculation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Fee Calculator page, type 50 into the USD amount box, then change it to 100.",
+     "expected_result": "At 50 a friendly note appears instead of any figures (no NaN or broken numbers anywhere); at 100 the full breakdown appears with real dollar values.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Validation",
+       "Edge Case Handling"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Open the Fee Calculator page and look at its overall styling.",
+     "expected_result": "The page keeps the app's light gray background and its primary components (such as buttons or the header) are styled dark red, consistent with the rest of the app.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "UI Consistency",
+       "Color Scheme"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 1,
+     "task": "As a seller, add a new cryptocurrency product.",
+     "expected_result": "The product is added and immediately appears in the seller's product list.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "E-commerce",
+       "Form Operations"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "The transaction records are too scattered - build me a proper Trade Ledger page for the whole platform. Load it with exactly these eight trades and nothing else, I'll grow it from there: TX-101 Dana bought 0.50000000 BTC from Marcus for $30,000.00 (Released); TX-102 Felix bought 10.00000000 ETH from Lena for $25,000.00 (Released); TX-103 Dana bought 500.00000000 SOL from Omar for $70,000.00 (Refunded); TX-104 Ravi bought 0.20000000 BTC from Marcus for $12,000.00 (Disputed); TX-105 Felix bought 5.00000000 ETH from Lena for $12,500.00 (Released); TX-106 Ana bought 150.00000000 SOL from Omar for $21,000.00 (Released); TX-107 Ravi bought 15.00000000 ETH from Priya for $37,500.00 (In Escrow); TX-108 Ana bought 0.10000000 BTC from Marcus for $6,000.00 (Released). Up top give me summary cards for total released volume - only Released trades belong in that number - and for how much money is locked in escrow right now, remembering disputed funds are still sitting in escrow so they count as locked too. Below that, a per-seller breakdown showing each seller's released volume, and any new trade someone makes through the buy flow should show up in the ledger on its own. House style from here on: every status in this app, on this page and anything we build later, is a little pill badge - amber for In Escrow, green for Released, gray for Refunded, dark red for Disputed.",
+   "source_website": "https://localcoinswap.com/",
+   "source_feature": "Transaction Status Timeline",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Trade Ledger page and read the total released volume summary card.",
+     "expected_result": "It reads $94,500.00 - only the five Released trades count, not the $214,000.00 you'd get by summing all eight.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Aggregation",
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open the Trade Ledger page and read the locked-in-escrow summary card.",
+     "expected_result": "It reads $49,500.00 - the $37,500.00 trade currently In Escrow plus the $12,000.00 Disputed trade, since disputed funds are still locked.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "On the Trade Ledger, find Omar's row in the per-seller breakdown.",
+     "expected_result": "His released volume reads $21,000.00 - the $70,000.00 refunded SOL trade is excluded.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Aggregation",
+       "Details Information"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "From the product browse page, buy any product and deposit into escrow, then open the Trade Ledger.",
+     "expected_result": "The new trade appears in the ledger with an amber In Escrow pill badge, and the locked-in-escrow total has increased by exactly the deposited amount.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "E-commerce",
+       "State Management"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "On the Fee Calculator page, type 10000 into the USD amount box, pick BTC, and look at the crypto amount readout.",
+     "expected_result": "It reads 0.16666667 BTC - eight decimal places correctly rounded to end in 67, not truncated to 0.16666666, with the ticker after the number.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Data Calculation"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Sellers keep nagging me about actually getting paid out, so build a Payout Center. It has a seller picker: I choose a seller and see their lifetime earned - for each of their Released trades in the ledger, the gross amount minus our 0.75% seller-side fee from the fee schedule, with Refunded, Disputed and In Escrow trades contributing nothing - plus what's pending or already paid, and what's available right now. From there the seller requests a withdrawal by typing an amount: refuse anything over the available balance and anything under $250, and the moment a request goes through it puts a hold on that money so available drops right away. Requests land in a pending queue on an admin approvals page where I approve or reject each one - approving moves it to a paid history list, rejecting lifts the hold and puts the money back in available. And a house rule starting now: anything anywhere in this app that moves or releases money has to show me a confirmation with the exact dollar amounts before it happens - that goes for everything we add later too.",
+   "source_website": "https://localcoinswap.com/",
+   "source_feature": "Non-custodial Wallet Withdrawals",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Payout Center, pick Marcus, and read his numbers.",
+     "expected_result": "His lifetime earned and his available balance both read $35,730.00 - his two Released trades gross $36,000.00 minus the seller's 0.75% fee share - not the plain $36,000.00 gross, and his disputed $12,000.00 trade contributes nothing.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Calculation",
+       "Data Aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the Payout Center, pick Omar, request a withdrawal of 25000, then change the amount to 100 and try again.",
+     "expected_result": "Both attempts are refused with a message - 25000 is over his $20,842.50 available balance and 100 is under the $250 minimum - his available still reads $20,842.50 and nothing appears in the pending queue.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Validation",
+       "Edge Case Handling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the Payout Center, pick Lena, request a withdrawal of 5000, and go through with it.",
+     "expected_result": "Before it completes, a confirmation appears showing exactly $5,000.00; after confirming, the request sits as pending in the admin approvals queue and Lena's available drops from $37,218.75 to $32,218.75 while her lifetime earned stays $37,218.75.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "State Management"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Request and confirm a withdrawal of 5000 for Lena, reject it from the admin approvals page, then check her balances and open the Trade Ledger.",
+     "expected_result": "The rejection lifts the hold - Lena's available is back to $37,218.75 and the request shows as rejected instead of pending - and the Trade Ledger is untouched, with total released volume still $94,500.00.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "State Management"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "Open the Trade Ledger page and read the total released volume summary card.",
+     "expected_result": "It reads $94,500.00 - only the five Released trades count, not the $214,000.00 you'd get by summing all eight.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Aggregation",
+       "Dynamic Content Rendering"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Buyers keep asking who's safe to trade with, so let's do seller reputation properly, computed straight off the Trade Ledger: every seller scores plus 1 for each Released trade and minus 1 for each Refunded trade - a refund is the platform's black mark - while In Escrow and Disputed trades count for nothing until they settle one way or the other. Put up a Leaderboard page ranking all sellers by score - when scores tie, the seller with more released dollar volume goes first - with each row showing the score, how many released trades, and the released volume, and stick the score next to the seller's name wherever their listings show up. It should re-rank on its own whenever any trade's status changes - a release, a refund, anything.",
+   "source_website": "https://localcoinswap.com/",
+   "source_feature": "User Reputation and Leaderboard System",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Leaderboard page and read the ranking order and scores.",
+     "expected_result": "Top to bottom it reads Lena, Marcus, Omar, Priya. Lena and Marcus are tied at score 2 and Lena ranks first because her $37,500.00 released volume beats his $36,000.00; Omar's score reads 0, not the 1 a build that skipped the refund penalty would show - his $70,000.00 refund cancels his released trade - and he edges out Priya at the same score only because his $21,000.00 released volume beats her $0.00.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Aggregation",
+       "Sorting"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Leaderboard, find Priya's row.",
+     "expected_result": "She is listed (not missing) with score 0, zero released trades, and $0.00 released volume - no blanks or NaN.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Edge Case Handling",
+       "Details Information"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Leaderboard, look at Marcus's score.",
+     "expected_result": "It reads 2 from his two Released trades - his disputed TX-104 neither adds nor subtracts anything while it stays unsettled.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Aggregation",
+       "Details Information"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Open trade TX-107 and release its escrow to Priya through the app's release flow, confirm the exact-amount prompt, then open the Leaderboard.",
+     "expected_result": "Priya's row updates on its own to score 1 with one released trade and $37,500.00 volume, and she jumps past Omar into third - the order now reads Lena, Marcus, Priya, Omar.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Management",
+       "Data Calculation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 4,
+     "task": "Open the Payout Center, pick Marcus, and read his numbers.",
+     "expected_result": "His lifetime earned and his available balance both read $35,730.00 - his two Released trades gross $36,000.00 minus the seller's 0.75% fee share - not the plain $36,000.00 gross, and his disputed $12,000.00 trade contributes nothing.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Calculation",
+       "Data Aggregation"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "New folks are scared to touch real crypto, so add a Practice Mode toggle in the header. Flipping it on shows an obvious practice banner on every page, hands you a practice wallet of exactly $10,000.00, and opens up a practice board seeded with exactly three practice listings to trade against: 0.20000000 BTC priced at $12,000.00, 1.60000000 ETH priced at $4,000.00, and 3.57142857 SOL priced at $500.00. Depositing on a practice listing works just like the real select-and-deposit escrow flow except it spends the practice wallet - and any deposit that would overdraw the wallet gets refused with the balance left alone. Practice trades collect in their own practice list and must never appear on the Trade Ledger or nudge its totals by a cent. Flipping practice off throws the practice trades away, and next time the wallet is back at $10,000.00.",
+   "source_website": "https://hodlhodl.com/",
+   "source_feature": "Testnet / Practice Mode",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Turn on Practice Mode from the header, open the 0.20000000 BTC practice listing priced at $12,000.00, and try to deposit into escrow.",
+     "expected_result": "The deposit is refused with an insufficient-balance message and the practice wallet still reads $10,000.00.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Validation",
+       "Edge Case Handling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In Practice Mode, open the 1.60000000 ETH practice listing and deposit into escrow.",
+     "expected_result": "The practice wallet immediately reads $6,000.00 and the trade appears in the practice list with an amber In Escrow pill badge.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Management",
+       "Data Calculation"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "In Practice Mode, deposit on the 1.60000000 ETH practice listing, then open the Trade Ledger.",
+     "expected_result": "The ledger is untouched: total released volume still reads $94,500.00 and locked-in-escrow still reads $49,500.00 - not the $53,500.00 it would show if the $4,000.00 practice deposit leaked in - and the practice trade is nowhere in the ledger.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Aggregation",
+       "State Management"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Turn on Practice Mode, look over the practice board, open the 3.57142857 SOL listing, and deposit into escrow.",
+     "expected_result": "All three practice listings are browsable with the practice banner visible throughout, and the $500.00 deposit completes out of the practice wallet leaving it at $9,500.00.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "E-commerce"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "Open the Trade Ledger page and read the locked-in-escrow summary card.",
+     "expected_result": "It reads $49,500.00 - the $37,500.00 trade currently In Escrow plus the $12,000.00 Disputed trade, since disputed funds are still locked.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Aggregation"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Serious buyers want to hunt for deals, so build an Offer Screener page and seed the board with exactly these six live offers, in this order: Priya selling 4.00000000 ETH at $2,495.00 per ETH via PayPal; Marcus selling 0.50000000 BTC at $60,150.00 per BTC via Bank Transfer; Lena selling 8.00000000 ETH at $2,495.00 per ETH via Bank Transfer or PayPal; Omar selling 300.00000000 SOL at $138.00 per SOL via Cash; Marcus selling 6.00000000 ETH at $2,500.00 per ETH via Bank Transfer; Lena selling 0.30000000 BTC at $59,900.00 per BTC via PayPal. Give me coin checkboxes (ticking two coins means show either of them), a payment method picker, typed min and max price-per-coin boxes (inclusive on both ends), and a typed minimum-reputation box that uses the same scores as the leaderboard - and everything set across different controls has to hold at once. Keep a 'Showing X of Y offers' line that always matches what's on screen, sort by price per coin low to high with exact price ties going to the higher-reputation seller, and when nothing matches show a friendly no-results note instead of a blank page. Oh, and let me save the current filter setup under a name and bring it back with one click.",
+   "source_website": "https://localcoinswap.com/",
+   "source_feature": "Offer Search and Filtering",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the Offer Screener, tick the ETH coin checkbox and pick PayPal as the payment method.",
+     "expected_result": "Exactly two offers remain, with Lena's $2,495.00 ETH offer listed above Priya's identical $2,495.00 one - the price tie breaks to Lena's higher reputation - and the counter reads 'Showing 2 of 6 offers'.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Sorting"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Offer Screener, tick ETH, type 2500 into the max price box, save the current setup as a preset named 'cheap eth', clear all filters, then apply the preset.",
+     "expected_result": "The filters come back and exactly three ETH offers show - Lena's and Priya's at $2,495.00 plus Marcus's at exactly $2,500.00, which stays in because the max bound is inclusive; a build treating the max as exclusive would wrongly drop Marcus's and show only two.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "State Management"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Offer Screener, type 5 into the minimum reputation box, then clear that box.",
+     "expected_result": "At 5, no offers match and a friendly no-results note shows instead of a blank or broken page; clearing the box brings all six offers back.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Edge Case Handling",
+       "Filtering"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the Offer Screener, type 1 into the minimum reputation box.",
+     "expected_result": "Priya's ETH offer and Omar's SOL offer both disappear - Priya's leaderboard score is 0 and Omar's refund penalty cancels his down to 0 (a build that skipped the penalty would keep him at 1 and show five offers) - leaving four offers, all Marcus's and Lena's, with the counter reading 'Showing 4 of 6 offers'.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Data Calculation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 5,
+     "task": "Open the Leaderboard page and read the ranking order and scores.",
+     "expected_result": "Top to bottom it reads Lena, Marcus, Omar, Priya. Lena and Marcus are tied at score 2 and Lena ranks first because her $37,500.00 released volume beats his $36,000.00; Omar's score reads 0, not the 1 a build that skipped the refund penalty would show - his $70,000.00 refund cancels his released trade - and he edges out Priya at the same score only because his $21,000.00 released volume beats her $0.00.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Aggregation",
+       "Sorting"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Buyers keep telling me the asks on the screener are close but not quite right, so let them haggle. Every offer on the Offer Screener gets a Negotiate button that opens a little console showing that offer's ask price per coin and its size, with a box where I type my proposed price per coin. Every keystroke updates three readouts on the spot: my discount off that offer's ask as a percentage to two decimals - measured against the ask itself, not the coin's reference price - the total the deal would come to at my price, and what the seller would pocket from that total after their 0.75% fee share. Proposed prices at or above the ask make no sense, and more than 10% below the ask is insulting - in both cases show a warning and keep the send button dead, though exactly 10% below is still fair game. Sending a counter parks it on the offer where the seller can see it and accept, and accepting swaps the offer's screener price to the agreed number and re-sorts the board.",
+   "source_website": "https://hodlhodl.com/",
+   "source_feature": "Price Negotiation on Offers",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the negotiation console on Marcus's 0.50000000 BTC offer asking $60,150.00 and type 59000 into the proposed price box.",
+     "expected_result": "The readouts keep up as each digit is typed, with no submit step: the discount reads 1.91% - measured off the $60,150.00 ask, not the 1.67% you'd get against the $60,000 BTC reference price - and the deal total reads $29,500.00.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Data Calculation",
+       "State Management"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the same console on Marcus's 0.50000000 BTC offer, type 54000 as the proposed price, then change it to 54135.",
+     "expected_result": "At 54000 a warning shows that the counter is more than 10% below the $60,150.00 ask and the send button stays dead; at exactly 54135 - precisely 10% below - the warning clears and the send button comes alive.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Validation",
+       "Edge Case Handling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "With 59000 typed as the proposed price on Marcus's 0.50000000 BTC offer, look at the seller-pockets readout.",
+     "expected_result": "It reads $29,278.75 - the $29,500.00 total minus only the seller's 0.75% share, not the $29,057.50 a build charging the seller the full 1.5% would show.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Data Calculation"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Send a counter of 59000 on Marcus's 0.50000000 BTC offer, accept it as the seller, then look at the Offer Screener with no filters set.",
+     "expected_result": "Marcus's BTC offer now lists $59,000.00 per BTC and the board has re-sorted itself: his offer sits above Lena's $59,900.00 BTC offer, the reverse of where it sat before.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Management",
+       "Sorting"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "On the Fee Calculator page, type 10000 into the USD amount box and pick BTC as the coin.",
+     "expected_result": "The breakdown updates as the amount is entered, with no separate submit step: the buyer's total reads $10,077.50 and the seller's take reads $9,925.00.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Data Calculation",
+       "State Management"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "design-restyle",
+   "instruction": "We're demoing this to investors, so time for a facelift - keep the light gray background, but do all of this consistently on the product browse page, the Fee Calculator, the Trade Ledger, the Leaderboard, and the Offer Screener: a dark charcoal top bar with the app name in white on every one of those pages; every primary action button becomes a dark red pill with white text; section headings go left-aligned with a short dark red accent bar under them; the dollar figures in the ledger's summary cards and the leaderboard's volume column switch to a monospace font; and all cards - offer cards, seller breakdown cards, leaderboard rows - get the same rounded-corner treatment. Whatever you do, don't touch the status badge colors.",
+   "source_website": "https://localcoinswap.com/",
+   "source_feature": "Transaction Status Timeline",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Visit the product browse page, the Trade Ledger, and the Offer Screener in turn.",
+     "expected_result": "All three pages show the same dark charcoal top bar with the app name in white, on the same light gray page background.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "UI Consistency",
+       "Color Scheme"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the Fee Calculator and then the Offer Screener and look at their primary buttons and section headings.",
+     "expected_result": "On both pages the primary action buttons are dark red pills with white text, and section headings are left-aligned with a short dark red accent bar.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "UI Consistency",
+       "Layout"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open the Trade Ledger and look at the summary cards.",
+     "expected_result": "The dollar figures are in a monospace font and the total released volume still reads $94,500.00.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Typography",
+       "Data Aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the Trade Ledger, look at the status badges on TX-104 and TX-107.",
+     "expected_result": "The restyle left them alone: TX-104 still shows a dark red Disputed pill and TX-107 an amber In Escrow pill.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Color Scheme",
+       "UI Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 7,
+     "task": "On the Offer Screener, type 5 into the minimum reputation box, then clear that box.",
+     "expected_result": "At 5, no offers match and a friendly no-results note shows instead of a blank or broken page; clearing the box brings all six offers back.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Edge Case Handling",
+       "Filtering"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Sellers keep asking what they've actually earned, so add a Seller Statements page: I pick a seller and get a statement right on screen as copyable text. One line per trade of theirs from the ledger - gross amount, our fee cut (that's the seller's 0.75% share from the fee schedule, charged on released trades), and net payout - with refunded trades shown as $0.00-payout lines, and anything In Escrow or Disputed sitting in a separate held section with its amount. Totals at the bottom: gross released, total fees, net payout, and total held. Two cross-checks that have to hold: whatever net shows per trade has to agree with what the fee calculator says for that same amount, and the statement's net payout total has to land exactly on the lifetime earned figure the Payout Center shows for that seller.",
+   "source_website": "https://hodlhodl.com/",
+   "source_feature": "Transparent Fee Breakdown",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Seller Statements page and pick Lena.",
+     "expected_result": "Her net payout total reads $37,218.75 - each released trade is charged only the seller's 0.75% share, not the full 1.5% (which would wrongly give $36,937.50) - and it matches her lifetime earned in the Payout Center to the cent.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Calculation",
+       "Data Aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "On the Seller Statements page, pick Omar.",
+     "expected_result": "His $70,000.00 refunded trade appears as a line with a $0.00 payout, and his net payout total reads $20,842.50 from the released trade alone.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Aggregation",
+       "Edge Case Handling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Seller Statements page, pick Marcus and look at the held section.",
+     "expected_result": "His disputed TX-104 sits there showing $12,000.00 held, and that amount is excluded from his net payout total, which covers only his Released trades.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Aggregation",
+       "Details Information"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the Fee Calculator, type 25000 with ETH selected and note the seller's take, then open Seller Statements and pick Lena.",
+     "expected_result": "Both places agree: the calculator's seller take and the statement line for her $25,000.00 ETH trade both show a net of $24,812.50.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Data Calculation",
+       "Cross-feature Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 6,
+     "task": "Turn on Practice Mode from the header, open the 0.20000000 BTC practice listing priced at $12,000.00, and try to deposit into escrow.",
+     "expected_result": "The deposit is refused with an insufficient-balance message and the practice wallet still reads $10,000.00.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Validation",
+       "Edge Case Handling"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "target_app_summary": "The base crypto escrow marketplace has grown into a full P2P trading platform. It gained a live fee-and-payout calculator, a platform-wide Trade Ledger with released/locked rollups seeded with eight pinned trades, a seller Payout Center with fee-netted lifetime earnings and a hold-then-approve withdrawal queue, a seller reputation leaderboard with refund penalties and volume tiebreaks, a sandboxed practice mode with a mock wallet and its own seeded practice listings, a multi-criteria offer screener with saved presets and a reputation filter, a per-keystroke counter-offer negotiation console that re-prices screener offers, a brand restyle across five pages, and copyable seller statements that reconcile ledger records against the fee schedule and the Payout Center. The ledger (T3) is the hub: payout balances and reputation scores are computed from it, practice mode must leave it untouched, and statements are generated from it; the fee schedule (T2) feeds the Payout Center, the negotiation console, and the statements; reputation chains into the screener and the screener into the negotiation console, giving deep chains like T1->T3->T5->T7->T8 and T1->T3->T4->T10.",
+ "dependency_graph": {
+  "nodes": [
+   {
+    "id": "T1",
+    "label": "base app",
+    "archetype": "base"
+   },
+   {
+    "id": "T2",
+    "label": "Fee Calculator",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T3",
+    "label": "Trade Ledger",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T4",
+    "label": "Seller Payout Center",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T5",
+    "label": "Reputation Leaderboard",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T6",
+    "label": "Practice Mode",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T7",
+    "label": "Offer Screener",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T8",
+    "label": "Counter-Offer Negotiation Console",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T9",
+    "label": "Brand Restyle",
+    "archetype": "design-restyle"
+   },
+   {
+    "id": "T10",
+    "label": "Seller Statements",
+    "archetype": "derived-state"
+   }
+  ],
+  "edges": [
+   {
+    "from": "T1",
+    "to": "T3",
+    "what": "buy-flow trades land in the ledger"
+   },
+   {
+    "from": "T2",
+    "to": "T4",
+    "what": "payout nets deduct the seller's 0.75% share from the fee schedule"
+   },
+   {
+    "from": "T3",
+    "to": "T4",
+    "what": "lifetime earnings computed from Released ledger trades"
+   },
+   {
+    "from": "T1",
+    "to": "T5",
+    "what": "scores shown beside seller names on their product listings"
+   },
+   {
+    "from": "T3",
+    "to": "T5",
+    "what": "scores computed from ledger trade statuses"
+   },
+   {
+    "from": "T1",
+    "to": "T6",
+    "what": "reuses the select-and-deposit escrow flow with mock funds"
+   },
+   {
+    "from": "T3",
+    "to": "T6",
+    "what": "ledger totals must stay untouched by practice trades"
+   },
+   {
+    "from": "T5",
+    "to": "T7",
+    "what": "reputation filter and tie-break scores"
+   },
+   {
+    "from": "T7",
+    "to": "T8",
+    "what": "negotiation opens from screener offers and accepted counters re-price the board"
+   },
+   {
+    "from": "T2",
+    "to": "T8",
+    "what": "seller-take readout follows the fee schedule"
+   },
+   {
+    "from": "T1",
+    "to": "T9",
+    "what": "restyles browse page"
+   },
+   {
+    "from": "T2",
+    "to": "T9",
+    "what": "restyles calculator page"
+   },
+   {
+    "from": "T3",
+    "to": "T9",
+    "what": "restyles ledger cards and headings"
+   },
+   {
+    "from": "T5",
+    "to": "T9",
+    "what": "restyles leaderboard rows and volume column"
+   },
+   {
+    "from": "T7",
+    "to": "T9",
+    "what": "restyles screener cards and buttons"
+   },
+   {
+    "from": "T2",
+    "to": "T10",
+    "what": "per-trade net must match the fee calculator"
+   },
+   {
+    "from": "T3",
+    "to": "T10",
+    "what": "statement lines built from ledger records"
+   },
+   {
+    "from": "T4",
+    "to": "T10",
+    "what": "statement net totals reconcile with Payout Center lifetime earnings"
+   }
+  ]
+ },
+ "global_rules": [
+  {
+   "rule": "Crypto amounts are always shown to exactly 8 decimal places with the ticker after the number (e.g. 0.16666667 BTC), and dollar figures always as $1,234.56 with commas and two decimals.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Every trade status is a color-coded pill badge everywhere: amber In Escrow, green Released, gray Refunded, dark red Disputed.",
+   "introduced_in_turn": 3
+  },
+  {
+   "rule": "Any action that moves or releases funds shows a confirmation with the exact dollar amounts before it completes.",
+   "introduced_in_turn": 4
+  }
+ ],
+ "pinned_seed": {
+  "entity": "8 escrow trades (TX-101 through TX-108)",
+  "introduced_in_turn": 3,
+  "records_gist": "5 Released ($30,000 + $25,000 + $12,500 + $21,000 + $6,000 = $94,500), 1 Refunded ($70,000 Omar), 1 Disputed ($12,000 Marcus), 1 In Escrow ($37,500 Priya); sellers Marcus/Lena/Omar/Priya; naive all-status top seller (Omar $91,000) differs from correct released top (Lena $37,500)."
+ }
+}

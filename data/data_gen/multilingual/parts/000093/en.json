@@ -1,0 +1,878 @@
+{
+ "id": "000093",
+ "instruction": "Please implement a website called \"World of Imagination\" to showcase and inspire users' imagination. The website should have functionalities for showcasing user-created content, sharing ideas, discussing, and interacting. Users should be able to browse others' creative works, share their own ideas via the share ideas form, participate in discussions, and interact with other users. Choose azure mist for the background; set all component colors to dark slate blue.",
+ "Category": {
+  "primary_category": "User Interaction",
+  "subcategories": [
+   "Form Systems",
+   "Real-time Features",
+   "AI Integration"
+  ]
+ },
+ "application_type": "Social Media Platforms",
+ "ui_instruct": [
+  {
+   "task": "Browse the creative works section.",
+   "expected_result": "The creative works section loads correctly, displaying a list of user-created content with images and descriptions that are relevant to inspiring imagination.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering",
+     "Data Visualization"
+    ]
+   }
+  },
+  {
+   "task": "Submit a new idea via the share ideas form.",
+   "expected_result": "The form submits successfully, the new idea appears in the shared ideas section, and a confirmation message is displayed.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations"
+    ]
+   }
+  },
+  {
+   "task": "Participate in a discussion by posting a comment.",
+   "expected_result": "The comment is visible under the appropriate discussion topic, with the correct username and timestamp noted.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Communication"
+    ]
+   }
+  },
+  {
+   "task": "Navigate through the main pages (Home, Creative Works, Share Ideas, Discussions, Interactions) using the website's navigation menu.",
+   "expected_result": "Each page loads correctly without layout issues, ensuring intuitive navigation and seamless transitions.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering"
+    ]
+   }
+  },
+  {
+   "task": "Interact with another user by sending a message.",
+   "expected_result": "The message is delivered successfully, with a notification displayed to the recipient indicating a new message has been received.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Communication"
+    ]
+   }
+  },
+  {
+   "task": "Verify that the website uses 'azure mist' as the background color and 'dark slate blue' as the component color, as specified in the design requirements.",
+   "expected_result": "The website has a background color of 'azure mist' and components (such as buttons, cards, headers, etc.) are styled with the color 'dark slate blue', accurately reflecting the design instruction.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "archetype": "derived-state",
+   "instruction": "The browse section needs to grow up into a proper explorer. Seed it with exactly these eight works, I'll add more later: Nebula Whale by Mira Chen (Digital Art, tags space and animals, 1200 views, 320 likes with 12 of those gained this week, 14 comments); Clockwork Garden by Theo Voss (Sculpture, steampunk and nature, 800 views, 210 likes, 45 this week, 8 comments); Paper Dragons by Mira Chen (Papercraft, fantasy and animals, 940 views, 180 likes, 45 this week, 22 comments); Midnight Library by Sana Okafor (Digital Art, fantasy and architecture, 2100 views, 450 likes, 8 this week, 31 comments); Rust & Roses by Theo Voss (Photography, nature and urban, 640 views, 95 likes, 30 this week, 5 comments); Glass Comet by Lena Petrov (Sculpture, space, 1500 views, 275 likes, 61 this week, 17 comments); Ink Tempest by Sana Okafor (Digital Art, abstract, 430 views, 60 likes, 2 this week, 3 comments); and Origami Tide by Lena Petrov (Papercraft, nature and abstract, 1100 views, 95 likes, 19 this week, 9 comments). Give me a category picker plus clickable tag chips: picking several tags shows anything carrying any of them (each work once, no duplicates!), while the category and the tags narrow each other down, with a live count of how many of the 8 are showing, and a sort-by-likes option where equal like counts fall back to alphabetical by title. Two things I want everywhere in this app from now on, not just here: any count of a thousand or more shows compact with one decimal, like 1.2k, and tags always wear a # in front.",
+   "source_website": "DeviantArt",
+   "source_feature": "Tag-based filtering and category navigation",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "In the browse explorer, click the #nature tag chip and the #abstract tag chip with no category selected.",
+     "expected_result": "Exactly four works show — Clockwork Garden, Ink Tempest, Origami Tide, Rust & Roses — with the counter reading 4 of 8; Origami Tide, which carries both tags, appears only once.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Data Deduplication"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Select the Papercraft category and the #animals tag chip together in the browse explorer.",
+     "expected_result": "Only Paper Dragons remains visible — works matching just the category or just the tag are filtered out.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Boolean Logic"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Use the sort-by-likes option in the browse explorer.",
+     "expected_result": "Midnight Library comes first, and Origami Tide appears directly above Rust & Roses — the 95-likes tie broken alphabetically by title.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Tie-breaking"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "From the site's main navigation, open the section for browsing creative works without touching any filter.",
+     "expected_result": "All eight seeded works are visible on first load and the live counter reflects 8 of 8.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Initial Load",
+       "Count Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 1,
+     "task": "Open the discussions area and post a new comment that says 'Love this place'.",
+     "expected_result": "The comment 'Love this place' appears in the discussion area right after posting.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Submission",
+       "Discussions"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "I want a little Spark Score playground page: type in views, likes, and comments and it computes a score live as you type — a tenth of a point per view, 2 points per like, 5 per comment, shown to one decimal. Under 50 is an Ember, 50 up to 150 is a Flame, 150 and beyond is a Blaze; show the tier right next to the score. Add a picker that prefills the numbers from any of the works in the explorer, and if someone types something negative or not a number, nudge them politely instead of showing garbage. Oh, and whenever anything in this app has nothing to show — this page before numbers go in, any list that comes up empty, now and forever — never leave it blank; drop in a playful little note that mentions a spark.",
+   "source_website": "ArtStation",
+   "source_feature": "Analytics dashboard for posted works",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the Spark Score page, use the prefill picker to choose Ink Tempest.",
+     "expected_result": "Views, likes, and comments fill with 430, 60, and 3, the score reads 178.0, and the tier shows Blaze.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Prefill"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Spark Score page, type 100 into the views field, 10 into likes, and 4 into comments.",
+     "expected_result": "The score reads 50.0 and the tier shows Flame — a score of exactly 50 lands in Flame, not Ember.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Boundary Condition"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type -5 into the likes field on the Spark Score page.",
+     "expected_result": "A polite validation message appears and the score area never shows NaN or a broken value.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Error Handling"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Use the prefill picker to choose Glass Comet, then change the comments field to 27.",
+     "expected_result": "The prefilled score of 785.0 updates live to 835.0 without any submit step.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Update",
+       "Cross-feature Integration"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "Use the sort-by-likes option in the browse explorer.",
+     "expected_result": "Midnight Library comes first, and Origami Tide appears directly above Rust & Roses — the 95-likes tie broken alphabetically by title.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Tie-breaking"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Let people heart things! Every work card in the explorer gets a heart that bumps the like count — and the likes-gained-this-week tally — by one, and clicking it again takes the heart back; nobody should be able to pump a count by mashing the button. Then give me a Favorites page that collects everything I've hearted, grouped by category, with a running total of hearted pieces that always matches what's actually listed there.",
+   "source_website": "DeviantArt",
+   "source_feature": "Favorites / heart system with visible counts",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "On Nebula Whale's card in the browse explorer, click the heart, then click it again.",
+     "expected_result": "The like count goes from 320 to 321 and back to 320, and Nebula Whale does not remain on the Favorites page.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Toggle Behavior",
+       "Count Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Click the heart on Glass Comet's card, then open the Favorites page.",
+     "expected_result": "Glass Comet's like count reads 276 and it appears on the Favorites page under a Sculpture group.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Grouping"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the Favorites page before hearting anything.",
+     "expected_result": "Instead of a blank area, a playful note mentioning a spark appears.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Empty State"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Click the heart on Rust & Roses' card, then select the #urban tag chip in the explorer.",
+     "expected_result": "Rust & Roses is the only work shown, still marked as hearted with a like count of 96.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Integration",
+       "State Persistence"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "Select the Papercraft category and the #animals tag chip together in the browse explorer.",
+     "expected_result": "Only Paper Dragons remains visible — works matching just the category or just the tag are filtered out.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Boolean Logic"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Time for Communities. A page listing themed groups — start with Nature Collective around #nature with 4 members and Space Dreamers around #space with 6 — plus a create form where the name is required and has to be unique (turn away 'Nature Collective' twins with a friendly message), and where you pick one of the site's tags as the theme. Each community gets its own page showing its member count, a join/leave button that moves that count by one, a little gallery of the works carrying its theme tag, and a pinned discussion thread — but you have to join before the thread lets you post.",
+   "source_website": "DeviantArt",
+   "source_feature": "Group communities for niche interests",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "On the Communities page, use the create form to submit a new community named 'Nature Collective'.",
+     "expected_result": "The form rejects it with a friendly message about the name already being taken, and the communities list still shows only the two seeded groups.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Uniqueness Check"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open Nature Collective's community page.",
+     "expected_result": "Its theme gallery shows exactly three works: Clockwork Garden, Origami Tide, and Rust & Roses.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Filtering",
+       "Derived Content"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open Space Dreamers' community page and click the join button.",
+     "expected_result": "The member count moves from 6 to 7 and the pinned discussion thread now accepts posts.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "Gated Action"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Open the Communities page and look at how each community's theme is shown.",
+     "expected_result": "Themes appear as tags with a leading #, e.g. #nature for Nature Collective and #space for Space Dreamers.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Global Convention",
+       "Labeling"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "On the Spark Score page, type 100 into the views field, 10 into likes, and 4 into comments.",
+     "expected_result": "The score reads 50.0 and the tier shows Flame — a score of exactly 50 lands in Flame, not Ember.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Boundary Condition"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Give the community a Weekly Spotlight page: every work ranked by likes gained this week — those weekly numbers from when we seeded the explorer, plus any hearts people hand out along the way count toward the week too. The top three get a podium treatment, everyone else lines up underneath, and when two works gained the same amount, alphabetical by title decides who stands higher. Next to each work, show how far it climbed or slid compared to its all-time-likes rank — Midnight Library is a lifetime darling having a quiet week, and that should be visible.",
+   "source_website": "DeviantArt",
+   "source_feature": "Favorites / heart system with visible counts",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Weekly Spotlight page without doing anything else first.",
+     "expected_result": "The podium reads Glass Comet (61) first, Clockwork Garden (45) second, Paper Dragons (45) third — the 45-45 tie resolved alphabetically by title, and not the all-time leader Midnight Library on top.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ranking",
+       "Tie-breaking"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Find Midnight Library on the Weekly Spotlight page.",
+     "expected_result": "It sits 7th with 8 weekly likes and is shown as having slid 6 places from its all-time rank of 1.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Derived Calculation",
+       "Rank Movement"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Scroll through the full Weekly Spotlight list.",
+     "expected_result": "All eight works appear exactly once each, with Ink Tempest in last place.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Deduplication",
+       "Completeness"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the browse explorer, click the heart on Paper Dragons' card, then open the Weekly Spotlight page.",
+     "expected_result": "Paper Dragons now stands second with 46 weekly likes, pushing Clockwork Garden (45) down to third.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Integration",
+       "Live Recalculation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 4,
+     "task": "On Nebula Whale's card in the browse explorer, click the heart, then click it again.",
+     "expected_result": "The like count goes from 320 to 321 and back to 320, and Nebula Whale does not remain on the Favorites page.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Toggle Behavior",
+       "Count Consistency"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Communities should run challenges now. Wire a challenge section into each community's page and seed one live in Nature Collective: 'Wild Growth', already open with Clockwork Garden and Origami Tide entered. Only works carrying that community's theme tag can enter and no work can enter twice — don't hide anything from the entry step, just block a repeat or an off-theme pick with a message when someone tries it. Then give it a close-and-crown action: closing announces the entry with the most likes gained this week as champion, flips the challenge to closed, and pins a champion badge on that work's card back in the explorer.",
+   "source_website": "DeviantArt",
+   "source_feature": "Group communities for niche interests (monthly challenges)",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "In Nature Collective's Wild Growth challenge, try to enter Clockwork Garden again.",
+     "expected_result": "The repeat entry is blocked with a message and the challenge still lists exactly two entries.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Duplicate Prevention"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "In Nature Collective's Wild Growth challenge, try to enter Nebula Whale, then enter Rust & Roses.",
+     "expected_result": "Nebula Whale is turned away with a message — no #nature among its tags — while Rust & Roses goes through, leaving the challenge with exactly three entries: Clockwork Garden, Origami Tide, and Rust & Roses.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Eligibility Validation",
+       "Input Validation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Use the close-and-crown action on the Wild Growth challenge.",
+     "expected_result": "The challenge flips to closed and announces Clockwork Garden as champion — its 45 weekly likes beat Origami Tide's 19.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow State",
+       "Winner Calculation"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Close the Wild Growth challenge, then open the browse explorer and find Clockwork Garden's card.",
+     "expected_result": "A champion badge now appears on Clockwork Garden's card in the explorer.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Integration",
+       "Badge Display"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 5,
+     "task": "On the Communities page, use the create form to submit a new community named 'Nature Collective'.",
+     "expected_result": "The form rejects it with a friendly message about the name already being taken, and the communities list still shows only the two seeded groups.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Uniqueness Check"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "I want an Artists insights page: one card per artist rolling up how many pieces they have, their total views, the hearts they've collected from visitors here, and their average Spark Score — computed with that same recipe from the score playground across all their works and shown to one decimal. Rank the artists by that average, best on top. And it should stay live: a fresh heart on someone's piece nudges their numbers right away.",
+   "source_website": "ArtStation",
+   "source_feature": "Analytics dashboard for posted works",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the artists insights page.",
+     "expected_result": "Sana Okafor is ranked first with an average Spark Score of 721.5 and Theo Voss is last with 409.5.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Ranking"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Scroll through the artists insights page.",
+     "expected_result": "Exactly four artists appear, each listed once, and each credited with 2 works.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Deduplication",
+       "Rollup"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Find Mira Chen's card on the artists insights page.",
+     "expected_result": "Her total views read 2.1k — the 2140 total shown compact, not as a raw number.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Number Formatting",
+       "Aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the browse explorer, click the heart on Origami Tide's card, then open the artists insights page.",
+     "expected_result": "Lena Petrov's card shows 1 heart collected and her average Spark Score has moved from 565.0 to 566.0.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Integration",
+       "Live Recalculation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "On the Spark Score page, use the prefill picker to choose Ink Tempest.",
+     "expected_result": "Views, likes, and comments fill with 430, 60, and 3, the score reads 178.0, and the tier shows Blaze.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Prefill"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "design-restyle",
+   "instruction": "Facelift time, and I want it everywhere, consistently: the explorer, favorites, communities, spotlight, and artists pages together — and don't skip the original share-ideas and discussion corners. Center the page headings and set page titles in a serif face, give every work card softly rounded corners with a gentle shadow and its category as a small outlined pill, and switch every primary action button — join, create, enter, close, share — to warm coral (#FF6F61). Same treatment across all of them; one page left behind ruins the whole thing.",
+   "source_website": "ArtStation",
+   "source_feature": "Professional portfolio presentation and visual polish",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Open the browse explorer page.",
+     "expected_result": "The page heading is centered in a serif face, every work card has rounded corners with a soft shadow, and each card's category appears as a small outlined pill.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Typography",
+       "Card Styling"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open Nature Collective's community page.",
+     "expected_result": "The heading is centered, the join button is warm coral (#FF6F61), and the theme gallery still shows exactly Clockwork Garden, Origami Tide, and Rust & Roses as rounded-corner cards.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Color Scheme",
+       "Cross-page Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the Weekly Spotlight page and then the artists insights page.",
+     "expected_result": "Both pages use centered serif titles and the same rounded card treatment as the explorer — neither page is left in the old style.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Cross-page Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the restyled browse explorer, find Glass Comet's card.",
+     "expected_result": "It still shows its views compactly as 1.5k and its tag as #space.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Global Convention",
+       "Number Formatting"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 6,
+     "task": "Open the Weekly Spotlight page without doing anything else first.",
+     "expected_result": "The podium reads Glass Comet (61) first, Clockwork Garden (45) second, Paper Dragons (45) third — the 45-45 tie resolved alphabetically by title, and not the all-time leader Midnight Library on top.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ranking",
+       "Tie-breaking"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Last big one: a bell up in the nav with an unread count, and an activity feed page behind it. Log hearts given, community joins, and challenge closings — newest first — with filter chips by kind of event, and viewing the feed marks everything read so the bell settles down until something new happens. Start it with three already-read entries so it doesn't feel dead: 'Wild Growth challenge opened' from 3 days ago, 'Space Dreamers community created' from 5 days ago, and 'Nebula Whale featured' from 8 days ago.",
+   "source_website": "ArtStation",
+   "source_feature": "Follower notifications and activity feed",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the activity feed on a fresh load.",
+     "expected_result": "Exactly three already-read entries appear in order — Wild Growth challenge opened (3 days ago) on top, then Space Dreamers community created (5 days ago), then Nebula Whale featured (8 days ago) — and the bell shows no unread count.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Initial Load",
+       "Ordering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the browse explorer, click the heart on Nebula Whale's card, then check the bell and open the activity feed.",
+     "expected_result": "The bell shows 1 unread before opening; the feed's top entry is the fresh heart on Nebula Whale above the three seeded ones, and the unread indicator clears after viewing.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Unread Tracking",
+       "Ordering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the activity feed and click the filter chip for heart events before giving any hearts.",
+     "expected_result": "No heart events exist yet, so a playful note mentioning a spark appears instead of a blank area, and the seeded non-heart entries stay hidden while that filter is active.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Empty State"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In Nature Collective, use the close-and-crown action on the Wild Growth challenge, then open the activity feed.",
+     "expected_result": "A new unread entry at the top announces Wild Growth closed with Clockwork Garden crowned, and the bell showed an unread count before the feed was opened.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Integration",
+       "Event Logging"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 8,
+     "task": "Open the artists insights page.",
+     "expected_result": "Sana Okafor is ranked first with an average Spark Score of 721.5 and Theo Voss is last with 409.5.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Ranking"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "target_app_summary": "World of Imagination grows from a simple showcase-and-discuss site into a full creative community platform. Discovery gets a real gallery explorer with category/tag cross-filtering and tie-aware sorting over a pinned set of eight works, plus a Spark Score calculator that turns engagement numbers into tiered scores. Social mechanics arrive as a heart/favorites system whose live counts ripple outward into a Weekly Spotlight leaderboard, a per-artist insights dashboard built on the Spark formula, and community-run challenges that crown champions back on the gallery cards. Communities themselves become a multi-page workflow (browse, create with validation, join, post in pinned threads), and everything feeds a notification bell with a filterable activity feed. A late full-app restyle sweeps coral accents, centered serif headings, and a consistent card treatment across every surface. The feature graph fans out from the explorer (T2) into hearts, the calculator prefill, and challenges, with deep chains like explorer to hearts to spotlight and explorer to calculator to artist analytics.",
+ "dependency_graph": {
+  "nodes": [
+   {
+    "id": "T1",
+    "label": "base app",
+    "archetype": "base"
+   },
+   {
+    "id": "T2",
+    "label": "gallery explorer + seed",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T3",
+    "label": "Spark Score calculator",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T4",
+    "label": "hearts & favorites",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T5",
+    "label": "communities workflow",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T6",
+    "label": "weekly spotlight leaderboard",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T7",
+    "label": "community challenges",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T8",
+    "label": "artist insights rollup",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T9",
+    "label": "full-app restyle",
+    "archetype": "design-restyle"
+   },
+   {
+    "id": "T10",
+    "label": "activity feed & bell",
+    "archetype": "multi-surface-workflow"
+   }
+  ],
+  "edges": [
+   {
+    "from": "T1",
+    "to": "T2",
+    "what": "upgrades the base browse-works page into the explorer"
+   },
+   {
+    "from": "T2",
+    "to": "T3",
+    "what": "prefill picker pulls a gallery work's seeded stats"
+   },
+   {
+    "from": "T2",
+    "to": "T4",
+    "what": "heart toggle lives on the explorer's work cards"
+   },
+   {
+    "from": "T2",
+    "to": "T5",
+    "what": "community theme galleries pull the explorer's tagged works"
+   },
+   {
+    "from": "T2",
+    "to": "T6",
+    "what": "spotlight ranks the explorer's seeded works by their weekly like numbers"
+   },
+   {
+    "from": "T4",
+    "to": "T6",
+    "what": "live hearts count toward weekly like totals"
+   },
+   {
+    "from": "T5",
+    "to": "T7",
+    "what": "challenges are created and run inside community pages"
+   },
+   {
+    "from": "T2",
+    "to": "T7",
+    "what": "champion badge lands on the winner's explorer card"
+   },
+   {
+    "from": "T2",
+    "to": "T8",
+    "what": "artist rollups aggregate the explorer's seeded works and their stats"
+   },
+   {
+    "from": "T3",
+    "to": "T8",
+    "what": "artist averages computed with the Spark Score formula"
+   },
+   {
+    "from": "T4",
+    "to": "T8",
+    "what": "hearts collected feed artist rollups live"
+   },
+   {
+    "from": "T4",
+    "to": "T10",
+    "what": "hearts given are logged as feed events"
+   },
+   {
+    "from": "T5",
+    "to": "T10",
+    "what": "community joins are logged as feed events"
+   },
+   {
+    "from": "T7",
+    "to": "T10",
+    "what": "challenge closings and crownings are logged as feed events"
+   },
+   {
+    "from": "T1",
+    "to": "T9",
+    "what": "restyles the base share-ideas and discussion pages"
+   },
+   {
+    "from": "T2",
+    "to": "T9",
+    "what": "restyles the explorer's work cards"
+   },
+   {
+    "from": "T4",
+    "to": "T9",
+    "what": "restyles the favorites page"
+   },
+   {
+    "from": "T5",
+    "to": "T9",
+    "what": "restyles community pages"
+   },
+   {
+    "from": "T6",
+    "to": "T9",
+    "what": "restyles the spotlight podium and list"
+   },
+   {
+    "from": "T7",
+    "to": "T9",
+    "what": "restyles the challenge enter and close-and-crown buttons"
+   },
+   {
+    "from": "T8",
+    "to": "T9",
+    "what": "restyles the artists insights page"
+   }
+  ]
+ },
+ "global_rules": [
+  {
+   "rule": "Any displayed count of 1000 or more is shown compact with one decimal, like 1.2k, everywhere in the app.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Tags are always rendered with a leading # (e.g. #space) on every surface.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Nothing empty is ever left blank: any empty view or empty result set shows a playful note that mentions a spark.",
+   "introduced_in_turn": 3
+  }
+ ],
+ "pinned_seed": {
+  "entity": "8 creative works in the gallery explorer",
+  "introduced_in_turn": 2,
+  "records_gist": "Nebula Whale/Mira Chen/Digital Art/space+animals/1200v/320L(12wk)/14c; Clockwork Garden/Theo Voss/Sculpture/steampunk+nature/800v/210L(45wk)/8c; Paper Dragons/Mira Chen/Papercraft/fantasy+animals/940v/180L(45wk)/22c; Midnight Library/Sana Okafor/Digital Art/fantasy+architecture/2100v/450L(8wk)/31c; Rust & Roses/Theo Voss/Photography/nature+urban/640v/95L(30wk)/5c; Glass Comet/Lena Petrov/Sculpture/space/1500v/275L(61wk)/17c; Ink Tempest/Sana Okafor/Digital Art/abstract/430v/60L(2wk)/3c; Origami Tide/Lena Petrov/Papercraft/nature+abstract/1100v/95L(19wk)/9c"
+ }
+}

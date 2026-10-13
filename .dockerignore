@@ -1,0 +1,10 @@
+# The harness image needs harness/ and data/ only; keep the archives and run outputs out of the
+# build context so `docker build` does not copy hundreds of MB first.
+examples_artifacts/
+runs/
+artifacts/
+.ruff_cache/
+.pytest_cache/
+__pycache__/
+*.pyc
+data/data_gen/

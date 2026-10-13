@@ -1,0 +1,588 @@
+{
+  "index": 14,
+  "status": "success",
+  "model": "anthropic/claude-haiku-4-5-20251001",
+  "generator": "openhands",
+  "base_trajectory": {
+    "source": "none",
+    "messages": 0
+  },
+  "artifacts": {
+    "zip": null,
+    "run_json": null,
+    "generator": "openhands",
+    "screenshots": [
+      "/output/000014/screenshots/task000014_0.png",
+      "/output/000014/screenshots/task000014_1.png",
+      "/output/000014/screenshots/task000014_2.png",
+      "/output/000014/screenshots/task000014_3.png",
+      "/output/000014/screenshots/task000014_4.png"
+    ],
+    "output_dir": "/output/000014"
+  },
+  "ladder": {
+    "turns_expected": 10,
+    "turns_completed": 10,
+    "complete": true
+  },
+  "eval_model": "claude-sonnet-4-6",
+  "accuracy": 66.0,
+  "yes": 31,
+  "partial": 4,
+  "no": 15,
+  "total": 50,
+  "tasks": [
+    {
+      "task_idx": 0,
+      "task": "Browse the list of available cryptocurrency products.",
+      "expected": "The buyer can view a list of products with clear details like name, price, and seller information.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 1,
+      "task": "Initiate a transaction by selecting a cryptocurrency product and attempting to deposit the equivalent amount into the escrow account.",
+      "expected": "The system successfully processes the deposit into the escrow account.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 2,
+      "task": "Add a new cryptocurrency product.",
+      "expected": "The product is successfully added and immediately appears in the seller's product list.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 3,
+      "task": "Submit a dispute for a transaction.",
+      "expected": "The dispute is lodged successfully, and the status of the transaction is updated to 'disputed'.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 4,
+      "task": "Verify that the website uses 'light gray' as the background color and 'dark red' as the component color, as specified in the design requirements.",
+      "expected": "The website has a background color of 'light gray' and components (such as buttons, cards, headers, etc.) are styled with the color 'dark red', accurately reflecting the design instruction.",
+      "verdict": "yes"
+    }
+  ],
+  "turns": [
+    {
+      "turn": 1,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": false,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Browse the list of available cryptocurrency products.",
+          "expected": "The buyer can view a list of products with clear details like name, price, and seller information.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Initiate a transaction by selecting a cryptocurrency product and attempting to deposit the equivalent amount into the escrow account.",
+          "expected": "The system successfully processes the deposit into the escrow account.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 2,
+          "task": "Add a new cryptocurrency product.",
+          "expected": "The product is successfully added and immediately appears in the seller's product list.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Submit a dispute for a transaction.",
+          "expected": "The dispute is lodged successfully, and the status of the transaction is updated to 'disputed'.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Verify that the website uses 'light gray' as the background color and 'dark red' as the component color, as specified in the design requirements.",
+          "expected": "The website has a background color of 'light gray' and components (such as buttons, cards, headers, etc.) are styled with the color 'dark red', accurately reflecting the design instruction.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 1,
+      "no": 0,
+      "total": 5,
+      "accuracy": 90.0,
+      "cost": {
+        "generation_usd": 0.190303,
+        "model_calls": 20,
+        "input_tokens_total": 459706,
+        "output_tokens": 20273,
+        "judge_usd": 0.4229
+      }
+    },
+    {
+      "turn": 2,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the Fee Calculator page, type 10000 into the USD amount box and pick BTC as the coin.",
+          "expected": "The breakdown updates as the amount is entered, with no separate submit step: the buyer's total reads $10,077.50 and the seller's take reads $9,925.00.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the Fee Calculator page, type 10000 into the USD amount box, pick BTC, and look at the crypto amount readout.",
+          "expected": "It reads 0.16666667 BTC - eight decimal places correctly rounded to end in 67, not truncated to 0.16666666, with the ticker after the number.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the Fee Calculator page, type 50 into the USD amount box, then change it to 100.",
+          "expected": "At 50 a friendly note appears instead of any figures (no NaN or broken numbers anywhere); at 100 the full breakdown appears with real dollar values.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Open the Fee Calculator page and look at its overall styling.",
+          "expected": "The page keeps the app's light gray background and its primary components (such as buttons or the header) are styled dark red, consistent with the rest of the app.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "As a seller, add a new cryptocurrency product.",
+          "expected": "The product is added and immediately appears in the seller's product list.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.116938,
+        "model_calls": 10,
+        "input_tokens_total": 413189,
+        "output_tokens": 6437,
+        "judge_usd": 0.215
+      }
+    },
+    {
+      "turn": 3,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Trade Ledger page and read the total released volume summary card.",
+          "expected": "It reads $94,500.00 - only the five Released trades count, not the $214,000.00 you'd get by summing all eight.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the Trade Ledger page and read the locked-in-escrow summary card.",
+          "expected": "It reads $49,500.00 - the $37,500.00 trade currently In Escrow plus the $12,000.00 Disputed trade, since disputed funds are still locked.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the Trade Ledger, find Omar's row in the per-seller breakdown.",
+          "expected": "His released volume reads $21,000.00 - the $70,000.00 refunded SOL trade is excluded.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "From the product browse page, buy any product and deposit into escrow, then open the Trade Ledger.",
+          "expected": "The new trade appears in the ledger with an amber In Escrow pill badge, and the locked-in-escrow total has increased by exactly the deposited amount.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the Fee Calculator page, type 10000 into the USD amount box, pick BTC, and look at the crypto amount readout.",
+          "expected": "It reads 0.16666667 BTC - eight decimal places correctly rounded to end in 67, not truncated to 0.16666666, with the ticker after the number.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 0,
+      "no": 1,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.131439,
+        "model_calls": 9,
+        "input_tokens_total": 449872,
+        "output_tokens": 6481,
+        "judge_usd": 0.2763
+      }
+    },
+    {
+      "turn": 4,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Payout Center, pick Marcus, and read his numbers.",
+          "expected": "His lifetime earned and his available balance both read $35,730.00 - his two Released trades gross $36,000.00 minus the seller's 0.75% fee share - not the plain $36,000.00 gross, and his disputed $12,000.00 trade contributes nothing.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the Payout Center, pick Omar, request a withdrawal of 25000, then change the amount to 100 and try again.",
+          "expected": "Both attempts are refused with a message - 25000 is over his $20,842.50 available balance and 100 is under the $250 minimum - his available still reads $20,842.50 and nothing appears in the pending queue.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the Payout Center, pick Lena, request a withdrawal of 5000, and go through with it.",
+          "expected": "Before it completes, a confirmation appears showing exactly $5,000.00; after confirming, the request sits as pending in the admin approvals queue and Lena's available drops from $37,218.75 to $32,218.75 while her lifetime earned stays $37,218.75.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Request and confirm a withdrawal of 5000 for Lena, reject it from the admin approvals page, then check her balances and open the Trade Ledger.",
+          "expected": "The rejection lifts the hold - Lena's available is back to $37,218.75 and the request shows as rejected instead of pending - and the Trade Ledger is untouched, with total released volume still $94,500.00.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Trade Ledger page and read the total released volume summary card.",
+          "expected": "It reads $94,500.00 - only the five Released trades count, not the $214,000.00 you'd get by summing all eight.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 3,
+      "partial": 0,
+      "no": 2,
+      "total": 5,
+      "accuracy": 60.0,
+      "cost": {
+        "generation_usd": 0.173567,
+        "model_calls": 13,
+        "input_tokens_total": 804450,
+        "output_tokens": 12959,
+        "judge_usd": 0.6639
+      }
+    },
+    {
+      "turn": 5,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Leaderboard page and read the ranking order and scores.",
+          "expected": "Top to bottom it reads Lena, Marcus, Omar, Priya. Lena and Marcus are tied at score 2 and Lena ranks first because her $37,500.00 released volume beats his $36,000.00; Omar's score reads 0, not the 1 a build that skipped the refund penalty would show - his $70,000.00 refund cancels his released trade - and he edges out Priya at the same score only because his $21,000.00 released volume beats her $0.00.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the Leaderboard, find Priya's row.",
+          "expected": "She is listed (not missing) with score 0, zero released trades, and $0.00 released volume - no blanks or NaN.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the Leaderboard, look at Marcus's score.",
+          "expected": "It reads 2 from his two Released trades - his disputed TX-104 neither adds nor subtracts anything while it stays unsettled.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Open trade TX-107 and release its escrow to Priya through the app's release flow, confirm the exact-amount prompt, then open the Leaderboard.",
+          "expected": "Priya's row updates on its own to score 1 with one released trade and $37,500.00 volume, and she jumps past Omar into third - the order now reads Lena, Marcus, Priya, Omar.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Payout Center, pick Marcus, and read his numbers.",
+          "expected": "His lifetime earned and his available balance both read $35,730.00 - his two Released trades gross $36,000.00 minus the seller's 0.75% fee share - not the plain $36,000.00 gross, and his disputed $12,000.00 trade contributes nothing.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 0,
+      "no": 1,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.319532,
+        "model_calls": 17,
+        "input_tokens_total": 1410884,
+        "output_tokens": 14368,
+        "judge_usd": 0.5118
+      }
+    },
+    {
+      "turn": 6,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Turn on Practice Mode from the header, open the 0.20000000 BTC practice listing priced at $12,000.00, and try to deposit into escrow.",
+          "expected": "The deposit is refused with an insufficient-balance message and the practice wallet still reads $10,000.00.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "In Practice Mode, open the 1.60000000 ETH practice listing and deposit into escrow.",
+          "expected": "The practice wallet immediately reads $6,000.00 and the trade appears in the practice list with an amber In Escrow pill badge.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 2,
+          "task": "In Practice Mode, deposit on the 1.60000000 ETH practice listing, then open the Trade Ledger.",
+          "expected": "The ledger is untouched: total released volume still reads $94,500.00 and locked-in-escrow still reads $49,500.00 - not the $53,500.00 it would show if the $4,000.00 practice deposit leaked in - and the practice trade is nowhere in the ledger.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Turn on Practice Mode, look over the practice board, open the 3.57142857 SOL listing, and deposit into escrow.",
+          "expected": "All three practice listings are browsable with the practice banner visible throughout, and the $500.00 deposit completes out of the practice wallet leaving it at $9,500.00.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Trade Ledger page and read the locked-in-escrow summary card.",
+          "expected": "It reads $49,500.00 - the $37,500.00 trade currently In Escrow plus the $12,000.00 Disputed trade, since disputed funds are still locked.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 1,
+      "no": 0,
+      "total": 5,
+      "accuracy": 90.0,
+      "cost": {
+        "generation_usd": 0.345699,
+        "model_calls": 16,
+        "input_tokens_total": 1600334,
+        "output_tokens": 13529,
+        "judge_usd": 0.3347
+      }
+    },
+    {
+      "turn": 7,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the Offer Screener, tick the ETH coin checkbox and pick PayPal as the payment method.",
+          "expected": "Exactly two offers remain, with Lena's $2,495.00 ETH offer listed above Priya's identical $2,495.00 one - the price tie breaks to Lena's higher reputation - and the counter reads 'Showing 2 of 6 offers'.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the Offer Screener, tick ETH, type 2500 into the max price box, save the current setup as a preset named 'cheap eth', clear all filters, then apply the preset.",
+          "expected": "The filters come back and exactly three ETH offers show - Lena's and Priya's at $2,495.00 plus Marcus's at exactly $2,500.00, which stays in because the max bound is inclusive; a build treating the max as exclusive would wrongly drop Marcus's and show only two.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the Offer Screener, type 5 into the minimum reputation box, then clear that box.",
+          "expected": "At 5, no offers match and a friendly no-results note shows instead of a blank or broken page; clearing the box brings all six offers back.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "On the Offer Screener, type 1 into the minimum reputation box.",
+          "expected": "Priya's ETH offer and Omar's SOL offer both disappear - Priya's leaderboard score is 0 and Omar's refund penalty cancels his down to 0 (a build that skipped the penalty would keep him at 1 and show five offers) - leaving four offers, all Marcus's and Lena's, with the counter reading 'Showing 4 of 6 offers'.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Leaderboard page and read the ranking order and scores.",
+          "expected": "Top to bottom it reads Lena, Marcus, Omar, Priya. Lena and Marcus are tied at score 2 and Lena ranks first because her $37,500.00 released volume beats his $36,000.00; Omar's score reads 0, not the 1 a build that skipped the refund penalty would show - his $70,000.00 refund cancels his released trade - and he edges out Priya at the same score only because his $21,000.00 released volume beats her $0.00.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 3,
+      "partial": 1,
+      "no": 1,
+      "total": 5,
+      "accuracy": 70.0,
+      "cost": {
+        "generation_usd": 0.28395,
+        "model_calls": 9,
+        "input_tokens_total": 1056087,
+        "output_tokens": 9326,
+        "judge_usd": 0.4428
+      }
+    },
+    {
+      "turn": 8,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the negotiation console on Marcus's 0.50000000 BTC offer asking $60,150.00 and type 59000 into the proposed price box.",
+          "expected": "The readouts keep up as each digit is typed, with no submit step: the discount reads 1.91% - measured off the $60,150.00 ask, not the 1.67% you'd get against the $60,000 BTC reference price - and the deal total reads $29,500.00.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the same console on Marcus's 0.50000000 BTC offer, type 54000 as the proposed price, then change it to 54135.",
+          "expected": "At 54000 a warning shows that the counter is more than 10% below the $60,150.00 ask and the send button stays dead; at exactly 54135 - precisely 10% below - the warning clears and the send button comes alive.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "With 59000 typed as the proposed price on Marcus's 0.50000000 BTC offer, look at the seller-pockets readout.",
+          "expected": "It reads $29,278.75 - the $29,500.00 total minus only the seller's 0.75% share, not the $29,057.50 a build charging the seller the full 1.5% would show.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Send a counter of 59000 on Marcus's 0.50000000 BTC offer, accept it as the seller, then look at the Offer Screener with no filters set.",
+          "expected": "Marcus's BTC offer now lists $59,000.00 per BTC and the board has re-sorted itself: his offer sits above Lena's $59,900.00 BTC offer, the reverse of where it sat before.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the Fee Calculator page, type 10000 into the USD amount box and pick BTC as the coin.",
+          "expected": "The breakdown updates as the amount is entered, with no separate submit step: the buyer's total reads $10,077.50 and the seller's take reads $9,925.00.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 3,
+      "partial": 0,
+      "no": 2,
+      "total": 5,
+      "accuracy": 60.0,
+      "cost": {
+        "generation_usd": 0.21834,
+        "model_calls": 12,
+        "input_tokens_total": 1531420,
+        "output_tokens": 7597,
+        "judge_usd": 0.8259
+      }
+    },
+    {
+      "turn": 9,
+      "status": "success",
+      "build": {
+        "ok": false
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Visit the product browse page, the Trade Ledger, and the Offer Screener in turn.",
+          "expected": "All three pages show the same dark charcoal top bar with the app name in white, on the same light gray page background.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the Fee Calculator and then the Offer Screener and look at their primary buttons and section headings.",
+          "expected": "On both pages the primary action buttons are dark red pills with white text, and section headings are left-aligned with a short dark red accent bar.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open the Trade Ledger and look at the summary cards.",
+          "expected": "The dollar figures are in a monospace font and the total released volume still reads $94,500.00.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "On the Trade Ledger, look at the status badges on TX-104 and TX-107.",
+          "expected": "The restyle left them alone: TX-104 still shows a dark red Disputed pill and TX-107 an amber In Escrow pill.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the Offer Screener, type 5 into the minimum reputation box, then clear that box.",
+          "expected": "At 5, no offers match and a friendly no-results note shows instead of a blank or broken page; clearing the box brings all six offers back.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 0,
+      "partial": 0,
+      "no": 5,
+      "total": 5,
+      "accuracy": 0.0,
+      "cost": {
+        "generation_usd": 0.52719,
+        "model_calls": 20,
+        "input_tokens_total": 2238068,
+        "output_tokens": 9281,
+        "judge_usd": 0.3474
+      }
+    },
+    {
+      "turn": 10,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Seller Statements page and pick Lena.",
+          "expected": "Her net payout total reads $37,218.75 - each released trade is charged only the seller's 0.75% share, not the full 1.5% (which would wrongly give $36,937.50) - and it matches her lifetime earned in the Payout Center to the cent.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the Seller Statements page, pick Omar.",
+          "expected": "His $70,000.00 refunded trade appears as a line with a $0.00 payout, and his net payout total reads $20,842.50 from the released trade alone.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the Seller Statements page, pick Marcus and look at the held section.",
+          "expected": "His disputed TX-104 sits there showing $12,000.00 held, and that amount is excluded from his net payout total, which covers only his Released trades.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "On the Fee Calculator, type 25000 with ETH selected and note the seller's take, then open Seller Statements and pick Lena.",
+          "expected": "Both places agree: the calculator's seller take and the statement line for her $25,000.00 ETH trade both show a net of $24,812.50.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "Turn on Practice Mode from the header, open the 0.20000000 BTC practice listing priced at $12,000.00, and try to deposit into escrow.",
+          "expected": "The deposit is refused with an insufficient-balance message and the practice wallet still reads $10,000.00.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 1,
+      "partial": 1,
+      "no": 3,
+      "total": 5,
+      "accuracy": 30.0,
+      "cost": {
+        "generation_usd": 0.313066,
+        "model_calls": 20,
+        "input_tokens_total": 1679121,
+        "output_tokens": 9699,
+        "judge_usd": 0.9678
+      }
+    }
+  ]
+}

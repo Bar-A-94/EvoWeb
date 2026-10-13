@@ -1,0 +1,889 @@
+{
+ "id": "000047",
+ "instruction": "Please implement an e-government system for office management, infrastructure management, procurement management, personnel management, financial management, and decision-making management. The system should have functionalities for office management, infrastructure management, procurement management, personnel management, financial management, and decision-making management. Users should be able to browse related information, submit applications, approve, query status, and perform related operations. The system should also include functions such as leave, middle-level cadres leaving Shenzhen, attendance, and \"five powers\" management, which can design and circulate corresponding forms and processes. Implement light pink for the page background and medium violet red for the elements.",
+ "Category": {
+  "primary_category": "Data Management",
+  "subcategories": [
+   "CRUD Operations",
+   "API Integration",
+   "File Handling"
+  ]
+ },
+ "application_type": "ERP Platforms",
+ "ui_instruct": [
+  {
+   "task": "Navigate to the infrastructure management section and browse through the available information.",
+   "expected_result": "User can view detailed and accurate information related to infrastructure management, with options to further query specific infrastructure details.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering",
+     "Details Information"
+    ]
+   }
+  },
+  {
+   "task": "Fill out and submit a procurement application form.",
+   "expected_result": "The form submits successfully, and a confirmation message is displayed. The application status should be viewable in the user's procurement management section.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations"
+    ]
+   }
+  },
+  {
+   "task": "Navigate to the leave management section and complete an application for leave.",
+   "expected_result": "User is able to submit a leave application successfully and receive a confirmation of submission. The application appears in the user's leave management history.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations",
+     "E-commerce"
+    ]
+   }
+  },
+  {
+   "task": "As a manager, review and approve a personnel management request.",
+   "expected_result": "The request is moved to an approved status. The requester is notified of the approval, and it reflects in the personnel management records.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Authentication Flows",
+     "Generation"
+    ]
+   }
+  },
+  {
+   "task": "Perform a query for financial reports within the financial management section.",
+   "expected_result": "The query returns accurate, comprehensive financial information in a timely manner, supporting decision-making processes.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Filtering",
+     "Generation"
+    ]
+   }
+  },
+  {
+   "task": "Initiate a decision-making process and submit it for internal review.",
+   "expected_result": "The process initiates without error, and all involved parties receive a notification for review. The status updates reflect the ongoing process stages accurately.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations",
+     "Communication"
+    ]
+   }
+  },
+  {
+   "task": "Verify that the website uses 'light pink' as the background color and 'medium violet red' as the component color, as specified in the design requirements.",
+   "expected_result": "The website has a background color of 'light pink' and components (such as buttons, cards, headers, etc.) are styled with the color 'medium violet red', accurately reflecting the design instruction.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "archetype": "interactive-tool",
+   "instruction": "The procurement side needs real teeth now. Give me a budget lines page under financial management and a proper requisition builder inside procurement: I pick a budget line, type an item description, a quantity and a unit price, and while I'm typing it live-shows the total, that line's remaining funds, and which approval tier it lands in — under $5,000 goes to Department Head, from $5,000 up to but not including $25,000 goes to Finance Director, and $25,000 or more goes to City Council. If my total goes past the line's remaining funds, the remaining figure turns red with a warning, updating on every keystroke, not just at submit. Start the budget lines with exactly these six, entered in exactly this order since I'll grow the list later: Vehicle Fleet (Procurement) $45,000 allocated / $31,500 spent; Roads & Bridges (Infrastructure) $120,000 / $84,000; Office Supplies (Office) $15,000 / $9,200; IT Equipment (Office) $60,000 / $58,500; Staff Training (Personnel) $25,000 / $11,000; Public Parks (Infrastructure) $80,000 / $80,000. When I submit, the requisition should get a reference like REQ-001, REQ-002 counting up — and I want that exact pattern (its own letter prefix, three digits, counting up) on anything submittable we ever add to this app — plus a Pending status pill in amber; in fact make amber-Pending, green-Approved, red-Rejected the badge colors everywhere, now and for whatever comes later.",
+   "source_website": "OpenGov ERP",
+   "source_feature": "Live budget validation on requisitions (fused with the procurement scope builder)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the requisition builder and select IT Equipment as the budget line.",
+     "expected_result": "The remaining funds shown for IT Equipment read $1,500 (allocated $60,000 minus $58,500 spent), not the allocated amount.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "computed value",
+       "seed data"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the requisition builder select Staff Training, then type quantity 2 and unit price 2500.",
+     "expected_result": "The live total reads $5,000 and the approval tier shows Finance Director — exactly $5,000 does NOT fall in the Department Head tier.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "boundary condition",
+       "live computation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the requisition builder select Public Parks, then type quantity 1 and unit price 100 without submitting.",
+     "expected_result": "Remaining funds show $0 and the over-budget warning/red state appears while typing, since any positive amount exceeds Public Parks' remaining funds.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "live validation",
+       "boundary condition"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "From the procurement management section open the requisition builder, enter description 'Copy paper', budget line Office Supplies, quantity 1, unit price 100, and submit.",
+     "expected_result": "The submitted requisition appears with a REQ-prefixed three-digit reference and an amber Pending status pill.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "submission flow",
+       "global convention"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Navigate to the personnel management area and open the leave section.",
+     "expected_result": "A leave application area (form or list) is visible, the page renders with content (not blank), and the page background is light pink.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "navigation",
+       "base app"
+      ]
+     },
+     "copied_from_turn": 1
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Travel expenses are chaos right now. Give staff an expense report form — trip purpose, departure and return dates, a budget line to charge, and itemized costs they add line by line with a running total — and a separate approvals queue page where I open each report and approve or reject it; if the return date is before the departure date it must not let them submit at all. When something gets rejected, the approver has to type a reason and that reason stays visible on the report — actually make that the law everywhere in this app, any rejection of anything needs a typed reason, forever. Only approved reports should post their total onto the chosen budget line's spent amount so the remaining funds actually move; pending and rejected ones touch nothing. Preload two sitting in the queue: EXP-001 from Li Wei, 'Provincial Budget Conference' against Staff Training with rail $340, hotel $360 and meals $85; and EXP-002 from Chen Fang, 'Infrastructure Site Inspection' against Roads & Bridges with fuel $95 and lodging $210.",
+   "source_website": "CGI Advantage",
+   "source_feature": "Travel and expense management with approval workflow",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the expense approvals queue and look at EXP-001 from Li Wei.",
+     "expected_result": "Its itemized total reads $785 (340 + 360 + 85) and it carries an amber Pending pill.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "computed total",
+       "seed data"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the expense report form, enter purpose 'Test trip', departure date 2026-03-10, return date 2026-03-08, add one item 'Taxi' at $20, and try to submit.",
+     "expected_result": "Submission is blocked because the return date is before departure, and no new report appears in the approvals queue.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "input validation",
+       "date logic"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the approvals queue open EXP-001 and reject it, typing the reason 'Missing receipts'.",
+     "expected_result": "EXP-001 shows a red Rejected pill with 'Missing receipts' visible on it, and Staff Training's spent/remaining figures are unchanged (rejected reports never post).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "rejection reason",
+       "state isolation"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the approvals queue approve EXP-002, then open the requisition builder and select Roads & Bridges as the budget line.",
+     "expected_result": "Roads & Bridges' remaining funds now read $35,695 (the $305 approved expense posted onto its spent total).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "cross-feature posting",
+       "computed value"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the requisition builder and select IT Equipment as the budget line.",
+     "expected_result": "The remaining funds shown for IT Equipment read $1,500 (allocated $60,000 minus $58,500 spent), not the allocated amount.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "computed value",
+       "seed data"
+      ]
+     },
+     "copied_from_turn": 2
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "I need a budget utilization report under decision-making: every budget line with its percent used to one decimal place, sorted highest first — and when two lines tie on the percentage, alphabetical order by line name breaks the tie. Roll them up by department too, each department showing its combined percent across its lines. Anything at 90% or above gets an At Risk flag, except anything sitting at 100% which gets Exhausted instead, and give me a headline count of how many lines carry a flag. This report has to track reality — when an expense report gets approved, the numbers and the ordering here move with it.",
+   "source_website": "OpenGov ERP",
+   "source_feature": "AI-generated report summaries with drill-downs (variance flagging and drill-down)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the budget utilization report and read the line ordering.",
+     "expected_result": "Order is: Public Parks 100.0%, IT Equipment 97.5%, Roads & Bridges 70.0%, Vehicle Fleet 70.0%, Office Supplies 61.3%, Staff Training 44.0% — Roads & Bridges comes before Vehicle Fleet on the 70.0% tie per the alphabetical tie-break (the ledger seeds Vehicle Fleet first, so a sort that just keeps ledger order would show the pair flipped), and the headline flag count reads 2.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "sorting with ties",
+       "aggregate count"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "In the utilization report find the Office department rollup.",
+     "expected_result": "The Office department (Office Supplies + IT Equipment) shows 90.3% used ($67,700 of $75,000, rounded to one decimal — not 90.2 or 90.27).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "rollup",
+       "rounding"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the utilization report look at the flags on IT Equipment and Public Parks.",
+     "expected_result": "IT Equipment (97.5%) is flagged At Risk while Public Parks (100%) is flagged Exhausted, not At Risk.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "threshold flags",
+       "boundary condition"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the expense approvals queue approve EXP-001, then open the budget utilization report.",
+     "expected_result": "Staff Training now shows 47.1% used ($11,785 of $25,000) — the approved expense moved the report's figures.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "cross-feature update",
+       "computed value"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the expense report form, enter purpose 'Test trip', departure date 2026-03-10, return date 2026-03-08, add one item 'Taxi' at $20, and try to submit.",
+     "expected_result": "Submission is blocked because the return date is before departure, and no new report appears in the approvals queue.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "input validation",
+       "date logic"
+      ]
+     },
+     "copied_from_turn": 3
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Let's open procurement up to suppliers. Add a vendor portal where outside suppliers browse the open requisitions and submit a quote — company name and amount, and obviously no zero or negative amounts — with each quote getting its own BID reference; then on our side a review screen per requisition listing its quotes with the best one highlighted, where best means lowest amount and a tie goes to whichever quote came in first, plus an Award button that marks the requisition Awarded and stamps every losing quote 'Not selected'. Anything submitted through that requisition builder should show up in the portal as open. Seed it like this: REQ-001 'Desktop computers for permit office' on IT Equipment estimated $12,000 with three quotes already on file, listed in this order and each showing its submitted date on the review screen — BID-002 Shenzhen Tech Supply $11,400 submitted June 4, BID-003 Pearl Office Systems $10,850 submitted June 6, and BID-001 Huaqiang Electronics $10,850 submitted June 2; REQ-002 'Gravel resurfacing, Nanshan section' on Roads & Bridges estimated $28,000, no quotes yet; REQ-003 'Fleet tires' on Vehicle Fleet estimated $6,400, no quotes yet.",
+   "source_website": "CGI Advantage",
+   "source_feature": "Vendor self-service portal with e-commerce integration",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the review screen for REQ-001 in the vendor portal area.",
+     "expected_result": "Huaqiang Electronics' $10,850 quote (BID-001, submitted June 2) is highlighted as best — it ties Pearl Office Systems on amount but came in four days earlier, so the earliest-submitted tie-break wins even though Pearl sits higher in the quote list.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "tie-breaking",
+       "ranking"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the vendor portal submit a quote on REQ-003 as company 'Bay Rubber Co' with amount 0, then again with amount 5900.",
+     "expected_result": "The zero-amount quote is refused by validation; the $5,900 quote is accepted and appears under REQ-003 with a BID-prefixed three-digit reference.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "input validation",
+       "submission flow"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On REQ-001's review screen award the highlighted quote.",
+     "expected_result": "REQ-001 is marked Awarded, and Shenzhen Tech Supply's and Pearl Office Systems' quotes both show 'Not selected' while Huaqiang Electronics' quote does not.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "award flow",
+       "state consistency"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the requisition builder submit a requisition 'Projector for council chamber' on Office Supplies with quantity 1 and unit price 900, then open the vendor portal.",
+     "expected_result": "The new requisition appears in the vendor portal as an open request that suppliers could quote on.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "cross-feature flow",
+       "list consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "In the requisition builder select Staff Training, then type quantity 2 and unit price 2500.",
+     "expected_result": "The live total reads $5,000 and the approval tier shows Finance Director — exactly $5,000 does NOT fall in the Department Head tier.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "boundary condition",
+       "live computation"
+      ]
+     },
+     "copied_from_turn": 2
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Grants next — a grant tracking section under financial management where I create a grant with an award amount and log expenditures against it, each grant showing total spent, remaining, and a progress bar with a whole-number percent used — and always round that percent down, never to nearest, because I won't tell council a grant is further along than it really is. It must refuse any expenditure that would push a grant past its award — remaining can never go below zero — and a grant with nothing logged yet should still render cleanly at 0%, not blow up. Set up three for me: Clean Water Initiative awarded $50,000 with $12,500 and $8,300 already logged; Digital Services Modernization awarded $30,000 with $18,000 and $12,000 logged; Community Health Outreach awarded $75,000 with nothing logged yet.",
+   "source_website": "CGI Advantage",
+   "source_feature": "Grant lifecycle management",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the grants section and look at Clean Water Initiative.",
+     "expected_result": "It shows $20,800 spent, $29,200 remaining, and 41% used — 20,800 of 50,000 is 41.6%, which rounds down to 41; a build that rounds to nearest would show 42%.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "computed totals",
+       "seed data"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On Digital Services Modernization try to log an expenditure of $10.",
+     "expected_result": "The expenditure is refused (the grant is fully spent), remaining stays $0 and progress stays 100%.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "boundary condition",
+       "input validation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Look at Community Health Outreach in the grants section.",
+     "expected_result": "It renders cleanly with 0% used, $0 spent and $75,000 remaining — no crash, blank, or NaN despite having no expenditures.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "empty state",
+       "robustness"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Create a new grant named 'River Cleanup' with an award amount of $10,000.",
+     "expected_result": "The new grant gets a sequential three-digit reference with the same letter prefix as the three seeded grants, numbered 004.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "global convention",
+       "reference numbering"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the budget utilization report and read the line ordering.",
+     "expected_result": "Order is: Public Parks 100.0%, IT Equipment 97.5%, Roads & Bridges 70.0%, Vehicle Fleet 70.0%, Office Supplies 61.3%, Staff Training 44.0% — Roads & Bridges comes before Vehicle Fleet on the 70.0% tie per the alphabetical tie-break (the ledger seeds Vehicle Fleet first, so a sort that just keeps ledger order would show the pair flipped), and the headline flag count reads 2.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "sorting with ties",
+       "aggregate count"
+      ]
+     },
+     "copied_from_turn": 4
+    }
+   ]
+  },
+  {
+   "archetype": "design-restyle",
+   "instruction": "The whole thing looks dated, so let's do a proper facelift — and applied everywhere, nothing half-done. Keep the light pink page background, but give every page a dark plum header bar with the page title in white, aligned left; make every primary submit or action button medium violet red with white text and fully rounded pill corners; put page content inside white cards with softly rounded corners and a subtle shadow; and right-align every money amount in every table. I'll be checking the budget lines page and requisition builder, the expense form and approvals queue, the utilization report, the vendor portal, and the grants section — plus the original module pages, all of them consistent.",
+   "source_website": "OpenGov ERP",
+   "source_feature": "Transparency reporting (public-facing visual polish, adapted as an app-wide restyle)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the budget utilization report page.",
+     "expected_result": "The page has a dark plum header bar with a white left-aligned title, the content sits in white rounded cards, money amounts in the table are right-aligned, and the report still leads with Public Parks at 100.0%.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "header style",
+       "table alignment"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the vendor portal, then open the grants section.",
+     "expected_result": "Both pages show the dark plum header bar with white left-aligned title and their primary action buttons are medium violet red pills with white text — the restyle is consistent across both, not applied to only one.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "cross-page consistency",
+       "button style"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the expense report form page.",
+     "expected_result": "Its submit button is medium violet red with white text and pill-shaped corners, the form sits in a white rounded card, and the page background is still light pink.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "button style",
+       "background color"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Open the expense approvals queue and look at a pending report's status badge.",
+     "expected_result": "The Pending pill is still amber on the restyled page — the app-wide badge color convention survived the facelift.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "global convention",
+       "badge color"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the expense approvals queue and look at EXP-001 from Li Wei.",
+     "expected_result": "Its itemized total reads $785 (340 + 360 + 85) and it carries an amber Pending pill.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "computed total",
+       "seed data"
+      ]
+     },
+     "copied_from_turn": 3
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Budget season is coming, so I want a what-if planner in financial management that clones the current budget lines into a scenario column right next to the live numbers: for each line I type a proposed allocation and, as I type, it recalculates that line's projected remaining (proposed minus what's actually been spent) plus a running total at the bottom showing how far the whole scenario sits above or below today's total allocation. If I type a proposed allocation below what a line has already spent, flag that line in red immediately — don't wait for any save. And it has to clone reality: whatever's genuinely been spent so far, including expense reports that got approved along the way. One more thing — there's a pending expense report from Zhang Min in the queue now, EXP-003 'Emergency fleet parts pickup', a single $500 item against Vehicle Fleet; leave it pending for now.",
+   "source_website": "OpenGov ERP",
+   "source_feature": "What-if scenario planning for budgets",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the what-if planner without changing anything.",
+     "expected_result": "The scenario column starts as a clone of the current budget: total proposed allocation reads $345,000 and the difference versus today's total reads $0 (no blank or NaN on first load).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "first-load state",
+       "computed total"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "In the planner type 100000 as the proposed allocation for Roads & Bridges.",
+     "expected_result": "While typing, Roads & Bridges' projected remaining updates to $16,000 (100,000 minus 84,000 spent) and the bottom total shows the scenario $20,000 below today's total allocation.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "live computation",
+       "delta calculation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the planner type 30000 as the proposed allocation for Roads & Bridges.",
+     "expected_result": "The line flags red immediately as you type, because $30,000 is below the $84,000 already spent — no save or submit needed.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "live validation",
+       "boundary condition"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the expense approvals queue approve EXP-003 from Zhang Min, then open the what-if planner.",
+     "expected_result": "Vehicle Fleet's current spent shows $32,000, and with its proposed allocation still at the cloned $45,000 its projected remaining reads $13,000 — the planner baseline picked up the newly posted expense.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "cross-feature baseline",
+       "computed value"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the review screen for REQ-001 in the vendor portal area.",
+     "expected_result": "Huaqiang Electronics' $10,850 quote (BID-001, submitted June 2) is highlighted as best — it ties Pearl Office Systems on amount but came in four days earlier, so the earliest-submitted tie-break wins even though Pearl sits higher in the quote list.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "tie-breaking",
+       "ranking"
+      ]
+     },
+     "copied_from_turn": 5
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Department heads keep asking how their targets track against their money, so build a KPI dashboard under decision-making: each KPI has a name, a linked budget line, a target and a current value, and earns its status by comparing its progress percent against the linked line's budget utilization — On Track in green when progress is no more than 10 points behind utilization, At Risk in amber when it's more than 10 but no more than 25 points behind, Off Track in red beyond that. Give me headline tallies of how many KPIs sit at each status, and when spending moves — say an expense report gets approved — the statuses here should move with it. Start with five: Potholes repaired, 120 of 200, on Roads & Bridges; Permits digitized, 300 of 500, on IT Equipment; Training sessions held, 18 of 40, on Staff Training; Park inspections, 45 of 60, on Public Parks; Fleet vehicles serviced, 30 of 50, on Vehicle Fleet.",
+   "source_website": "CGI Advantage",
+   "source_feature": "Real-time performance measurement dashboards tied to funding",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the KPI dashboard and read the headline tallies.",
+     "expected_result": "Tallies read 3 On Track, 1 At Risk, 1 Off Track.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "status aggregation",
+       "computed statuses"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the KPI dashboard look at 'Potholes repaired' and 'Park inspections'.",
+     "expected_result": "Potholes repaired (60% progress vs 70.0% utilization, exactly 10 points behind) is On Track in green, and Park inspections (75% vs 100%, exactly 25 points behind) is At Risk in amber — neither slips into the worse status on its boundary.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "boundary condition",
+       "status thresholds"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the KPI dashboard look at 'Training sessions held' and 'Permits digitized'.",
+     "expected_result": "Training sessions held shows On Track in green even at only 45% progress (it's ahead of Staff Training's 44% utilization), while Permits digitized shows Off Track in red (60% vs 97.5%).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "status logic",
+       "color coding"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the expense approvals queue approve EXP-003 from Zhang Min, then open the KPI dashboard.",
+     "expected_result": "'Fleet vehicles serviced' flips from On Track to At Risk in amber (Vehicle Fleet utilization rose to about 71.1%, putting the KPI more than 10 points behind), and the tallies now read 2 On Track, 2 At Risk, 1 Off Track.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "cross-feature update",
+       "status recomputation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the grants section and look at Clean Water Initiative.",
+     "expected_result": "It shows $20,800 spent, $29,200 remaining, and 41% used — 20,800 of 50,000 is 41.6%, which rounds down to 41; a build that rounds to nearest would show 42%.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "computed totals",
+       "seed data"
+      ]
+     },
+     "copied_from_turn": 6
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Last big one: council decision packets. In decision-making, let me build a packet — I give it a title and it auto-compiles a briefing with the total allocated, spent and remaining across all budget lines, how many lines are flagged in that utilization report, the KPI tallies from the dashboard, and every open procurement request big enough for City Council (the $25,000-and-up tier). Then a review screen where I read the compiled brief — including a plain-English sentence it writes itself using those counts — before hitting Submit to Council, which files it with a DEC reference and a Pending badge, and finally a council view where each packet can be approved or sent back — a send-back is a rejection in my book, so file it with the standard red Rejected pill and make the typed-reason rule apply to it. Compile from the live numbers at the moment I build it, never stale copies, and note there's already one waiting on the council side: DEC-001, 'June Infrastructure Addendum', still pending.",
+   "source_website": "OpenGov ERP",
+   "source_feature": "AI-generated report summaries with drill-downs (plain-language briefing, fused with an approval workflow)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Create a packet titled 'Q3 Budget Review' and open its review screen.",
+     "expected_result": "The brief shows total allocated $345,000, spent $274,200, remaining $70,800, 2 flagged budget lines, KPI tallies of 3 On Track / 1 At Risk / 1 Off Track, and exactly one council-tier request: REQ-002 'Gravel resurfacing, Nanshan section' at $28,000 (the $12,000 and $6,400 requests excluded).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "compiled aggregates",
+       "threshold filtering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "From the 'Q3 Budget Review' review screen hit Submit to Council, then open the council view.",
+     "expected_result": "The packet is filed with reference DEC-002 (DEC-001 already exists) and an amber Pending pill, and it appears in the council view alongside DEC-001.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "submission flow",
+       "reference numbering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the council view open DEC-001 'June Infrastructure Addendum' and try to send it back without typing anything, then type the reason 'Need updated figures' and send it back.",
+     "expected_result": "Sending back is blocked until a reason is typed; afterwards DEC-001 shows a red Rejected pill with 'Need updated figures' visible on it.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "rejection reason",
+       "validation"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the expense approvals queue approve EXP-003 from Zhang Min, then create a new packet titled 'Post-Approval Check' and open its review screen.",
+     "expected_result": "The freshly compiled brief shows total spent $274,700 and KPI tallies of 2 On Track / 2 At Risk / 1 Off Track — it picked up the just-approved expense and the flipped fleet KPI, not stale numbers.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "live compilation",
+       "cross-feature aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "In the utilization report find the Office department rollup.",
+     "expected_result": "The Office department (Office Supplies + IT Equipment) shows 90.3% used ($67,700 of $75,000, rounded to one decimal — not 90.2 or 90.27).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "rollup",
+       "rounding"
+      ]
+     },
+     "copied_from_turn": 4
+    }
+   ]
+  }
+ ],
+ "target_app_summary": "The base e-government portal grows into a full municipal resource-planning suite centered on a live budget-lines ledger. Procurement gains a keystroke-live requisition builder with budget validation and approval tiers, plus a supplier-facing vendor portal with quote tie-breaking and awards. Finance gains a travel-and-expense approval workflow that posts approved spending onto the ledger, a grants module with over-spend guards, and a what-if scenario planner that clones live spending. Decision-making gains a utilization/variance report with tie-aware ranking and rounding-sensitive rollups, a KPI dashboard whose statuses are computed against budget-line utilization, and a council decision-packet workflow that compiles the report, the KPI tallies, and council-tier procurement items into a reviewable, approvable brief. The feature graph runs a deep spine (budget lines -> expense posting -> utilization report -> decision packets) with the planner, KPI dashboard, and vendor portal branching off the same spine, and a mid-ladder restyle sweeping every surface.",
+ "dependency_graph": {
+  "nodes": [
+   {
+    "id": "T1",
+    "label": "base app",
+    "archetype": "base"
+   },
+   {
+    "id": "T2",
+    "label": "requisition builder + budget lines",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T3",
+    "label": "expense approval workflow",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T4",
+    "label": "budget utilization report",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T5",
+    "label": "vendor quote portal",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T6",
+    "label": "grant tracking module",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T7",
+    "label": "plum-and-pink restyle",
+    "archetype": "design-restyle"
+   },
+   {
+    "id": "T8",
+    "label": "what-if budget planner",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T9",
+    "label": "KPI status dashboard",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T10",
+    "label": "council decision packets",
+    "archetype": "multi-surface-workflow"
+   }
+  ],
+  "edges": [
+   {
+    "from": "T1",
+    "to": "T2",
+    "what": "builder lives in the base procurement module"
+   },
+   {
+    "from": "T2",
+    "to": "T3",
+    "what": "approved expenses post into budget lines' spent totals"
+   },
+   {
+    "from": "T2",
+    "to": "T4",
+    "what": "rolls up the budget lines ledger"
+   },
+   {
+    "from": "T3",
+    "to": "T4",
+    "what": "utilization moves when expenses are approved"
+   },
+   {
+    "from": "T2",
+    "to": "T5",
+    "what": "builder submissions appear as open solicitations"
+   },
+   {
+    "from": "T1",
+    "to": "T7",
+    "what": "restyles the original module pages"
+   },
+   {
+    "from": "T2",
+    "to": "T7",
+    "what": "restyles budget lines and requisition builder"
+   },
+   {
+    "from": "T3",
+    "to": "T7",
+    "what": "restyles expense form and approvals queue"
+   },
+   {
+    "from": "T4",
+    "to": "T7",
+    "what": "restyles the utilization report"
+   },
+   {
+    "from": "T5",
+    "to": "T7",
+    "what": "restyles the vendor portal"
+   },
+   {
+    "from": "T6",
+    "to": "T7",
+    "what": "restyles the grants section"
+   },
+   {
+    "from": "T2",
+    "to": "T8",
+    "what": "planner clones the budget lines ledger"
+   },
+   {
+    "from": "T3",
+    "to": "T8",
+    "what": "baseline spent includes posted approved expenses"
+   },
+   {
+    "from": "T2",
+    "to": "T9",
+    "what": "KPI status compares progress to line utilization"
+   },
+   {
+    "from": "T3",
+    "to": "T9",
+    "what": "approving an expense can flip a KPI status"
+   },
+   {
+    "from": "T2",
+    "to": "T10",
+    "what": "packet totals allocated/spent/remaining across the budget lines ledger and uses the $25,000 council tier to pick qualifying requests"
+   },
+   {
+    "from": "T3",
+    "to": "T10",
+    "what": "compiled spent totals reflect approved expense reports posted onto the lines"
+   },
+   {
+    "from": "T4",
+    "to": "T10",
+    "what": "packet embeds the utilization report's flagged-line count"
+   },
+   {
+    "from": "T9",
+    "to": "T10",
+    "what": "packet embeds live KPI tallies"
+   },
+   {
+    "from": "T5",
+    "to": "T10",
+    "what": "packet pulls council-tier open procurement requests"
+   }
+  ]
+ },
+ "global_rules": [
+  {
+   "rule": "Every submitted/created record gets a type-prefixed sequential reference: its own letter prefix plus a three-digit counter (REQ-001, EXP-001, BID-001, ...), counting up per type, for every submittable thing in the app now and later.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Every status badge app-wide is a colored pill: amber for Pending, green for Approved, red for Rejected — on every surface, now and for anything added later.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Any rejection anywhere in the app requires the approver to type a reason, and that reason is displayed on the rejected record.",
+   "introduced_in_turn": 3
+  }
+ ],
+ "pinned_seed": {
+  "entity": "6 municipal budget lines",
+  "introduced_in_turn": 2,
+  "records_gist": "Vehicle Fleet 45000/31500, Roads & Bridges 120000/84000, Office Supplies 15000/9200, IT Equipment 60000/58500, Staff Training 25000/11000, Public Parks 80000/80000 (allocated/spent, ledger insertion order)"
+ }
+}

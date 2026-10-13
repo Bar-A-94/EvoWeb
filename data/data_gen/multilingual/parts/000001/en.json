@@ -1,0 +1,874 @@
+{
+ "id": "000001",
+ "instruction": "Please implement a website for generating stock reports to provide stock information and analysis. The website should have the functionality to search and summarize stock information, and generate customized stock reports based on user requirements. Users should be able to input stock codes or names, select report formats and content, and the website will automatically generate the corresponding reports. The reports should include basic stock information, market trends, financial data, and more. Set the background color to white and the component color to navy.",
+ "Category": {
+  "primary_category": "Data Management",
+  "subcategories": [
+   "CRUD Operations",
+   "API Integration",
+   "Data Visualization"
+  ]
+ },
+ "application_type": "Analytics Platforms/Dashboards",
+ "ui_instruct": [
+  {
+   "task": "Verify the stock search functionality by entering a valid stock code.",
+   "expected_result": "The system returns relevant stock information and analysis corresponding to the entered stock code, displaying details such as basic stock information, market trends, and financial data.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Searching"
+    ]
+   }
+  },
+  {
+   "task": "Test the report customization feature by selecting different report formats and content options.",
+   "expected_result": "The system provides options for various report formats and content customization, enabling users to choose according to their preferences.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Generation"
+    ]
+   }
+  },
+  {
+   "task": "Input a stock name instead of a stock code to search for stock information.",
+   "expected_result": "The website successfully recognizes the stock name, retrieving and displaying the relevant stock information and analysis.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Searching"
+    ]
+   }
+  },
+  {
+   "task": "Generate a customized stock report by choosing specific elements to include (e.g., market trends, financial data).",
+   "expected_result": "The generated report correctly includes the selected elements, accurately reflecting the user's specified choices.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Generation",
+     "Filtering"
+    ]
+   }
+  },
+  {
+   "task": "Navigate through the website and test all buttons function correctly by clicking each of them and back to the homepage.",
+   "expected_result": "Each click on a button leads to the appropriate page or action without any errors, ensuring smooth navigation.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations",
+     "Communication",
+     "E-commerce"
+    ]
+   }
+  },
+  {
+   "task": "Evaluate the website's form inputs by submitting incomplete or incorrect stock information.",
+   "expected_result": "The system displays appropriate error messages and guidance on how to correct the input errors, ensuring robust input validation.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations"
+    ]
+   }
+  },
+  {
+   "task": "Verify that the website uses 'white' as the background color and 'navy' as the component color, as specified in the design requirements.",
+   "expected_result": "The website has a background color of 'white' and components (such as buttons, cards, headers, etc.) are styled with the color 'navy', accurately reflecting the design instruction.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "archetype": "derived-state",
+   "instruction": "Before we go further, pin down a demo universe so we're always looking at the same numbers — exactly these eight stocks, I'll add more later: Argent Micro (ARGN, Technology, $84.50, P/E 31.4, market cap $142B, yield 0.0%), Baltic Freight (BLTC, Industrials, $23.75, P/E 9.8, $8B, 4.2%), Comet Energy (CMET, Energy, $61.20, P/E 12.6, $54B, 5.1%), Driftwood Retail (DRFT, Consumer Goods, $9.15, P/E 22.0, $2B, 1.8%), Ember Semiconductor (EMBR, Technology, $147.30, P/E 41.7, $210B, 0.4%), Fjord Pharma (FJRD, Healthcare, $33.60, P/E 12.6, $18B, 2.5%), Greenline Utilities (GRNL, Utilities, $54.80, P/E 15.5, $27B, 3.9%), and Helix Software (HLXS, Technology, $58.90, P/E 27.3, $65B, 1.1%). Then give me a proper screener page: sector checkboxes where a stock passes if it's in any checked sector, typed boxes for maximum P/E and minimum dividend yield that all have to hold together, a live 'X of 8 match' readout that follows every change, and sortable columns where a P/E sort breaks ties alphabetically by ticker. Clicking a result row should drop me straight into generating that stock's report. I also want two built-in presets — 'Dividend Payers' for yield of at least 2.5% and 'Cheap Tech' for Technology under P/E 35 — plus the ability to save my own named presets and re-run them later. House rule from here on out: every percentage anywhere in this app, yields today or any gains and weights we ever add, shows one decimal with the % sign, like 4.2%, never 4.20% or 4%.",
+   "source_website": "Koyfin",
+   "source_feature": "Equity screener with multi-criteria filtering (fused with Simply Wall St's curated investing themes as built-in presets)",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "On the screener, check the Technology and Healthcare sector boxes and type 1.0 into the minimum dividend yield box.",
+     "expected_result": "Only Fjord Pharma and Helix Software remain in the results — Argent Micro and Ember Semiconductor are excluded for low yield — and the match readout says 2 of 8.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Boolean Composition"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "On the screener, clear any active filters, then sort the results by the P/E column in ascending order.",
+     "expected_result": "The first three rows are Baltic Freight (9.8), Comet Energy (12.6), then Fjord Pharma (12.6) — the 12.6 tie is broken alphabetically by ticker, so CMET comes before FJRD.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Tie-breaking"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Click the built-in 'Dividend Payers' preset on the screener.",
+     "expected_result": "Results show exactly Baltic Freight, Comet Energy, Fjord Pharma, and Greenline Utilities — the boundary stock Fjord Pharma at exactly 2.5% is included.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Presets"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Click the Comet Energy row in the screener results.",
+     "expected_result": "You land in report generation with Comet Energy pre-selected, and generating produces the report for Comet Energy.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Navigation",
+       "Generation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 1,
+     "task": "Type CMET into the stock search and generate a report with all content options selected.",
+     "expected_result": "A report for the searched stock appears, including basic stock information, market trends, and financial data sections.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Searching",
+       "Generation"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "That screener is already paying off — now I need somewhere to keep candidates. Add a Watchlist page with two groups, Core and Speculative; start it with Comet Energy and Fjord Pharma in Core and Helix Software in Speculative, and put a note on Fjord Pharma that says 'watch Q3 margins'. I want an add-to-watchlist button with a group picker on every screener result row and on any generated report, and if a stock is already on the list don't create a second row — just tell me it's already saved. On the watchlist itself let me edit notes, move a stock between groups, and remove entries. One more house style going forward: any time a stock appears anywhere in this app, show its ticker in a small navy badge in front of the name, like [FJRD] Fjord Pharma — everywhere, including whatever we build later.",
+   "source_website": "Simply Wall St",
+   "source_feature": "Smart alerts and watchlist notifications (the watchlist half, extended with groups and notes)",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Open the Watchlist page on a fresh load.",
+     "expected_result": "The Core group shows Comet Energy and Fjord Pharma, Speculative shows Helix Software, and Fjord Pharma displays the note 'watch Q3 margins'.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Seeded Data",
+       "Grouping"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "From the screener results, click the add-to-watchlist control on the Comet Energy row and choose the Core group, then open the Watchlist page.",
+     "expected_result": "No duplicate is created — the watchlist still has exactly three entries with a single Comet Energy row, and the app indicates it was already saved.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Deduplication",
+       "Validation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Watchlist, move Helix Software from Speculative to Core.",
+     "expected_result": "Helix Software now appears under Core alongside the other two stocks and no longer appears under Speculative.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Management",
+       "Grouping"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the screener, click add-to-watchlist on the Greenline Utilities row, choose Speculative, then open the Watchlist page.",
+     "expected_result": "Greenline Utilities appears under the Speculative group on the watchlist.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-page Workflow"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "On the screener, clear any active filters, then sort the results by the P/E column in ascending order.",
+     "expected_result": "The first three rows are Baltic Freight (9.8), Comet Energy (12.6), then Fjord Pharma (12.6) — the 12.6 tie is broken alphabetically by ticker, so CMET comes before FJRD.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Tie-breaking"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Let's make the watchlist talk money: add a Positions view where every watchlisted stock gets a shares box and a buy-price box, and everything recalculates as I type — market value at the stock's price, gain or loss in dollars and percent, each position's weight of the whole portfolio, and a totals row. Load my real positions to start: 50 CMET bought at $48.00, 100 FJRD at $36.50, and 45 HLXS at $52.25. Weights are one decimal but they must always total exactly 100.0% — when plain rounding leaves you at 99.9 or 100.1, adjust the weight that was closest to rounding the other way. A blank or zero shares box just drops that row out of the totals with no NaN or error anywhere, and negative numbers get rejected. Also a default for the whole app from here on: any list of stocks where I haven't picked a sort shows alphabetically by ticker.",
+   "source_website": "Simply Wall St",
+   "source_feature": "Smart alerts and watchlist notifications (watchlist extended into live portfolio position tracking)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Positions view on a fresh load and read the weight column.",
+     "expected_result": "Fjord Pharma's weight reads 37.1% (not 37.0%), so the three weights 33.7%, 37.1%, and 29.2% total exactly 100.0%, and total market value shows $9,070.50.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Calculations",
+       "Rounding"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the Positions view, change Comet Energy's shares from 50 to 60.",
+     "expected_result": "After entering 60, CMET's market value updates to $3,672.00 without any save button, the totals row recalculates immediately, and the three weights still add up to exactly 100.0%.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Calculation",
+       "Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Clear Helix Software's shares box so it is empty.",
+     "expected_result": "The HLXS row drops out of the totals — total market value becomes $6,420.00 for the two remaining positions, no NaN or error appears, and the two remaining weights still total exactly 100.0%.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Boundary Handling",
+       "Validation"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Add Baltic Freight to the watchlist from the screener, then open the Positions view and type 10 into Baltic Freight's shares box and 20.00 into its buy price box.",
+     "expected_result": "Baltic Freight appears as a position row and shows market value $237.50 with a gain of +18.8%.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-page Workflow",
+       "Live Calculation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "From the screener results, click the add-to-watchlist control on the Comet Energy row and choose the Core group, then open the Watchlist page.",
+     "expected_result": "No duplicate is created — the watchlist still has exactly three entries with a single Comet Energy row, and the app indicates it was already saved.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Deduplication",
+       "Validation"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Time for the health snapshot I keep sketching on paper. Build a Ratings page that scores all eight stocks 0-5 on five dimensions and stacks them up. Value comes straight off P/E — under 10 is a 5, from 10 up to but not including 15 is a 4, 15 up to 25 is a 3, 25 up to 35 is a 2, and 35 or more is a 1; Dividend comes off yield — exactly zero is 0, under 1% is 1, from 1 up to 2% is 2, 2 up to 3% is 3, 3 up to 4.5% is 4, and 4.5% or better is 5. For Growth, Profitability, and Financial Health use my analyst numbers, in that order: Argent 5/3/4, Baltic 2/4/5, Comet 1/4/3, Driftwood 3/2/2, Ember 5/5/4, Fjord 4/3/4, Greenline 1/3/5, Helix 4/5/3. Show each stock's five scores as a pentagon or radar snapshot with the total out of 25 and a letter grade — 20 or more is A, 16 to 19 is B, 12 to 15 is C, 8 to 11 is D, under 8 is E — and rank the page best total first, breaking ties alphabetically by ticker. While you're at it, add a Health Score option to report generation so a generated report can include that stock's pentagon and grade.",
+   "source_website": "Simply Wall St",
+   "source_feature": "Snowflake visual health score",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Ratings page and read the ranking from the top.",
+     "expected_result": "Baltic Freight ranks first with a total of 20 and grade A (20 lands on the A boundary, not B), and the three stocks tied at 16 appear in the order Ember Semiconductor, Greenline Utilities, Helix Software.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ranking",
+       "Tie-breaking",
+       "Boundary Handling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Ratings page, find Greenline Utilities and read its Value and Dividend scores.",
+     "expected_result": "Greenline's Value score is 3 (P/E 15.5 falls in the 15-to-25 bucket, not the bucket below) and its Dividend score is 4 (yield 3.9%).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Calculations",
+       "Bucketing"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Check Comet Energy's entry on the Ratings page.",
+     "expected_result": "Comet Energy shows Dividend 5 (yield 5.1% clears the 4.5% bucket), Value 4, a total of 17 with grade B, and all five dimensions visible on its pentagon or radar snapshot.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Calculations",
+       "Visualization"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Generate a report for Baltic Freight with the Health Score section included.",
+     "expected_result": "The generated report contains a Health Score section showing Baltic Freight's grade A and total of 20 alongside the other selected report content.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Generation",
+       "Cross-feature Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "On the screener, check the Technology and Healthcare sector boxes and type 1.0 into the minimum dividend yield box.",
+     "expected_result": "Only Fjord Pharma and Helix Software remain in the results — Argent Micro and Ember Semiconductor are excluded for low yield — and the match readout says 2 of 8.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Boolean Composition"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Now alerts, so the watchlist watches itself. Any stock on my watchlist can carry alert rules — pick the stock, a metric (price, P/E, or dividend yield), above or below, and a typed threshold — creatable straight from a watchlist row or inside a new Alerts Center, where the stock picker only offers what's on the watchlist. A rule evaluates against the stock's current numbers the moment it's created and again whenever I edit it, and above/below are strict: a value exactly equal to the threshold has NOT triggered. Start me with three rules: CMET price below $65 (that one's live, price is 61.20), FJRD yield above 3%, and HLXS P/E below 25. The Alerts Center shows every rule with a status rollup of how many are triggered versus watching, and a triggered rule can be dismissed into a separate history section with the rollup staying honest the whole time.",
+   "source_website": "Simply Wall St",
+   "source_feature": "Smart alerts and watchlist notifications (the alerts half, evaluated against seeded metrics)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Alerts Center on a fresh load.",
+     "expected_result": "The CMET price-below-$65 rule shows triggered, the FJRD and HLXS rules show watching, and the rollup reads 1 triggered and 2 watching.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Rule Evaluation",
+       "Aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the Alerts Center, dismiss the triggered Comet Energy rule.",
+     "expected_result": "The rule moves out of the active list into the history section, and the triggered count in the rollup decreases by one while the history section now shows it.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Management",
+       "Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the Alerts Center, edit the Fjord Pharma yield rule's threshold from 3 to 2.5.",
+     "expected_result": "The rule still shows watching — Fjord's yield is exactly 2.5%, and 'above' is strict, so an exactly-equal value does not trigger.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Boundary Handling",
+       "Rule Evaluation"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the Watchlist page, use the set-alert control on the Helix Software row to create a rule for price above 50.",
+     "expected_result": "The new rule appears in the Alerts Center attached to Helix Software and immediately shows triggered, since 58.90 is strictly above 50.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-page Workflow",
+       "Rule Evaluation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 4,
+     "task": "Open the Positions view on a fresh load and read the weight column.",
+     "expected_result": "Fjord Pharma's weight reads 37.1% (not 37.0%), so the three weights 33.7%, 37.1%, and 29.2% total exactly 100.0%, and total market value shows $9,070.50.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Calculations",
+       "Rounding"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Add an Earnings Call Highlights hub. Give every one of the eight stocks two short canned quotes from their latest earnings calls, but place the words deliberately: 'automation' appears in exactly four quotes — both of Ember Semiconductor's, one of Argent Micro's, one of Helix Software's — 'tariffs' appears only in Baltic Freight's quotes, and no quote anywhere mentions 'crypto'. Then give me a search box that matches live as I type without caring about capitalization, grouping hits by stock with the matched word highlighted, a match count per stock and a grand total, ordered most matches first with ties going alphabetical by ticker. An empty box should just invite me to search, and a term with zero hits gets a clear no-results note, never a blank screen. While you're in there, let report generation include an Earnings Highlights section carrying that stock's quotes.",
+   "source_website": "Koyfin",
+   "source_feature": "Transcript keyword search",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Type automation into the earnings highlights search box.",
+     "expected_result": "Three stocks appear in the order Ember Semiconductor (2 matches), Argent Micro (1 match), Helix Software (1 match) — most matches first, the 1-1 tie alphabetical by ticker — with a grand total of 4 and every occurrence of 'automation' highlighted.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Searching",
+       "Sorting",
+       "Tie-breaking"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type crypto into the earnings highlights search box.",
+     "expected_result": "A clear no-results message appears — no crash and no blank results area — and any total shown reads zero.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Empty State",
+       "Searching"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type TARIFFS in capital letters into the earnings highlights search box.",
+     "expected_result": "Baltic Freight's matching quote appears despite the different capitalization, and Baltic Freight is the only stock listed.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Searching",
+       "Case Insensitivity"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Type automation into the search box and look at how each result stock is labeled.",
+     "expected_result": "Each result group shows the ticker in a small navy badge in front of the company name — [EMBR] Ember Semiconductor, [ARGN] Argent Micro, [HLXS] Helix Software.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Global Convention",
+       "Labeling"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 5,
+     "task": "Open the Ratings page and read the ranking from the top.",
+     "expected_result": "Baltic Freight ranks first with a total of 20 and grade A (20 lands on the A boundary, not B), and the three stocks tied at 16 appear in the order Ember Semiconductor, Greenline Utilities, Helix Software.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ranking",
+       "Tie-breaking",
+       "Boundary Handling"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "I keep flipping between reports to weigh stocks against each other — build me a Compare tool instead. Let me pick two to four stocks and get side-by-side columns with rows for price, market cap, P/E, dividend yield, and the overall health total from the ratings work, recomputing instantly every time I add or drop a stock. Best in row gets highlighted — lowest P/E wins, highest yield wins, highest health total wins — and a genuine tie highlights every stock that shares it. Top it with a win tally per stock counting how many rows it won, with ties counting for everyone in them; if only one stock or none is selected, show a friendly prompt to pick more rather than an empty or broken grid.",
+   "source_website": "Simply Wall St",
+   "source_feature": "Snowflake visual health score (fused with Koyfin's screener metrics into a side-by-side comparison grid)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "In the Compare tool, select Comet Energy and Fjord Pharma.",
+     "expected_result": "The P/E row highlights both columns (each is 12.6), dividend yield highlights Comet Energy (5.1% vs 2.5%), health score highlights Fjord Pharma (18 vs 17), and the win tally reads 2 for Comet Energy and 2 for Fjord Pharma.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Tie-breaking",
+       "Calculations"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "With Comet Energy and Fjord Pharma selected, add Baltic Freight as a third stock.",
+     "expected_result": "Highlights recompute instantly: Baltic Freight now solely wins P/E (9.8, so the 12.6 pair loses its highlight) and health (20), Comet Energy keeps yield, and the tally reads Baltic 2, Comet 1, Fjord 0.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Recalculation",
+       "Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Remove selected stocks until only one remains.",
+     "expected_result": "Instead of a one-column grid or an error, a friendly prompt appears asking to pick at least two stocks to compare.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Boundary Handling",
+       "Empty State"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Select Comet Energy and Fjord Pharma and look at the dividend yield row.",
+     "expected_result": "Yields display with exactly one decimal and a % sign — 5.1% and 2.5% — never 5.10% or 5%.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Global Convention",
+       "Formatting"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 6,
+     "task": "In the Alerts Center, edit the Fjord Pharma yield rule's threshold from 3 to 2.5.",
+     "expected_result": "The rule still shows watching — Fjord's yield is exactly 2.5%, and 'above' is strict, so an exactly-equal value does not trigger.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Boundary Handling",
+       "Rule Evaluation"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "design-restyle",
+   "instruction": "Facelift time, Koyfin style. Put a light/dark toggle in the header of every page: dark mode swaps to deep navy (#0B1B33) backgrounds with light text, and the choice has to stick as I move between pages. In both themes the primary action buttons — generate report, run or apply a screen, add to watchlist, save an alert — go amber (#F0A92D) with dark navy text; page titles and section headings go uppercase with wide letter-spacing; and every card or panel gets 12px rounded corners with a thin visible border. Keep the ticker badges readable in dark mode too — give them a lighter fill or an outline so they don't vanish into the background. This applies across the whole app — the report page, the screener, the watchlist, the ratings page, the alerts center, all of it, no half-done pages.",
+   "source_website": "Koyfin",
+   "source_feature": "Customizable workspace themes and layout (light/dark theming)",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Click the theme toggle on the screener page, then navigate to the Watchlist page and then the Alerts Center.",
+     "expected_result": "All three pages render with the deep navy background and light text — the dark theme persists across navigation with no page left on the light background.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Theming",
+       "Cross-page Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In light mode, look at the primary generate button on the report page and the apply/run control on the screener.",
+     "expected_result": "Both are amber with dark navy text and match each other, and nearby page titles or section headings render uppercase with wide letter-spacing.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Color Scheme",
+       "Typography"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Switch to dark mode and open the Ratings page.",
+     "expected_result": "The page is dark-themed and still ranks Baltic Freight first with grade A and a total of 20 — the restyle did not break the ratings order.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Theming",
+       "Data Integrity"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In dark mode, open the Watchlist page and check the Fjord Pharma entry.",
+     "expected_result": "The watchlist cards show 12px rounded corners with a visible border on the dark background, the FJRD ticker badge is still legible, and the note 'watch Q3 margins' still displays.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Theming",
+       "Component Styling"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 7,
+     "task": "Type automation into the earnings highlights search box.",
+     "expected_result": "Three stocks appear in the order Ember Semiconductor (2 matches), Argent Micro (1 match), Helix Software (1 match) — most matches first, the 1-1 tie alphabetical by ticker — with a grand total of 4 and every occurrence of 'automation' highlighted.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Searching",
+       "Sorting",
+       "Tie-breaking"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Bring it all home with a Command Center as the landing view — one glance, four tiles. A Portfolio tile with total market value and overall gain from my positions, an Alerts tile showing how many rules are currently triggered out of the total, a Top Rated tile naming the stock with the best overall health score and its grade, and a Watchlist tile with the count per group. Every tile is a shortcut to its page, and the numbers can never go stale — if I dismiss an alert or change a share count and come back, the tiles have to reflect it. And on a clean first load it should already be populated from everything we've seeded, not zeros or placeholders.",
+   "source_website": "Koyfin",
+   "source_feature": "Customizable workspace themes and layout (the dashboard-panel workspace, reshaped into a live rollup command center)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Command Center on a fresh load.",
+     "expected_result": "The Portfolio tile reads $9,070.50 with overall gain +8.0%, the Alerts tile reads 1 triggered of 3, Top Rated names Baltic Freight with grade A, and the Watchlist tile shows Core 2 and Speculative 1.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "First Load"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Click the Portfolio tile on the Command Center.",
+     "expected_result": "You land on the Positions view with the three seeded positions visible.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Navigation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the Positions view, change Comet Energy's shares from 50 to 60, then return to the Command Center.",
+     "expected_result": "The Portfolio tile's total now reads $9,682.50 — the tile recomputed instead of showing the stale $9,070.50.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Consistency",
+       "Live Recalculation"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the Alerts Center, dismiss the triggered Comet Energy rule, then return to the Command Center.",
+     "expected_result": "The Alerts tile now shows 0 triggered, consistent with the Alerts Center rollup after the dismissal.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Consistency",
+       "Aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 8,
+     "task": "In the Compare tool, select Comet Energy and Fjord Pharma.",
+     "expected_result": "The P/E row highlights both columns (each is 12.6), dividend yield highlights Comet Energy (5.1% vs 2.5%), health score highlights Fjord Pharma (18 vs 17), and the win tally reads 2 for Comet Energy and 2 for Fjord Pharma.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Tie-breaking",
+       "Calculations"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "target_app_summary": "What began as a simple stock-report generator has grown into a full retail-research workstation over a fixed eight-stock demo universe. A multi-criteria screener with built-in and saved presets feeds a grouped watchlist, which in turn powers a live portfolio positions calculator and a strict-threshold alerts workflow; a five-dimension health-score ratings engine flows into generated reports, a side-by-side compare grid, and the landing Command Center that rolls up portfolio value, alert status, top rating, and watchlist counts. Orthogonal growth includes an earnings-call transcript keyword search wired into report sections and a full light/dark theming pass across every surface. The feature graph runs one chain four deep (base app, then screener, then watchlist, then positions, then command center), with the ratings and alerts branches reconverging at the dashboard and the restyle touching five earlier surfaces.",
+ "dependency_graph": {
+  "nodes": [
+   {
+    "id": "T1",
+    "label": "base app",
+    "archetype": "base"
+   },
+   {
+    "id": "T2",
+    "label": "multi-criteria stock screener",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T3",
+    "label": "grouped watchlist",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T4",
+    "label": "portfolio positions calculator",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T5",
+    "label": "health score ratings",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T6",
+    "label": "alerts center",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T7",
+    "label": "earnings transcript search",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T8",
+    "label": "side-by-side compare tool",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T9",
+    "label": "theming restyle",
+    "archetype": "design-restyle"
+   },
+   {
+    "id": "T10",
+    "label": "command center dashboard",
+    "archetype": "derived-state"
+   }
+  ],
+  "edges": [
+   {
+    "from": "T1",
+    "to": "T2",
+    "what": "report generation launched from screener result rows"
+   },
+   {
+    "from": "T2",
+    "to": "T3",
+    "what": "add-to-watchlist buttons on screener result rows"
+   },
+   {
+    "from": "T1",
+    "to": "T3",
+    "what": "add-to-watchlist button on generated report pages"
+   },
+   {
+    "from": "T3",
+    "to": "T4",
+    "what": "position rows attach to watchlist entries"
+   },
+   {
+    "from": "T1",
+    "to": "T5",
+    "what": "health score section embedded in generated reports"
+   },
+   {
+    "from": "T3",
+    "to": "T6",
+    "what": "alert rules attach only to watchlist stocks"
+   },
+   {
+    "from": "T1",
+    "to": "T7",
+    "what": "earnings highlights section in generated reports"
+   },
+   {
+    "from": "T5",
+    "to": "T8",
+    "what": "health score totals compared and highlighted in the grid"
+   },
+   {
+    "from": "T1",
+    "to": "T9",
+    "what": "report page restyled"
+   },
+   {
+    "from": "T2",
+    "to": "T9",
+    "what": "screener page restyled"
+   },
+   {
+    "from": "T3",
+    "to": "T9",
+    "what": "watchlist page restyled"
+   },
+   {
+    "from": "T5",
+    "to": "T9",
+    "what": "ratings page restyled"
+   },
+   {
+    "from": "T6",
+    "to": "T9",
+    "what": "alerts center restyled"
+   },
+   {
+    "from": "T4",
+    "to": "T10",
+    "what": "portfolio tile totals value and gain from positions"
+   },
+   {
+    "from": "T6",
+    "to": "T10",
+    "what": "alerts tile counts currently triggered rules"
+   },
+   {
+    "from": "T5",
+    "to": "T10",
+    "what": "top-rated tile names best health score and grade"
+   },
+   {
+    "from": "T3",
+    "to": "T10",
+    "what": "watchlist tile shows per-group counts"
+   }
+  ]
+ },
+ "global_rules": [
+  {
+   "rule": "Every percentage anywhere in the app (yields, gains, weights, and anything added later) is shown with exactly one decimal place and a % sign, like 4.2% — never 4.20% or 4%.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Wherever a stock appears anywhere in the app, its ticker is shown in a small navy badge in front of the company name, like [FJRD] Fjord Pharma.",
+   "introduced_in_turn": 3
+  },
+  {
+   "rule": "Any list of stocks where the user has not chosen a sort defaults to alphabetical order by ticker, app-wide.",
+   "introduced_in_turn": 4
+  }
+ ],
+ "pinned_seed": {
+  "entity": "8 fictional stocks (ticker, sector, price, P/E, market cap, dividend yield)",
+  "introduced_in_turn": 2,
+  "records_gist": "ARGN Tech $84.50 PE31.4 $142B 0.0%; BLTC Industrials $23.75 PE9.8 $8B 4.2%; CMET Energy $61.20 PE12.6 $54B 5.1%; DRFT Consumer $9.15 PE22.0 $2B 1.8%; EMBR Tech $147.30 PE41.7 $210B 0.4%; FJRD Healthcare $33.60 PE12.6 $18B 2.5%; GRNL Utilities $54.80 PE15.5 $27B 3.9%; HLXS Tech $58.90 PE27.3 $65B 1.1% — deliberate P/E tie CMET/FJRD at 12.6 and boundary yields/buckets"
+ }
+}

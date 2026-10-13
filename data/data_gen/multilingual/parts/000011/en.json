@@ -1,0 +1,925 @@
+{
+ "id": "000011",
+ "instruction": "Please implement a text-based strategy browser game where players can choose a race, manage resources, upgrade, and battle. The game should have multiple pages, including the base page, ranking page, store, train page, workers page, upgrades page, bank page, messages page, and reports page. Players can choose from four races: Humans, Dragonborns, Elves, and Dwarfs, each with unique attributes. Players can manage resources, including gold, iron, wood, and wheat, and can upgrade their city, workers, and soldiers. Design the site using seashell as the background and crimson for content blocks.",
+ "Category": {
+  "primary_category": "User Interaction",
+  "subcategories": [
+   "Form Systems",
+   "Real-time Features",
+   "AI Integration"
+  ]
+ },
+ "application_type": "Browser-Based Games",
+ "ui_instruct": [
+  {
+   "task": "Navigate to the \"Choose Race\" page and select each race (Humans, Dragonborns, Elves, Dwarfs) one by one and back to the homepage after selecting for another select.",
+   "expected_result": "Each click on a race should display specific attributes unique to that race, and the selection should be confirmed on the page.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations",
+     "Navigation"
+    ]
+   }
+  },
+  {
+   "task": "On the base page, attempt to allocate resources (gold, iron, wood, wheat) to upgrade the city.",
+   "expected_result": "The resources should be deducted from the total, and an upgrade confirmation message should appear with visible changes to the city level or attributes.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "E-commerce",
+     "Form Operations",
+     "Generation"
+    ]
+   }
+  },
+  {
+   "task": "Visit the \"Ranking Page\" and verify the rank listing of players.",
+   "expected_result": "The page should display a sorted list of players by rank, with accurate and clear presentation relevant to their performance metrics.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering",
+     "Data Visualization"
+    ]
+   }
+  },
+  {
+   "task": "Go to the \"Store\" and purchase an item using available resources.",
+   "expected_result": "The selected item should be removed from the store and added to your inventory, with the appropriate deduction in resources.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "E-commerce"
+    ]
+   }
+  },
+  {
+   "task": "Access the \"Train Page\" and begin training workers or soldiers.",
+   "expected_result": "Training should commence with a status update visible, and there should be an indication of resource consumption related to this activity.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "E-commerce",
+     "Form Operations",
+     "Communication"
+    ]
+   }
+  },
+  {
+   "task": "Navigate to the \"Workers Page\" and assign a task to workers.",
+   "expected_result": "The task should be acknowledged by the system with relevant feedback on expected completion, and any resource costs should be visibly deducted.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations",
+     "E-commerce"
+    ]
+   }
+  },
+  {
+   "task": "Visit the \"Upgrades Page\" and attempt to upgrade a soldier.",
+   "expected_result": "The upgrade should succeed, show updated soldier stats, and the necessary resources should be spent.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "E-commerce",
+     "Form Operations"
+    ]
+   }
+  },
+  {
+   "task": "Access the \"Bank Page\" and deposit gold.",
+   "expected_result": "The deposited gold should reflect in the bank balance, deducting from available on-hand funds with confirmation of the transaction.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "E-commerce"
+    ]
+   }
+  },
+  {
+   "task": "Verify that the website uses 'seashell' as the background color and 'crimson' as the component color, as specified in the design requirements.",
+   "expected_result": "The website has a background color of 'seashell' and components (such as buttons, cards, headers, etc.) are styled with the color 'crimson', accurately reflecting the design instruction.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "archetype": "interactive-tool",
+   "instruction": "The bank page is dead weight right now — put a proper merchant exchange in it. Set my stockpile to exactly 2,500 gold, 1,800 iron, 1,200 wood and 900 wheat, and let me trade iron, wood or wheat into gold at 3 iron, 4 wood or 5 wheat per gold piece, with the merchant skimming 10% — take his cut before rounding and always round down to whole gold, so 100 iron should come out to 30 gold, not 29. The gold preview has to update live while I'm typing the amount, and it should refuse negatives, junk input, or any amount over what I actually hold. And a house rule for this whole game, now and for anything we add later: any action that spends or converts my resources shows me the exact numbers first and waits for my confirm.",
+   "source_website": "OGame",
+   "source_feature": "Merchant / Resource Trading via Bank",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Go to the bank page, choose the iron-to-gold exchange, and type 100 into the amount field.",
+     "expected_result": "The live preview shows exactly 30 gold to be received (the 10% merchant cut is applied before rounding down), not 29 or 33.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Real-time Updates"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the bank page's merchant exchange, type 2000 into the iron-to-gold amount field.",
+     "expected_result": "The exchange refuses the amount because only 1,800 iron is held: an error indication appears and no gold conversion is offered.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Boundary Conditions"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the wood-to-gold exchange, type 30 into the amount field, then add a 0 to make it 300.",
+     "expected_result": "The preview updates while typing without any submit action: it reads 6 gold at 30 wood, then 67 gold at 300 wood (cut applied before rounding down each time).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Real-time Updates",
+       "Calculation Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Convert 100 iron to gold on the bank page and complete the action.",
+     "expected_result": "Before anything changes, a confirmation showing the exact numbers (100 iron for 30 gold) appears and requires approval; after confirming, the stockpile reads 2,530 gold and 1,700 iron.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Confirmation Dialogs",
+       "State Management"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 1,
+     "task": "Go to the race selection and choose Dwarfs.",
+     "expected_result": "Dwarfs is shown as the selected race and its unique attributes are displayed.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Management"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Turn the reports page into a proper war chronicle, loaded with exactly these six battles and nothing else — I'll log more later: Day 2, beat the Ashen Elves, 12 soldiers lost, plundered 380 gold and 220 iron; Day 4, beat the Grimfang Horde, 18 lost, 265 gold and 340 iron; Day 5, beat the Stonebeard Clan, 9 lost, 410 gold and 95 iron; Day 7, beat the Silverpine Sentinels, 21 lost, 505 gold and 130 iron; Day 7 again, lost to the Duskwing Riders, 33 dead, no plunder; Day 9, lost to the Ironhold Clan, 40 dead, nothing. List them newest day first, and when two battles share a day, alphabetical by opponent. Up top I want a summary: all-time win rate and a 'recent form' rate covering only the three most recent battle days — days, mind you, not battles, so every fight on those days counts (whole percents, so 4 of 6 reads 67%), total gold and iron plundered, total soldiers lost, plus what my whole iron haul would fetch from that merchant you built — same 3-iron-per-gold rate, same cut-then-round-down math. Two more house rules for everywhere in this game going forward: battle outcomes always show as a green Victory or red Defeat badge, and anything time-related gets stamped as a game day like 'Day 9', never a real calendar date.",
+   "source_website": "OGame",
+   "source_feature": "Combat Reports with Debris Fields",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the reports page and read the chronicle's summary figures.",
+     "expected_result": "All-time win rate reads 67% while recent form reads 50% (the three most recent battle days are Day 5, 7 and 9, which take in four battles — two wins, two defeats — not the 33% a last-three-battles reading would give); total plunder reads 1,560 gold and 785 iron, and total soldiers lost reads 133.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation Accuracy",
+       "Calculation Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open the reports page and read the order of the six battle entries from top to bottom.",
+     "expected_result": "Ironhold Clan (Day 9) first, then the two Day 7 battles with Duskwing Riders before Silverpine Sentinels (alphabetical tiebreak, not the order they were fought in), then Stonebeard Clan (Day 5), Grimfang Horde (Day 4), and Ashen Elves (Day 2) last.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting Order",
+       "Tiebreak Handling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Scroll through the six battle entries on the reports page.",
+     "expected_result": "Each entry carries an outcome badge — green Victory on the four wins, red Defeat on Duskwing Riders and Ironhold Clan — and each is stamped in game-day form like 'Day 7', with no calendar dates anywhere.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Status Indicators",
+       "Formatting Conventions"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Note the iron-haul gold value shown in the chronicle summary, then go to the bank's merchant exchange and type 785 into the iron-to-gold amount field.",
+     "expected_result": "Both places show the same figure: 235 gold (785/3 with the 10% cut taken before rounding down — not 234).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Consistency",
+       "Calculation Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "Go to the bank page, choose the iron-to-gold exchange, and type 100 into the amount field.",
+     "expected_result": "The live preview shows exactly 30 gold to be received (the 10% merchant cut is applied before rounding down), not 29 or 33.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Real-time Updates"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Those battlefields we won are still covered in wreckage, so let me send salvage crews out. Any victory in the chronicle gets a salvage option — defeats get nothing, the enemy holds those fields — that walks me through it: I type how many workers to send (5 minimum, each one costs 15 wheat), a review step lays out the full haul and the wheat bill, and once I approve it the goods land in my stockpile. A battlefield's haul is 20% of that battle's gold plunder rounded down, plus 5 iron for every soldier I lost there. Once a field's been picked clean, mark it salvaged and don't let me run it twice.",
+   "source_website": "OGame",
+   "source_feature": "Combat Reports with Debris Fields",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "From the reports page, start a salvage on the Silverpine Sentinels victory and type 10 into the workers field to reach the review step.",
+     "expected_result": "The review lays out a haul of 101 gold and 105 iron (20% of 505 rounded down; 5 iron times 21 lost) against a cost of 150 wheat.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Workflow Steps"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the reports page and look at the Duskwing Riders defeat entry.",
+     "expected_result": "No salvage option is offered on the Duskwing Riders entry (defeats leave no lootable field), while victory entries do show one.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Conditional Availability",
+       "Business Rules"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Start a salvage on the Ashen Elves victory and type 4 into the workers field.",
+     "expected_result": "The expedition is refused with an indication that at least 5 workers are required; it cannot proceed to the review step with 4.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Boundary Conditions"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Salvage the Stonebeard Clan battlefield with 5 workers, approve it, then check the stockpile and the Stonebeard entry.",
+     "expected_result": "The stockpile reads 2,582 gold, 1,845 iron and 825 wheat (plus 82 gold and 45 iron, minus 75 wheat), and the Stonebeard entry is marked salvaged with no way to run it again.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Management",
+       "Cross-feature Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "Open the reports page and read the chronicle's summary figures.",
+     "expected_result": "All-time win rate reads 67% while recent form reads 50% (the three most recent battle days are Day 5, 7 and 9, which take in four battles — two wins, two defeats — not the 33% a last-three-battles reading would give); total plunder reads 1,560 gold and 785 iron, and total soldiers lost reads 133.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation Accuracy",
+       "Calculation Accuracy"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "I want a Hall of Plaques page for bragging rights — three plaques, each climbing Wood, Bronze, Silver and Gold tiers. Plunderer is total gold plundered in battle, with tiers at 500 / 1,000 / 1,600 / 2,500 — and that's battle plunder only, salvage hauls are scavenging and don't count toward it. Warlord is victories won at 1 / 3 / 5 / 8, and Veteran is total soldiers lost at 50 / 100 / 200 / 400. For each plaque show the tier I currently hold and how much more I need to reach the next one.",
+   "source_website": "Tribal Wars",
+   "source_feature": "Daily Awards / Achievement Plaques",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Hall of Plaques page and look at the Plunderer plaque.",
+     "expected_result": "Plunderer shows the Bronze tier with progress 1,560 gold toward the 1,600 needed for Silver (40 more needed) — salvage gold is not counted.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation Accuracy",
+       "Tier Calculation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Hall of Plaques page, look at the Warlord plaque.",
+     "expected_result": "Warlord shows Bronze from 4 victories, with 1 more victory needed for the Silver tier at 5.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Tier Calculation",
+       "Progress Display"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Hall of Plaques page, look at the Veteran plaque.",
+     "expected_result": "Veteran shows Bronze from 133 soldiers lost, with 67 more needed for the Silver tier at 200.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Tier Calculation",
+       "Progress Display"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "From the reports page, salvage the Silverpine Sentinels battlefield with 5 workers and approve it, then open the Hall of Plaques and check the Plunderer plaque.",
+     "expected_result": "Plunderer still shows Bronze at 1,560 toward 1,600 — the 101 salvaged gold did not move the plaque.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Consistency",
+       "Business Rules"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "On the bank page's merchant exchange, type 2000 into the iron-to-gold amount field.",
+     "expected_result": "The exchange refuses the amount because only 1,800 iron is held: an error indication appears and no gold conversion is offered.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Boundary Conditions"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Build me a battle simulator page that replays the whole fight live with every keystroke — no submit button, the projection just regenerates as I type. I enter my attacker count, the defender count, and a luck percent anywhere from -25 to 25 (anything outside that range or not a number gets refused with a message). Morale is defenders divided by attackers times 100, rounded and clamped between 30 and 100, worked out once from the counts I typed — and show it in the projection. The fight then plays out in rounds until one side is wiped out: each round the defenders lose a quarter of my current effective strength rounded up — that's my remaining attackers times morale-over-100 times (1 + luck/100) — while I lose a quarter of their current count with its flat 10% defense bonus, rounded up. Both hits land in the same round, and if both sides reach zero together the defenders hold the field. Show me the whole round-by-round casualty log with the counts left standing, ending in the outcome, rounds fought and survivors. Zero defenders is just an instant walkover win before any morale math runs — don't let the division blow up. And give it a rematch picker listing the opponents from my chronicle; choosing one pre-fills the defender count at double the soldiers I lost to them — call it our scouts' garrison estimate.",
+   "source_website": "Tribal Wars",
+   "source_feature": "Morale and Luck Combat Modifiers",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "On the battle simulator, type 100 into the attacker field and 80 into the defender field, then type 2 into the luck field and add a 0 to make it 20.",
+     "expected_result": "The round-by-round log regenerates while typing with no submit action: with the counts in place, morale shows 80 and round one shows my side losing 22 to their bonus-boosted defense of 88; at luck 2 round one shows 21 defender casualties, which becomes 24 the moment the field reads 20.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Real-time Updates",
+       "Calculation Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "On the battle simulator, pick Ironhold Clan from the rematch picker, type 200 into the attacker field and 0 into the luck field.",
+     "expected_result": "The defender field pre-fills with 80 (double the 40 soldiers lost to them, not 40 itself), morale shows 40, and round one of the log shows the outnumbered defenders trading up: 20 defender casualties (a quarter of 200 times morale 0.40) against 22 attacker casualties (a quarter of their bonus-boosted 88).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Prefill Behavior"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the battle simulator, type 150 into the attacker field and 0 into the defender field.",
+     "expected_result": "The projection shows an instant walkover Victory with no rounds fought — no crash, blank screen, error, or NaN from the zero-defender morale division.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Boundary Conditions",
+       "Error Handling"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Open the rematch picker on the battle simulator and choose Silverpine Sentinels.",
+     "expected_result": "The picker lists exactly the six chronicle opponents, and choosing Silverpine Sentinels pre-fills the defender count with 42 (double the 21 soldiers lost to them).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Consistency",
+       "Prefill Behavior"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 4,
+     "task": "Open the reports page and look at the Duskwing Riders defeat entry.",
+     "expected_result": "No salvage option is offered on the Duskwing Riders entry (defeats leave no lootable field), while victory entries do show one.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Conditional Availability",
+       "Business Rules"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Time for some politics. Seed two alliances — the Crimson Pact, tag CP, with Lady Maren, Thorgrim and Vex, and the Iron Oath, tag IO, with Bramble, Karzok, Ossian, Petra and Ulf — and make sure all eight of those rivals appear on the ranking page with their alliance tag by their name. From the messages page I want to send a join request; the letter should brag a little by pulling my victory count and total gold plundered straight from the chronicle, the alliance's acceptance reply lands back in my messages stamped with the game day it arrived, and then I'm on their roster with the member count updated. One alliance at a time only — if I go to join the other while I'm sworn to one, warn me that I'd be leaving and make me confirm it. Oh, and my empire is called Ravenspire — use that anywhere my name shows up.",
+   "source_website": "Tribal Wars",
+   "source_feature": "Tribe Diplomacy and Private Forums",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "From the messages page, send a join request to the Iron Oath and open the letter that was sent.",
+     "expected_result": "The letter quotes 4 victories and 1,560 gold plundered from the chronicle — not 6 battles and not any other totals.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Cross-feature Consistency",
+       "Aggregation Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "From the messages page, send a join request to the Crimson Pact and wait for the reply.",
+     "expected_result": "An acceptance reply appears in the messages list, and the Crimson Pact roster now lists Ravenspire with the member count reading 4.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow Completion",
+       "State Management"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Join the Crimson Pact, then send a join request to the Iron Oath and confirm the warning that appears.",
+     "expected_result": "A warning about leaving the Crimson Pact requires explicit confirmation before switching; after confirming, Ravenspire appears only on the Iron Oath roster and the Crimson Pact is back to 3 members.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Confirmation Dialogs",
+       "Business Rules"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Join the Crimson Pact and open the acceptance letter in the messages page.",
+     "expected_result": "The acceptance letter is stamped in game-day form like 'Day 9' — no real calendar date anywhere on it.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Formatting Conventions"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "Open the reports page and read the order of the six battle entries from top to bottom.",
+     "expected_result": "Ironhold Clan (Day 9) first, then the two Day 7 battles with Duskwing Riders before Silverpine Sentinels (alphabetical tiebreak, not the order they were fought in), then Stonebeard Clan (Day 5), Grimfang Horde (Day 4), and Ashen Elves (Day 2) last.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting Order",
+       "Tiebreak Handling"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "design-restyle",
+   "instruction": "This whole thing still looks like a prototype, so give it a royal war-room polish — applied identically on the base page, the bank's merchant exchange, the chronicle, the Hall of Plaques and the battle simulator, no page left behind. Specifically: every primary action button goes dark goldenrod with white text; page headings get centered and set in small caps; the crimson content blocks get 12px rounded corners with even padding; the Victory and Defeat badges become rounded pills with white text; and every stat number — resource amounts, percentages, hauls — switches to a monospace, tabular-figure style.",
+   "source_website": "Tribal Wars",
+   "source_feature": "Multiple World Rule Sets",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Open the bank page's merchant exchange, then the battle simulator page, and look at the primary action buttons on each.",
+     "expected_result": "On both pages the primary action buttons are dark goldenrod with white text — the same treatment, not just one page updated.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Color Scheme",
+       "Cross-page Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the reports page and look at the outcome badges and the page heading.",
+     "expected_result": "Victory and Defeat badges render as rounded pills with white text (still green for Victory, red for Defeat), and the page heading is centered and set in small caps.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Component Styling",
+       "Typography"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open the Hall of Plaques page and look at the Plunderer plaque's progress numbers.",
+     "expected_result": "The progress reads 1,560 toward 1,600, and the digits are rendered in the monospace, tabular-figure stat style.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Typography",
+       "Data Display"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Visit the base page, the reports page and the battle simulator, looking at the content blocks on each.",
+     "expected_result": "On all three pages the crimson content blocks have 12px rounded corners with even padding — none of the pages still shows the old sharp-cornered blocks.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Cross-page Consistency",
+       "Layout"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 5,
+     "task": "Open the Hall of Plaques page and look at the Plunderer plaque.",
+     "expected_result": "Plunderer shows the Bronze tier with progress 1,560 gold toward the 1,600 needed for Silver (40 more needed) — salvage gold is not counted.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation Accuracy",
+       "Tier Calculation"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Empire time: add a Territories page where I can found up to three outposts — a Watchtower for 800 gold and 300 wood worth 150 power, a Deep Mine for 600 gold and 400 iron worth 120 power, and a Grain Estate for 500 gold and 200 wheat worth 110 power — and block a fourth. My power score is 900, plus 25 for each victory in the chronicle, plus whatever my outposts add, and it should place Ravenspire live on the ranking page. Give the rivals fixed power scores — Karzok 1,420, Lady Maren 1,300, Thorgrim 1,150, Vex 1,150, Petra 980, Bramble 940, Ossian 890, Ulf 720 — sort the board highest power first, and break any tie alphabetically by name.",
+   "source_website": "OGame",
+   "source_feature": "Multi-Planet / Colony Expansion",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the ranking page before founding anything and find Ravenspire.",
+     "expected_result": "Ravenspire sits 5th with power 1,000 (900 plus 25 for each of the 4 victories — not 1,050 from counting all six battles), below Karzok, Lady Maren, Thorgrim and Vex, with the Thorgrim/Vex 1,150 tie ordered alphabetically.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ranking Accuracy",
+       "Calculation Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "On the Territories page, found a Watchtower and confirm it, then open the ranking page.",
+     "expected_result": "Ravenspire's power reads 1,150 and it now sits 3rd — in the three-way 1,150 tie the alphabetical order runs Ravenspire, Thorgrim, Vex.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ranking Accuracy",
+       "Tiebreak Handling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Territories page, found a Deep Mine and complete the action, then check the stockpile.",
+     "expected_result": "A confirmation states the exact cost of 600 gold and 400 iron before anything is spent; after approving, the stockpile reads 1,900 gold and 1,400 iron.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Confirmation Dialogs",
+       "State Management"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Found a Watchtower on the Territories page, confirm it, and look at the rows around Ravenspire on the ranking page.",
+     "expected_result": "Ravenspire has moved up to 3rd, directly above Thorgrim and Vex, and both of those rivals still display their CP alliance tag after the re-sort.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Consistency",
+       "Ranking Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 6,
+     "task": "On the battle simulator, pick Ironhold Clan from the rematch picker, type 200 into the attacker field and 0 into the luck field.",
+     "expected_result": "The defender field pre-fills with 80 (double the 40 soldiers lost to them, not 40 itself), morale shows 40, and round one of the log shows the outnumbered defenders trading up: 20 defender casualties (a quarter of 200 times morale 0.40) against 22 attacker casualties (a quarter of their bonus-boosted 88).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Prefill Behavior"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Last big one — a Herald's Proclamation so I can show off. Give me a compose page with four sections I can toggle on and off: Battle Record (wins, defeats and win rate from the chronicle), Plaques (each plaque's current tier), Power & Rank (my power score and ranking position), and Alliance (my alliance tag, or 'Unsworn' if I haven't joined one). A live preview of the proclamation sits right there as copyable on-screen text and updates the instant I flip any toggle, and every number in it has to be whatever the app genuinely says at that moment, not hardcoded. Publishing with nothing selected gets refused with a message; a published proclamation gets posted to my messages page stamped with the current game day.",
+   "source_website": "Tribal Wars",
+   "source_feature": "Daily Awards / Achievement Plaques",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "On the proclamation compose page, switch all four sections on, then switch the Alliance section off.",
+     "expected_result": "With all four on the preview shows content for all four sections; the moment Alliance is switched off its lines disappear from the preview while the other three remain.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Real-time Updates",
+       "State Management"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "On the proclamation compose page, switch on the Battle Record section and read the preview.",
+     "expected_result": "The preview states 4 victories, 2 defeats and a 67% win rate — the chronicle's real totals, not 6 wins or the 50% recent-form figure.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Cross-feature Consistency",
+       "Aggregation Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the proclamation compose page, switch every section off and try to publish.",
+     "expected_result": "Publishing is refused with a message about having nothing selected, and no proclamation gets posted to the messages page.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Error Handling"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Switch on the Plaques and the Power & Rank sections and read the preview.",
+     "expected_result": "The preview shows Plunderer, Warlord and Veteran all at Bronze and a power of 1,000 with a 5th-place ranking — matching what the Hall of Plaques and the ranking page show on a fresh start.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Cross-feature Consistency",
+       "Data Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 7,
+     "task": "From the messages page, send a join request to the Crimson Pact and wait for the reply.",
+     "expected_result": "An acceptance reply appears in the messages list, and the Crimson Pact roster now lists Ravenspire with the member count reading 4.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow Completion",
+       "State Management"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "target_app_summary": "The text-based strategy game has grown from a resource-and-battle skeleton into a full empire sim. The bank became a live merchant exchange with cut-before-round conversion math; the reports page became a seeded war chronicle whose six pinned battles feed almost everything downstream: salvage expeditions harvest debris from its victories, a Hall of Plaques tiers its aggregates, a round-by-round battle simulator pre-fills rematches from its opponents, alliance join letters quote its record, and a power score counts its victories. On top sit alliance diplomacy with tagged rivals on the ranking, a Territories module whose outposts re-sort the ranking live with alphabetical tiebreaks, a royal war-room restyle unifying five pages, and a Herald's Proclamation composer that publishes a live-valued summary of the chronicle, plaques, power/rank and alliance state to the messages page. The feature graph is hub-shaped around the chronicle (T3) with two chains three deep (T1-T3-T5-T10 and T1-T3-T9-T10).",
+ "dependency_graph": {
+  "nodes": [
+   {
+    "id": "T1",
+    "label": "base app",
+    "archetype": "base"
+   },
+   {
+    "id": "T2",
+    "label": "merchant exchange",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T3",
+    "label": "war chronicle",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T4",
+    "label": "salvage expeditions",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T5",
+    "label": "Hall of Plaques",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T6",
+    "label": "battle simulator",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T7",
+    "label": "alliance diplomacy",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T8",
+    "label": "war-room restyle",
+    "archetype": "design-restyle"
+   },
+   {
+    "id": "T9",
+    "label": "territories & power ranking",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T10",
+    "label": "Herald's Proclamation",
+    "archetype": "multi-surface-workflow"
+   }
+  ],
+  "edges": [
+   {
+    "from": "T1",
+    "to": "T2",
+    "what": "bank page and resource stockpile"
+   },
+   {
+    "from": "T1",
+    "to": "T3",
+    "what": "reports page"
+   },
+   {
+    "from": "T2",
+    "to": "T3",
+    "what": "merchant rate math values the iron haul"
+   },
+   {
+    "from": "T2",
+    "to": "T4",
+    "what": "salvage wheat costs and haul credits hit the stockpile seeded at the bank"
+   },
+   {
+    "from": "T3",
+    "to": "T4",
+    "what": "chronicle victories define salvageable fields"
+   },
+   {
+    "from": "T3",
+    "to": "T5",
+    "what": "plaque tiers aggregate chronicle stats"
+   },
+   {
+    "from": "T4",
+    "to": "T5",
+    "what": "salvage hauls are explicitly excluded from the Plunderer plaque's plunder total"
+   },
+   {
+    "from": "T3",
+    "to": "T6",
+    "what": "rematch picker lists chronicle opponents"
+   },
+   {
+    "from": "T1",
+    "to": "T7",
+    "what": "messages and ranking pages"
+   },
+   {
+    "from": "T3",
+    "to": "T7",
+    "what": "join letter quotes chronicle record"
+   },
+   {
+    "from": "T1",
+    "to": "T8",
+    "what": "restyles base page blocks and headings"
+   },
+   {
+    "from": "T2",
+    "to": "T8",
+    "what": "restyles merchant exchange buttons"
+   },
+   {
+    "from": "T3",
+    "to": "T8",
+    "what": "restyles chronicle outcome badges"
+   },
+   {
+    "from": "T5",
+    "to": "T8",
+    "what": "restyles plaque stat numerals"
+   },
+   {
+    "from": "T6",
+    "to": "T8",
+    "what": "restyles simulator buttons and blocks"
+   },
+   {
+    "from": "T1",
+    "to": "T9",
+    "what": "ranking page"
+   },
+   {
+    "from": "T2",
+    "to": "T9",
+    "what": "outpost costs debit the stockpile seeded at the bank"
+   },
+   {
+    "from": "T3",
+    "to": "T9",
+    "what": "power score counts chronicle victories"
+   },
+   {
+    "from": "T7",
+    "to": "T9",
+    "what": "re-ranks among alliance-tagged rivals"
+   },
+   {
+    "from": "T3",
+    "to": "T10",
+    "what": "battle record section values"
+   },
+   {
+    "from": "T5",
+    "to": "T10",
+    "what": "plaques section tiers"
+   },
+   {
+    "from": "T7",
+    "to": "T10",
+    "what": "alliance tag section"
+   },
+   {
+    "from": "T9",
+    "to": "T10",
+    "what": "power and rank section"
+   }
+  ]
+ },
+ "global_rules": [
+  {
+   "rule": "Any action that spends or converts resources shows the exact numbers involved and requires an explicit confirm before it applies, everywhere in the app.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Battle outcomes are always shown as a green Victory badge or a red Defeat badge, on every surface where an outcome appears.",
+   "introduced_in_turn": 3
+  },
+  {
+   "rule": "Anything time-related is stamped in game-day form like 'Day 9' — never a real calendar date — everywhere in the app.",
+   "introduced_in_turn": 3
+  }
+ ],
+ "pinned_seed": {
+  "entity": "six battle reports in the war chronicle",
+  "introduced_in_turn": 3,
+  "records_gist": "D2 W Ashen Elves -12 +380g/220i; D4 W Grimfang Horde -18 +265g/340i; D5 W Stonebeard Clan -9 +410g/95i; D7 W Silverpine Sentinels -21 +505g/130i; D7 L Duskwing Riders -33; D9 L Ironhold Clan -40 (totals 1,560g / 785i / 133 lost; 4W-2L all-time 67%; recent form covers battle days 5/7/9 = four battles 2W-2L = 50%, vs 33% from a naive last-three-battles read)"
+ }
+}

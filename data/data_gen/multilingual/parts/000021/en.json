@@ -1,0 +1,844 @@
+{
+ "id": "000021",
+ "instruction": "Please implement a website for The All-In Bourbon Bar to showcase its products and services. The website should have functionalities for displaying menus, introducing the membership-only private poker room, and showcasing events and promotions. Users should be able to browse the website, view menus, learn about the private poker room, view events and promotions, and make online reservations or purchases. Use peach puff for container backgrounds and indian red for component visuals.",
+ "Category": {
+  "primary_category": "Content Presentation",
+  "subcategories": [
+   "Static Page Generation",
+   "Dynamic Content Rendering",
+   "Media Display"
+  ]
+ },
+ "application_type": "Company Brochure Sites",
+ "ui_instruct": [
+  {
+   "task": "Navigate to the menu page using the main navigation bar.",
+   "expected_result": "The menu page should load successfully, displaying an up-to-date list of The All-In Bourbon Bar's available food and drink items, complete with descriptions and prices.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering"
+    ]
+   }
+  },
+  {
+   "task": "Access the private poker room information page from the main menu.",
+   "expected_result": "The page should provide a detailed introduction to the membership-only private poker room, including membership benefits and how to join.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering",
+     "Details Information"
+    ]
+   }
+  },
+  {
+   "task": "Click on the events and promotions section from the homepage.",
+   "expected_result": "The events and promotions page should display current and upcoming events and any available promotions, with detailed descriptions, dates, and relevant offers.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering",
+     "Details Information"
+    ]
+   }
+  },
+  {
+   "task": "Attempt to make a reservation through the website's reservation form.",
+   "expected_result": "The reservation form should accept input data, process it without error, and provide a confirmation message indicating the reservation was successful.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations",
+     "E-commerce"
+    ]
+   }
+  },
+  {
+   "task": "Verify that the website uses 'peach puff' as the background color and 'indian red' as the component color, as specified in the design requirements.",
+   "expected_result": "The website has a background color of 'peach puff' and components (such as buttons, cards, headers, etc.) are styled with the color 'indian red', accurately reflecting the design instruction.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "archetype": "derived-state",
+   "instruction": "The menu's fine for cocktails and food, but our bourbon wall deserves its own page — build a Bourbon Library where people can screen the whole collection: style checkboxes (bourbon, rye, wheated — ticking two styles shows bottles of either), plus typed boxes for minimum proof and maximum pour price that stack on top of the style picks, and sorting by price or by age (price ties go alphabetical, and the no-age-statement bottle sorts after every aged one). Start it with exactly these eight, I'll grow it later: Amber Creek Small Batch (bourbon, 92 proof, 6 yr, $12/pour), Copper Stakes Single Barrel (bourbon, 110 proof, 9 yr, $18, members-only allocation), Riverboat Reserve (bourbon, 100 proof, 12 yr, $22), High Card Rye (rye, 96 proof, 4 yr, $12), Dead Man's Hand Barrel Proof (bourbon, 128.4 proof, 8 yr, $26, members-only), Velvet Ace Wheated (wheated, 90 proof, 5 yr, $14), Old Bluff Bottled-in-Bond (bourbon, 100 proof, 6 yr, $16), and Full House Toasted (bourbon, 104 proof, no age statement, $20). Two house styles I want everywhere in this app from now on, on anything we ever add: a whiskey's strength always reads both ways, like '92 proof (46% ABV)', and anything members-only wears a small gold 'Members Only' tag. If a filter combination matches nothing, say so nicely instead of showing a broken page, and put a link to the library on the menu page so folks actually find it.",
+   "source_website": "https://mwlpdx.com/",
+   "source_feature": "Downloadable / Tabbed Digital Menus (extended into a multi-criteria bourbon screener)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "In the Bourbon Library, check only the Bourbon style box, type 100 into the minimum proof box, and type 20 into the maximum pour price box.",
+     "expected_result": "Exactly three pours remain — Copper Stakes Single Barrel, Old Bluff Bottled-in-Bond, and Full House Toasted (proof-100 Old Bluff and $20 Full House sit right on the boundaries and are included); High Card Rye (a rye) and Riverboat Reserve ($22) do not appear.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Search & Filtering",
+       "Boolean Composition"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the Bourbon Library with no filters set, apply the sort by pour price from low to high.",
+     "expected_result": "Amber Creek Small Batch ($12) is listed before High Card Rye ($12) — the $12 tie breaks alphabetically — and Dead Man's Hand Barrel Proof ($26) is last.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Tie-breaking"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the Bourbon Library, type 200 into the minimum proof box, then clear it.",
+     "expected_result": "With 200 entered, a friendly no-results state appears (no crash, no leftover rows); clearing the box brings all 8 pours back.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Empty State",
+       "Search & Filtering"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Open the menu page and click the Bourbon Library link there.",
+     "expected_result": "The Bourbon Library page opens showing all 8 seeded pours, each displaying strength in the combined format like '92 proof (46% ABV)'.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Navigation",
+       "Data Display Testing"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 1,
+     "task": "Fill in and submit the online reservation form with a name and party details.",
+     "expected_result": "The form accepts the input and shows a confirmation message that the reservation was received.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Operations"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Poker's picking up, so let's put a real tournament calendar inside the events & promotions area. Five to start, always listed soonest first: Summer Showdown Main Event on Aug 14, $200 buy-in, members only, 60 seats — I'm already registered for that one, so it should sit in my registrations from the start; Midnight Bourbon Bounty on Aug 21, $150, open to all, 40 seats; High Card Heads-Up on Sep 5, $300, members only, 16 seats with only 1 seat left; Rookie Night Freeroll on Sep 12, free, open to all, 80 seats; and the Autumn All-In Classic on Sep 26, $500, members only, 100 seats. Registering should be a proper flow, not one button: a details page, a form that actually checks the email looks valid before letting you on, a review step showing the buy-in, and then it lands in a My Registrations list while the tournament's open-seat count drops. One more thing, and this goes for every confirmation this site ever hands out from now on — bookings, purchases, whatever we add later: it ends with a code starting 'AIB-'.",
+   "source_website": "https://championsclubtexas.com/",
+   "source_feature": "Tournament / Event Calendar with Registration",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the tournament calendar in the events & promotions area.",
+     "expected_result": "Five tournaments are listed soonest-first — Summer Showdown Main Event (Aug 14), Midnight Bourbon Bounty (Aug 21), High Card Heads-Up (Sep 5), Rookie Night Freeroll (Sep 12), Autumn All-In Classic (Sep 26) — and High Card Heads-Up shows exactly 1 seat left.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ordering",
+       "Details Information"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Register for Midnight Bourbon Bounty: open it, enter name Ray and email ray@example.com, continue to the review step, and confirm.",
+     "expected_result": "The review step shows the $150 buy-in before confirming; afterwards Midnight Bourbon Bounty appears in My Registrations and its open-seat count drops from 40 to 39.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Multi-step Workflow",
+       "State Updates"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Start registering for Rookie Night Freeroll and enter name Ray with email 'ray@' before trying to continue.",
+     "expected_result": "The invalid email is rejected with a clear message and the flow does not advance to the review step.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Look at the calendar entries for Summer Showdown Main Event and Rookie Night Freeroll.",
+     "expected_result": "Summer Showdown (members only) wears the small gold 'Members Only' tag; Rookie Night Freeroll (open to all) has no such tag.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Badge Convention",
+       "Global Rule Compliance"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "In the Bourbon Library, check only the Bourbon style box, type 100 into the minimum proof box, and type 20 into the maximum pour price box.",
+     "expected_result": "Exactly three pours remain — Copper Stakes Single Barrel, Old Bluff Bottled-in-Bond, and Full House Toasted (proof-100 Old Bluff and $20 Full House sit right on the boundaries and are included); High Card Rye (a rye) and Riverboat Reserve ($22) do not appear.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Search & Filtering",
+       "Boolean Composition"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Let's give people a Build-a-Flight tool: pick 3 to 5 pours straight out of that bourbon library, and while I'm picking it should keep a running pour count, price total, and average proof to one decimal — updating the moment a pour is tapped, with the members-only bottles still wearing their tag and showing the same pour prices as the library. Flights of four or five pours earn 10% off the total, any pour at 120 proof or above puts a 'high proof — water back recommended' note on the flight, the same pour can't be added twice, and saving is refused under 3 pours. Saved flights get a name and land in a My Flights list — preload one called Dealer's Choice with Amber Creek, Velvet Ace, Old Bluff, and High Card Rye in it.",
+   "source_website": "https://mwlpdx.com/",
+   "source_feature": "Curated spirit tastings (adapted into an interactive flight builder over the bourbon library)",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "In the flight builder, select Amber Creek Small Batch, then also select Dead Man's Hand Barrel Proof.",
+     "expected_result": "After the first pick the running total reads $12 with average proof 92.0; the moment Dead Man's Hand is added the total updates to $38, the average proof to 110.2, and the high-proof water-back note appears.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Calculation",
+       "State Updates"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "In the flight builder, select Amber Creek Small Batch, Velvet Ace Wheated, and Old Bluff Bottled-in-Bond, then add High Card Rye as a fourth pour.",
+     "expected_result": "At three pours the total reads $42 with no discount; as soon as the fourth pour is added the 10% flight discount kicks in and the total reads $48.60 — not $54.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Calculation",
+       "Boundary Conditions"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Select only Amber Creek Small Batch and Velvet Ace Wheated in the flight builder and try to save the flight under the name Test.",
+     "expected_result": "Saving is blocked with a message that a flight needs at least 3 pours, and nothing new appears in My Flights.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the flight builder's pour picker, find Copper Stakes Single Barrel.",
+     "expected_result": "It shows the same $18 pour price as its Bourbon Library entry and wears the gold 'Members Only' tag.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Cross-feature Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "In the Bourbon Library with no filters set, apply the sort by pour price from low to high.",
+     "expected_result": "Amber Creek Small Batch ($12) is listed before High Card Rye ($12) — the $12 tie breaks alphabetically — and Dead Man's Hand Barrel Proof ($26) is last.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Tie-breaking"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Non-members keep asking about the poker room, so let's do a $40 one-night Guest Pass — but run it like a chip rail, not another checkout. Put up an August night board: Aug 1, 7, 8, 15, 22, 28, and 29 each hold 10 passes, with Aug 8 already down to its very last one, and the tournament nights off the calendar, Aug 14 and Aug 21, show up marked as tournament nights and simply can't be claimed. Claiming a night is a single click — the pass drops straight into a My Passes rail showing its date, the $40 price, and its confirmation code, and the night's remaining count ticks down. House limits: one pass per night per account and never more than three live passes at once, each refusal explained in plain English. And letting a pass go matters just as much: cancelling from My Passes gives the night back, the count ticks back up, and a night that was reading sold out flips back to claimable the moment a pass is released.",
+   "source_website": "https://mwlpdx.com/",
+   "source_feature": "Hall Pass / Guest Day Pass System",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the guest pass night board, look at Aug 8, claim its pass, then cancel that pass from My Passes.",
+     "expected_result": "Aug 8 shows exactly 1 pass remaining before the claim; right after claiming it reads sold out (0 remaining) with no way to claim it again; cancelling the pass from My Passes flips Aug 8 back to 1 remaining and claimable.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Boundary Conditions",
+       "State Updates"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Claim a guest pass for Aug 22 on the night board, then try to claim Aug 22 again.",
+     "expected_result": "The first claim drops Aug 22's remaining count from 10 to 9 and lands a pass in My Passes showing the date, the $40 price, and a code starting 'AIB-'; the second attempt is refused with a message about the one-pass-per-night rule and the count stays at 9.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Duplicate Prevention",
+       "State Updates"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Claim guest passes for three different nights, then try to claim a fourth night.",
+     "expected_result": "The fourth claim is refused with a message about the three-live-pass limit, My Passes still lists exactly three passes, and the fourth night's count does not move.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Limit Enforcement",
+       "Input Validation"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the guest pass night board, look at Aug 14 and Aug 21.",
+     "expected_result": "Both appear marked as tournament nights and cannot be claimed — there is no way to get a guest pass for either date.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Consistency",
+       "Blocked State"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "Open the tournament calendar in the events & promotions area.",
+     "expected_result": "Five tournaments are listed soonest-first — Summer Showdown Main Event (Aug 14), Midnight Bourbon Bounty (Aug 21), High Card Heads-Up (Sep 5), Rookie Night Freeroll (Sep 12), Autumn All-In Classic (Sep 26) — and High Card Heads-Up shows exactly 1 seat left.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ordering",
+       "Details Information"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "I want a gift card studio over on the promotions side, run like our chip rack rather than a cash register: nobody types a dollar figure — you pick one of six set cards, $25, $50, $100, $150, $250, or $500, and the sweetener is printed right on the pick: the $100 and $150 cards carry a $15 bonus and the $250 and $500 cards carry $40, so choosing the $150 card shows $165 of value on the spot while $25 and $50 stay plain. The studio part is a live preview of the finished card: the recipient's name (required) and a personal message redraw on the preview with every keystroke, the message is capped at 120 characters with a countdown of what's left, and once the cap is hit nothing more goes in. Buying hands back a confirmation and files the card into a purchase history — preload one past card in there, $150 for Danny, so $165 of value.",
+   "source_website": "https://mwlpdx.com/",
+   "source_feature": "Gift Certificates via Toast Tab",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "In the gift card studio, pick the $150 card, then switch the pick to the $50 card.",
+     "expected_result": "With $150 picked the preview shows $165 of total value — the printed $15 bonus included; the moment the pick changes to $50 the preview shows exactly $50, with no bonus.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Feedback",
+       "Computed Values"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the gift card studio, type Lena as the recipient and 'Happy birthday' as the message.",
+     "expected_result": "The card preview updates with each keystroke — the name and message appear on the preview while still being typed, not only after leaving the field — and the character countdown reads 106 left once the 14-character message is in.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Feedback",
+       "State Updates"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the gift card message box, keep typing until the text would pass 120 characters.",
+     "expected_result": "Input stops at exactly 120 characters — the countdown reads 0, and nothing beyond the 120th character shows up in the box or on the card preview.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Boundary Conditions"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Buy a $25 gift card for recipient Lena.",
+     "expected_result": "The purchase completes with a confirmation code starting 'AIB-', and the $25 card appears in the purchase history with no bonus attached.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Global Rule Compliance",
+       "Form Operations"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 4,
+     "task": "In the flight builder, select Amber Creek Small Batch, Velvet Ace Wheated, and Old Bluff Bottled-in-Bond, then add High Card Rye as a fourth pour.",
+     "expected_result": "At three pours the total reads $42 with no discount; as soon as the fourth pour is added the 10% flight discount kicks in and the total reads $48.60 — not $54.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Calculation",
+       "Boundary Conditions"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Time for a Player's Ledger page — one running points balance built from everything I do around here: 2 points per dollar of a saved flight's final discounted price (rounded to the nearest point), a flat 50 points per tournament registration, and 1 point per dollar actually paid on a gift card — bonus value earns nothing. Tiers go Ante under 200, High Roller from 200 through 499, and All-In at 500 and up, with a line spelling out how many points to the next tier. Break the balance down item by item; with what's already on my account — the Dealer's Choice flight, my Summer Showdown seat, and that $150 card for Danny — it should be sitting at 297, and it has to move the moment I register, save a flight, or buy another card.",
+   "source_website": "https://championsclubtexas.com/",
+   "source_feature": "Private-membership club program (reshaped into a loyalty points ledger over site activity)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Player's Ledger page.",
+     "expected_result": "The total reads exactly 297 points and the tier shows High Roller — 97 from the Dealer's Choice flight (2 per dollar of the discounted $48.60), 50 from the Summer Showdown seat, 150 from the $150 gift card (bonus value earns nothing).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Computed Values"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Look at the ledger's item-by-item breakdown.",
+     "expected_result": "The Dealer's Choice line shows 97 points — figured on the discounted $48.60, not the $54 pre-discount price — and the gift card line shows 150 points, on the amount paid rather than the $165 bonus value.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Values",
+       "Rounding"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Check the next-tier line on the Player's Ledger.",
+     "expected_result": "It says 203 more points are needed to reach All-In, the 500-point tier.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Values"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the gift card studio, purchase a $25 card for recipient Lena, then return to the Player's Ledger.",
+     "expected_result": "The total has moved from 297 to 322 points and the tier still reads High Roller.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Consistency",
+       "State Updates"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 5,
+     "task": "Claim a guest pass for Aug 22 on the night board, then try to claim Aug 22 again.",
+     "expected_result": "The first claim drops Aug 22's remaining count from 10 to 9 and lands a pass in My Passes showing the date, the $40 price, and a code starting 'AIB-'; the second attempt is refused with a message about the one-pass-per-night rule and the count stays at 9.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Duplicate Prevention",
+       "State Updates"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "design-restyle",
+   "instruction": "The site's gotten shaggy, so give it a 'card table' polish pass — and I mean the whole spread: home, the menu, the Bourbon Library, the tournament calendar, and the flight builder, no page left half-done. Primary action buttons go pill-shaped in indian red with white text; every page's main heading gets centered; cards and panels get 12px rounded corners with a saddle-brown border; every price anywhere on the site renders bold in dark green; and the nav bar goes dark charcoal with the current page's link picked out in gold. Keep the peach puff backgrounds — that part still works.",
+   "source_website": "https://mwlpdx.com/",
+   "source_feature": "Branded club visual identity (cohesive lounge aesthetic applied site-wide)",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Visit the menu page, the tournament calendar, and the flight builder and look at each page's primary action buttons.",
+     "expected_result": "On all three pages the primary buttons are pill-shaped, indian red, with white text — none left in an older style.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Cross-page Consistency",
+       "Component Styling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the home page and then the Bourbon Library, looking at the nav bar on each.",
+     "expected_result": "The nav bar is dark charcoal on both pages, and the link for whichever page is currently open renders in gold.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Navigation Styling",
+       "Active State"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "In the Bourbon Library, find Dead Man's Hand Barrel Proof and look at its price.",
+     "expected_result": "Its $26 pour price renders bold in dark green, the same price styling the menu page's prices now use.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Typography",
+       "Cross-page Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Open the Bourbon Library and then the flight builder and compare their headings and cards.",
+     "expected_result": "Both pages show centered main headings and cards with 12px rounded corners and a saddle-brown border — the restyle reached both features consistently.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Cross-page Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 6,
+     "task": "In the gift card studio, pick the $150 card, then switch the pick to the $50 card.",
+     "expected_result": "With $150 picked the preview shows $165 of total value — the printed $15 bonus included; the moment the pick changes to $50 the preview shows exactly $50, with no bonus.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Feedback",
+       "Computed Values"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Members want to log their tastings — add a Tasting Journal where every bourbon in the library can collect 1-to-5-star ratings, and a Top Shelf leaderboard ranked by average rating shown to one decimal. A bottle needs at least 2 ratings to make the board, average ties break by whichever has more ratings, and if that's tied too the cheaper pour wins. Seed the journal like so: Riverboat Reserve with 5, 4, 5, 4; Dead Man's Hand with 5, 4; Velvet Ace with 4, 4, 4; Amber Creek with 3, 4; Old Bluff with a single 5 — the rest simply haven't been rated yet and should say so without anything falling over. Also surface each bottle's average right on its library card.",
+   "source_website": "https://mwlpdx.com/",
+   "source_feature": "Monthly Newsletter / Library Journal (reshaped into an on-site tasting journal with a rated leaderboard)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Top Shelf leaderboard.",
+     "expected_result": "It reads, in order: Riverboat Reserve 4.5, Dead Man's Hand Barrel Proof 4.5, Velvet Ace Wheated 4.0, Amber Creek Small Batch 3.5 — Riverboat outranks Dead Man's Hand on rating count (4 vs 2), and Old Bluff, with only one 5-star rating, is not on the board at all.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ranking",
+       "Tie-breaking"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the Tasting Journal, add a 4-star rating to Old Bluff Bottled-in-Bond, then check the leaderboard.",
+     "expected_result": "Old Bluff (now averaging 4.5 from 2 ratings) joins the board in second place — behind Riverboat Reserve (4 ratings) but ahead of Dead Man's Hand, which also sits at 4.5 from 2 ratings yet pours at $26 to Old Bluff's $16.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Ranking",
+       "Tie-breaking",
+       "State Updates"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the Tasting Journal, look for High Card Rye, Copper Stakes Single Barrel, and Full House Toasted.",
+     "expected_result": "All three show a not-yet-rated state (no average, no crash or blank section), and none of them appears on the Top Shelf leaderboard.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Empty State"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Open the Bourbon Library and find the Riverboat Reserve entry.",
+     "expected_result": "Its library card now shows the 4.5 average rating alongside its usual details.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Cross-feature Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 7,
+     "task": "Open the Player's Ledger page.",
+     "expected_result": "The total reads exactly 297 points and the tier shows High Roller — 97 from the Dealer's Choice flight (2 per dollar of the discounted $48.60), 50 from the Summer Showdown seat, 150 from the $150 gift card (bonus value earns nothing).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Computed Values"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Big one to finish: a Night Out Planner. Step one, pick the evening's anchor — either one of the tournaments off the calendar or one of the regular guest-pass nights; step two, attach one of my saved flights; step three, optionally tack on a $40 guest pass for a plus-one — except on tournament nights, where that has to be blocked with a note, house rule. The review step itemizes it all — buy-in, the flight at its discounted price, the pass — with a grand total plus a preview of the ledger points the night will earn under the same rules the ledger already uses, and confirming saves the whole plan to a My Night page. Sanity check for you: Midnight Bourbon Bounty with my Dealer's Choice flight should review at $198.60 and 147 points.",
+   "source_website": "https://championsclubtexas.com/",
+   "source_feature": "Plan visits around major events (poker, bar, and lodging under one roof — fused into an evening itinerary builder)",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "In the Night Out Planner, pick Midnight Bourbon Bounty as the anchor, attach the Dealer's Choice flight, continue to review, and confirm.",
+     "expected_result": "The review itemizes the $150 buy-in and the flight at its discounted $48.60; after confirming, the plan appears on the My Night page.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Multi-step Workflow"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "In the Night Out Planner, select Midnight Bourbon Bounty as the anchor and attach Dealer's Choice, then read the review totals.",
+     "expected_result": "The grand total reads $198.60 and the ledger points preview reads 147 — 97 for the flight plus 50 for the tournament.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Values",
+       "Aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the planner, switch the anchor to the Aug 29 guest night, keep Dealer's Choice attached, and add the plus-one guest pass.",
+     "expected_result": "The totals recompute on the spot: grand total $88.60 ($48.60 flight plus $40 pass, no buy-in) and a points preview of 97, since no tournament is involved.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Calculation",
+       "State Updates"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "With Midnight Bourbon Bounty selected as the planner's anchor, try to add the plus-one guest pass.",
+     "expected_result": "The pass option is blocked or disabled with a note that guest passes aren't available on tournament nights.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Consistency",
+       "Blocked State"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 4,
+     "task": "In the flight builder, select Amber Creek Small Batch, then also select Dead Man's Hand Barrel Proof.",
+     "expected_result": "After the first pick the running total reads $12 with average proof 92.0; the moment Dead Man's Hand is added the total updates to $38, the average proof to 110.2, and the high-proof water-back note appears.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Calculation",
+       "State Updates"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "target_app_summary": "The All-In Bourbon Bar's brochure site has grown into a full club platform. Discovery grew a multi-criteria Bourbon Library screener that feeds an interactive Build-a-Flight tool and a rated Tasting Journal with a Top Shelf leaderboard. The poker side grew a tournament calendar with a real registration workflow, a one-click Guest Pass night board with claim caps and cancellations that reopen sold-out nights, all respecting tournament blackout nights, and a capstone Night Out Planner that assembles tournaments, saved flights, and plus-one passes into one costed, points-previewed itinerary. Commerce and loyalty grew a denomination-pick gift card studio with printed bonus tiers and a per-keystroke card preview and a Player's Ledger that rolls flights, registrations, and card purchases into a tiered points balance, and a site-wide 'card table' restyle unified the look. The graph's spine is T1->T2->T4->T7->T10, with the ledger (T7) fanning in from three earlier features and the planner (T10) fanning in from four.",
+ "dependency_graph": {
+  "nodes": [
+   {
+    "id": "T1",
+    "label": "base app",
+    "archetype": "base"
+   },
+   {
+    "id": "T2",
+    "label": "Bourbon Library screener",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T3",
+    "label": "Tournament calendar & registration",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T4",
+    "label": "Build-a-Flight tool",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T5",
+    "label": "Guest Pass night board",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T6",
+    "label": "Gift card studio",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T7",
+    "label": "Player's Ledger points",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T8",
+    "label": "Card-table restyle",
+    "archetype": "design-restyle"
+   },
+   {
+    "id": "T9",
+    "label": "Tasting Journal & leaderboard",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T10",
+    "label": "Night Out Planner",
+    "archetype": "multi-surface-workflow"
+   }
+  ],
+  "edges": [
+   {
+    "from": "T1",
+    "to": "T2",
+    "what": "library entry link lives on the base menu page"
+   },
+   {
+    "from": "T1",
+    "to": "T3",
+    "what": "calendar embedded in the base events & promotions area"
+   },
+   {
+    "from": "T2",
+    "to": "T4",
+    "what": "flight pours, prices, proofs, and members-only tags come from the library"
+   },
+   {
+    "from": "T3",
+    "to": "T5",
+    "what": "tournament dates black out guest-pass nights"
+   },
+   {
+    "from": "T1",
+    "to": "T6",
+    "what": "gift card studio lives on the base promotions side"
+   },
+   {
+    "from": "T4",
+    "to": "T7",
+    "what": "points from saved flights' discounted totals"
+   },
+   {
+    "from": "T3",
+    "to": "T7",
+    "what": "50 points per tournament registration"
+   },
+   {
+    "from": "T6",
+    "to": "T7",
+    "what": "points per dollar paid on gift cards"
+   },
+   {
+    "from": "T1",
+    "to": "T8",
+    "what": "restyles home and menu pages"
+   },
+   {
+    "from": "T2",
+    "to": "T8",
+    "what": "restyles the Bourbon Library page"
+   },
+   {
+    "from": "T3",
+    "to": "T8",
+    "what": "restyles the tournament calendar"
+   },
+   {
+    "from": "T4",
+    "to": "T8",
+    "what": "restyles the flight builder"
+   },
+   {
+    "from": "T2",
+    "to": "T9",
+    "what": "ratings attach to library bourbons; averages shown on library cards; price tiebreak"
+   },
+   {
+    "from": "T3",
+    "to": "T10",
+    "what": "tournament anchors and buy-ins"
+   },
+   {
+    "from": "T4",
+    "to": "T10",
+    "what": "attaches saved flights at discounted price"
+   },
+   {
+    "from": "T5",
+    "to": "T10",
+    "what": "guest nights, $40 pass, tournament-night block"
+   },
+   {
+    "from": "T7",
+    "to": "T10",
+    "what": "points preview computed under the ledger's rules"
+   }
+  ]
+ },
+ "global_rules": [
+  {
+   "rule": "Whiskey strength always displays in the dual format 'X proof (Y% ABV)' everywhere in the app.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Anything members-only wears a small gold 'Members Only' tag, on every surface.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Every confirmation the site issues (bookings, purchases, plans) carries a code starting with 'AIB-'.",
+   "introduced_in_turn": 3
+  }
+ ],
+ "pinned_seed": {
+  "entity": "8 bourbon library pours",
+  "introduced_in_turn": 2,
+  "records_gist": "Amber Creek 92pf/6yr/$12; Copper Stakes 110pf/9yr/$18 members; Riverboat 100pf/12yr/$22; High Card Rye 96pf/4yr/$12; Dead Man's Hand 128.4pf/8yr/$26 members; Velvet Ace 90pf/5yr/$14; Old Bluff 100pf/6yr/$16; Full House 104pf/NAS/$20"
+ }
+}

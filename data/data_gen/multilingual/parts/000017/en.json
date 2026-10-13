@@ -1,0 +1,830 @@
+{
+ "id": "000017",
+ "instruction": "Please create a one-page website for promoting Fundraiser Day, including introduction to the event, fundraiser testimonials, offer information, and company information. The website should have functionalities such as an automatically moving carousel for displaying offers, a section for displaying fundraiser testimonials, and a section for displaying company information. Users should be able to browse the website to learn more about the Fundraiser Day event. Establish cornsilk as the main background and peru for the controls.",
+ "Category": {
+  "primary_category": "Content Presentation",
+  "subcategories": [
+   "Static Page Generation",
+   "Data Visualization"
+  ]
+ },
+ "application_type": "Company Brochure Sites",
+ "ui_instruct": [
+  {
+   "task": "Check the accuracy of content within the introduction section about Fundraiser Day.",
+   "expected_result": "The introduction should clearly explain what Fundraiser Day is about, including its purpose and significance, aligning with the event's promotional goals.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering"
+    ]
+   }
+  },
+  {
+   "task": "Validate the presence and correctness of fundraiser testimonials.",
+   "expected_result": "The testimonials section should display real and relevant feedback from previous fundraiser participants, demonstrating positive experiences and successful outcomes.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering",
+     "Details Information"
+    ]
+   }
+  },
+  {
+   "task": "Ensure that the company information section is visible and accurate.",
+   "expected_result": "The section should provide complete and correct details about the company, including its mission, background, and role in organizing Fundraiser Day.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Details Information"
+    ]
+   }
+  },
+  {
+   "task": "Test the website's navigation to ensure users can easily access between the introduction, testimonials, offers, and company information sections.",
+   "expected_result": "Users should be able to smoothly navigate between the introduction, testimonials, offers, and company information sections with no broken links or errors.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering"
+    ]
+   }
+  },
+  {
+   "task": "Assess the website's content for relevance to the Fundraiser Day promotion.",
+   "expected_result": "All text and multimedia content should focus on promoting Fundraiser Day, eliminating any unrelated information that could detract from the event's promotion.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering",
+     "Data Visualization"
+    ]
+   }
+  },
+  {
+   "task": "Verify that the website uses 'cornsilk' as the background color and 'peru' as the component color, as specified in the design requirements.",
+   "expected_result": "The website has a background color of 'cornsilk' and components (such as buttons, cards, headers, etc.) are styled with the color 'peru', accurately reflecting the design instruction.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "archetype": "derived-state",
+   "instruction": "The event's getting real donations now, so I want a Supporter Wall section sitting right under the testimonials on the page. Start it with these eight gifts, exactly these — I'll add more later: Maria Alvarez $250 (Team River Runners, Clean Water), James O'Neil $145 (Team Bright Sparks, Education), Maria Alvarez again with another $300 (River Runners, Clean Water), Priya Shah $500 (Bright Sparks, Education), Tom Becker $95 (River Runners, Food Relief), Lena Fischer $100 (Team Green Hearts, Food Relief), Sam Waters $40 (Green Hearts, Clean Water), and Dana Cole $610 (Green Hearts, Education). Each person shows up on the wall once with everything they've given added together, wearing a badge right on their entry that names their tier — Gold for $500 and up, Silver for $100 and up, Bronze under that — and grouped into matching Gold, Silver, and Bronze recognition sections, biggest totals first inside a section, with their team and the cause they gave to shown too. Two things I want everywhere in this app, now and for anything we add later: dollar figures always get a $ sign with commas for thousands, and whenever we rank people or teams, ties go alphabetically.",
+   "source_website": "https://donorbox.org/nonprofit-blog/donation-page-examples",
+   "source_feature": "Donor Wall / Supporter Recognition",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Scroll to the Supporter Wall and look for Maria Alvarez.",
+     "expected_result": "Maria Alvarez appears exactly once with a combined total of $550 and a Gold badge — not as two separate gift entries.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Details Information",
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Supporter Wall, find Priya Shah and Lena Fischer.",
+     "expected_result": "Priya Shah shows a Gold badge at exactly $500 and Lena Fischer shows a Silver badge at exactly $100 — the tier thresholds include the boundary amounts.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Details Information"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Look at the Gold section of the Supporter Wall.",
+     "expected_result": "It contains exactly three supporters in this order: Dana Cole $610, Maria Alvarez $550, Priya Shah $500.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Scroll down the page from the testimonials section.",
+     "expected_result": "The Supporter Wall section appears directly below the testimonials on the same page, with the seeded supporters visible.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Page Navigation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the site and watch the offers area without clicking anything.",
+     "expected_result": "The offers carousel advances to the next offer on its own after a few seconds.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Dynamic Content Rendering"
+      ]
+     },
+     "copied_from_turn": 1
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Those offer tiers on the homepage should actually do something — turn them into a working pledge form: tap $25, $50, or $100 or type a custom amount (nothing under $5 — stop people politely if they try), enter your name, pick which cause it supports, and offer a checkbox to cover our processing fee, which runs 2.9% plus 30 cents, rounded to the cent. The summary — amount, fee if covered, total — has to update the instant you click a tier or type a digit, not after submitting. When someone pledges, their gift lands on the supporter wall, folding into their existing total if they're already up there (so their badge can jump a tier); pledges don't need a team, they can sit on the wall without one. Show the chosen cause as a little colored chip — steel blue for Clean Water, plum purple for Education, olive green for Food Relief — and use those exact chip colors any place a cause shows up in this app from here on out.",
+   "source_website": "https://donorbox.org/nonprofit-blog/donation-page-examples",
+   "source_feature": "Tiered Donation/Offer Levels with Impact Descriptions",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "On the pledge form, click the $50 tier and check the fee-cover checkbox.",
+     "expected_result": "Before submitting anything, the summary updates live to show a $1.75 processing fee and a $51.75 total.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Real-time Calculation",
+       "Form Interaction"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type 4 into the custom amount box, enter the name Rita Vale, pick Clean Water as the cause, and try to pledge; then change the amount to 5.",
+     "expected_result": "At $4 the pledge is blocked with a message about the $5 minimum; at $5 it is accepted.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Boundary Testing"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Make a $50 pledge under the name Tom Becker for Food Relief without covering the fee, then scroll to the Supporter Wall.",
+     "expected_result": "Tom Becker appears once with a combined total of $145 and a Silver badge — not as two separate entries, and no longer Bronze.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Data Consistency",
+       "State Update"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Pledge $25 under the new name Noah Kim for Clean Water, then scroll to the Supporter Wall.",
+     "expected_result": "Noah Kim appears as a new supporter with $25 and a Bronze badge, while Maria Alvarez still shows $550 with a Gold badge.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Data Consistency",
+       "State Update"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Scroll to the Supporter Wall and look for Maria Alvarez.",
+     "expected_result": "Maria Alvarez appears exactly once with a combined total of $550 and a Gold badge — not as two separate gift entries.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Details Information",
+       "Dynamic Content Rendering"
+      ]
+     },
+     "copied_from_turn": 2
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Give us a Campaign Pulse dashboard page: total raised so far, a progress bar toward our $8,000 goal with the percentage shown to one decimal place, how many individual supporters we have (people, not gifts — someone who gave twice counts once), a breakdown of dollars per cause, and a team leaderboard ranked by team total. And it can't be a snapshot — when a pledge comes in through the form, all of these numbers move right away.",
+   "source_website": "https://donorbox.org/nonprofit-blog/donation-page-examples",
+   "source_feature": "Fundraising Goal Progress Meter (fused with GivingTuesday's Impact Statistics Display)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Campaign Pulse dashboard.",
+     "expected_result": "The total raised reads $2,040 and the progress toward the $8,000 goal shows 25.5% (not a rounded 25% or 26%).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Dynamic Content Rendering",
+       "Details Information"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Look at the team leaderboard on the dashboard.",
+     "expected_result": "Green Hearts is first at $750, and the $645 tie is broken alphabetically: Bright Sparks second, River Runners third.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting Verification",
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Check the supporter count stat on the dashboard.",
+     "expected_result": "It reads 7 — unique people rather than the 8 gifts, since Maria Alvarez's two gifts count once.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the pledge form, pledge a custom $60 as Ivy Chen for Education, then open the Campaign Pulse dashboard.",
+     "expected_result": "Total raised now reads $2,100, the supporter count reads 8, and the Education row of the cause breakdown reads $1,315.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Data Consistency",
+       "State Update"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "On the pledge form, click the $50 tier and check the fee-cover checkbox.",
+     "expected_result": "Before submitting anything, the summary updates live to show a $1.75 processing fee and a $51.75 total.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Real-time Calculation",
+       "Form Interaction"
+      ]
+     },
+     "copied_from_turn": 3
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Fundraiser Day has an actual agenda now — build a Day Schedule page with these sessions: Opening Ceremony 9:00–9:45 AM (Education), Bake Sale Kickoff 9:30–10:30 AM (Food Relief), Charity Fun Run 10:00–11:30 AM (Clean Water), Silent Auction Preview 11:45 AM–12:30 PM (Education), Donor Lunch 12:30–1:30 PM (Food Relief), and Closing Concert 5:00–6:30 PM (Clean Water). Visitors build a 'My Day' plan: they pick sessions, then a review screen lists their picks in time order no matter what order they were added, and calls out any picks whose times overlap. They shouldn't be able to lock the plan in until overlaps are cleared by removing something — though one session ending exactly when the next starts is totally fine — and after confirming they get a final day plan view.",
+   "source_website": "https://www.givingtuesday.org",
+   "source_feature": "Event Calendar Integration",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Add Bake Sale Kickoff to the plan first, then Opening Ceremony, and open the plan review.",
+     "expected_result": "Opening Ceremony is listed before Bake Sale Kickoff (time order, not add order), the two are flagged as overlapping, and confirming is blocked until one is removed.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Sorting Verification",
+       "Input Validation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Add Silent Auction Preview and Donor Lunch to the plan and open the review.",
+     "expected_result": "No overlap is flagged — one ends at 12:30 PM exactly as the other starts — and the plan can be confirmed with both sessions.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Boundary Testing",
+       "Workflow Completion"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Add Opening Ceremony, Bake Sale Kickoff, and Charity Fun Run to the plan, then open the review.",
+     "expected_result": "Exactly 2 overlapping pairs are flagged: Opening Ceremony with Bake Sale Kickoff, and Bake Sale Kickoff with Charity Fun Run — Opening Ceremony and Charity Fun Run are not flagged against each other.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Real-time Calculation",
+       "Data Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the Day Schedule page, look at the Charity Fun Run session's cause tag.",
+     "expected_result": "It shows Clean Water as a steel blue chip, matching the cause chip colors used on the pledge form and supporter wall.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Visual Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the Campaign Pulse dashboard.",
+     "expected_result": "The total raised reads $2,040 and the progress toward the $8,000 goal shows 25.5% (not a rounded 25% or 26%).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Dynamic Content Rendering",
+       "Details Information"
+      ]
+     },
+     "copied_from_turn": 4
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "We've built a coalition of partner orgs, so give them their own directory page with these nine: Clearwater Trust (Clean Water, North), BlueDrop Foundation (Clean Water, South), Riverside Rotary (Clean Water, East), ReadRight Alliance (Education, North), Book Bridge Co. (Education, East), ScholarWorks (Education, South), Meal Makers Guild (Food Relief, North), Harvest Hands (Food Relief, South), and PantryLink (Food Relief, East). People narrow the list with cause checkboxes — picking two causes means show partners from either one — plus a region dropdown and a name search that stack on top of that, and a 'Showing X of 9' line that always matches exactly what's on screen. If nothing matches, say so nicely instead of just going blank.",
+   "source_website": "https://www.givingtuesday.org",
+   "source_feature": "Cause Coalition / Partner Directory",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "In the partner directory, check the Clean Water and Education cause boxes and set the region to North.",
+     "expected_result": "Exactly two partners remain: Clearwater Trust and ReadRight Alliance — either checked cause counts, but both results are in the North.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filter Composition",
+       "Search & Filter"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Clear any filters, then check only the Education cause box.",
+     "expected_result": "Exactly ReadRight Alliance, Book Bridge Co., and ScholarWorks are shown and the count line reads Showing 3 of 9.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Consistency",
+       "Search & Filter"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Set the region to East and type Harvest into the name search.",
+     "expected_result": "No partners match; a friendly no-results message appears and the page does not go blank or crash.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Empty State Handling",
+       "Search & Filter"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Find the Harvest Hands card in the directory.",
+     "expected_result": "Its Food Relief tag is an olive green chip, the same cause chip style used on the pledge form and supporter wall.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Visual Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Scroll to the Supporter Wall and look for Maria Alvarez.",
+     "expected_result": "Maria Alvarez appears exactly once with a combined total of $550 and a Gold badge — not as two separate gift entries.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Details Information",
+       "Dynamic Content Rendering"
+      ]
+     },
+     "copied_from_turn": 2
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "I want a Share Studio page for spreading the word. Give it a message box with template buttons — at least a progress one that drops in our actual live numbers, the total raised, percent to goal, and supporter count, straight from the same math the dashboard uses — and a character counter against a 240 limit that ticks with every keystroke. If the message goes over 240 the counter should flag it and the copy action should go disabled until they trim it back. The finished message sits in an on-screen preview block people can copy from.",
+   "source_website": "https://donorbox.org/nonprofit-blog/donation-page-examples",
+   "source_feature": "Social Sharing Buttons",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open Share Studio and click the progress template button.",
+     "expected_result": "The generated message includes $2,040 and 25.5% — the live campaign numbers, not placeholders.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Dynamic Content Rendering",
+       "Data Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Clear the message box and type Give big now, with no punctuation at the end.",
+     "expected_result": "The character counter reflects a 12-character message against the 240 limit and updates while typing, with no submit needed.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Real-time Calculation",
+       "Form Interaction"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Click the progress template, then keep typing extra text at the end of the message until the counter passes 240.",
+     "expected_result": "The counter visibly flags the overage and the copy action is disabled until the message is trimmed back under the limit.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Boundary Testing"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the pledge form, pledge a custom $120 as Ava Long for Education, then open Share Studio and click the progress template.",
+     "expected_result": "The inserted message uses the fresh numbers: $2,160 raised and 8 supporters.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Data Consistency",
+       "State Update"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Add Silent Auction Preview and Donor Lunch to the plan and open the review.",
+     "expected_result": "No overlap is flagged — one ends at 12:30 PM exactly as the other starts — and the plan can be confirmed with both sessions.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Boundary Testing",
+       "Workflow Completion"
+      ]
+     },
+     "copied_from_turn": 5
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Let's start capturing emails — an Updates Hub. The signup asks for an email (be strict: it needs an @ and a dot in the domain part, no spaces, and tell them what's wrong right on the form), at least one topic from Clean Water, Education, Food Relief, or Event news, and a weekly or monthly frequency; then a review step shows everything back before they confirm. Confirmed folks land on a Subscribers view — start it off with ross@maplemail.org (Event news + Education, monthly), amina@riverpost.net (Clean Water, weekly), and kai@sunmail.co (Food Relief + Event news, weekly) — and unsubscribing someone should ask before it deletes.",
+   "source_website": "https://www.givingtuesday.org",
+   "source_feature": "Newsletter Signup CTA",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "In the Updates Hub signup, type jamie@site as the email, pick the Education topic, choose weekly, and try to continue.",
+     "expected_result": "It is blocked on the form with a message about the invalid email (no dot in the domain) — the review step does not open.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Form Interaction"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Sign up as jamie@hillpost.org with the Education topic and weekly frequency, continue to the review step, and confirm.",
+     "expected_result": "The review step shows exactly those three choices before confirming, and afterwards jamie@hillpost.org appears in the Subscribers view.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow Completion",
+       "Data Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open the Subscribers view without adding anyone.",
+     "expected_result": "Exactly three seeded subscribers are listed: ross@maplemail.org, amina@riverpost.net, and kai@sunmail.co.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Details Information"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Find amina@riverpost.net in the Subscribers view.",
+     "expected_result": "Her Clean Water topic appears as a steel blue chip, the same cause chip style used on the pledge form and supporter wall.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Visual Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "In the partner directory, check the Clean Water and Education cause boxes and set the region to North.",
+     "expected_result": "Exactly two partners remain: Clearwater Trust and ReadRight Alliance — either checked cause counts, but both results are in the North.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filter Composition",
+       "Search & Filter"
+      ]
+     },
+     "copied_from_turn": 6
+    }
+   ]
+  },
+  {
+   "archetype": "design-restyle",
+   "instruction": "Time for a visual refresh across the home page, the supporter wall, the Campaign Pulse dashboard, and the partner directory — all four, consistently, no page left on the old look. Primary action buttons switch from peru to a deep forest green with white text (peru can stay for secondary accents), every main heading goes left-aligned with a short peru accent bar underneath, and the recognition badges become pills — goldenrod for Gold, slate gray for Silver, chocolate brown for Bronze, white text on all three. Every card — offer cards, partner cards, supporter entries — gets rounded corners with a thin peru border, cornsilk stays the page background throughout, and every dollar figure renders bold in a dark brown.",
+   "source_website": "https://www.givingtuesday.org",
+   "source_feature": "Impact Statistics Display (bold typographic brand treatment)",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Look at the offers section on the home page.",
+     "expected_result": "Offer cards have rounded corners with a thin peru border on the cornsilk background, and their action buttons are deep forest green with white text instead of peru.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Visual Consistency",
+       "Color Scheme"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the Campaign Pulse dashboard.",
+     "expected_result": "The main heading is left-aligned with a short peru accent bar under it, and dollar figures like the total raised are bold dark brown.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Typography",
+       "Visual Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Find Maria Alvarez on the supporter wall.",
+     "expected_result": "Her badge is now a goldenrod pill with white text reading Gold, and her total still reads $550.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Visual Consistency",
+       "Data Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the partner directory, check the Food Relief cause box.",
+     "expected_result": "Filtering still works — Meal Makers Guild, Harvest Hands, and PantryLink remain — and the partner cards show the new rounded corners with a thin peru border.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Visual Consistency",
+       "Search & Filter"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "On the Supporter Wall, find Priya Shah and Lena Fischer.",
+     "expected_result": "Priya Shah shows a Gold badge at exactly $500 and Lena Fischer shows a Silver badge at exactly $100 — the tier thresholds include the boundary amounts.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Details Information"
+      ]
+     },
+     "copied_from_turn": 2
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Last big one: an Impact Report page that turns the money into real things, cause by cause — every $20 given to Clean Water is a water filter, every $15 to Education is a book bundle, every $8 to Food Relief is a meal box, and only finished units count (nobody funds 29 and a half filters — always round down). Show each cause's dollars next to its unit count, plus a grand total that lines up with what the dashboard says, and pledges coming in through the form should move these numbers too. At the bottom, put a plain-text summary of the whole report in a block people can copy straight off the screen.",
+   "source_website": "https://www.givingtuesday.org",
+   "source_feature": "Impact Statistics Display",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Impact Report and look at the Clean Water row.",
+     "expected_result": "$590 converts to 29 water filters — rounded down, not 30.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Real-time Calculation",
+       "Details Information"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Look at the Education row on the Impact Report.",
+     "expected_result": "It shows $1,255 raised and 83 book bundles (83, not 84).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Real-time Calculation",
+       "Details Information"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Scroll to the copyable summary block at the bottom of the Impact Report.",
+     "expected_result": "The plain-text summary lists all three causes with the same dollar and unit figures shown above it, and its grand total matches the dashboard's $2,040.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Consistency",
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the pledge form, pledge a custom $45 as Omar Reyes for Food Relief, then open the Impact Report.",
+     "expected_result": "Food Relief now shows $240 and 30 meal boxes, up from $195 and 24.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Data Consistency",
+       "State Update"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open Share Studio and click the progress template button.",
+     "expected_result": "The generated message includes $2,040 and 25.5% — the live campaign numbers, not placeholders.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Dynamic Content Rendering",
+       "Data Consistency"
+      ]
+     },
+     "copied_from_turn": 7
+    }
+   ]
+  }
+ ],
+ "target_app_summary": "The one-page Fundraiser Day promo site grows into a full campaign platform for the event. A supporter wall with cumulative recognition tiers (seeded with eight pinned gifts) feeds a live pledge builder wired into the homepage offer tiers, and both feed a Campaign Pulse dashboard (total, goal progress, unique supporters, cause rollups, tie-aware team leaderboard). On top of the dashboard sit a Share Studio message composer that embeds live campaign stats and an Impact Report that floor-converts per-cause dollars into tangible units and reconciles with the dashboard. Around that core, the app grows sideways into a conflict-checking Day Schedule planner, a boolean-filtered Partner Coalition directory, and a validated Updates Hub subscription workflow, and a late visual refresh restyles the home page, wall, dashboard, and directory consistently. The graph has one deep money chain (wall -> pledges -> dashboard -> share/impact) plus three standalone modules and a four-surface restyle.",
+ "dependency_graph": {
+  "nodes": [
+   {
+    "id": "T1",
+    "label": "base app",
+    "archetype": "base"
+   },
+   {
+    "id": "T2",
+    "label": "Supporter wall",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T3",
+    "label": "Pledge builder",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T4",
+    "label": "Campaign dashboard",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T5",
+    "label": "Day schedule planner",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T6",
+    "label": "Partner directory",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T7",
+    "label": "Share studio",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T8",
+    "label": "Updates hub",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T9",
+    "label": "Visual refresh",
+    "archetype": "design-restyle"
+   },
+   {
+    "id": "T10",
+    "label": "Impact report",
+    "archetype": "derived-state"
+   }
+  ],
+  "edges": [
+   {
+    "from": "T1",
+    "to": "T2",
+    "what": "wall section embeds into the one-page layout below testimonials"
+   },
+   {
+    "from": "T1",
+    "to": "T3",
+    "what": "homepage offer tiers become the pledge form's entry points"
+   },
+   {
+    "from": "T2",
+    "to": "T3",
+    "what": "pledges fold into wall entries and cumulative tier badges"
+   },
+   {
+    "from": "T2",
+    "to": "T4",
+    "what": "dashboard aggregates the wall's gift records"
+   },
+   {
+    "from": "T3",
+    "to": "T4",
+    "what": "new pledges update totals and leaderboard live"
+   },
+   {
+    "from": "T4",
+    "to": "T7",
+    "what": "templates insert the dashboard's live computed stats"
+   },
+   {
+    "from": "T2",
+    "to": "T10",
+    "what": "per-cause totals from wall gift records"
+   },
+   {
+    "from": "T3",
+    "to": "T10",
+    "what": "cause-tagged pledges move impact unit counts"
+   },
+   {
+    "from": "T4",
+    "to": "T10",
+    "what": "report grand total reconciles with dashboard total"
+   },
+   {
+    "from": "T1",
+    "to": "T9",
+    "what": "restyles homepage offers/buttons/headings"
+   },
+   {
+    "from": "T2",
+    "to": "T9",
+    "what": "restyles tier badges and wall cards"
+   },
+   {
+    "from": "T4",
+    "to": "T9",
+    "what": "restyles dashboard headings and dollar figures"
+   },
+   {
+    "from": "T6",
+    "to": "T9",
+    "what": "restyles partner cards and directory controls"
+   }
+  ]
+ },
+ "global_rules": [
+  {
+   "rule": "Every dollar figure anywhere in the app is written with a $ sign and comma thousands separators (e.g. $1,255).",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Any ranking of people or teams anywhere in the app breaks ties alphabetically.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Wherever a cause appears in the app it is shown as a colored chip: Clean Water steel blue, Education plum purple, Food Relief olive green.",
+   "introduced_in_turn": 3
+  }
+ ],
+ "pinned_seed": {
+  "entity": "8 donor gifts (7 unique supporters) on the supporter wall",
+  "introduced_in_turn": 2,
+  "records_gist": "Maria Alvarez $250 + $300 (River Runners, Clean Water), James O'Neil $145 (Bright Sparks, Education), Priya Shah $500 (Bright Sparks, Education), Tom Becker $95 (River Runners, Food Relief), Lena Fischer $100 (Green Hearts, Food Relief), Sam Waters $40 (Green Hearts, Clean Water), Dana Cole $610 (Green Hearts, Education); total $2,040, team tie RR=BS=$645"
+ }
+}

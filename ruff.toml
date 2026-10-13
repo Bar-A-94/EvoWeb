@@ -1,0 +1,15 @@
+line-length = 100
+target-version = "py310"
+force-exclude = true
+# Vendored code is not linted or formatted: webvoyager/ is the upstream judge code.
+extend-exclude = ["harness/webvoyager"]
+
+[lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+# Vendored study scripts predate strict zip(); long docstring lines are prose, not code.
+ignore = ["B905", "E501", "UP017"]
+
+[lint.per-file-ignores]
+# Research analysis scripts, kept as they produced the paper's numbers: style rules only.
+"ablations/**" = ["E402", "E731", "E741", "B007", "F841"]
+"data/data_gen/**" = ["E402", "E731", "E741", "B007", "F841"]

@@ -1,0 +1,847 @@
+{
+ "id": "000078",
+ "instruction": "Please implement a computing task website for performing calculations. The website should have functionalities for inputting mathematical expressions, executing calculations, and displaying results. Users should be able to input mathematical expressions, select the calculation type (e.g., \"Basic Arithmetic\"), execute the calculation, and view the calculation results. Use mint cream as the screen background and teal for component highlights.",
+ "Category": {
+  "primary_category": "Content Presentation",
+  "subcategories": [
+   "Dynamic Content Rendering",
+   "Data Visualization"
+  ]
+ },
+ "application_type": "Productivity Applications",
+ "ui_instruct": [
+  {
+   "task": "Input a basic mathematical expression (e.g., \"2 + 2\") into the expression input field.",
+   "expected_result": "The expression \"2 + 2\" is correctly displayed in the input field without any modification.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations"
+    ]
+   }
+  },
+  {
+   "task": "Select a calculation type from the available options (e.g., \"Basic Arithmetic\").",
+   "expected_result": "The selected calculation type is visibly confirmed on the interface, ensuring the system understands the user's choice.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Generation"
+    ]
+   }
+  },
+  {
+   "task": "Click the button to execute the calculation after entering a mathematical expression and selecting a calculation type.",
+   "expected_result": "The system processes the equation and a result is displayed on the results screen.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations",
+     "Generation"
+    ]
+   }
+  },
+  {
+   "task": "Input an invalid mathematical expression (e.g., \"2 ++ 2\") and attempt to execute the calculation.",
+   "expected_result": "An error message is displayed, indicating that the expression is invalid and guiding the user to input a valid expression.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations"
+    ]
+   }
+  },
+  {
+   "task": "Test the website's navigation by moving from the home page to the calculation page.",
+   "expected_result": "The transition should be smooth, and the calculation page should load without errors and allow immediate interaction.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering"
+    ]
+   }
+  },
+  {
+   "task": "Verify that the website uses 'mint cream' as the background color and 'teal' as the component color, as specified in the design requirements.",
+   "expected_result": "The website has a background color of 'mint cream' and components (such as buttons, cards, headers, etc.) are styled with the color 'teal', accurately reflecting the design instruction.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "archetype": "derived-state",
+   "instruction": "Love the calculator, but I keep losing track of what I've already run. Add a history panel that logs every calculation with its expression, its result, and a category tag based on whichever calculation type I had selected — and show category tags as uppercase pills like ARITHMETIC or SCIENTIFIC, which is how I want categories to look everywhere in this app from now on, for anything we ever add. Newest entries go on top, let me filter the list by category, and give me a clear-history button. Start me off with these seven already logged, listed oldest to newest so you know the order: sqrt(1444) = 38 (Scientific), 40+2 = 42 (Arithmetic), 15% of 212 = 31.8 (Percent), 2^10 = 1024 (Scientific), 10.7/4 = 2.675 (Arithmetic), 12*(8-3) = 60 (Arithmetic), 3^5 = 243 (Scientific) — exactly these, I'll pile more on top. One more style thing for the whole app going forward: any calculated result, wherever it appears now or later, should be shown in a monospace font with an equals sign in front, like = 42.",
+   "source_website": "https://web2.0calc.com/",
+   "source_feature": "Calculation History Panel",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the history panel and look at the entry at the very top of the list.",
+     "expected_result": "The top entry is 3^5 with result = 243 — the list runs newest to oldest, so 3^5 comes first, not sqrt(1444) (the entry that was given first in the original order).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Accuracy",
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Use the history panel's category filter to show only Scientific entries.",
+     "expected_result": "Exactly the three entries sqrt(1444), 2^10, and 3^5 are visible; the Arithmetic and Percent entries are hidden.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Find the history entry for 40+2 and look at how it is displayed.",
+     "expected_result": "Its result appears as = 42 in a monospace font, and the entry carries an uppercase ARITHMETIC pill.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Typography",
+       "Component Styling"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the calculator, type 6*7 into the expression input, execute it, then look at the history panel.",
+     "expected_result": "A new entry for 6*7 with result = 42 appears at the very top of the history, above 3^5.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Management",
+       "Form Operations"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 1,
+     "task": "Type 7*6 into the expression input, select Basic Arithmetic as the calculation type, and execute the calculation.",
+     "expected_result": "The result 42 is displayed in the results area.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Operations"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "I reuse the same numbers constantly, so give me a variables page where I can define named values, edit them, and delete them, and then just use the names inside calculator expressions — set me up with tax = 0.0825 and dozen = 12 to start. Names must start with a letter and contain only letters and digits, no duplicates, and no hijacking built-ins like sqrt or pi — reject bad ones with a visible reason before anything saves. While I'm typing in the calculator, show a little helper under the input that lists any defined variable it spots along with its value, updating with every keystroke, so typing 200*tax and running it gives me = 16.5. And a house rule for this whole app, today and for whatever we build later: any calculation done with variables keeps the variable names in its expression everywhere it shows up or gets logged — history should read 200*tax, never the substituted 200*0.0825, and the same goes for anything we add down the road.",
+   "source_website": "https://web2.0calc.com/",
+   "source_feature": "Keyboard Input Support (typed expressions, extended into a live variable library)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "In the calculator, type 200*tax into the expression input and execute the calculation.",
+     "expected_result": "The result = 16.5 is displayed, showing the predefined variable tax (0.0825) was substituted into the expression.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Operations",
+       "Data Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the variables page, try to add a variable named 2fast with value 3.",
+     "expected_result": "The variable is rejected with a visible reason about the invalid name, and 2fast does not appear in the variables list.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Data Validation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Click into the calculator's expression input and type dozen+1 without executing.",
+     "expected_result": "While typing, a helper under the input lists the variable dozen with its value 12, before any calculation is run.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the variables page add a variable named width with value 5, then in the calculator type width*3 and execute, then look at the top of the history panel.",
+     "expected_result": "The result = 15 is displayed — the freshly defined variable is picked up by the calculator — and the newest history entry shows the expression as width*3 with the variable name intact, not 5*3.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Operations",
+       "State Management"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "Open the history panel and look at the entry at the very top of the list.",
+     "expected_result": "The top entry is 3^5 with result = 243 — the list runs newest to oldest, so 3^5 comes first, not sqrt(1444) (the entry that was given first in the original order).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Accuracy",
+       "Dynamic Content Rendering"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Some calculations are keepers — let me hit a save button on whatever's currently in the calculator, give it a name plus an optional note, and browse them on their own Saved page; clicking one opens its details, and from there a load button drops the expression back into the calculator and re-runs it fresh. Names are required and no two saved items can share one — refuse the save with a message if I try. Stick one in there for me already: Grid area, expression 24*36, note garden plot, so loading it should land me back on the calculator showing = 864. Deleting a saved item should ask me if I'm sure before it actually goes, and if I ever delete everything, the Saved page should say it's empty rather than just going blank.",
+   "source_website": "https://www.calculator.net/",
+   "source_feature": "User Account / Sign-in System (persisted saved calculations, reworked as a save/restore workflow)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Go to the Saved page, open the Grid area item, and click its load control.",
+     "expected_result": "You land in the calculator with 24*36 in the expression input and the result = 864 displayed.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Navigation",
+       "State Management"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type 5+5 in the calculator, execute it, click save, and enter the name Grid area.",
+     "expected_result": "The save is refused with a message that the name is already taken, and the Saved page still shows only one Grid area item.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Data Validation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type 5+5 in the calculator, execute it, click save, and try to submit the save form with the name left empty.",
+     "expected_result": "The form refuses to save, indicates a name is required, and nothing new appears on the Saved page.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Data Validation",
+       "Form Operations"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the Saved page, click delete on the Grid area item, then confirm when asked.",
+     "expected_result": "A confirmation prompt appears before anything is removed, and after confirming the Saved page shows a friendly empty message rather than a blank area.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Management",
+       "Error Handling"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "In the calculator, type 200*tax into the expression input and execute the calculation.",
+     "expected_result": "The result = 16.5 is displayed, showing the predefined variable tax (0.0825) was substituted into the expression.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Operations",
+       "Data Accuracy"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Numbers are getting messy. Add a display settings panel where I type how many decimal places I want — 0 through 8, refuse anything outside that and keep the old setting — plus a toggle between standard and scientific notation, and reformat every result the instant I change something: the live calculator result, every history entry, everywhere results appear. Default to 4 places, trim pointless trailing zeros so 42 stays = 42 and never = 42.0000, and round half-up properly — at 2 places, 2.675 becomes 2.68, not the 2.67 computers like to sneak in. In scientific mode something like 1024 should read 1.024e+3.",
+   "source_website": "https://web2.0calc.com/",
+   "source_feature": "Precision / Display Format Control",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open display settings, set decimal places to 2, then look at the history entry for 10.7/4.",
+     "expected_result": "The entry's result reads = 2.68 — 2.675 rounded half-up — not = 2.67.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In display settings, type 9 into the decimal places input.",
+     "expected_result": "The value is refused with an indication that only 0 through 8 is allowed, and results keep formatting with the previous setting.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Data Validation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Switch notation to scientific and look at the history entry for 2^10, then switch back to standard.",
+     "expected_result": "In scientific mode the result reads = 1.024e+3, and back in standard mode it returns to = 1024.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Accuracy",
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Type 1/8 into the calculator and execute, then in display settings set decimal places to 1.",
+     "expected_result": "The calculator's displayed result changes from = 0.125 to = 0.1 without re-running the calculation.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Management"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "Use the history panel's category filter to show only Scientific entries.",
+     "expected_result": "Exactly the three entries sqrt(1444), 2^10, and 3^5 are visible; the Arithmetic and Percent entries are hidden.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Give me a stats page that sizes up the whole history: total number of calculations, a count for each category, the single largest result, and the average of all results — round that average half-up to exactly two decimals, so a true average of 205.925 reads 205.93. Crown a most-used category at the top; when categories tie on count, alphabetical order wins the crown. All of it should recalculate as soon as I run new calculations.",
+   "source_website": "https://web2.0calc.com/",
+   "source_feature": "Calculation History Panel (extended into aggregate usage analytics)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the stats page on a fresh load and look at the most-used category.",
+     "expected_result": "It reads Arithmetic — Arithmetic and Scientific are tied at 3 entries each and the tie breaks alphabetically — not Scientific, even though Scientific is both the first-logged and the most recent category in the history.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open the stats page on a fresh load and look at the average of all results.",
+     "expected_result": "The average reads 205.93 — 205.925 rounded half-up to two decimals — not the 205.92 that plain floating-point rounding produces.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the stats page and compare the per-category counts to the total count of calculations, noting how each category is labeled.",
+     "expected_result": "The category counts add up exactly to the displayed total (3 Arithmetic + 3 Scientific + 1 Percent = 7 on a fresh load), and each category label on the stats page renders as an uppercase pill — ARITHMETIC, SCIENTIFIC, PERCENT — matching the app-wide category convention.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Accuracy",
+       "Data Visualization"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the calculator, select the Scientific calculation type, run 2*2, then open the stats page.",
+     "expected_result": "The Scientific count is now 4, the total is 8, and the most-used category flips to Scientific.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Management",
+       "Data Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 4,
+     "task": "Go to the Saved page, open the Grid area item, and click its load control.",
+     "expected_result": "You land in the calculator with 24*36 in the expression input and the result = 864 displayed.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Navigation",
+       "State Management"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "New tool, its own spot in the app: a unit converter covering length (inches and centimeters, 1 in = 2.54 cm), weight (pounds and grams, 1 lb = 453.592 g), and temperature (Fahrenheit and Celsius using the real formula, not some multiply shortcut). I type a number, pick the from and to units, and the converted value updates as I type with no button, honoring whatever decimal places I've set in display settings. Give me a swap control that flips the direction, and if the input is empty show nothing scary — no NaN, no error.",
+   "source_website": "https://web2.0calc.com/",
+   "source_feature": "Multiple Calculation Modes (Unit Conversion mode)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the converter, choose temperature with Fahrenheit to Celsius and type 100 into the value input.",
+     "expected_result": "37.7778 appears as the converted value while typing, computed with the real temperature formula — not a value near 55 from a multiply-only conversion.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Data Accuracy",
+       "Form Operations"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Choose length with inches to centimeters, type 4 into the value input, then click the swap control.",
+     "expected_result": "10.16 appears immediately while typing with no button press, and after swapping the direction the same 4 converts as centimeters to inches, showing 1.5748.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Dynamic Content Rendering",
+       "Data Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type 4 into the converter's value input, then delete it so the input is completely empty.",
+     "expected_result": "The output area goes empty or shows a gentle placeholder — never NaN, undefined, or an error.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Error Handling",
+       "Edge Cases"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In display settings set decimal places to 2, then on the converter choose temperature Fahrenheit to Celsius and type 100.",
+     "expected_result": "The converted value reads 37.78, following the two-decimal setting.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Management",
+       "Data Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 5,
+     "task": "Open display settings, set decimal places to 2, then look at the history entry for 10.7/4.",
+     "expected_result": "The entry's result reads = 2.68 — 2.675 rounded half-up — not = 2.67.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Accuracy"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "I want to hand my work to someone: put checkboxes on the history entries so I can pick some and send them to a Report page that lists the chosen ones, shows how many I picked and the total of their results — with each listed result and that total formatted by my display settings, same decimal places as everywhere else — and renders the whole thing as a plain-text block right on screen that I can copy. Removing an entry from the report — or unticking it back on the history side — has to update the count and total immediately; those numbers can never disagree with what's actually listed. And before anything's picked, the Report page should say it's waiting for selections instead of erroring or showing stale numbers.",
+   "source_website": "https://web2.0calc.com/",
+   "source_feature": "Calculation History Panel (fused with saved-calculations drawer into a selectable on-screen report)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the history page, tick the checkboxes for the entries 40+2, 10.7/4, and 12*(8-3), send them to the report, and open the Report page.",
+     "expected_result": "The report lists exactly those three entries with each entry's result shown in a monospace font prefixed with an equals sign (= 42, = 2.675, = 60), shows 3 picked with a total of 104.675, and renders a plain-text block of the selection on screen.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Data Accuracy",
+       "State Management"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Tick 40+2 and 2^10 on the history page, send them to the report, open the Report page, and remove 2^10 from the report there.",
+     "expected_result": "The count drops to 1 and the total to 42, matching the single entry still listed.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Management",
+       "Data Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the Report page before ticking anything on the history page.",
+     "expected_result": "The page says it is waiting for selections — no error, no stale count or total.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Edge Cases",
+       "Error Handling"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In display settings set decimal places to 1, then on the history page tick the 10.7/4 entry, send it to the report, and open the Report page.",
+     "expected_result": "The entry's result and the report total both read 2.7, following the decimal-places setting.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Management",
+       "Data Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 6,
+     "task": "Open the stats page on a fresh load and look at the average of all results.",
+     "expected_result": "The average reads 205.93 — 205.925 rounded half-up to two decimals — not the 205.92 that plain floating-point rounding produces.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Accuracy"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "There's stuff scattered all over this app now and I can't find anything. Give me a search page with one box that hunts through everything at once, updating the hits with every keystroke — no search button. It has to dig through history entries (matching the expression or the result value), saved calculations (name, note, or expression), and my variables (name or value), all case-insensitive, grouping the hits under a heading for where each came from with a total hit count up top. Calculations I run should be findable the moment they land in history. Before I've typed anything, show a friendly nudge to start typing instead of dumping every record, and when nothing matches, say so plainly instead of leaving a blank void.",
+   "source_website": "https://www.calculator.net/",
+   "source_feature": "Site-wide search box (adapted into a live cross-record finder)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the search page, type 24 into the search box.",
+     "expected_result": "Exactly three hits appear while typing, with no button press: the history entries 2^10 and 3^5 (matched through their result values 1024 and 243) and the saved item Grid area (matched on its expression 24*36) — not just the single Grid area hit that matching expression text alone would produce.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Data Accuracy",
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type GARDEN in all caps into the search box.",
+     "expected_result": "The saved item Grid area comes back as a hit, matched case-insensitively on its note garden plot and listed under its saved-calculations grouping — and no history or variable hits appear.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Data Accuracy",
+       "Edge Cases"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type xyz into the search box, then clear the box completely.",
+     "expected_result": "With xyz entered the page plainly says nothing matches, and once the box is empty it shows a nudge to start typing — at no point an error, a blank void, or a dump of every record.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Edge Cases",
+       "Error Handling"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the calculator run dozen*18.5, then on the search page type 222.",
+     "expected_result": "The freshly logged history entry appears as a hit, matched through its result = 222, and the hit shows its expression as dozen*18.5 with the variable name intact — never the substituted 12*18.5 — the search picks up new calculations immediately.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Management",
+       "Data Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 7,
+     "task": "On the converter, choose temperature with Fahrenheit to Celsius and type 100 into the value input.",
+     "expected_result": "37.7778 appears as the converted value while typing, computed with the real temperature formula — not a value near 55 from a multiply-only conversion.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Data Accuracy",
+       "Form Operations"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "design-restyle",
+   "instruction": "Time for a facelift, and I want it everywhere at once — calculator, history, stats, and the converter, no page left on the old look. Swap the mint cream background for soft ivory #FAFAF7 on all of them, center every page title, make primary action buttons deep teal #0F766E with white text in a full pill shape, give every card and panel 12px rounded corners with a thin teal border, and fill category pills solid teal with white text. Same treatment on every one of those pages — half-done drives me nuts.",
+   "source_website": "https://www.calculator.net/",
+   "source_feature": "Specialized Calculator Categories (one consistent visual system across all tool pages)",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Open the calculator, history, and stats pages in turn and look at the page background and page title on each.",
+     "expected_result": "All three show the soft ivory #FAFAF7 background with a centered page title — none is left on the old mint cream look.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Color Scheme",
+       "Layout",
+       "Visual Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Look at the primary action button on the calculator page and then on the converter page.",
+     "expected_result": "Both are deep teal #0F766E with white text and a full pill shape — consistent across the two pages.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Component Styling",
+       "Visual Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open the history page and look at the top entry's card.",
+     "expected_result": "Cards have 12px rounded corners with a thin teal border, and the top card still reads 3^5 with result = 243.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Component Styling",
+       "Data Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Run 2+2 in the calculator and look at its displayed result, then look at any history entry's result.",
+     "expected_result": "Both still render in a monospace font with the equals-sign prefix (= 4 in the calculator) — the facelift didn't break the result formatting convention.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Typography",
+       "Visual Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "In the calculator, type 200*tax into the expression input and execute the calculation.",
+     "expected_result": "The result = 16.5 is displayed, showing the predefined variable tax (0.0825) was substituted into the expression.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Operations",
+       "Data Accuracy"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "target_app_summary": "The one-page expression calculator has grown into a full computing workbench. The original evaluator is now surrounded by a persistent, filterable calculation history (seeded with seven pinned entries), a user-defined variables library that substitutes named values into expressions live while keeping variable names visible in logged expressions, a save/restore workflow for keeper calculations, and a display-settings engine (decimal places, half-up rounding, scientific notation) whose formatting flows into every surface. On top of the history sit a stats dashboard with tie-aware category rollups and a checkbox-driven report builder with on-screen copyable output; alongside sit a live unit converter and an everything-search page that hunts through history entries, saved calculations, and variables with every keystroke, matching result values as well as expression text. A final app-wide restyle unifies calculator, history, stats, and converter. The feature graph is history-centric: the history feeds formatting, stats, reports, and the live search, with the precision engine forming a second hub, giving chains four turns deep from the base calculator.",
+ "dependency_graph": {
+  "nodes": [
+   {
+    "id": "T1",
+    "label": "base app",
+    "archetype": "base"
+   },
+   {
+    "id": "T2",
+    "label": "calculation history panel",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T3",
+    "label": "variables library",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T4",
+    "label": "saved calculations workflow",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T5",
+    "label": "precision & notation settings",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T6",
+    "label": "usage stats dashboard",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T7",
+    "label": "live unit converter",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T8",
+    "label": "history report builder",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T9",
+    "label": "everything-search page",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T10",
+    "label": "app-wide facelift",
+    "archetype": "design-restyle"
+   }
+  ],
+  "edges": [
+   {
+    "from": "T1",
+    "to": "T2",
+    "what": "logs each executed calculation with its selected type as tag"
+   },
+   {
+    "from": "T1",
+    "to": "T3",
+    "what": "variables substitute into calculator expressions"
+   },
+   {
+    "from": "T2",
+    "to": "T3",
+    "what": "variable-based calculations are logged in the history panel with variable names kept intact"
+   },
+   {
+    "from": "T1",
+    "to": "T4",
+    "what": "saves and reloads the calculator's expression and result"
+   },
+   {
+    "from": "T1",
+    "to": "T5",
+    "what": "reformats the live calculator result"
+   },
+   {
+    "from": "T2",
+    "to": "T5",
+    "what": "reformats seeded history entries"
+   },
+   {
+    "from": "T2",
+    "to": "T6",
+    "what": "aggregates history entries and category tags"
+   },
+   {
+    "from": "T5",
+    "to": "T7",
+    "what": "converter output honors decimal-places setting"
+   },
+   {
+    "from": "T2",
+    "to": "T8",
+    "what": "report is built from selected history entries"
+   },
+   {
+    "from": "T5",
+    "to": "T8",
+    "what": "report numbers follow precision setting"
+   },
+   {
+    "from": "T1",
+    "to": "T10",
+    "what": "restyles calculator page"
+   },
+   {
+    "from": "T2",
+    "to": "T10",
+    "what": "restyles history panel"
+   },
+   {
+    "from": "T6",
+    "to": "T10",
+    "what": "restyles stats page"
+   },
+   {
+    "from": "T7",
+    "to": "T10",
+    "what": "restyles converter page"
+   },
+   {
+    "from": "T2",
+    "to": "T9",
+    "what": "history expressions and results are searchable, including newly logged calculations"
+   },
+   {
+    "from": "T4",
+    "to": "T9",
+    "what": "saved items searchable by name, note, and expression"
+   },
+   {
+    "from": "T3",
+    "to": "T9",
+    "what": "variables searchable by name and value"
+   }
+  ]
+ },
+ "global_rules": [
+  {
+   "rule": "Every calculated result, on every surface, is displayed in a monospace font prefixed with an equals sign, e.g. '= 42'.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Category tags always render as uppercase pills (ARITHMETIC, SCIENTIFIC, PERCENT) wherever they appear.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Any calculation performed with variables keeps the variable names visible in its expression wherever it is shown or logged — 200*tax stays 200*tax, never the substituted 200*0.0825.",
+   "introduced_in_turn": 3
+  }
+ ],
+ "pinned_seed": {
+  "entity": "7 seeded history calculations",
+  "introduced_in_turn": 2,
+  "records_gist": "oldest to newest: sqrt(1444)=38 (Scientific), 40+2=42 (Arithmetic), 15% of 212=31.8 (Percent), 2^10=1024 (Scientific), 10.7/4=2.675 (Arithmetic), 12*(8-3)=60 (Arithmetic), 3^5=243 (Scientific); Arithmetic/Scientific tie 3-3 with Scientific both the first-logged and the most recent category, sum 1441.475, avg 205.925 (float rounding shows 205.92, half-up 205.93)"
+ }
+}

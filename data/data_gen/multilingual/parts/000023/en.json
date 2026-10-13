@@ -1,0 +1,864 @@
+{
+ "id": "000023",
+ "instruction": "Please implement a customer relationship management website for managing sales leads and reporting. The website should have functionalities for automated message sending, organizing and categorizing leads, updating lead information and status, updating settings and dropdown menus, and reporting. Users should be able to browse and manage sales leads, view reports, and receive best practice and integration advice. Define background as papaya whip; define components with dark orange.",
+ "Category": {
+  "primary_category": "Data Management",
+  "subcategories": [
+   "CRUD Operations",
+   "API Integration",
+   "Big Data"
+  ]
+ },
+ "application_type": "CRM Systems",
+ "ui_instruct": [
+  {
+   "task": "Verify that the \"Add New Lead\" form allows users to fill out and submit details correctly.",
+   "expected_result": "The form submissions successfully add the lead to the system.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations"
+    ]
+   }
+  },
+  {
+   "task": "Test the automated message-sending functionality by initiating a message to a specific lead.",
+   "expected_result": "The message is sent automatically, and a confirmation notification is displayed.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Communication"
+    ]
+   }
+  },
+  {
+   "task": "Confirm that lead information can be updated by modifying an existing lead's status.",
+   "expected_result": "The lead’s status is successfully updated, and the new status is accurately displayed on the lead’s profile.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations"
+    ]
+   }
+  },
+  {
+   "task": "Test website navigation by using the provided menu to access the best practice and integration advice section.",
+   "expected_result": "The relevant page is successfully loaded, and users can view the information on best practices and integration advice.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering"
+    ]
+   }
+  },
+  {
+   "task": "Verify that the website uses 'papaya whip' as the background color and 'dark orange' as the component color, as specified in the design requirements.",
+   "expected_result": "The website has a background color of 'papaya whip' and components (such as buttons, cards, headers, etc.) are styled with the color 'dark orange', accurately reflecting the design instruction.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "archetype": "derived-state",
+   "instruction": "I need to know which leads are actually engaged. Give each lead an activity log where I can record calls, sent emails, and replied emails, and score them automatically — 1 point per call, 2 per sent email, 3 per reply — with a sortable score column where ties go to the bigger deal value. Tag every score with a temperature, and keep doing that anywhere a score ever shows up in this app, now or in anything we add later: 0-2 is Cold, 3-5 is Warm, 6 and up is Hot. Start me off with exactly these six (I'll add more myself later): Marcus Webb at Ironpeak Logistics, $8,500 deal, Contacted, with 1 call and 2 sent emails logged; Rosa Delgado at Brightline Media, $12,000, Qualified, 2 calls and 1 reply; Lena Fischer at Quartzline Systems, $15,750, Qualified, 1 call, 1 sent email and 1 reply; Priya Nair at Cobalt Analytics, $22,000, Proposal, 3 calls and 1 reply; Tom Okafor at Harbor & Finch, $5,200, New, nothing logged yet; and Diego Santos at Alturas Group, $9,300, Lost, 2 calls.",
+   "source_website": "Pipedrive",
+   "source_feature": "Lead scoring based on engagement levels",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the leads page, click the engagement score column or control to sort leads from highest to lowest score, then read the top two rows.",
+     "expected_result": "Priya Nair is first and Lena Fischer second, both with score 6 and a Hot tag — Priya ranks above Lena because her $22,000 deal is larger than Lena's $15,750.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Tie-breaking",
+       "Data Calculation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open Diego Santos's activity log, record one call, then look at his score and temperature tag.",
+     "expected_result": "His score changes from 2 to 3 and the tag flips from Cold to Warm.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Data Calculation",
+       "Boundary Condition",
+       "State Transition"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Find Tom Okafor's row and open his activity log.",
+     "expected_result": "The log opens showing an empty state (no activities logged), and his row shows score 0 with a Cold tag — no crash or blank row.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Empty State",
+       "Data Display"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Change Marcus Webb's status to Qualified using the lead's status editor, then check his score.",
+     "expected_result": "His status reads Qualified and the score stays 5 with a Warm tag — status changes alone add no points.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Integration",
+       "Data Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 1,
+     "task": "On the leads page, open Tom Okafor's lead and change his status to Contacted.",
+     "expected_result": "Tom Okafor's row now shows status Contacted.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "CRUD Operations",
+       "Regression"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Now a template studio for my outreach. I want to save named message templates using placeholders — {{first_name}}, {{last_name}}, {{company}} and {{deal_value}} are the only supported ones — with a live preview pane where I pick one of my leads and watch the text fill in as I type, not just after saving; if I type a placeholder that isn't supported, flag it right in the editor and refuse to save until it's gone. When a template goes out through the message-sending flow it uses the chosen lead's real details, with deal values written like $8,500. And a house style from here on out: anywhere this app mentions a lead — previews, feeds, reports, whatever we build later — write them as first and last name, a middle dot, then company, like Rosa Delgado · Brightline Media. Preload two templates: 'Intro Outreach' saying 'Hi {{first_name}}, I'd love to connect about {{company}}.' and 'Proposal Follow-Up' saying 'Hi {{first_name}}, checking in on the {{deal_value}} proposal for {{company}}.'",
+   "source_website": "HubSpot CRM",
+   "source_feature": "Customizable email templates with AI-assisted personalization",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Open the template editor, choose Marcus Webb · Ironpeak Logistics as the preview lead, and type 'Hello {{first_name}} from {{company}}' into the body.",
+     "expected_result": "Before any save, the preview pane already reads 'Hello Marcus from Ironpeak Logistics', updating live as the text is typed.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Preview",
+       "Text Substitution"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the template editor, type {{firstname}} into the message body and try to save the template.",
+     "expected_result": "The editor flags {{firstname}} as an unsupported placeholder and the save is blocked until it's removed.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Validation",
+       "Error Handling"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open the saved 'Proposal Follow-Up' template and preview it with Priya Nair · Cobalt Analytics selected as the lead.",
+     "expected_result": "The preview reads 'Hi Priya, checking in on the $22,000 proposal for Cobalt Analytics.'",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Text Substitution",
+       "Data Formatting"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Go to the message-sending flow, pick the 'Intro Outreach' template and Rosa Delgado as the recipient, and send.",
+     "expected_result": "The message goes out as 'Hi Rosa, I'd love to connect about Brightline Media.' — placeholders replaced with Rosa's real details, visible in the send confirmation or on her record.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Integration",
+       "Text Substitution"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "On the leads page, click the engagement score column or control to sort leads from highest to lowest score, then read the top two rows.",
+     "expected_result": "Priya Nair is first and Lena Fischer second, both with score 6 and a Hot tag — Priya ranks above Lena because her $22,000 deal is larger than Lena's $15,750.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Regression"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Let's make the reports actually predictive with a weighted pipeline forecast. Each stage gets a win probability I can edit in settings — start with New 10, Contacted 25, Qualified 50, Proposal 75, whole numbers 0 to 100 only — and the forecast takes every open lead's deal value times its stage probability and totals it up, recalculating the instant I change a number. Keep Lost leads out of it entirely, and if anything's ever Won show that in a separate closed-revenue figure instead of the weighted total. Under the headline number give me a per-lead breakdown with each lead's contribution, leads written out the usual way, and one more standing preference: whenever stages appear as a list — this breakdown, dropdowns, any future report — order them New, Contacted, Qualified, Proposal, Won, Lost, never alphabetically.",
+   "source_website": "HubSpot CRM",
+   "source_feature": "Deal pipeline with probability-based revenue forecasting",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the reports page and read the weighted pipeline forecast headline number, then scan the per-lead breakdown.",
+     "expected_result": "The headline reads $33,020 and Diego Santos does not appear in the breakdown — Lost leads are excluded from the weighted total.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Calculation",
+       "Filtering Logic"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In settings, change the Qualified stage probability to 60, then return to the forecast.",
+     "expected_result": "The total updates to $35,795 without a manual refresh — Rosa and Lena's contributions rise to $7,200 and $9,450.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Recalculation",
+       "Data Calculation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In settings, type 150 into the Proposal probability field and try to apply it.",
+     "expected_result": "The value is rejected as out of range and the forecast still reflects Proposal at 75%.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Validation",
+       "Boundary Condition"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Find Priya Nair's line in the forecast breakdown.",
+     "expected_result": "She is written as 'Priya Nair · Cobalt Analytics' — the name, middle dot, company style used across the app.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Global Convention",
+       "Data Formatting"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "Open the saved 'Proposal Follow-Up' template and preview it with Priya Nair · Cobalt Analytics selected as the lead.",
+     "expected_result": "The preview reads 'Hi Priya, checking in on the $22,000 proposal for Cobalt Analytics.'",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Text Substitution",
+       "Regression"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Time to stop doing follow-ups by hand. Add an automation rules panel in settings — a rule says when a lead moves into stage X, send template Y and create a follow-up task due Z days later, and refuse to save a rule unless all three parts are set and Z is a positive whole number. Sent messages land in the lead's message history so I can read exactly what went out, and tasks get their own page with due dates and a done checkbox — pin the app's calendar to July 1, 2026 so due dates are predictable, meaning a 3-day task lands on July 4, 2026. Preload one rule for me: moving into Proposal sends 'Proposal Follow-Up' and creates a 'Follow up on proposal' task due 3 days later. A rule only fires when the lead actually enters that stage — editing or re-saving someone already sitting in Proposal shouldn't send anything twice.",
+   "source_website": "Pipedrive",
+   "source_feature": "Workflow automation with trigger-based task assignment",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "In the automation rules panel, start a new rule choosing stage Qualified and template 'Intro Outreach' but leave the days field blank, then try to save.",
+     "expected_result": "The rule refuses to save with a validation message and nothing is added to the rules list.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Validation",
+       "Error Handling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open Priya Nair (already in Proposal), change her deal value to $22,500 and save, then check the tasks page and her message history.",
+     "expected_result": "No new task and no new message appear — the Proposal rule does not re-fire for a lead already sitting in that stage.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Trigger Semantics",
+       "Edge Case"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Move Rosa Delgado into Proposal and look at her message history.",
+     "expected_result": "A new message reads 'Hi Rosa, checking in on the $12,000 proposal for Brightline Media.'",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Automation Trigger",
+       "Text Substitution"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Move Marcus Webb into Proposal, then open the tasks page.",
+     "expected_result": "A 'Follow up on proposal' task for Marcus Webb · Ironpeak Logistics appears due July 4, 2026, and his message history shows the Proposal Follow-Up text with his details filled in.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Integration",
+       "Date Calculation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "Open Diego Santos's activity log, record one call, then look at his score and temperature tag.",
+     "expected_result": "His score changes from 2 to 3 and the tag flips from Cold to Warm.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Data Calculation",
+       "Regression"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "design-restyle",
+   "instruction": "The papaya-whip-and-orange thing has run its course — give the whole app a facelift. Primary action buttons go deep teal with white text, every page title gets centered with a thin dark-orange underline, cards and panels get 12px rounded corners with a soft drop shadow, and data tables get alternating row stripes. The score temperature tags become solid pills too: red for Hot, amber for Warm, light blue for Cold. I want this everywhere — the leads page, the template studio, reports with the forecast, the tasks page, and settings — not just the pages that were easy.",
+   "source_website": "Pipedrive",
+   "source_feature": "Pipedrive's clean card-and-pill visual design language (adapted into a full app restyle)",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Open the leads page, then the tasks page, and look at each page title.",
+     "expected_result": "Both titles are centered with a thin dark-orange underline — the same treatment on both pages.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Cross-page Consistency",
+       "Typography"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "On the leads page, look at the temperature tags across all six seeded leads.",
+     "expected_result": "Priya Nair and Lena Fischer show solid red pills (Hot), Marcus Webb and Rosa Delgado amber pills (Warm), Tom Okafor and Diego Santos light blue pills (Cold).",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Badge Styling",
+       "Data Display"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the template studio and the settings page and find the primary save/apply buttons on each.",
+     "expected_result": "Primary action buttons on both pages are deep teal with white text.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Cross-page Consistency",
+       "Color Scheme"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Compare the leads table and the forecast breakdown table on the reports page.",
+     "expected_result": "Both tables show alternating row striping — the restyle reached the forecast breakdown too.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Cross-page Consistency",
+       "Table Styling"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 4,
+     "task": "Open the reports page and read the weighted pipeline forecast headline number, then scan the per-lead breakdown.",
+     "expected_result": "The headline reads $33,020 and Diego Santos does not appear in the breakdown — Lost leads are excluded from the weighted total.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Calculation",
+       "Regression"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "I still can't tell who actually reads my outreach. Build an outreach hub: one feed of every message this app has sent — automation sends included — showing the recipient and a status that starts as Sent and can be flipped to Opened with a simulate-open control, one direction only and only once. When a message gets opened, that lead's engagement score goes up by 3 (plain sends shouldn't move the score at all), and give each lead's row a little envelope marker that changes once any of their messages has been opened. Assume 'Intro Outreach' already went to Marcus Webb and Rosa Delgado before today — both should be sitting in the hub unopened when I first look.",
+   "source_website": "HubSpot CRM",
+   "source_feature": "Email open tracking with follow-up notifications",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "In the outreach hub, click the simulate-open control on Marcus Webb's message, then go to the leads page and check Marcus Webb's row.",
+     "expected_result": "The envelope marker on his row shows opened and his engagement score now reads 8 with a Hot tag (it was 5, Warm, before the open).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Integration",
+       "Data Calculation",
+       "State Transition"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Simulate-open Rosa Delgado's message in the hub, then click the same open control or status again.",
+     "expected_result": "The message stays Opened with no way to revert, and Rosa's score lands on 8 exactly once — not 11.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Idempotency",
+       "State Transition"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the outreach hub fresh, before doing anything else.",
+     "expected_result": "Exactly two messages are listed — 'Intro Outreach' to Marcus Webb · Ironpeak Logistics and to Rosa Delgado · Brightline Media — both status Sent, neither opened.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "First-load State",
+       "Data Display"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the leads page, move Lena Fischer into Proposal, then open the outreach hub.",
+     "expected_result": "A new 'Proposal Follow-Up' message to Lena Fischer · Quartzline Systems appears in the feed with status Sent, and her score has not changed — sends don't add points.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Integration",
+       "Automation Trigger"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 5,
+     "task": "Move Rosa Delgado into Proposal and look at her message history.",
+     "expected_result": "A new message reads 'Hi Rosa, checking in on the $12,000 proposal for Brightline Media.'",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Automation Trigger",
+       "Regression"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Make the reports page mine. I want a build-your-own KPI dashboard with a picker of tiles — total open leads, average deal size over open leads only rounded to the nearest dollar, average engagement score across all leads to one decimal, weighted forecast, closed revenue, and leads by stage showing every stage even when it's sitting at zero — where I can add and remove tiles and the layout just reflows; if I remove everything, show a friendly nudge to add a first tile instead of a blank page. The weighted forecast tile has to read whatever the forecast page reads — same number, not a second calculation. Start me with two tiles already placed: total open leads and average deal size.",
+   "source_website": "Pipedrive",
+   "source_feature": "Customizable KPI dashboards with isolated metrics",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the reports dashboard and read the average deal size tile.",
+     "expected_result": "$12,690 — the average over the five open leads only ($8,500, $12,000, $15,750, $22,000, $5,200); a build that averages in the Lost lead would wrongly show $12,125.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Calculation",
+       "Filtering Logic",
+       "Rounding"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Add the average engagement score tile from the tile picker.",
+     "expected_result": "It reads 4.0 with a Warm tag — the mean of scores 5, 5, 6, 6, 0 and 2 to one decimal, temperature tag included.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Calculation",
+       "Global Convention"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Add the leads-by-stage tile from the tile picker.",
+     "expected_result": "Stages appear in pipeline order New, Contacted, Qualified, Proposal, Won, Lost — not alphabetical — with Won shown at 0 rather than omitted.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ordering",
+       "Zero-value Handling"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Add the weighted forecast tile, then in settings change the Contacted probability to 40 and return to the dashboard.",
+     "expected_result": "The tile reads $34,295 — the same figure the forecast page now shows.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Integration",
+       "Live Recalculation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "In the template editor, type {{firstname}} into the message body and try to save the template.",
+     "expected_result": "The editor flags {{firstname}} as an unsupported placeholder and the save is blocked until it's removed.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Validation",
+       "Regression"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "My sales team wants leads coming straight off our website. Build a lead-capture form builder in settings: I compose a form by picking from first name, last name, company, email and estimated deal value fields, and two panes stay live while I work — a rendered preview of the form and a copyable HTML embed snippet that always matches the chosen fields and title, down to the snippet's heading updating with the very next keystroke when I rename the form. The preview gets a test-submit that creates a real lead in the CRM with source 'Web Form', but block the submit if first name or company is blank. Load the builder with a starter form called 'Get a Quote' that has first name, last name, company and email.",
+   "source_website": "HubSpot CRM",
+   "source_feature": "Chatbot builder for 24/7 lead qualification (adapted into an embeddable lead-capture form builder)",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "In the form builder, change the form title from 'Get a Quote' to 'Get a Quote Now' and watch the embed snippet pane while typing.",
+     "expected_result": "The snippet's heading text updates to match with each keystroke — no save needed.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Preview",
+       "Code Generation"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Add the estimated deal value field to the starter form, then read the preview pane and the embed snippet.",
+     "expected_result": "Both show exactly five fields — first name, last name, company, email, estimated deal value — and the snippet's inputs match the preview one for one.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "State Synchronization",
+       "Code Generation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the preview, type 'Rivertown Co' as the company but leave first name blank, then test-submit.",
+     "expected_result": "The submit is blocked with a validation message and no lead gets created.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Validation",
+       "Error Handling"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Test-submit the preview with first name 'Alex', last name 'Rivera' and company 'Rivertown Co', then find the new lead in the leads list.",
+     "expected_result": "It appears as 'Alex Rivera · Rivertown Co' with source Web Form and a score of 0 tagged Cold.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Global Convention",
+       "CRUD Operations"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 7,
+     "task": "In the outreach hub, click the simulate-open control on Marcus Webb's message, then go to the leads page and check Marcus Webb's row.",
+     "expected_result": "The envelope marker on his row shows opened and his engagement score now reads 8 with a Hot tag (it was 5, Warm, before the open).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Integration",
+       "Regression"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Raw prospects are cluttering my pipeline. Split the leads area into two tabs — an Inbox for unvetted prospects and the Pipeline for everyone with a stage — and from now on web-form submissions land in the Inbox, not the Pipeline. Promoting someone out of the Inbox means giving them a stage and a deal value above zero (refuse otherwise), and until they're promoted, inbox prospects stay out of the forecast, the dashboard tiles, and the engagement score rankings entirely. Add an archive for dead prospects with a confirm step before anything disappears. Seed the Inbox with two: Nadia Boone from Skylark Dental with no value yet, and Omar Haddad from Petra Foods, guessing around $4,000.",
+   "source_website": "Pipedrive",
+   "source_feature": "Leads Inbox separate from active deals",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "From the Inbox tab, promote Omar Haddad choosing stage Contacted and typing 4000 as the deal value, then open the forecast.",
+     "expected_result": "The weighted total rises from $33,020 to $34,020 — Omar's $4,000 counted at Contacted's 25%.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Integration",
+       "Data Calculation",
+       "State Transition"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the Pipeline tab and sort by engagement score.",
+     "expected_result": "Nadia Boone and Omar Haddad appear nowhere in the Pipeline list or the score ranking — they exist only in the Inbox tab.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Filtering Logic",
+       "Data Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the Inbox, try promoting Nadia Boone with stage New and a deal value of 0.",
+     "expected_result": "The promotion is refused because the value must be above zero, and Nadia stays in the Inbox.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Validation",
+       "Boundary Condition"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the form builder preview, test-submit with first name 'Alex', last name 'Rivera' and company 'Rivertown Co', then open the leads tabs.",
+     "expected_result": "Alex Rivera · Rivertown Co sits in the Inbox tab, not the Pipeline.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Integration",
+       "Routing Logic"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 8,
+     "task": "Open the reports dashboard and read the average deal size tile.",
+     "expected_result": "$12,690 — the average over the five open leads only ($8,500, $12,000, $15,750, $22,000, $5,200); a build that averages in the Lost lead would wrongly show $12,125.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Calculation",
+       "Regression"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "target_app_summary": "The base lead-management CRM grows into a full sales platform. Discovery and prioritization come from an engagement scoring engine with per-lead activity logs (pinned six-lead seed) and later an Inbox/Pipeline triage split fed by a lead-capture form builder. Outreach grows into a template studio with live placeholder previews, trigger-based automation rules that send templates and create dated tasks, and an outreach hub with simulated open-tracking that feeds back into scores. Analytics grow into a weighted pipeline forecast with editable stage probabilities and a build-your-own KPI dashboard that must mirror the forecast. A mid-ladder app-wide restyle sweeps all surfaces. The graph has a deep chain (templates -> automation -> outreach hub) plus reconciliation edges (dashboard mirrors forecast; inbox exclusion constrains forecast, dashboard, and rankings).",
+ "dependency_graph": {
+  "nodes": [
+   {
+    "id": "T1",
+    "label": "base app",
+    "archetype": "base"
+   },
+   {
+    "id": "T2",
+    "label": "engagement scoring + activity log",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T3",
+    "label": "message template studio",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T4",
+    "label": "weighted pipeline forecast",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T5",
+    "label": "automation rules + tasks",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T6",
+    "label": "app-wide facelift",
+    "archetype": "design-restyle"
+   },
+   {
+    "id": "T7",
+    "label": "outreach hub + open tracking",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T8",
+    "label": "KPI dashboard builder",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T9",
+    "label": "lead-capture form builder",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T10",
+    "label": "inbox/pipeline triage",
+    "archetype": "multi-surface-workflow"
+   }
+  ],
+  "edges": [
+   {
+    "from": "T1",
+    "to": "T2",
+    "what": "base leads table and status editing that scores/activities attach to"
+   },
+   {
+    "from": "T1",
+    "to": "T3",
+    "what": "message-sending flow the templates plug into"
+   },
+   {
+    "from": "T1",
+    "to": "T4",
+    "what": "settings page hosting probabilities; lead stages and deal values"
+   },
+   {
+    "from": "T3",
+    "to": "T5",
+    "what": "saved templates with placeholders that rules send"
+   },
+   {
+    "from": "T1",
+    "to": "T5",
+    "what": "lead status changes that trigger rules"
+   },
+   {
+    "from": "T1",
+    "to": "T6",
+    "what": "leads, reports, settings pages restyled"
+   },
+   {
+    "from": "T2",
+    "to": "T6",
+    "what": "score temperature tags restyled as pills"
+   },
+   {
+    "from": "T3",
+    "to": "T6",
+    "what": "template studio restyled"
+   },
+   {
+    "from": "T4",
+    "to": "T6",
+    "what": "forecast breakdown table restyled"
+   },
+   {
+    "from": "T5",
+    "to": "T6",
+    "what": "tasks page restyled"
+   },
+   {
+    "from": "T5",
+    "to": "T7",
+    "what": "automation-sent messages populate the hub feed"
+   },
+   {
+    "from": "T2",
+    "to": "T7",
+    "what": "opens add +3 to the engagement score and re-rank"
+   },
+   {
+    "from": "T2",
+    "to": "T8",
+    "what": "average engagement score tile aggregates scores"
+   },
+   {
+    "from": "T4",
+    "to": "T8",
+    "what": "forecast tile must mirror the forecast page total"
+   },
+   {
+    "from": "T1",
+    "to": "T9",
+    "what": "test-submit creates a real lead in the CRM"
+   },
+   {
+    "from": "T9",
+    "to": "T10",
+    "what": "web-form submissions land in the Inbox"
+   },
+   {
+    "from": "T4",
+    "to": "T10",
+    "what": "promotion adds value x stage probability to the forecast"
+   },
+   {
+    "from": "T2",
+    "to": "T10",
+    "what": "inbox leads excluded from score rankings"
+   },
+   {
+    "from": "T8",
+    "to": "T10",
+    "what": "inbox leads excluded from dashboard tiles"
+   }
+  ]
+ },
+ "global_rules": [
+  {
+   "rule": "Every engagement score, anywhere it appears in the app, carries a temperature tag: 0-2 Cold, 3-5 Warm, 6+ Hot.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Leads are always written as first and last name, a middle dot, then company (e.g. 'Rosa Delgado · Brightline Media') everywhere they are referenced.",
+   "introduced_in_turn": 3
+  },
+  {
+   "rule": "Wherever stages appear as a list (dropdowns, breakdowns, reports), they follow pipeline order New, Contacted, Qualified, Proposal, Won, Lost — never alphabetical.",
+   "introduced_in_turn": 4
+  }
+ ],
+ "pinned_seed": {
+  "entity": "6 sales leads with company, deal value, stage, and logged activities",
+  "introduced_in_turn": 2,
+  "records_gist": "Marcus Webb/Ironpeak $8,500 Contacted (1 call, 2 sent emails -> score 5); Rosa Delgado/Brightline $12,000 Qualified (2 calls, 1 reply -> 5); Lena Fischer/Quartzline $15,750 Qualified (1 call, 1 sent, 1 reply -> 6); Priya Nair/Cobalt $22,000 Proposal (3 calls, 1 reply -> 6); Tom Okafor/Harbor & Finch $5,200 New (none -> 0); Diego Santos/Alturas $9,300 Lost (2 calls -> 2)"
+ }
+}

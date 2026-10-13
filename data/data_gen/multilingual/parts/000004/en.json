@@ -1,0 +1,873 @@
+{
+ "id": "000004",
+ "instruction": "Please implement a sports analytics website that provides basketball betting data and analysis. The website should have functionalities for data visualization, match prediction, and betting recommendations. Users should be able to browse data for basketball, view match history, team rankings, player performance, and make informed betting decisions based on the analysis results. Define the background as ghost white and components as slate gray.",
+ "Category": {
+  "primary_category": "Data Management",
+  "subcategories": [
+   "Data Visualization",
+   "API Integration",
+   "Big Data"
+  ]
+ },
+ "application_type": "Analytics Platforms/Dashboards",
+ "ui_instruct": [
+  {
+   "task": "Navigate to the sports data visualization section for basketball.",
+   "expected_result": "The page displays graphical representations of sports data relevant to the basketball, such as charts or graphs, without any layout issues or missing data points.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Data Visualization"
+    ]
+   }
+  },
+  {
+   "task": "Access the match prediction feature for an upcoming game.",
+   "expected_result": "The match prediction page correctly shows predicted outcomes with percentage probabilities, based on current data and analysis, without any technical errors or missing information.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering",
+     "Data Visualization"
+    ]
+   }
+  },
+  {
+   "task": "Use the search function to find a specific team's historical match data.",
+   "expected_result": "The search results page displays a list of matches involving the specified team, sorted chronologically, with complete match details such as scores and dates.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Searching"
+    ]
+   }
+  },
+  {
+   "task": "Check the team rankings page.",
+   "expected_result": "The page lists teams ranked according to their current standings, with clear markers indicating any ties, and contains accurate data consistent with known league standings.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering",
+     "Data Visualization"
+    ]
+   }
+  },
+  {
+   "task": "Evaluate the player performance section for individual stats.",
+   "expected_result": "The section shows detailed statistics for players, including metrics like goals, assists, and average ratings, with data clearly labeled and easy to interpret.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering",
+     "Data Visualization"
+    ]
+   }
+  },
+  {
+   "task": "Assess the betting recommendations provided for a specific match.",
+   "expected_result": "The recommendations offer actionable betting advice backed by data analysis, including relevant statistics or trends that support the suggestions.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering",
+     "Data Visualization"
+    ]
+   }
+  },
+  {
+   "task": "Verify that the website uses 'ghost white' as the background color and 'slate gray' as the component color, as specified in the design requirements.",
+   "expected_result": "The website has a background color of 'ghost white' and components (such as buttons, cards, headers, etc.) are styled with the color 'slate gray', accurately reflecting the design instruction.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "archetype": "derived-state",
+   "source_website": "https://www.dimers.com/bet-hub/nba/schedule",
+   "source_feature": "Odds Comparison Across Sportsbooks",
+   "instruction": "Love the predictions, but I shop lines, so give me a proper odds board page with the weekend's games grouped Friday through Sunday. Load exactly these six, home side's moneyline listed in BetNova, HoopLine, CourtSide order (I'll wire real feeds later): Fri Celtics @ Knicks, our model has the Knicks at 58%, -130 / -125 / -135; Fri Lakers @ Bulls, Bulls 44%, +140 / +145 / +140; Sat Suns @ Heat, Heat 51%, -105 / -110 / -102; Sat Nuggets @ Raptors, Raptors 38%, +170 / +165 / +170; Sun Warriors @ Mavericks, Mavericks 62%, -150 / -155 / -148; Sun Bucks @ Hornets, Hornets 47%, +120 / +118 / +125. Highlight each game's best home price along with which book has it (if two books tie for best, flag them both), and show the implied win probability baked into that best price, to one decimal. Two house styles for everything in this app, now and for anything we add later: odds always in American form with the sign showing (+145, -125, never decimal), and matchups always written away team @ home team.",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the odds board and read the implied win probability shown for the Celtics @ Knicks game's best price.",
+     "expected_result": "It reads 55.6%, derived from the best home price of -125 at HoopLine — not 56.5%, which would mean it was computed from BetNova's -130.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Visualization",
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Find the Nuggets @ Raptors game on the odds board and look at how the best price is marked.",
+     "expected_result": "The +170 price is flagged as best at both BetNova and CourtSide — both books marked — while HoopLine's +165 is not marked as best.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Look at the Warriors @ Mavericks game on the odds board.",
+     "expected_result": "CourtSide's -148 is highlighted as the best home price, not HoopLine's -155 — for negative American odds the number closest to even money is the better payout.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Scan the six games on the odds board.",
+     "expected_result": "Every matchup is written away team @ home team (e.g. Celtics @ Knicks) and every price carries an explicit + or - sign in American form, with no decimal odds anywhere.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Consistency Checks",
+       "Content Formatting"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 1,
+     "task": "Navigate to the team rankings section.",
+     "expected_result": "A ranked list of basketball teams is displayed with standings information for each team.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Dynamic Content Rendering"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "source_website": "https://www.dimers.com/bet-hub/nba/schedule",
+   "source_feature": "Parlay Builder",
+   "instruction": "Next up, a bet slip. Every game on that odds board gets an add-to-slip control that drops the home side in at its best available price, and the slip needs a stake box where the payout, profit, combined American odds, and the model's chance of the whole slip hitting (one decimal) all re-figure on every keystroke — money to the cent with a dollar sign. One leg per game (adding the same game twice should simply be refused), four legs tops with a clear message at the cap, and junk stakes — blank, zero, negative, letters — show an error instead of a number. Throw in a clear-the-slip control too.",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Add the Celtics @ Knicks and Lakers @ Bulls games to the bet slip, then type 10 into the stake box.",
+     "expected_result": "The slip shows payout $44.10 and profit $34.10 at combined odds of +341, with a 25.5% chance of hitting — not $42.46, which would mean the legs were priced off the first-listed book instead of the best prices (-125 and +145).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Real-time Updates"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Add the Suns @ Heat game to the slip and type abc into the stake box.",
+     "expected_result": "A clear invalid-stake error appears and no payout figure is shown — no NaN, no $NaN, no stale leftover number presented as valid.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Error Handling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Use the add-to-slip control on the Bucks @ Hornets game twice, then look at the slip.",
+     "expected_result": "The slip holds exactly one Hornets leg — the second add is refused or the control is disabled — and the slip's totals reflect a single leg.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "State Management"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the odds board, add the Nuggets @ Raptors game to the slip and look at the leg's listed price.",
+     "expected_result": "The leg shows the Raptors at +170, the same price the board flags as best for that game.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "Find the Nuggets @ Raptors game on the odds board and look at how the best price is marked.",
+     "expected_result": "The +170 price is flagged as best at both BetNova and CourtSide — both books marked — while HoopLine's +165 is not marked as best.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Dynamic Content Rendering"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "source_website": "https://www.dimers.com/bet-hub/nba/schedule",
+   "source_feature": "Best Bets Highlighter",
+   "instruction": "Here's the money page. Those betting recommendations you already give me just parrot whoever the model likes, with no notion of price — rebuild that feature into Best Bets: rank all six home sides by value edge — the model's win probability minus the implied probability of the best available price, shown in percentage points to one decimal with a sign, like +3.2 — and badge the top three. The edge has to be judged off the best shoppable price, not whichever book happens to be listed first; that's the whole point of the page. Add a minimum-edge box where I type a number and the list keeps only plays at or above it, with a count that matches what's actually showing, and when nothing clears the bar give me a plain note saying so instead of a blank page.",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Best Bets page on a fresh load and read the top three plays in order.",
+     "expected_result": "Top three are Bulls (+3.2), Hornets (+2.6), Knicks (+2.4). The Mavericks are not in the top three — if they appear second, edges were computed from first-listed book prices instead of best prices.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Calculation Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type 2.5 into the minimum-edge box on the Best Bets page.",
+     "expected_result": "Exactly two plays remain — Bulls (+3.2) and Hornets (+2.6) — and the displayed count reads 2, matching the visible list; the Knicks at +2.4 are excluded.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Count Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type 9 into the minimum-edge box on the Best Bets page.",
+     "expected_result": "A friendly nothing-clears-the-bar note is shown — no blank area, no broken list, no crash.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Empty State Handling",
+       "Filtering"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Compare the Suns @ Heat entry on Best Bets with the odds board's highlighted best price for that game.",
+     "expected_result": "Best Bets shows the Heat at edge +0.5 (51.0% minus the 50.5% implied by CourtSide's -102 best price), consistent with the price the board flags — an edge of -0.2 would mean it used BetNova's -105 instead.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Cross-feature Consistency",
+       "Calculation Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "Add the Celtics @ Knicks and Lakers @ Bulls games to the bet slip, then type 10 into the stake box.",
+     "expected_result": "The slip shows payout $44.10 and profit $34.10 at combined odds of +341, with a 25.5% chance of hitting — not $42.46, which would mean the legs were priced off the first-listed book instead of the best prices (-125 and +145).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Real-time Updates"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "source_website": "https://www.oddsshark.com/nba/database",
+   "source_feature": "Against-the-Spread (ATS) Record Display",
+   "instruction": "Let's book bets for real. From the slip I want a place-ticket step that walks me to a review screen — legs, stake, potential payout — before I confirm, and confirmed tickets land on a My Tickets page with Won/Lost settle controls, all running against a bankroll that starts at $1,000: the stake comes out the moment I confirm, a win pays the full payout back in, a loss pays nothing, and a stake bigger than the bankroll gets refused with a message. Pre-load one ticket I've already got running — $20 on the Mavericks moneyline at its best price, still pending — so the bankroll reads $980 from the start. And a house rule from here on out, everywhere and for anything we build later: any status shows as a colored pill, amber while something's pending or in progress, green for won or positive, red for lost or negative.",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the My Tickets page, settle the pending $20 Mavericks ticket as Won and read the bankroll.",
+     "expected_result": "The bankroll reads $1,013.51 — the full $33.51 payout at -148 credited on top of $980. Not $1,013.33 (that used -150 instead of the best price) and not $993.51 (that credited profit without returning the stake).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "State Management"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Add the Suns @ Heat game to the slip, type 5000 into the stake box, and try to place the ticket.",
+     "expected_result": "Placement is refused with a message about exceeding the bankroll; no ticket is created and the bankroll still reads $980.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Error Handling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Add the Bucks @ Hornets game to the slip, type 25 into the stake box, and go to the place-ticket review screen without confirming.",
+     "expected_result": "The review shows the Hornets leg at +125 with a $25 stake and a potential payout of $56.25, and the bankroll still reads $980 because nothing has been confirmed yet.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow Steps",
+       "Calculation Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Add the Celtics @ Knicks and Lakers @ Bulls games to the slip, type 10 into the stake box, place and confirm the ticket, then open My Tickets.",
+     "expected_result": "A two-leg ticket appears with a pending status shown as an amber pill and a potential payout of $44.10, and the bankroll reads $970.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow Steps",
+       "Cross-feature Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "Open the odds board and read the implied win probability shown for the Celtics @ Knicks game's best price.",
+     "expected_result": "It reads 55.6%, derived from the best home price of -125 at HoopLine — not 56.5%, which would mean it was computed from BetNova's -130.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Data Visualization",
+       "Dynamic Content Rendering"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "source_website": "https://www.dimers.com/bet-hub/nba/schedule",
+   "source_feature": "Player Prop Betting Engine",
+   "instruction": "I want to second-guess the model when news breaks. Build an adjustments panel covering each of the six games: a star-player-sidelined switch that docks the home side 8.0 points of win probability, a back-to-back switch that docks 3.0, and a box where I can just type my own probability outright — reject anything outside 0 to 100 with an error message. Every flip or keystroke should move that game's adjusted probability on the spot, and the Best Bets rankings should re-rank live off my adjusted numbers with an 'adj' marker on any play I've touched. One reset control puts everything back to the model's originals.",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Flip the star-player-sidelined switch for the Celtics @ Knicks game, then open the Best Bets rankings.",
+     "expected_result": "The Knicks' adjusted probability shows 50.0% with an edge of -5.6, the Knicks drop out of the top three, and the top three now read Bulls, Hornets, Mavericks, with an 'adj' marker on the Knicks play.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Real-time Updates",
+       "Calculation Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the adjustments panel, type 150 into the manual win-probability box for the Suns @ Heat game.",
+     "expected_result": "The value is rejected with a validation message and the Heat's probability stays 51.0% — no adjusted value of 150 shows up anywhere.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Error Handling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Flip both the star-player-sidelined and back-to-back switches for the Bucks @ Hornets game, then use the reset control.",
+     "expected_result": "With both switches on, the Hornets' adjusted probability reads 36.0% (47 minus 8 minus 3); after reset it returns to 47.0% and no 'adj' markers remain anywhere.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Management",
+       "Calculation Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Flip the back-to-back switch for the Lakers @ Bulls game, then check the top of the Best Bets rankings.",
+     "expected_result": "The Bulls' edge falls to +0.2 (41.0% minus the 40.8% implied by +145) and they lose the top spot; the Hornets (+2.6) move to #1 and the Bulls play carries an 'adj' marker.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Real-time Updates",
+       "Cross-feature Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 4,
+     "task": "Open the Best Bets page on a fresh load and read the top three plays in order.",
+     "expected_result": "Top three are Bulls (+3.2), Hornets (+2.6), Knicks (+2.4). The Mavericks are not in the top three — if they appear second, edges were computed from first-listed book prices instead of best prices.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Calculation Accuracy"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "source_website": "https://www.oddsshark.com/nba/database",
+   "source_feature": "Spread Range Filter (fused with Back-to-Back Game Filter and Head-to-Head Historical Matchup Query)",
+   "instruction": "Big swing: the match-history lookup you built tells me who won and nothing else, so upgrade it into a matchup research center that grades every meeting against the betting market. I pick two teams and each past meeting on file gets a full workup — score, the first team's closing spread and whether they covered, the total line and whether it went over, under, or landed exactly on the number (a push is a push, never lumped into either side), plus whether the first team was on a back-to-back. Above the list goes a summary strip with straight-up, against-the-spread, and over/under records plus how many of the total meetings are showing; below it, a typed min/max spread window and a back-to-back-only checkbox that narrow the list together, with the records recomputing over just what's visible. Load the Knicks-Celtics file from the Knicks' side: 112-108 win (-3.5, covered; 220 on a 221.5 line, under; rested), 99-121 loss (+2.5, missed; 220 on 224.5, under; back-to-back), 105-103 win (+6.5, covered; 208 on 210.5, under; back-to-back), 114-118 loss (-1.5, missed; 232 on 232, push; rested), 96-94 win (+4.5, covered; 190 on 195.5, under; rested), 120-130 loss (+7.5, missed; 250 on 243.5, over; back-to-back) — any other pairing shows a tidy no-meetings-on-file note. Tie it into the board too: every game card there gets a research link that lands here pre-filtered to its two teams, and when the pair I'm researching also meets on this weekend's slate, banner that game with its best price.",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "In the research center, pick the Knicks and the Celtics and read the summary strip above the meetings list.",
+     "expected_result": "Straight-up record 3-3, against-the-spread 3-3, and over/under 1-4-1 — the 232-point game on a 232 line counted as a push, not folded into overs or unders — with all 6 of 6 meetings showing.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Edge Case Handling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "With the Knicks-Celtics meetings loaded, check the back-to-back-only box and type 2 and 7 into the min and max spread boxes.",
+     "expected_result": "Only the 99-121 and 105-103 meetings remain (the back-to-back games at +2.5 and +6.5 — the rested +4.5 game and the +7.5 game are both excluded) and the ATS record in the summary reads 1-1, recomputed over just the visible rows.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Boolean Composition"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Pick the Knicks and the Celtics in the research center and look for the upcoming-game banner.",
+     "expected_result": "A banner shows Friday's Celtics @ Knicks slate game with its best price of -125 at HoopLine.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Cross-feature Consistency",
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the odds board, use the research link on the Warriors @ Mavericks card.",
+     "expected_result": "The research center opens pre-filtered to the Warriors and Mavericks, shows the tidy no-meetings-on-file note instead of a blank or broken list, and banners the upcoming Sunday game with its best price of -148 at CourtSide.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Navigation",
+       "Empty State Handling"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 5,
+     "task": "On the My Tickets page, settle the pending $20 Mavericks ticket as Won and read the bankroll.",
+     "expected_result": "The bankroll reads $1,013.51 — the full $33.51 payout at -148 credited on top of $980. Not $1,013.33 (that used -150 instead of the best price) and not $993.51 (that credited profit without returning the stake).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "State Management"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "source_website": "https://www.dimers.com/bet-hub/nba/schedule",
+   "source_feature": "Best Bets Highlighter (extended into edge watch alerts)",
+   "instruction": "I keep missing my entry points when news moves the numbers. Give me watch alerts: every play on Best Bets gets a watch-this action where I type in a target edge, and watched plays carry a watched marker right on the list. An Alerts page collects my watches — each one shows its play, the target, and the play's live edge, my adjustments included — with a state pill per the house style: green and fired the moment the live edge sits at or above the target, amber and armed while it's short. Junk targets — blank, letters — get refused with a message, every watch re-figures the instant an adjustment moves an edge, and removing a watch from the Alerts page also wipes its marker off Best Bets.",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On Best Bets, set a watch on the Mavericks play with a target edge of 2.2, then open the Alerts page.",
+     "expected_result": "The Mavericks watch shows a live edge of +2.3 against the 2.2 target and reads fired with a green pill — not armed at +2.0, which is what you'd see if the edge were figured off BetNova's -150 instead of the best-price -148.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Cross-feature Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Set a watch on the Heat play with a target edge of 1.0, then open the Alerts page and glance back at the Best Bets list.",
+     "expected_result": "The Heat watch reads armed with an amber pill — its +0.5 edge is short of the 1.0 target — and the Heat play carries a watched marker on the Best Bets list.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Management",
+       "Cross-feature Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Set a watch on the Hornets play with a target edge of 1.0, then remove it from the Alerts page and look back at Best Bets.",
+     "expected_result": "The removed watch disappears from the Alerts page and the Hornets play's watched marker is gone from the Best Bets list — removing on one page cleans up the other.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Management",
+       "Cross-feature Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Set a watch on the Bulls play with a target edge of 1.0, then flip the back-to-back switch for the Lakers @ Bulls game in the adjustments panel.",
+     "expected_result": "The watch flips from fired to armed on the spot — the Bulls' live edge falls to +0.2 (41.0% minus the 40.8% implied by +145), short of the 1.0 target — and its pill turns from green to amber.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Real-time Updates",
+       "Cross-feature Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 6,
+     "task": "Flip the star-player-sidelined switch for the Celtics @ Knicks game, then open the Best Bets rankings.",
+     "expected_result": "The Knicks' adjusted probability shows 50.0% with an edge of -5.6, the Knicks drop out of the top three, and the top three now read Bulls, Hornets, Mavericks, with an 'adj' marker on the Knicks play.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Real-time Updates",
+       "Calculation Accuracy"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "source_website": "https://www.oddsshark.com/nba/database",
+   "source_feature": "Against-the-Spread (ATS) Record Display (adapted into a personal performance ledger)",
+   "instruction": "Tickets are piling up, so build me a Performance page off My Tickets: net profit or loss, ROI as profit over total staked to one decimal, my overall win-loss record, and a singles-versus-parlays split, plus a settled-ticket ledger under the headline numbers listing each settled ticket with its stake and its signed dollar profit or loss. Settled tickets only — a pending ticket counts nowhere until it's decided — and treat profits as cash: each ticket's profit or loss locks to the cent the moment it settles, and every total on the page adds up those cent amounts. Everything re-figures the moment I settle something. Backfill the ledger with three settled tickets so the page isn't blank on day one: a $25 single on the Mavericks at their best price that won, a $10 parlay on the Knicks and Bulls at best prices that lost, and a $15 single on the Hornets at best price that won.",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Performance page on a fresh load and read the headline figures.",
+     "expected_result": "Net profit +$25.64, ROI 51.3%, and an overall record of 2-1 — not +$24.67 / 49.3%, which would mean the wins were priced off first-listed books instead of the best prices (-148 and +125).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On My Tickets, settle the pending $20 Mavericks ticket as Lost, then open the Performance page.",
+     "expected_result": "Net profit drops to +$5.64, ROI reads 8.1% ($5.64 over $70 now staked), the record reads 2-2, and the singles split reads 2-1.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Real-time Updates",
+       "Calculation Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the Performance page while the $20 Mavericks ticket is still pending and read the singles-versus-parlays split and the total staked.",
+     "expected_result": "Singles 2-0, parlays 0-1, and total staked $50 — the pending $20 ticket is not counted in any figure on the page.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Edge Case Handling"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Settle the pending $20 Mavericks ticket as Won on My Tickets, then open the Performance page.",
+     "expected_result": "Net profit rises to +$39.15 (up exactly $13.51), the record reads 3-1, the singles split reads 3-0, and ROI reads 55.9%.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Consistency",
+       "Real-time Updates"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 7,
+     "task": "In the research center, pick the Knicks and the Celtics and read the summary strip above the meetings list.",
+     "expected_result": "Straight-up record 3-3, against-the-spread 3-3, and over/under 1-4-1 — the 232-point game on a 232 line counted as a push, not folded into overs or unders — with all 6 of 6 meetings showing.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Edge Case Handling"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "design-restyle",
+   "source_website": "https://www.dimers.com/bet-hub/nba/schedule",
+   "source_feature": "Best Bets Highlighter (visual value-highlighting language)",
+   "instruction": "Time for the rebrand — the ghost-white look has run its course, and I don't want a half-painted app. Everywhere: page titles go uppercase and left-aligned; primary action controls like add-to-slip and the settle buttons switch to a deep emerald green; game and ticket cards get a consistent rounded-corner look (around 12px) with a visible border; every positive figure — edges, profits — renders in green and every negative one in red; and sportsbook names appear as small uppercase tags wherever a price is shown. Apply all of it across the odds board, Best Bets, My Tickets, the research center, Performance, and the old team rankings page — every one of them, consistently.",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Best Bets page and look at the Bulls play's edge figure.",
+     "expected_result": "It reads +3.2 and is rendered in green, per the positive-numbers-green rule of the rebrand.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Color Scheme",
+       "Data Visualization"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the odds board, then the research center, then the team rankings page, and look at each page title.",
+     "expected_result": "All three page titles are uppercase and left-aligned — including the original team rankings page, not just the newer pages.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Consistency Checks",
+       "Typography"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On My Tickets, look at the pending $20 Mavericks ticket card, then find the Warriors @ Mavericks game on the odds board.",
+     "expected_result": "The ticket card has rounded corners with a visible border and its pending status is still an amber pill; on the odds board, each of that game's three prices carries its sportsbook name as a small uppercase tag (BETNOVA, HOOPLINE, COURTSIDE).",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Component Styling",
+       "Consistency Checks"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Open the Performance page and check how the backfilled profit and loss figures are colored.",
+     "expected_result": "The positive net profit (+$25.64) renders in green and the lost parlay's -$10.00 line in the settled-ticket ledger renders in red, with the page title uppercase and left-aligned.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Color Scheme",
+       "Cross-feature Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 8,
+     "task": "On Best Bets, set a watch on the Mavericks play with a target edge of 2.2, then open the Alerts page.",
+     "expected_result": "The Mavericks watch shows a live edge of +2.3 against the 2.2 target and reads fired with a green pill — not armed at +2.0, which is what you'd see if the edge were figured off BetNova's -150 instead of the best-price -148.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Cross-feature Consistency"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "target_app_summary": "The basketball prediction site grows into a full line-shopping and bet-management platform. A pinned six-game weekend odds board carrying the base model's win probabilities and home moneylines at three sportsbooks becomes the data spine: a parlay slip books legs at best prices, the base betting-recommendations feature is rebuilt into a Best Bets value-edge ranking, an adjustments panel lets users override model probabilities and re-rank the edges live, and watch alerts with typed target edges flip between fired and armed as those numbers move. A ticket-placement workflow with a bankroll feeds a Performance analytics page (ROI, records, singles-vs-parlays, a cent-locked settled-ticket ledger), while the base match-history lookup is upgraded into a matchup research center grading past meetings against closing lines with ATS/over-under records and push handling, deep-linked from the board. A final emerald rebrand sweeps every surface including the original rankings page. The graph roots at the base app: predictions -> board -> slip -> tickets -> performance (5 deep from T1) and board -> edge finder -> adjustments -> watch alerts.",
+ "dependency_graph": {
+  "nodes": [
+   {
+    "id": "T1",
+    "label": "base app",
+    "archetype": "base"
+   },
+   {
+    "id": "T2",
+    "label": "Multi-book odds board",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T3",
+    "label": "Parlay bet slip",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T4",
+    "label": "Best Bets edge finder",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T5",
+    "label": "Ticket booking & bankroll",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T6",
+    "label": "Model adjustments panel",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T7",
+    "label": "Matchup research center",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T8",
+    "label": "Edge watch alerts",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T9",
+    "label": "Performance analytics",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T10",
+    "label": "Emerald rebrand",
+    "archetype": "design-restyle"
+   }
+  ],
+  "edges": [
+   {
+    "from": "T1",
+    "to": "T2",
+    "what": "board carries the base model's win probabilities per game"
+   },
+   {
+    "from": "T1",
+    "to": "T4",
+    "what": "rebuilds the base betting recommendations as market-relative value edges"
+   },
+   {
+    "from": "T1",
+    "to": "T7",
+    "what": "upgrades the base match-history lookup with betting-market grading"
+   },
+   {
+    "from": "T2",
+    "to": "T3",
+    "what": "slip legs priced at the board's best prices"
+   },
+   {
+    "from": "T2",
+    "to": "T4",
+    "what": "edges computed off best-price implied probabilities"
+   },
+   {
+    "from": "T2",
+    "to": "T7",
+    "what": "board research links + upcoming-game banner with best price"
+   },
+   {
+    "from": "T3",
+    "to": "T5",
+    "what": "tickets are placed from the slip's legs and stake"
+   },
+   {
+    "from": "T4",
+    "to": "T6",
+    "what": "adjusted probabilities re-rank the edge list live"
+   },
+   {
+    "from": "T4",
+    "to": "T8",
+    "what": "watch targets and live edges pulled from the Best Bets list"
+   },
+   {
+    "from": "T5",
+    "to": "T9",
+    "what": "aggregates the settled ticket ledger and bankroll math"
+   },
+   {
+    "from": "T1",
+    "to": "T10",
+    "what": "restyles team rankings page"
+   },
+   {
+    "from": "T2",
+    "to": "T10",
+    "what": "restyles odds board"
+   },
+   {
+    "from": "T4",
+    "to": "T10",
+    "what": "restyles Best Bets with green/red value coloring"
+   },
+   {
+    "from": "T5",
+    "to": "T10",
+    "what": "restyles My Tickets cards"
+   },
+   {
+    "from": "T7",
+    "to": "T10",
+    "what": "restyles research center"
+   },
+   {
+    "from": "T9",
+    "to": "T10",
+    "what": "restyles Performance figures green/red"
+   },
+   {
+    "from": "T6",
+    "to": "T8",
+    "what": "adjusted probabilities flip watches between fired and armed live"
+   },
+   {
+    "from": "T3",
+    "to": "T10",
+    "what": "restyles the add-to-slip primary action controls emerald"
+   }
+  ]
+ },
+ "global_rules": [
+  {
+   "rule": "Odds are always displayed in American form with an explicit sign (+145, -125), never as decimal odds, everywhere in the app.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Matchups are always written as away team @ home team on every surface.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Any status anywhere is shown as a colored pill: amber for pending/in-progress, green for won/positive, red for lost/negative.",
+   "introduced_in_turn": 5
+  }
+ ],
+ "pinned_seed": {
+  "entity": "6 weekend NBA games with model home-win probabilities and home moneylines at three books (BetNova, HoopLine, CourtSide)",
+  "introduced_in_turn": 2,
+  "records_gist": "Fri Celtics@Knicks 58% -130/-125/-135; Fri Lakers@Bulls 44% +140/+145/+140; Sat Suns@Heat 51% -105/-110/-102; Sat Nuggets@Raptors 38% +170/+165/+170; Sun Warriors@Mavericks 62% -150/-155/-148; Sun Bucks@Hornets 47% +120/+118/+125"
+ }
+}

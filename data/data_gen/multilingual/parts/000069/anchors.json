@@ -1,0 +1,1076 @@
+{
+ "anchors": [
+  {
+   "en": "archive",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    4,
+    6,
+    9
+   ],
+   "translations": {
+    "es": "archivo",
+    "zh": "存档",
+    "he": "ארכיון",
+    "hi": "संग्रह",
+    "sw": "kumbukumbu",
+    "de": "Archiv",
+    "fr": "archives"
+   }
+  },
+  {
+   "en": "Review Desk",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    6,
+    7,
+    8
+   ],
+   "translations": {
+    "es": "Mesa de Revisión",
+    "zh": "审核台",
+    "he": "שולחן הבדיקה",
+    "hi": "समीक्षा डेस्क",
+    "sw": "Dawati la Ukaguzi",
+    "de": "Prüfstelle",
+    "fr": "Bureau de Révision"
+   }
+  },
+  {
+   "en": "Ask the Community",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5,
+    10
+   ],
+   "translations": {
+    "es": "Pregunta a la Comunidad",
+    "zh": "向社区提问",
+    "he": "שאלו את הקהילה",
+    "hi": "समुदाय से पूछें",
+    "sw": "Uliza Jamii",
+    "de": "Frag die Community",
+    "fr": "Demandez à la Communauté"
+   }
+  },
+  {
+   "en": "My Feed",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    10
+   ],
+   "translations": {
+    "es": "Mi Muro",
+    "zh": "我的订阅",
+    "he": "הפיד שלי",
+    "hi": "मेरी फ़ीड",
+    "sw": "Mlisho Wangu",
+    "de": "Mein Feed",
+    "fr": "Mon Fil"
+   }
+  },
+  {
+   "en": "Trending This Week",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "Tendencias de la Semana",
+    "zh": "本周热门",
+    "he": "המובילים השבוע",
+    "hi": "इस हफ़्ते ट्रेंडिंग",
+    "sw": "Zinazovuma Wiki Hii",
+    "de": "Diese Woche im Trend",
+    "fr": "Tendances de la Semaine"
+   }
+  },
+  {
+   "en": "This Week in Health",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    7
+   ],
+   "translations": {
+    "es": "Esta Semana en Salud",
+    "zh": "本周健康",
+    "he": "השבוע בבריאות",
+    "hi": "इस हफ़्ते स्वास्थ्य में",
+    "sw": "Wiki Hii Katika Afya",
+    "de": "Diese Woche in Sachen Gesundheit",
+    "fr": "Cette Semaine en Santé"
+   }
+  },
+  {
+   "en": "engagement dashboard",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "panel de interacción",
+    "zh": "互动仪表盘",
+    "he": "לוח מעורבות",
+    "hi": "एंगेजमेंट डैशबोर्ड",
+    "sw": "dashibodi ya mwingiliano",
+    "de": "Engagement-Dashboard",
+    "fr": "tableau de bord d'engagement"
+   }
+  },
+  {
+   "en": "digest composer",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    7
+   ],
+   "translations": {
+    "es": "compositor del boletín",
+    "zh": "摘要编辑器",
+    "he": "עורך התקציר",
+    "hi": "डाइजेस्ट कंपोज़र",
+    "sw": "kitunga muhtasari",
+    "de": "Digest-Editor",
+    "fr": "compositeur de newsletter"
+   }
+  },
+  {
+   "en": "subscribe box",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    7,
+    9
+   ],
+   "translations": {
+    "es": "casilla de suscripción",
+    "zh": "订阅框",
+    "he": "תיבת הרשמה",
+    "hi": "सब्सक्राइब बॉक्स",
+    "sw": "kisanduku cha kujiandikisha",
+    "de": "Abo-Feld",
+    "fr": "boîte d'abonnement"
+   }
+  },
+  {
+   "en": "discussion board",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4
+   ],
+   "translations": {
+    "es": "tablón de discusión",
+    "zh": "讨论区",
+    "he": "לוח הדיונים",
+    "hi": "चर्चा बोर्ड",
+    "sw": "ubao wa majadiliano",
+    "de": "Diskussionsforum",
+    "fr": "forum de discussion"
+   }
+  },
+  {
+   "en": "community landing page",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4,
+    9
+   ],
+   "translations": {
+    "es": "página principal de la comunidad",
+    "zh": "社区主页",
+    "he": "עמוד הבית של הקהילה",
+    "hi": "समुदाय का मुख्य पेज",
+    "sw": "ukurasa mkuu wa jamii",
+    "de": "Community-Startseite",
+    "fr": "page d'accueil de la communauté"
+   }
+  },
+  {
+   "en": "reviewed-only",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    4,
+    6
+   ],
+   "translations": {
+    "es": "solo revisados",
+    "zh": "仅已审核",
+    "he": "נבדקו בלבד",
+    "hi": "केवल समीक्षित",
+    "sw": "zilizokaguliwa pekee",
+    "de": "nur geprüfte",
+    "fr": "révisés uniquement"
+   }
+  },
+  {
+   "en": "maximum read time",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3
+   ],
+   "translations": {
+    "es": "tiempo máximo de lectura",
+    "zh": "最长阅读时间",
+    "he": "זמן קריאה מרבי",
+    "hi": "अधिकतम पठन समय",
+    "sw": "muda wa juu wa kusoma",
+    "de": "maximale Lesezeit",
+    "fr": "temps de lecture maximum"
+   }
+  },
+  {
+   "en": "score cutoff",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "corte de puntuación",
+    "zh": "分数下限",
+    "he": "סף ניקוד",
+    "hi": "स्कोर कटऑफ़",
+    "sw": "kikomo cha alama",
+    "de": "Score-Grenzwert",
+    "fr": "seuil de score"
+   }
+  },
+  {
+   "en": "Medically Reviewed",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    6,
+    7,
+    9
+   ],
+   "translations": {
+    "es": "Revisado Médicamente",
+    "zh": "医学审核",
+    "he": "נבדק רפואית",
+    "hi": "चिकित्सकीय समीक्षित",
+    "sw": "Imekaguliwa Kitabibu",
+    "de": "Medizinisch geprüft",
+    "fr": "Révisé Médicalement"
+   }
+  },
+  {
+   "en": "Editorial",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    6,
+    7,
+    8,
+    9
+   ],
+   "translations": {
+    "es": "Editorial",
+    "zh": "编辑部",
+    "he": "מערכת",
+    "hi": "संपादकीय",
+    "sw": "Uhariri",
+    "de": "Redaktionell",
+    "fr": "Éditorial"
+   }
+  },
+  {
+   "en": "min read",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    7
+   ],
+   "translations": {
+    "es": "min de lectura",
+    "zh": "分钟阅读",
+    "he": "דקות קריאה",
+    "hi": "मिनट पठन",
+    "sw": "dakika za kusoma",
+    "de": "Min. Lesezeit",
+    "fr": "min de lecture"
+   }
+  },
+  {
+   "en": "Showing X of 8 articles",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2
+   ],
+   "translations": {
+    "es": "Mostrando X de 8 artículos",
+    "zh": "显示 8 篇文章中的 X 篇",
+    "he": "מוצגים X מתוך 8 מאמרים",
+    "hi": "8 लेखों में से X दिखाए जा रहे हैं",
+    "sw": "Inaonyesha X kati ya makala 8",
+    "de": "X von 8 Artikeln werden angezeigt",
+    "fr": "Affichage de X sur 8 articles"
+   }
+  },
+  {
+   "en": "Showing 2 of 8 articles",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    4
+   ],
+   "translations": {
+    "es": "Mostrando 2 de 8 artículos",
+    "zh": "显示 8 篇文章中的 2 篇",
+    "he": "מוצגים 2 מתוך 8 מאמרים",
+    "hi": "8 लेखों में से 2 दिखाए जा रहे हैं",
+    "sw": "Inaonyesha 2 kati ya makala 8",
+    "de": "2 von 8 Artikeln werden angezeigt",
+    "fr": "Affichage de 2 sur 8 articles"
+   }
+  },
+  {
+   "en": "Following",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    10
+   ],
+   "translations": {
+    "es": "Siguiendo",
+    "zh": "已关注",
+    "he": "עוקב",
+    "hi": "फ़ॉलो किया",
+    "sw": "Ninafuatilia",
+    "de": "Folge ich",
+    "fr": "Suivi"
+   }
+  },
+  {
+   "en": "Quiz pick",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    10
+   ],
+   "translations": {
+    "es": "Elección del cuestionario",
+    "zh": "测验选择",
+    "he": "בחירת השאלון",
+    "hi": "क्विज़ चयन",
+    "sw": "Chaguo la Jaribio",
+    "de": "Quiz-Wahl",
+    "fr": "Choix du quiz"
+   }
+  },
+  {
+   "en": "Quiz-pick",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    10
+   ],
+   "translations": {
+    "es": "Elección del cuestionario",
+    "zh": "测验选择",
+    "he": "בחירת השאלון",
+    "hi": "क्विज़ चयन",
+    "sw": "Chaguo la Jaribio",
+    "de": "Quiz-Wahl",
+    "fr": "Choix du quiz"
+   }
+  },
+  {
+   "en": "What's your wellness focus?",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3
+   ],
+   "translations": {
+    "es": "¿Cuál es tu enfoque de bienestar?",
+    "zh": "你的健康关注点是什么？",
+    "he": "מהו מוקד הבריאות שלך?",
+    "hi": "आपका वेलनेस फ़ोकस क्या है?",
+    "sw": "Lengo la ustawi wako ni lipi?",
+    "de": "Was ist dein Wellness-Fokus?",
+    "fr": "Quel est votre axe bien-être ?"
+   }
+  },
+  {
+   "en": "wellness focus",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    5
+   ],
+   "translations": {
+    "es": "enfoque de bienestar",
+    "zh": "健康关注点",
+    "he": "מוקד הבריאות",
+    "hi": "वेलनेस फ़ोकस",
+    "sw": "lengo la ustawi",
+    "de": "Wellness-Fokus",
+    "fr": "axe bien-être"
+   }
+  },
+  {
+   "en": "Nutrition",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    8,
+    10
+   ],
+   "translations": {
+    "es": "Nutrición",
+    "zh": "营养",
+    "he": "תזונה",
+    "hi": "पोषण",
+    "sw": "Lishe",
+    "de": "Ernährung",
+    "fr": "Nutrition"
+   }
+  },
+  {
+   "en": "Fitness",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    7,
+    8,
+    10
+   ],
+   "translations": {
+    "es": "Ejercicio",
+    "zh": "健身",
+    "he": "כושר",
+    "hi": "फ़िटनेस",
+    "sw": "Utimamu wa Mwili",
+    "de": "Fitness",
+    "fr": "Forme physique"
+   }
+  },
+  {
+   "en": "Sleep",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10
+   ],
+   "translations": {
+    "es": "Sueño",
+    "zh": "睡眠",
+    "he": "שינה",
+    "hi": "नींद",
+    "sw": "Usingizi",
+    "de": "Schlaf",
+    "fr": "Sommeil"
+   }
+  },
+  {
+   "en": "Mind",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "translations": {
+    "es": "Mente",
+    "zh": "心理",
+    "he": "נפש",
+    "hi": "मन",
+    "sw": "Akili",
+    "de": "Psyche",
+    "fr": "Mental"
+   }
+  },
+  {
+   "en": "Understanding Gut Bacteria",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    4,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "translations": {
+    "es": "Entendiendo las bacterias intestinales",
+    "zh": "了解肠道细菌",
+    "he": "להבין את חיידקי המעיים",
+    "hi": "आंत के बैक्टीरिया को समझना",
+    "sw": "Kuelewa bakteria ya utumbo",
+    "de": "Darmbakterien verstehen",
+    "fr": "Comprendre les bactéries intestinales"
+   }
+  },
+  {
+   "en": "Gut Bacteria",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    4,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "translations": {
+    "es": "bacterias intestinales",
+    "zh": "肠道细菌",
+    "he": "חיידקי המעיים",
+    "hi": "आंत के बैक्टीरिया",
+    "sw": "bakteria ya utumbo",
+    "de": "Darmbakterien",
+    "fr": "bactéries intestinales"
+   }
+  },
+  {
+   "en": "Beginner's Guide to Meal Prep",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    4,
+    7,
+    10
+   ],
+   "translations": {
+    "es": "Guía para principiantes de preparación de comidas",
+    "zh": "备餐入门指南",
+    "he": "מדריך למתחילים בהכנת ארוחות",
+    "hi": "भोजन तैयारी की शुरुआती गाइड",
+    "sw": "Mwongozo wa anayeanza wa kuandaa milo",
+    "de": "Anfängerleitfaden zur Essensvorbereitung",
+    "fr": "Guide du débutant pour la préparation des repas"
+   }
+  },
+  {
+   "en": "Meal Prep",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    4,
+    7,
+    8,
+    10
+   ],
+   "translations": {
+    "es": "preparación de comidas",
+    "zh": "备餐",
+    "he": "הכנת ארוחות",
+    "hi": "भोजन तैयारी",
+    "sw": "kuandaa milo",
+    "de": "Essensvorbereitung",
+    "fr": "préparation des repas"
+   }
+  },
+  {
+   "en": "Hydration Myths Debunked",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    3,
+    6,
+    10
+   ],
+   "translations": {
+    "es": "Mitos de la hidratación desmentidos",
+    "zh": "破解补水迷思",
+    "he": "מיתוסים על שתייה מנופצים",
+    "hi": "हाइड्रेशन के मिथक ध्वस्त",
+    "sw": "Kuvunja imani potofu za unywaji maji",
+    "de": "Hydrations-Mythen entlarvt",
+    "fr": "Mythes sur l'hydratation démystifiés"
+   }
+  },
+  {
+   "en": "10-Minute Morning Stretch Routine",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    3,
+    7,
+    8
+   ],
+   "translations": {
+    "es": "Rutina matutina de estiramientos de 10 minutos",
+    "zh": "10 分钟晨间拉伸例程",
+    "he": "שגרת מתיחות בוקר של 10 דקות",
+    "hi": "10 मिनट की सुबह की स्ट्रेचिंग दिनचर्या",
+    "sw": "Ratiba ya kunyoosha mwili ya dakika 10 asubuhi",
+    "de": "10-minütige Morgen-Dehnroutine",
+    "fr": "Routine d'étirements matinaux de 10 minutes"
+   }
+  },
+  {
+   "en": "Strength Training After 50",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    3,
+    7
+   ],
+   "translations": {
+    "es": "Entrenamiento de fuerza después de los 50",
+    "zh": "50 岁后的力量训练",
+    "he": "אימוני כוח אחרי גיל 50",
+    "hi": "50 के बाद स्ट्रेंथ ट्रेनिंग",
+    "sw": "Mazoezi ya nguvu baada ya miaka 50",
+    "de": "Krafttraining ab 50",
+    "fr": "Musculation après 50 ans"
+   }
+  },
+  {
+   "en": "The Science of Cold Showers",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    3,
+    6
+   ],
+   "translations": {
+    "es": "La ciencia de las duchas frías",
+    "zh": "冷水澡的科学",
+    "he": "המדע שמאחורי מקלחות קרות",
+    "hi": "ठंडे स्नान का विज्ञान",
+    "sw": "Sayansi ya kuoga maji baridi",
+    "de": "Die Wissenschaft der kalten Duschen",
+    "fr": "La science des douches froides"
+   }
+  },
+  {
+   "en": "Sleep Debt: Myth or Real?",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    6,
+    8,
+    9,
+    10
+   ],
+   "translations": {
+    "es": "Deuda de sueño: ¿mito o realidad?",
+    "zh": "睡眠债：迷思还是真实？",
+    "he": "חוב שינה: מיתוס או מציאות?",
+    "hi": "नींद का कर्ज़: मिथक या हकीकत?",
+    "sw": "Deni la usingizi: uongo au ukweli?",
+    "de": "Schlafschuld: Mythos oder Realität?",
+    "fr": "Dette de sommeil : mythe ou réalité ?"
+   }
+  },
+  {
+   "en": "Managing Stress at Work",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    6,
+    7,
+    8
+   ],
+   "translations": {
+    "es": "Manejar el estrés en el trabajo",
+    "zh": "应对工作压力",
+    "he": "ניהול לחץ בעבודה",
+    "hi": "काम पर तनाव संभालना",
+    "sw": "Kudhibiti msongo kazini",
+    "de": "Stress am Arbeitsplatz bewältigen",
+    "fr": "Gérer le stress au travail"
+   }
+  },
+  {
+   "en": "Best protein sources for vegetarians?",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    4
+   ],
+   "translations": {
+    "es": "¿Mejores fuentes de proteína para vegetarianos?",
+    "zh": "素食者最好的蛋白质来源？",
+    "he": "מהם מקורות החלבון הטובים ביותר לצמחונים?",
+    "hi": "शाकाहारियों के लिए सबसे अच्छे प्रोटीन स्रोत?",
+    "sw": "Vyanzo bora vya protini kwa walaji mboga?",
+    "de": "Beste Proteinquellen für Vegetarier?",
+    "fr": "Meilleures sources de protéines pour les végétariens ?"
+   }
+  },
+  {
+   "en": "Is intermittent fasting safe?",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    4
+   ],
+   "translations": {
+    "es": "¿Es seguro el ayuno intermitente?",
+    "zh": "间歇性禁食安全吗？",
+    "he": "האם צום לסירוגין בטוח?",
+    "hi": "क्या रुक-रुक कर उपवास सुरक्षित है?",
+    "sw": "Je, kufunga kwa vipindi ni salama?",
+    "de": "Ist Intervallfasten sicher?",
+    "fr": "Le jeûne intermittent est-il sûr ?"
+   }
+  },
+  {
+   "en": "Knee pain after running",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    4,
+    5,
+    7,
+    8,
+    10
+   ],
+   "translations": {
+    "es": "Dolor de rodilla después de correr",
+    "zh": "跑步后膝盖疼痛",
+    "he": "כאבי ברך אחרי ריצה",
+    "hi": "दौड़ने के बाद घुटने में दर्द",
+    "sw": "Maumivu ya goti baada ya kukimbia",
+    "de": "Knieschmerzen nach dem Laufen",
+    "fr": "Douleur au genou après la course"
+   }
+  },
+  {
+   "en": "Can't fall asleep before 2am",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    4,
+    5
+   ],
+   "translations": {
+    "es": "No puedo dormirme antes de las 2am",
+    "zh": "凌晨 2am 前睡不着",
+    "he": "לא מצליח להירדם לפני 2am",
+    "hi": "2am से पहले नींद नहीं आती",
+    "sw": "Siwezi kulala kabla ya 2am",
+    "de": "Ich kann vor 2am nicht einschlafen",
+    "fr": "Impossible de m'endormir avant 2am"
+   }
+  },
+  {
+   "en": "My knee hurts after every workout and my sleep is a mess",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    5,
+    10
+   ],
+   "translations": {
+    "es": "Me duele la rodilla después de cada entrenamiento y mi sueño es un desastre",
+    "zh": "我每次锻炼后膝盖都疼，而且睡眠一团糟",
+    "he": "כואבת לי הברך אחרי כל אימון והשינה שלי הרוסה",
+    "hi": "हर वर्कआउट के बाद मेरा घुटना दुखता है और मेरी नींद बिगड़ी हुई है",
+    "sw": "Goti langu linauma baada ya kila mazoezi na usingizi wangu umeharibika",
+    "de": "Mein Knie schmerzt nach jedem Workout und mein Schlaf ist ein Chaos",
+    "fr": "Mon genou me fait mal après chaque entraînement et mon sommeil est un désastre"
+   }
+  },
+  {
+   "en": "Does stress ruin sleep?",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    5
+   ],
+   "translations": {
+    "es": "¿El estrés arruina el sueño?",
+    "zh": "压力会毁掉睡眠吗？",
+    "he": "האם לחץ הורס את השינה?",
+    "hi": "क्या तनाव नींद को बिगाड़ता है?",
+    "sw": "Je, msongo huharibu usingizi?",
+    "de": "Ruiniert Stress den Schlaf?",
+    "fr": "Le stress ruine-t-il le sommeil ?"
+   }
+  },
+  {
+   "en": "How much protein do I need",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    5
+   ],
+   "translations": {
+    "es": "Cuánta proteína necesito",
+    "zh": "我需要多少蛋白质",
+    "he": "כמה חלבון אני צריך",
+    "hi": "मुझे कितना प्रोटीन चाहिए",
+    "sw": "Nahitaji protini kiasi gani",
+    "de": "Wie viel Protein brauche ich",
+    "fr": "De combien de protéines ai-je besoin"
+   }
+  },
+  {
+   "en": "Is a short nap good for sleep debt?",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    5
+   ],
+   "translations": {
+    "es": "¿Una siesta corta sirve para la deuda de sueño?",
+    "zh": "小睡对睡眠债有帮助吗？",
+    "he": "האם תנומה קצרה עוזרת לחוב שינה?",
+    "hi": "क्या छोटी झपकी नींद के कर्ज़ के लिए अच्छी है?",
+    "sw": "Je, usingizi mfupi husaidia deni la usingizi?",
+    "de": "Ist ein kurzes Nickerchen gut gegen Schlafschuld?",
+    "fr": "Une courte sieste est-elle bonne pour la dette de sommeil ?"
+   }
+  },
+  {
+   "en": "protein",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    4,
+    5
+   ],
+   "translations": {
+    "es": "proteína",
+    "zh": "蛋白质",
+    "he": "חלבון",
+    "hi": "प्रोटीन",
+    "sw": "protini",
+    "de": "Protein",
+    "fr": "protéine"
+   }
+  },
+  {
+   "en": "workout",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    5,
+    10
+   ],
+   "translations": {
+    "es": "entrenamiento",
+    "zh": "锻炼",
+    "he": "אימון",
+    "hi": "वर्कआउट",
+    "sw": "mazoezi",
+    "de": "Workout",
+    "fr": "entraînement"
+   }
+  },
+  {
+   "en": "knee",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    5,
+    10
+   ],
+   "translations": {
+    "es": "rodilla",
+    "zh": "膝盖",
+    "he": "ברך",
+    "hi": "घुटना",
+    "sw": "goti",
+    "de": "Knie",
+    "fr": "genou"
+   }
+  },
+  {
+   "en": "sleep",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    5,
+    10
+   ],
+   "translations": {
+    "es": "sueño",
+    "zh": "睡眠",
+    "he": "שינה",
+    "hi": "नींद",
+    "sw": "usingizi",
+    "de": "Schlaf",
+    "fr": "sommeil"
+   }
+  },
+  {
+   "en": "stress",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    5
+   ],
+   "translations": {
+    "es": "estrés",
+    "zh": "压力",
+    "he": "לחץ",
+    "hi": "तनाव",
+    "sw": "msongo",
+    "de": "Stress",
+    "fr": "stress"
+   }
+  },
+  {
+   "en": "nap",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    5
+   ],
+   "translations": {
+    "es": "siesta",
+    "zh": "小睡",
+    "he": "תנומה",
+    "hi": "झपकी",
+    "sw": "usingizi mfupi",
+    "de": "Nickerchen",
+    "fr": "sieste"
+   }
+  },
+  {
+   "en": "Great tips, thanks!",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2
+   ],
+   "translations": {
+    "es": "¡Buenos consejos, gracias!",
+    "zh": "很棒的建议，谢谢！",
+    "he": "טיפים מעולים, תודה!",
+    "hi": "बढ़िया सुझाव, धन्यवाद!",
+    "sw": "Vidokezo vizuri, asante!",
+    "de": "Tolle Tipps, danke!",
+    "fr": "Super conseils, merci !"
+   }
+  },
+  {
+   "en": "Try foam rolling",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    4,
+    7
+   ],
+   "translations": {
+    "es": "Prueba con el rodillo de espuma",
+    "zh": "试试泡沫轴放松",
+    "he": "נסה גלגלת קצף",
+    "hi": "फोम रोलिंग आज़माएं",
+    "sw": "Jaribu kujikanda kwa roli ya povu",
+    "de": "Probier Faszienrollen",
+    "fr": "Essaie le rouleau de massage"
+   }
+  },
+  {
+   "en": "Same here",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "A mí me pasa igual",
+    "zh": "我也是",
+    "he": "גם אצלי",
+    "hi": "मेरे साथ भी यही है",
+    "sw": "Mimi pia",
+    "de": "Bei mir auch",
+    "fr": "Pareil pour moi"
+   }
+  },
+  {
+   "en": "Sam Wexler",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    6
+   ]
+  },
+  {
+   "en": "Lena Ortiz",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    6
+   ]
+  },
+  {
+   "en": "misty rose",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    1,
+    9
+   ]
+  },
+  {
+   "en": "firebrick",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    1
+   ]
+  },
+  {
+   "en": "sam@wellness.com",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    7,
+    9
+   ]
+  }
+ ]
+}

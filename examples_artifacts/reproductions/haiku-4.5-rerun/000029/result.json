@@ -1,0 +1,614 @@
+{
+  "index": 29,
+  "status": "success",
+  "model": "anthropic/claude-haiku-4-5-20251001",
+  "generator": "openhands",
+  "base_trajectory": {
+    "source": "none",
+    "messages": 0
+  },
+  "artifacts": {
+    "zip": null,
+    "run_json": null,
+    "generator": "openhands",
+    "screenshots": [
+      "/output/000029/screenshots/task000029_0.png",
+      "/output/000029/screenshots/task000029_1.png",
+      "/output/000029/screenshots/task000029_2.png",
+      "/output/000029/screenshots/task000029_3.png",
+      "/output/000029/screenshots/task000029_4.png",
+      "/output/000029/screenshots/task000029_5.png",
+      "/output/000029/screenshots/task000029_6.png"
+    ],
+    "output_dir": "/output/000029"
+  },
+  "ladder": {
+    "turns_expected": 10,
+    "turns_completed": 10,
+    "complete": true
+  },
+  "eval_model": "claude-sonnet-4-6",
+  "accuracy": 75.0,
+  "yes": 36,
+  "partial": 6,
+  "no": 10,
+  "total": 52,
+  "tasks": [
+    {
+      "task_idx": 0,
+      "task": "Test the link addition functionality by adding a new link to the user’s link tree.",
+      "expected": "The newly added link appears in the user's link tree with the inputted title and URL.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 1,
+      "task": "Test the link editing functionality by modifying the title and URL of an existing link in the user’s link tree.",
+      "expected": "The link displays updated information in the link tree after saving changes.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 2,
+      "task": "Test the link deletion functionality by deleting an existing link from the user’s link tree.",
+      "expected": "The link is removed from the link tree, and there is no residual data displayed regarding the deleted link.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 3,
+      "task": "Test the sharing functionality by copying the link tree's shareable link.",
+      "expected": "The shareable link is copied to the clipboard without errors, enabling sharing with others.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 4,
+      "task": "Test the form validation by attempting to add a new link with incomplete fields.",
+      "expected": "A validation error message is displayed, preventing the user from adding the link until all required fields are completed.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 5,
+      "task": "Test website navigation by navigating between the home page, link tree dashboard, and user profile.",
+      "expected": "Each navigation click takes the user to the correct page, without any errors.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 6,
+      "task": "Verify that the website uses 'papaya whip' as the background color and 'dark orange' as the component color, as specified in the design requirements.",
+      "expected": "The website has a background color of 'papaya whip' and components (such as buttons, cards, headers, etc.) are styled with the color 'dark orange', accurately reflecting the design instruction.",
+      "verdict": "yes"
+    }
+  ],
+  "turns": [
+    {
+      "turn": 1,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": false,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Test the link addition functionality by adding a new link to the user’s link tree.",
+          "expected": "The newly added link appears in the user's link tree with the inputted title and URL.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Test the link editing functionality by modifying the title and URL of an existing link in the user’s link tree.",
+          "expected": "The link displays updated information in the link tree after saving changes.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Test the link deletion functionality by deleting an existing link from the user’s link tree.",
+          "expected": "The link is removed from the link tree, and there is no residual data displayed regarding the deleted link.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Test the sharing functionality by copying the link tree's shareable link.",
+          "expected": "The shareable link is copied to the clipboard without errors, enabling sharing with others.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Test the form validation by attempting to add a new link with incomplete fields.",
+          "expected": "A validation error message is displayed, preventing the user from adding the link until all required fields are completed.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 5,
+          "task": "Test website navigation by navigating between the home page, link tree dashboard, and user profile.",
+          "expected": "Each navigation click takes the user to the correct page, without any errors.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 6,
+          "task": "Verify that the website uses 'papaya whip' as the background color and 'dark orange' as the component color, as specified in the design requirements.",
+          "expected": "The website has a background color of 'papaya whip' and components (such as buttons, cards, headers, etc.) are styled with the color 'dark orange', accurately reflecting the design instruction.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 6,
+      "partial": 1,
+      "no": 0,
+      "total": 7,
+      "accuracy": 92.9,
+      "cost": {
+        "generation_usd": 0.094229,
+        "model_calls": 11,
+        "input_tokens_total": 219004,
+        "output_tokens": 8651,
+        "judge_usd": 0.4103
+      }
+    },
+    {
+      "turn": 2,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Analytics page and read the Top 3 leaderboard.",
+          "expected": "The Top 3 reads My Portfolio, YouTube Channel, Merch Store in that order — Merch Store (not Newsletter) takes third place because the 987-click tie breaks alphabetically by title.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the Analytics page and find the total clicks across the whole tree.",
+          "expected": "The total reads 6,356 clicks, with the comma separator.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the Analytics page, scroll to the row for Book a Call.",
+          "expected": "It shows 0 clicks and a 0.0% share — no blank cell, NaN, or missing row.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the link manager, add a new link titled Blog with URL blog.casey.co, then open the Analytics page.",
+          "expected": "A Blog row appears on Analytics showing 0 clicks and 0.0%, and the overall total still reads 6,356 clicks.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the link manager, use the add link form to create a link titled Gallery with URL gallery.casey.co.",
+          "expected": "Gallery appears in the link list showing the title Gallery and the URL gallery.casey.co.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 0,
+      "no": 1,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.103851,
+        "model_calls": 8,
+        "input_tokens_total": 290175,
+        "output_tokens": 7009,
+        "judge_usd": 0.5078
+      }
+    },
+    {
+      "turn": 3,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Preview page from the nav and count the link buttons.",
+          "expected": "Exactly 6 buttons show — every link except Discord, which starts Hidden.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the Analytics page and find the total clicks figure.",
+          "expected": "The total still reads 6,356 clicks — Discord's 88 historical clicks count toward the total even while it is Hidden.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the link manager, add a new link titled Freebies with URL free.casey.co, then open the Preview page.",
+          "expected": "Freebies appears in the manager with a gray Hidden pill badge and does not appear among the Preview buttons.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "On the Preview page, click the YouTube Channel button once, then open the Analytics page.",
+          "expected": "YouTube Channel now shows 1,205 clicks and the tree total reads 6,357 clicks.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Analytics page and read the Top 3 leaderboard.",
+          "expected": "The Top 3 reads My Portfolio, YouTube Channel, Merch Store in that order — Merch Store (not Newsletter) takes third place because the 987-click tie breaks alphabetically by title.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.153598,
+        "model_calls": 8,
+        "input_tokens_total": 411037,
+        "output_tokens": 9478,
+        "judge_usd": 0.4718
+      }
+    },
+    {
+      "turn": 4,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Preview page with the viewing-as-of date at its default of July 1, 2026 and look over the buttons.",
+          "expected": "Exactly 5 buttons show: Merch Store is missing (its window starts August 1) while Book a Call is present (its window runs through July 10).",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the Preview page, type July 10, 2026 into the viewing-as-of date box, then change it to July 11, 2026.",
+          "expected": "Book a Call is still shown on July 10 (the end date is inclusive) and disappears on July 11, updating live without a page reload.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the link manager, open the schedule fields for Podcast and try to save a start date of August 10, 2026 with an end date of August 1, 2026.",
+          "expected": "The schedule is rejected with a visible validation message because the end date is before the start date, and no window gets saved on Podcast.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "On the Preview page type August 5, 2026 into the viewing-as-of box, then in the link manager toggle Merch Store to Hidden and return to the Preview.",
+          "expected": "Merch Store no longer appears even though August 5 falls inside its scheduled window — Hidden overrides the schedule.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Analytics page and find the total clicks figure.",
+          "expected": "The total still reads 6,356 clicks — Discord's 88 historical clicks count toward the total even while it is Hidden.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 0,
+      "no": 1,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.130902,
+        "model_calls": 7,
+        "input_tokens_total": 473252,
+        "output_tokens": 9328,
+        "judge_usd": 0.5074
+      }
+    },
+    {
+      "turn": 5,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Analytics page and read the group rollup.",
+          "expected": "Groups rank Work (2,450 clicks), Offers (1,974 clicks), Content (1,844 clicks), then Community (88 clicks) — Offers sits above Content.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the Analytics group rollup, find the Community group.",
+          "expected": "Community shows 88 clicks even though Discord, its only link, is Hidden.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open the Preview page (viewing-as-of left at July 1, 2026) and look at the section headers.",
+          "expected": "Work, Content, and Offers appear as sections in that order, and no Community header shows because nothing in it is visible — no empty section.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the link manager toggle Discord to Live, then open the Preview page.",
+          "expected": "A Community section now appears on the Preview with the Discord button inside it.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the Analytics page, scroll to the row for Book a Call.",
+          "expected": "It shows 0 clicks and a 0.0% share — no blank cell, NaN, or missing row.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 3,
+      "partial": 1,
+      "no": 1,
+      "total": 5,
+      "accuracy": 70.0,
+      "cost": {
+        "generation_usd": 0.253658,
+        "model_calls": 9,
+        "input_tokens_total": 793917,
+        "output_tokens": 12992,
+        "judge_usd": 0.5831
+      }
+    },
+    {
+      "turn": 6,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "In the link manager, look at the Offers group section.",
+          "expected": "Merch Store is listed above Newsletter — the pin floats it over the original order, which had Newsletter first.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the link manager's Content section, click Move Up on Podcast, then click Move Up on Podcast again.",
+          "expected": "The first click puts Podcast above YouTube Channel; the second click leaves the order unchanged with no error, since Podcast is already at the top of its group.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the link manager, click the pin toggle on Podcast, then click it again to unpin.",
+          "expected": "Pinning moves Podcast to the top of the Content section; unpinning returns it below YouTube Channel — back to its former spot, not to the bottom.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the link manager click Move Up on Podcast in the Content section, then open the Preview page.",
+          "expected": "In the Preview's Content section the Podcast button now sits above the YouTube Channel button.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the Preview page, type July 10, 2026 into the viewing-as-of date box, then change it to July 11, 2026.",
+          "expected": "Book a Call is still shown on July 10 (the end date is inclusive) and disappears on July 11, updating live without a page reload.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.266455,
+        "model_calls": 8,
+        "input_tokens_total": 861808,
+        "output_tokens": 10122,
+        "judge_usd": 0.4028
+      }
+    },
+    {
+      "turn": 7,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the link manager page and look at its overall styling.",
+          "expected": "The background is plain white (no papaya whip), the main heading is centered, and the primary add-link action is teal rather than dark orange.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the restyled Analytics page and read the Top 3 leaderboard.",
+          "expected": "The page carries the rebrand — white background, centered main heading, teal action buttons with no dark orange remnants — and the Top 3 still reads My Portfolio, YouTube Channel, Merch Store in that order: the 987-click tie keeps breaking alphabetically by title, so Merch Store (not Newsletter) holds third.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open the Preview page and look at the link buttons and section headers.",
+          "expected": "Every link button is a fully rounded pill, the group section headers have a thin teal underline, and the background is white.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the restyled link manager, toggle My Portfolio to Hidden.",
+          "expected": "Its status switches to a gray pill badge — still a colored pill badge on the new white design, not plain text.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Analytics page and find the total clicks figure.",
+          "expected": "The total still reads 6,356 clicks — Discord's 88 historical clicks count toward the total even while it is Hidden.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 4,
+      "partial": 0,
+      "no": 1,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.386777,
+        "model_calls": 7,
+        "input_tokens_total": 578761,
+        "output_tokens": 17304,
+        "judge_usd": 0.37
+      }
+    },
+    {
+      "turn": 8,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Goals page and read the YouTube Channel goal.",
+          "expected": "It shows progress of 80.3% (1,204 of 1,500 clicks) — one decimal, not 80% or 80.27%.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the Goals page, read the Discord goal.",
+          "expected": "It shows 88.0% toward 100 clicks — Discord's clicks keep counting even though the link is Hidden.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the Goals page, create a goal for My Portfolio with a target of 2000.",
+          "expected": "It is rejected with a visible message because 2,000 is below My Portfolio's current 2,450 clicks, and no goal is added to the list.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the link manager toggle Discord to Live, click the Discord button once on the Preview page, then open the Goals page.",
+          "expected": "The Discord goal now reads 89.0% (89 of 100 clicks).",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Analytics page and read the group rollup.",
+          "expected": "Groups rank Work (2,450 clicks), Offers (1,974 clicks), Content (1,844 clicks), then Community (88 clicks) — Offers sits above Content.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 3,
+      "partial": 0,
+      "no": 2,
+      "total": 5,
+      "accuracy": 60.0,
+      "cost": {
+        "generation_usd": 0.167009,
+        "model_calls": 5,
+        "input_tokens_total": 437386,
+        "output_tokens": 5466,
+        "judge_usd": 0.8185
+      }
+    },
+    {
+      "turn": 9,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Digest page with its as-of date at the default July 1, 2026 and read the summary.",
+          "expected": "The top-link line names My Portfolio with 2,450 clicks, and the goals line says 0 of 2 goals reached.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the Digest page (as-of July 1, 2026), read the Coming up section.",
+          "expected": "It lists exactly one link — Merch Store, whose window opens August 1, 2026; Book a Call does not appear since its window already started.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the Digest page, type September 1, 2026 into its as-of date box.",
+          "expected": "The Coming up section switches to an explicit nothing-coming-up message rather than going blank or disappearing, and the rest of the summary still renders.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "On the Digest page, find the total-clicks line of the summary.",
+          "expected": "The total is written as 6,356 clicks — comma separator plus the word 'clicks', not bare digits.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the link manager, look at the Offers group section.",
+          "expected": "Merch Store is listed above Newsletter — the pin floats it over the original order, which had Newsletter first.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 2,
+      "partial": 0,
+      "no": 3,
+      "total": 5,
+      "accuracy": 40.0,
+      "cost": {
+        "generation_usd": 0.171278,
+        "model_calls": 4,
+        "input_tokens_total": 375077,
+        "output_tokens": 4585,
+        "judge_usd": 0.2508
+      }
+    },
+    {
+      "turn": 10,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Start the profile setup, type Casey Quinn as the display name, continue to the bio step, and type Links for everything I make into the bio field.",
+          "expected": "The remaining-character countdown updates live while typing and reads 133 after that 27-character bio.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 1,
+          "task": "Start the profile setup and try to continue past the name step with the display name left empty.",
+          "expected": "It refuses to advance and shows a validation message; the bio step is not reached.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 2,
+          "task": "Complete the profile setup with display name Casey Quinn and bio Maker of things, publish it, then open the Preview page.",
+          "expected": "A header shows the CQ initials avatar, the name Casey Quinn, and the bio, with exactly 5 link buttons below it (the viewing-as-of date at its July 1, 2026 default).",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 3,
+          "task": "Complete the profile setup with display name Casey Quinn and bio Maker of things, publish it, then open the Digest page.",
+          "expected": "The digest summary is now signed with the display name Casey Quinn.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Preview page and look at the link buttons and section headers.",
+          "expected": "Every link button is a fully rounded pill, the group section headers have a thin teal underline, and the background is white.",
+          "verdict": "partial"
+        }
+      ],
+      "yes": 0,
+      "partial": 4,
+      "no": 1,
+      "total": 5,
+      "accuracy": 40.0,
+      "cost": {
+        "generation_usd": 0.102848,
+        "model_calls": 4,
+        "input_tokens_total": 419047,
+        "output_tokens": 7830,
+        "judge_usd": 0.4806
+      }
+    }
+  ]
+}

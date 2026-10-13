@@ -1,0 +1,1188 @@
+{
+ "anchors": [
+  {
+   "en": "moon sign",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    6
+   ],
+   "translations": {
+    "es": "signo lunar",
+    "zh": "月亮星座",
+    "he": "מזל ירח",
+    "hi": "चंद्र राशि",
+    "sw": "nyota ya mwezi",
+    "de": "Mondzeichen",
+    "fr": "signe lunaire"
+   }
+  },
+  {
+   "en": "kundali matching tool",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    6
+   ],
+   "translations": {
+    "es": "herramienta de compatibilidad kundali",
+    "zh": "kundali 匹配工具",
+    "he": "כלי התאמת קונדלי",
+    "hi": "कुंडली मिलान टूल",
+    "sw": "zana ya kulinganisha kundali",
+    "de": "Kundali-Matching-Tool",
+    "fr": "outil de compatibilité kundali"
+   }
+  },
+  {
+   "en": "kundali score",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    10
+   ],
+   "translations": {
+    "es": "puntaje kundali",
+    "zh": "kundali 得分",
+    "he": "ציון קונדלי",
+    "hi": "कुंडली स्कोर",
+    "sw": "alama ya kundali",
+    "de": "Kundali-Punktzahl",
+    "fr": "score kundali"
+   }
+  },
+  {
+   "en": "Strong",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    4,
+    6,
+    7,
+    10
+   ],
+   "translations": {
+    "es": "Fuerte",
+    "zh": "强",
+    "he": "חזק",
+    "hi": "मजबूत",
+    "sw": "Imara",
+    "de": "Stark",
+    "fr": "Fort"
+   }
+  },
+  {
+   "en": "Moderate",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    6,
+    10
+   ],
+   "translations": {
+    "es": "Moderado",
+    "zh": "中等",
+    "he": "בינוני",
+    "hi": "मध्यम",
+    "sw": "Wastani",
+    "de": "Mittel",
+    "fr": "Modéré"
+   }
+  },
+  {
+   "en": "Weak",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    6,
+    10
+   ],
+   "translations": {
+    "es": "Débil",
+    "zh": "弱",
+    "he": "חלש",
+    "hi": "कमज़ोर",
+    "sw": "Dhaifu",
+    "de": "Schwach",
+    "fr": "Faible"
+   }
+  },
+  {
+   "en": "Interests",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "translations": {
+    "es": "Intereses",
+    "zh": "意向",
+    "he": "גילויי עניין",
+    "hi": "रुचियाँ",
+    "sw": "Nia",
+    "de": "Interessen",
+    "fr": "Intérêts"
+   }
+  },
+  {
+   "en": "Received",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    4,
+    5,
+    9,
+    10
+   ],
+   "translations": {
+    "es": "Recibidos",
+    "zh": "已收到",
+    "he": "התקבלו",
+    "hi": "प्राप्त",
+    "sw": "Zilizopokelewa",
+    "de": "Erhalten",
+    "fr": "Reçus"
+   }
+  },
+  {
+   "en": "Sent",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    4,
+    5
+   ],
+   "translations": {
+    "es": "Enviados",
+    "zh": "已发送",
+    "he": "נשלחו",
+    "hi": "भेजे गए",
+    "sw": "Zilizotumwa",
+    "de": "Gesendet",
+    "fr": "Envoyés"
+   }
+  },
+  {
+   "en": "Connections",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    4,
+    5,
+    7,
+    9
+   ],
+   "translations": {
+    "es": "Conexiones",
+    "zh": "已连接",
+    "he": "קשרים",
+    "hi": "कनेक्शन",
+    "sw": "Miunganisho",
+    "de": "Verbindungen",
+    "fr": "Connexions"
+   }
+  },
+  {
+   "en": "Send Interest",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3
+   ],
+   "translations": {
+    "es": "Enviar interés",
+    "zh": "发送意向",
+    "he": "שלח גילוי עניין",
+    "hi": "रुचि भेजें",
+    "sw": "Tuma Nia",
+    "de": "Interesse senden",
+    "fr": "Envoyer un intérêt"
+   }
+  },
+  {
+   "en": "Partner Preferences",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4,
+    5,
+    6,
+    10
+   ],
+   "translations": {
+    "es": "Preferencias de pareja",
+    "zh": "择偶偏好",
+    "he": "העדפות שידוך",
+    "hi": "साथी वरीयताएँ",
+    "sw": "Mapendeleo ya Mwenzi",
+    "de": "Partnerpräferenzen",
+    "fr": "Préférences de partenaire"
+   }
+  },
+  {
+   "en": "Quick Connect",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5,
+    6,
+    7
+   ],
+   "translations": {
+    "es": "Conexión Rápida",
+    "zh": "快速连接",
+    "he": "חיבור מהיר",
+    "hi": "क्विक कनेक्ट",
+    "sw": "Unganisha Haraka",
+    "de": "Schnellkontakt",
+    "fr": "Connexion Rapide"
+   }
+  },
+  {
+   "en": "Interested",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5,
+    7
+   ],
+   "translations": {
+    "es": "Me interesa",
+    "zh": "感兴趣",
+    "he": "מעוניין",
+    "hi": "रुचि है",
+    "sw": "Ninavutiwa",
+    "de": "Interessiert",
+    "fr": "Intéressé"
+   }
+  },
+  {
+   "en": "Pass",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5,
+    7
+   ],
+   "translations": {
+    "es": "Pasar",
+    "zh": "跳过",
+    "he": "דלג",
+    "hi": "छोड़ें",
+    "sw": "Ruka",
+    "de": "Überspringen",
+    "fr": "Passer"
+   }
+  },
+  {
+   "en": "activity dashboard",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    7,
+    10
+   ],
+   "translations": {
+    "es": "panel de actividad",
+    "zh": "活动面板",
+    "he": "לוח פעילות",
+    "hi": "गतिविधि डैशबोर्ड",
+    "sw": "dashibodi ya shughuli",
+    "de": "Aktivitäts-Dashboard",
+    "fr": "tableau de bord d'activité"
+   }
+  },
+  {
+   "en": "acceptance rate",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    7,
+    10
+   ],
+   "translations": {
+    "es": "tasa de aceptación",
+    "zh": "接受率",
+    "he": "שיעור קבלה",
+    "hi": "स्वीकृति दर",
+    "sw": "kiwango cha kukubaliwa",
+    "de": "Annahmequote",
+    "fr": "taux d'acceptation"
+   }
+  },
+  {
+   "en": "average match",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    7,
+    10
+   ],
+   "translations": {
+    "es": "coincidencia promedio",
+    "zh": "平均匹配度",
+    "he": "התאמה ממוצעת",
+    "hi": "औसत मिलान",
+    "sw": "ulinganifu wastani",
+    "de": "durchschnittliche Übereinstimmung",
+    "fr": "compatibilité moyenne"
+   }
+  },
+  {
+   "en": "Pending received interests",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    7,
+    10
+   ],
+   "translations": {
+    "es": "Intereses recibidos pendientes",
+    "zh": "待处理的收到意向",
+    "he": "גילויי עניין שהתקבלו וממתינים",
+    "hi": "लंबित प्राप्त रुचियाँ",
+    "sw": "Nia zilizopokelewa zinazosubiri",
+    "de": "Ausstehende erhaltene Interessen",
+    "fr": "Intérêts reçus en attente"
+   }
+  },
+  {
+   "en": "Verification Center",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "Centro de Verificación",
+    "zh": "认证中心",
+    "he": "מרכז אימות",
+    "hi": "सत्यापन केंद्र",
+    "sw": "Kituo cha Uthibitishaji",
+    "de": "Verifizierungszentrum",
+    "fr": "Centre de Vérification"
+   }
+  },
+  {
+   "en": "Verified",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8,
+    10
+   ],
+   "translations": {
+    "es": "Verificado",
+    "zh": "已认证",
+    "he": "מאומת",
+    "hi": "सत्यापित",
+    "sw": "Imethibitishwa",
+    "de": "Verifiziert",
+    "fr": "Vérifié"
+   }
+  },
+  {
+   "en": "Verified only",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "Solo verificados",
+    "zh": "仅已认证",
+    "he": "מאומתים בלבד",
+    "hi": "केवल सत्यापित",
+    "sw": "Imethibitishwa pekee",
+    "de": "Nur Verifizierte",
+    "fr": "Vérifiés uniquement"
+   }
+  },
+  {
+   "en": "Under review",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "En revisión",
+    "zh": "审核中",
+    "he": "בבדיקה",
+    "hi": "समीक्षाधीन",
+    "sw": "Inakaguliwa",
+    "de": "In Prüfung",
+    "fr": "En cours d'examen"
+   }
+  },
+  {
+   "en": "Approve",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "Aprobar",
+    "zh": "批准",
+    "he": "אשר",
+    "hi": "स्वीकृत करें",
+    "sw": "Idhinisha",
+    "de": "Genehmigen",
+    "fr": "Approuver"
+   }
+  },
+  {
+   "en": "Hindu",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    3,
+    4,
+    8
+   ],
+   "translations": {
+    "es": "Hindú",
+    "zh": "印度教",
+    "he": "הינדי",
+    "hi": "हिंदू",
+    "sw": "Mhindu",
+    "de": "Hinduistisch",
+    "fr": "Hindou"
+   }
+  },
+  {
+   "en": "Muslim",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    3,
+    8
+   ],
+   "translations": {
+    "es": "Musulmán",
+    "zh": "穆斯林",
+    "he": "מוסלמי",
+    "hi": "मुस्लिम",
+    "sw": "Muislamu",
+    "de": "Muslimisch",
+    "fr": "Musulman"
+   }
+  },
+  {
+   "en": "Christian",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    3
+   ],
+   "translations": {
+    "es": "Cristiano",
+    "zh": "基督教",
+    "he": "נוצרי",
+    "hi": "ईसाई",
+    "sw": "Mkristo",
+    "de": "Christlich",
+    "fr": "Chrétien"
+   }
+  },
+  {
+   "en": "hidden",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    9
+   ],
+   "translations": {
+    "es": "oculta",
+    "zh": "隐藏",
+    "he": "מוסתרת",
+    "hi": "छिपी",
+    "sw": "imefichwa",
+    "de": "verborgen",
+    "fr": "masquée"
+   }
+  },
+  {
+   "en": "initials",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    9
+   ],
+   "translations": {
+    "es": "iniciales",
+    "zh": "首字母缩写",
+    "he": "ראשי תיבות",
+    "hi": "आद्याक्षर",
+    "sw": "herufi za kwanza",
+    "de": "Initialen",
+    "fr": "initiales"
+   }
+  },
+  {
+   "en": "connections only",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    9
+   ],
+   "translations": {
+    "es": "solo conexiones",
+    "zh": "仅已连接",
+    "he": "קשרים בלבד",
+    "hi": "केवल कनेक्शन",
+    "sw": "miunganisho pekee",
+    "de": "nur Verbindungen",
+    "fr": "connexions uniquement"
+   }
+  },
+  {
+   "en": "verified members only",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    9
+   ],
+   "translations": {
+    "es": "solo miembros verificados",
+    "zh": "仅已认证会员",
+    "he": "חברים מאומתים בלבד",
+    "hi": "केवल सत्यापित सदस्य",
+    "sw": "wanachama waliothibitishwa pekee",
+    "de": "nur verifizierte Mitglieder",
+    "fr": "membres vérifiés uniquement"
+   }
+  },
+  {
+   "en": "Compatibility Report",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    10
+   ],
+   "translations": {
+    "es": "Informe de Compatibilidad",
+    "zh": "匹配报告",
+    "he": "דוח התאמה",
+    "hi": "अनुकूलता रिपोर्ट",
+    "sw": "Ripoti ya Ulinganifu",
+    "de": "Kompatibilitätsbericht",
+    "fr": "Rapport de Compatibilité"
+   }
+  },
+  {
+   "en": "27 yrs",
+   "class": "translate",
+   "kind": "value_format",
+   "turns": [
+    4
+   ],
+   "translations": {
+    "es": "27 años",
+    "zh": "27岁",
+    "he": "27 שנים",
+    "hi": "27 वर्ष",
+    "sw": "miaka 27",
+    "de": "27 Jahre",
+    "fr": "27 ans"
+   }
+  },
+  {
+   "en": "29 yrs",
+   "class": "translate",
+   "kind": "value_format",
+   "turns": [
+    4,
+    6,
+    10
+   ],
+   "translations": {
+    "es": "29 años",
+    "zh": "29岁",
+    "he": "29 שנים",
+    "hi": "29 वर्ष",
+    "sw": "miaka 29",
+    "de": "29 Jahre",
+    "fr": "29 ans"
+   }
+  },
+  {
+   "en": "Aries",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    10
+   ],
+   "translations": {
+    "es": "Aries",
+    "zh": "白羊座",
+    "he": "טלה",
+    "hi": "मेष",
+    "sw": "Kondoo",
+    "de": "Widder",
+    "fr": "Bélier"
+   }
+  },
+  {
+   "en": "Taurus",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    6
+   ],
+   "translations": {
+    "es": "Tauro",
+    "zh": "金牛座",
+    "he": "שור",
+    "hi": "वृषभ",
+    "sw": "Fahali",
+    "de": "Stier",
+    "fr": "Taureau"
+   }
+  },
+  {
+   "en": "Gemini",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    6,
+    10
+   ],
+   "translations": {
+    "es": "Géminis",
+    "zh": "双子座",
+    "he": "תאומים",
+    "hi": "मिथुन",
+    "sw": "Mapacha",
+    "de": "Zwillinge",
+    "fr": "Gémeaux"
+   }
+  },
+  {
+   "en": "Cancer",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    3,
+    10
+   ],
+   "translations": {
+    "es": "Cáncer",
+    "zh": "巨蟹座",
+    "he": "סרטן",
+    "hi": "कर्क",
+    "sw": "Kaa",
+    "de": "Krebs",
+    "fr": "Cancer"
+   }
+  },
+  {
+   "en": "Leo",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    10
+   ],
+   "translations": {
+    "es": "Leo",
+    "zh": "狮子座",
+    "he": "אריה",
+    "hi": "सिंह",
+    "sw": "Simba",
+    "de": "Löwe",
+    "fr": "Lion"
+   }
+  },
+  {
+   "en": "Virgo",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    10
+   ],
+   "translations": {
+    "es": "Virgo",
+    "zh": "处女座",
+    "he": "בתולה",
+    "hi": "कन्या",
+    "sw": "Mashuke",
+    "de": "Jungfrau",
+    "fr": "Vierge"
+   }
+  },
+  {
+   "en": "Libra",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    3,
+    10
+   ],
+   "translations": {
+    "es": "Libra",
+    "zh": "天秤座",
+    "he": "מאזניים",
+    "hi": "तुला",
+    "sw": "Mizani",
+    "de": "Waage",
+    "fr": "Balance"
+   }
+  },
+  {
+   "en": "Scorpio",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    10
+   ],
+   "translations": {
+    "es": "Escorpio",
+    "zh": "天蝎座",
+    "he": "עקרב",
+    "hi": "वृश्चिक",
+    "sw": "Nge",
+    "de": "Skorpion",
+    "fr": "Scorpion"
+   }
+  },
+  {
+   "en": "Sagittarius",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2
+   ],
+   "translations": {
+    "es": "Sagitario",
+    "zh": "射手座",
+    "he": "קשת",
+    "hi": "धनु",
+    "sw": "Mshale",
+    "de": "Schütze",
+    "fr": "Sagittaire"
+   }
+  },
+  {
+   "en": "Capricorn",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2
+   ],
+   "translations": {
+    "es": "Capricornio",
+    "zh": "摩羯座",
+    "he": "גדי",
+    "hi": "मकर",
+    "sw": "Mbuzi",
+    "de": "Steinbock",
+    "fr": "Capricorne"
+   }
+  },
+  {
+   "en": "Aquarius",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2
+   ],
+   "translations": {
+    "es": "Acuario",
+    "zh": "水瓶座",
+    "he": "דלי",
+    "hi": "कुंभ",
+    "sw": "Ndoo",
+    "de": "Wassermann",
+    "fr": "Verseau"
+   }
+  },
+  {
+   "en": "Pisces",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    10
+   ],
+   "translations": {
+    "es": "Piscis",
+    "zh": "双鱼座",
+    "he": "דגים",
+    "hi": "मीन",
+    "sw": "Samaki",
+    "de": "Fische",
+    "fr": "Poissons"
+   }
+  },
+  {
+   "en": "lemon chiffon",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    1
+   ]
+  },
+  {
+   "en": "chocolate",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    1,
+    6
+   ]
+  },
+  {
+   "en": "ivory",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    6,
+    8
+   ]
+  },
+  {
+   "en": "maroon",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    6,
+    8
+   ]
+  },
+  {
+   "en": "cream",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    6,
+    8
+   ]
+  },
+  {
+   "en": "gold",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    6,
+    8
+   ]
+  },
+  {
+   "en": "Ananya Iyer",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    3,
+    4,
+    5,
+    7,
+    8
+   ]
+  },
+  {
+   "en": "Rohan Mehta",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    3,
+    4,
+    5,
+    7,
+    9,
+    10
+   ]
+  },
+  {
+   "en": "Sara Khan",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    3,
+    4,
+    5,
+    7,
+    9
+   ]
+  },
+  {
+   "en": "Vikram Singh",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    3,
+    4,
+    5,
+    7,
+    8
+   ]
+  },
+  {
+   "en": "Meera Nair",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    3,
+    4,
+    5
+   ]
+  },
+  {
+   "en": "Daniel D'Souza",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    3,
+    4,
+    5
+   ]
+  },
+  {
+   "en": "Priya Reddy",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10
+   ]
+  },
+  {
+   "en": "Ananya",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    10
+   ]
+  },
+  {
+   "en": "Rohan",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  {
+   "en": "Sara",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  {
+   "en": "Vikram",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    3,
+    4,
+    5,
+    7,
+    8,
+    10
+   ]
+  },
+  {
+   "en": "Meera",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    3,
+    4,
+    5,
+    7,
+    10
+   ]
+  },
+  {
+   "en": "Daniel",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    3,
+    4,
+    5,
+    10
+   ]
+  },
+  {
+   "en": "Priya",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  {
+   "en": "Arjun Kapoor",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    9,
+    10
+   ]
+  },
+  {
+   "en": "A.K.",
+   "class": "keep",
+   "kind": "value_format",
+   "turns": [
+    9
+   ]
+  },
+  {
+   "en": "Deva",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    10
+   ]
+  },
+  {
+   "en": "Manushya",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    6,
+    10
+   ]
+  },
+  {
+   "en": "Rakshasa",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    6,
+    10
+   ]
+  },
+  {
+   "en": "Adi",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    6,
+    10
+   ]
+  },
+  {
+   "en": "Madhya",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    10
+   ]
+  },
+  {
+   "en": "Antya",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    10
+   ]
+  },
+  {
+   "en": "gana",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    6,
+    10
+   ]
+  },
+  {
+   "en": "nadi",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    6,
+    10
+   ]
+  },
+  {
+   "en": "Aadhaar",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    8
+   ]
+  },
+  {
+   "en": "PAN",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    8
+   ]
+  }
+ ]
+}

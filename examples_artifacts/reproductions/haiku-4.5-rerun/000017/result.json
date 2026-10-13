@@ -1,0 +1,588 @@
+{
+  "index": 17,
+  "status": "success",
+  "model": "anthropic/claude-haiku-4-5-20251001",
+  "generator": "openhands",
+  "base_trajectory": {
+    "source": "none",
+    "messages": 0
+  },
+  "artifacts": {
+    "zip": null,
+    "run_json": null,
+    "generator": "openhands",
+    "screenshots": [
+      "/output/000017/screenshots/task000017_0.png",
+      "/output/000017/screenshots/task000017_1.png",
+      "/output/000017/screenshots/task000017_2.png",
+      "/output/000017/screenshots/task000017_3.png",
+      "/output/000017/screenshots/task000017_4.png"
+    ],
+    "output_dir": "/output/000017"
+  },
+  "ladder": {
+    "turns_expected": 10,
+    "turns_completed": 10,
+    "complete": true
+  },
+  "eval_model": "claude-sonnet-4-6",
+  "accuracy": 64.0,
+  "yes": 29,
+  "partial": 6,
+  "no": 15,
+  "total": 50,
+  "tasks": [
+    {
+      "task_idx": 0,
+      "task": "Navigate to the bidding section and place a bid on a trading opportunity.",
+      "expected": "The bid is successfully placed and reflected in the user's bid history, with all relevant details accurately recorded.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 1,
+      "task": "Browse the available trading opportunities on the website.",
+      "expected": "A comprehensive list of trading opportunities is displayed, relevant to the user's preferences, without any missing or irrelevant entries.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 2,
+      "task": "View the user's trading history from the account dashboard.",
+      "expected": "A detailed and accurate history of all past trading and bidding activities is displayed, including dates and transaction details.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 3,
+      "task": "Update account information via the account management page.",
+      "expected": "The information is updated successfully, and a confirmation message is displayed, with changes reflected correctly on subsequent views.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 4,
+      "task": "Verify that the website uses 'lemon chiffon' as the background color and 'chocolate' as the component color, as specified in the design requirements.",
+      "expected": "The website has a background color of 'lemon chiffon' and components (such as buttons, cards, headers, etc.) are styled with the color 'chocolate', accurately reflecting the design instruction.",
+      "verdict": "yes"
+    }
+  ],
+  "turns": [
+    {
+      "turn": 1,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": false,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Navigate to the bidding section and place a bid on a trading opportunity.",
+          "expected": "The bid is successfully placed and reflected in the user's bid history, with all relevant details accurately recorded.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 1,
+          "task": "Browse the available trading opportunities on the website.",
+          "expected": "A comprehensive list of trading opportunities is displayed, relevant to the user's preferences, without any missing or irrelevant entries.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "View the user's trading history from the account dashboard.",
+          "expected": "A detailed and accurate history of all past trading and bidding activities is displayed, including dates and transaction details.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Update account information via the account management page.",
+          "expected": "The information is updated successfully, and a confirmation message is displayed, with changes reflected correctly on subsequent views.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "Verify that the website uses 'lemon chiffon' as the background color and 'chocolate' as the component color, as specified in the design requirements.",
+          "expected": "The website has a background color of 'lemon chiffon' and components (such as buttons, cards, headers, etc.) are styled with the color 'chocolate', accurately reflecting the design instruction.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 3,
+      "partial": 2,
+      "no": 0,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.149665,
+        "model_calls": 16,
+        "input_tokens_total": 391156,
+        "output_tokens": 14699,
+        "judge_usd": 0.3806
+      }
+    },
+    {
+      "turn": 2,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the screener, check the Collectibles and Metals category boxes, type 800 into the minimum price field, and set the status filter to Open.",
+          "expected": "Exactly three listings show: 1968 Rolex Submariner, Signed First-Edition Dune, and Gold Krugerrand Coin — the 1974 Fender Stratocaster stays hidden even though it's a Collectible over $800, because it's Settled.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Check only the Metals category box on the screener, then additionally check the Furniture box.",
+          "expected": "With Metals alone the live match counter reads 2 with exactly the 10oz Silver Bullion Bar and Gold Krugerrand Coin visible; after adding Furniture the counter reads 4 and both furniture listings join the results — categories combine as either-or, not both-and.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "With only the Metals box checked, save the search as a preset named 'Metals watch', clear all filters, then load the 'Metals watch' preset.",
+          "expected": "Clearing filters brings back all 7 listings; loading the preset re-applies the Metals filter and the results return to exactly the 10oz Silver Bullion Bar and Gold Krugerrand Coin.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Filter the screener to the Metals category, open the 10oz Silver Bullion Bar listing, place a bid of 360, then open the trading history.",
+          "expected": "The 360 bid on the 10oz Silver Bullion Bar appears as a new entry in the trading history.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the trading history section of the account area.",
+          "expected": "A trading history view renders without errors, showing past trading and bidding activity (or a sensible empty state if nothing has happened yet).",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 0,
+      "no": 1,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.195298,
+        "model_calls": 18,
+        "input_tokens_total": 812077,
+        "output_tokens": 11282,
+        "judge_usd": 0.5276
+      }
+    },
+    {
+      "turn": 3,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the bid ticket on the Signed First-Edition Dune listing and type 905 as your bid amount.",
+          "expected": "Before any submit, the ticket live-shows a buyer's premium of $113.13, a $25.00 handling fee, and a total due of $1,043.13 — the half-cent on the premium rounds up, so $113.13 rather than $113.12.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the bid ticket on the Gold Krugerrand Coin, type 2100, then change it to 2150.",
+          "expected": "2100 is rejected with a message about the $100 minimum increment (current bid is $2,050.00 so the floor is $2,150.00) and cannot be submitted; changing to 2150 clears the error and the ticket becomes submittable.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the Signed First-Edition Dune bid ticket, type 900, then delete the amount so the field is empty.",
+          "expected": "While 900 is typed the total due reads $1,037.50 without submitting anything; once the field is emptied the ticket falls back to a calm neutral state — no NaN, no crash, no stale total left behind.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Bid 360 on the 10oz Silver Bullion Bar through the ticket, go through the confirmation step, then open the trading history.",
+          "expected": "A confirmation summary appears first showing the $360.00 bid and the $430.00 total due; after confirming, the bid shows up in the trading history.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the screener, check the Collectibles and Metals category boxes, type 800 into the minimum price field, and set the status filter to Open.",
+          "expected": "Exactly three listings show: 1968 Rolex Submariner, Signed First-Edition Dune, and Gold Krugerrand Coin — the 1974 Fender Stratocaster stays hidden even though it's a Collectible over $800, because it's Settled.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 3,
+      "partial": 0,
+      "no": 2,
+      "total": 5,
+      "accuracy": 60.0,
+      "cost": {
+        "generation_usd": 0.267766,
+        "model_calls": 20,
+        "input_tokens_total": 1391847,
+        "output_tokens": 9278,
+        "judge_usd": 0.7364
+      }
+    },
+    {
+      "turn": 4,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the My Watchlist section on the dashboard.",
+          "expected": "The Gold Krugerrand Coin and Antique Oak Writing Desk are there from the start, the combined current-bid value reads $3,200.00, and the Desk wears the amber Closing pill.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "From the browse listings, star the Persian Heriz Rug, then open My Watchlist.",
+          "expected": "The watchlist now holds 3 items and the combined current-bid value reads $4,180.00 — updated immediately, no reload needed.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "In My Watchlist, unstar the Gold Krugerrand Coin and the Antique Oak Writing Desk.",
+          "expected": "The watchlist empties gracefully into a friendly empty-state message — no blank screen, no $NaN or leftover stale total.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "On the screener, turn on the watched-only toggle and check the Metals category box, then turn the watched-only toggle back off.",
+          "expected": "With both on, only the Gold Krugerrand Coin matches (watched AND Metals together); toggling watched-only off brings the 10oz Silver Bullion Bar back alongside it.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the bid ticket on the Signed First-Edition Dune listing and type 905 as your bid amount.",
+          "expected": "Before any submit, the ticket live-shows a buyer's premium of $113.13, a $25.00 handling fee, and a total due of $1,043.13 — the half-cent on the premium rounds up, so $113.13 rather than $113.12.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 4,
+      "partial": 0,
+      "no": 1,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.348585,
+        "model_calls": 20,
+        "input_tokens_total": 1790489,
+        "output_tokens": 11360,
+        "judge_usd": 0.5115
+      }
+    },
+    {
+      "turn": 5,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Start the close-and-settle flow on the Antique Oak Writing Desk and look at the invoice review step.",
+          "expected": "The invoice shows the winning bid of $1,150.00, a buyer's premium of $143.75, a $25.00 handling fee, and a total due of $1,318.75.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Settle the Antique Oak Writing Desk all the way through its confirmation, then find the Desk on the browse listings.",
+          "expected": "The Desk now wears the gray Settled pill on browse and no longer offers bidding; it also stops matching the screener's Closing status filter.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open the Completed Sales page, type 'Attic' into its search box, then replace it with 'zzz'.",
+          "expected": "On first load the seeded 1974 Fender Stratocaster sale is listed with a $3,737.50 total; searching 'Attic' narrows to that Attic Finds sale; 'zzz' shows a friendly no-results state instead of a blank or broken page.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Bid 1250 on the Antique Oak Writing Desk through the bid ticket and confirm it, then start the close-and-settle flow on the Desk.",
+          "expected": "The invoice picks up the fresh $1,250.00 winning bid and the total due reads $1,431.25 — the same premium-plus-handling math the bid ticket previews.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Check only the Metals category box on the screener, then additionally check the Furniture box.",
+          "expected": "With Metals alone the live match counter reads 2 with exactly the 10oz Silver Bullion Bar and Gold Krugerrand Coin visible; after adding Furniture the counter reads 4 and both furniture listings join the results — categories combine as either-or, not both-and.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 0,
+      "no": 1,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.404754,
+        "model_calls": 20,
+        "input_tokens_total": 2208662,
+        "output_tokens": 11242,
+        "judge_usd": 0.724
+      }
+    },
+    {
+      "turn": 6,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Market Movers panel on the dashboard and read the Top Gainers column.",
+          "expected": "Top Gainers reads 1968 Rolex Submariner, Signed First-Edition Dune, Gold Krugerrand Coin in that order — the 1974 Fender Stratocaster (+6.40%) is absent because it's Settled, and the Rolex outranks the Dune on their +5.25% tie because its current bid is higher.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Read the Top Losers column of the Market Movers panel.",
+          "expected": "It lists Persian Heriz Rug, 10oz Silver Bullion Bar, Antique Oak Writing Desk in that order, with their changes shown as -3.60%, -1.10% and -0.40%.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Read the Most Active column of the Market Movers panel.",
+          "expected": "It lists Gold Krugerrand Coin (15 bids), 1968 Rolex Submariner (12), Antique Oak Writing Desk (9) — the Fender's 21 bids don't count since it's Settled.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Bid 1250 on the Antique Oak Writing Desk through the bid ticket, confirm it, then return to the Market Movers panel.",
+          "expected": "The Desk's entry in Most Active now shows 10 bids while the order stays Krugerrand, Rolex, Desk.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the bid ticket on the Gold Krugerrand Coin, type 2100, then change it to 2150.",
+          "expected": "2100 is rejected with a message about the $100 minimum increment (current bid is $2,050.00 so the floor is $2,150.00) and cannot be submitted; changing to 2150 clears the error and the ticket becomes submittable.",
+          "verdict": "partial"
+        }
+      ],
+      "yes": 4,
+      "partial": 1,
+      "no": 0,
+      "total": 5,
+      "accuracy": 90.0,
+      "cost": {
+        "generation_usd": 0.377342,
+        "model_calls": 13,
+        "input_tokens_total": 1141198,
+        "output_tokens": 8068,
+        "judge_usd": 0.47
+      }
+    },
+    {
+      "turn": 7,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the 1968 Rolex Submariner detail view and switch the chart to the 1W timeframe.",
+          "expected": "The window readout shows a low of $4,060.00 and a high of $4,200.00 — not the all-time low of $3,900.00, which only belongs to the 1M view.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the Rolex chart with 1M selected, type 4100 into the price-level input, then replace it with 50.",
+          "expected": "At 4100 the readout says 4 of 8 sessions closed above the line; at 50 it says 8 of 8 — both updating live as you type, with the reference line moving on the chart.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Switch the Rolex chart from line to bar mode, then change the timeframe to 1W while in bar mode.",
+          "expected": "The chart renders in bar mode without going blank, and after the timeframe change it stays in bar mode showing just the five-session window.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Look at the session change figure and the status shown on the 1968 Rolex Submariner detail view.",
+          "expected": "The change reads exactly +5.25% — signed, two decimals — and the listing carries its green Open pill, matching how these appear everywhere else in the app.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Start the close-and-settle flow on the Antique Oak Writing Desk and look at the invoice review step.",
+          "expected": "The invoice shows the winning bid of $1,150.00, a buyer's premium of $143.75, a $25.00 handling fee, and a total due of $1,318.75.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 0,
+      "no": 1,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.24233,
+        "model_calls": 14,
+        "input_tokens_total": 1069569,
+        "output_tokens": 10117,
+        "judge_usd": 0.623
+      }
+    },
+    {
+      "turn": 8,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the PageTurners seller profile.",
+          "expected": "The average rating reads 4.7 from 3 reviews — 5, 5 and 4 average to 4.666..., which rounds half-up to 4.7, not a truncated 4.6.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the Top Sellers leaderboard.",
+          "expected": "The order reads PageTurners 4.7, MetalWorks 4.5, Attic Finds 4.0, Harbor Trade Co 3.0.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "From the Completed Sales page, leave a 5-star review on Harbor Trade Co's Regency Mantel Clock sale, then check the Top Sellers leaderboard.",
+          "expected": "Harbor Trade Co's average becomes 4.0 (3 and 5 stars) and it now sits above Attic Finds — the two are tied at 4.0 and Harbor wins the tie with 2 reviews to Attic's 1.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Settle the Antique Oak Writing Desk through its confirmation, then open the Completed Sales page and find the Desk's new record.",
+          "expected": "The freshly settled Desk sale appears in Completed Sales and offers a review option right there — while listings still open for bidding offer no way to leave a review.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the My Watchlist section on the dashboard.",
+          "expected": "The Gold Krugerrand Coin and Antique Oak Writing Desk are there from the start, the combined current-bid value reads $3,200.00, and the Desk wears the amber Closing pill.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 1,
+      "partial": 0,
+      "no": 4,
+      "total": 5,
+      "accuracy": 20.0,
+      "cost": {
+        "generation_usd": 0.323085,
+        "model_calls": 15,
+        "input_tokens_total": 1403096,
+        "output_tokens": 14711,
+        "judge_usd": 0.5966
+      }
+    },
+    {
+      "turn": 9,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the auction calendar.",
+          "expected": "The July 2026 grid shows entries on exactly the 17th (Antique Oak Writing Desk), 18th (10oz Silver Bullion Bar), 21st (1968 Rolex Submariner), 22nd (Persian Heriz Rug), 25th (Signed First-Edition Dune) and 30th (Gold Krugerrand Coin) — six in all, with nothing for the settled Fender.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the calendar, turn on the watched-only toggle, then also select the Metals category chip.",
+          "expected": "Watched-only alone leaves just the 17th (Oak Desk) and the 30th (Krugerrand); adding Metals narrows it to the Krugerrand on the 30th only — the filters stack, they don't replace each other.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Click the calendar entry on July 25th, then go back and look at July 19th and 20th.",
+          "expected": "The entry takes you to the Signed First-Edition Dune's listing; the 19th and 20th render as normal empty day cells — no errors, no missing grid squares.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 3,
+          "task": "Star the Persian Heriz Rug from the browse listings, then open the calendar with the watched-only toggle on.",
+          "expected": "The rug's July 22nd entry now shows up alongside the 17th and the 30th — the calendar tracks the watchlist stars live.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Market Movers panel on the dashboard and read the Top Gainers column.",
+          "expected": "Top Gainers reads 1968 Rolex Submariner, Signed First-Edition Dune, Gold Krugerrand Coin in that order — the 1974 Fender Stratocaster (+6.40%) is absent because it's Settled, and the Rolex outranks the Dune on their +5.25% tie because its current bid is higher.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 2,
+      "partial": 1,
+      "no": 2,
+      "total": 5,
+      "accuracy": 50.0,
+      "cost": {
+        "generation_usd": 0.251741,
+        "model_calls": 9,
+        "input_tokens_total": 969044,
+        "output_tokens": 6932,
+        "judge_usd": 0.6152
+      }
+    },
+    {
+      "turn": 10,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Look at the primary action buttons on the browse/screener page, such as the bid and save-preset buttons.",
+          "expected": "They're dark chocolate with white text in fully-rounded pill shapes, and every price on the page renders in a monospace font.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the dashboard and inspect the Market Movers panel, the My Watchlist cards, and the page heading.",
+          "expected": "Cards have 12px rounded corners with a thin chocolate border, the main heading carries the chocolate accent bar underneath, and status pills read in uppercase while keeping their green/amber/gray colors.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 2,
+          "task": "Visit the Completed Sales page, any seller profile, and the auction calendar, checking money values and headings on each.",
+          "expected": "All three pages show monospace money values and the accent-bar heading — and on Completed Sales the 1974 Fender Stratocaster total still reads exactly $3,737.50.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Find the Antique Oak Writing Desk's entry on the auction calendar and check its status pill.",
+          "expected": "Despite the restyle it still wears the amber Closing pill (now in uppercase), keeping the app-wide green/amber/gray status coding.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the PageTurners seller profile.",
+          "expected": "The average rating reads 4.7 from 3 reviews — 5, 5 and 4 average to 4.666..., which rounds half-up to 4.7, not a truncated 4.6.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 0,
+      "partial": 2,
+      "no": 3,
+      "total": 5,
+      "accuracy": 20.0,
+      "cost": {
+        "generation_usd": 0.356358,
+        "model_calls": 20,
+        "input_tokens_total": 1660800,
+        "output_tokens": 13987,
+        "judge_usd": 0.5106
+      }
+    }
+  ]
+}

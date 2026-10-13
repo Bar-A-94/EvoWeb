@@ -1,0 +1,975 @@
+{
+  "anchors": [
+    {
+      "en": "personality assessment",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        1
+      ],
+      "translations": {
+        "es": "evaluación de personalidad",
+        "zh": "性格测评",
+        "he": "מבחן אישיות",
+        "hi": "व्यक्तित्व मूल्यांकन",
+        "sw": "tathmini ya utu",
+        "de": "Persönlichkeitstest",
+        "fr": "évaluation de personnalité"
+      }
+    },
+    {
+      "en": "beige",
+      "class": "keep",
+      "kind": "css_visual",
+      "turns": [
+        1,
+        10
+      ]
+    },
+    {
+      "en": "saddle brown",
+      "class": "keep",
+      "kind": "css_visual",
+      "turns": [
+        1
+      ]
+    },
+    {
+      "en": "screener",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        10
+      ],
+      "translations": {
+        "es": "buscador de coaches",
+        "zh": "教练筛选器",
+        "he": "מסנן מאמנים",
+        "hi": "कोच स्क्रीनर",
+        "sw": "kichujio cha makocha",
+        "de": "Coach-Finder",
+        "fr": "sélecteur de coachs"
+      }
+    },
+    {
+      "en": "max price",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        2,
+        3,
+        6
+      ],
+      "translations": {
+        "es": "precio máximo",
+        "zh": "最高价格",
+        "he": "מחיר מקסימלי",
+        "hi": "अधिकतम कीमत",
+        "sw": "bei ya juu zaidi",
+        "de": "Höchstpreis",
+        "fr": "prix maximum"
+      }
+    },
+    {
+      "en": "Showing X of 7 coaches",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        2
+      ],
+      "translations": {
+        "es": "Mostrando X de 7 coaches",
+        "zh": "显示 7 位教练中的 X 位",
+        "he": "מוצגים X מתוך 7 מאמנים",
+        "hi": "7 में से X कोच दिखाए जा रहे हैं",
+        "sw": "Inaonyesha X kati ya makocha 7",
+        "de": "X von 7 Coaches werden angezeigt",
+        "fr": "Affichage de X coachs sur 7"
+      }
+    },
+    {
+      "en": "Career",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        2,
+        3
+      ],
+      "translations": {
+        "es": "Carrera",
+        "zh": "职业发展",
+        "he": "קריירה",
+        "hi": "करियर",
+        "sw": "Kazi",
+        "de": "Karriere",
+        "fr": "Carrière"
+      }
+    },
+    {
+      "en": "Wellness",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        2,
+        3
+      ],
+      "translations": {
+        "es": "Bienestar",
+        "zh": "身心健康",
+        "he": "רווחה",
+        "hi": "कल्याण",
+        "sw": "Ustawi",
+        "de": "Wohlbefinden",
+        "fr": "Bien-être"
+      }
+    },
+    {
+      "en": "Mindfulness",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        2,
+        3
+      ],
+      "translations": {
+        "es": "Atención plena",
+        "zh": "正念",
+        "he": "מיינדפולנס",
+        "hi": "माइंडफुलनेस",
+        "sw": "Utulivu wa Akili",
+        "de": "Achtsamkeit",
+        "fr": "Pleine conscience"
+      }
+    },
+    {
+      "en": "Leadership",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        2,
+        5
+      ],
+      "translations": {
+        "es": "Liderazgo",
+        "zh": "领导力",
+        "he": "מנהיגות",
+        "hi": "नेतृत्व",
+        "sw": "Uongozi",
+        "de": "Führung",
+        "fr": "Leadership"
+      }
+    },
+    {
+      "en": "Executive",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        2
+      ],
+      "translations": {
+        "es": "Ejecutivo",
+        "zh": "高管",
+        "he": "מנהלים בכירים",
+        "hi": "कार्यकारी",
+        "sw": "Utendaji",
+        "de": "Top-Management",
+        "fr": "Dirigeants"
+      }
+    },
+    {
+      "en": "Resume",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        2,
+        4
+      ],
+      "translations": {
+        "es": "Currículum",
+        "zh": "简历",
+        "he": "קורות חיים",
+        "hi": "रिज़्यूमे",
+        "sw": "Wasifu",
+        "de": "Lebenslauf",
+        "fr": "CV"
+      }
+    },
+    {
+      "en": "Interview Prep",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        2
+      ],
+      "translations": {
+        "es": "Preparación para entrevistas",
+        "zh": "面试准备",
+        "he": "הכנה לראיונות",
+        "hi": "इंटरव्यू तैयारी",
+        "sw": "Maandalizi ya Mahojiano",
+        "de": "Interview-Vorbereitung",
+        "fr": "Préparation aux entretiens"
+      }
+    },
+    {
+      "en": "per session",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        2,
+        3,
+        4,
+        10
+      ],
+      "translations": {
+        "es": "por sesión",
+        "zh": "每节课",
+        "he": "לפגישה",
+        "hi": "प्रति सत्र",
+        "sw": "kwa kila kipindi",
+        "de": "pro Sitzung",
+        "fr": "par séance"
+      }
+    },
+    {
+      "en": "cost estimator",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        3,
+        4
+      ],
+      "translations": {
+        "es": "estimador de costos",
+        "zh": "费用估算器",
+        "he": "מחשבון עלות",
+        "hi": "लागत अनुमानक",
+        "sw": "kikadiriaji cha gharama",
+        "de": "Kosten-Rechner",
+        "fr": "estimateur de coût"
+      }
+    },
+    {
+      "en": "estimator",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        3,
+        4,
+        8
+      ],
+      "translations": {
+        "es": "estimador",
+        "zh": "估算器",
+        "he": "מחשבון",
+        "hi": "अनुमानक",
+        "sw": "kikadiriaji",
+        "de": "Rechner",
+        "fr": "estimateur"
+      }
+    },
+    {
+      "en": "Request free intro call",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        4
+      ],
+      "translations": {
+        "es": "Solicitar llamada de presentación gratuita",
+        "zh": "申请免费介绍通话",
+        "he": "בקשת שיחת היכרות חינם",
+        "hi": "मुफ्त परिचय कॉल का अनुरोध करें",
+        "sw": "Omba simu ya utangulizi bila malipo",
+        "de": "Kostenloses Kennenlerngespräch anfragen",
+        "fr": "Demander un appel découverte gratuit"
+      }
+    },
+    {
+      "en": "free intro call",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        4
+      ],
+      "translations": {
+        "es": "llamada de presentación gratuita",
+        "zh": "免费介绍通话",
+        "he": "שיחת היכרות חינם",
+        "hi": "मुफ्त परिचय कॉल",
+        "sw": "simu ya utangulizi bila malipo",
+        "de": "Kostenloses Kennenlerngespräch",
+        "fr": "appel découverte gratuit"
+      }
+    },
+    {
+      "en": "Coach Inbox",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        4,
+        5,
+        7
+      ],
+      "translations": {
+        "es": "Bandeja del coach",
+        "zh": "教练收件箱",
+        "he": "דואר נכנס של המאמן",
+        "hi": "कोच इनबॉक्स",
+        "sw": "Kikasha cha Kocha",
+        "de": "Coach-Posteingang",
+        "fr": "Boîte du coach"
+      }
+    },
+    {
+      "en": "My requests",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        4,
+        7
+      ],
+      "translations": {
+        "es": "Mis solicitudes",
+        "zh": "我的申请",
+        "he": "הבקשות שלי",
+        "hi": "मेरे अनुरोध",
+        "sw": "Maombi yangu",
+        "de": "Meine Anfragen",
+        "fr": "Mes demandes"
+      }
+    },
+    {
+      "en": "Pending",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        4,
+        5
+      ],
+      "translations": {
+        "es": "Pendiente",
+        "zh": "待处理",
+        "he": "ממתין",
+        "hi": "लंबित",
+        "sw": "Inasubiri",
+        "de": "Ausstehend",
+        "fr": "En attente"
+      }
+    },
+    {
+      "en": "Accepted",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        4,
+        7
+      ],
+      "translations": {
+        "es": "Aceptada",
+        "zh": "已接受",
+        "he": "התקבלה",
+        "hi": "स्वीकृत",
+        "sw": "Imekubaliwa",
+        "de": "Angenommen",
+        "fr": "Acceptée"
+      }
+    },
+    {
+      "en": "Declined",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        4
+      ],
+      "translations": {
+        "es": "Rechazada",
+        "zh": "已拒绝",
+        "he": "נדחתה",
+        "hi": "अस्वीकृत",
+        "sw": "Imekataliwa",
+        "de": "Abgelehnt",
+        "fr": "Refusée"
+      }
+    },
+    {
+      "en": "Decline",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        4
+      ],
+      "translations": {
+        "es": "Rechazar",
+        "zh": "拒绝",
+        "he": "דחה",
+        "hi": "अस्वीकार करें",
+        "sw": "Kataa",
+        "de": "Ablehnen",
+        "fr": "Refuser"
+      }
+    },
+    {
+      "en": "Accept",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        7
+      ],
+      "translations": {
+        "es": "Aceptar",
+        "zh": "接受",
+        "he": "קבל",
+        "hi": "स्वीकार करें",
+        "sw": "Kubali",
+        "de": "Annehmen",
+        "fr": "Accepter"
+      }
+    },
+    {
+      "en": "Hoping to prep for a VP-level move this fall.",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        4,
+        5
+      ],
+      "translations": {
+        "es": "Espero prepararme para un puesto de nivel VP este otoño.",
+        "zh": "希望为今年秋天晋升到 VP 级别做准备。",
+        "he": "מקווה להתכונן למעבר לדרג VP בסתיו הקרוב.",
+        "hi": "इस पतझड़ में VP-स्तर की भूमिका के लिए तैयारी करने की उम्मीद है।",
+        "sw": "Natumai kujiandaa kwa hatua ya ngazi ya VP msimu huu wa vuli.",
+        "de": "Ich hoffe, mich diesen Herbst auf einen Wechsel auf VP-Ebene vorzubereiten.",
+        "fr": "J'espère me préparer à un passage au niveau VP cet automne."
+      }
+    },
+    {
+      "en": "No reviews yet",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        5,
+        7
+      ],
+      "translations": {
+        "es": "Sin reseñas todavía",
+        "zh": "暂无评价",
+        "he": "אין ביקורות עדיין",
+        "hi": "अभी कोई समीक्षा नहीं",
+        "sw": "Hakuna maoni bado",
+        "de": "Noch keine Bewertungen",
+        "fr": "Pas encore d'avis"
+      }
+    },
+    {
+      "en": "minimum rating",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        5
+      ],
+      "translations": {
+        "es": "calificación mínima",
+        "zh": "最低评分",
+        "he": "דירוג מינימלי",
+        "hi": "न्यूनतम रेटिंग",
+        "sw": "kiwango cha chini cha ukadiriaji",
+        "de": "Mindestbewertung",
+        "fr": "note minimale"
+      }
+    },
+    {
+      "en": "session planner",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        6,
+        9
+      ],
+      "translations": {
+        "es": "planificador de sesiones",
+        "zh": "课程规划器",
+        "he": "מתכנן מפגשים",
+        "hi": "सत्र प्लानर",
+        "sw": "kipangaji cha vipindi",
+        "de": "Sitzungs-Planer",
+        "fr": "planificateur de séances"
+      }
+    },
+    {
+      "en": "planner",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        6,
+        9
+      ],
+      "translations": {
+        "es": "planificador",
+        "zh": "规划器",
+        "he": "מתכנן",
+        "hi": "प्लानर",
+        "sw": "kipangaji",
+        "de": "Planer",
+        "fr": "planificateur"
+      }
+    },
+    {
+      "en": "wraps up on",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        6
+      ],
+      "translations": {
+        "es": "termina el",
+        "zh": "结束于",
+        "he": "מסתיים ב",
+        "hi": "समाप्त होगा",
+        "sw": "inamalizika tarehe",
+        "de": "endet am",
+        "fr": "se termine le"
+      }
+    },
+    {
+      "en": "every two weeks",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        6
+      ],
+      "translations": {
+        "es": "cada dos semanas",
+        "zh": "每两周",
+        "he": "אחת לשבועיים",
+        "hi": "हर दो सप्ताह",
+        "sw": "kila wiki mbili",
+        "de": "alle zwei Wochen",
+        "fr": "toutes les deux semaines"
+      }
+    },
+    {
+      "en": "weekly",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        6
+      ],
+      "translations": {
+        "es": "semanal",
+        "zh": "每周",
+        "he": "שבועי",
+        "hi": "साप्ताहिक",
+        "sw": "kila wiki",
+        "de": "wöchentlich",
+        "fr": "hebdomadaire"
+      }
+    },
+    {
+      "en": "My coaching hub",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        7,
+        10
+      ],
+      "translations": {
+        "es": "Mi centro de coaching",
+        "zh": "我的辅导中心",
+        "he": "מרכז האימון שלי",
+        "hi": "मेरा कोचिंग हब",
+        "sw": "Kitovu changu cha ukocha",
+        "de": "Mein Coaching-Hub",
+        "fr": "Mon espace coaching"
+      }
+    },
+    {
+      "en": "hub",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        7,
+        10
+      ],
+      "translations": {
+        "es": "centro",
+        "zh": "中心",
+        "he": "מרכז",
+        "hi": "हब",
+        "sw": "kitovu",
+        "de": "Hub",
+        "fr": "espace"
+      }
+    },
+    {
+      "en": "engagement journal",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        8
+      ],
+      "translations": {
+        "es": "diario de acompañamiento",
+        "zh": "合作日志",
+        "he": "יומן ליווי",
+        "hi": "सहभागिता जर्नल",
+        "sw": "jarida la ushirikiano",
+        "de": "Begleit-Journal",
+        "fr": "journal d'accompagnement"
+      }
+    },
+    {
+      "en": "journal",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        8
+      ],
+      "translations": {
+        "es": "diario",
+        "zh": "日志",
+        "he": "יומן",
+        "hi": "जर्नल",
+        "sw": "jarida",
+        "de": "Journal",
+        "fr": "journal"
+      }
+    },
+    {
+      "en": "Copy summary",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        8
+      ],
+      "translations": {
+        "es": "Copiar resumen",
+        "zh": "复制摘要",
+        "he": "העתקת סיכום",
+        "hi": "सारांश कॉपी करें",
+        "sw": "Nakili muhtasari",
+        "de": "Zusammenfassung kopieren",
+        "fr": "Copier le résumé"
+      }
+    },
+    {
+      "en": "Practiced difficult feedback conversation",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        8
+      ],
+      "translations": {
+        "es": "Practicamos una conversación difícil de retroalimentación",
+        "zh": "练习了一次困难的反馈对话",
+        "he": "תרגלנו שיחת משוב קשה",
+        "hi": "कठिन फीडबैक बातचीत का अभ्यास किया",
+        "sw": "Tulifanya mazoezi ya mazungumzo magumu ya maoni",
+        "de": "Schwieriges Feedbackgespräch geübt",
+        "fr": "Entraînement à une conversation de feedback difficile"
+      }
+    },
+    {
+      "en": "Set a 90-day leadership plan",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        8
+      ],
+      "translations": {
+        "es": "Definimos un plan de liderazgo de 90 días",
+        "zh": "制定了 90 天领导力计划",
+        "he": "בנינו תוכנית מנהיגות ל-90 יום",
+        "hi": "90 दिन की नेतृत्व योजना बनाई",
+        "sw": "Tuliweka mpango wa uongozi wa siku 90",
+        "de": "90-Tage-Führungsplan aufgestellt",
+        "fr": "Élaboration d'un plan de leadership sur 90 jours"
+      }
+    },
+    {
+      "en": "Get promoted to Senior PM",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        9
+      ],
+      "translations": {
+        "es": "Conseguir un ascenso a Senior PM",
+        "zh": "晋升为 Senior PM",
+        "he": "לקבל קידום לתפקיד Senior PM",
+        "hi": "Senior PM पद पर पदोन्नति पाना",
+        "sw": "Kupandishwa cheo kuwa Senior PM",
+        "de": "Beförderung zum Senior PM",
+        "fr": "Obtenir une promotion au poste de Senior PM"
+      }
+    },
+    {
+      "en": "Improve public speaking",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        9
+      ],
+      "translations": {
+        "es": "Mejorar el hablar en público",
+        "zh": "提升公开演讲能力",
+        "he": "לשפר דיבור מול קהל",
+        "hi": "सार्वजनिक भाषण में सुधार करना",
+        "sw": "Kuboresha uzungumzaji hadharani",
+        "de": "Öffentliches Reden verbessern",
+        "fr": "Améliorer la prise de parole en public"
+      }
+    },
+    {
+      "en": "Build a morning routine",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        9
+      ],
+      "translations": {
+        "es": "Crear una rutina matutina",
+        "zh": "养成晨间习惯",
+        "he": "לבנות שגרת בוקר",
+        "hi": "सुबह की दिनचर्या बनाना",
+        "sw": "Kujenga ratiba ya asubuhi",
+        "de": "Eine Morgenroutine aufbauen",
+        "fr": "Mettre en place une routine matinale"
+      }
+    },
+    {
+      "en": "Find a mentor in fintech",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        9
+      ],
+      "translations": {
+        "es": "Encontrar un mentor en fintech",
+        "zh": "在金融科技领域找到一位导师",
+        "he": "למצוא מנטור בתחום הפינטק",
+        "hi": "फिनटेक में एक मेंटर ढूंढना",
+        "sw": "Kupata mshauri katika fintech",
+        "de": "Einen Mentor im Fintech-Bereich finden",
+        "fr": "Trouver un mentor dans la fintech"
+      }
+    },
+    {
+      "en": "goals page",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        9,
+        10
+      ],
+      "translations": {
+        "es": "página de metas",
+        "zh": "目标页面",
+        "he": "עמוד המטרות",
+        "hi": "लक्ष्य पेज",
+        "sw": "ukurasa wa malengo",
+        "de": "Ziele-Seite",
+        "fr": "page des objectifs"
+      }
+    },
+    {
+      "en": "Ben Whitaker",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "en": "Derek Okafor",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "en": "Tom Alvarez",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        3,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "en": "Maya Chen",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        3,
+        5,
+        7,
+        8,
+        10
+      ]
+    },
+    {
+      "en": "Hana Suzuki",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "en": "Priya Nair",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        4,
+        5,
+        7,
+        10
+      ]
+    },
+    {
+      "en": "Sofia Ricci",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "en": "Ben",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "en": "Derek",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "en": "Tom",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        3,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "en": "Maya",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        3,
+        5,
+        7,
+        8,
+        10
+      ]
+    },
+    {
+      "en": "Hana",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "en": "Priya",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        4,
+        5,
+        7,
+        10
+      ]
+    },
+    {
+      "en": "Sofia",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "en": "VP",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        4,
+        5
+      ]
+    },
+    {
+      "en": "Senior PM",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        9
+      ]
+    }
+  ]
+}

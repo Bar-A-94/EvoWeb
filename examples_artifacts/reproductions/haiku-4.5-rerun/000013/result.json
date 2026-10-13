@@ -1,0 +1,600 @@
+{
+  "index": 13,
+  "status": "success",
+  "model": "anthropic/claude-haiku-4-5-20251001",
+  "generator": "openhands",
+  "base_trajectory": {
+    "source": "none",
+    "messages": 0
+  },
+  "artifacts": {
+    "zip": null,
+    "run_json": null,
+    "generator": "openhands",
+    "screenshots": [
+      "/output/000013/screenshots/task000013_0.png",
+      "/output/000013/screenshots/task000013_1.png",
+      "/output/000013/screenshots/task000013_2.png",
+      "/output/000013/screenshots/task000013_3.png",
+      "/output/000013/screenshots/task000013_4.png"
+    ],
+    "output_dir": "/output/000013"
+  },
+  "ladder": {
+    "turns_expected": 10,
+    "turns_completed": 10,
+    "complete": true
+  },
+  "eval_model": "claude-sonnet-4-6",
+  "accuracy": 88.0,
+  "yes": 43,
+  "partial": 2,
+  "no": 5,
+  "total": 50,
+  "tasks": [
+    {
+      "task_idx": 0,
+      "task": "Submit a new question using the question submission form.",
+      "expected": "The question is successfully posted and appears on the list of submitted questions.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 1,
+      "task": "View the list of submitted questions.",
+      "expected": "A list of submitted questions is displayed, including the latest question, sorted appropriately.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 2,
+      "task": "Submit an answer to an existing question.",
+      "expected": "The answer is successfully posted and visible under the corresponding question.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 3,
+      "task": "View answers to a specific question.",
+      "expected": "All answers related to the specific question are displayed clearly beneath the question.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 4,
+      "task": "Verify that the website uses 'beige' as the background color and 'saddle brown' as the component color, as specified in the design requirements.",
+      "expected": "The website has a background color of 'beige' and components (such as buttons, cards, headers, etc.) are styled with the color 'saddle brown', accurately reflecting the design instruction.",
+      "verdict": "yes"
+    }
+  ],
+  "turns": [
+    {
+      "turn": 1,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": false,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Submit a new question using the question submission form.",
+          "expected": "The question is successfully posted and appears on the list of submitted questions.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "View the list of submitted questions.",
+          "expected": "A list of submitted questions is displayed, including the latest question, sorted appropriately.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Submit an answer to an existing question.",
+          "expected": "The answer is successfully posted and visible under the corresponding question.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "View answers to a specific question.",
+          "expected": "All answers related to the specific question are displayed clearly beneath the question.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Verify that the website uses 'beige' as the background color and 'saddle brown' as the component color, as specified in the design requirements.",
+          "expected": "The website has a background color of 'beige' and components (such as buttons, cards, headers, etc.) are styled with the color 'saddle brown', accurately reflecting the design instruction.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.127999,
+        "model_calls": 20,
+        "input_tokens_total": 415571,
+        "output_tokens": 10560,
+        "judge_usd": 0.1334
+      }
+    },
+    {
+      "turn": 2,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the question list with no filters applied and read the questions from top to bottom.",
+          "expected": "Order is: intermittent fasting (+12), sourdough starter (+8), learn Python (+8), laptop fan (+5), budget airlines (+5), bike wheel (0), freeze basil (-2). In particular the laptop fan question (4 answers) sits above budget airlines (2 answers) despite both being +5, and sourdough (3 answers) sits above Python (0 answers).",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Toggle on the #tech and #fitness tag pills and select the unanswered option.",
+          "expected": "Exactly two questions show — 'How to fix a wobbly bike wheel?' and 'What's the best way to learn Python?' — and the readout says Showing 2 of 7 questions.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Toggle on the #cooking tag pill and select the unanswered option.",
+          "expected": "No questions match, and a sensible empty-state message appears instead of a blank area, leftover rows, or a crash.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Open 'How to fix a wobbly bike wheel?', post an answer using the answering form, then go back to the question list and select the unanswered option with no tag pills active.",
+          "expected": "Only 'What's the best way to learn Python?' remains in the unanswered view — the bike wheel question no longer qualifies as unanswered.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the question 'How do I keep sourdough starter alive?' and look at its answers.",
+          "expected": "Three answers are listed under the question.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.158697,
+        "model_calls": 10,
+        "input_tokens_total": 429463,
+        "output_tokens": 13115,
+        "judge_usd": 0.7357
+      }
+    },
+    {
+      "turn": 3,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "runtime": {
+        "checks_affected": 4,
+        "errors": [
+          "http://localhost:5200/node_modules/.vite/deps/chunk-QXLG2TGQ.js?v=a05c9aec 11600:22 Uncaught Error: Too many re-renders. React limits the number of renders to prevent an infinite loop."
+        ]
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the ask composer and type how into the title field.",
+          "expected": "Exactly two duplicate suggestions appear: 'How do I keep sourdough starter alive?' and 'How to fix a wobbly bike wheel?'.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the composer, type the title Why is it hot? into the title field.",
+          "expected": "While typing, a message about the minimum title length (it's only 14 characters, under the 15 minimum) appears and the post control stays locked.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Clear the title field, type ho, then add one more letter to make it how.",
+          "expected": "At two characters no suggestions show; the moment the third character lands the suggestion list appears — it reacts per keystroke, not only on submit.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Type basil into the composer's title field and look at the suggestion that appears.",
+          "expected": "The single suggestion for 'Can I freeze fresh basil?' shows its tag as a lowercase #cooking pill and its score with the minus sign visible as -2, matching the app-wide signed-score and tag-pill styles.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Toggle on the #tech and #fitness tag pills and select the unanswered option.",
+          "expected": "Exactly two questions show — 'How to fix a wobbly bike wheel?' and 'What's the best way to learn Python?' — and the readout says Showing 2 of 7 questions.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 1,
+      "partial": 0,
+      "no": 4,
+      "total": 5,
+      "accuracy": 20.0,
+      "cost": {
+        "generation_usd": 0.170302,
+        "model_calls": 12,
+        "input_tokens_total": 699644,
+        "output_tokens": 7318,
+        "judge_usd": 0.4505
+      }
+    },
+    {
+      "turn": 4,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open 'How do I keep sourdough starter alive?'.",
+          "expected": "One answer carries a green accepted checkmark badge and is pinned at the very top of the answer list.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the sourdough question's page, click Accept on a different answer than the currently accepted one.",
+          "expected": "The accepted checkmark moves to the newly accepted answer, which is now pinned to the top; exactly one answer is accepted and the previous one has lost its badge.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the question list's screener, select the Solved option.",
+          "expected": "Exactly one question shows: 'How do I keep sourdough starter alive?' — not the five questions that merely have answers.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Open 'Can I freeze fresh basil?', click Accept on its answer, then go back to the question list and select the Solved option.",
+          "expected": "Two questions now show — sourdough and basil — and the basil question carries the green Solved badge in the list.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the question list with no filters applied and read the questions from top to bottom.",
+          "expected": "Order is: intermittent fasting (+12), sourdough starter (+8), learn Python (+8), laptop fan (+5), budget airlines (+5), bike wheel (0), freeze basil (-2). In particular the laptop fan question (4 answers) sits above budget airlines (2 answers) despite both being +5, and sourdough (3 answers) sits above Python (0 answers).",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.227757,
+        "model_calls": 15,
+        "input_tokens_total": 1048722,
+        "output_tokens": 8540,
+        "judge_usd": 0.6145
+      }
+    },
+    {
+      "turn": 5,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "runtime": {
+        "checks_affected": 1,
+        "errors": [
+          "http://localhost:5200/node_modules/.vite/deps/chunk-QXLG2TGQ.js?v=a05c9aec 11600:22 Uncaught Error: Too many re-renders. React limits the number of renders to prevent an infinite loop."
+        ]
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Topics page and read the tag cards in order.",
+          "expected": "Cards read #cooking, #fitness, #tech, #travel — the three two-question tags alphabetical ahead of #travel with 1 — and NOT ordered by combined score (which would put #tech, at +13, first).",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the Topics page and count the tag cards.",
+          "expected": "Exactly four cards, one per tag — no tag duplicated even though most tags have multiple questions, and none missing; the page renders without crashing.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Look at the #cooking card on the Topics page.",
+          "expected": "It shows 2 questions, a combined score of +6 with the plus sign visible, 1 solved, and its top question is 'How do I keep sourdough starter alive?'.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Open 'Can I freeze fresh basil?', click Accept on its answer, then open the Topics page.",
+          "expected": "The #cooking card's solved count now reads 2 — both cooking questions are solved.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the ask composer and type how into the title field.",
+          "expected": "Exactly two duplicate suggestions appear: 'How do I keep sourdough starter alive?' and 'How to fix a wobbly bike wheel?'.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 4,
+      "partial": 0,
+      "no": 1,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.201713,
+        "model_calls": 12,
+        "input_tokens_total": 948019,
+        "output_tokens": 4137,
+        "judge_usd": 0.2574
+      }
+    },
+    {
+      "turn": 6,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the bounty tool on 'What's the best way to learn Python?' and type 49, then change it to 60, then to 75.",
+          "expected": "At 49 an under-the-50-minimum message shows and confirm is locked; at 60 it stays locked because 60 isn't a step of 25; at 75 the error clears and confirm unlocks — each reaction happening as the value is typed.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the bounty tool on 'What's the best way to learn Python?' and type 50.",
+          "expected": "The balance starts at 425 (500 minus the 75 already on the bike wheel), and as soon as 50 is typed the live remaining preview reads 375.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the bounty tool on 'What's the best way to learn Python?', type 100 and confirm it.",
+          "expected": "The Featured strip now lists the Python question (100 pts) above the bike wheel question (75 pts) — biggest bounty first — with each entry showing its bounty.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the screener, toggle on the #travel tag pill.",
+          "expected": "The main list narrows to just 'Best budget airlines in Europe?' while the Featured strip above it still shows the bike wheel question with its 75-pt bounty.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Toggle on the #cooking tag pill and select the unanswered option.",
+          "expected": "No questions match, and a sensible empty-state message appears instead of a blank area, leftover rows, or a crash.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.315337,
+        "model_calls": 19,
+        "input_tokens_total": 1711758,
+        "output_tokens": 8145,
+        "judge_usd": 0.3682
+      }
+    },
+    {
+      "turn": 7,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Review page from the navigation.",
+          "expected": "The nav link carries a pending badge reading 1, and the single queue entry is the seeded suggestion on the basil question's answer, showing original and proposed text side by side with Approve and Reject controls.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the Review page click Approve on the basil suggestion, then open 'Can I freeze fresh basil?'.",
+          "expected": "The queue now shows its friendly empty message with the pending badge at zero or gone, and the basil answer displays the proposed text with an 'edited' marker.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the Review page click Reject on the basil suggestion, then open 'Can I freeze fresh basil?'.",
+          "expected": "The entry leaves the queue, and the basil answer still shows its original text with no 'edited' marker.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Look at the basil entry on the Review page.",
+          "expected": "Its question's tag appears as a lowercase #cooking pill, matching the app-wide tag style.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the question list's screener, select the Solved option.",
+          "expected": "Exactly one question shows: 'How do I keep sourdough starter alive?' — not the five questions that merely have answers.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.377164,
+        "model_calls": 19,
+        "input_tokens_total": 2006027,
+        "output_tokens": 10722,
+        "judge_usd": 0.2475
+      }
+    },
+    {
+      "turn": 8,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Digest page and read the generated text.",
+          "expected": "The first line says Following 2 questions, and the sourdough line (+8) sits above the bike wheel line (0) — score order, not the order they were followed in (bike wheel was followed first).",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Find the bike wheel question's line in the digest text.",
+          "expected": "It shows the #fitness tag, its score as a bare 0 with no sign, 0 answers, and ends with a FEATURED marker carrying 75 pts — while the sourdough line carries no featured marker.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the Digest page, unfollow both followed questions.",
+          "expected": "The digest text is replaced immediately by the friendly nothing-to-build message — no stale lines, no blank panel, no crash.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Open the bounty tool on the sourdough question, type 100, confirm it, then open the Digest page.",
+          "expected": "The sourdough line now ends with a 100-pt FEATURED marker while keeping its spot above the bike wheel line.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Topics page and read the tag cards in order.",
+          "expected": "Cards read #cooking, #fitness, #tech, #travel — the three two-question tags alphabetical ahead of #travel with 1 — and NOT ordered by combined score (which would put #tech, at +13, first).",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.465345,
+        "model_calls": 20,
+        "input_tokens_total": 1937727,
+        "output_tokens": 10505,
+        "judge_usd": 0.1826
+      }
+    },
+    {
+      "turn": 9,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Look at the primary action controls on the main question list page, such as the control that starts a new question.",
+          "expected": "They have a saddle brown background, white text, and pill-shaped fully rounded corners.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the Topics page and look at the four tag cards.",
+          "expected": "The cards still read #cooking, #fitness, #tech, #travel in order, each now with a thin 1px saddle-brown border and visibly rounded corners, and the page title is centered.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open the Review page, then open the Digest page.",
+          "expected": "On BOTH pages the page title is centered and section headings render in small caps — neither page missed the restyle.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Find the sourdough question's Solved badge in the main question list.",
+          "expected": "It renders as a dark green pill with white text, per the new badge style.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the bounty tool on 'What's the best way to learn Python?' and type 49, then change it to 60, then to 75.",
+          "expected": "At 49 an under-the-50-minimum message shows and confirm is locked; at 60 it stays locked because 60 isn't a step of 25; at 75 the error clears and confirm unlocks — each reaction happening as the value is typed.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 3,
+      "partial": 2,
+      "no": 0,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.29203,
+        "model_calls": 20,
+        "input_tokens_total": 1462173,
+        "output_tokens": 10981,
+        "judge_usd": 0.3057
+      }
+    },
+    {
+      "turn": 10,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Triage dashboard and read the unanswered urgency section.",
+          "expected": "'How to fix a wobbly bike wheel?' (75-pt bounty, score 0) ranks ABOVE 'What's the best way to learn Python?' (+8, no bounty) — bounty outranks score.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Read the answered-but-not-solved section on the Triage dashboard.",
+          "expected": "Order is: intermittent fasting (+12), laptop fan (+5, 4 answers), budget airlines (+5, 2 answers), freeze basil (-2) — laptop above airlines on the answer-count tiebreak, and sourdough absent because it's solved.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open 'Is intermittent fasting safe for beginners?', click Accept on its answer, then return to the Triage dashboard.",
+          "expected": "The fasting question has left the answered-but-not-solved section, and the solved total in the headline row now reads 2.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "On the Review page click Approve on the basil suggestion, then open the Triage dashboard.",
+          "expected": "The pending edit suggestions count in the headline row reads 0, down from 1.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Digest page and read the generated text.",
+          "expected": "The first line says Following 2 questions, and the sourdough line (+8) sits above the bike wheel line (0) — score order, not the order they were followed in (bike wheel was followed first).",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.271587,
+        "model_calls": 15,
+        "input_tokens_total": 1369696,
+        "output_tokens": 6520,
+        "judge_usd": 0.1763
+      }
+    }
+  ]
+}

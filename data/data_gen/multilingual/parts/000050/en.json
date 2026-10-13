@@ -1,0 +1,844 @@
+{
+ "id": "000050",
+ "instruction": "Please implement a health survey website for women to fill out and submit health information. The website should have functionalities for filling out the survey, and submitting information. Users can fill out the relevant survey, and submit their information. The system will automatically collect the information and provide data management, permission management, data review, and reporting functions. Use whitesmoke as the default background and dark cyan for component styling.",
+ "Category": {
+  "primary_category": "User Interaction",
+  "subcategories": [
+   "Form Systems",
+   "Data Management"
+  ]
+ },
+ "application_type": "Internal Tools",
+ "ui_instruct": [
+  {
+   "task": "Navigate to the survey page from the homepage to fill out a health information survey.",
+   "expected_result": "The user is successfully directed to the survey page from the homepage, with the proper survey loaded relevant to women's health.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations",
+     "Navigation"
+    ]
+   }
+  },
+  {
+   "task": "Fill out the health information survey with sample data and attempt to submit it.",
+   "expected_result": "The survey data is successfully submitted, and a confirmation message is displayed to the user indicating successful submission.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations"
+    ]
+   }
+  },
+  {
+   "task": "Check that the survey form validates inputs and provides error messages for incomplete or incorrectly formatted entries.",
+   "expected_result": "Appropriate error messages are displayed for incomplete fields or incorrect data formats, preventing form submission until resolved.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations"
+    ]
+   }
+  },
+  {
+   "task": "Test the data management functionality by accessing the submitted information section.",
+   "expected_result": "Submitted survey information is available in the data management section, presented in an organized and user-friendly manner.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "File operation"
+    ]
+   }
+  },
+  {
+   "task": "Review a generated report based on submitted survey data to ensure accurate data representation.",
+   "expected_result": "The report accurately reflects the survey data with relevant insights and is easily understandable to users with permission to view it.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Generation",
+     "Data Display Testing"
+    ]
+   }
+  },
+  {
+   "task": "Verify that the website uses 'whitesmoke' as the background color and 'dark cyan' as the component color, as specified in the design requirements.",
+   "expected_result": "The website has a background color of 'whitesmoke' and components (such as buttons, cards, headers, etc.) are styled with the color 'dark cyan', accurately reflecting the design instruction.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "archetype": "derived-state",
+   "instruction": "Responses are piling up, so I need a proper cohort screener on its own page. Let me filter respondents by age group (18-29, 30-44, 45-59, 60+) and by ethnicity (Black, Hispanic, Asian, White) — picking several age groups should widen that side, but adding an ethnicity pick should narrow things down since both sides have to hold — with a live 'matching X of Y' readout and a clear-all that brings everyone back. Start me off with exactly these eight so I can play, and keep the roster in exactly the order I'm giving them — it's the order the paper forms got typed up, so it's on purpose not sorted by ID: WHS-1004 (45-59, White, wellness 6.4, Week 2), WHS-1001 (18-29, Hispanic, 6.4, Week 1), WHS-1002 (30-44, Black, 8.2, Week 1), WHS-1003 (30-44, Asian, 5.0, Week 2), WHS-1005 (18-29, Black, 9.1, Week 3), WHS-1006 (60+, Hispanic, 4.8, Week 3), WHS-1007 (45-59, Black, 6.4, Week 4), WHS-1008 (30-44, White, 7.6, Week 4) — exactly these, I'll add more later. Two things I want app-wide from here on, in everything we ever add: respondents always go by IDs in that WHS-#### style, and wellness scores always print with one decimal and a ' / 10' after, like 6.4 / 10. And anything new submitted through the survey should join the screener with the next ID in line — WHS-1009 first — tagged Week 4, since that's where we are.",
+   "source_website": "https://www.kff.org/womens-health-policy/womens-health-survey/",
+   "source_feature": "Demographic oversampling and subgroup tagging",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the cohort screener, select the 18-29 and 30-44 age group filters, then also select the Black ethnicity filter.",
+     "expected_result": "Exactly two respondents remain — WHS-1002 and WHS-1005. The two age picks widen the age side (OR), but adding Black narrows across dimensions (AND), so it is not the six respondents a match-any build would show.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Data Display Testing"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Select only the Hispanic ethnicity filter on the cohort screener.",
+     "expected_result": "Exactly WHS-1001 and WHS-1006 are listed, and no other respondents show.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the cohort screener, select the Asian ethnicity filter, then click the clear-all control.",
+     "expected_result": "After clear-all every one of the 8 seeded respondents is listed again and the matching readout returns to 8 of 8.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "State Reset"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Fill out the health survey with valid answers, submit it, then open the cohort screener.",
+     "expected_result": "The new submission appears in the screener as WHS-1009 alongside the 8 seeded respondents.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Operations",
+       "Data Display Testing"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 1,
+     "task": "Fill out the health survey with valid answers and submit it.",
+     "expected_result": "A confirmation message appears indicating the survey was submitted successfully.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Operations"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "People keep asking for a quick self-check before committing to the full survey, so add a Wellness Self-Check page — nothing gets submitted, it just scores you live as you type. Three fields: nightly sleep hours, exercise days per week (0-7), and stress from 1 to 10; the score is sleep (capped at 8) divided by 8 times 4, plus exercise divided by 7 times 3, plus (10 minus stress) divided by 10 times 3, recomputed the moment any field changes. Under 4 call it 'Needs attention', from 4 up to but not including 7 is 'Fair', and 7 or above is 'Thriving' — landing exactly on 7 counts as Thriving. If exercise or stress is out of range, show a gentle message and no score at all until it's fixed. One more thing: when stress comes in at 7 or higher, show a gentle stress nudge suggesting they take the full health survey since stress like that deserves a closer look, and sleep under 6 should get its own sleep nudge pointing at the survey too.",
+   "source_website": "https://www.kff.org/womens-health-policy/womens-health-survey/",
+   "source_feature": "Cross-referenced related content links",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the Wellness Self-Check page, type 7 for sleep hours, 3 for exercise days, and 4 for stress.",
+     "expected_result": "The score reads 6.6 / 10 with the 'Fair' label, and it appears as soon as the last field is filled — no submit button needed.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Live Update"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Wellness Self-Check page, type 8 for sleep hours, 7 for exercise days, and 10 for stress.",
+     "expected_result": "The score reads 7.0 / 10 labeled 'Thriving' — the exact 7.0 boundary lands in Thriving, not Fair — and the stress nudge toward the full survey shows since stress is 7 or higher.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Boundary Handling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type 7 for sleep and 3 for exercise, then type 15 into the stress field; afterwards change stress to 5.",
+     "expected_result": "With 15 an out-of-range message shows and no score is displayed at all (no stale value); after changing stress to 5 the message clears and the score reads 6.3 / 10.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Live Update"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the Wellness Self-Check page, enter 6 sleep hours, 2 exercise days, and 8 stress, then read the displayed score.",
+     "expected_result": "The score is shown in the app-wide score style — one decimal followed by ' / 10' — reading 4.5 / 10.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Formatting Convention"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "On the cohort screener, select the 18-29 and 30-44 age group filters, then also select the Black ethnicity filter.",
+     "expected_result": "Exactly two respondents remain — WHS-1002 and WHS-1005. The two age picks widen the age side (OR), but adding Black narrows across dimensions (AND), so it is not the six respondents a match-any build would show.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Data Display Testing"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Time to break that one long survey into a proper three-part wizard: Section A General Health (age group, ethnicity, and an overall wellness rating from 1 to 10), Section B Reproductive Health (opens with 'Have you ever been pregnant?' — only a Yes should reveal the two follow-up questions about number of pregnancies and most recent year), and Section C Mental Health (stress level 1-10 and nightly sleep hours). Don't let anyone hit Next while the current section still has unanswered required questions, and before submitting show a review step listing their answers grouped by section — questions that stayed hidden shouldn't sneak onto it. On submit, thank them with their new WHS number and land them in the cohort screener (WHS-1009 is next). Oh, and give me a 'Fill with sample answers' button that fills every visible question with sensible answers (pregnancy set to No) and jumps straight to the review step so I can demo this fast.",
+   "source_website": "https://www.kff.org/womens-health-policy/womens-health-survey/",
+   "source_feature": "Categorical topic navigation menu (fused with WHI conditional section visibility)",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Start the survey, answer Section A's three questions (age group 30-44, ethnicity Hispanic, overall wellness 8), click Next, and in Section B choose Yes on the pregnancy question.",
+     "expected_result": "Section B initially shows only the pregnancy question; choosing Yes reveals exactly two additional questions (number of pregnancies and most recent year).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Conditional Logic",
+       "Form Operations"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "On the survey wizard, click the 'Fill with sample answers' button.",
+     "expected_result": "It jumps straight to the review step, which lists answers grouped by the three sections; the pregnancy answer shows as No and there are no entries for the two hidden pregnancy follow-up questions.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Operations",
+       "Data Display Testing"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the survey and click Next on Section A without answering anything.",
+     "expected_result": "Validation messages appear for the unanswered required questions and the wizard stays on Section A instead of advancing.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Navigation"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Click 'Fill with sample answers', submit from the review step, then open the cohort screener.",
+     "expected_result": "A thank-you confirmation with the new ID WHS-1009 appears, and the screener now lists WHS-1009 along with the 8 seeded respondents.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Operations",
+       "Data Display Testing"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "On the Wellness Self-Check page, type 7 for sleep hours, 3 for exercise days, and 4 for stress.",
+     "expected_result": "The score reads 6.6 / 10 with the 'Fair' label, and it appears as soon as the last field is filled — no submit button needed.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Live Update"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "The screener page needs an insights strip — live stats over whoever currently matches the filters. Show the average wellness (across all eight it works out to 6.7 / 10 right now) with a toggle to look at just the two most recent weeks instead of all-time, plus a 'needs attention' shortlist of the three lowest wellness scores — when scores tie, the lower WHS number takes the spot. Everything should recompute the instant a filter changes, and it shouldn't fall apart when the filters leave only one person standing.",
+   "source_website": "https://www.kff.org/womens-health-policy/womens-health-survey/",
+   "source_feature": "Demographic oversampling and subgroup tagging (subgroup-filtered reporting)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the cohort screener with no filters applied and read the needs-attention shortlist in the insights strip.",
+     "expected_result": "It lists exactly WHS-1006, WHS-1003, then WHS-1001 in that order — the 6.4 three-way tie among WHS-1001, WHS-1004 and WHS-1007 resolves to the lowest ID, WHS-1001, not WHS-1004, which sits ahead of WHS-1001 in the roster order and is what a build with no tie-break logic would surface.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ranking",
+       "Tie-breaking"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "In the insights strip, click the toggle to view just the two most recent weeks.",
+     "expected_result": "The average wellness reads 7.0 / 10 for the recent window (Weeks 3 and 4: WHS-1005, WHS-1006, WHS-1007, WHS-1008) — different from the all-time 6.7 / 10.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Windowed Stats"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Select only the 60+ age group filter and look at the insights strip.",
+     "expected_result": "The stats recompute to the single matching respondent WHS-1006 — average 4.8 / 10 and a shortlist showing just WHS-1006 — with no blank, broken, or padded entries.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Boundary Handling",
+       "Live Update"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the screener, select the Black ethnicity filter and look at the insights strip.",
+     "expected_result": "The average recomputes to 7.9 / 10 over the three matching Black respondents (WHS-1002, WHS-1005, WHS-1007).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "Select only the Hispanic ethnicity filter on the cohort screener.",
+     "expected_result": "Exactly WHS-1001 and WHS-1006 are listed, and no other respondents show.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "We need to actually act on the worrying ones. Put a flag control on each screener row that opens a little note box, and give me a Follow-Up Queue page where flagged respondents sit in one of three stages — Pending, then Contacted, then Resolved, moving forward only — with a count for each stage, and make it impossible to flag the same person twice. Statuses anywhere in this app, now and in whatever we build later, should read as small colored pills: amber for Pending, dark cyan for Contacted, green for Resolved. Seed the queue with WHS-1006 Pending with the note 'score under 5', WHS-1003 Contacted with 'left voicemail', and WHS-1004 Resolved with 'all good'.",
+   "source_website": "https://www.whi.org/formList",
+   "source_feature": "Outcome adjudication tracking forms",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Follow-Up Queue page.",
+     "expected_result": "The three seeded flags show in their stages — WHS-1006 Pending with the note 'score under 5', WHS-1003 Contacted with 'left voicemail', WHS-1004 Resolved with 'all good' — and each stage count reads 1.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Seed Data",
+       "Status Display"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Follow-Up Queue, advance WHS-1006 one stage.",
+     "expected_result": "WHS-1006 moves from Pending to Contacted; the Pending stage now counts 0 and shows a non-blank empty state, and Contacted counts 2 (WHS-1003 and WHS-1006).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "Count Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the cohort screener, try to flag WHS-1003, which is already in the queue.",
+     "expected_result": "A second flag is prevented — the flag control is disabled or clearly indicates WHS-1003 is already flagged — and no duplicate entry appears in the queue.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Deduplication"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the cohort screener, flag WHS-1001 and type 'check sleep' as the note, then open the Follow-Up Queue.",
+     "expected_result": "WHS-1001 appears in the Pending stage with the note 'check sleep', joining WHS-1006, and the Pending count reads 2.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "Cross-page Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 4,
+     "task": "Start the survey, answer Section A's three questions (age group 30-44, ethnicity Hispanic, overall wellness 8), click Next, and in Section B choose Yes on the pregnancy question.",
+     "expected_result": "Section B initially shows only the pregnancy question; choosing Yes reveals exactly two additional questions (number of pregnancies and most recent year).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Conditional Logic",
+       "Form Operations"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Researchers keep asking for raw data, so build an export composer into the screener: a control that opens an on-screen preview of the current filtered set as plain copyable text, one line per respondent, with checkboxes to include or drop each column — ID, age group, ethnicity, wellness, week. Top it with a summary line saying how many respondents are in the export and their average wellness, and keep the whole preview live as I fiddle with filters or columns. If the filters match nobody, say so nicely in the preview instead of leaving an empty void or broken math.",
+   "source_website": "https://www.kff.org/womens-health-policy/womens-health-survey/",
+   "source_feature": "Downloadable raw data export",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "With no screener filters set, open the export composer's preview.",
+     "expected_result": "The preview shows one line per respondent — 8 lines — and the summary line reports 8 respondents with an average wellness of 6.7 / 10.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Export Preview",
+       "Aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the export composer, uncheck the ethnicity column checkbox.",
+     "expected_result": "Ethnicity disappears from every preview line immediately, while the 8 lines and the summary stay intact.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Update",
+       "Configuration"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Set the screener filters to the 60+ age group plus the Asian ethnicity, then look at the export preview.",
+     "expected_result": "No respondent matches; the preview shows a friendly no-match note rather than a blank panel, and the summary reports 0 respondents without any NaN or broken average.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Boundary Handling",
+       "Filtering"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Open the export preview with default settings and read the first respondent line and the summary.",
+     "expected_result": "IDs appear in the WHS-#### style and every wellness value carries one decimal with ' / 10', matching the app-wide formats.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Formatting Convention"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 5,
+     "task": "In the insights strip, click the toggle to view just the two most recent weeks.",
+     "expected_result": "The average wellness reads 7.0 / 10 for the recent window (Weeks 3 and 4: WHS-1005, WHS-1006, WHS-1007, WHS-1008) — different from the all-time 6.7 / 10.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Windowed Stats"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "design-restyle",
+   "instruction": "The app has grown fast and looks stitched together, so let's unify it — same treatment everywhere: the home page, the survey wizard, the cohort screener with its insights strip, and the follow-up queue. Primary action buttons become pill-shaped dark cyan with white text; every page title sits left-aligned with a short dark cyan underline bar beneath it; panels and cards go white with 12px rounded corners and a soft shadow; any WHS ID renders as a small light-cyan chip in a monospace font; and every table gets zebra striping on alternating rows. No stragglers, please — a page left on the old look defeats the point.",
+   "source_website": "https://www.kff.org/womens-health-policy/womens-health-survey/",
+   "source_feature": "Consistent publication styling across topic report pages",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Open the cohort screener page.",
+     "expected_result": "Its page title is left-aligned with a short dark cyan underline bar, the respondent table has zebra striping on alternating rows, and primary action buttons are pill-shaped dark cyan with white text.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Typography",
+       "Table Styling",
+       "Buttons"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open the Follow-Up Queue page and look at the seeded flag cards.",
+     "expected_result": "Exactly three seeded flags (WHS-1006, WHS-1003, WHS-1004) sit on white cards with 12px rounded corners and a soft shadow, and each WHS ID renders as a light-cyan monospace chip.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Cards",
+       "Badge Styling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the survey wizard.",
+     "expected_result": "The Next button is pill-shaped dark cyan with white text, and the page title carries the left-aligned dark cyan underline treatment.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Buttons",
+       "Typography"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Visit the home page and then the cohort screener's insights strip.",
+     "expected_result": "Both surfaces show the same treatment — left-aligned titles with dark cyan underline bars and white panels with 12px rounded corners and soft shadows — with neither left on the old styling.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Cross-page Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 6,
+     "task": "Open the Follow-Up Queue page.",
+     "expected_result": "The three seeded flags show in their stages — WHS-1006 Pending with the note 'score under 5', WHS-1003 Contacted with 'left voicemail', WHS-1004 Resolved with 'all good' — and each stage count reads 1.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Seed Data",
+       "Status Display"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "I keep rewording survey questions and losing track of what changed, so add a Question Bank page: every wizard question listed under its section with a version badge, an edit control that saves a new version of just that question — its badge ticks up, nobody else's budges — and a changelog panel, newest first, showing what it said before and after each change. Don't let me save a question with empty text. The wizard should pick up the latest wording immediately. For history's sake, the overall wellness question is already on v2 — it used to say 'How healthy do you feel overall?' — log that; everything else starts at v1.",
+   "source_website": "https://www.whi.org/formList",
+   "source_feature": "Versioned form list with study-phase organization",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Question Bank page.",
+     "expected_result": "The overall wellness question carries a v2 badge with a history entry showing its old wording 'How healthy do you feel overall?', while every other question shows v1.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Versioning",
+       "Seed Data"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the Question Bank, edit the ethnicity question's text to 'Which ethnicity best describes you?' and save.",
+     "expected_result": "The ethnicity question's badge becomes v2 — not v3, even though another question is already on v2 — the wellness question stays at v2, and a new changelog entry appears at the top of the history showing the before and after wording.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Versioning",
+       "Ordering"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Edit any question in the Question Bank, clear its text completely, and try to save.",
+     "expected_result": "Saving is rejected with an error message, and the question's wording and version badge remain unchanged.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the Question Bank, change the age group question's wording to 'What is your age bracket?' and save, then open the survey wizard.",
+     "expected_result": "Section A of the wizard shows the new wording 'What is your age bracket?' on its age question immediately.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-page Consistency",
+       "Versioning"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 7,
+     "task": "With no screener filters set, open the export composer's preview.",
+     "expected_result": "The preview shows one line per respondent — 8 lines — and the summary line reports 8 respondents with an average wellness of 6.7 / 10.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Export Preview",
+       "Aggregation"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Leadership wants one Program Outcomes page that pulls the follow-up work together. Up top, show how many flags sit in each stage plus a resolution rate — resolved out of all flags, as a percent with exactly one decimal, which should read 33.3% today. Below that, an outcome funnel with three steps — flagged at all, reached Contacted or beyond, and fully Resolved — where each step counts everyone who has made it at least that far, not just whoever is parked in that stage right now, so today it reads 3, then 2, then 1. Finish with a 'suggested flags' section that scans the cohort for anyone with wellness under 6.0 who isn't in the queue yet — and says so nicely when there's nobody left to suggest, like right now. All of it should reflect the queue the moment something moves.",
+   "source_website": "https://www.whi.org/formList",
+   "source_feature": "Outcome adjudication tracking forms (extended into program-level outcomes reporting)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Program Outcomes page and read the follow-up rollup.",
+     "expected_result": "The stage counts read Pending 1, Contacted 1, Resolved 1, and the resolution rate shows 33.3%.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Rounding"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "On the Program Outcomes page, read the three steps of the outcome funnel.",
+     "expected_result": "The funnel reads 3 flagged, then 2 reached Contacted or beyond, then 1 Resolved — WHS-1004's Resolved flag also counts in the middle step, so it shows 2, not the 1-1-1 a build counting only who currently sits in each stage would show.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Cumulative Counting"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Program Outcomes page, scroll to the suggested-flags section.",
+     "expected_result": "It shows a friendly nobody-to-suggest note — WHS-1003 and WHS-1006, the only respondents under 6.0, are already flagged — rather than a blank area or a list repeating already-flagged respondents.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Boundary Handling",
+       "Deduplication"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the Follow-Up Queue, advance WHS-1003 to Resolved, then open the Program Outcomes page.",
+     "expected_result": "Resolved now counts 2 and the resolution rate reads 66.7%, while the funnel's flagged step stays at 3 and its Resolved step now reads 2.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-page Consistency",
+       "Aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "On the Wellness Self-Check page, type 8 for sleep hours, 7 for exercise days, and 10 for stress.",
+     "expected_result": "The score reads 7.0 / 10 labeled 'Thriving' — the exact 7.0 boundary lands in Thriving, not Fair — and the stress nudge toward the full survey shows since stress is 7 or higher.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Boundary Handling"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "target_app_summary": "The single-form women's health survey site grows into a small research-program platform. Discovery and intake expand into a sectioned survey wizard with conditional questions and a demo fill, plus a standalone wellness self-check calculator that nudges high-stress and low-sleep users toward taking the full survey. On the analysis side, a cohort screener with AND/OR demographic filtering becomes the hub: an insights strip cross-filters live stats over it, an export composer renders copyable extracts of the filtered set, and a flag-based follow-up queue with Pending/Contacted/Resolved adjudication feeds a Program Outcomes report that rolls up a resolution rate and a reached-stage outcome funnel, with suggested flags scanned from the cohort. A question bank with per-question versioning governs the wizard's wording, and a site-wide restyle unifies buttons, headings, cards, ID chips and tables across all surfaces. The graph hangs off the screener (T2) with a deep chain T1 -> T2 -> T6 -> T10 (T2 also feeding T10's suggested flags), wizard chains T2 -> T4 -> T9, and a calculator nudge T1 -> T3.",
+ "dependency_graph": {
+  "nodes": [
+   {
+    "id": "T1",
+    "label": "base app",
+    "archetype": "base"
+   },
+   {
+    "id": "T2",
+    "label": "cohort screener",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T3",
+    "label": "wellness self-check calculator",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T4",
+    "label": "sectioned survey wizard",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T5",
+    "label": "cohort insights strip",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T6",
+    "label": "follow-up queue",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T7",
+    "label": "export composer",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T8",
+    "label": "site-wide restyle",
+    "archetype": "design-restyle"
+   },
+   {
+    "id": "T9",
+    "label": "question bank versioning",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T10",
+    "label": "program outcomes report",
+    "archetype": "derived-state"
+   }
+  ],
+  "edges": [
+   {
+    "from": "T1",
+    "to": "T2",
+    "what": "survey submissions join the screener cohort with next WHS ID"
+   },
+   {
+    "from": "T1",
+    "to": "T4",
+    "what": "replaces the base survey form with the wizard"
+   },
+   {
+    "from": "T1",
+    "to": "T3",
+    "what": "high stress or low sleep in the calculator nudges users toward taking the base survey"
+   },
+   {
+    "from": "T2",
+    "to": "T4",
+    "what": "wizard submissions register in the screener as WHS-1009+"
+   },
+   {
+    "from": "T2",
+    "to": "T5",
+    "what": "insights recompute over the screener's filtered cohort"
+   },
+   {
+    "from": "T2",
+    "to": "T6",
+    "what": "flags are raised from screener rows"
+   },
+   {
+    "from": "T2",
+    "to": "T7",
+    "what": "export renders the screener's current filtered set"
+   },
+   {
+    "from": "T4",
+    "to": "T9",
+    "what": "version manager edits the wizard's questions; wizard shows active wording"
+   },
+   {
+    "from": "T6",
+    "to": "T10",
+    "what": "report rolls up the queue's stage counts into a resolution rate and reached-stage funnel"
+   },
+   {
+    "from": "T2",
+    "to": "T10",
+    "what": "suggested flags scan the screener cohort's wellness scores against the queue"
+   },
+   {
+    "from": "T1",
+    "to": "T8",
+    "what": "restyles the home page"
+   },
+   {
+    "from": "T2",
+    "to": "T8",
+    "what": "restyles the screener page"
+   },
+   {
+    "from": "T4",
+    "to": "T8",
+    "what": "restyles the survey wizard"
+   },
+   {
+    "from": "T5",
+    "to": "T8",
+    "what": "restyles the insights strip panels"
+   },
+   {
+    "from": "T6",
+    "to": "T8",
+    "what": "restyles the follow-up queue cards"
+   }
+  ]
+ },
+ "global_rules": [
+  {
+   "rule": "Respondents are always referred to by IDs in the WHS-#### style (WHS- prefix plus number) everywhere in the app, now and in anything added later.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Wellness scores are always displayed with exactly one decimal place followed by ' / 10' (e.g. 6.4 / 10) on every surface of the app.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Follow-up statuses always render as colored pill badges anywhere they appear: amber for Pending, dark cyan for Contacted, green for Resolved.",
+   "introduced_in_turn": 6
+  }
+ ],
+ "pinned_seed": {
+  "entity": "8 seeded survey respondents",
+  "introduced_in_turn": 2,
+  "records_gist": "Seeded in this roster order (deliberately not ID order): WHS-1004 45-59 White 6.4 Wk2; WHS-1001 18-29 Hispanic 6.4 Wk1; WHS-1002 30-44 Black 8.2 Wk1; WHS-1003 30-44 Asian 5.0 Wk2; WHS-1005 18-29 Black 9.1 Wk3; WHS-1006 60+ Hispanic 4.8 Wk3; WHS-1007 45-59 Black 6.4 Wk4; WHS-1008 30-44 White 7.6 Wk4 (6.4 three-way tie with WHS-1004 seeded ahead of WHS-1001, so ID tie-breaks visibly beat insertion order; Wks3-4 avg 7.0 vs all-time 6.7)"
+ }
+}

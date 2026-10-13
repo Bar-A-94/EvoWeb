@@ -1,0 +1,614 @@
+{
+  "index": 19,
+  "status": "success",
+  "model": "anthropic/claude-haiku-4-5-20251001",
+  "generator": "openhands",
+  "base_trajectory": {
+    "source": "none",
+    "messages": 0
+  },
+  "artifacts": {
+    "zip": null,
+    "run_json": null,
+    "generator": "openhands",
+    "screenshots": [
+      "/output/000019/screenshots/task000019_0.png",
+      "/output/000019/screenshots/task000019_1.png",
+      "/output/000019/screenshots/task000019_2.png",
+      "/output/000019/screenshots/task000019_3.png",
+      "/output/000019/screenshots/task000019_4.png",
+      "/output/000019/screenshots/task000019_5.png",
+      "/output/000019/screenshots/task000019_6.png"
+    ],
+    "output_dir": "/output/000019"
+  },
+  "ladder": {
+    "turns_expected": 10,
+    "turns_completed": 10,
+    "complete": true
+  },
+  "eval_model": "claude-sonnet-4-6",
+  "accuracy": 85.6,
+  "yes": 41,
+  "partial": 7,
+  "no": 4,
+  "total": 52,
+  "tasks": [
+    {
+      "task_idx": 0,
+      "task": "Test the product registration form by entering valid product details and submitting the form.",
+      "expected": "The product is successfully registered in the system, and a confirmation message is displayed with a unique product ID.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 1,
+      "task": "Navigate to the product tracking page and enter the unique product ID to track its circulation path.",
+      "expected": "The circulation path of the product appears, detailing each location or checkpoint the product has passed through up to the present.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 2,
+      "task": "On the website, use the product inquiry feature to check the current status of an already registered product using its ID.",
+      "expected": "The current status of the product is correctly displayed, including relevant details such as location and time.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 3,
+      "task": "Verify the authenticity of a product by entering its ID in the verification section.",
+      "expected": "The website confirms the authenticity of the product and provides the source information as registered.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 4,
+      "task": "Access the data statistics and analysis page and review the displayed metrics.",
+      "expected": "The page displays relevant and comprehensive statistics and analysis regarding supply chain operations, such as total products tracked and current circulation statuses.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 5,
+      "task": "Check the navigation menu across different pages to ensure consistent access to main functionalities (registration, tracking, inquiry, verification, statistics).",
+      "expected": "All main functionalities are easily accessible from the navigation menu, and links correctly route to respective pages.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 6,
+      "task": "Verify that the website uses 'misty rose' as the background color and 'firebrick' as the component color, as specified in the design requirements.",
+      "expected": "The website has a background color of 'misty rose' and components (such as buttons, cards, headers, etc.) are styled with the color 'firebrick', accurately reflecting the design instruction.",
+      "verdict": "yes"
+    }
+  ],
+  "turns": [
+    {
+      "turn": 1,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": false,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Test the product registration form by entering valid product details and submitting the form.",
+          "expected": "The product is successfully registered in the system, and a confirmation message is displayed with a unique product ID.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 1,
+          "task": "Navigate to the product tracking page and enter the unique product ID to track its circulation path.",
+          "expected": "The circulation path of the product appears, detailing each location or checkpoint the product has passed through up to the present.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the website, use the product inquiry feature to check the current status of an already registered product using its ID.",
+          "expected": "The current status of the product is correctly displayed, including relevant details such as location and time.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Verify the authenticity of a product by entering its ID in the verification section.",
+          "expected": "The website confirms the authenticity of the product and provides the source information as registered.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Access the data statistics and analysis page and review the displayed metrics.",
+          "expected": "The page displays relevant and comprehensive statistics and analysis regarding supply chain operations, such as total products tracked and current circulation statuses.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 5,
+          "task": "Check the navigation menu across different pages to ensure consistent access to main functionalities (registration, tracking, inquiry, verification, statistics).",
+          "expected": "All main functionalities are easily accessible from the navigation menu, and links correctly route to respective pages.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 6,
+          "task": "Verify that the website uses 'misty rose' as the background color and 'firebrick' as the component color, as specified in the design requirements.",
+          "expected": "The website has a background color of 'misty rose' and components (such as buttons, cards, headers, etc.) are styled with the color 'firebrick', accurately reflecting the design instruction.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 2,
+      "no": 0,
+      "total": 7,
+      "accuracy": 85.7,
+      "cost": {
+        "generation_usd": 0.14478,
+        "model_calls": 19,
+        "input_tokens_total": 395620,
+        "output_tokens": 13941,
+        "judge_usd": 0.2436
+      }
+    },
+    {
+      "turn": 2,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Lots page on a freshly loaded app and read the order of the lot cards from top to bottom.",
+          "expected": "Exactly three lot cards appear ordered LOT-TEA-02, then LOT-COF-01, then LOT-CAC-03 - most recent journey activity first (Apr 15, Mar 20, Mar 1 2026 respectively), not alphabetical order and not the order the lots were entered.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the Lots page and find the LOT-COF-01 card.",
+          "expected": "LOT-COF-01 shows 3 member products and its rolled-up status reads Flagged with a red status pill - one flagged member (PT-1003) makes the whole lot Flagged even though its other two members are In Transit and Delivered.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open the Lots page and find the LOT-TEA-02 card.",
+          "expected": "It shows 2 members and its rolled-up status reads In Transit with an amber pill - PT-1005 being Delivered doesn't make the lot Delivered while PT-1004 is still moving.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 3,
+          "task": "Use the registration form to register a product named Oolong Reserve, choosing LOT-TEA-02 in the lot picker (fill any other required fields with valid entries), then open the Lots page.",
+          "expected": "The LOT-TEA-02 card now lists 3 member products including Oolong Reserve.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Use the product registration form to register a product named Test Widget and submit it.",
+          "expected": "A confirmation appears showing the product was registered along with a unique product ID assigned to it.",
+          "verdict": "partial"
+        }
+      ],
+      "yes": 2,
+      "partial": 3,
+      "no": 0,
+      "total": 5,
+      "accuracy": 70.0,
+      "cost": {
+        "generation_usd": 0.296758,
+        "model_calls": 13,
+        "input_tokens_total": 705837,
+        "output_tokens": 29738,
+        "judge_usd": 0.4159
+      }
+    },
+    {
+      "turn": 3,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Paste 'PT-1004, Arrived, Hamburg Hub, 2026-04-20' on one line and 'PT-9999, Shipped, Lima, 2026-04-21' on a second line into the bulk importer's paste box, then press the import button.",
+          "expected": "Before importing the tally reads 1 valid and 1 invalid (the second line labeled with an unknown-product reason for PT-9999), and the import summary reports exactly 1 event added - PT-1004's journey gains the Hamburg Hub arrival while nothing is created for PT-9999.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Paste the single line 'PT-1004, Delivered, Hamburg Hub, 2026-04-05' into the bulk importer's paste box.",
+          "expected": "The line is marked invalid with a reason saying the date is earlier than PT-1004's latest journey event (its Rotterdam Port arrival on Apr 10, 2026), the running tally shows 0 valid and 1 invalid, and importing commits nothing.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Type the single line 'PT-1005, Shipped, Osaka Depot, 2026-04-18' into the paste box and watch the tally, then edit the word Shipped to Teleported.",
+          "expected": "While the line is intact the tally shows 1 valid and 0 invalid; as soon as the event type becomes Teleported the line flips to invalid with a bad-event-type reason and the tally updates to 0 valid and 1 invalid - all without pressing import.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Paste 'PT-1005, Flagged, Osaka Depot, 2026-04-20' into the importer, press import, then open the Lots page.",
+          "expected": "PT-1005 now shows status Flagged, and the LOT-TEA-02 card's rolled-up status flips to Flagged with a red pill (it was In Transit before the import).",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Lots page and find the LOT-COF-01 card.",
+          "expected": "LOT-COF-01 shows 3 member products and its rolled-up status reads Flagged with a red status pill - one flagged member (PT-1003) makes the whole lot Flagged even though its other two members are In Transit and Delivered.",
+          "verdict": "partial"
+        }
+      ],
+      "yes": 4,
+      "partial": 1,
+      "no": 0,
+      "total": 5,
+      "accuracy": 90.0,
+      "cost": {
+        "generation_usd": 0.352286,
+        "model_calls": 20,
+        "input_tokens_total": 1724477,
+        "output_tokens": 15541,
+        "judge_usd": 0.4313
+      }
+    },
+    {
+      "turn": 4,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Scan Monitor with the threshold box at its default of 2 and check which products carry the suspicious flag.",
+          "expected": "Exactly PT-1003 and PT-1006 are flagged suspicious (4 scans within Mar 9-11 and 3 scans within Feb 20-22 respectively); PT-1001 is NOT flagged even though it has 3 lifetime scans, because they are spread a month apart - no 7-day stretch holds more than 2.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the Scan Monitor, change the threshold box value to 3.",
+          "expected": "The list re-evaluates immediately: PT-1006 loses its suspicious flag (its densest 7-day stretch is exactly 3 scans, not more than 3) while PT-1003 stays flagged (4 scans between Mar 9 and Mar 11, 2026).",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Scroll the Scan Monitor to the rows for PT-1002 and PT-1007.",
+          "expected": "Both appear as normal rows with 0 total scans and no suspicious flag - never-scanned products still render and the page doesn't blank or error.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Run an authenticity check on PT-1004 in the verification section, then open the Scan Monitor and find PT-1004's row.",
+          "expected": "Its total scan count reads 2 - the seeded Apr 12, 2026 scan plus the check just performed - showing live verification checks land in the log.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Paste the single line 'PT-1004, Delivered, Hamburg Hub, 2026-04-05' into the bulk importer's paste box.",
+          "expected": "The line is marked invalid with a reason saying the date is earlier than PT-1004's latest journey event (its Rotterdam Port arrival on Apr 10, 2026), the running tally shows 0 valid and 1 invalid, and importing commits nothing.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.342019,
+        "model_calls": 18,
+        "input_tokens_total": 1807122,
+        "output_tokens": 9098,
+        "judge_usd": 0.2421
+      }
+    },
+    {
+      "turn": 5,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Start a recall on LOT-COF-01 and stop at the review screen without confirming.",
+          "expected": "The review lists exactly 3 affected products - PT-1001, PT-1002 and PT-1003 with their current statuses - and states 3 as the total affected count, and no product status changes while the recall is unconfirmed.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Start a recall on LOT-CAC-03, confirm it on the review screen, then look at PT-1006 and PT-1007 wherever they are listed.",
+          "expected": "Both products flip to Recalled with red pills, and the Recalls page shows the recall live with progress 0 of 2 retrieved.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Start a recall on LOT-CAC-03, confirm it on the review screen, then mark PT-1006 as retrieved and then PT-1007 as retrieved.",
+          "expected": "After the first tick the recall shows 1 of 2 retrieved and stays open; the moment PT-1007 is ticked it reads 2 of 2 and the recall automatically closes as Completed, while both products still show status Recalled.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Start and confirm a recall on LOT-CAC-03, then use the product inquiry to look up PT-1007.",
+          "expected": "The inquiry reports PT-1007's current status as Recalled with a red pill, consistent with the recall just confirmed.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Lots page on a freshly loaded app and read the order of the lot cards from top to bottom.",
+          "expected": "Exactly three lot cards appear ordered LOT-TEA-02, then LOT-COF-01, then LOT-CAC-03 - most recent journey activity first (Apr 15, Mar 20, Mar 1 2026 respectively), not alphabetical order and not the order the lots were entered.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 0,
+      "no": 1,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.430978,
+        "model_calls": 20,
+        "input_tokens_total": 2342533,
+        "output_tokens": 11694,
+        "judge_usd": 0.518
+      }
+    },
+    {
+      "turn": 6,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Lots page on a fresh load.",
+          "expected": "Exactly the three lot cards LOT-TEA-02, LOT-COF-01 and LOT-CAC-03 are shown, each restyled with softly rounded corners and a subtle drop shadow, the page title left-aligned with a short firebrick underline bar, and member product IDs like PT-1001 rendered in a monospace face.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the bulk importer page and look at its title and import button.",
+          "expected": "The title is left-aligned with the short firebrick underline bar and the import button is a firebrick pill with white text, all on the misty rose background.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open the product registration page and then the Scan Monitor page.",
+          "expected": "Both pages show the shared skin: a left-aligned page title with a short firebrick underline bar, primary buttons as firebrick pills with white text, product IDs in a monospace face on the monitor, all on the misty rose background.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Open the Scan Monitor and read the scan dates listed on PT-1001's row.",
+          "expected": "The dates read Mar 1, 2026, Apr 1, 2026 and May 1, 2026 in that written style - no numeric formats like 03/01/2026.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Scan Monitor with the threshold box at its default of 2 and check which products carry the suspicious flag.",
+          "expected": "Exactly PT-1003 and PT-1006 are flagged suspicious (4 scans within Mar 9-11 and 3 scans within Feb 20-22 respectively); PT-1001 is NOT flagged even though it has 3 lifetime scans, because they are spread a month apart - no 7-day stretch holds more than 2.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.52005,
+        "model_calls": 20,
+        "input_tokens_total": 2787877,
+        "output_tokens": 14638,
+        "judge_usd": 0.1906
+      }
+    },
+    {
+      "turn": 7,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Chain Audit page on a freshly loaded app and read every issue it lists.",
+          "expected": "Exactly two issues appear: PT-1005 and PT-1007, each cited for a Delivered event with no Shipped leg before it (PT-1005's Osaka Depot delivery on Apr 15, 2026 and PT-1007's Antwerp Hub delivery on Mar 1, 2026); PT-1003 is NOT listed even though its status is Flagged - a flag is not a custody gap - and the other four products audit clean.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the Chain Audit page on a freshly loaded app and read how the lots are arranged from top to bottom.",
+          "expected": "LOT-CAC-03 and LOT-TEA-02 sit at the top with 1 issue each (LOT-CAC-03 first on the alphabetical tie), and LOT-COF-01 sits below them with a clean badge - it audits clean even though it contains PT-1003, whose Flagged status is not a custody gap.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the Chain Audit page open PT-1005's issue entry and read what it cites.",
+          "expected": "The entry names the skipped-shipping rule and cites the offending Delivered event at Osaka Depot dated Apr 15, 2026 in the written date style (not 04/15/2026), with the product's ID shown as PT-1005.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Paste 'PT-1002, Arrived, Warsaw Depot, 2026-04-25' into the bulk importer, press import, then open the Chain Audit page and look at LOT-COF-01.",
+          "expected": "LOT-COF-01 loses its clean badge and joins the issue lots, slotting between LOT-CAC-03 and LOT-TEA-02 on the alphabetical tie at 1 issue apiece: PT-1002 is cited for activity after delivery, the Warsaw Depot arrival of Apr 25, 2026 landing after its Berlin Warehouse delivery of Mar 20, 2026 - the importer accepted the line, yet the audit calls it out the moment it commits.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Start a recall on LOT-CAC-03, confirm it on the review screen, then mark PT-1006 as retrieved and then PT-1007 as retrieved.",
+          "expected": "After the first tick the recall shows 1 of 2 retrieved and stays open; the moment PT-1007 is ticked it reads 2 of 2 and the recall automatically closes as Completed, while both products still show status Recalled.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.550238,
+        "model_calls": 20,
+        "input_tokens_total": 2079216,
+        "output_tokens": 11803,
+        "judge_usd": 0.3283
+      }
+    },
+    {
+      "turn": 8,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the Screener, tick both the Delivered and In Transit status checkboxes and pick Bogota in the origin picker.",
+          "expected": "Exactly PT-1001 and PT-1002 remain in the results (any-of across the two ticked statuses, and-ed with the origin), and the live counter reads 2 of 7 products.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Type beans into the screener's search box, then add letters so it reads beansy.",
+          "expected": "At beans the results narrow live to exactly PT-1001 and PT-1002; at beansy the list empties to a clear no-products-match note instead of a blank area.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Tick only the Flagged status box, save the current combo as a preset named Watchlist, untick Flagged, then reapply the Watchlist preset.",
+          "expected": "After reapplying, the Flagged filter is active again and the results show exactly PT-1003 - the preset restores the saved filters and the result set stays consistent with them.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Tick only the Flagged status box and look at PT-1003 in the results.",
+          "expected": "Its status appears as a red pill (the app-wide coding - red for Flagged) and its ID is shown as PT-1003.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the product registration page and then the Scan Monitor page.",
+          "expected": "Both pages show the shared skin: a left-aligned page title with a short firebrick underline bar, primary buttons as firebrick pills with white text, product IDs in a monospace face on the monitor, all on the misty rose background.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.24216,
+        "model_calls": 12,
+        "input_tokens_total": 1067648,
+        "output_tokens": 7391,
+        "judge_usd": 0.428
+      }
+    },
+    {
+      "turn": 9,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the counterfeit report form enter product ID PT-8888, location Paris flea market, and description fake label, then try to submit.",
+          "expected": "Submission is refused with a message that the product ID isn't recognized, and no new report appears in the Investigations queue.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the Investigations queue on a fresh load and open report R-01.",
+          "expected": "The queue holds exactly two Open reports, R-01 and R-02; R-01's detail shows the Lisbon street market report against PT-1005 alongside its verification scan evidence - exactly 2 scans, Apr 16, 2026 and Apr 17, 2026.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open report R-02, resolve it as Genuine, then check PT-1002 in the registry.",
+          "expected": "R-02 leaves the Open state marked as Genuine/closed, and PT-1002 keeps its Delivered status with a green pill - a genuine resolution touches nothing on the product.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Open report R-01, resolve it as Counterfeit Confirmed, then open the Lots page and find LOT-TEA-02.",
+          "expected": "PT-1005 flips to Flagged, and LOT-TEA-02's rolled-up status now reads Flagged with a red pill (it read In Transit before).",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Chain Audit page on a freshly loaded app and read every issue it lists.",
+          "expected": "Exactly two issues appear: PT-1005 and PT-1007, each cited for a Delivered event with no Shipped leg before it (PT-1005's Osaka Depot delivery on Apr 15, 2026 and PT-1007's Antwerp Hub delivery on Mar 1, 2026); PT-1003 is NOT listed even though its status is Flagged - a flag is not a custody gap - and the other four products audit clean.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.326777,
+        "model_calls": 16,
+        "input_tokens_total": 1628824,
+        "output_tokens": 9741,
+        "judge_usd": 0.2301
+      }
+    },
+    {
+      "turn": 10,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Checkpoints page on a freshly loaded app and read the top row of the ranking.",
+          "expected": "The top row is Accra Co-op with 2 distinct products - five locations tie at 2 distinct products and Accra Co-op wins alphabetically; Rotterdam Port and Hanoi Facility, despite having the most events (3 each), do not top the list.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Find Rotterdam Port's row on the Checkpoints page.",
+          "expected": "It shows 2 distinct products but 3 total events (PT-1001 passed it twice, PT-1004 once) with latest activity Apr 10, 2026 - the double visit is not double-counted as a product.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Find Hanoi Facility's row on the Checkpoints page.",
+          "expected": "It shows 1 distinct product with 3 total events and latest activity Mar 9, 2026, and it ranks below every 2-product location despite its event count.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the bulk importer paste 'PT-1005, Arrived, Lisbon Hub, 2026-04-22', press import, then open the Checkpoints page.",
+          "expected": "A Lisbon Hub row appears with 1 distinct product, 1 event, and latest activity Apr 22, 2026 - imported events flow straight into the checkpoint rollup.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the Screener, tick both the Delivered and In Transit status checkboxes and pick Bogota in the origin picker.",
+          "expected": "Exactly PT-1001 and PT-1002 remain in the results (any-of across the two ticked statuses, and-ed with the origin), and the live counter reads 2 of 7 products.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 1,
+      "partial": 1,
+      "no": 3,
+      "total": 5,
+      "accuracy": 30.0,
+      "cost": {
+        "generation_usd": 0.409502,
+        "model_calls": 20,
+        "input_tokens_total": 2201850,
+        "output_tokens": 8466,
+        "judge_usd": 1.1276
+      }
+    }
+  ]
+}

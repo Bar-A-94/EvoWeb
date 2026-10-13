@@ -1,0 +1,840 @@
+{
+ "id": "000040",
+ "instruction": "Please implement a consulting business website that provides leadership and business training services. The website should have an e-commerce component, allowing customers to purchase services directly from the site. The website should include features such as workshops, online classes, podcasts, and blogs. Users should be able to browse and purchase services, and interact with the website. Set all pages to have a light cyan background and cadet blue components.",
+ "Category": {
+  "primary_category": "User Interaction",
+  "subcategories": [
+   "E-commerce",
+   "Dynamic Content Rendering",
+   "Form Systems"
+  ]
+ },
+ "application_type": "E-commerce Web Applications",
+ "ui_instruct": [
+  {
+   "task": "Verify the website's navigation bar functionality between Home, Services, Workshops, Online Classes, Podcasts, Blogs, and Contact.",
+   "expected_result": "The navigation bar should allow users to access all main sections of the website, including Home, Services, Workshops, Online Classes, Podcasts, Blogs, and Contact.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering"
+    ]
+   }
+  },
+  {
+   "task": "Test the e-commerce functionality by attempting to purchase a service.",
+   "expected_result": "Users should be able to select a service, add it to the cart, proceed to checkout, enter payment details, and receive a confirmation message after a successful transaction.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "E-commerce"
+    ]
+   }
+  },
+  {
+   "task": "Check the readability and relevance of content on the Blogs page.",
+   "expected_result": "Blog entries should be relevant to leadership and business training, be free of grammatical errors, and have up-to-date content that aligns with the consulting theme.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering",
+     "Details Information"
+    ]
+   }
+  },
+  {
+   "task": "Ensure the workshops' schedule information is clearly displayed.",
+   "expected_result": "Users should be able to view detailed information about upcoming workshops, including dates, topics, and speakers, with the ability to register directly from the page.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering",
+     "Details Information"
+    ]
+   }
+  },
+  {
+   "task": "Verify that the website uses 'light cyan' as the background color and 'cadet blue' as the component color, as specified in the design requirements.",
+   "expected_result": "The website has a background color of 'light cyan' and components (such as buttons, cards, headers, etc.) are styled with the color 'cadet blue', accurately reflecting the design instruction.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "archetype": "derived-state",
+   "instruction": "That flat workshops list isn't cutting it — build me a proper program finder page for all our training. Topic category checkboxes (Leadership, Communication, Conflict, Coaching), a Live/On-Demand format filter, and a max-price box I type a number into; ticking several categories should broaden just that one filter while format and price still narrow the results, with a live match count sitting next to the list and a friendly note when nothing matches, and each card needs an add-to-cart so people can buy straight from the finder through our existing cart. Load it with exactly these eight to start — Foundations of Leadership (Leadership, $240, 6 hrs, Live, for Managers, rated 4.8), Difficult Conversations (Communication, $180, 4 hrs, Live, Managers, 4.6), Conflict Resolution Essentials (Conflict, $180, 5 hrs, On-Demand, Individuals, 4.6), Executive Presence (Leadership, $320, 8 hrs, Live, Executives, 4.9), Coaching for Performance (Coaching, $260, 6 hrs, On-Demand, Managers, 4.7), Strategic Decision Making (Leadership, $300, 6 hrs, On-Demand, Executives, 4.8), Team Communication Basics (Communication, $150, 3 hrs, On-Demand, Individuals, 4.4), and Managing Remote Teams (Leadership, $210, 5 hrs, Live, Managers, 4.5) — I'll add more later. One habit for this whole app, now and for anything we build later: durations always read like '6 hrs', never minutes.",
+   "source_website": "https://achievecentre.com/",
+   "source_feature": "Training topic category filter",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the program finder, check the Leadership and Communication category filters and set the format filter to Live.",
+     "expected_result": "Exactly four programs are listed — Foundations of Leadership, Difficult Conversations, Executive Presence, and Managing Remote Teams — and the live match count reads 4.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Search and Filters"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the program finder, clear any other filters and type 200 into the max price box.",
+     "expected_result": "Only Difficult Conversations, Conflict Resolution Essentials, and Team Communication Basics remain visible; Managing Remote Teams at $210 is filtered out.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Boundary Conditions"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the program finder, type 100 into the max price box.",
+     "expected_result": "No program cards are shown and a friendly no-matches note appears instead of a blank area or an error.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Empty State",
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "From the program finder, use the add-to-cart action on Executive Presence, then open the cart.",
+     "expected_result": "Executive Presence appears in the existing cart priced at $320 and can proceed toward checkout like any other purchase.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "E-commerce",
+       "Cross-feature Integration"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 1,
+     "task": "From the Services page, add a service to the cart, proceed to checkout, and complete the purchase.",
+     "expected_result": "The service lands in the cart, checkout accepts the details, and a confirmation message appears after completing the purchase.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "E-commerce"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Sales keeps fielding group quote requests, so give me a team training estimator page. I pick one of our programs, type a team size, and the quote recalculates with every keystroke — per-person price times seats, then 10% off from 10 people up through 24, and 15% off at 25 or more, with the discount line and the final total shown to the cent. An empty or zero team size should just show a friendly ask instead of NaN or $0.00 garbage. Also, from here on out and everywhere in the app: whenever a program shows up, tag its format with a little colored pill badge — 'Live' or 'On-Demand'.",
+   "source_website": "https://academy.echelonfront.com/",
+   "source_feature": "Role-specific training tracks (team/organization pricing)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the team training estimator, pick Difficult Conversations and type 12 into the team size box.",
+     "expected_result": "As typed, the quote updates without any submit action: it shows a 10% discount applied and a final total of $1,944.00.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Real-time Update"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the estimator, pick Team Communication Basics and type 25 into the team size box.",
+     "expected_result": "The 15% tier kicks in exactly at 25 people: the quote shows a 15% discount and a final total of $3,187.50, not the 10% tier's $3,375.00.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Boundary Conditions"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the estimator, with any program picked, type 0 into the team size box.",
+     "expected_result": "No NaN, error, or $0.00 quote appears — the estimator shows a friendly message asking for a valid team size and nothing crashes.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Validation",
+       "Edge Cases"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Open the program finder and look at the Conflict Resolution Essentials card.",
+     "expected_result": "The card shows a colored pill badge reading On-Demand, matching the app-wide format badge convention.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Badge Styling",
+       "Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "On the program finder, check the Leadership and Communication category filters and set the format filter to Live.",
+     "expected_result": "Exactly four programs are listed — Foundations of Leadership, Difficult Conversations, Executive Presence, and Managing Remote Teams — and the live match count reads 4.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Search and Filters"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Next up: learning paths. Put an add-to-path action on every program finder result feeding a draft; a review screen shows the draft's programs with combined price and total hours, refuses the same program twice, and won't save without a name and at least two programs; saved paths then live on their own page. Preload one example for me — 'New Manager Ramp-Up' with Foundations of Leadership, Difficult Conversations, and Coaching for Performance. And a standing preference across this whole app going forward: anything I save or sign up for lists newest at the top.",
+   "source_website": "https://academy.echelonfront.com/",
+   "source_feature": "Role-specific training tracks (curated course tracks)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the saved learning paths page and look at New Manager Ramp-Up.",
+     "expected_result": "It contains Foundations of Leadership, Difficult Conversations, and Coaching for Performance, with a combined price of $680 and a total of 16 hrs.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Details Information"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "From the program finder, add only Executive Presence to a new path draft, type the name Solo Track in the path name field, and try to save.",
+     "expected_result": "Saving is refused with a message that a path needs at least two programs, and nothing new appears on the saved paths page.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Validation",
+       "Form Systems"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "From the program finder, use the add-to-path action on Foundations of Leadership twice, then open the draft review.",
+     "expected_result": "Foundations of Leadership appears only once in the draft, and the totals count it a single time ($240 and 6 hrs).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Deduplication",
+       "Aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the program finder, check only the Coaching category filter, use the add-to-path action on the single result, and open the draft review.",
+     "expected_result": "The filtered result is Coaching for Performance, and the draft review lists it with $260 and 6 hrs.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Integration",
+       "Filtering"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "On the team training estimator, pick Difficult Conversations and type 12 into the team size box.",
+     "expected_result": "As typed, the quote updates without any submit action: it shows a 10% discount applied and a final total of $1,944.00.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Real-time Update"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Let's make those learning paths trackable. Every program inside a saved path gets a done toggle, and the path shows completed hours out of total hours plus a whole-number percent — round normally, so halves go up. The moment a path hits 100%, render a Certificate of Completion right on the page with the path name and its total hours. Mark Foundations of Leadership already done in my New Manager Ramp-Up so there's partial progress to look at.",
+   "source_website": "https://academy.echelonfront.com/",
+   "source_feature": "Digital credentials shareable to LinkedIn",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the New Manager Ramp-Up path and look at its progress readout.",
+     "expected_result": "With Foundations of Leadership already marked done, it reads 6 of 16 hrs completed and the percent shows 38% (not 37%).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Calculation",
+       "Rounding"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the New Manager Ramp-Up path, mark Difficult Conversations as done.",
+     "expected_result": "Completed hours move to 10 of 16 hrs and the percent updates to 63% (62.5 rounded up).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Real-time Update"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the New Manager Ramp-Up path, mark Difficult Conversations and Coaching for Performance as done.",
+     "expected_result": "Progress reads 16 of 16 hrs and 100%, and a Certificate of Completion appears on screen showing the path name New Manager Ramp-Up and 16 hrs.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Boundary Conditions",
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "From the program finder, add Conflict Resolution Essentials and Team Communication Basics to a path draft, name it Quick Start, and save it.",
+     "expected_result": "Quick Start saves and shows fresh progress of 0 of 8 hrs and 0%, with done toggles for both programs and no certificate shown.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Integration",
+       "Empty State"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "On the program finder, clear any other filters and type 200 into the max price box.",
+     "expected_result": "Only Difficult Conversations, Conflict Resolution Essentials, and Team Communication Basics remain visible; Managing Remote Teams at $210 is filtered out.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Boundary Conditions"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "design-restyle",
+   "instruction": "Time for a design pass. Keep the light cyan background everywhere, but: primary action buttons go deep teal (#0F766E) with white text, every page heading sits left-aligned with a short teal underline beneath it, cards get a 12px corner radius, and prices render bold in dark slate (#334155). This applies across the whole site — the program finder, the estimator, the learning paths pages, and the original Services and Workshops pages too — not just wherever's convenient.",
+   "source_website": "https://achievecentre.com/",
+   "source_feature": "Category pages with consistent branded course-card design",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Open the program finder and look at its page heading and its primary action buttons.",
+     "expected_result": "The heading is left-aligned with a short teal underline accent beneath it, and primary buttons are deep teal (#0F766E) with white text.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Theme Consistency",
+       "Button Styling"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "On the program finder, look at the Executive Presence card.",
+     "expected_result": "Its price reads $320 in bold dark slate (#334155) and the card has visibly rounded 12px corners.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Typography",
+       "Card Styling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the original Services page and then the estimator page.",
+     "expected_result": "Both pages keep the light cyan background, their headings are left-aligned with the teal underline, and their primary buttons are deep teal with white text — the restyle isn't limited to the new pages.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Cross-page Consistency",
+       "Theme Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Open the saved learning paths page and look at the New Manager Ramp-Up card.",
+     "expected_result": "The card has 12px rounded corners and its $680 total renders bold in dark slate, consistent with the rest of the site.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Cross-feature Integration",
+       "Card Styling"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 4,
+     "task": "Open the saved learning paths page and look at New Manager Ramp-Up.",
+     "expected_result": "It contains Foundations of Leadership, Difficult Conversations, and Coaching for Performance, with a combined price of $680 and a total of 16 hrs.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Details Information"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "We're adding weekly live Q&A sessions — their own page plus a registration flow. Seed these four, each running 2 hrs: Leading Through Change on Jul 22 (20 seats, 12 taken), Ask Me Anything: Difficult Conversations on Jul 29 (15 seats, 14 taken), Executive Roundtable on Aug 5 (10 seats, all 10 taken), and Remote Team Rituals on Aug 12 (25 seats, 6 taken). Registering asks for name and email — both required, and the email has to actually look like one — then a review step, then confirmation; seat counts update immediately, and a full session offers a numbered waitlist spot instead of a seat. Add a My Registrations page, and put me down already for Leading Through Change.",
+   "source_website": "https://academy.echelonfront.com/",
+   "source_feature": "Live weekly Q&A webinar sessions",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Register for Ask Me Anything: Difficult Conversations with a name and a valid email, completing the review step.",
+     "expected_result": "A seat is confirmed and the session immediately shows 15 of 15 seats taken and reads as full.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Systems",
+       "Boundary Conditions"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open the live sessions page and register for Executive Roundtable, entering a name and a valid email.",
+     "expected_result": "Because all 10 seats are taken, no seat is granted; the flow offers a waitlist spot instead and the confirmation shows waitlist position 1.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Boundary Conditions",
+       "Workflow"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Start registering for Remote Team Rituals, type Jordan in the name field and not-an-email in the email field, and try to continue.",
+     "expected_result": "The form refuses to proceed, pointing at the invalid email; no confirmation appears and no registration is created.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Validation",
+       "Form Systems"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Register for Remote Team Rituals with a name and a valid email, then open the My Registrations page.",
+     "expected_result": "The new Remote Team Rituals registration sits above the pre-existing Leading Through Change one — newest first.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Ordering",
+       "Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 5,
+     "task": "Open the New Manager Ramp-Up path and look at its progress readout.",
+     "expected_result": "With Foundations of Leadership already marked done, it reads 6 of 16 hrs completed and the percent shows 38% (not 37%).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Calculation",
+       "Rounding"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Pull it all together on a 'My Learning' dashboard: total hours committed (every program across my saved paths plus every 2-hr live session I'm registered for — waitlist spots don't count), hours completed from the programs I've checked off, an overall completion percent as a whole number, how many paths I've saved, and how many certificates I've earned. The numbers have to stay honest — check something off or register for a session and the dashboard moves with it. And if there were ever no paths and no registrations, show calm zeros, not a blank screen.",
+   "source_website": "https://academy.echelonfront.com/",
+   "source_feature": "Digital credentials and member progress tracking",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the My Learning dashboard right after loading the app.",
+     "expected_result": "It reads 18 hrs committed (16 from the New Manager Ramp-Up path plus 2 from the Leading Through Change registration), 6 hrs completed, an overall 33%, 1 saved path, and 0 certificates.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Calculation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Mark Coaching for Performance done in New Manager Ramp-Up, then open the dashboard.",
+     "expected_result": "Completed hours rise from 6 to 12 hrs and the overall percent recomputes to 67% (12 of 18).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Real-time Update",
+       "Calculation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Mark Difficult Conversations and Coaching for Performance done in New Manager Ramp-Up, then open the dashboard.",
+     "expected_result": "The certificates count shows 1, completed hours read 16 hrs, and the overall percent reads 89% (16 of 18).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Aggregation",
+       "Boundary Conditions"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Register for Remote Team Rituals with a name and a valid email, then open the My Learning dashboard.",
+     "expected_result": "Committed hours rise from 18 to 20 hrs and the overall percent drops to 30% (6 of 20).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Integration",
+       "Calculation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 7,
+     "task": "Open the live sessions page and register for Executive Roundtable, entering a name and a valid email.",
+     "expected_result": "Because all 10 seats are taken, no seat is granted; the flow offers a waitlist spot instead and the confirmation shows waitlist position 1.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Boundary Conditions",
+       "Workflow"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "I want a 'Find your training' matcher: pick your role — Individual, Manager, or Executive — and one topic — Leadership, Communication, Conflict, or Coaching — and it scores every program on the spot, a point for a role match and a point for a topic match, showing the top three with ties going to the higher rating and then A-to-Z. Change either answer and the list reshuffles instantly, no submit button. Each recommendation gets an add-to-path shortcut that drops it into one of my saved learning paths, updating that path's totals and still refusing duplicates.",
+   "source_website": "https://academy.echelonfront.com/",
+   "source_feature": "'Who is this for?' role-specific track selector",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the training matcher, choose Individual as the role and Communication as the topic.",
+     "expected_result": "The top three read, in order: Team Communication Basics, then Conflict Resolution Essentials, then Difficult Conversations — the 4.6-rating tie broken alphabetically.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Ranking",
+       "Tie-breaking"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the training matcher, choose Manager as the role and Leadership as the topic.",
+     "expected_result": "The top three read, in order: Foundations of Leadership, then Managing Remote Teams (both two-point matches, higher rating first), then Executive Presence as the best one-point match.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Ranking",
+       "Calculation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "With Manager and Leadership selected, switch the topic to Coaching.",
+     "expected_result": "The list reshuffles immediately with no submit action, and Coaching for Performance moves to the top spot.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Real-time Update",
+       "Ranking"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "With Manager and Leadership selected, use the add-to-path shortcut to put Managing Remote Teams into New Manager Ramp-Up, then open that path.",
+     "expected_result": "New Manager Ramp-Up now lists four programs with updated totals of $890 and 21 hrs.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Integration",
+       "Aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 6,
+     "task": "On the program finder, look at the Executive Presence card.",
+     "expected_result": "Its price reads $320 in bold dark slate (#334155) and the card has visibly rounded 12px corners.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Typography",
+       "Card Styling"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Big one: international pricing. Put a currency picker in the header — USD, CAD, GBP, EUR — using fixed rates of 1 USD = 1.35 CAD, 0.79 GBP, and 0.92 EUR, and convert every price on the site: the finder cards, the estimator's quote including its discount math, learning path totals, and the original services pages, always two decimals with the right symbol (CA$, £, €). The pick should follow me from page to page, and flipping back to USD restores the original numbers exactly.",
+   "source_website": "https://achievecentre.com/",
+   "source_feature": "Multi-currency support",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Switch the header currency picker to GBP and open the program finder.",
+     "expected_result": "Foundations of Leadership shows £189.60 — converted at the fixed 0.79 rate and formatted to two decimals.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Calculation",
+       "Formatting"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Switch the currency to EUR and open the saved learning paths page.",
+     "expected_result": "New Manager Ramp-Up's total reads €625.60 (680 times 0.92), converted like every other price on the site.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Switch the currency to CAD, open the original Services page, then switch back to USD.",
+     "expected_result": "Service prices show in CA$ with two decimals while CAD is active — the choice follows you across pages — and switching back to USD restores the original dollar figures exactly.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Persistence",
+       "Formatting"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "With the currency set to CAD, open the estimator, pick Difficult Conversations, and type 12 into the team size box.",
+     "expected_result": "The discounted total reads CA$2,624.40 — the 10% discount math applied first and then converted at 1.35.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-feature Integration",
+       "Calculation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 8,
+     "task": "Open the My Learning dashboard right after loading the app.",
+     "expected_result": "It reads 18 hrs committed (16 from the New Manager Ramp-Up path plus 2 from the Leading Through Change registration), 6 hrs completed, an overall 33%, 1 saved path, and 0 certificates.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Calculation"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "target_app_summary": "The consulting site grows from a brochure-with-cart into a full training platform. Discovery gets a multi-criteria program finder over a pinned catalog of eight programs (wired into the existing cart) and a live-scoring role/topic matcher. Commerce and planning gain a team-quote estimator with tiered volume discounts and a learning-path builder whose saved paths feed a progress-and-certificates layer. Community arrives via a live Q&A session registration flow with capacity and waitlists, and everything rolls up into a My Learning dashboard that reconciles path hours, completed hours, registrations, and certificates. A site-wide design refresh and a fixed-rate multi-currency layer cut across the finder, estimator, paths, and the original services pages. The graph's spine is finder -> path builder -> progress -> dashboard, with the estimator, sessions, matcher, restyle, and currency features hanging off it.",
+ "dependency_graph": {
+  "nodes": [
+   {
+    "id": "T1",
+    "label": "base app",
+    "archetype": "base"
+   },
+   {
+    "id": "T2",
+    "label": "program finder",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T3",
+    "label": "team quote estimator",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T4",
+    "label": "learning path builder",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T5",
+    "label": "progress and certificates",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T6",
+    "label": "site-wide restyle",
+    "archetype": "design-restyle"
+   },
+   {
+    "id": "T7",
+    "label": "live session registration",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T8",
+    "label": "my learning dashboard",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T9",
+    "label": "training matcher",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T10",
+    "label": "multi-currency pricing",
+    "archetype": "derived-state"
+   }
+  ],
+  "edges": [
+   {
+    "from": "T1",
+    "to": "T2",
+    "what": "existing cart/checkout used by finder add-to-cart"
+   },
+   {
+    "from": "T2",
+    "to": "T4",
+    "what": "add-to-path action on finder results"
+   },
+   {
+    "from": "T4",
+    "to": "T5",
+    "what": "done toggles and progress on saved paths"
+   },
+   {
+    "from": "T1",
+    "to": "T6",
+    "what": "restyles base Services and Workshops pages"
+   },
+   {
+    "from": "T2",
+    "to": "T6",
+    "what": "restyles finder cards and buttons"
+   },
+   {
+    "from": "T3",
+    "to": "T6",
+    "what": "restyles estimator page"
+   },
+   {
+    "from": "T4",
+    "to": "T6",
+    "what": "restyles learning paths pages"
+   },
+   {
+    "from": "T4",
+    "to": "T8",
+    "what": "saved path hours and path count"
+   },
+   {
+    "from": "T5",
+    "to": "T8",
+    "what": "completed hours and certificate count"
+   },
+   {
+    "from": "T7",
+    "to": "T8",
+    "what": "registered session hours"
+   },
+   {
+    "from": "T4",
+    "to": "T9",
+    "what": "inserts recommendation into a saved path"
+   },
+   {
+    "from": "T1",
+    "to": "T10",
+    "what": "converts services page prices"
+   },
+   {
+    "from": "T2",
+    "to": "T10",
+    "what": "converts finder card prices"
+   },
+   {
+    "from": "T3",
+    "to": "T10",
+    "what": "converts discounted estimator quote"
+   },
+   {
+    "from": "T4",
+    "to": "T10",
+    "what": "converts learning path totals"
+   }
+  ]
+ },
+ "global_rules": [
+  {
+   "rule": "All training durations everywhere read as hours like '6 hrs', never minutes.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Wherever a program appears, its delivery format shows as a colored pill badge reading 'Live' or 'On-Demand'.",
+   "introduced_in_turn": 3
+  },
+  {
+   "rule": "Any list of user-saved or user-registered items (paths, registrations) is ordered newest first.",
+   "introduced_in_turn": 4
+  }
+ ],
+ "pinned_seed": {
+  "entity": "8 training programs",
+  "introduced_in_turn": 2,
+  "records_gist": "Foundations of Leadership (Leadership,$240,6h,Live,Managers,4.8); Difficult Conversations (Communication,$180,4h,Live,Managers,4.6); Conflict Resolution Essentials (Conflict,$180,5h,On-Demand,Individuals,4.6); Executive Presence (Leadership,$320,8h,Live,Executives,4.9); Coaching for Performance (Coaching,$260,6h,On-Demand,Managers,4.7); Strategic Decision Making (Leadership,$300,6h,On-Demand,Executives,4.8); Team Communication Basics (Communication,$150,3h,On-Demand,Individuals,4.4); Managing Remote Teams (Leadership,$210,5h,Live,Managers,4.5)"
+ }
+}

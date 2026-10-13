@@ -1,0 +1,601 @@
+{
+  "index": 25,
+  "status": "success",
+  "model": "anthropic/claude-haiku-4-5-20251001",
+  "generator": "openhands",
+  "base_trajectory": {
+    "source": "none",
+    "messages": 0
+  },
+  "artifacts": {
+    "zip": null,
+    "run_json": null,
+    "generator": "openhands",
+    "screenshots": [
+      "/output/000025/screenshots/task000025_0.png",
+      "/output/000025/screenshots/task000025_1.png",
+      "/output/000025/screenshots/task000025_2.png",
+      "/output/000025/screenshots/task000025_3.png",
+      "/output/000025/screenshots/task000025_4.png",
+      "/output/000025/screenshots/task000025_5.png"
+    ],
+    "output_dir": "/output/000025"
+  },
+  "ladder": {
+    "turns_expected": 10,
+    "turns_completed": 10,
+    "complete": true
+  },
+  "eval_model": "claude-sonnet-4-6",
+  "accuracy": 57.8,
+  "yes": 26,
+  "partial": 7,
+  "no": 18,
+  "total": 51,
+  "tasks": [
+    {
+      "task_idx": 0,
+      "task": "Test the functionality of starting a new game.",
+      "expected": "The game should initialize with an introductory screen displaying instructions on how to play, including sorting waste into correct containers.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 1,
+      "task": "Check the leaderboard feature to ensure it displays scores correctly.",
+      "expected": "The leaderboard should show a list of players with their respective scores in descending order without any visual errors.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 2,
+      "task": "Assess the cartoon-style visual design for appropriateness.",
+      "expected": "The visuals should be colorful, child-friendly, and consistent throughout the website, with no inappropriate or non-cartoonish elements present.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 3,
+      "task": "Test the feedback system for incorrect sorting.",
+      "expected": "Placing a waste item in the wrong container should trigger a gentle correction prompt explaining the correct choice without being discouraging.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 4,
+      "task": "Verify the awarding of rewards and recognition within the game.",
+      "expected": "After correctly sorting a designated number of items or reaching a specific score, the game should display a reward screen or badge to acknowledge the player’s achievement.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 5,
+      "task": "Verify that the website uses 'seashell' as the background color and 'crimson' as the component color, as specified in the design requirements.",
+      "expected": "The website has a background color of 'seashell' and components (such as buttons, cards, headers, etc.) are styled with the color 'crimson', accurately reflecting the design instruction.",
+      "verdict": "yes"
+    }
+  ],
+  "turns": [
+    {
+      "turn": 1,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": false,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Test the functionality of starting a new game.",
+          "expected": "The game should initialize with an introductory screen displaying instructions on how to play, including sorting waste into correct containers.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Check the leaderboard feature to ensure it displays scores correctly.",
+          "expected": "The leaderboard should show a list of players with their respective scores in descending order without any visual errors.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 2,
+          "task": "Assess the cartoon-style visual design for appropriateness.",
+          "expected": "The visuals should be colorful, child-friendly, and consistent throughout the website, with no inappropriate or non-cartoonish elements present.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Test the feedback system for incorrect sorting.",
+          "expected": "Placing a waste item in the wrong container should trigger a gentle correction prompt explaining the correct choice without being discouraging.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "Verify the awarding of rewards and recognition within the game.",
+          "expected": "After correctly sorting a designated number of items or reaching a specific score, the game should display a reward screen or badge to acknowledge the player’s achievement.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 5,
+          "task": "Verify that the website uses 'seashell' as the background color and 'crimson' as the component color, as specified in the design requirements.",
+          "expected": "The website has a background color of 'seashell' and components (such as buttons, cards, headers, etc.) are styled with the color 'crimson', accurately reflecting the design instruction.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 2,
+      "no": 0,
+      "total": 6,
+      "accuracy": 83.3,
+      "cost": {
+        "generation_usd": 0.113252,
+        "model_calls": 16,
+        "input_tokens_total": 312184,
+        "output_tokens": 10256,
+        "judge_usd": 0.4362
+      }
+    },
+    {
+      "turn": 2,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "In the Avatar Studio, type 'Z' into the nickname field, then add more letters to make it 'Ziggy'.",
+          "expected": "With just 'Z' saving is blocked with a friendly note (names need 2-12 characters); once it reads 'Ziggy' the block lifts and saving becomes possible.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the Avatar Studio, type 'greengreta' into the nickname field.",
+          "expected": "The name is rejected as already taken even though it's typed in lowercase, and saving stays blocked with a friendly message.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the Avatar Studio, click a different animal and then a different accessory without saving.",
+          "expected": "The big preview updates immediately after each click, showing the newly chosen animal and accessory.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Type the lowercase nickname 'ziggy' in the Avatar Studio, pick the frog, save, then open the leaderboard page.",
+          "expected": "The saved buddy appears at the top of the leaderboard page showing the frog avatar and the name as ZIGGY in all caps, despite being typed lowercase.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the leaderboard from the main screen.",
+          "expected": "Players are listed with their scores in descending order, highest first.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.118696,
+        "model_calls": 11,
+        "input_tokens_total": 373487,
+        "output_tokens": 8714,
+        "judge_usd": 0.3344
+      }
+    },
+    {
+      "turn": 3,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the My Journey page and look at the overall accuracy stat.",
+          "expected": "It reads 80.6% — computed as 58 correct out of 72 total items across the six seeded rounds, not 78.2% (the average of the per-round percentages).",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the My Journey page, look at the best-round spotlight.",
+          "expected": "It shows the Kitchen Cleanup round with 260 pts and 14 of 15 correct (93.3%) — the score tie with the other 260 pts round is broken by accuracy.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Scroll the rounds list on the My Journey page.",
+          "expected": "All six seeded rounds appear newest first — the 90 pts Park Patrol at the top and the 180 pts Park Patrol at the bottom.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Look at how every score is written on the My Journey page — averages, recent form, and each round in the list.",
+          "expected": "Every score carries the pts suffix (all-time average 191.7 pts, recent form 190 pts, rounds like 260 pts) — and recent form is visibly a different number from the all-time average.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the Avatar Studio, type 'greengreta' into the nickname field.",
+          "expected": "The name is rejected as already taken even though it's typed in lowercase, and saving stays blocked with a friendly message.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.265126,
+        "model_calls": 18,
+        "input_tokens_total": 1092842,
+        "output_tokens": 16389,
+        "judge_usd": 0.1691
+      }
+    },
+    {
+      "turn": 4,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Recycle City map fresh.",
+          "expected": "Park, Kitchen and School are open while Factory is the only locked spot — School counts as open because a Kitchen round hit 250 pts, even though School has never been played.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the map, click the locked Factory spot.",
+          "expected": "It shows a padlock and states the exact requirement — a School round reaching 250 pts — rather than opening the game or crashing.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Click the School spot and view its intro.",
+          "expected": "The intro lists school-themed items such as crumpled paper, juice boxes and broken crayons — a different pile from Park's — along with a start button.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Enter Park from the map, start the round, sort one item, press the Done button, then open My Journey.",
+          "expected": "A new round tagged Park sits at the top of the history, above the six seeded rounds.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the My Journey page and look at the overall accuracy stat.",
+          "expected": "It reads 80.6% — computed as 58 correct out of 72 total items across the six seeded rounds, not 78.2% (the average of the per-round percentages).",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 2,
+      "partial": 1,
+      "no": 2,
+      "total": 5,
+      "accuracy": 50.0,
+      "cost": {
+        "generation_usd": 0.279133,
+        "model_calls": 13,
+        "input_tokens_total": 1122081,
+        "output_tokens": 13215,
+        "judge_usd": 0.6537
+      }
+    },
+    {
+      "turn": 5,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the Impact Calculator, type 7 into the aluminium cans box.",
+          "expected": "Without pressing anything else, energy saved shows 1.40 kWh and TV hours shows 21 — the results update as you type.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the Impact Calculator, type a number into the aluminium cans box, then clear it out completely.",
+          "expected": "The results treat the empty box as zero and show clean numbers — no NaN, blank, or frozen values.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 2,
+          "task": "Look at the lifetime line at the top of the Impact Calculator.",
+          "expected": "It says 58 items sorted right — the total correct sorts across the six seeded journey rounds, not 72 (the total items faced).",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Start a game, sort exactly one item correctly, press Done, then return to the Impact Calculator.",
+          "expected": "The lifetime line now reads 59 — it grew by exactly the one correct sort banked from that round.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the Avatar Studio, click a different animal and then a different accessory without saving.",
+          "expected": "The big preview updates immediately after each click, showing the newly chosen animal and accessory.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 2,
+      "partial": 1,
+      "no": 2,
+      "total": 5,
+      "accuracy": 50.0,
+      "cost": {
+        "generation_usd": 0.214969,
+        "model_calls": 8,
+        "input_tokens_total": 763527,
+        "output_tokens": 5236,
+        "judge_usd": 0.5659
+      }
+    },
+    {
+      "turn": 6,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Sticker Shop for the first time.",
+          "expected": "The spendable balance shows 22 stars — only the four seeded rounds at or above three-quarters accuracy bank spendable stars (4+6+7+5, with the 9-of-12 round counting because it sits exactly on the bar), not 27 (the plain sum of all six rounds' stars) — and all five stickers are listed with none owned.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Buy the Diamond Turtle sticker (22 stars).",
+          "expected": "The purchase goes through since it costs exactly the balance; the balance drops to 0 and every remaining sticker becomes unbuyable.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Buy the Super Worm sticker (3 stars), then try to buy it again.",
+          "expected": "After the first purchase the balance reads 19 and Super Worm shows as owned; a second purchase of the same sticker is impossible.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Start a game, sort one item correctly with no mistakes, press Done, then open the Sticker Shop.",
+          "expected": "The balance now sits above 22 — higher by exactly the stars that round banked, since the mistake-free round clears the three-quarters accuracy bar.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Recycle City map fresh.",
+          "expected": "Park, Kitchen and School are open while Factory is the only locked spot — School counts as open because a Kitchen round hit 250 pts, even though School has never been played.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 0,
+      "partial": 0,
+      "no": 5,
+      "total": 5,
+      "accuracy": 0.0,
+      "cost": {
+        "generation_usd": 0.295728,
+        "model_calls": 12,
+        "input_tokens_total": 1260611,
+        "output_tokens": 8599,
+        "judge_usd": 0.8906
+      }
+    },
+    {
+      "turn": 7,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open My Journey and then the Sticker Shop.",
+          "expected": "Both pages show the soft aqua background and deep teal primary buttons with white text — neither page is left on the old seashell/crimson look.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Visit the Recycle City map, My Journey, and the Sticker Shop and look at each page heading.",
+          "expected": "Every heading is centered with the wave mark in front of it, consistently on all three pages.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "On My Journey, find the total stars banked.",
+          "expected": "It still reads 27 and now sits on a small gold circle badge.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "On the restyled map, click the locked Factory spot.",
+          "expected": "Under the new theme the padlock and the exact unlock requirement (a School round reaching 250 pts) still show.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the My Journey page, look at the best-round spotlight.",
+          "expected": "It shows the Kitchen Cleanup round with 260 pts and 14 of 15 correct (93.3%) — the score tie with the other 260 pts round is broken by accuracy.",
+          "verdict": "partial"
+        }
+      ],
+      "yes": 2,
+      "partial": 1,
+      "no": 2,
+      "total": 5,
+      "accuracy": 50.0,
+      "cost": {
+        "generation_usd": 0.32909,
+        "model_calls": 8,
+        "input_tokens_total": 1040732,
+        "output_tokens": 13501,
+        "judge_usd": 0.3953
+      }
+    },
+    {
+      "turn": 8,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Challenge Builder's first step.",
+          "expected": "The target score field comes pre-filled with 260 — the best score in the journey — not blank, zero, or the most recent round's score.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the builder, type 40 as the target score, then change it to 500.",
+          "expected": "40 gets a friendly rejection since the range is 50-500; 500 is accepted because the ends are included.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 2,
+          "task": "Pick the Kitchen pile, type 8 items and a 300 target, and continue to the review step.",
+          "expected": "The review echoes Kitchen, 8 items and 300 pts, and lists the reward as 6 stars (one per full 50 pts).",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Build a challenge with the Kitchen pile, continue past review, start it, press Done right away, then open My Journey.",
+          "expected": "The finished round appears at the top of the journey history tagged as a Challenge.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the Impact Calculator, type a number into the aluminium cans box, then clear it out completely.",
+          "expected": "The results treat the empty box as zero and show clean numbers — no NaN, blank, or frozen values.",
+          "verdict": "partial"
+        }
+      ],
+      "yes": 1,
+      "partial": 2,
+      "no": 2,
+      "total": 5,
+      "accuracy": 40.0,
+      "cost": {
+        "generation_usd": 0.370208,
+        "model_calls": 8,
+        "input_tokens_total": 1244433,
+        "output_tokens": 13198,
+        "judge_usd": 0.8532
+      }
+    },
+    {
+      "turn": 9,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Fact Card Album fresh.",
+          "expected": "It shows 6 of 12 cards collected (50%) — Park's three and Kitchen's three from the seeded rounds — not a count inflated by the repeated Park rounds.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Look at the Park group in the album.",
+          "expected": "Exactly three Park cards appear, each shown once, even though the journey holds four Park rounds.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Look at the Factory group in the album.",
+          "expected": "Its three cards sit face-down with a padlock and say a Factory round earns them — no blanks or crashes for a never-visited spot.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Open School on the map, start a round, press Done, then open the Fact Card Album.",
+          "expected": "School's three cards flip to collected and the album count reads 9 of 12 (75%).",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Sticker Shop for the first time.",
+          "expected": "The spendable balance shows 22 stars — only the four seeded rounds at or above three-quarters accuracy bank spendable stars (4+6+7+5, with the 9-of-12 round counting because it sits exactly on the bar), not 27 (the plain sum of all six rounds' stars) — and all five stickers are listed with none owned.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 3,
+      "partial": 0,
+      "no": 2,
+      "total": 5,
+      "accuracy": 60.0,
+      "cost": {
+        "generation_usd": 0.382428,
+        "model_calls": 9,
+        "input_tokens_total": 1514527,
+        "output_tokens": 6750,
+        "judge_usd": 0.2877
+      }
+    },
+    {
+      "turn": 10,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the certificate preview with all the achievement boxes ticked.",
+          "expected": "It shows 27 stars banked, the best round as Kitchen Cleanup at 260 pts, fact cards 6 of 12, and a sticker count of 0 — real numbers, no blanks.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the certificate maker, untick the fact cards checkbox, then tick it again.",
+          "expected": "The fact-card line vanishes instantly from both the rendered certificate and the plain-text copy block, and reappears in both when re-ticked — the two stay in sync.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the Avatar Studio save a buddy named 'milo', then open the certificate maker.",
+          "expected": "The certificate stars MILO in all caps with the chosen avatar instead of the ECO HERO placeholder.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Buy the Super Worm sticker in the Sticker Shop, then open the certificate with the stickers box ticked.",
+          "expected": "The sticker line on the certificate now reads 1 instead of 0.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Challenge Builder's first step.",
+          "expected": "The target score field comes pre-filled with 260 — the best score in the journey — not blank, zero, or the most recent round's score.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 2,
+      "partial": 0,
+      "no": 3,
+      "total": 5,
+      "accuracy": 40.0,
+      "cost": {
+        "generation_usd": 0.381686,
+        "model_calls": 8,
+        "input_tokens_total": 1424189,
+        "output_tokens": 7685,
+        "judge_usd": 0.6586
+      }
+    }
+  ]
+}

@@ -1,0 +1,907 @@
+{
+ "id": "000067",
+ "instruction": "Please implement a family event portal website for publishing and storing obituaries, funeral arrangements, and multimedia memories. The website should have functionalities for obituary publishing, mortuary list, condolences, and statistics. Users should be able to publish and manage their own obituaries and funeral arrangements, view and leave messages on others' obituaries, and view statistical analysis. Use cornsilk for the outer layout and peru for UI blocks.",
+ "Category": {
+  "primary_category": "Data Management",
+  "subcategories": [
+   "CRUD Operations",
+   "Data Visualization",
+   "API Integration"
+  ]
+ },
+ "application_type": "News and Information Sites",
+ "ui_instruct": [
+  {
+   "task": "Navigate to the obituary publishing section and submit a new obituary with a title, content, and image.",
+   "expected_result": "The obituary should be successfully published, appear on the user's dashboard, and be accessible to other users from the main obituaries page.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations",
+     "File operation"
+    ]
+   }
+  },
+  {
+   "task": "Look up the list of local mortuaries available on the website.",
+   "expected_result": "The list should display comprehensive details about each mortuary, including name, location, and contact information.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering",
+     "Details Information"
+    ]
+   }
+  },
+  {
+   "task": "Leave a condolence message on an existing obituary.",
+   "expected_result": "The message should be successfully posted under the selected obituary and visible to other users.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Communication"
+    ]
+   }
+  },
+  {
+   "task": "Check the statistics page for the statistical analysis of obituary-related data.",
+   "expected_result": "The page should display clear and relevant statistics, such as the number of obituaries published, the most recent obituaries, or any trend analysis available.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Data Visualization",
+     "Details Information"
+    ]
+   }
+  },
+  {
+   "task": "Navigate through the website using the main navigation menu.",
+   "expected_result": "Each link in the navigation menu should lead to the appropriate section or page, and the navigation menu should remain consistent across all pages.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering"
+    ]
+   }
+  },
+  {
+   "task": "Verify that the website uses 'cornsilk' as the background color and 'peru' as the component color, as specified in the design requirements.",
+   "expected_result": "The website has a background color of 'cornsilk' and components (such as buttons, cards, headers, etc.) are styled with the color 'peru', accurately reflecting the design instruction.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Families keep asking us to help with headstone and plaque wording, so I want an inscription designer: I pick one of our memorials from a list and it fills in the person's name with their birth and death dates, then as I type an epitaph line the engraved preview redraws with every keystroke alongside a live count of characters remaining — the engraver caps the epitaph at 40 characters, so once I'm over it should say so plainly and refuse to save. The preview should also show the age the person reached, and get the age right: someone whose birthday hadn't come around yet that year is a year younger than the simple subtraction. Saving should place the finished inscription on that person's obituary page. Also preload the archive with exactly these six, I'll add more later: Harold Finch, a veteran, March 12, 1932 – April 5, 2024; Rosa Delgado, an educator, July 4, 1945 – January 18, 2024; Miriam Okafor, an artist, November 30, 1958 – April 5, 2024; Walter Brandt, a veteran, February 29, 1940 – December 2, 2023; Lena Kowalski, a community leader, September 9, 1951 – March 12, 2024; and Samuel Whitcombe, who was both a veteran and an educator, June 21, 1929 – February 14, 2024. One more thing that goes for everything in this app, now and whatever we add later: write dates out with the month spelled, like 'March 12, 1932' — I can't stand 03/12/32.",
+   "source_website": "Ever Loved",
+   "source_feature": "Headstone and plaque shopping with custom inscription preview",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "In the inscription designer, pick Rosa Delgado from the memorial list and look at the preview.",
+     "expected_result": "The preview fills in 'Rosa Delgado' with her dates July 4, 1945 – January 18, 2024 and shows the age she reached as 78 — not 79 — because the July birthday had not yet arrived by January.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Dynamic Content Rendering",
+       "Computed Values"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Pick any memorial in the inscription designer and type a few characters of an epitaph while watching the preview and the character count.",
+     "expected_result": "The engraved preview and the remaining-character count update as each character is typed, without needing to submit or save.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Dynamic Content Rendering",
+       "Form Operations"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the inscription designer, pick Harold Finch, type the epitaph 'A devoted father, grandfather, and friend to absolutely everyone' (well over 40 characters), and try to save.",
+     "expected_result": "The designer flags the epitaph as over the 40-character limit and refuses to save; no inscription appears on Harold Finch's obituary page.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Form Operations"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Pick Rosa Delgado in the inscription designer, type the epitaph 'Beloved teacher and friend', save it, then open Rosa Delgado's obituary page.",
+     "expected_result": "The finished inscription appears on Rosa Delgado's obituary page showing 'Beloved teacher and friend', with her dates written with the month spelled out, like 'July 4, 1945'.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Operations",
+       "Dynamic Content Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 1,
+     "task": "Open an obituary from the main obituaries listing, type a condolence message into its message form, and submit it.",
+     "expected_result": "The condolence message appears under that obituary, visible with the rest of its messages.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Communication",
+       "Form Operations"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Now that the archive is growing, give me a proper browse page: filter by the categories (Veteran, Educator, Artist, Community Leader — picking several should show anyone matching any of them, and nobody should appear twice even when they wear two hats like Samuel), plus a birth-decade filter that narrows within whatever categories are picked, a count of how many are showing, and a sort control offering alphabetical, newest passing first (real date order, and when two share a date break the tie alphabetically), and busiest guestbook by number of condolence messages. And when I publish a new obituary through the regular form, let me pick its category right there, so newly published memorials come in tagged and show up here under their category. And from here on, whenever a person's name appears anywhere in this app — this page, previews, whatever comes next — put their years right after it, like 'Harold Finch (1932–2024)'.",
+   "source_website": "Legacy.com",
+   "source_feature": "Categorized browsing by affiliation",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the browse page, select both the Veteran and Educator categories.",
+     "expected_result": "Exactly 4 memorials show — Harold Finch, Walter Brandt, Samuel Whitcombe, and Rosa Delgado — with Samuel Whitcombe listed once (not duplicated for holding both tags), and the visible count reads 4.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Data Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "On the browse page with no filters applied, choose the 'newest passing first' sort.",
+     "expected_result": "The order is Harold Finch, Miriam Okafor, Lena Kowalski, Samuel Whitcombe, Rosa Delgado, Walter Brandt — Harold and Miriam share April 5, 2024 and tie alphabetically, and Walter (December 2, 2023) comes last, proving real date ordering rather than text ordering.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Data Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Select the Artist category together with the 1920s birth-decade filter.",
+     "expected_result": "No memorials match, and the page shows a clear no-results message instead of a blank or broken area.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Edge Case Handling"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Publish a new obituary for 'Clara Voss' (born February 2, 1950, died March 3, 2024, category Artist), then open the browse page and filter by Artist.",
+     "expected_result": "Clara Voss appears in the Artist results together with Miriam Okafor (1958–2024).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Operations",
+       "Filtering"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "In the inscription designer, pick Rosa Delgado from the memorial list and look at the preview.",
+     "expected_result": "The preview fills in 'Rosa Delgado' with her dates July 4, 1945 – January 18, 2024 and shows the age she reached as 78 — not 79 — because the July birthday had not yet arrived by January.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Dynamic Content Rendering",
+       "Computed Values"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "I love the idea of remembering people on their special days. Give me an 'On This Date' page where I type a month and day and it instantly shows everyone whose birthday or passing anniversary falls on that date — labeled which is which, since March 12 is Harold's birthday but also the day Lena passed. February 29 should work for Walter, and when nothing matches, say so kindly instead of leaving the page blank. Anything newly published should be picked up here too.",
+   "source_website": "Legacy.com",
+   "source_feature": "On This Date historical commemorations",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the 'On This Date' page, type April 5 as the date.",
+     "expected_result": "Exactly two people appear — Harold Finch (1932–2024) and Miriam Okafor (1958–2024) — both marked as passing anniversaries.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Search",
+       "Computed Values"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type March 12 into the date lookup.",
+     "expected_result": "Harold Finch appears labeled as a birthday anniversary and Lena Kowalski as a passing anniversary — the two kinds are visibly distinguished.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Search",
+       "Details Information"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type August 1 into the date lookup, then change it to February 29.",
+     "expected_result": "August 1 shows a friendly no-matches message without the page blanking; February 29 then shows Walter Brandt, born February 29, 1940.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Edge Case Handling",
+       "Search"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Publish a new obituary for 'Nora Bell' (born May 5, 1950, died April 5, 2025), then look up April 5 on the 'On This Date' page.",
+     "expected_result": "Nora Bell now appears in the April 5 results along with Harold Finch and Miriam Okafor.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Operations",
+       "Search"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "On the browse page, select both the Veteran and Educator categories.",
+     "expected_result": "Exactly 4 memorials show — Harold Finch, Walter Brandt, Samuel Whitcombe, and Rosa Delgado — with Samuel Whitcombe listed once (not duplicated for holding both tags), and the visible count reads 4.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Data Consistency"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Visitors keep emailing me their stories — let them submit a written memory right on an obituary page, signed with their name. Submissions must not go live on their own: they wait in a pending queue on my dashboard where I approve or decline each one, approved memories appear in a Tributes section on that person's page, and declined ones disappear for good. Start Rosa Delgado's queue with three waiting — one from Tomás Rivera, one from Grace Lin, and one from Sam Porter. Also a standing preference for this whole app, now and later: whenever something is being declined, removed, or deleted, ask me 'are you sure' before it happens.",
+   "source_website": "Ever Loved",
+   "source_feature": "Multimedia photo and story collection from community",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the pending memories queue on the dashboard, then approve the memory from Tomás Rivera.",
+     "expected_result": "The queue starts with exactly 3 pending memories for Rosa Delgado; after approving, 2 remain pending and Tomás Rivera's memory appears in the Tributes section on Rosa's obituary page.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "Data Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the pending queue, decline the memory from Grace Lin.",
+     "expected_result": "A confirmation prompt appears before anything happens; after confirming, Grace Lin's memory leaves the queue and never shows up in Rosa's Tributes section.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "Confirmation Dialogs"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On any obituary page, submit a new memory — type 'She taught my daughter piano' signed 'A neighbor'.",
+     "expected_result": "The memory does not appear publicly on the obituary page yet; it shows up in the dashboard's pending queue instead.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Form Operations",
+       "Workflow"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Look at how the deceased is referenced in the pending memories queue entries on the dashboard.",
+     "expected_result": "Each pending entry names the person with their years, e.g. 'Rosa Delgado (1945–2024)'.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Labeling Conventions",
+       "Data Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 4,
+     "task": "On the 'On This Date' page, type April 5 as the date.",
+     "expected_result": "Exactly two people appear — Harold Finch (1932–2024) and Miriam Okafor (1958–2024) — both marked as passing anniversaries.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Search",
+       "Computed Values"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Families keep asking how they can help with costs, so add a memorial fund to obituary pages: a goal amount, a pledge form taking a name and an amount (positive numbers only, obviously), a raised-so-far total that updates the moment a pledge goes in, and a progress bar with the percent shown as a whole number. Set up Harold Finch's fund with a $4,000 goal and pledges already in from Ellen ($850), the Hendersons ($325), and VFW Post 12 ($1,000); Rosa Delgado's has a $1,500 goal with $900 from the PTA and $700 from Grace Lin — yes, hers is past goal, so her bar should sit full at 100% while still telling the truth about the total. And on that browse page, give me a filter for just the memorials with an active fund.",
+   "source_website": "Ever Loved",
+   "source_feature": "Memorial fundraiser for funeral costs",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open Harold Finch's memorial fund.",
+     "expected_result": "It shows $2,175 raised toward the $4,000 goal, with progress reading 54% — a whole number, not 54.4% or 54.375%.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Values",
+       "Data Visualization"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open Rosa Delgado's memorial fund.",
+     "expected_result": "The total shows $1,600 raised against the $1,500 goal, and the progress bar sits full at 100% rather than overflowing past its end.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Edge Case Handling",
+       "Data Visualization"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On Harold Finch's fund, type '-50' as a pledge amount with the name 'Test Donor' and submit; then pledge 25 instead.",
+     "expected_result": "The negative amount is rejected with a message and the total stays $2,175; the $25 pledge then brings the total to $2,200 and the percent to 55%.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Computed Values"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the browse page, turn on the filter for memorials with an active fund.",
+     "expected_result": "Only Harold Finch (1932–2024) and Rosa Delgado (1945–2024) are shown.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Data Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "In the inscription designer, pick Harold Finch, type the epitaph 'A devoted father, grandfather, and friend to absolutely everyone' (well over 40 characters), and try to save.",
+     "expected_result": "The designer flags the epitaph as over the 40-character limit and refuses to save; no inscription appears on Harold Finch's obituary page.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Form Operations"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "For the funeral arrangements, I need RSVPs: someone viewing a service fills in their name, how many are in their party (a whole number, at least 1), and whether they're attending or sending regrets. Then on my dashboard, show each service's expected headcount — counting seats only from parties actually attending — along with the full response list including the regrets. Harold Finch's service on April 12, 2024 should start with three responses already in: Ellen Finch bringing a party of 4, Marcus Webb bringing 2, and Dana Cruz sending regrets for 3.",
+   "source_website": "Ever Loved",
+   "source_feature": "Funeral event RSVP collection",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the dashboard's headcount view for Harold Finch's service.",
+     "expected_result": "The expected headcount reads 6 (Ellen Finch's 4 plus Marcus Webb's 2, with Dana Cruz's 3 regrets excluded — not 9 and not 3), and all three responses are listed.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Values",
+       "Data Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On Harold Finch's service, submit an RSVP for 'Ira Gold' attending with a party size of 0; then correct the party size to 2 and resubmit.",
+     "expected_result": "The 0 party size is rejected with a validation message; after resubmitting with 2, the service's expected headcount rises from 6 to 8.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Computed Values"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Submit an RSVP for 'Faye Marsh', party of 5, sending regrets, then check the headcount view for Harold Finch's service.",
+     "expected_result": "Faye Marsh appears in the response list marked as regrets, but the expected headcount does not increase.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "Data Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Look at how the date of Harold Finch's service is written on the service listing and in the RSVP area.",
+     "expected_result": "It reads with the month spelled out — 'April 12, 2024' — not a numeric form like 04/12/2024.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Formatting Conventions"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 5,
+     "task": "Open the pending memories queue on the dashboard, then approve the memory from Tomás Rivera.",
+     "expected_result": "The queue starts with exactly 3 pending memories for Rosa Delgado; after approving, 2 remain pending and Tomás Rivera's memory appears in the Tributes section on Rosa's obituary page.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "Data Consistency"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "The guestbooks should feel like conversations — let people reply to an individual condolence, with replies shown nested under the message they answer, and show each guestbook's message total counting the replies too. That busiest-guestbook sort on the browse page needs to count replies as well, not just top-level messages. Reset the sample messages so Miriam Okafor's guestbook has exactly two condolences, with the one from June Park carrying three replies, and Harold Finch's has exactly four condolences with no replies — meaning Miriam's book, at five, is actually the busier one even though Harold has more top-level messages.",
+   "source_website": "Legacy.com",
+   "source_feature": "Obituary Guestbook with threaded condolence messages",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the browse page, sort by busiest guestbook.",
+     "expected_result": "Miriam Okafor ranks ahead of Harold Finch — her 5 messages counting the three replies beat his 4 — even though Harold has more top-level condolences.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Computed Values"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On Miriam Okafor's obituary, use the reply control on June Park's condolence and type 'Thank you, June'.",
+     "expected_result": "The reply appears nested under June Park's message rather than as a new top-level condolence, and the guestbook's message total rises from 5 to 6.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Communication",
+       "Data Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open Harold Finch's obituary and check the guestbook's message total.",
+     "expected_result": "It reads 4 — his four condolences with no replies — matching the number of messages visible on the page.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Values",
+       "Data Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Post two new top-level condolences on Harold Finch's obituary, then sort the browse page by busiest guestbook.",
+     "expected_result": "Harold Finch's guestbook total rises to 6, and he now ranks ahead of Miriam Okafor's 5 in the busiest-guestbook order — the sort picks up the new messages immediately.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Sorting",
+       "Data Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "On the browse page with no filters applied, choose the 'newest passing first' sort.",
+     "expected_result": "The order is Harold Finch, Miriam Okafor, Lena Kowalski, Samuel Whitcombe, Rosa Delgado, Walter Brandt — Harold and Miriam share April 5, 2024 and tie alphabetically, and Walter (December 2, 2023) comes last, proving real date ordering rather than text ordering.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Data Consistency"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "There is so much paperwork after a passing — build a family checklist area: tasks with a category (Paperwork, Notifications, or Household), an assignee (Ellen, Marcus, or Priya), a done checkbox, and the ability to add or remove tasks; then an overview on the dashboard showing each person's done-count and percent plus an overall percent, whole numbers, rounding halves up. Start it with these eight: Ellen has 'File the death certificate' (Paperwork, done), 'Order memorial cards' (Household, done), and 'Close the safe-deposit box' (Paperwork, open); Marcus has 'Notify the pension office' (Notifications, done), 'Cancel the newspaper' (Notifications, open), and 'Return the wheelchair rental' (Household, open); Priya has 'Write thank-you notes' (Household, open) and 'Notify the alumni association' (Notifications, open).",
+   "source_website": "Ever Loved",
+   "source_feature": "Post-death task checklist with assignment",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the checklist overview on the dashboard.",
+     "expected_result": "Overall progress reads 38% with 3 of 8 tasks done — rounded up from 37.5, not shown as 37% or 37.5%.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Values",
+       "Data Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the checklist, check off 'Cancel the newspaper', then look at the overview.",
+     "expected_result": "Marcus's progress becomes 2 of 3 (67%) and the overall figure updates to 50% (4 of 8) — both stay consistent with the checkboxes.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "Computed Values"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Look at Priya's row in the checklist overview.",
+     "expected_result": "It shows 0 of 2 done and 0%, rendered cleanly — no blank cell, error, or 'NaN'.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Edge Case Handling",
+       "Computed Values"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Remove the task 'Return the wheelchair rental' from the checklist.",
+     "expected_result": "A confirmation prompt appears before the task is removed; after confirming, it is gone and Marcus's counts drop to 1 of 2.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Confirmation Dialogs",
+       "Data Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 7,
+     "task": "Open the dashboard's headcount view for Harold Finch's service.",
+     "expected_result": "The expected headcount reads 6 (Ellen Finch's 4 plus Marcus Webb's 2, with Dana Cruz's 3 regrets excluded — not 9 and not 3), and all three responses are listed.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Values",
+       "Data Consistency"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "design-restyle",
+   "instruction": "Time for a facelift, and it has to land everywhere, not just the homepage: primary action buttons — save in the inscription designer, pledge on the funds, RSVP on the services, approve on the dashboard queue — go from peru to forest green; every page's main heading gets centered; the category badges become little pills with a wheat background and dark brown text; memorial and service cards get softly rounded corners; and the deceased's names switch to a serif typeface wherever they show up. Please make sure the browse archive, the inscription designer, the fund pages, the service and RSVP pages, and the dashboard all actually get the treatment — no half-done pages.",
+   "source_website": "Ever Loved",
+   "source_feature": "Multimedia tribute page presentation and theming",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Open the inscription designer and then a memorial fund page, and look at their primary buttons (save and pledge).",
+     "expected_result": "Both buttons are forest green — neither keeps the old peru color.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Color Scheme",
+       "Cross-page Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Check the main heading on the browse archive and then on the dashboard.",
+     "expected_result": "Both page headings are centered.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Layout",
+       "Cross-page Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Find Harold Finch's card on the browse archive.",
+     "expected_result": "His name reads 'Harold Finch (1932–2024)' in a serif typeface, his Veteran badge is a wheat-background pill with dark brown text, and the card has rounded corners.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Typography",
+       "Color Scheme"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Open Harold Finch's service page with the RSVP area.",
+     "expected_result": "The RSVP submit button is forest green and the page's main heading is centered — the restyle reached the service pages too.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Color Scheme",
+       "Cross-page Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 6,
+     "task": "Open Harold Finch's memorial fund.",
+     "expected_result": "It shows $2,175 raised toward the $4,000 goal, with progress reading 54% — a whole number, not 54.4% or 54.375%.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Values",
+       "Data Visualization"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "target_app_summary": "The base obituary portal has grown into a full family memorial platform. Discovery grew via a tag-and-decade browse archive with sorts, an 'On This Date' anniversary lookup, and a keystroke-live headstone inscription designer that engraves epitaphs onto obituary pages. Community grew via a moderated memory-submission workflow, threaded condolence guestbooks whose reply counts feed the archive's busiest-guestbook sort, per-memorial fundraising drives that the archive can filter on, and RSVP headcounts for funeral services. Planning grew via an assigned family task checklist with progress rollups, and the whole app was restyled from peru to forest green. The feature graph has a deep chain (base -> browse archive -> funds/guestbook threading -> restyle) plus several dashboard-anchored workflows, all computing over one pinned set of six memorials.",
+ "dependency_graph": {
+  "nodes": [
+   {
+    "id": "T1",
+    "label": "base app",
+    "archetype": "base"
+   },
+   {
+    "id": "T2",
+    "label": "Headstone inscription designer",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T3",
+    "label": "Category browse archive",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T4",
+    "label": "On This Date lookup",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T5",
+    "label": "Memory approval queue",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T6",
+    "label": "Memorial fund drives",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T7",
+    "label": "Service RSVP headcounts",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T8",
+    "label": "Threaded guestbooks",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T9",
+    "label": "Family task checklist",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T10",
+    "label": "Forest green restyle",
+    "archetype": "design-restyle"
+   }
+  ],
+  "edges": [
+   {
+    "from": "T1",
+    "to": "T2",
+    "what": "designer picks any base memorial, pulls its name and dates, and saves the finished inscription onto that obituary page"
+   },
+   {
+    "from": "T1",
+    "to": "T3",
+    "what": "pinned and newly published tagged memorials populate the browse archive; the base publish form gains a category picker"
+   },
+   {
+    "from": "T1",
+    "to": "T4",
+    "what": "lookup matches birth/death dates of pinned and newly published memorials"
+   },
+   {
+    "from": "T1",
+    "to": "T5",
+    "what": "memories submitted on base obituary pages, moderated in the dashboard"
+   },
+   {
+    "from": "T1",
+    "to": "T6",
+    "what": "fund drives attach to base obituary pages"
+   },
+   {
+    "from": "T3",
+    "to": "T6",
+    "what": "browse archive gains an active-fund filter"
+   },
+   {
+    "from": "T1",
+    "to": "T7",
+    "what": "RSVPs attach to base funeral arrangement listings"
+   },
+   {
+    "from": "T1",
+    "to": "T8",
+    "what": "replies extend the base condolence messages"
+   },
+   {
+    "from": "T3",
+    "to": "T8",
+    "what": "reply counts feed the browse archive's busiest-guestbook sort"
+   },
+   {
+    "from": "T1",
+    "to": "T9",
+    "what": "checklist progress overview lives on the dashboard"
+   },
+   {
+    "from": "T1",
+    "to": "T10",
+    "what": "restyles base dashboard and obituary pages"
+   },
+   {
+    "from": "T2",
+    "to": "T10",
+    "what": "restyles the inscription designer's save button and headings"
+   },
+   {
+    "from": "T3",
+    "to": "T10",
+    "what": "restyles browse archive cards and tag badges"
+   },
+   {
+    "from": "T5",
+    "to": "T10",
+    "what": "restyles the dashboard approve button"
+   },
+   {
+    "from": "T6",
+    "to": "T10",
+    "what": "restyles fund pages and pledge button"
+   },
+   {
+    "from": "T7",
+    "to": "T10",
+    "what": "restyles service/RSVP pages and RSVP button"
+   }
+  ]
+ },
+ "global_rules": [
+  {
+   "rule": "All dates anywhere in the app are written with the month spelled out, like 'March 12, 1932' — never numeric forms like 03/12/32.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Every deceased person's name, wherever it appears, is followed by their lifespan years in parentheses, e.g. 'Harold Finch (1932–2024)'.",
+   "introduced_in_turn": 3
+  },
+  {
+   "rule": "Any action that declines, removes, or deletes content asks for confirmation ('are you sure') first, app-wide.",
+   "introduced_in_turn": 5
+  }
+ ],
+ "pinned_seed": {
+  "entity": "6 preloaded memorials",
+  "introduced_in_turn": 2,
+  "records_gist": "Harold Finch (Veteran, Mar 12 1932 – Apr 5 2024); Rosa Delgado (Educator, Jul 4 1945 – Jan 18 2024); Miriam Okafor (Artist, Nov 30 1958 – Apr 5 2024); Walter Brandt (Veteran, Feb 29 1940 – Dec 2 2023); Lena Kowalski (Community Leader, Sep 9 1951 – Mar 12 2024); Samuel Whitcombe (Veteran + Educator, Jun 21 1929 – Feb 14 2024)",
+  "records": [
+   {
+    "name": "Harold Finch",
+    "tags": [
+     "Veteran"
+    ],
+    "born": "March 12, 1932",
+    "died": "April 5, 2024"
+   },
+   {
+    "name": "Rosa Delgado",
+    "tags": [
+     "Educator"
+    ],
+    "born": "July 4, 1945",
+    "died": "January 18, 2024"
+   },
+   {
+    "name": "Miriam Okafor",
+    "tags": [
+     "Artist"
+    ],
+    "born": "November 30, 1958",
+    "died": "April 5, 2024"
+   },
+   {
+    "name": "Walter Brandt",
+    "tags": [
+     "Veteran"
+    ],
+    "born": "February 29, 1940",
+    "died": "December 2, 2023"
+   },
+   {
+    "name": "Lena Kowalski",
+    "tags": [
+     "Community Leader"
+    ],
+    "born": "September 9, 1951",
+    "died": "March 12, 2024"
+   },
+   {
+    "name": "Samuel Whitcombe",
+    "tags": [
+     "Veteran",
+     "Educator"
+    ],
+    "born": "June 21, 1929",
+    "died": "February 14, 2024"
+   }
+  ]
+ }
+}

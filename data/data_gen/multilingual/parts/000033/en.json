@@ -1,0 +1,882 @@
+{
+ "id": "000033",
+ "instruction": "Please implement a Q&A website that answers user-submitted questions. The website should have functionalities for submitting questions, answering questions, and viewing answers. Users should be able to submit questions, view answers, and rate the answers. Set overall background to beige, then style components with saddle brown.",
+ "Category": {
+  "primary_category": "User Interaction",
+  "subcategories": [
+   "Form Systems",
+   "AI Integration",
+   "Authentication"
+  ]
+ },
+ "application_type": "Discussion Forums",
+ "ui_instruct": [
+  {
+   "task": "Submit a new question using the question submission form.",
+   "expected_result": "The question is successfully posted and appears on the list of submitted questions.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations"
+    ]
+   }
+  },
+  {
+   "task": "View the list of submitted questions.",
+   "expected_result": "A list of submitted questions is displayed, including the latest question, sorted appropriately.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering"
+    ]
+   }
+  },
+  {
+   "task": "Submit an answer to an existing question.",
+   "expected_result": "The answer is successfully posted and visible under the corresponding question.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations"
+    ]
+   }
+  },
+  {
+   "task": "View answers to a specific question.",
+   "expected_result": "All answers related to the specific question are displayed clearly beneath the question.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Details Information"
+    ]
+   }
+  },
+  {
+   "task": "Verify that the website uses 'beige' as the background color and 'saddle brown' as the component color, as specified in the design requirements.",
+   "expected_result": "The website has a background color of 'beige' and components (such as buttons, cards, headers, etc.) are styled with the color 'saddle brown', accurately reflecting the design instruction.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "archetype": "derived-state",
+   "instruction": "The homepage list needs to become a real browse experience. Clear out any demo questions and seed exactly these seven, I'll add more later: 'How do I keep sourdough starter alive?' (#cooking, +8, 3 answers), 'Best budget airlines in Europe?' (#travel, +5, 2 answers), 'Why is my laptop fan always loud?' (#tech, +5, 4 answers), 'Is intermittent fasting safe for beginners?' (#fitness, +12, 1 answer), 'How to fix a wobbly bike wheel?' (#fitness, 0, no answers yet), 'What's the best way to learn Python?' (#tech, +8, no answers yet), and 'Can I freeze fresh basil?' (#cooking, -2, 1 answer). Above the list give me toggleable tag pills (picking several means a question matching any of them counts), an answered/unanswered choice that combines with the tags, a 'Showing X of Y questions' readout that never lies, and sorting by score, highest first — when two questions tie on score, the one with more answers takes the higher spot. Two style things I want everywhere in this app, now and for anything we build later: scores always wear their sign (+8, -2, a bare 0 only for zero), and tags always render as lowercase pills with a # up front.",
+   "source_website": "https://stackoverflow.com",
+   "source_feature": "Tag-Based Filtering (fused with Quora's topic/category organization)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the question list with no filters applied and read the questions from top to bottom.",
+     "expected_result": "Order is: intermittent fasting (+12), sourdough starter (+8), learn Python (+8), laptop fan (+5), budget airlines (+5), bike wheel (0), freeze basil (-2). In particular the laptop fan question (4 answers) sits above budget airlines (2 answers) despite both being +5, and sourdough (3 answers) sits above Python (0 answers).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Tiebreak Handling",
+       "Seed Data"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Toggle on the #tech and #fitness tag pills and select the unanswered option.",
+     "expected_result": "Exactly two questions show — 'How to fix a wobbly bike wheel?' and 'What's the best way to learn Python?' — and the readout says Showing 2 of 7 questions.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Boolean Composition",
+       "Counter Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Toggle on the #cooking tag pill and select the unanswered option.",
+     "expected_result": "No questions match, and a sensible empty-state message appears instead of a blank area, leftover rows, or a crash.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Empty State"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Open 'How to fix a wobbly bike wheel?', post an answer using the answering form, then go back to the question list and select the unanswered option with no tag pills active.",
+     "expected_result": "Only 'What's the best way to learn Python?' remains in the unanswered view — the bike wheel question no longer qualifies as unanswered.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Integration",
+       "Filtering",
+       "State Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the question 'How do I keep sourdough starter alive?' and look at its answers.",
+     "expected_result": "Three answers are listed under the question.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Answers",
+       "Seed Data"
+      ]
+     },
+     "copied_from_turn": 1
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Rework the ask form into a proper composer. As I type the title, show live suggestions of existing questions whose titles contain what I've typed — ignore case, don't start suggesting until I've typed at least 3 characters, and show each match with its tag pill and its score. Enforce while I type, not just on submit: title between 15 and 120 characters with a live character counter, it has to end with a question mark, exactly one tag picked, and the post button stays locked with a clear reason until everything's right. One more thing for the whole app going forward: any question with zero answers gets a small amber 'Needs answer' badge wherever it shows up.",
+   "source_website": "https://www.quora.com",
+   "source_feature": "Predictive Search / Autocomplete",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the ask composer and type how into the title field.",
+     "expected_result": "Exactly two duplicate suggestions appear: 'How do I keep sourdough starter alive?' and 'How to fix a wobbly bike wheel?'.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Search",
+       "Case-Insensitive Matching"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the composer, type the title Why is it hot? into the title field.",
+     "expected_result": "While typing, a message about the minimum title length (it's only 14 characters, under the 15 minimum) appears and the post control stays locked.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Validation",
+       "Boundary Condition"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Clear the title field, type ho, then add one more letter to make it how.",
+     "expected_result": "At two characters no suggestions show; the moment the third character lands the suggestion list appears — it reacts per keystroke, not only on submit.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Update",
+       "Threshold Boundary"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Type basil into the composer's title field and look at the suggestion that appears.",
+     "expected_result": "The single suggestion for 'Can I freeze fresh basil?' shows its tag as a lowercase #cooking pill and its score with the minus sign visible as -2, matching the app-wide signed-score and tag-pill styles.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Global Convention",
+       "Signed Score Format",
+       "Tag Pill Style"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Toggle on the #tech and #fitness tag pills and select the unanswered option.",
+     "expected_result": "Exactly two questions show — 'How to fix a wobbly bike wheel?' and 'What's the best way to learn Python?' — and the readout says Showing 2 of 7 questions.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Boolean Composition",
+       "Counter Consistency"
+      ]
+     },
+     "copied_from_turn": 2
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Time to crown answers. On a question's page, order the answers by rating, best first, and put an Accept control on each so the asker can mark the one that solved it — the accepted answer gets a green checkmark badge and pins to the very top regardless of its rating, and only one answer can hold it at a time (accepting another moves the check over). Once a question has an accepted answer it reads as Solved with a green badge back on the main list too, and the screener gets a Solved option alongside answered/unanswered. Start with the top-rated answer on the sourdough question already accepted.",
+   "source_website": "https://stackoverflow.com",
+   "source_feature": "Accepted Answer Marking",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Open 'How do I keep sourdough starter alive?'.",
+     "expected_result": "One answer carries a green accepted checkmark badge and is pinned at the very top of the answer list.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Accepted Answer",
+       "Pinning"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the sourdough question's page, click Accept on a different answer than the currently accepted one.",
+     "expected_result": "The accepted checkmark moves to the newly accepted answer, which is now pinned to the top; exactly one answer is accepted and the previous one has lost its badge.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Single-Accept Invariant",
+       "State Transition"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "In the question list's screener, select the Solved option.",
+     "expected_result": "Exactly one question shows: 'How do I keep sourdough starter alive?' — not the five questions that merely have answers.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Solved vs Answered Distinction"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Open 'Can I freeze fresh basil?', click Accept on its answer, then go back to the question list and select the Solved option.",
+     "expected_result": "Two questions now show — sourdough and basil — and the basil question carries the green Solved badge in the list.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Integration",
+       "State Propagation",
+       "Filtering"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the question list with no filters applied and read the questions from top to bottom.",
+     "expected_result": "Order is: intermittent fasting (+12), sourdough starter (+8), learn Python (+8), laptop fan (+5), budget airlines (+5), bike wheel (0), freeze basil (-2). In particular the laptop fan question (4 answers) sits above budget airlines (2 answers) despite both being +5, and sourdough (3 answers) sits above Python (0 answers).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Tiebreak Handling",
+       "Seed Data"
+      ]
+     },
+     "copied_from_turn": 2
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Tags deserve their own home — give me a Topics page with a card per tag showing its question count, its combined score across those questions (signed like everywhere else — cooking should land at +6 from the +8 sourdough and the -2 basil), how many of its questions are solved (got an accepted answer), and the tag's top question by score. Order the cards by question count, biggest first, and go alphabetical when counts tie.",
+   "source_website": "https://www.quora.com",
+   "source_feature": "Topic / Category Organization",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Topics page and read the tag cards in order.",
+     "expected_result": "Cards read #cooking, #fitness, #tech, #travel — the three two-question tags alphabetical ahead of #travel with 1 — and NOT ordered by combined score (which would put #tech, at +13, first).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Tiebreak Handling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the Topics page and count the tag cards.",
+     "expected_result": "Exactly four cards, one per tag — no tag duplicated even though most tags have multiple questions, and none missing; the page renders without crashing.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Deduplication",
+       "Completeness"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Look at the #cooking card on the Topics page.",
+     "expected_result": "It shows 2 questions, a combined score of +6 with the plus sign visible, 1 solved, and its top question is 'How do I keep sourdough starter alive?'.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Signed Score Format"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Open 'Can I freeze fresh basil?', click Accept on its answer, then open the Topics page.",
+     "expected_result": "The #cooking card's solved count now reads 2 — both cooking questions are solved.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Integration",
+       "Aggregation Refresh"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the ask composer and type how into the title field.",
+     "expected_result": "Exactly two duplicate suggestions appear: 'How do I keep sourdough starter alive?' and 'How to fix a wobbly bike wheel?'.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Search",
+       "Case-Insensitive Matching"
+      ]
+     },
+     "copied_from_turn": 3
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Let's add bounties to drum up answers. Each question gets a bounty tool: I type a point amount and a live panel shows my remaining balance updating as I type — I start with 500 points, the amount has to be at least 50, in steps of 25, and within what's left, and the confirm stays locked with the reason shown the instant the number's off. Featured (bountied) questions get their own Featured strip pinned above the main list, biggest bounty first with each bounty shown, and the strip stays put no matter what filters are switched on below it. Kick things off with 75 points already sitting on the bike wheel question, so I'm down to 425.",
+   "source_website": "https://stackoverflow.com",
+   "source_feature": "Bounty / Reward System",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Open the bounty tool on 'What's the best way to learn Python?' and type 49, then change it to 60, then to 75.",
+     "expected_result": "At 49 an under-the-50-minimum message shows and confirm is locked; at 60 it stays locked because 60 isn't a step of 25; at 75 the error clears and confirm unlocks — each reaction happening as the value is typed.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Boundary Conditions",
+       "Live Feedback"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open the bounty tool on 'What's the best way to learn Python?' and type 50.",
+     "expected_result": "The balance starts at 425 (500 minus the 75 already on the bike wheel), and as soon as 50 is typed the live remaining preview reads 375.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Calculation",
+       "Exact Arithmetic"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "In the bounty tool on 'What's the best way to learn Python?', type 100 and confirm it.",
+     "expected_result": "The Featured strip now lists the Python question (100 pts) above the bike wheel question (75 pts) — biggest bounty first — with each entry showing its bounty.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Ordering",
+       "State Update"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "In the screener, toggle on the #travel tag pill.",
+     "expected_result": "The main list narrows to just 'Best budget airlines in Europe?' while the Featured strip above it still shows the bike wheel question with its 75-pt bounty.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Integration",
+       "Filter Independence"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Toggle on the #cooking tag pill and select the unanswered option.",
+     "expected_result": "No questions match, and a sensible empty-state message appears instead of a blank area, leftover rows, or a crash.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Empty State"
+      ]
+     },
+     "copied_from_turn": 2
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "People keep spotting typos in answers, so: put a Suggest Edit control on every answer that opens the current text ready for revising, with submissions landing on a new Review page — and give its nav link a pending-count badge. Each pending entry shows the question's title and its tag, the original and proposed text side by side, and Approve/Reject: approving swaps the new text in on the question page with an 'edited' marker, rejecting changes nothing — either way the entry leaves the queue and the badge count drops. Seed one pending suggestion already sitting there, a wording fix on the basil question's answer, and when the queue's empty say so warmly instead of showing a bare page.",
+   "source_website": "https://stackoverflow.com",
+   "source_feature": "Version History and Edit Suggestions",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Review page from the navigation.",
+     "expected_result": "The nav link carries a pending badge reading 1, and the single queue entry is the seeded suggestion on the basil question's answer, showing original and proposed text side by side with Approve and Reject controls.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Queue Contents",
+       "Badge Count"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Review page click Approve on the basil suggestion, then open 'Can I freeze fresh basil?'.",
+     "expected_result": "The queue now shows its friendly empty message with the pending badge at zero or gone, and the basil answer displays the proposed text with an 'edited' marker.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "State Propagation",
+       "Empty State"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Review page click Reject on the basil suggestion, then open 'Can I freeze fresh basil?'.",
+     "expected_result": "The entry leaves the queue, and the basil answer still shows its original text with no 'edited' marker.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "Reject Is No-op"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Look at the basil entry on the Review page.",
+     "expected_result": "Its question's tag appears as a lowercase #cooking pill, matching the app-wide tag style.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Global Convention",
+       "Tag Pill Style"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "In the question list's screener, select the Solved option.",
+     "expected_result": "Exactly one question shows: 'How do I keep sourdough starter alive?' — not the five questions that merely have answers.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Solved vs Answered Distinction"
+      ]
+     },
+     "copied_from_turn": 4
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "I want a follow-and-digest setup. Put a Follow toggle on every question, and build a Digest page that assembles a plain-text roundup right on screen with a copy control: first line 'Following N questions', then one line per followed question — title, tag, signed score, answer count — ordered by score, highest first, with a 'FEATURED — 75 pts'-style tag tacked onto the end of any line whose question carries a bounty. Start me off already following the bike wheel question and then the sourdough one, let me unfollow straight from the Digest page with the text redoing itself instantly, and when I'm following nothing show a friendly nothing-to-build note instead of an empty box.",
+   "source_website": "https://www.quora.com",
+   "source_feature": "Follow a Question (extended into an on-screen digest builder)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Digest page and read the generated text.",
+     "expected_result": "The first line says Following 2 questions, and the sourdough line (+8) sits above the bike wheel line (0) — score order, not the order they were followed in (bike wheel was followed first).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ordering",
+       "Count Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Find the bike wheel question's line in the digest text.",
+     "expected_result": "It shows the #fitness tag, its score as a bare 0 with no sign, 0 answers, and ends with a FEATURED marker carrying 75 pts — while the sourdough line carries no featured marker.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Line Composition",
+       "Signed Zero Format",
+       "Bounty Marker"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Digest page, unfollow both followed questions.",
+     "expected_result": "The digest text is replaced immediately by the friendly nothing-to-build message — no stale lines, no blank panel, no crash.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Empty State",
+       "Live Rebuild"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Open the bounty tool on the sourdough question, type 100, confirm it, then open the Digest page.",
+     "expected_result": "The sourdough line now ends with a 100-pt FEATURED marker while keeping its spot above the bike wheel line.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Integration",
+       "Live Recomputation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the Topics page and read the tag cards in order.",
+     "expected_result": "Cards read #cooking, #fitness, #tech, #travel — the three two-question tags alphabetical ahead of #travel with 1 — and NOT ordered by combined score (which would put #tech, at +13, first).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Tiebreak Handling"
+      ]
+     },
+     "copied_from_turn": 5
+    }
+   ]
+  },
+  {
+   "archetype": "design-restyle",
+   "instruction": "Time to tighten the look everywhere it applies — the question list with its screener, the Topics page, the Review page, and the Digest page, all four the same: keep the beige background, but every primary action button becomes saddle brown with white text and pill-shaped fully rounded corners; page titles sit centered at the top of each page; every card or list entry gets a 1px saddle-brown border with a 12px corner radius; the green Solved and accepted badges become dark green pills with white text; and section headings render in small caps. Don't let a single one of those pages drift from the rest.",
+   "source_website": "https://stackoverflow.com",
+   "source_feature": "Consistent badge/pill design language across pages (adapted as a site-wide restyle)",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Look at the primary action controls on the main question list page, such as the control that starts a new question.",
+     "expected_result": "They have a saddle brown background, white text, and pill-shaped fully rounded corners.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Button Style",
+       "Color"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open the Topics page and look at the four tag cards.",
+     "expected_result": "The cards still read #cooking, #fitness, #tech, #travel in order, each now with a thin 1px saddle-brown border and visibly rounded corners, and the page title is centered.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Card Style",
+       "Heading Alignment",
+       "Order Preserved"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the Review page, then open the Digest page.",
+     "expected_result": "On BOTH pages the page title is centered and section headings render in small caps — neither page missed the restyle.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Cross-Page Consistency",
+       "Typography"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Find the sourdough question's Solved badge in the main question list.",
+     "expected_result": "It renders as a dark green pill with white text, per the new badge style.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Badge Style",
+       "Integration"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the bounty tool on 'What's the best way to learn Python?' and type 49, then change it to 60, then to 75.",
+     "expected_result": "At 49 an under-the-50-minimum message shows and confirm is locked; at 60 it stays locked because 60 isn't a step of 25; at 75 the error clears and confirm unlocks — each reaction happening as the value is typed.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Boundary Conditions",
+       "Live Feedback"
+      ]
+     },
+     "copied_from_turn": 6
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "The capstone: a Triage dashboard I can run the whole site from. Up top, a headline row with how many questions are still open (no accepted answer yet), how many are solved, and how many edit suggestions await review. Below that, two ranked sections: unanswered questions by urgency — bigger bounty first, then score, then A-Z on the title — each row showing tag, score, and its bounty if it has one; and answered-but-not-solved (has answers, nothing accepted) by score, with ties going to the question with more answers, same as the main list does it. Solved questions stay out of both sections.",
+   "source_website": "https://stackoverflow.com",
+   "source_feature": "Bounty / Reward System (fused with review-queue moderation into a triage dashboard)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Triage dashboard and read the unanswered urgency section.",
+     "expected_result": "'How to fix a wobbly bike wheel?' (75-pt bounty, score 0) ranks ABOVE 'What's the best way to learn Python?' (+8, no bounty) — bounty outranks score.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ranking",
+       "Bounty Priority"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Read the answered-but-not-solved section on the Triage dashboard.",
+     "expected_result": "Order is: intermittent fasting (+12), laptop fan (+5, 4 answers), budget airlines (+5, 2 answers), freeze basil (-2) — laptop above airlines on the answer-count tiebreak, and sourdough absent because it's solved.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ranking",
+       "Tiebreak Handling",
+       "Solved Exclusion"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open 'Is intermittent fasting safe for beginners?', click Accept on its answer, then return to the Triage dashboard.",
+     "expected_result": "The fasting question has left the answered-but-not-solved section, and the solved total in the headline row now reads 2.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Consistency",
+       "Live Recomputation"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the Review page click Approve on the basil suggestion, then open the Triage dashboard.",
+     "expected_result": "The pending edit suggestions count in the headline row reads 0, down from 1.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Integration",
+       "Count Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "task": "Open the Digest page and read the generated text.",
+     "expected_result": "The first line says Following 2 questions, and the sourdough line (+8) sits above the bike wheel line (0) — score order, not the order they were followed in (bike wheel was followed first).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Ordering",
+       "Count Consistency"
+      ]
+     },
+     "copied_from_turn": 8
+    }
+   ]
+  }
+ ],
+ "target_app_summary": "The base beige-and-saddle-brown Q&A site grows into a full community knowledge platform. A pinned seven-question seed powers a tag screener with boolean tag/status filtering and tie-aware score sorting; an ask composer adds live duplicate detection and strict validation; an accept-answer workflow introduces a Solved state that propagates into the screener, a Topics analytics hub, and a capstone Triage dashboard. A points-based bounty system feeds a Featured strip, the follow-and-digest builder, and the Triage urgency ranking, while an edit-suggestion review queue adds moderation whose pending count also lands on Triage. A site-wide restyle pass locks visual consistency across the screener, Topics, Review, and Digest pages. The graph runs several chains three-plus deep (base list -> screener -> bounties -> triage; base answers -> accept workflow -> topics/triage), so early breakage compounds.",
+ "dependency_graph": {
+  "nodes": [
+   {
+    "id": "T1",
+    "label": "base app",
+    "archetype": "base"
+   },
+   {
+    "id": "T2",
+    "label": "tag screener + seed",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T3",
+    "label": "ask composer + dup detect",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T4",
+    "label": "accept-answer workflow",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T5",
+    "label": "topics analytics hub",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T6",
+    "label": "bounty system",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T7",
+    "label": "edit review queue",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T8",
+    "label": "follow & digest builder",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T9",
+    "label": "site-wide restyle",
+    "archetype": "design-restyle"
+   },
+   {
+    "id": "T10",
+    "label": "triage dashboard",
+    "archetype": "derived-state"
+   }
+  ],
+  "edges": [
+   {
+    "from": "T1",
+    "to": "T2",
+    "what": "base question list it screens and sorts"
+   },
+   {
+    "from": "T1",
+    "to": "T3",
+    "what": "existing questions matched for duplicates"
+   },
+   {
+    "from": "T2",
+    "to": "T3",
+    "what": "tag system behind the required tag picker"
+   },
+   {
+    "from": "T1",
+    "to": "T4",
+    "what": "answer ratings used for ordering"
+   },
+   {
+    "from": "T2",
+    "to": "T4",
+    "what": "screener gains Solved filter and list badge"
+   },
+   {
+    "from": "T2",
+    "to": "T5",
+    "what": "tag system aggregated into per-tag cards"
+   },
+   {
+    "from": "T4",
+    "to": "T5",
+    "what": "accepted-answer state feeds solved counts"
+   },
+   {
+    "from": "T2",
+    "to": "T6",
+    "what": "Featured strip pinned above the screener list"
+   },
+   {
+    "from": "T1",
+    "to": "T7",
+    "what": "posted answers receive edit suggestions"
+   },
+   {
+    "from": "T2",
+    "to": "T7",
+    "what": "pending Review entries show each question's tag"
+   },
+   {
+    "from": "T2",
+    "to": "T8",
+    "what": "digest lines carry each question's tag"
+   },
+   {
+    "from": "T6",
+    "to": "T8",
+    "what": "bounty markers appended to digest lines"
+   },
+   {
+    "from": "T2",
+    "to": "T9",
+    "what": "screener/list page restyled"
+   },
+   {
+    "from": "T4",
+    "to": "T9",
+    "what": "Solved badge restyled to dark green pill"
+   },
+   {
+    "from": "T5",
+    "to": "T9",
+    "what": "Topics page restyled"
+   },
+   {
+    "from": "T7",
+    "to": "T9",
+    "what": "Review page restyled"
+   },
+   {
+    "from": "T8",
+    "to": "T9",
+    "what": "Digest page restyled"
+   },
+   {
+    "from": "T2",
+    "to": "T10",
+    "what": "triage rows show each question's tag"
+   },
+   {
+    "from": "T4",
+    "to": "T10",
+    "what": "accepted state splits open vs solved"
+   },
+   {
+    "from": "T6",
+    "to": "T10",
+    "what": "bounty drives the urgency ranking"
+   },
+   {
+    "from": "T7",
+    "to": "T10",
+    "what": "pending-edit count read from review queue"
+   }
+  ]
+ },
+ "global_rules": [
+  {
+   "rule": "Scores always display with an explicit sign everywhere in the app: +8, -2, and a bare 0 only for zero.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Tags always render as lowercase pills prefixed with # everywhere they appear.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Any question with zero answers shows a small amber 'Needs answer' badge wherever it is listed, on all current and future surfaces.",
+   "introduced_in_turn": 3
+  }
+ ],
+ "pinned_seed": {
+  "entity": "7 seeded questions with tags, signed scores, and answer counts",
+  "introduced_in_turn": 2,
+  "records_gist": "sourdough #cooking +8/3ans; airlines #travel +5/2ans; laptop fan #tech +5/4ans; fasting #fitness +12/1ans; bike wheel #fitness 0/0ans; python #tech +8/0ans; basil #cooking -2/1ans"
+ }
+}

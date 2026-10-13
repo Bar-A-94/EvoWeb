@@ -1,0 +1,888 @@
+{
+ "anchors": [
+  {
+   "en": "attendance records",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    1,
+    2
+   ],
+   "translations": {
+    "es": "registros de asistencia",
+    "zh": "考勤记录",
+    "he": "רישומי נוכחות",
+    "hi": "उपस्थिति रिकॉर्ड",
+    "sw": "rekodi za mahudhurio",
+    "de": "Anwesenheitsaufzeichnungen",
+    "fr": "relevés de présence"
+   }
+  },
+  {
+   "en": "attendance record",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    1
+   ],
+   "translations": {
+    "es": "registro de asistencia",
+    "zh": "考勤记录",
+    "he": "רישום נוכחות",
+    "hi": "उपस्थिति रिकॉर्ड",
+    "sw": "rekodi ya mahudhurio",
+    "de": "Anwesenheitsaufzeichnung",
+    "fr": "relevé de présence"
+   }
+  },
+  {
+   "en": "attendance time",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    1
+   ],
+   "translations": {
+    "es": "tiempo de asistencia",
+    "zh": "出勤时间",
+    "he": "שעות נוכחות",
+    "hi": "उपस्थिति समय",
+    "sw": "muda wa mahudhurio",
+    "de": "Anwesenheitszeit",
+    "fr": "temps de présence"
+   }
+  },
+  {
+   "en": "absence time",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    1
+   ],
+   "translations": {
+    "es": "tiempo de ausencia",
+    "zh": "缺勤时间",
+    "he": "שעות היעדרות",
+    "hi": "अनुपस्थिति समय",
+    "sw": "muda wa kutokuwepo",
+    "de": "Abwesenheitszeit",
+    "fr": "temps d'absence"
+   }
+  },
+  {
+   "en": "clock in",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    1
+   ],
+   "translations": {
+    "es": "Marcar entrada",
+    "zh": "上班打卡",
+    "he": "רישום כניסה",
+    "hi": "क्लॉक इन",
+    "sw": "Ingia kazini",
+    "de": "Einstempeln",
+    "fr": "Pointer l'entrée"
+   }
+  },
+  {
+   "en": "Clock in",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    1,
+    2
+   ],
+   "translations": {
+    "es": "Marcar entrada",
+    "zh": "上班打卡",
+    "he": "רישום כניסה",
+    "hi": "क्लॉक इन",
+    "sw": "Ingia kazini",
+    "de": "Einstempeln",
+    "fr": "Pointer l'entrée"
+   }
+  },
+  {
+   "en": "Clock In",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    4
+   ],
+   "translations": {
+    "es": "Marcar entrada",
+    "zh": "上班打卡",
+    "he": "רישום כניסה",
+    "hi": "क्लॉक इन",
+    "sw": "Ingia kazini",
+    "de": "Einstempeln",
+    "fr": "Pointer l'entrée"
+   }
+  },
+  {
+   "en": "clock out",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2
+   ],
+   "translations": {
+    "es": "Marcar salida",
+    "zh": "下班打卡",
+    "he": "רישום יציאה",
+    "hi": "क्लॉक आउट",
+    "sw": "Toka kazini",
+    "de": "Ausstempeln",
+    "fr": "Pointer la sortie"
+   }
+  },
+  {
+   "en": "Clock out",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    1
+   ],
+   "translations": {
+    "es": "Marcar salida",
+    "zh": "下班打卡",
+    "he": "רישום יציאה",
+    "hi": "क्लॉक आउट",
+    "sw": "Toka kazini",
+    "de": "Ausstempeln",
+    "fr": "Pointer la sortie"
+   }
+  },
+  {
+   "en": "Clock Out",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    4
+   ],
+   "translations": {
+    "es": "Marcar salida",
+    "zh": "下班打卡",
+    "he": "רישום יציאה",
+    "hi": "क्लॉक आउट",
+    "sw": "Toka kazini",
+    "de": "Ausstempeln",
+    "fr": "Pointer la sortie"
+   }
+  },
+  {
+   "en": "timesheet history",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    8
+   ],
+   "translations": {
+    "es": "historial de hoja de horas",
+    "zh": "工时表记录",
+    "he": "היסטוריית גיליון שעות",
+    "hi": "टाइमशीट इतिहास",
+    "sw": "historia ya jedwali la saa",
+    "de": "Stundenzettel-Verlauf",
+    "fr": "historique de la feuille de temps"
+   }
+  },
+  {
+   "en": "timesheet",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    8
+   ],
+   "translations": {
+    "es": "hoja de horas",
+    "zh": "工时表",
+    "he": "גיליון שעות",
+    "hi": "टाइमशीट",
+    "sw": "jedwali la saa",
+    "de": "Stundenzettel",
+    "fr": "feuille de temps"
+   }
+  },
+  {
+   "en": "weekly rollup board",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    8,
+    10
+   ],
+   "translations": {
+    "es": "tablero de resumen semanal",
+    "zh": "每周汇总看板",
+    "he": "לוח סיכום שבועי",
+    "hi": "साप्ताहिक सारांश बोर्ड",
+    "sw": "ubao wa muhtasari wa wiki",
+    "de": "Wochenübersicht-Board",
+    "fr": "tableau de récapitulatif hebdomadaire"
+   }
+  },
+  {
+   "en": "weekly rollup",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    8,
+    10
+   ],
+   "translations": {
+    "es": "resumen semanal",
+    "zh": "每周汇总",
+    "he": "סיכום שבועי",
+    "hi": "साप्ताहिक सारांश",
+    "sw": "muhtasari wa wiki",
+    "de": "Wochenübersicht",
+    "fr": "récapitulatif hebdomadaire"
+   }
+  },
+  {
+   "en": "kiosk",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    9,
+    10
+   ],
+   "translations": {
+    "es": "quiosco",
+    "zh": "打卡机",
+    "he": "עמדת שעון",
+    "hi": "कियोस्क",
+    "sw": "kioski",
+    "de": "Kiosk",
+    "fr": "kiosque"
+   }
+  },
+  {
+   "en": "overtime board",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4,
+    6,
+    8,
+    10
+   ],
+   "translations": {
+    "es": "tablero de horas extra",
+    "zh": "加班看板",
+    "he": "לוח שעות נוספות",
+    "hi": "ओवरटाइम बोर्ड",
+    "sw": "ubao wa saa za ziada",
+    "de": "Überstunden-Board",
+    "fr": "tableau des heures supplémentaires"
+   }
+  },
+  {
+   "en": "leave view",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5,
+    7
+   ],
+   "translations": {
+    "es": "vista de permisos",
+    "zh": "请假页面",
+    "he": "מסך חופשות",
+    "hi": "अवकाश पेज",
+    "sw": "ukurasa wa likizo",
+    "de": "Urlaubsansicht",
+    "fr": "vue des congés"
+   }
+  },
+  {
+   "en": "pending-requests view",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5
+   ],
+   "translations": {
+    "es": "vista de solicitudes pendientes",
+    "zh": "待审批申请页面",
+    "he": "מסך בקשות ממתינות",
+    "hi": "लंबित अनुरोध पेज",
+    "sw": "ukurasa wa maombi yanayosubiri",
+    "de": "Ansicht für offene Anträge",
+    "fr": "vue des demandes en attente"
+   }
+  },
+  {
+   "en": "leave center",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    10
+   ],
+   "translations": {
+    "es": "centro de permisos",
+    "zh": "请假中心",
+    "he": "מרכז חופשות",
+    "hi": "अवकाश केंद्र",
+    "sw": "kituo cha likizo",
+    "de": "Urlaubszentrum",
+    "fr": "centre des congés"
+   }
+  },
+  {
+   "en": "pay calculator",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    6,
+    8,
+    10
+   ],
+   "translations": {
+    "es": "calculadora de nómina",
+    "zh": "薪资计算器",
+    "he": "מחשבון שכר",
+    "hi": "वेतन कैलकुलेटर",
+    "sw": "kikokotoo cha malipo",
+    "de": "Lohnrechner",
+    "fr": "calculateur de paie"
+   }
+  },
+  {
+   "en": "multiplier",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    6,
+    8
+   ],
+   "translations": {
+    "es": "multiplicador",
+    "zh": "倍率",
+    "he": "מכפיל",
+    "hi": "गुणक",
+    "sw": "kizidishi",
+    "de": "Multiplikator",
+    "fr": "multiplicateur"
+   }
+  },
+  {
+   "en": "export block",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    7
+   ],
+   "translations": {
+    "es": "bloque de exportación",
+    "zh": "导出文本块",
+    "he": "בלוק ייצוא",
+    "hi": "एक्सपोर्ट ब्लॉक",
+    "sw": "kisanduku cha kuhamisha",
+    "de": "Exportblock",
+    "fr": "bloc d'export"
+   }
+  },
+  {
+   "en": "corrections queue",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "cola de correcciones",
+    "zh": "更正队列",
+    "he": "תור תיקונים",
+    "hi": "सुधार कतार",
+    "sw": "foleni ya masahihisho",
+    "de": "Korrekturwarteschlange",
+    "fr": "file de corrections"
+   }
+  },
+  {
+   "en": "adherence scoreboard",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    9,
+    10
+   ],
+   "translations": {
+    "es": "tablero de cumplimiento",
+    "zh": "出勤达标记分板",
+    "he": "לוח עמידה בלוח הזמנים",
+    "hi": "अनुपालन स्कोरबोर्ड",
+    "sw": "ubao wa alama za uzingatiaji",
+    "de": "Einhaltungstafel",
+    "fr": "tableau de conformité"
+   }
+  },
+  {
+   "en": "Front Desk",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    7
+   ],
+   "translations": {
+    "es": "Recepción",
+    "zh": "前台",
+    "he": "קבלה",
+    "hi": "फ्रंट डेस्क",
+    "sw": "Mapokezi",
+    "de": "Empfang",
+    "fr": "Accueil"
+   }
+  },
+  {
+   "en": "Warehouse",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    7
+   ],
+   "translations": {
+    "es": "Almacén",
+    "zh": "仓库",
+    "he": "מחסן",
+    "hi": "गोदाम",
+    "sw": "Ghala",
+    "de": "Lager",
+    "fr": "Entrepôt"
+   }
+  },
+  {
+   "en": "Sales",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    7
+   ],
+   "translations": {
+    "es": "Ventas",
+    "zh": "销售",
+    "he": "מכירות",
+    "hi": "बिक्री",
+    "sw": "Mauzo",
+    "de": "Vertrieb",
+    "fr": "Ventes"
+   }
+  },
+  {
+   "en": "Vacation",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    5
+   ],
+   "translations": {
+    "es": "Vacaciones",
+    "zh": "年假",
+    "he": "חופשה",
+    "hi": "छुट्टी",
+    "sw": "Likizo",
+    "de": "Urlaub",
+    "fr": "Vacances"
+   }
+  },
+  {
+   "en": "Sick",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    5
+   ],
+   "translations": {
+    "es": "Enfermedad",
+    "zh": "病假",
+    "he": "מחלה",
+    "hi": "बीमारी",
+    "sw": "Ugonjwa",
+    "de": "Krankheit",
+    "fr": "Maladie"
+   }
+  },
+  {
+   "en": "Monday",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    4,
+    6,
+    9
+   ],
+   "translations": {
+    "es": "lunes",
+    "zh": "周一",
+    "he": "יום שני",
+    "hi": "सोमवार",
+    "sw": "Jumatatu",
+    "de": "Montag",
+    "fr": "lundi"
+   }
+  },
+  {
+   "en": "Wednesday",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2
+   ],
+   "translations": {
+    "es": "miércoles",
+    "zh": "周三",
+    "he": "יום רביעי",
+    "hi": "बुधवार",
+    "sw": "Jumatano",
+    "de": "Mittwoch",
+    "fr": "mercredi"
+   }
+  },
+  {
+   "en": "Thursday",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "jueves",
+    "zh": "周四",
+    "he": "יום חמישי",
+    "hi": "गुरुवार",
+    "sw": "Alhamisi",
+    "de": "Donnerstag",
+    "fr": "jeudi"
+   }
+  },
+  {
+   "en": "Friday",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    8,
+    9
+   ],
+   "translations": {
+    "es": "viernes",
+    "zh": "周五",
+    "he": "יום שישי",
+    "hi": "शुक्रवार",
+    "sw": "Ijumaa",
+    "de": "Freitag",
+    "fr": "vendredi"
+   }
+  },
+  {
+   "en": "Saturday",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    5,
+    9,
+    10
+   ],
+   "translations": {
+    "es": "sábado",
+    "zh": "周六",
+    "he": "יום שבת",
+    "hi": "शनिवार",
+    "sw": "Jumamosi",
+    "de": "Samstag",
+    "fr": "samedi"
+   }
+  },
+  {
+   "en": "Mon, Mar 2",
+   "class": "translate",
+   "kind": "value_format",
+   "turns": [
+    4
+   ],
+   "translations": {
+    "es": "lun, 2 mar",
+    "zh": "周一，3月2日",
+    "he": "יום ב׳, 2 במרץ",
+    "hi": "सोम, 2 मार्च",
+    "sw": "Jumatatu, 2 Mac",
+    "de": "Mo., 2. März",
+    "fr": "lun. 2 mars"
+   }
+  },
+  {
+   "en": "Wed, Mar 4",
+   "class": "translate",
+   "kind": "value_format",
+   "turns": [
+    5,
+    7,
+    9
+   ],
+   "translations": {
+    "es": "mié, 4 mar",
+    "zh": "周三，3月4日",
+    "he": "יום ד׳, 4 במרץ",
+    "hi": "बुध, 4 मार्च",
+    "sw": "Jumatano, 4 Mac",
+    "de": "Mi., 4. März",
+    "fr": "mer. 4 mars"
+   }
+  },
+  {
+   "en": "Thu, Mar 5",
+   "class": "translate",
+   "kind": "value_format",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "jue, 5 mar",
+    "zh": "周四，3月5日",
+    "he": "יום ה׳, 5 במרץ",
+    "hi": "गुरु, 5 मार्च",
+    "sw": "Alhamisi, 5 Mac",
+    "de": "Do., 5. März",
+    "fr": "jeu. 5 mars"
+   }
+  },
+  {
+   "en": "papaya whip",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    1,
+    10
+   ]
+  },
+  {
+   "en": "dark orange",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    1,
+    10
+   ]
+  },
+  {
+   "en": "navy",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    10
+   ]
+  },
+  {
+   "en": "cream",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    10
+   ]
+  },
+  {
+   "en": "PTO",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    2,
+    5,
+    7
+   ]
+  },
+  {
+   "en": "PIN",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    3,
+    9
+   ]
+  },
+  {
+   "en": "Maya Chen",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    4,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "en": "Leo Vance",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "en": "Priya Nair",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "en": "Sam Ortiz",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    5,
+    7,
+    9
+   ]
+  },
+  {
+   "en": "Ana Beck",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "en": "Omar Diaz",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    5,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  {
+   "en": "Maya",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    4,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "en": "Leo",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "en": "Priya",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "en": "Sam",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    5,
+    7,
+    9
+   ]
+  },
+  {
+   "en": "Ana",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "en": "Omar",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    5,
+    7,
+    8,
+    9,
+    10
+   ]
+  }
+ ]
+}

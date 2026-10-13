@@ -1,0 +1,875 @@
+{
+ "anchors": [
+  {
+   "en": "leaderboard",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    1,
+    2
+   ],
+   "translations": {
+    "es": "tabla de clasificación",
+    "zh": "排行榜",
+    "he": "טבלת המובילים",
+    "hi": "लीडरबोर्ड",
+    "sw": "ubao wa viongozi",
+    "de": "Bestenliste",
+    "fr": "classement"
+   }
+  },
+  {
+   "en": "Avatar Studio",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    5,
+    10
+   ],
+   "translations": {
+    "es": "Estudio de Avatares",
+    "zh": "形象工作室",
+    "he": "סטודיו הדמויות",
+    "hi": "अवतार स्टूडियो",
+    "sw": "Studio ya Avatar",
+    "de": "Avatar-Studio",
+    "fr": "Studio d'Avatars"
+   }
+  },
+  {
+   "en": "frog",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2
+   ],
+   "translations": {
+    "es": "rana",
+    "zh": "青蛙",
+    "he": "צפרדע",
+    "hi": "मेंढक",
+    "sw": "chura",
+    "de": "Frosch",
+    "fr": "grenouille"
+   }
+  },
+  {
+   "en": "My Journey",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    4,
+    7,
+    8
+   ],
+   "translations": {
+    "es": "Mi Recorrido",
+    "zh": "我的旅程",
+    "he": "המסע שלי",
+    "hi": "मेरी यात्रा",
+    "sw": "Safari Yangu",
+    "de": "Mein Weg",
+    "fr": "Mon Parcours"
+   }
+  },
+  {
+   "en": "Park Patrol",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    3
+   ],
+   "translations": {
+    "es": "Patrulla del Parque",
+    "zh": "公园巡逻",
+    "he": "סיור פארק",
+    "hi": "पार्क गश्त",
+    "sw": "Doria ya Bustani",
+    "de": "Park-Patrouille",
+    "fr": "Patrouille du Parc"
+   }
+  },
+  {
+   "en": "Kitchen Cleanup",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    3,
+    7,
+    10
+   ],
+   "translations": {
+    "es": "Limpieza de Cocina",
+    "zh": "厨房大扫除",
+    "he": "ניקיון מטבח",
+    "hi": "रसोई सफ़ाई",
+    "sw": "Usafi wa Jikoni",
+    "de": "Küchenputz",
+    "fr": "Nettoyage de la Cuisine"
+   }
+  },
+  {
+   "en": "recent form",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3
+   ],
+   "translations": {
+    "es": "forma reciente",
+    "zh": "近期状态",
+    "he": "כושר אחרון",
+    "hi": "हालिया फॉर्म",
+    "sw": "hali ya hivi karibuni",
+    "de": "aktuelle Form",
+    "fr": "forme récente"
+   }
+  },
+  {
+   "en": "all-time average",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3
+   ],
+   "translations": {
+    "es": "promedio histórico",
+    "zh": "历史平均分",
+    "he": "ממוצע כל הזמנים",
+    "hi": "सर्वकालिक औसत",
+    "sw": "wastani wa muda wote",
+    "de": "Gesamtdurchschnitt",
+    "fr": "moyenne historique"
+   }
+  },
+  {
+   "en": "overall accuracy",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    4
+   ],
+   "translations": {
+    "es": "precisión general",
+    "zh": "总体准确率",
+    "he": "דיוק כולל",
+    "hi": "कुल सटीकता",
+    "sw": "usahihi wa jumla",
+    "de": "Gesamtgenauigkeit",
+    "fr": "précision globale"
+   }
+  },
+  {
+   "en": "best-round spotlight",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    7,
+    10
+   ],
+   "translations": {
+    "es": "destacado de la mejor ronda",
+    "zh": "最佳回合展示",
+    "he": "תצוגת הסיבוב הטוב ביותר",
+    "hi": "सर्वश्रेष्ठ राउंड स्पॉटलाइट",
+    "sw": "kionyesho cha raundi bora",
+    "de": "Highlight Beste Runde",
+    "fr": "vedette de la meilleure manche"
+   }
+  },
+  {
+   "en": "best round",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    10
+   ],
+   "translations": {
+    "es": "mejor ronda",
+    "zh": "最佳回合",
+    "he": "הסיבוב הטוב ביותר",
+    "hi": "सर्वश्रेष्ठ राउंड",
+    "sw": "raundi bora",
+    "de": "Beste Runde",
+    "fr": "meilleure manche"
+   }
+  },
+  {
+   "en": "total stars banked",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    7,
+    10
+   ],
+   "translations": {
+    "es": "total de estrellas acumuladas",
+    "zh": "累计星星总数",
+    "he": "סך הכוכבים שנצברו",
+    "hi": "कुल अर्जित सितारे",
+    "sw": "jumla ya nyota zilizokusanywa",
+    "de": "insgesamt gesammelte Sterne",
+    "fr": "total des étoiles accumulées"
+   }
+  },
+  {
+   "en": "Done for now",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3
+   ],
+   "translations": {
+    "es": "Listo por ahora",
+    "zh": "暂时完成",
+    "he": "סיימתי לעכשיו",
+    "hi": "अभी के लिए हो गया",
+    "sw": "Nimemaliza kwa sasa",
+    "de": "Fertig für jetzt",
+    "fr": "Terminé pour l'instant"
+   }
+  },
+  {
+   "en": "Done",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    4,
+    5,
+    6,
+    8,
+    9
+   ],
+   "translations": {
+    "es": "Listo",
+    "zh": "完成",
+    "he": "סיימתי",
+    "hi": "हो गया",
+    "sw": "Nimemaliza",
+    "de": "Fertig",
+    "fr": "Terminé"
+   }
+  },
+  {
+   "en": "Recycle City",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4,
+    6,
+    7
+   ],
+   "translations": {
+    "es": "Ciudad del Reciclaje",
+    "zh": "回收城",
+    "he": "עיר המיחזור",
+    "hi": "रीसायकल सिटी",
+    "sw": "Jiji la Kuchakata",
+    "de": "Recycling-Stadt",
+    "fr": "Ville du Recyclage"
+   }
+  },
+  {
+   "en": "Park",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    4,
+    6,
+    9
+   ],
+   "translations": {
+    "es": "Parque",
+    "zh": "公园",
+    "he": "פארק",
+    "hi": "पार्क",
+    "sw": "Bustani",
+    "de": "Park",
+    "fr": "Parc"
+   }
+  },
+  {
+   "en": "Kitchen",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    4,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "translations": {
+    "es": "Cocina",
+    "zh": "厨房",
+    "he": "מטבח",
+    "hi": "रसोई",
+    "sw": "Jikoni",
+    "de": "Küche",
+    "fr": "Cuisine"
+   }
+  },
+  {
+   "en": "School",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4,
+    6,
+    7,
+    9
+   ],
+   "translations": {
+    "es": "Escuela",
+    "zh": "学校",
+    "he": "בית ספר",
+    "hi": "स्कूल",
+    "sw": "Shule",
+    "de": "Schule",
+    "fr": "École"
+   }
+  },
+  {
+   "en": "Factory",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4,
+    6,
+    7,
+    9
+   ],
+   "translations": {
+    "es": "Fábrica",
+    "zh": "工厂",
+    "he": "מפעל",
+    "hi": "फैक्ट्री",
+    "sw": "Kiwanda",
+    "de": "Fabrik",
+    "fr": "Usine"
+   }
+  },
+  {
+   "en": "crumpled paper",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    4
+   ],
+   "translations": {
+    "es": "papel arrugado",
+    "zh": "皱纸团",
+    "he": "נייר מקומט",
+    "hi": "मुड़ा हुआ कागज़",
+    "sw": "karatasi iliyokunjwa",
+    "de": "zerknülltes Papier",
+    "fr": "papier froissé"
+   }
+  },
+  {
+   "en": "juice boxes",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    4
+   ],
+   "translations": {
+    "es": "cajas de jugo",
+    "zh": "果汁盒",
+    "he": "קופסאות מיץ",
+    "hi": "जूस के डिब्बे",
+    "sw": "maboksi ya juisi",
+    "de": "Saftpäckchen",
+    "fr": "briques de jus"
+   }
+  },
+  {
+   "en": "broken crayons",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    4
+   ],
+   "translations": {
+    "es": "crayones rotos",
+    "zh": "断蜡笔",
+    "he": "עפרונות צבעוניים שבורים",
+    "hi": "टूटे क्रेयॉन",
+    "sw": "krayoni zilizovunjika",
+    "de": "zerbrochene Wachsmalstifte",
+    "fr": "crayons de cire cassés"
+   }
+  },
+  {
+   "en": "Impact Calculator",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5,
+    8
+   ],
+   "translations": {
+    "es": "Calculadora de Impacto",
+    "zh": "环保影响计算器",
+    "he": "מחשבון ההשפעה",
+    "hi": "प्रभाव कैलकुलेटर",
+    "sw": "Kikokotoo cha Athari",
+    "de": "Wirkungsrechner",
+    "fr": "Calculateur d'Impact"
+   }
+  },
+  {
+   "en": "aluminium cans",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5,
+    8
+   ],
+   "translations": {
+    "es": "latas de aluminio",
+    "zh": "铝罐",
+    "he": "פחיות אלומיניום",
+    "hi": "एल्युमिनियम के डिब्बे",
+    "sw": "makopo ya alumini",
+    "de": "Aludosen",
+    "fr": "canettes en aluminium"
+   }
+  },
+  {
+   "en": "energy saved",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5
+   ],
+   "translations": {
+    "es": "energía ahorrada",
+    "zh": "节省的能源",
+    "he": "אנרגיה שנחסכה",
+    "hi": "बचाई गई ऊर्जा",
+    "sw": "nishati iliyookolewa",
+    "de": "gesparte Energie",
+    "fr": "énergie économisée"
+   }
+  },
+  {
+   "en": "TV hours",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5
+   ],
+   "translations": {
+    "es": "horas de TV",
+    "zh": "电视小时数",
+    "he": "שעות טלוויזיה",
+    "hi": "टीवी घंटे",
+    "sw": "saa za TV",
+    "de": "Fernsehstunden",
+    "fr": "heures de télé"
+   }
+  },
+  {
+   "en": "Sticker Shop",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    6,
+    7,
+    9,
+    10
+   ],
+   "translations": {
+    "es": "Tienda de Calcomanías",
+    "zh": "贴纸商店",
+    "he": "חנות המדבקות",
+    "hi": "स्टिकर की दुकान",
+    "sw": "Duka la Vibandiko",
+    "de": "Sticker-Shop",
+    "fr": "Boutique d'Autocollants"
+   }
+  },
+  {
+   "en": "Super Worm",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    6,
+    10
+   ],
+   "translations": {
+    "es": "Súper Gusano",
+    "zh": "超级蚯蚓",
+    "he": "תולעת על",
+    "hi": "सुपर वर्म",
+    "sw": "Mnyoo Bingwa",
+    "de": "Superwurm",
+    "fr": "Super Ver"
+   }
+  },
+  {
+   "en": "Rainbow Frog",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    6
+   ],
+   "translations": {
+    "es": "Rana Arcoíris",
+    "zh": "彩虹青蛙",
+    "he": "צפרדע קשת",
+    "hi": "इंद्रधनुष मेंढक",
+    "sw": "Chura wa Upinde wa Mvua",
+    "de": "Regenbogenfrosch",
+    "fr": "Grenouille Arc-en-ciel"
+   }
+  },
+  {
+   "en": "Dancing Banana",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    6
+   ],
+   "translations": {
+    "es": "Banana Bailarina",
+    "zh": "跳舞香蕉",
+    "he": "בננה רוקדת",
+    "hi": "नाचता केला",
+    "sw": "Ndizi Inayocheza",
+    "de": "Tanzende Banane",
+    "fr": "Banane Dansante"
+   }
+  },
+  {
+   "en": "Golden Raccoon",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    6
+   ],
+   "translations": {
+    "es": "Mapache Dorado",
+    "zh": "金色浣熊",
+    "he": "רקון זהוב",
+    "hi": "सुनहरा रैकून",
+    "sw": "Rakuni wa Dhahabu",
+    "de": "Goldener Waschbär",
+    "fr": "Raton Laveur Doré"
+   }
+  },
+  {
+   "en": "Diamond Turtle",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    6
+   ],
+   "translations": {
+    "es": "Tortuga de Diamante",
+    "zh": "钻石乌龟",
+    "he": "צב יהלום",
+    "hi": "हीरा कछुआ",
+    "sw": "Kobe wa Almasi",
+    "de": "Diamantschildkröte",
+    "fr": "Tortue de Diamant"
+   }
+  },
+  {
+   "en": "owned",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    6,
+    9,
+    10
+   ],
+   "translations": {
+    "es": "adquirido",
+    "zh": "已拥有",
+    "he": "ברשותך",
+    "hi": "खरीदा गया",
+    "sw": "Kimenunuliwa",
+    "de": "im Besitz",
+    "fr": "acquis"
+   }
+  },
+  {
+   "en": "Challenge Builder",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8,
+    10
+   ],
+   "translations": {
+    "es": "Creador de Desafíos",
+    "zh": "挑战创建器",
+    "he": "בונה אתגרים",
+    "hi": "चुनौती बिल्डर",
+    "sw": "Kiundaji cha Changamoto",
+    "de": "Herausforderungs-Baukasten",
+    "fr": "Créateur de Défis"
+   }
+  },
+  {
+   "en": "Challenge",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8,
+    10
+   ],
+   "translations": {
+    "es": "Desafío",
+    "zh": "挑战",
+    "he": "אתגר",
+    "hi": "चुनौती",
+    "sw": "Changamoto",
+    "de": "Herausforderung",
+    "fr": "Défi"
+   }
+  },
+  {
+   "en": "target score",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8,
+    10
+   ],
+   "translations": {
+    "es": "puntaje objetivo",
+    "zh": "目标分数",
+    "he": "ניקוד יעד",
+    "hi": "लक्ष्य स्कोर",
+    "sw": "alama lengwa",
+    "de": "Zielpunktzahl",
+    "fr": "score cible"
+   }
+  },
+  {
+   "en": "Fact Card Album",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    9
+   ],
+   "translations": {
+    "es": "Álbum de Tarjetas de Datos",
+    "zh": "知识卡片册",
+    "he": "אלבום כרטיסי העובדה",
+    "hi": "फैक्ट कार्ड एलबम",
+    "sw": "Albamu ya Kadi za Ukweli",
+    "de": "Wissenskarten-Album",
+    "fr": "Album de Cartes Infos"
+   }
+  },
+  {
+   "en": "fact cards",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    10
+   ],
+   "translations": {
+    "es": "tarjetas de datos",
+    "zh": "知识卡片",
+    "he": "כרטיסי עובדה",
+    "hi": "फैक्ट कार्ड",
+    "sw": "kadi za ukweli",
+    "de": "Wissenskarten",
+    "fr": "cartes infos"
+   }
+  },
+  {
+   "en": "Eco Hero Certificate",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    10
+   ],
+   "translations": {
+    "es": "Certificado de Héroe Ecológico",
+    "zh": "环保小英雄证书",
+    "he": "תעודת גיבור הסביבה",
+    "hi": "इको हीरो प्रमाणपत्र",
+    "sw": "Cheti cha Shujaa wa Mazingira",
+    "de": "Öko-Helden-Urkunde",
+    "fr": "Certificat d'Éco-Héros"
+   }
+  },
+  {
+   "en": "ECO HERO",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    10
+   ],
+   "translations": {
+    "es": "HÉROE ECO",
+    "zh": "环保英雄",
+    "he": "גיבור סביבה",
+    "hi": "इको हीरो",
+    "sw": "SHUJAA WA MAZINGIRA",
+    "de": "ÖKO-HELD",
+    "fr": "ÉCO-HÉROS"
+   }
+  },
+  {
+   "en": "seashell",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    1,
+    7
+   ]
+  },
+  {
+   "en": "crimson",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    1,
+    7
+   ]
+  },
+  {
+   "en": "navy",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    7
+   ]
+  },
+  {
+   "en": "#E0F7FA",
+   "class": "keep",
+   "kind": "value_format",
+   "turns": [
+    7
+   ]
+  },
+  {
+   "en": "#00695C",
+   "class": "keep",
+   "kind": "value_format",
+   "turns": [
+    7
+   ]
+  },
+  {
+   "en": "#1A237E",
+   "class": "keep",
+   "kind": "value_format",
+   "turns": [
+    7
+   ]
+  },
+  {
+   "en": "16px",
+   "class": "keep",
+   "kind": "value_format",
+   "turns": [
+    7
+   ]
+  },
+  {
+   "en": "kWh",
+   "class": "keep",
+   "kind": "value_format",
+   "turns": [
+    5
+   ]
+  },
+  {
+   "en": "pts",
+   "class": "keep",
+   "kind": "value_format",
+   "turns": [
+    3,
+    4,
+    6,
+    7,
+    8,
+    10
+   ]
+  },
+  {
+   "en": "RECYCLERAY",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2
+   ]
+  },
+  {
+   "en": "GREENGRETA",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2
+   ]
+  },
+  {
+   "en": "greengreta",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3
+   ]
+  },
+  {
+   "en": "Ziggy",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2
+   ]
+  },
+  {
+   "en": "ziggy",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2
+   ]
+  },
+  {
+   "en": "ZIGGY",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2
+   ]
+  },
+  {
+   "en": "milo",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    10
+   ]
+  },
+  {
+   "en": "MILO",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    10
+   ]
+  }
+ ]
+}

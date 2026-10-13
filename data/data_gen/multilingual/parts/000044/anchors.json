@@ -1,0 +1,1096 @@
+{
+  "anchors": [
+    {
+      "en": "Lots",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        2,
+        3,
+        5,
+        6,
+        9
+      ],
+      "translations": {
+        "es": "Lotes",
+        "zh": "批次",
+        "he": "אצוות",
+        "hi": "लॉट",
+        "sw": "Bechi",
+        "de": "Chargen",
+        "fr": "Lots"
+      }
+    },
+    {
+      "en": "registration form",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        1,
+        2
+      ],
+      "translations": {
+        "es": "formulario de registro",
+        "zh": "登记表单",
+        "he": "טופס רישום",
+        "hi": "पंजीकरण फ़ॉर्म",
+        "sw": "fomu ya usajili",
+        "de": "Registrierungsformular",
+        "fr": "formulaire d'enregistrement"
+      }
+    },
+    {
+      "en": "registration page",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        6,
+        8
+      ],
+      "translations": {
+        "es": "página de registro",
+        "zh": "登记页面",
+        "he": "עמוד רישום",
+        "hi": "पंजीकरण पेज",
+        "sw": "ukurasa wa usajili",
+        "de": "Registrierungsseite",
+        "fr": "page d'enregistrement"
+      }
+    },
+    {
+      "en": "product tracking page",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        1
+      ],
+      "translations": {
+        "es": "página de seguimiento de productos",
+        "zh": "产品追踪页面",
+        "he": "עמוד מעקב מוצרים",
+        "hi": "उत्पाद ट्रैकिंग पेज",
+        "sw": "ukurasa wa kufuatilia bidhaa",
+        "de": "Produktverfolgungsseite",
+        "fr": "page de suivi des produits"
+      }
+    },
+    {
+      "en": "product inquiry",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        1,
+        5
+      ],
+      "translations": {
+        "es": "consulta de productos",
+        "zh": "产品查询",
+        "he": "בירור מוצר",
+        "hi": "उत्पाद पूछताछ",
+        "sw": "uulizaji wa bidhaa",
+        "de": "Produktabfrage",
+        "fr": "consultation de produit"
+      }
+    },
+    {
+      "en": "verification section",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        1,
+        4
+      ],
+      "translations": {
+        "es": "sección de verificación",
+        "zh": "验证区",
+        "he": "מדור אימות",
+        "hi": "सत्यापन अनुभाग",
+        "sw": "sehemu ya uthibitisho",
+        "de": "Verifizierungsbereich",
+        "fr": "section de vérification"
+      }
+    },
+    {
+      "en": "data statistics and analysis",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        1
+      ],
+      "translations": {
+        "es": "estadísticas y análisis de datos",
+        "zh": "数据统计与分析",
+        "he": "סטטיסטיקות וניתוח נתונים",
+        "hi": "डेटा सांख्यिकी और विश्लेषण",
+        "sw": "takwimu na uchanganuzi wa data",
+        "de": "Datenstatistik und -analyse",
+        "fr": "statistiques et analyse des données"
+      }
+    },
+    {
+      "en": "bulk importer",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        3,
+        4,
+        6,
+        7,
+        10
+      ],
+      "translations": {
+        "es": "importador masivo",
+        "zh": "批量导入器",
+        "he": "ייבוא מרוכז",
+        "hi": "बल्क आयातक",
+        "sw": "kiingizaji cha wingi",
+        "de": "Massenimporter",
+        "fr": "importateur en masse"
+      }
+    },
+    {
+      "en": "Scan Monitor",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        4,
+        6,
+        8
+      ],
+      "translations": {
+        "es": "Monitor de Escaneos",
+        "zh": "扫描监控",
+        "he": "מוניטור סריקות",
+        "hi": "स्कैन मॉनिटर",
+        "sw": "Kifuatiliaji cha Skani",
+        "de": "Scan-Monitor",
+        "fr": "Moniteur de scans"
+      }
+    },
+    {
+      "en": "Recalls",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        5,
+        6
+      ],
+      "translations": {
+        "es": "Retiros",
+        "zh": "召回",
+        "he": "ריקולים",
+        "hi": "रिकॉल",
+        "sw": "Marejesho",
+        "de": "Rückrufe",
+        "fr": "Rappels"
+      }
+    },
+    {
+      "en": "Chain Audit",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        7,
+        9
+      ],
+      "translations": {
+        "es": "Auditoría de Cadena",
+        "zh": "链条审计",
+        "he": "ביקורת שרשרת",
+        "hi": "श्रृंखला ऑडिट",
+        "sw": "Ukaguzi wa Mnyororo",
+        "de": "Kettenprüfung",
+        "fr": "Audit de chaîne"
+      }
+    },
+    {
+      "en": "Screener",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        8,
+        10
+      ],
+      "translations": {
+        "es": "Filtro Avanzado",
+        "zh": "筛选器",
+        "he": "מסנן מוצרים",
+        "hi": "स्क्रीनर",
+        "sw": "Kichujio",
+        "de": "Produktfilter",
+        "fr": "Filtre avancé"
+      }
+    },
+    {
+      "en": "Checkpoints",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        10
+      ],
+      "translations": {
+        "es": "Puntos de Control",
+        "zh": "检查点",
+        "he": "נקודות ביקורת",
+        "hi": "चेकपॉइंट",
+        "sw": "Vituo vya Ukaguzi",
+        "de": "Kontrollpunkte",
+        "fr": "Points de contrôle"
+      }
+    },
+    {
+      "en": "Investigations queue",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        9
+      ],
+      "translations": {
+        "es": "cola de Investigaciones",
+        "zh": "调查队列",
+        "he": "תור חקירות",
+        "hi": "जाँच कतार",
+        "sw": "foleni ya Uchunguzi",
+        "de": "Untersuchungswarteschlange",
+        "fr": "file d'attente des Enquêtes"
+      }
+    },
+    {
+      "en": "Delivered",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        10
+      ],
+      "translations": {
+        "es": "Entregado",
+        "zh": "已送达",
+        "he": "נמסר",
+        "hi": "वितरित",
+        "sw": "Imewasilishwa",
+        "de": "Zugestellt",
+        "fr": "Livré"
+      }
+    },
+    {
+      "en": "In Transit",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        2,
+        3,
+        8,
+        9,
+        10
+      ],
+      "translations": {
+        "es": "En Tránsito",
+        "zh": "运输中",
+        "he": "במעבר",
+        "hi": "पारगमन में",
+        "sw": "Njiani",
+        "de": "Unterwegs",
+        "fr": "En Transit"
+      }
+    },
+    {
+      "en": "Flagged",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        2,
+        3,
+        7,
+        8,
+        9
+      ],
+      "translations": {
+        "es": "Marcado",
+        "zh": "已标记",
+        "he": "מסומן",
+        "hi": "चिह्नित",
+        "sw": "Imetiwa alama",
+        "de": "Markiert",
+        "fr": "Signalé"
+      }
+    },
+    {
+      "en": "Recalled",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        2,
+        5,
+        7
+      ],
+      "translations": {
+        "es": "Retirado",
+        "zh": "已召回",
+        "he": "בריקול",
+        "hi": "वापस मंगाया",
+        "sw": "Imerejeshwa",
+        "de": "Zurückgerufen",
+        "fr": "Rappelé"
+      }
+    },
+    {
+      "en": "Shipped",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        2,
+        3,
+        7,
+        9
+      ],
+      "translations": {
+        "es": "Enviado",
+        "zh": "已发货",
+        "he": "נשלח",
+        "hi": "भेजा गया",
+        "sw": "Imesafirishwa",
+        "de": "Versandt",
+        "fr": "Expédié"
+      }
+    },
+    {
+      "en": "Arrived",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        2,
+        3,
+        7,
+        10
+      ],
+      "translations": {
+        "es": "Llegado",
+        "zh": "已到达",
+        "he": "הגיע",
+        "hi": "पहुँचा",
+        "sw": "Imefika",
+        "de": "Angekommen",
+        "fr": "Arrivé"
+      }
+    },
+    {
+      "en": "Completed",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        5,
+        7
+      ],
+      "translations": {
+        "es": "Completado",
+        "zh": "已完成",
+        "he": "הושלם",
+        "hi": "पूर्ण",
+        "sw": "Imekamilika",
+        "de": "Abgeschlossen",
+        "fr": "Terminé"
+      }
+    },
+    {
+      "en": "Genuine",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        9
+      ],
+      "translations": {
+        "es": "Auténtico",
+        "zh": "正品",
+        "he": "מקורי",
+        "hi": "असली",
+        "sw": "Halisi",
+        "de": "Echt",
+        "fr": "Authentique"
+      }
+    },
+    {
+      "en": "Counterfeit Confirmed",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        9
+      ],
+      "translations": {
+        "es": "Falsificación Confirmada",
+        "zh": "确认假冒",
+        "he": "זיוף מאושר",
+        "hi": "नकली पुष्ट",
+        "sw": "Bandia Imethibitishwa",
+        "de": "Fälschung Bestätigt",
+        "fr": "Contrefaçon Confirmée"
+      }
+    },
+    {
+      "en": "Open reports",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        9
+      ],
+      "translations": {
+        "es": "reportes Abiertos",
+        "zh": "待处理报告",
+        "he": "דיווחים פתוחים",
+        "hi": "खुली रिपोर्ट",
+        "sw": "ripoti Wazi",
+        "de": "Offene Meldungen",
+        "fr": "signalements Ouverts"
+      }
+    },
+    {
+      "en": "retrieved",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        5,
+        7
+      ],
+      "translations": {
+        "es": "recuperado",
+        "zh": "已取回",
+        "he": "נאסף",
+        "hi": "बरामद",
+        "sw": "imekusanywa",
+        "de": "eingesammelt",
+        "fr": "récupéré"
+      }
+    },
+    {
+      "en": "suspicious flag",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        4,
+        6
+      ],
+      "translations": {
+        "es": "marca de sospechoso",
+        "zh": "可疑标记",
+        "he": "סימון חשוד",
+        "hi": "संदिग्ध चिह्न",
+        "sw": "alama ya shaka",
+        "de": "Verdachtsmarkierung",
+        "fr": "indicateur de suspicion"
+      }
+    },
+    {
+      "en": "clean badge",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        7
+      ],
+      "translations": {
+        "es": "distintivo Limpio",
+        "zh": "干净徽章",
+        "he": "תג נקי",
+        "hi": "स्वच्छ बैज",
+        "sw": "beji ya Safi",
+        "de": "Sauber-Abzeichen",
+        "fr": "badge Propre"
+      }
+    },
+    {
+      "en": "2 of 7 products",
+      "class": "translate",
+      "kind": "ui_label",
+      "turns": [
+        8,
+        10
+      ],
+      "translations": {
+        "es": "2 de 7 productos",
+        "zh": "7 个产品中的 2 个",
+        "he": "2 מתוך 7 מוצרים",
+        "hi": "7 उत्पादों में से 2",
+        "sw": "bidhaa 2 kati ya 7",
+        "de": "2 von 7 Produkten",
+        "fr": "2 produits sur 7"
+      }
+    },
+    {
+      "en": "Arabica Beans 5kg",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        2
+      ],
+      "translations": {
+        "es": "Granos Arábica 5kg",
+        "zh": "阿拉比卡咖啡豆 5kg",
+        "he": "פולי ערביקה 5kg",
+        "hi": "अरेबिका बीन्स 5kg",
+        "sw": "Maharagwe ya Arabica 5kg",
+        "de": "Arabica-Bohnen 5kg",
+        "fr": "Grains Arabica 5kg"
+      }
+    },
+    {
+      "en": "Arabica Beans 10kg",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        2
+      ],
+      "translations": {
+        "es": "Granos Arábica 10kg",
+        "zh": "阿拉比卡咖啡豆 10kg",
+        "he": "פולי ערביקה 10kg",
+        "hi": "अरेबिका बीन्स 10kg",
+        "sw": "Maharagwe ya Arabica 10kg",
+        "de": "Arabica-Bohnen 10kg",
+        "fr": "Grains Arabica 10kg"
+      }
+    },
+    {
+      "en": "Robusta Blend",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        2
+      ],
+      "translations": {
+        "es": "Mezcla Robusta",
+        "zh": "罗布斯塔拼配",
+        "he": "תערובת רובוסטה",
+        "hi": "रोबस्टा ब्लेंड",
+        "sw": "Mchanganyiko wa Robusta",
+        "de": "Robusta-Mischung",
+        "fr": "Mélange Robusta"
+      }
+    },
+    {
+      "en": "Ceylon Black Tea",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        2
+      ],
+      "translations": {
+        "es": "Té Negro de Ceilán",
+        "zh": "锡兰红茶",
+        "he": "תה שחור ציילוני",
+        "hi": "सीलोन काली चाय",
+        "sw": "Chai Nyeusi ya Ceylon",
+        "de": "Ceylon-Schwarztee",
+        "fr": "Thé Noir de Ceylan"
+      }
+    },
+    {
+      "en": "Green Tea Sencha",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        2
+      ],
+      "translations": {
+        "es": "Té Verde Sencha",
+        "zh": "煎茶绿茶",
+        "he": "תה ירוק סנצ'ה",
+        "hi": "सेंचा हरी चाय",
+        "sw": "Chai ya Kijani Sencha",
+        "de": "Sencha-Grüntee",
+        "fr": "Thé Vert Sencha"
+      }
+    },
+    {
+      "en": "Cacao Nibs",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        2
+      ],
+      "translations": {
+        "es": "Nibs de Cacao",
+        "zh": "可可碎粒",
+        "he": "ניבס קקאו",
+        "hi": "कोको निब्स",
+        "sw": "Vipande vya Kakao",
+        "de": "Kakaonibs",
+        "fr": "Éclats de Cacao"
+      }
+    },
+    {
+      "en": "Cacao Butter",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        2
+      ],
+      "translations": {
+        "es": "Manteca de Cacao",
+        "zh": "可可脂",
+        "he": "חמאת קקאו",
+        "hi": "कोको बटर",
+        "sw": "Siagi ya Kakao",
+        "de": "Kakaobutter",
+        "fr": "Beurre de Cacao"
+      }
+    },
+    {
+      "en": "Oolong Reserve",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        2
+      ],
+      "translations": {
+        "es": "Reserva Oolong",
+        "zh": "乌龙珍藏",
+        "he": "רזרב אולונג",
+        "hi": "ऊलोंग रिज़र्व",
+        "sw": "Hifadhi ya Oolong",
+        "de": "Oolong-Reserve",
+        "fr": "Réserve Oolong"
+      }
+    },
+    {
+      "en": "Test Widget",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        2
+      ],
+      "translations": {
+        "es": "Artilugio de Prueba",
+        "zh": "测试小件",
+        "he": "ווידג'ט בדיקה",
+        "hi": "टेस्ट विजेट",
+        "sw": "Kifaa cha Majaribio",
+        "de": "Test-Widget",
+        "fr": "Widget de Test"
+      }
+    },
+    {
+      "en": "beans",
+      "class": "translate",
+      "kind": "content_text",
+      "turns": [
+        8
+      ],
+      "translations": {
+        "es": "granos",
+        "zh": "咖啡豆",
+        "he": "פולי",
+        "hi": "बीन्स",
+        "sw": "maharagwe",
+        "de": "Bohnen",
+        "fr": "Grains"
+      }
+    },
+    {
+      "en": "misty rose",
+      "class": "keep",
+      "kind": "css_visual",
+      "turns": [
+        1,
+        6,
+        8
+      ]
+    },
+    {
+      "en": "firebrick",
+      "class": "keep",
+      "kind": "css_visual",
+      "turns": [
+        1,
+        6,
+        8
+      ]
+    },
+    {
+      "en": "LOT-COF-01",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        2,
+        3,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "en": "LOT-TEA-02",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        2,
+        3,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "en": "LOT-CAC-03",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        2,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "en": "PT-####",
+      "class": "keep",
+      "kind": "value_format",
+      "turns": [
+        2
+      ]
+    },
+    {
+      "en": "PT-1001",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        2,
+        4,
+        5,
+        6,
+        8,
+        10
+      ]
+    },
+    {
+      "en": "PT-1002",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        2,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "en": "PT-1003",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "en": "PT-1004",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        2,
+        3,
+        4,
+        10
+      ]
+    },
+    {
+      "en": "PT-1005",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        2,
+        3,
+        4,
+        7,
+        9,
+        10
+      ]
+    },
+    {
+      "en": "PT-1006",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        2,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "en": "PT-1007",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        2,
+        4,
+        5,
+        7,
+        9
+      ]
+    },
+    {
+      "en": "PT-9999",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        3
+      ]
+    },
+    {
+      "en": "PT-8888",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        9
+      ]
+    },
+    {
+      "en": "R-01",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        9
+      ]
+    },
+    {
+      "en": "R-02",
+      "class": "keep",
+      "kind": "tech",
+      "turns": [
+        9
+      ]
+    },
+    {
+      "en": "Apr 20, 2026",
+      "class": "keep",
+      "kind": "value_format",
+      "turns": [
+        3
+      ]
+    },
+    {
+      "en": "Bogota Farm",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2
+      ]
+    },
+    {
+      "en": "Bogota Port",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2
+      ]
+    },
+    {
+      "en": "Bogota",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        8,
+        10
+      ]
+    },
+    {
+      "en": "Rotterdam Port",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        3,
+        4,
+        10
+      ]
+    },
+    {
+      "en": "Berlin Warehouse",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        7
+      ]
+    },
+    {
+      "en": "Hanoi Facility",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        10
+      ]
+    },
+    {
+      "en": "Hanoi",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        10
+      ]
+    },
+    {
+      "en": "Colombo Estate",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2
+      ]
+    },
+    {
+      "en": "Colombo Port",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2
+      ]
+    },
+    {
+      "en": "Colombo",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2
+      ]
+    },
+    {
+      "en": "Shizuoka Farm",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2
+      ]
+    },
+    {
+      "en": "Shizuoka",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2
+      ]
+    },
+    {
+      "en": "Osaka Depot",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        3,
+        7,
+        9
+      ]
+    },
+    {
+      "en": "Accra Co-op",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        10
+      ]
+    },
+    {
+      "en": "Accra",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        10
+      ]
+    },
+    {
+      "en": "Tema Port",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2
+      ]
+    },
+    {
+      "en": "Antwerp Hub",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        2,
+        7,
+        9
+      ]
+    },
+    {
+      "en": "Hamburg Hub",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        3,
+        4
+      ]
+    },
+    {
+      "en": "Warsaw Depot",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        7
+      ]
+    },
+    {
+      "en": "Lisbon Hub",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        10
+      ]
+    },
+    {
+      "en": "Lisbon",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        9,
+        10
+      ]
+    },
+    {
+      "en": "Lima",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        3
+      ]
+    },
+    {
+      "en": "Paris",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        9
+      ]
+    },
+    {
+      "en": "Watchlist",
+      "class": "keep",
+      "kind": "proper_noun",
+      "turns": [
+        8
+      ]
+    }
+  ]
+}

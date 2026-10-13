@@ -1,0 +1,654 @@
+{
+ "anchors": [
+  {
+   "en": "Haiku",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    4,
+    5
+   ],
+   "translations": {
+    "es": "Haiku",
+    "zh": "俳句",
+    "he": "הייקו",
+    "hi": "हाइकु",
+    "sw": "Haiku",
+    "de": "Haiku",
+    "fr": "Haïku"
+   }
+  },
+  {
+   "en": "Sonnet",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    4,
+    9
+   ],
+   "translations": {
+    "es": "Soneto",
+    "zh": "十四行诗",
+    "he": "סונטה",
+    "hi": "सॉनेट",
+    "sw": "Soneti",
+    "de": "Sonett",
+    "fr": "Sonnet"
+   }
+  },
+  {
+   "en": "Limerick",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    4,
+    6
+   ],
+   "translations": {
+    "es": "Limerick",
+    "zh": "五行打油诗",
+    "he": "לימריק",
+    "hi": "लिमरिक",
+    "sw": "Limeriki",
+    "de": "Limerick",
+    "fr": "Limerick"
+   }
+  },
+  {
+   "en": "Free Verse",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    4,
+    9
+   ],
+   "translations": {
+    "es": "Verso Libre",
+    "zh": "自由诗",
+    "he": "שירה חופשית",
+    "hi": "मुक्त छंद",
+    "sw": "Ushairi Huru",
+    "de": "Freie Verse",
+    "fr": "Vers Libre"
+   }
+  },
+  {
+   "en": "sparkle button",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    6,
+    9
+   ],
+   "translations": {
+    "es": "botón de destello",
+    "zh": "闪耀按钮",
+    "he": "כפתור נצנוץ",
+    "hi": "स्पार्कल बटन",
+    "sw": "kitufe cha mng'aro",
+    "de": "Funken-Button",
+    "fr": "bouton d'étincelle"
+   }
+  },
+  {
+   "en": "This Week's Board",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    4
+   ],
+   "translations": {
+    "es": "Tablero de la Semana",
+    "zh": "本周榜单",
+    "he": "לוח השבוע",
+    "hi": "इस हफ़्ते का बोर्ड",
+    "sw": "Ubao wa Wiki Hii",
+    "de": "Tafel der Woche",
+    "fr": "Tableau de la Semaine"
+   }
+  },
+  {
+   "en": "Form Lab",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4,
+    5
+   ],
+   "translations": {
+    "es": "Laboratorio de Formas",
+    "zh": "诗形实验室",
+    "he": "מעבדת הצורות",
+    "hi": "फ़ॉर्म लैब",
+    "sw": "Maabara ya Miundo",
+    "de": "Formlabor",
+    "fr": "Labo des Formes"
+   }
+  },
+  {
+   "en": "Certify",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4,
+    5
+   ],
+   "translations": {
+    "es": "Certificar",
+    "zh": "认证",
+    "he": "אשר צורה",
+    "hi": "प्रमाणित करें",
+    "sw": "Thibitisha",
+    "de": "Zertifizieren",
+    "fr": "Certifier"
+   }
+  },
+  {
+   "en": "form-true",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4
+   ],
+   "translations": {
+    "es": "forma verificada",
+    "zh": "形式确认",
+    "he": "צורה מאומתת",
+    "hi": "फ़ॉर्म-सत्यापित",
+    "sw": "muundo umethibitishwa",
+    "de": "formtreu",
+    "fr": "forme vérifiée"
+   }
+  },
+  {
+   "en": "Contests",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5,
+    7,
+    10
+   ],
+   "translations": {
+    "es": "Concursos",
+    "zh": "赛事",
+    "he": "תחרויות",
+    "hi": "प्रतियोगिताएँ",
+    "sw": "Mashindano",
+    "de": "Wettbewerbe",
+    "fr": "Concours"
+   }
+  },
+  {
+   "en": "Close Voting",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5,
+    10
+   ],
+   "translations": {
+    "es": "Cerrar votación",
+    "zh": "结束投票",
+    "he": "סגור הצבעה",
+    "hi": "मतदान बंद करें",
+    "sw": "Funga Upigaji Kura",
+    "de": "Abstimmung schließen",
+    "fr": "Clore le vote"
+   }
+  },
+  {
+   "en": "Poets",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "translations": {
+    "es": "Poetas",
+    "zh": "诗人",
+    "he": "משוררים",
+    "hi": "कवि",
+    "sw": "Washairi",
+    "de": "Dichter",
+    "fr": "Poètes"
+   }
+  },
+  {
+   "en": "Critique Corner",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8,
+    10
+   ],
+   "translations": {
+    "es": "Rincón de Críticas",
+    "zh": "点评角",
+    "he": "פינת הביקורת",
+    "hi": "समीक्षा कॉर्नर",
+    "sw": "Kona ya Uhakiki",
+    "de": "Kritik-Ecke",
+    "fr": "Coin des Critiques"
+   }
+  },
+  {
+   "en": "feedback-welcome",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "abierto a críticas",
+    "zh": "欢迎点评",
+    "he": "פתוח לביקורת",
+    "hi": "फ़ीडबैक आमंत्रित",
+    "sw": "wazi kwa maoni",
+    "de": "offen für Kritik",
+    "fr": "ouvert aux critiques"
+   }
+  },
+  {
+   "en": "rhythm",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "ritmo",
+    "zh": "节奏",
+    "he": "מקצב",
+    "hi": "लय",
+    "sw": "mdundo",
+    "de": "Rhythmus",
+    "fr": "rythme"
+   }
+  },
+  {
+   "en": "resolved",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "resuelta",
+    "zh": "已解决",
+    "he": "טופל",
+    "hi": "हल हो गया",
+    "sw": "imetatuliwa",
+    "de": "erledigt",
+    "fr": "résolue"
+   }
+  },
+  {
+   "en": "Critiqued",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8
+   ],
+   "translations": {
+    "es": "Criticado",
+    "zh": "已点评",
+    "he": "עבר ביקורת",
+    "hi": "समीक्षित",
+    "sw": "Imehakikiwa",
+    "de": "Kritisiert",
+    "fr": "Critiqué"
+   }
+  },
+  {
+   "en": "My Anthology",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    9
+   ],
+   "translations": {
+    "es": "Mi Antología",
+    "zh": "我的诗集",
+    "he": "האנתולוגיה שלי",
+    "hi": "मेरी एंथोलॉजी",
+    "sw": "Antolojia Yangu",
+    "de": "Meine Anthologie",
+    "fr": "Mon Anthologie"
+   }
+  },
+  {
+   "en": "add-this-week's-top-three",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    9
+   ],
+   "translations": {
+    "es": "agregar los tres mejores de la semana",
+    "zh": "添加本周前三",
+    "he": "הוסף את שלושת המובילים של השבוע",
+    "hi": "इस हफ़्ते के टॉप तीन जोड़ें",
+    "sw": "ongeza tatu bora za wiki hii",
+    "de": "Top drei der Woche hinzufügen",
+    "fr": "ajouter le top trois de la semaine"
+   }
+  },
+  {
+   "en": "Season Laurels",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    10
+   ],
+   "translations": {
+    "es": "Laureles de la Temporada",
+    "zh": "赛季桂冠",
+    "he": "זרי הדפנה של העונה",
+    "hi": "सीज़न लॉरेल्स",
+    "sw": "Taji za Msimu",
+    "de": "Saison-Lorbeeren",
+    "fr": "Lauriers de la Saison"
+   }
+  },
+  {
+   "en": "Publish Laurels",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    10
+   ],
+   "translations": {
+    "es": "Publicar Laureles",
+    "zh": "发布桂冠",
+    "he": "פרסם זרי דפנה",
+    "hi": "लॉरेल्स प्रकाशित करें",
+    "sw": "Chapisha Taji",
+    "de": "Lorbeeren veröffentlichen",
+    "fr": "Publier les Lauriers"
+   }
+  },
+  {
+   "en": "Most Sparkled",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    10
+   ],
+   "translations": {
+    "es": "Más Destellos",
+    "zh": "最多闪耀",
+    "he": "שיא הנצנוצים",
+    "hi": "सबसे ज़्यादा स्पार्कल",
+    "sw": "Mng'aro Mwingi Zaidi",
+    "de": "Meiste Funken",
+    "fr": "Plus d'Étincelles"
+   }
+  },
+  {
+   "en": "Board Champion",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    10
+   ],
+   "translations": {
+    "es": "Campeón del Tablero",
+    "zh": "榜单冠军",
+    "he": "אלוף הלוח",
+    "hi": "बोर्ड चैंपियन",
+    "sw": "Bingwa wa Ubao",
+    "de": "Tafel-Champion",
+    "fr": "Champion du Tableau"
+   }
+  },
+  {
+   "en": "Contest Laureate",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    10
+   ],
+   "translations": {
+    "es": "Laureado del Concurso",
+    "zh": "赛事桂冠得主",
+    "he": "זוכה התחרות",
+    "hi": "प्रतियोगिता विजेता",
+    "sw": "Mshindi wa Shindano",
+    "de": "Wettbewerbssieger",
+    "fr": "Lauréat du Concours"
+   }
+  },
+  {
+   "en": "Top Critic",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    10
+   ],
+   "translations": {
+    "es": "Mejor Crítico",
+    "zh": "最佳点评人",
+    "he": "המבקר המוביל",
+    "hi": "शीर्ष समीक्षक",
+    "sw": "Mhakiki Bora",
+    "de": "Top-Kritiker",
+    "fr": "Meilleur Critique"
+   }
+  },
+  {
+   "en": "Cinders",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    5,
+    7,
+    9,
+    10
+   ]
+  },
+  {
+   "en": "Harbor Glass",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    4,
+    7,
+    9,
+    10
+   ]
+  },
+  {
+   "en": "Wren Song",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10
+   ]
+  },
+  {
+   "en": "Salt Meadow",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    5,
+    6,
+    7
+   ]
+  },
+  {
+   "en": "The Unsent Letter",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    8,
+    10
+   ]
+  },
+  {
+   "en": "Juniper",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    4,
+    6,
+    8
+   ]
+  },
+  {
+   "en": "Night Ferry",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    3,
+    4,
+    9,
+    10
+   ]
+  },
+  {
+   "en": "Tideline",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    5
+   ]
+  },
+  {
+   "en": "Mara Voss",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    6,
+    8
+   ]
+  },
+  {
+   "en": "Theo Rin",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    6,
+    8
+   ]
+  },
+  {
+   "en": "Ivy Chen",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    6,
+    8
+   ]
+  },
+  {
+   "en": "Priya Anand",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    2,
+    6,
+    8
+   ]
+  },
+  {
+   "en": "Lena Brook",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    5
+   ]
+  },
+  {
+   "en": "Rhea Solano",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    8,
+    10
+   ]
+  },
+  {
+   "en": "Sam Kade",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    8
+   ]
+  },
+  {
+   "en": "Noor",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    3
+   ]
+  },
+  {
+   "en": "Ada",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    8
+   ]
+  },
+  {
+   "en": "The Turning Tide",
+   "class": "keep",
+   "kind": "proper_noun",
+   "turns": [
+    5,
+    7
+   ]
+  },
+  {
+   "en": "light goldenrod",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    1,
+    7
+   ]
+  },
+  {
+   "en": "olive drab",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    1,
+    7,
+    9
+   ]
+  }
+ ]
+}

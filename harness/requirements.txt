@@ -1,0 +1,9 @@
+openai>=1.1.1
+selenium>=4.15.2
+pillow>=10.1.0
+tqdm
+numpy
+# httpx is the OpenAI / Anthropic SDK transport; fastapi and uvicorn match setup_instance.sh.
+fastapi
+uvicorn
+httpx

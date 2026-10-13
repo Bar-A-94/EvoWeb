@@ -1,0 +1,847 @@
+{
+ "id": "000006",
+ "instruction": "Please implement a solar dashboard to display real-time and historical solar data. The dashboard should have functionalities for real-time data display, historical data query, and chart analysis. Users should be able to view real-time data such as solar power generation, power consumption, and battery percentage, and query historical data to view trends. Configure the background color to honeydew, with components using dark olive green.",
+ "Category": {
+  "primary_category": "Content Presentation",
+  "subcategories": [
+   "Data Visualization",
+   "Dynamic Content Rendering"
+  ]
+ },
+ "application_type": "Analytics Platforms/Dashboards",
+ "ui_instruct": [
+  {
+   "task": "Verify the display of real-time solar power generation data.",
+   "expected_result": "The dashboard should show a continuously updating numerical value or graph indicating the current solar power generation.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering"
+    ]
+   }
+  },
+  {
+   "task": "Test the display of real-time power consumption data.",
+   "expected_result": "The dashboard should present a real-time updating figure or chart that accurately reflects the current power consumption levels.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering"
+    ]
+   }
+  },
+  {
+   "task": "Validate the real-time display of battery percentage.",
+   "expected_result": "The dashboard should continuously update to show the current percentage of battery charge, clearly and accurately.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering"
+    ]
+   }
+  },
+  {
+   "task": "Check the functionality of querying historical data from the solar power generation data by a start and end date.",
+   "expected_result": "Users should be able to input a start and end date, and the dashboard should return relevant data trends for the selected period.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Filtering"
+    ]
+   }
+  },
+  {
+   "task": "Test the navigation functionality between the real-time data display and historical data query sections.",
+   "expected_result": "Users should be able to smoothly navigate between sections using clearly labeled tabs or buttons without page reload issues.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering",
+     "Navigation"
+    ]
+   }
+  },
+  {
+   "task": "Verify that the website uses 'honeydew' as the background color and 'dark olive green' as the component color, as specified in the design requirements.",
+   "expected_result": "The website has a background color of 'honeydew' and components (such as buttons, cards, headers, etc.) are styled with the color 'dark olive green', accurately reflecting the design instruction.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "archetype": "derived-state",
+   "source_website": "SolarEdge Monitoring Platform",
+   "source_feature": "Module-level alert system (panel-level performance view)",
+   "instruction": "The dashboard's nice, but I want to see my actual panels now — the ones behind its generation numbers. Give me a Panels page listing each panel with its array, rated watts, and this week's output, plus rollups per array and for the whole fleet — output and total rated watts — and start me off with exactly these six, I'll add more later: the South array has Peak 1 (400 W, 14.00 kWh this week), Ridge West (400 W, 13.20 kWh) and Ridge East (350 W, 11.55 kWh); the East array has Gable 1 (350 W, 9.80 kWh), Corner 2 (300 W, 9.00 kWh) and Chimney 3 (300 W, 5.40 kWh). Rank them by yield — that's weekly kWh per kW of rated capacity, shown to one decimal — best first, and when two panels tie on yield just go alphabetical. One thing for everywhere in this app, now and for anything we add later: energy always reads as kWh with exactly two decimals, so Corner 2 shows 9.00 kWh, never 9 kWh.",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Panels page and read the ranked panel list from top to bottom.",
+     "expected_result": "The order is Peak 1 (yield 35.0), Ridge East (33.0), Ridge West (33.0), Corner 2 (30.0), Gable 1 (28.0), Chimney 3 (18.0) — Ridge East sits above Ridge West on the alphabetical tiebreak, and Corner 2 sits above Gable 1 even though Gable 1 produced more kWh.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Derived Values"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Panels page, compare the rows for Corner 2 and Gable 1.",
+     "expected_result": "Corner 2 (yield 30.0) is ranked above Gable 1 (yield 28.0) despite Gable 1's higher weekly output (9.80 kWh vs 9.00 kWh), showing the ranking uses kWh per rated kW rather than raw output.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Computed Fields"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "On the Panels page, find the rollup figures for the South array, the East array, and the whole fleet.",
+     "expected_result": "South shows 38.75 kWh, East shows 24.20 kWh, and the fleet shows 62.95 kWh with a total rated capacity of 2,100 W — the two array totals sum exactly to the fleet total.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Derived Values"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the Panels page, read Corner 2's weekly output figure.",
+     "expected_result": "It reads exactly 9.00 kWh — two decimals with the kWh unit, not 9 kWh or 9.0 kWh — and the other energy figures on the page also carry two decimals.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Value Formatting",
+       "Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 1,
+     "task": "In the historical data section, enter a start date and an end date to run a query.",
+     "expected_result": "A chart or trend view for the selected period is displayed without errors.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Data Query"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "source_website": "Enact Solar Monitoring App",
+   "source_feature": "Financial Payback Calculator",
+   "instruction": "Love it. Next up: a savings calculator page — I type my electricity rate in dollars per kWh and what the system cost me, and it works out yearly savings and the payback time. Use the fleet's weekly total from the panels page times 52 for the annual kWh, show money as dollars with two decimals, and give payback as years and months with any partial month rounded up. It should recalculate as I type, no submit button. And a house rule from here on out, anywhere in the app: if I type something invalid — letters, a zero rate, negatives — don't blank the results, keep the last good numbers up and just show a small note about the bad input.",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the savings calculator, type 0.30 into the electricity rate field and 9000 into the system cost field.",
+     "expected_result": "Yearly savings show $982.02 (3,273.40 kWh x $0.30) and the payback reads 9 years, 2 months — the partial month rounds up, so not 9 years 1 month and not a bare decimal like 9.2 years.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Rounding"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type 0.40 into the rate field and 9000 into the cost field, then change the rate to 0.20.",
+     "expected_result": "The results update immediately as the rate changes with no submit step, and yearly savings at 0.20 read exactly half of what they showed at 0.40 ($654.68 vs $1,309.36).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Updates",
+       "Calculation"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type 0.30 into the rate field and 9000 into the cost field, then replace the rate with the letters abc.",
+     "expected_result": "The last good results (yearly savings $982.02, payback 9 years 2 months) stay on screen with a small note about the invalid input — no blanked results, no NaN, no crash.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Error Handling"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Check the annual generation figure the calculator is using, then open the Panels page and read the fleet weekly rollup.",
+     "expected_result": "The calculator's annual figure is 3,273.40 kWh, exactly 52 times the 62.95 kWh fleet weekly total shown on the Panels page.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Cross-Feature Consistency",
+       "Derived Values"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "Open the Panels page and read the ranked panel list from top to bottom.",
+     "expected_result": "The order is Peak 1 (yield 35.0), Ridge East (33.0), Ridge West (33.0), Corner 2 (30.0), Gable 1 (28.0), Chimney 3 (18.0) — Ridge East sits above Ridge West on the alphabetical tiebreak, and Corner 2 sits above Gable 1 even though Gable 1 produced more kWh.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Derived Values"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "source_website": "SolarEdge Monitoring Platform",
+   "source_feature": "Module-level alert system",
+   "instruction": "My Chimney 3 panel worries me, so build an alert center. There's a rules area where I type a yield threshold — any panel whose weekly yield lands strictly below it raises an alert, sitting at the number exactly is still fine, and it's one alert per panel even if a couple of rules catch it — plus an active alerts list and a separate resolved log, with each alert naming the panel and its yield. Start me with one rule at 25.0 already in place. When I acknowledge an alert, ask me to confirm first, then it moves to the resolved log, and show how many alerts are active right in the navigation. Oh, and from now on across the whole app: any status gets a colored dot plus a word next to it — red dot 'Active', green dot 'Resolved', that kind of thing — never color by itself.",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "In the alert center's rules area, type 33.0 as a new rule threshold and add the rule.",
+     "expected_result": "Exactly 3 alerts are active — Corner 2, Gable 1, and Chimney 3 — while Ridge East and Ridge West (sitting exactly at 33.0) are not flagged, Chimney 3 appears only once even though the pre-set 25.0 rule also catches it, and the navigation badge reads 3.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Boundary Conditions",
+       "Deduplication"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the alert center on a fresh load and look at the active alerts list.",
+     "expected_result": "One alert is active — Chimney 3, caught by the pre-set 25.0 rule — shown with a red dot plus the word Active, and the navigation badge shows 1.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Initial State",
+       "Status Indicators"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Acknowledge the Chimney 3 alert and confirm when asked.",
+     "expected_result": "A confirmation step appears before anything moves; after confirming, Chimney 3 leaves the active list, shows up in the resolved log with a green dot plus the word Resolved, and the navigation badge drops to 0.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "State Transitions"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Read the yield figure shown on Chimney 3's alert, then open the Panels page and find Chimney 3's row.",
+     "expected_result": "Both show the same 18.0 yield, and Chimney 3 sits at the bottom of the panel ranking — consistent with it being the only panel below the 25.0 rule.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Cross-Feature Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "On the savings calculator, type 0.30 into the electricity rate field and 9000 into the system cost field.",
+     "expected_result": "Yearly savings show $982.02 (3,273.40 kWh x $0.30) and the payback reads 9 years, 2 months — the partial month rounds up, so not 9 years 1 month and not a bare decimal like 9.2 years.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Rounding"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "source_website": "SolarEdge Monitoring Platform",
+   "source_feature": "CSV Data Export",
+   "instruction": "I keep retyping panel numbers into emails — give me a report builder. Let me tick which panels to include, with quick buttons for South, East, everything, and none, and render a plain-text report right on the page that I can copy: how many panels are in it, their combined output, the average yield — just average the panels' yield figures to one decimal, don't weight by panel size — and the best and worst panel by yield, going alphabetical on a tie. If nothing's ticked, say so nicely instead of showing zeros or NaN garbage, and the report should redo itself the moment I change the ticks.",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "In the report builder, click the East quick button and read the generated report.",
+     "expected_result": "The report shows 3 panels, combined output 24.20 kWh, average yield 25.3 (the plain mean of 30.0, 28.0 and 18.0 — not the size-weighted 25.5), best panel Corner 2, worst panel Chimney 3.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Rounding"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Tick only Ridge East and Ridge West in the report builder.",
+     "expected_result": "The report shows 2 panels, combined output 24.75 kWh, and names Ridge East as the best panel — the 33.0 yield tie breaks alphabetically.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Selection Logic",
+       "Tie-Breaking"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Click the none quick button in the report builder, then tick a single panel.",
+     "expected_result": "With nothing ticked a friendly empty message replaces the report — no zeros, NaN, or crash — and the report reappears the moment one panel is ticked.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Empty State",
+       "Live Updates"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Click the everything quick button and compare the report's combined output with the fleet rollup on the Panels page.",
+     "expected_result": "Both read 62.95 kWh, and the report names Peak 1 as best and Chimney 3 as worst across all 6 panels.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Cross-Feature Consistency",
+       "Aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "On the Panels page, find the rollup figures for the South array, the East array, and the whole fleet.",
+     "expected_result": "South shows 38.75 kWh, East shows 24.20 kWh, and the fleet shows 62.95 kWh with a total rated capacity of 2,100 W — the two array totals sum exactly to the fleet total.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Derived Values"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "source_website": "Enact Solar Monitoring App",
+   "source_feature": "Actual vs. Estimated Generation Comparison",
+   "instruction": "How do I know the system's doing what it should? On the historical chart, add an expected-generation baseline I can toggle on: I type peak sun hours per day — start it at 5.0 — and expected comes from the fleet's rated capacity on the panels page times those hours, day by day. Show a performance number next to the chart, actual week over expected week as a percent to one decimal, with a health read beside it: 90 or better is Healthy, 75 up to 90 is Watch, under 75 is Fault. It should all move the instant I edit the hours.",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the historical chart, toggle the expected baseline on and leave peak sun hours at the default 5.0.",
+     "expected_result": "The performance readout shows 85.6% (62.95 kWh actual vs 73.50 kWh expected for the week) with a Watch health read — not 85.7%, not 86%, and not Healthy or Fault.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Derived Values",
+       "Rounding"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "With the baseline on, change the peak sun hours to 4.0.",
+     "expected_result": "The expected week drops to 58.80 kWh and the ratio rises to 107.1% with the health read flipping to Healthy, updating as the value is typed with no submit step.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Updates",
+       "Threshold Bands"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "With the baseline on, change the peak sun hours to 8.0.",
+     "expected_result": "The ratio falls to 53.5% and the health read shows Fault (the under-75 band), while the chart still renders both the actual and expected series.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Threshold Bands",
+       "Chart Rendering"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "With the baseline on and hours at 5.0, replace the hours value with the letters xyz.",
+     "expected_result": "The last valid readout (85.6% with the Watch read) stays visible with a small note about the invalid input — the baseline and chart do not blank or crash.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Error Handling"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 4,
+     "task": "In the alert center's rules area, type 33.0 as a new rule threshold and add the rule.",
+     "expected_result": "Exactly 3 alerts are active — Corner 2, Gable 1, and Chimney 3 — while Ridge East and Ridge West (sitting exactly at 33.0) are not flagged, Chimney 3 appears only once even though the pre-set 25.0 rule also catches it, and the navigation badge reads 3.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Boundary Conditions",
+       "Deduplication"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "design-restyle",
+   "source_website": "Enact Solar Monitoring App",
+   "source_feature": "System Health Status Indicator (color-coded visual language)",
+   "instruction": "Time for a facelift — the honeydew's feeling dated. Everywhere, meaning the main dashboard, the panels page, the calculator, and the alert center: switch the background to a soft cream, make every primary action button warm amber with white text, put each page's title centered at the top, and wrap the content sections in white cards with rounded corners and a thin olive border. Keep the little status dots and their words, just make those badges pill-shaped now. All four pages please — don't let one of them keep the old look.",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Open the main dashboard, then the Panels page.",
+     "expected_result": "Both pages show the new soft cream background, a centered page title at the top, and content wrapped in white cards with rounded corners and a thin olive border — neither page keeps the old honeydew look.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Cross-Page Consistency",
+       "Layout"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the alert center and look at the status badges and action buttons.",
+     "expected_result": "Status indicators still show a colored dot plus a word but are now pill-shaped badges, and primary action buttons like acknowledge are warm amber with white text.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Component Styling",
+       "Status Indicators"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "On the restyled Panels page, read the fleet rollup.",
+     "expected_result": "The fleet total still reads 62.95 kWh, presented inside a white rounded-corner card with a thin olive border like the other sections.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Component Styling",
+       "Data Integrity"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "On the restyled alert center, acknowledge the Chimney 3 alert and confirm when asked.",
+     "expected_result": "The confirmation step and the move to the resolved log still work as before, with the confirm control styled warm amber with white text and the Resolved badge shown as a pill.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow",
+       "Design Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 5,
+     "task": "In the report builder, click the East quick button and read the generated report.",
+     "expected_result": "The report shows 3 panels, combined output 24.20 kWh, average yield 25.3 (the plain mean of 30.0, 28.0 and 18.0 — not the size-weighted 25.5), best panel Corner 2, worst panel Chimney 3.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Rounding"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "source_website": "SolarEdge Monitoring Platform",
+   "source_feature": "Environmental Benefits view (CO2 and tree-equivalent impact statistics)",
+   "instruction": "Now show me the feel-good numbers: an environmental impact page. Take the fleet's weekly total from the panels page and turn it into CO2 avoided at 0.4 kg per kWh — this week's figure plus a projected year — and show the annual energy it rests on, which has to be the exact same weekly-times-52 number the savings calculator runs on. CO2 reads in kg with two decimals, but the moment a figure reaches 1,000 kg flip it to tonnes with two decimals instead of some four-digit kg monster. Give me a tree line too — figure one tree soaks up 21 kg of CO2 a year, divide the annual CO2 by that, and round down to whole trees, no fractional trees. And split this week's impact by array: South and East each with their kg and their percent share to one decimal, and those two shares better add up to 100.",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the environmental impact page and read the weekly and annual CO2 figures.",
+     "expected_result": "The weekly figure reads 25.18 kg (62.95 kWh x 0.4) and the annual projection reads 1.31 t — the 1,309.36 kg crosses the 1,000 kg line so it shows in tonnes with two decimals, not as 1,309.36 kg and not rounded to 1.3 t.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Derived Values",
+       "Value Formatting"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the environmental impact page, read the tree equivalence line.",
+     "expected_result": "It reads 62 trees — the annual 1,309.36 kg divided by 21 and rounded down to a whole number, not 62.4 trees and not the 1 tree a weekly-based calculation would give.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Derived Values",
+       "Rounding"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the environmental impact page, read the per-array impact split.",
+     "expected_result": "South shows 15.50 kg at 61.6% and East shows 9.68 kg at 38.4% — the two kg figures sum exactly to the weekly 25.18 kg and the two shares add up to exactly 100.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation",
+       "Derived Values"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Read the annual energy figure on the environmental impact page, then open the savings calculator and check the annual generation it uses.",
+     "expected_result": "Both read exactly 3,273.40 kWh — the impact page and the calculator share the same 52-week projection of the panels page's 62.95 kWh fleet weekly total, shown with two decimals.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Cross-Feature Consistency",
+       "Derived Values"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "Type 0.30 into the rate field and 9000 into the cost field, then replace the rate with the letters abc.",
+     "expected_result": "The last good results (yearly savings $982.02, payback 9 years 2 months) stay on screen with a small note about the invalid input — no blanked results, no NaN, no crash.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Error Handling"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "source_website": "SolarEdge Monitoring Platform",
+   "source_feature": "Power Flow Diagram",
+   "instruction": "Now the fun one: a live power flow page — an animated diagram of panels, battery, home, and grid with the current number on each flow, in kW with two decimals. Give me three inputs to play with: sun level as a percent, home load in kW, and battery percent, defaulted to 60. Generation is the fleet's rated capacity from the panels page scaled by the sun level; surplus charges the battery until it hits 100 and then spills to the grid, while a shortfall drains the battery down to a 20 floor before pulling from the grid. Whatever I type, the numbers have to balance — what the panels make plus whatever the battery or grid chips in always matches what the home takes plus whatever's being stored or exported, live as I type.",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the power flow page, type 100 into the sun level and 1.50 into the home load, leaving the battery at its default 60.",
+     "expected_result": "Generation reads 2.10 kW, the home takes 1.50 kW, the battery charges at 0.60 kW, and the grid shows 0.00 kW — the flows add up exactly.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "Conservation Invariant"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type 50 into the sun level and 3.00 into the home load, leaving the battery at 60.",
+     "expected_result": "Generation reads 1.05 kW and the 1.95 kW shortfall is covered by the battery discharging, with the grid at 0.00 kW — generation plus battery discharge equals the home's 3.00 kW.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation",
+       "State Logic"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type 100 into the battery percent, 100 into the sun level, and 1.00 into the home load.",
+     "expected_result": "With the battery already full, the 1.10 kW surplus flows entirely to the grid as export and the battery flow reads 0.00 kW.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Boundary Conditions",
+       "State Logic"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Type 100 into the sun level on the power flow page, then open the Panels page and read the fleet's total rated capacity.",
+     "expected_result": "The simulator's full-sun generation of 2.10 kW matches the 2,100 W rated capacity in the fleet rollup.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Cross-Feature Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 6,
+     "task": "On the historical chart, toggle the expected baseline on and leave peak sun hours at the default 5.0.",
+     "expected_result": "The performance readout shows 85.6% (62.95 kWh actual vs 73.50 kWh expected for the week) with a Watch health read — not 85.7%, not 86%, and not Healthy or Fault.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Derived Values",
+       "Rounding"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "source_website": "Enact Solar Monitoring App",
+   "source_feature": "System Health Status Indicator",
+   "instruction": "Bring it all together on a System Health page with one score. Start at 100, knock off 15 for every active alert in the alert center, and 10 more if the fleet's average yield — the plain average of the panels' yield figures — is under 30.0. 90 and up reads Healthy, 75 through 89 is Watch, below 75 is Fault, and I want the deductions listed out so I can see why, plus a to-do line for each active alert and one for low fleet yield if that's dinging me. When I go acknowledge an alert, the score should have caught up by the time I'm back on the page.",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the System Health page on a fresh load and read the score and its breakdown.",
+     "expected_result": "The score is 75 with a Watch health read (75 lands in Watch, not Fault), broken down as 100 minus 15 for the one active alert (Chimney 3) minus 10 because the fleet's average yield of 29.5 is under 30.0.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Derived Values",
+       "Boundary Conditions"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the System Health page, read the to-do list.",
+     "expected_result": "Exactly two to-do lines show — one for the active Chimney 3 alert and one for the low fleet average yield — matching the two deductions in the breakdown.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Consistency",
+       "Derived Values"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Compare the displayed score with the deduction lines on the System Health page.",
+     "expected_result": "The score equals 100 minus the sum of the listed deductions — the breakdown shown is internally consistent with the headline number.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Computed Fields",
+       "Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Go to the alert center, acknowledge the Chimney 3 alert and confirm, then return to the System Health page.",
+     "expected_result": "The score rises to exactly 90 with a Healthy read (90 is the Healthy boundary), and the to-do list drops to a single line about the low fleet yield.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Feature Updates",
+       "Boundary Conditions"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 8,
+     "task": "Open the environmental impact page and read the weekly and annual CO2 figures.",
+     "expected_result": "The weekly figure reads 25.18 kg (62.95 kWh x 0.4) and the annual projection reads 1.31 t — the 1,309.36 kg crosses the 1,000 kg line so it shows in tonnes with two decimals, not as 1,309.36 kg and not rounded to 1.3 t.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Derived Values",
+       "Value Formatting"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "target_app_summary": "The solar dashboard has grown into a full home-solar operations platform. A panel fleet registry with per-array rollups and yield rankings became the backbone: it feeds a live-typing savings and payback calculator, a threshold-based alert workflow with rules, an active list and a resolved log, a copyable panel report builder, an expected-vs-actual performance overlay on the historical chart, an environmental impact page that converts fleet output into CO2 avoided and tree equivalents, a physics-honest power flow simulator, and finally a System Health score that reconciles the alert center and fleet yields into one graded number with to-dos. A design refresh mid-way moved the whole app from honeydew to a cream-and-amber card system. The graph is hub-and-spoke around the registry (T2, itself built off the base dashboard, feeds every later turn) with one deep chain rooted at the base — base to registry to alert center to health score — so early breakage compounds; three app-wide conventions (two-decimal kWh, invalid-input-never-blanks, dot-plus-word statuses) are tested silently on every new surface.",
+ "dependency_graph": {
+  "nodes": [
+   {
+    "id": "T1",
+    "label": "base app",
+    "archetype": "base"
+   },
+   {
+    "id": "T2",
+    "label": "Panel performance registry",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T3",
+    "label": "Savings & payback calculator",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T4",
+    "label": "Alert center workflow",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T5",
+    "label": "Panel report builder",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T6",
+    "label": "Expected baseline overlay",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T7",
+    "label": "Cream & amber restyle",
+    "archetype": "design-restyle"
+   },
+   {
+    "id": "T8",
+    "label": "Environmental impact page",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T9",
+    "label": "Power flow simulator",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T10",
+    "label": "System health score",
+    "archetype": "derived-state"
+   }
+  ],
+  "edges": [
+   {
+    "from": "T1",
+    "to": "T2",
+    "what": "panels page breaks the base dashboard's generation figures down per panel"
+   },
+   {
+    "from": "T2",
+    "to": "T3",
+    "what": "fleet weekly total (62.95 kWh) x 52 drives annual savings"
+   },
+   {
+    "from": "T2",
+    "to": "T4",
+    "what": "panel yield figures evaluated against alert rules"
+   },
+   {
+    "from": "T2",
+    "to": "T5",
+    "what": "selected panels' outputs and yields aggregated into report"
+   },
+   {
+    "from": "T2",
+    "to": "T6",
+    "what": "fleet rated capacity and weekly actual feed expected baseline and ratio"
+   },
+   {
+    "from": "T1",
+    "to": "T6",
+    "what": "overlays baseline on the base historical chart"
+   },
+   {
+    "from": "T1",
+    "to": "T7",
+    "what": "restyles the base dashboard"
+   },
+   {
+    "from": "T2",
+    "to": "T7",
+    "what": "restyles the panels page"
+   },
+   {
+    "from": "T3",
+    "to": "T7",
+    "what": "restyles the calculator page"
+   },
+   {
+    "from": "T4",
+    "to": "T7",
+    "what": "restyles the alert center"
+   },
+   {
+    "from": "T2",
+    "to": "T8",
+    "what": "fleet weekly total (62.95 kWh) converts into all CO2 figures"
+   },
+   {
+    "from": "T3",
+    "to": "T8",
+    "what": "annual CO2 rides on the calculator's 3,273.40 kWh weekly-times-52 basis"
+   },
+   {
+    "from": "T2",
+    "to": "T9",
+    "what": "full-sun generation equals fleet rated 2.10 kW"
+   },
+   {
+    "from": "T4",
+    "to": "T10",
+    "what": "score deducts 15 per active alert; acknowledging updates it"
+   },
+   {
+    "from": "T2",
+    "to": "T10",
+    "what": "fleet average yield (29.5) triggers the under-30 penalty"
+   }
+  ]
+ },
+ "global_rules": [
+  {
+   "rule": "Energy values are always displayed as kWh with exactly two decimals (9.00 kWh, 62.95 kWh) everywhere in the app.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Invalid input never blanks a result anywhere: the last valid output stays on screen alongside a small note about the bad input.",
+   "introduced_in_turn": 3
+  },
+  {
+   "rule": "Every status or health indicator is a colored dot plus a word (red dot 'Active', green dot 'Resolved'), never color alone.",
+   "introduced_in_turn": 4
+  }
+ ],
+ "pinned_seed": {
+  "entity": "6 solar panels across two arrays",
+  "introduced_in_turn": 2,
+  "records_gist": "South: Peak 1 400W/14.00kWh, Ridge West 400W/13.20, Ridge East 350W/11.55; East: Gable 1 350W/9.80, Corner 2 300W/9.00, Chimney 3 300W/5.40 — fleet 2,100W rated, 62.95 kWh/week"
+ }
+}

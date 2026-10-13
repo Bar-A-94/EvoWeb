@@ -1,0 +1,857 @@
+{
+ "anchors": [
+  {
+   "en": "Panels",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    7,
+    9
+   ],
+   "translations": {
+    "es": "Paneles",
+    "zh": "面板",
+    "he": "פאנלים",
+    "hi": "पैनल",
+    "sw": "Paneli",
+    "de": "Paneele",
+    "fr": "Panneaux"
+   }
+  },
+  {
+   "en": "Peak 1",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    3,
+    5
+   ],
+   "translations": {
+    "es": "Cumbre 1",
+    "zh": "顶峰 1",
+    "he": "פסגה 1",
+    "hi": "चोटी 1",
+    "sw": "Kilele 1",
+    "de": "Gipfel 1",
+    "fr": "Sommet 1"
+   }
+  },
+  {
+   "en": "Ridge West",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "translations": {
+    "es": "Cumbrera Oeste",
+    "zh": "屋脊西",
+    "he": "רכס מערב",
+    "hi": "रिज पश्चिम",
+    "sw": "Mgongo Magharibi",
+    "de": "First West",
+    "fr": "Faîtage Ouest"
+   }
+  },
+  {
+   "en": "Ridge East",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "translations": {
+    "es": "Cumbrera Este",
+    "zh": "屋脊东",
+    "he": "רכס מזרח",
+    "hi": "रिज पूर्व",
+    "sw": "Mgongo Mashariki",
+    "de": "First Ost",
+    "fr": "Faîtage Est"
+   }
+  },
+  {
+   "en": "Gable 1",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    3,
+    4,
+    6
+   ],
+   "translations": {
+    "es": "Hastial 1",
+    "zh": "山墙 1",
+    "he": "גמלון 1",
+    "hi": "गेबल 1",
+    "sw": "Ukuta wa Paa 1",
+    "de": "Giebel 1",
+    "fr": "Pignon 1"
+   }
+  },
+  {
+   "en": "Corner 2",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "translations": {
+    "es": "Esquina 2",
+    "zh": "角落 2",
+    "he": "פינה 2",
+    "hi": "कोना 2",
+    "sw": "Kona 2",
+    "de": "Ecke 2",
+    "fr": "Coin 2"
+   }
+  },
+  {
+   "en": "Chimney 3",
+   "class": "translate",
+   "kind": "content_text",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    10
+   ],
+   "translations": {
+    "es": "Chimenea 3",
+    "zh": "烟囱 3",
+    "he": "ארובה 3",
+    "hi": "चिमनी 3",
+    "sw": "Bomba la Moshi 3",
+    "de": "Schornstein 3",
+    "fr": "Cheminée 3"
+   }
+  },
+  {
+   "en": "South",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    5,
+    8
+   ],
+   "translations": {
+    "es": "Sur",
+    "zh": "南",
+    "he": "דרום",
+    "hi": "दक्षिण",
+    "sw": "Kusini",
+    "de": "Süd",
+    "fr": "Sud"
+   }
+  },
+  {
+   "en": "East",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "translations": {
+    "es": "Este",
+    "zh": "东",
+    "he": "מזרח",
+    "hi": "पूर्व",
+    "sw": "Mashariki",
+    "de": "Ost",
+    "fr": "Est"
+   }
+  },
+  {
+   "en": "fleet",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "translations": {
+    "es": "flota",
+    "zh": "全站",
+    "he": "כלל המערכת",
+    "hi": "फ्लीट",
+    "sw": "mfumo mzima",
+    "de": "Gesamtanlage",
+    "fr": "parc"
+   }
+  },
+  {
+   "en": "yield",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    7,
+    10
+   ],
+   "translations": {
+    "es": "rendimiento",
+    "zh": "产出率",
+    "he": "תשואה",
+    "hi": "यील्ड",
+    "sw": "tija",
+    "de": "Ertrag",
+    "fr": "rendement"
+   }
+  },
+  {
+   "en": "savings calculator",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    4,
+    8
+   ],
+   "translations": {
+    "es": "calculadora de ahorro",
+    "zh": "节省计算器",
+    "he": "מחשבון חיסכון",
+    "hi": "बचत कैलकुलेटर",
+    "sw": "kikokotoo cha akiba",
+    "de": "Sparrechner",
+    "fr": "calculateur d'économies"
+   }
+  },
+  {
+   "en": "alert center",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4,
+    6,
+    7,
+    10
+   ],
+   "translations": {
+    "es": "centro de alertas",
+    "zh": "警报中心",
+    "he": "מרכז התראות",
+    "hi": "अलर्ट सेंटर",
+    "sw": "kituo cha tahadhari",
+    "de": "Alarmzentrale",
+    "fr": "centre d'alertes"
+   }
+  },
+  {
+   "en": "report builder",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5,
+    7
+   ],
+   "translations": {
+    "es": "generador de informes",
+    "zh": "报告生成器",
+    "he": "בונה דוחות",
+    "hi": "रिपोर्ट बिल्डर",
+    "sw": "kitengeneza ripoti",
+    "de": "Berichtsgenerator",
+    "fr": "générateur de rapports"
+   }
+  },
+  {
+   "en": "environmental impact",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    8,
+    10
+   ],
+   "translations": {
+    "es": "impacto ambiental",
+    "zh": "环境影响",
+    "he": "השפעה סביבתית",
+    "hi": "पर्यावरणीय प्रभाव",
+    "sw": "athari za mazingira",
+    "de": "Umweltbilanz",
+    "fr": "impact environnemental"
+   }
+  },
+  {
+   "en": "power flow",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    9
+   ],
+   "translations": {
+    "es": "flujo de energía",
+    "zh": "能量流",
+    "he": "זרימת אנרגיה",
+    "hi": "पावर फ्लो",
+    "sw": "mtiririko wa nishati",
+    "de": "Energiefluss",
+    "fr": "flux d'énergie"
+   }
+  },
+  {
+   "en": "System Health",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    10
+   ],
+   "translations": {
+    "es": "Estado del Sistema",
+    "zh": "系统健康",
+    "he": "תקינות המערכת",
+    "hi": "सिस्टम हेल्थ",
+    "sw": "Afya ya Mfumo",
+    "de": "Systemzustand",
+    "fr": "État du Système"
+   }
+  },
+  {
+   "en": "historical data",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    1,
+    2
+   ],
+   "translations": {
+    "es": "datos históricos",
+    "zh": "历史数据",
+    "he": "נתונים היסטוריים",
+    "hi": "ऐतिहासिक डेटा",
+    "sw": "data ya kihistoria",
+    "de": "historische Daten",
+    "fr": "données historiques"
+   }
+  },
+  {
+   "en": "historical chart",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    6,
+    9
+   ],
+   "translations": {
+    "es": "gráfico histórico",
+    "zh": "历史图表",
+    "he": "גרף היסטורי",
+    "hi": "ऐतिहासिक चार्ट",
+    "sw": "chati ya kihistoria",
+    "de": "Verlaufsdiagramm",
+    "fr": "graphique historique"
+   }
+  },
+  {
+   "en": "real-time data",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    1
+   ],
+   "translations": {
+    "es": "datos en tiempo real",
+    "zh": "实时数据",
+    "he": "נתונים בזמן אמת",
+    "hi": "रियल-टाइम डेटा",
+    "sw": "data ya wakati halisi",
+    "de": "Echtzeitdaten",
+    "fr": "données en temps réel"
+   }
+  },
+  {
+   "en": "solar power generation",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    1
+   ],
+   "translations": {
+    "es": "generación solar",
+    "zh": "太阳能发电量",
+    "he": "ייצור סולארי",
+    "hi": "सौर उत्पादन",
+    "sw": "uzalishaji wa jua",
+    "de": "Solarstromerzeugung",
+    "fr": "production solaire"
+   }
+  },
+  {
+   "en": "power consumption",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    1
+   ],
+   "translations": {
+    "es": "consumo eléctrico",
+    "zh": "用电量",
+    "he": "צריכת חשמל",
+    "hi": "बिजली खपत",
+    "sw": "matumizi ya umeme",
+    "de": "Stromverbrauch",
+    "fr": "consommation électrique"
+   }
+  },
+  {
+   "en": "battery percentage",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    1
+   ],
+   "translations": {
+    "es": "porcentaje de batería",
+    "zh": "电池百分比",
+    "he": "אחוז הסוללה",
+    "hi": "बैटरी प्रतिशत",
+    "sw": "asilimia ya betri",
+    "de": "Batterieprozentsatz",
+    "fr": "pourcentage de batterie"
+   }
+  },
+  {
+   "en": "Healthy",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    6,
+    9,
+    10
+   ],
+   "translations": {
+    "es": "Saludable",
+    "zh": "健康",
+    "he": "תקין",
+    "hi": "स्वस्थ",
+    "sw": "Nzuri",
+    "de": "Gesund",
+    "fr": "Sain"
+   }
+  },
+  {
+   "en": "Watch",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    6,
+    9,
+    10
+   ],
+   "translations": {
+    "es": "Vigilancia",
+    "zh": "关注",
+    "he": "מעקב",
+    "hi": "निगरानी",
+    "sw": "Angalizo",
+    "de": "Beobachtung",
+    "fr": "Surveillance"
+   }
+  },
+  {
+   "en": "Fault",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    6,
+    9,
+    10
+   ],
+   "translations": {
+    "es": "Falla",
+    "zh": "故障",
+    "he": "תקלה",
+    "hi": "खराबी",
+    "sw": "Hitilafu",
+    "de": "Störung",
+    "fr": "Panne"
+   }
+  },
+  {
+   "en": "Active",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4
+   ],
+   "translations": {
+    "es": "Activa",
+    "zh": "活动",
+    "he": "פעילה",
+    "hi": "सक्रिय",
+    "sw": "Hai",
+    "de": "Aktiv",
+    "fr": "Active"
+   }
+  },
+  {
+   "en": "Resolved",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    4,
+    7
+   ],
+   "translations": {
+    "es": "Resuelta",
+    "zh": "已解决",
+    "he": "טופלה",
+    "hi": "हल हो गया",
+    "sw": "Imetatuliwa",
+    "de": "Erledigt",
+    "fr": "Résolue"
+   }
+  },
+  {
+   "en": "everything",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5
+   ],
+   "translations": {
+    "es": "todo",
+    "zh": "全部",
+    "he": "הכול",
+    "hi": "सभी",
+    "sw": "zote",
+    "de": "alle",
+    "fr": "tout"
+   }
+  },
+  {
+   "en": "none",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    5
+   ],
+   "translations": {
+    "es": "ninguno",
+    "zh": "无",
+    "he": "ללא",
+    "hi": "कोई नहीं",
+    "sw": "hakuna",
+    "de": "keine",
+    "fr": "aucun"
+   }
+  },
+  {
+   "en": "electricity rate",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    4
+   ],
+   "translations": {
+    "es": "tarifa eléctrica",
+    "zh": "电价",
+    "he": "תעריף חשמל",
+    "hi": "बिजली दर",
+    "sw": "bei ya umeme",
+    "de": "Stromtarif",
+    "fr": "tarif électrique"
+   }
+  },
+  {
+   "en": "system cost",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    4
+   ],
+   "translations": {
+    "es": "costo del sistema",
+    "zh": "系统成本",
+    "he": "עלות המערכת",
+    "hi": "सिस्टम लागत",
+    "sw": "gharama ya mfumo",
+    "de": "Systemkosten",
+    "fr": "coût du système"
+   }
+  },
+  {
+   "en": "rate",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    4,
+    8
+   ],
+   "translations": {
+    "es": "tarifa",
+    "zh": "电价",
+    "he": "תעריף",
+    "hi": "दर",
+    "sw": "bei",
+    "de": "Tarif",
+    "fr": "tarif"
+   }
+  },
+  {
+   "en": "cost",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    4,
+    8
+   ],
+   "translations": {
+    "es": "costo",
+    "zh": "成本",
+    "he": "עלות",
+    "hi": "लागत",
+    "sw": "gharama",
+    "de": "Kosten",
+    "fr": "coût"
+   }
+  },
+  {
+   "en": "sun level",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    9
+   ],
+   "translations": {
+    "es": "nivel de sol",
+    "zh": "日照强度",
+    "he": "עוצמת שמש",
+    "hi": "धूप स्तर",
+    "sw": "kiwango cha jua",
+    "de": "Sonnenintensität",
+    "fr": "niveau de soleil"
+   }
+  },
+  {
+   "en": "home load",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    9
+   ],
+   "translations": {
+    "es": "consumo del hogar",
+    "zh": "家庭负载",
+    "he": "עומס הבית",
+    "hi": "घरेलू लोड",
+    "sw": "mzigo wa nyumbani",
+    "de": "Hauslast",
+    "fr": "consommation du foyer"
+   }
+  },
+  {
+   "en": "battery percent",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    9
+   ],
+   "translations": {
+    "es": "porcentaje de batería",
+    "zh": "电池百分比",
+    "he": "אחוז הסוללה",
+    "hi": "बैटरी प्रतिशत",
+    "sw": "asilimia ya betri",
+    "de": "Batterieprozentsatz",
+    "fr": "pourcentage de batterie"
+   }
+  },
+  {
+   "en": "peak sun hours",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    6,
+    9
+   ],
+   "translations": {
+    "es": "horas de sol pico",
+    "zh": "峰值日照小时数",
+    "he": "שעות שמש שיא",
+    "hi": "पीक सन आवर्स",
+    "sw": "saa za jua kilele",
+    "de": "Spitzensonnenstunden",
+    "fr": "heures de soleil de pointe"
+   }
+  },
+  {
+   "en": "expected baseline",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    6,
+    9
+   ],
+   "translations": {
+    "es": "línea base esperada",
+    "zh": "预期基准线",
+    "he": "קו בסיס צפוי",
+    "hi": "अपेक्षित बेसलाइन",
+    "sw": "msingi unaotarajiwa",
+    "de": "erwartete Basislinie",
+    "fr": "ligne de base attendue"
+   }
+  },
+  {
+   "en": "yearly savings",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    8
+   ],
+   "translations": {
+    "es": "ahorro anual",
+    "zh": "年度节省",
+    "he": "חיסכון שנתי",
+    "hi": "वार्षिक बचत",
+    "sw": "akiba ya mwaka",
+    "de": "jährliche Ersparnis",
+    "fr": "économies annuelles"
+   }
+  },
+  {
+   "en": "payback",
+   "class": "translate",
+   "kind": "ui_label",
+   "turns": [
+    3,
+    4,
+    8
+   ],
+   "translations": {
+    "es": "periodo de recuperación",
+    "zh": "回本时间",
+    "he": "זמן החזר",
+    "hi": "पेबैक अवधि",
+    "sw": "muda wa marejesho",
+    "de": "Amortisationszeit",
+    "fr": "délai de rentabilité"
+   }
+  },
+  {
+   "en": "honeydew",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    1,
+    7
+   ]
+  },
+  {
+   "en": "dark olive green",
+   "class": "keep",
+   "kind": "css_visual",
+   "turns": [
+    1
+   ]
+  },
+  {
+   "en": "kWh",
+   "class": "keep",
+   "kind": "value_format",
+   "turns": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  {
+   "en": "kW",
+   "class": "keep",
+   "kind": "value_format",
+   "turns": [
+    2,
+    9
+   ]
+  },
+  {
+   "en": "W",
+   "class": "keep",
+   "kind": "value_format",
+   "turns": [
+    2,
+    5,
+    9
+   ]
+  },
+  {
+   "en": "kg",
+   "class": "keep",
+   "kind": "value_format",
+   "turns": [
+    8,
+    10
+   ]
+  },
+  {
+   "en": "CO2",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    8,
+    10
+   ]
+  },
+  {
+   "en": "NaN",
+   "class": "keep",
+   "kind": "tech",
+   "turns": [
+    3,
+    5,
+    8
+   ]
+  }
+ ]
+}

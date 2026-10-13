@@ -1,0 +1,588 @@
+{
+  "index": 5,
+  "status": "success",
+  "model": "anthropic/claude-haiku-4-5-20251001",
+  "generator": "openhands",
+  "base_trajectory": {
+    "source": "none",
+    "messages": 0
+  },
+  "artifacts": {
+    "zip": null,
+    "run_json": null,
+    "generator": "openhands",
+    "screenshots": [
+      "/output/000005/screenshots/task000005_0.png",
+      "/output/000005/screenshots/task000005_1.png",
+      "/output/000005/screenshots/task000005_2.png",
+      "/output/000005/screenshots/task000005_3.png",
+      "/output/000005/screenshots/task000005_4.png"
+    ],
+    "output_dir": "/output/000005"
+  },
+  "ladder": {
+    "turns_expected": 10,
+    "turns_completed": 10,
+    "complete": true
+  },
+  "eval_model": "claude-sonnet-4-6",
+  "accuracy": 67.0,
+  "yes": 33,
+  "partial": 1,
+  "no": 16,
+  "total": 50,
+  "tasks": [
+    {
+      "task_idx": 0,
+      "task": "Test the form submission functionality by inputting valid personal information and credit status details.",
+      "expected": "The form should submit successfully without errors, and a confirmation message should display indicating the lead information was recorded.",
+      "verdict": "no"
+    },
+    {
+      "task_idx": 1,
+      "task": "Verify the credit score inquiry function by accessing the feature and submitting a valid input.",
+      "expected": "The system should process the inquiry without errors and provide appropriate feedback or next steps for the user regarding their credit score.",
+      "verdict": "no"
+    },
+    {
+      "task_idx": 2,
+      "task": "Ensure content accuracy by reviewing the informational text on credit repair services presented on the homepage.",
+      "expected": "The content should be relevant, free of grammatical errors, and provide a clear introduction and explanation of the credit repair services offered by the company.",
+      "verdict": "no"
+    },
+    {
+      "task_idx": 3,
+      "task": "Check and navigate to an introduction to credit repair services.",
+      "expected": "The website shows an introduction to credit repair services.",
+      "verdict": "no"
+    },
+    {
+      "task_idx": 4,
+      "task": "Verify that the website uses 'old lace' as the background color and 'rosy brown' as the component color, as specified in the design requirements.",
+      "expected": "The website has a background color of 'old lace' and components (such as buttons, cards, headers, etc.) are styled with the color 'rosy brown', accurately reflecting the design instruction.",
+      "verdict": "no"
+    }
+  ],
+  "turns": [
+    {
+      "turn": 1,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": false,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Test the form submission functionality by inputting valid personal information and credit status details.",
+          "expected": "The form should submit successfully without errors, and a confirmation message should display indicating the lead information was recorded.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Verify the credit score inquiry function by accessing the feature and submitting a valid input.",
+          "expected": "The system should process the inquiry without errors and provide appropriate feedback or next steps for the user regarding their credit score.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Ensure content accuracy by reviewing the informational text on credit repair services presented on the homepage.",
+          "expected": "The content should be relevant, free of grammatical errors, and provide a clear introduction and explanation of the credit repair services offered by the company.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Check and navigate to an introduction to credit repair services.",
+          "expected": "The website shows an introduction to credit repair services.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Verify that the website uses 'old lace' as the background color and 'rosy brown' as the component color, as specified in the design requirements.",
+          "expected": "The website has a background color of 'old lace' and components (such as buttons, cards, headers, etc.) are styled with the color 'rosy brown', accurately reflecting the design instruction.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 0,
+      "partial": 0,
+      "no": 5,
+      "total": 5,
+      "accuracy": 0.0,
+      "cost": {
+        "generation_usd": 0.059112,
+        "model_calls": 2,
+        "input_tokens_total": 26590,
+        "output_tokens": 8072,
+        "judge_usd": 0.2569
+      }
+    },
+    {
+      "turn": 2,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Score Improvement Estimator, type 820 as the current score, and type 3 into the collections field, leaving late payments and hard inquiries at 0.",
+          "expected": "The projected score displays as 850 (Excellent) — capped at the maximum — not 895.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the Score Improvement Estimator, type 545 as the current score, then type 2 into the collections field, without clicking any calculate or submit button.",
+          "expected": "The projection updates by itself as values are typed: the current score is shown as 545 (Poor) and the projected score as 595 (Fair).",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the Score Improvement Estimator, enter 600 as the current score, 1 collection, and 1 late payment.",
+          "expected": "The projected score reads 640 (Fair) and the recommended plan is Standard — the 40-point gain falls in the 40-75 range, not in Basic.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Submit a credit score inquiry entering 640 as the current score along with any other required details, then click the 'project my improvement' option it offers.",
+          "expected": "The Score Improvement Estimator opens with 640 already filled in as the current score, displayed as 640 (Fair).",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Fill out the lead form with valid personal information and credit status details and submit it.",
+          "expected": "The form submits successfully and a confirmation message appears indicating the lead information was recorded.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 1,
+      "partial": 0,
+      "no": 4,
+      "total": 5,
+      "accuracy": 20.0,
+      "cost": {
+        "generation_usd": 0.133167,
+        "model_calls": 11,
+        "input_tokens_total": 370407,
+        "output_tokens": 13368,
+        "judge_usd": 0.8638
+      }
+    },
+    {
+      "turn": 3,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Client Success Stories page and sort by biggest gain with no filters applied.",
+          "expected": "The list starts Sofia (+112 pts), Marcus (+84 pts), then Priya (+67 pts) ahead of Denise (+67 pts) because Priya's 4-month program is shorter, and the average gain for the visible stories reads +64.6 pts — not +64 or +64.57.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the Client Success Stories page, filter to the Premium plan only.",
+          "expected": "Only Sofia, Marcus, and Priya remain visible, and the average gain updates to +87.7 pts.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the Client Success Stories page, type 60 into the minimum points gained filter.",
+          "expected": "Only the four stories with gains of 60 or more remain (Sofia, Marcus, Priya, Denise), and the average gain reads +82.5 pts.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "On the Client Success Stories page, look at Sofia from Phoenix's entry and how her two scores are displayed.",
+          "expected": "Both scores carry band labels — the starting score shows as 559 (Poor) and the current score as 671 (Good).",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Score Improvement Estimator, type 820 as the current score, and type 3 into the collections field, leaving late payments and hard inquiries at 0.",
+          "expected": "The projected score displays as 850 (Excellent) — capped at the maximum — not 895.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 4,
+      "partial": 0,
+      "no": 1,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.137425,
+        "model_calls": 9,
+        "input_tokens_total": 415043,
+        "output_tokens": 7856,
+        "judge_usd": 0.5339
+      }
+    },
+    {
+      "turn": 4,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "In the Dispute Letter Builder, select Equifax as the bureau, choose 'Not my account' as the reason, type 'Capital One' as the creditor name, and type '44127788' as the account number.",
+          "expected": "A valid letter preview is produced whose reference code reads exactly EQ-CAPI-8.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the Dispute Letter Builder, type 'Midland' into the creditor name field and watch the letter preview, without clicking any generate or submit button.",
+          "expected": "The letter preview updates on its own to include the creditor name Midland as it is typed.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the Dispute Letter Builder, select Experian, pick any reason, type 'Cavalry' as the creditor, and type '12ab' as the account number.",
+          "expected": "A validation message flags the account number (digits only, 4 to 16 digits) and no valid copyable letter or reference code is produced.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "On the home page, submit the lead form with the name 'Gloria Mendez' and valid details in the other fields, then open the Dispute Letter Builder and build a valid letter: Equifax, any reason, creditor 'Midland', account number '12345678'.",
+          "expected": "The letter preview's signature line reads 'Gloria Mendez', carried over from the lead form submission instead of the '[Your Name]' placeholder.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Client Success Stories page and sort by biggest gain with no filters applied.",
+          "expected": "The list starts Sofia (+112 pts), Marcus (+84 pts), then Priya (+67 pts) ahead of Denise (+67 pts) because Priya's 4-month program is shorter, and the average gain for the visible stories reads +64.6 pts — not +64 or +64.57.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.144837,
+        "model_calls": 7,
+        "input_tokens_total": 392162,
+        "output_tokens": 7544,
+        "judge_usd": 0.4943
+      }
+    },
+    {
+      "turn": 5,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the dispute tracker and check the available status actions on the Portfolio Recovery case, which starts as a Draft.",
+          "expected": "The only forward move offered is to Sent — there is no option to mark a Draft case as Resolved directly.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the dispute tracker and look at the Sent status group.",
+          "expected": "It contains exactly two cases: Midland Funding (TransUnion) and LVNV Funding (Equifax).",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the dispute tracker, move the Midland Funding (TransUnion) case from Sent to Resolved.",
+          "expected": "The case now appears under Resolved alongside First Premier Bank, the Sent group contains only LVNV Funding, and any displayed group tallies stay consistent with that (1 Sent, 2 Resolved).",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the Dispute Letter Builder, build a valid letter for TransUnion, creditor 'Cavalry', account number '55661234', any reason, use the save-to-my-disputes action, then open the dispute tracker.",
+          "expected": "A new Draft case for Cavalry at TransUnion appears in the tracker's Draft group alongside the two preloaded drafts.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the Dispute Letter Builder, select Equifax as the bureau, choose 'Not my account' as the reason, type 'Capital One' as the creditor name, and type '44127788' as the account number.",
+          "expected": "A valid letter preview is produced whose reference code reads exactly EQ-CAPI-8.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 1,
+      "no": 0,
+      "total": 5,
+      "accuracy": 90.0,
+      "cost": {
+        "generation_usd": 0.112558,
+        "model_calls": 7,
+        "input_tokens_total": 475572,
+        "output_tokens": 7701,
+        "judge_usd": 0.2424
+      }
+    },
+    {
+      "turn": 6,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Impact Dashboard and read the average gain stat.",
+          "expected": "The average gain reads +64.6 pts — not +64, +64.5, or +64.57.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the Impact Dashboard, read the clients-helped and total-points-recovered stats.",
+          "expected": "Clients helped shows 7 and total points recovered shows +452 pts.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the Impact Dashboard, check the best-result spotlight.",
+          "expected": "It highlights Sofia from Phoenix with +112 pts.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Note the items-resolved stat on the Impact Dashboard, then go to the dispute tracker, move the LVNV Funding case from Sent to Resolved, and return to the dashboard.",
+          "expected": "The items-resolved stat has increased from 1 to 2.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the Score Improvement Estimator, type 545 as the current score, then type 2 into the collections field, without clicking any calculate or submit button.",
+          "expected": "The projection updates by itself as values are typed: the current score is shown as 545 (Poor) and the projected score as 595 (Fair).",
+          "verdict": "no"
+        }
+      ],
+      "yes": 4,
+      "partial": 0,
+      "no": 1,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.119006,
+        "model_calls": 7,
+        "input_tokens_total": 552433,
+        "output_tokens": 7416,
+        "judge_usd": 0.3066
+      }
+    },
+    {
+      "turn": 7,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Visit the success stories page, the dispute tracker, and the impact dashboard, checking each page's title and footer.",
+          "expected": "On all three pages the page title is centered and a centered footer tagline reading exactly 'Rebuild. Restore. Rise.' is present.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Look at the lead form's submit button on the home page and the main action button (copy or save) on the Dispute Letter Builder.",
+          "expected": "Both buttons have a saddle brown background with white text.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Look at the plan badges on the success stories page and the status badges on the dispute tracker.",
+          "expected": "Both render as pill-shaped badges with white text on rosy brown, consistent across the two pages.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the Dispute Letter Builder, build a valid letter (TransUnion, creditor 'Cavalry', account number '55661234', any reason), save it to disputes, and find the new case in the dispute tracker.",
+          "expected": "The newly created Draft case's status badge already uses the pill style with white text on rosy brown, matching the preloaded cases.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the dispute tracker and check the available status actions on the Portfolio Recovery case, which starts as a Draft.",
+          "expected": "The only forward move offered is to Sent — there is no option to mark a Draft case as Resolved directly.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 0,
+      "no": 1,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.401493,
+        "model_calls": 19,
+        "input_tokens_total": 1277711,
+        "output_tokens": 26982,
+        "judge_usd": 0.6052
+      }
+    },
+    {
+      "turn": 8,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Start the enrollment flow, pick the Standard plan, add the credit monitoring add-on, enter name 'Dana Cole' and email 'dana@mail.com' in the contact step, and continue to the review step.",
+          "expected": "The review shows a monthly total of $99.98 and a first payment of $124.98, which includes the $25.00 one-time setup fee.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Go through the enrollment flow choosing Premium with the rush processing add-on, enter name 'Dana Cole' and email 'dana@mail.com', and reach the review step.",
+          "expected": "The monthly total shows $149.98 and the first payment also equals $149.98 — no $25.00 setup fee is added because Premium waives it.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the enrollment contact step, enter name 'Bo' and email 'bo@' and try to continue, then correct the email to 'bo@mail.com' and continue again.",
+          "expected": "The invalid email blocks progression with a validation error, and after the correction the review step is reachable.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "On the Score Improvement Estimator, enter current score 600, 1 collection, and 1 late payment, then use the enroll option on its plan recommendation.",
+          "expected": "The enrollment flow opens with the Standard plan already selected, matching the estimator's recommendation for the 40-point gain.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the Client Success Stories page, filter to the Premium plan only.",
+          "expected": "Only Sofia, Marcus, and Priya remain visible, and the average gain updates to +87.7 pts.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 0,
+      "no": 1,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.232188,
+        "model_calls": 9,
+        "input_tokens_total": 770311,
+        "output_tokens": 11626,
+        "judge_usd": 0.6513
+      }
+    },
+    {
+      "turn": 9,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Dispute Strategy Advisor page, count the creditor cards, and check which card sits on top.",
+          "expected": "Exactly 4 creditor cards appear — Midland Funding's two cases roll into one card, not 5 per-case cards — and Midland Funding sits first with a 'multi-bureau' tag and a priority of 7 (2 points each for its two unresolved cases plus the 3-point multi-bureau bonus), not 4.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the Dispute Strategy Advisor, check the order and priority scores of the cards below Midland Funding.",
+          "expected": "LVNV Funding and Portfolio Recovery both show priority 2, with LVNV Funding listed first on the alphabetical tie-break, and First Premier Bank sits last at priority 0.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the Dispute Strategy Advisor, read the next-move line on the Midland Funding, LVNV Funding, and First Premier Bank cards.",
+          "expected": "Midland Funding says 'Send the pending letter' — its Equifax case is still a Draft even though its TransUnion case was Sent — LVNV Funding says 'Await the bureau's response', and First Premier Bank says 'Request an updated credit report'.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the dispute tracker, move the Portfolio Recovery case from Draft to Sent, then open the Dispute Strategy Advisor page.",
+          "expected": "Portfolio Recovery's card now reads 'Await the bureau's response' instead of 'Send the pending letter', its priority stays 2, and it still sits after LVNV Funding.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Impact Dashboard and read the average gain stat.",
+          "expected": "The average gain reads +64.6 pts — not +64, +64.5, or +64.57.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 0,
+      "no": 1,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.422955,
+        "model_calls": 16,
+        "input_tokens_total": 1372189,
+        "output_tokens": 14669,
+        "judge_usd": 0.552
+      }
+    },
+    {
+      "turn": 10,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the consultation booking page and view Angela Ruiz's available slots.",
+          "expected": "Exactly two open slots show for Angela — Monday 9:00 AM and Monday 2:00 PM — because Robert M.'s existing booking takes Tuesday 10:00 AM.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the consultations list, cancel Robert M.'s booking, then view Angela Ruiz's available slots.",
+          "expected": "Tuesday 10:00 AM is offered again among Angela's open slots.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Start booking Marcus Webb's Wednesday 4:00 PM slot, enter name 'Lena' and email 'lena@', try to continue, then correct the email to 'lena@mail.com' and continue again.",
+          "expected": "The invalid email blocks progress with a validation error, and after the correction the review step is reachable.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Pick Angela Ruiz and select her Monday 9:00 AM slot, then click the booking flow's 'Start over' control.",
+          "expected": "The flow resets to its initial state with no advisor or slot selected, and Monday 9:00 AM remains available since nothing was booked.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Start the enrollment flow, pick the Standard plan, add the credit monitoring add-on, enter name 'Dana Cole' and email 'dana@mail.com' in the contact step, and continue to the review step.",
+          "expected": "The review shows a monthly total of $99.98 and a first payment of $124.98, which includes the $25.00 one-time setup fee.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 3,
+      "partial": 0,
+      "no": 2,
+      "total": 5,
+      "accuracy": 60.0,
+      "cost": {
+        "generation_usd": 0.18239,
+        "model_calls": 6,
+        "input_tokens_total": 458078,
+        "output_tokens": 10396,
+        "judge_usd": 0.5639
+      }
+    }
+  ]
+}

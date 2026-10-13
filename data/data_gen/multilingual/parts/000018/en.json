@@ -1,0 +1,845 @@
+{
+ "id": "000018",
+ "instruction": "Please implement a house cleaning service website that provides cleaning services. The website should have functionalities for booking services, service inquiry, and contact us. Users should be able to browse the website, understand the details of the cleaning services, book cleaning services, check service status, and contact customer service staff by phone number and email address. Set the background to azure mist, and apply dark slate blue to components.",
+ "Category": {
+  "primary_category": "User Interaction",
+  "subcategories": [
+   "E-commerce",
+   "Form Systems",
+   "Authentication"
+  ]
+ },
+ "application_type": "Company Brochure Sites",
+ "ui_instruct": [
+  {
+   "task": "Navigate to the homepage and verify the presence of main navigation links (Home, Services, Book Now, Contact Us).",
+   "expected_result": "All navigation links are present and correctly labeled, facilitating easy access to different sections of the website.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering"
+    ]
+   }
+  },
+  {
+   "task": "Click on the \"Services\" link and ensure all available cleaning services are listed with descriptions.",
+   "expected_result": "A comprehensive list of cleaning services is displayed, each accompanied by a clear and accurate description.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Dynamic Content Rendering",
+     "Details Information"
+    ]
+   }
+  },
+  {
+   "task": "Access the \"Book Now\" page and successfully submit a booking form with all required fields completed (e.g., service type, date, customer details).",
+   "expected_result": "The form is submitted without errors, and a confirmation message is displayed indicating a successful booking.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations",
+     "E-commerce"
+    ]
+   }
+  },
+  {
+   "task": "Navigate to the \"Contact Us\" page and check that contact information is provided, including a phone number and email address.",
+   "expected_result": "The page displays accurate contact details, allowing users to reach out for support.",
+   "task_category": {
+    "primary_category": "Data Display Testing",
+    "subcategories": [
+     "Details Information"
+    ]
+   }
+  },
+  {
+   "task": "From the homepage, use the navigation to access the service status feature and input a booking reference to check its status.",
+   "expected_result": "The service status related to the entered booking reference is displayed clearly, providing users with current information.",
+   "task_category": {
+    "primary_category": "Functional Testing",
+    "subcategories": [
+     "Form Operations",
+     "E-commerce"
+    ]
+   }
+  },
+  {
+   "task": "Verify that the website uses 'azure mist' as the background color and 'dark slate blue' as the component color, as specified in the design requirements.",
+   "expected_result": "The website has a background color of 'azure mist' and components (such as buttons, cards, headers, etc.) are styled with the color 'dark slate blue', accurately reflecting the design instruction.",
+   "task_category": {
+    "primary_category": "Design Validation Testing",
+    "subcategories": [
+     "UI Consistency"
+    ]
+   }
+  }
+ ],
+ "follow_ups": [
+  {
+   "archetype": "interactive-tool",
+   "instruction": "People keep calling just to ask what a cleaning would cost, so let's add an Instant Quote page. Set up our six packages first — exactly these, I'll tweak them later: Quick Tidy $35/hr (60 min base, one-time), Sparkle Standard $42/hr (90 min base, recurring-eligible), Eco Fresh $48/hr (90 min base, recurring-eligible, our eco-friendly one), Office Refresh $48/hr (120 min base, recurring-eligible), Deep Shine $55/hr (120 min base, one-time), Move-Out Master $60/hr (150 min base, one-time). On the quote page I pick a package and type how many bedrooms and bathrooms, and it should recalculate as I type — no submit button: total time is the base plus 30 minutes per bedroom and 45 minutes per bathroom, and the price is the hourly rate times that time, to the cent, so Deep Shine with 1 bed and 1 bath comes out to 3h 15m and $178.75. Bedrooms can be 0 for a studio, but anything that isn't a whole number from 0 to 10 in either field should get a gentle 'enter a valid number' note and no price at all. Two habits I want everywhere in this app, now and for anything we add later: show durations like '3h 15m', never decimal hours, and whenever a package name appears anywhere, put its rate right after it, like 'Deep Shine ($55/hr)'.",
+   "source_website": "https://www.homeaglow.com/",
+   "source_feature": "Duration estimator chart based on home size",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the instant quote page, select the Deep Shine package and type 1 in the bedrooms field and 1 in the bathrooms field.",
+     "expected_result": "The quote shows a duration of 3h 15m and a price of $178.75.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Form Interaction"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the quote page, select Quick Tidy, type 2 bedrooms and 1 bathroom, then change the bedrooms value to 3 without clicking any submit button.",
+     "expected_result": "The quote updates live: with 2 bed/1 bath it shows 2h 45m and $96.25, and immediately after changing to 3 bedrooms it shows 3h 15m and $113.75.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Updates",
+       "Calculation Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the quote page, select Sparkle Standard, type 0 for bedrooms and 1 for bathrooms; then change bedrooms to -2.",
+     "expected_result": "With 0 bedrooms it still quotes normally (2h 15m, $94.50); with -2 a validation note appears and no price is shown.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Boundary Handling"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Select the Eco Fresh package on the quote page and look at how the selected package is labeled in the quote summary.",
+     "expected_result": "The package name appears with its rate right after it, as Eco Fresh ($48/hr).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Labeling Convention"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 1,
+     "task": "Find the contact information on the site.",
+     "expected_result": "A customer service phone number and an email address are both displayed.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Content Presence"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Holiday season is coming and people keep asking to gift cleanings, so let's sell gift certificates on the site. The buyer picks an amount anywhere from $25 to $500 in whole dollars (reject anything outside that range or with cents), types the recipient's name and a short message capped at 120 characters, can optionally pick one of our packages to suggest on it, and then gets a review step to double-check everything before it's issued. Once issued, show a printable-looking certificate right on screen with a code like GIFT-2214, and keep every certificate on a Certificates page with its amount, remaining balance, and status. Speaking of status — from now on, everywhere in this app, show statuses as little colored pills: green for done/confirmed/redeemed kinds of things, amber for anything still pending or unredeemed. Oh, and pre-load the one I already sold by hand: GIFT-2201, $100 for Hannah, message 'Enjoy a spotless kitchen!', still unredeemed.",
+   "source_website": "https://www.mollymaid.com/",
+   "source_feature": "Gift certificate purchasing",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Start a gift certificate purchase, type 20 as the amount, then change it to 150.50, then to 150.",
+     "expected_result": "20 and 150.50 are both rejected with a validation message (below the $25 minimum, and not whole dollars), while 150 is accepted.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Boundary Handling"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open the Certificates page.",
+     "expected_result": "The pre-loaded certificate GIFT-2201 for Hannah is listed with a $100 amount, $100 remaining balance, and an unredeemed status.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Seeded Data",
+       "Status Display"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Buy a $50 certificate for recipient Omar with the message 'Happy birthday', going through the review step and issuing it.",
+     "expected_result": "The review step shows $50, Omar, and the message before issuing; after issuing, a certificate with a code starting GIFT- is displayed on screen and it appears on the Certificates page as unredeemed.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Workflow Completion",
+       "Multi-Step Form"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "While buying a certificate, pick Eco Fresh as the suggested package and continue to the review step.",
+     "expected_result": "The suggested package is labeled Eco Fresh ($48/hr) — the rate appears right after the name wherever it shows in the flow.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Labeling Convention",
+       "Global Rule Compliance"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "On the instant quote page, select the Deep Shine package and type 1 in the bedrooms field and 1 in the bathrooms field.",
+     "expected_result": "The quote shows a duration of 3h 15m and a price of $178.75.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Form Interaction"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "We've been collecting feedback and I want a proper Reviews page now. Load these eight (make up a one-line blurb for each): Dana on Eco Fresh 5 stars Jun 14, Priya on Deep Shine 5 stars Jun 14, Marcus on Sparkle Standard 3 stars Jun 10, Elena on Eco Fresh 5 stars Jun 8, Tom on Quick Tidy 2 stars Jun 8, Aisha on Deep Shine 4 stars Jun 5, Leo on Eco Fresh 4 stars Jun 1, Grace on Sparkle Standard 5 stars May 28. Let people narrow by star rating and by package, and the two filters should stack; order is newest first, and when two reviews land on the same day, alphabetical by reviewer name settles it. Keep a running average rating (one decimal) that always matches whatever's actually visible after filtering, and if a combination has no reviews, say so nicely instead of showing a blank page.",
+   "source_website": "https://www.homeaglow.com/",
+   "source_feature": "Verified customer review filtering",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the Reviews page, use the package filter to show only Eco Fresh reviews.",
+     "expected_result": "Exactly the reviews from Dana, Elena, and Leo are shown, and the average reads 4.7 (not 4.6 or 4.67).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Calculation Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Filter reviews to 5-star only, then also filter to the Sparkle Standard package.",
+     "expected_result": "Both filters apply together: only Grace's review remains visible and the average updates to 5.0.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filter Composition",
+       "Derived Values"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Clear all filters and look at the order of the first two reviews; then filter to 1-star only.",
+     "expected_result": "With no filters the two Jun 14 reviews lead with Dana before Priya (same-day alphabetical tiebreak); the 1-star filter shows a friendly no-reviews message rather than a blank or broken page.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Sorting",
+       "Empty State"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Look at the package label on Priya's review card.",
+     "expected_result": "The package is shown with its rate attached, as Deep Shine ($55/hr).",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Labeling Convention",
+       "Global Rule Compliance"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 3,
+     "task": "Open the Certificates page.",
+     "expected_result": "The pre-loaded certificate GIFT-2201 for Hannah is listed with a $100 amount, $100 remaining balance, and an unredeemed status.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Seeded Data",
+       "Status Display"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "We only serve certain neighborhoods, so add a service-area checker. As someone types a ZIP it should react right away, no submit: 98101, 98102, and 98103 are our Central zone with no travel fee; 98115 and 98117 are North with a $15 travel fee; 98188 is South with $25; any other valid 5-digit ZIP gets a polite 'not in our area yet' note, and partial or non-numeric input shouldn't claim anything either way. Once an in-area ZIP is set, that travel fee should ride along into the quote estimator as its own line item — so Deep Shine with 1 bed and 1 bath from 98188 totals $203.75. Clearing the ZIP or switching to a no-fee zone has to drop the fee from the quote again, no leftovers.",
+   "source_website": "https://www.mollymaid.com/",
+   "source_feature": "ZIP code-based local franchise finder",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "In the service-area checker type 98188, then on the quote page select Deep Shine and type 1 bedroom and 1 bathroom.",
+     "expected_result": "98188 is recognized as the South zone with a $25 travel fee, and the quote shows the fee as its own line with a $203.75 total.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Cross-Feature Data Flow"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type 981 into the ZIP field, then replace it with 98abc, then with 99999.",
+     "expected_result": "Partial input 981 gives no in/out-of-area verdict, non-numeric input is rejected or ignored, and 99999 gets an out-of-area notice — all reacting as typed without any submit button.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Live Updates"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Type 98115 in the checker, then clear it and type 98101.",
+     "expected_result": "98115 shows the North zone with a $15 fee; after switching to 98101 it shows Central with no travel fee, and no leftover $15 remains anywhere in the quote.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "State Reset",
+       "Boundary Handling"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Set the ZIP to 98115, then on the quote page pick Quick Tidy with 1 bedroom and 1 bathroom.",
+     "expected_result": "The quote lists a $15 travel fee line and totals $93.75 (the $78.75 job plus the fee).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Feature Data Flow",
+       "Calculation Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 2,
+     "task": "On the quote page, select Sparkle Standard, type 0 for bedrooms and 1 for bathrooms; then change bedrooms to -2.",
+     "expected_result": "With 0 bedrooms it still quotes normally (2h 15m, $94.50); with -2 a validation note appears and no price is shown.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Input Validation",
+       "Boundary Handling"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "Customers keep asking how the packages differ, so build a Compare Packages page. Let me tick up to three packages — once three are picked the rest should be un-tickable until I remove one — and see them side by side: hourly rate, base time, what a 3-bed/2-bath job would run using the same math as the quote estimator, and each one's average star rating pulled from the Reviews page data (show a dash for a package with no reviews yet). Keep the compared columns ordered by hourly rate, cheapest first, and when two packages cost the same, alphabetical order settles it. So Eco Fresh, for example, should be showing a 4.7 average and a $216.00 sample price.",
+   "source_website": "https://www.mollymaid.com/",
+   "source_feature": "Hierarchical service category navigation (side-by-side package comparison)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Compare Packages page and tick Quick Tidy, Eco Fresh, and Office Refresh.",
+     "expected_result": "Columns run cheapest first: Quick Tidy ($35/hr), then Eco Fresh ($48/hr), then Office Refresh ($48/hr) — Eco Fresh ahead of Office Refresh on the alphabetical tiebreak at the same rate.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Tiebreak Handling"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Tick Eco Fresh and Sparkle Standard on the compare page.",
+     "expected_result": "The 3-bed/2-bath sample prices read $216.00 for Eco Fresh and $189.00 for Sparkle Standard, and both base times display as 1h 30m.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Formatting Convention"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Tick Quick Tidy, Deep Shine, and Move-Out Master, then try to tick a fourth package.",
+     "expected_result": "The fourth package cannot be selected while three are picked, and Move-Out Master's rating column shows a dash since it has no reviews.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Boundary Handling",
+       "Empty State"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Tick Deep Shine on the compare page, then go to the Reviews page and filter to Deep Shine.",
+     "expected_result": "Both places agree: the compare column shows a 4.5 average, and the filtered Reviews page also averages 4.5 over Priya's and Aisha's reviews.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Feature Consistency",
+       "Derived Values"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 4,
+     "task": "On the Reviews page, use the package filter to show only Eco Fresh reviews.",
+     "expected_result": "Exactly the reviews from Dana, Elena, and Leo are shown, and the average reads 4.7 (not 4.6 or 4.67).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Filtering",
+       "Calculation Accuracy"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "multi-surface-workflow",
+   "instruction": "Time to let people lock in a job straight from their quote. Give the estimator a 'Book this quote' button that carries everything over — package, time, and the travel fee if a ZIP is set — onto a checkout page that keeps the running total visible while they pick a date, one of our three arrival windows (9:00 AM, 12:30 PM, or 3:00 PM), and type their name; it shouldn't confirm until all three are in. On that same checkout they can type a gift certificate code: subtract its remaining balance from the total immediately, never letting the total go below $0.00 — whatever's left over stays on the certificate — and a certificate that hits zero flips to redeemed over on the Certificates page. Confirmed jobs land in the service-status area as confirmed, next to two I'm pre-loading: Rosa, Sparkle Standard, Jul 12 at 9:00 AM, $189.00; and Ben, Move-Out Master, Jul 19 at 12:30 PM, $330.00.",
+   "source_website": "https://www.homeaglow.com/",
+   "source_feature": "Discounted voucher packages redeemable against bookings",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "On the quote page pick Deep Shine with 1 bedroom and 1 bathroom, then click the button to book this quote.",
+     "expected_result": "The checkout shows the carried-over details — Deep Shine ($55/hr), 3h 15m, and a $178.75 total — before any date, window, or certificate is entered.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Feature Data Flow",
+       "Data Carry-Over"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Book a Deep Shine 1-bedroom/1-bathroom quote, and in checkout type the certificate code GIFT-2201.",
+     "expected_result": "The $100 balance comes off and the total due reads $78.75.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Redemption Logic"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Book a Quick Tidy quote with 0 bedrooms and 1 bathroom, then type GIFT-2201 in checkout.",
+     "expected_result": "The $61.25 job drops to a total due of $0.00 — never a negative amount.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Boundary Handling",
+       "Redemption Logic"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Open the service status area.",
+     "expected_result": "The two pre-loaded jobs are listed — Rosa's Sparkle Standard on Jul 12 and Ben's Move-Out Master on Jul 19 — each marked with a confirmed status.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Seeded Data",
+       "Status Display"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 5,
+     "task": "In the service-area checker type 98188, then on the quote page select Deep Shine and type 1 bedroom and 1 bathroom.",
+     "expected_result": "98188 is recognized as the South zone with a $25 travel fee, and the quote shows the fee as its own line with a $203.75 total.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Cross-Feature Data Flow"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "interactive-tool",
+   "instruction": "Our regulars deserve a membership program — add a Plans page. Only the recurring-eligible packages (Sparkle Standard, Eco Fresh, Office Refresh) can be chosen for a plan; the one-time ones stay visible but clearly not selectable. Picking a package shows three plan cards — Weekly at 20% off, Biweekly at 15% off, Monthly at 10% off — each listing the visit length (a base-duration visit) and the discounted per-visit price, so Eco Fresh weekly is $57.60, plus the yearly savings versus paying full price at 52, 26, or 12 visits a year — that same weekly plan saves $748.80. Hitting Enroll on a card should turn it into a 'your current plan' summary right there on the page, and picking a different package after enrolling should ask me before dropping the old plan.",
+   "source_website": "https://www.homeaglow.com/",
+   "source_feature": "Membership / subscription discount tier (ForeverClean)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "On the Plans page pick Eco Fresh and look at the Weekly card.",
+     "expected_result": "It shows $57.60 per visit and $748.80 in yearly savings.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Discount Logic"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "On the Plans page pick Sparkle Standard and check the Biweekly card, then switch to Office Refresh.",
+     "expected_result": "Sparkle Standard biweekly shows $53.55 per visit with $245.70 yearly savings, and after switching, Office Refresh biweekly immediately shows $81.60 per visit with $374.40 savings.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Live Updates",
+       "Calculation Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Try to pick Deep Shine on the Plans page, then pick Eco Fresh and click Enroll on the Monthly card.",
+     "expected_result": "Deep Shine cannot be chosen for a plan (marked one-time/unavailable), while enrolling in Eco Fresh Monthly shows a current-plan summary right on the page.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Eligibility Rules",
+       "State Persistence"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Pick Sparkle Standard on the Plans page and look at the visit length shown on the plan cards.",
+     "expected_result": "The visit length reads 1h 30m — hours-and-minutes style, not 1.5 hours or 90 minutes as a decimal figure.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Formatting Convention",
+       "Global Rule Compliance"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 6,
+     "task": "Open the Compare Packages page and tick Quick Tidy, Eco Fresh, and Office Refresh.",
+     "expected_result": "Columns run cheapest first: Quick Tidy ($35/hr), then Eco Fresh ($48/hr), then Office Refresh ($48/hr) — Eco Fresh ahead of Office Refresh on the alphabetical tiebreak at the same rate.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Sorting",
+       "Tiebreak Handling"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "design-restyle",
+   "instruction": "The site's starting to feel dated — time for a visual refresh across the home page, the quote estimator, the Reviews page, and the Plans page, all four of them, consistently. Primary action buttons switch from the dark slate blue to a deep teal with white text; every card gets softly rounded corners, a thin light-gray border, and no drop shadows; section headings go uppercase with a bit of letter spacing; and star ratings render in a golden yellow wherever they appear. Don't touch how anything works — and if even one of those four pages keeps the old button color or heading style, it'll bug me every time I see it.",
+   "source_website": "https://www.mollymaid.com/",
+   "source_feature": "Consistent franchise brand styling across service pages",
+   "ui_instruct": [
+    {
+     "kind": "feature",
+     "task": "Look at the primary action buttons on the home page and then on the quote estimator page.",
+     "expected_result": "Both pages' primary buttons are deep teal with white text — no dark slate blue primary buttons remain on either.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Color Scheme",
+       "Cross-Page Consistency"
+      ]
+     }
+    },
+    {
+     "kind": "exact-value",
+     "task": "Open the Reviews page with no filters applied.",
+     "expected_result": "Star ratings render in golden yellow, and the overall average still reads 4.1.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Color Scheme",
+       "Data Integrity After Restyle"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the Plans page and inspect a plan card and the page's section heading.",
+     "expected_result": "The card has rounded corners with a thin light-gray border and no drop shadow, and the heading is uppercase with letter spacing.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Card Styling",
+       "Typography"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Compare the section headings on the home page, the Reviews page, and the Plans page.",
+     "expected_result": "All three pages use the same uppercase, letter-spaced heading style — no page kept the old heading style.",
+     "task_category": {
+      "primary_category": "Design Validation Testing",
+      "subcategories": [
+       "Cross-Page Consistency",
+       "Typography"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 7,
+     "task": "Book a Deep Shine 1-bedroom/1-bathroom quote, and in checkout type the certificate code GIFT-2201.",
+     "expected_result": "The $100 balance comes off and the total due reads $78.75.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Redemption Logic"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "archetype": "derived-state",
+   "instruction": "I need a one-glance Business Snapshot page for myself. Four tiles: confirmed jobs (a count of everything confirmed in the service-status area), booked revenue (the sum of those jobs' totals), outstanding gift balance (whatever's still unredeemed across all certificates), and our overall average rating to one decimal across every individual review — not an average of package averages, mind you. Straight out of the gate that should read 2 jobs, $519.00, $100.00, and 4.1. And it can't be a snapshot frozen in time — confirm another booking or sell another certificate and the tiles need to already be right next time I open the page.",
+   "source_website": "https://www.homeaglow.com/",
+   "source_feature": "Transparent pricing and voucher balance tracking (extended into an owner revenue rollup)",
+   "ui_instruct": [
+    {
+     "kind": "exact-value",
+     "task": "Open the Business Snapshot page on a fresh load.",
+     "expected_result": "The tiles read 2 confirmed jobs, $519.00 booked revenue, $100.00 outstanding gift balance, and a 4.1 overall average rating.",
+     "task_category": {
+      "primary_category": "Data Display Testing",
+      "subcategories": [
+       "Aggregation Accuracy",
+       "Seeded Data"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Open the Business Snapshot page, then open the service status area.",
+     "expected_result": "The confirmed-jobs tile count matches exactly the confirmed jobs listed in the status area (Rosa's and Ben's).",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Surface Consistency",
+       "Aggregation Accuracy"
+      ]
+     }
+    },
+    {
+     "kind": "feature",
+     "task": "Look at the overall rating tile on Business Snapshot, then open the Reviews page with no filters and compare.",
+     "expected_result": "Both read 4.1 — the average over all eight individual reviews, not the 3.8 you'd get by averaging the per-package averages.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Aggregation Basis"
+      ]
+     }
+    },
+    {
+     "kind": "integration",
+     "task": "Buy a $50 gift certificate for recipient Nina with the message 'Enjoy!' and issue it, then open the Business Snapshot page.",
+     "expected_result": "The outstanding gift balance tile now reads $150.00, reflecting the new unredeemed certificate on top of GIFT-2201.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Cross-Feature Data Flow",
+       "Live Aggregation"
+      ]
+     }
+    },
+    {
+     "kind": "regression",
+     "copied_from_turn": 8,
+     "task": "On the Plans page pick Eco Fresh and look at the Weekly card.",
+     "expected_result": "It shows $57.60 per visit and $748.80 in yearly savings.",
+     "task_category": {
+      "primary_category": "Functional Testing",
+      "subcategories": [
+       "Calculation Accuracy",
+       "Discount Logic"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "target_app_summary": "What started as a simple house-cleaning brochure site (booking, inquiry, status check, contact) has grown into a full service-business platform. Discovery and pricing grew an instant quote estimator over a fixed six-package catalog, a ZIP-based service-area checker that feeds travel fees into quotes, and a side-by-side package comparison table. Commerce grew a gift-certificate store with a balance ledger, a quote-to-checkout booking flow with certificate redemption math, and a membership plans configurator with recurring discounts. Social proof lives in a filterable reviews hub whose averages feed both the comparison table and an owner-facing Business Snapshot dashboard that rolls up booked revenue, outstanding certificate balances, and overall rating. A site-wide restyle (deep teal actions, bordered cards, uppercase headings, golden stars) unifies the grown surface area. The feature graph has one deep spine (estimator -> area fees -> checkout -> dashboard) plus reviews and certificates each feeding two downstream consumers.",
+ "dependency_graph": {
+  "nodes": [
+   {
+    "id": "T1",
+    "label": "base app",
+    "archetype": "base"
+   },
+   {
+    "id": "T2",
+    "label": "instant quote estimator",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T3",
+    "label": "gift certificates",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T4",
+    "label": "reviews hub",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T5",
+    "label": "service-area checker",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T6",
+    "label": "package comparison table",
+    "archetype": "derived-state"
+   },
+   {
+    "id": "T7",
+    "label": "quote checkout & redemption",
+    "archetype": "multi-surface-workflow"
+   },
+   {
+    "id": "T8",
+    "label": "membership plans",
+    "archetype": "interactive-tool"
+   },
+   {
+    "id": "T9",
+    "label": "site restyle",
+    "archetype": "design-restyle"
+   },
+   {
+    "id": "T10",
+    "label": "business snapshot dashboard",
+    "archetype": "derived-state"
+   }
+  ],
+  "edges": [
+   {
+    "from": "T2",
+    "to": "T5",
+    "what": "live quote that the travel fee lands in"
+   },
+   {
+    "from": "T2",
+    "to": "T6",
+    "what": "estimator pricing formula for sample quotes"
+   },
+   {
+    "from": "T4",
+    "to": "T6",
+    "what": "per-package average stars from reviews"
+   },
+   {
+    "from": "T2",
+    "to": "T7",
+    "what": "quote carried into checkout via Book this quote"
+   },
+   {
+    "from": "T5",
+    "to": "T7",
+    "what": "travel fee line carried into checkout total"
+   },
+   {
+    "from": "T3",
+    "to": "T7",
+    "what": "certificate balances redeemed at checkout"
+   },
+   {
+    "from": "T1",
+    "to": "T7",
+    "what": "confirmed jobs surface in base status-check area"
+   },
+   {
+    "from": "T7",
+    "to": "T10",
+    "what": "count and revenue sum of confirmed bookings"
+   },
+   {
+    "from": "T3",
+    "to": "T10",
+    "what": "outstanding balance across certificates"
+   },
+   {
+    "from": "T4",
+    "to": "T10",
+    "what": "overall average across all reviews"
+   },
+   {
+    "from": "T1",
+    "to": "T9",
+    "what": "restyles home page"
+   },
+   {
+    "from": "T2",
+    "to": "T9",
+    "what": "restyles estimator page"
+   },
+   {
+    "from": "T4",
+    "to": "T9",
+    "what": "restyles Reviews page"
+   },
+   {
+    "from": "T8",
+    "to": "T9",
+    "what": "restyles Plans page"
+   }
+  ]
+ },
+ "global_rules": [
+  {
+   "rule": "All durations are displayed as 'Xh Ym' (e.g. '3h 15m'), never as decimal hours, everywhere in the app.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Wherever a cleaning package name appears, its hourly rate is appended right after it, e.g. 'Deep Shine ($55/hr)'.",
+   "introduced_in_turn": 2
+  },
+  {
+   "rule": "Statuses everywhere are shown as colored pills: green for done/confirmed/redeemed-type states, amber for pending/unredeemed-type states.",
+   "introduced_in_turn": 3
+  }
+ ],
+ "pinned_seed": {
+  "entity": "6 cleaning packages",
+  "introduced_in_turn": 2,
+  "records_gist": "Quick Tidy $35/hr 60m one-time; Sparkle Standard $42/hr 90m recurring; Eco Fresh $48/hr 90m recurring eco; Office Refresh $48/hr 120m recurring; Deep Shine $55/hr 120m one-time; Move-Out Master $60/hr 150m one-time"
+ }
+}

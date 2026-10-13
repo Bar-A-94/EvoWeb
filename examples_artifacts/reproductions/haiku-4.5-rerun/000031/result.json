@@ -1,0 +1,644 @@
+{
+  "index": 31,
+  "status": "success",
+  "model": "anthropic/claude-haiku-4-5-20251001",
+  "generator": "openhands",
+  "base_trajectory": {
+    "source": "none",
+    "messages": 0
+  },
+  "artifacts": {
+    "zip": null,
+    "run_json": null,
+    "generator": "openhands",
+    "screenshots": [
+      "/output/000031/screenshots/task000031_0.png",
+      "/output/000031/screenshots/task000031_1.png",
+      "/output/000031/screenshots/task000031_2.png",
+      "/output/000031/screenshots/task000031_3.png",
+      "/output/000031/screenshots/task000031_4.png",
+      "/output/000031/screenshots/task000031_5.png",
+      "/output/000031/screenshots/task000031_6.png"
+    ],
+    "output_dir": "/output/000031"
+  },
+  "ladder": {
+    "turns_expected": 10,
+    "turns_completed": 10,
+    "complete": true
+  },
+  "eval_model": "claude-sonnet-4-6",
+  "accuracy": 12.5,
+  "yes": 5,
+  "partial": 3,
+  "no": 44,
+  "total": 52,
+  "tasks": [
+    {
+      "task_idx": 0,
+      "task": "Test the user registration form for creating a new account.",
+      "expected": "The form should accept valid inputs, and submit successfully, creating a new user account. An error message should appear for invalid inputs.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 1,
+      "task": "Verify the login functionality with valid credentials.",
+      "expected": "The user should successfully log in and be redirected to their dashboard or homepage.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 2,
+      "task": "Check the advanced search feature for looking up potential partners based on specific criteria (e.g., age, location, interests).",
+      "expected": "The search results should accurately reflect users that meet the specified criteria.",
+      "verdict": "no"
+    },
+    {
+      "task_idx": 3,
+      "task": "Validate the chat functionality by initiating a private chat between two users.",
+      "expected": "Messages should be sent and received in real-time without errors and the chat should remain private.",
+      "verdict": "no"
+    },
+    {
+      "task_idx": 4,
+      "task": "Test the logout process to ensure users can safely exit their accounts.",
+      "expected": "The user should be logged out immediately and redirected to the homepage or login page.",
+      "verdict": "no"
+    },
+    {
+      "task_idx": 5,
+      "task": "Verify that error messages and prompts provide clear, user-friendly instructions when users perform invalid login actions (e.g., incorrect password).",
+      "expected": "Error messages should clearly explain the issue and provide guidance for resolution without technical jargon.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 6,
+      "task": "Verify that the website uses 'lemon chiffon' as the background color and 'chocolate' as the component color, as specified in the design requirements.",
+      "expected": "The website has a background color of 'lemon chiffon' and components (such as buttons, cards, headers, etc.) are styled with the color 'chocolate', accurately reflecting the design instruction.",
+      "verdict": "yes"
+    }
+  ],
+  "turns": [
+    {
+      "turn": 1,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": false,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Test the user registration form for creating a new account.",
+          "expected": "The form should accept valid inputs, and submit successfully, creating a new user account. An error message should appear for invalid inputs.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Verify the login functionality with valid credentials.",
+          "expected": "The user should successfully log in and be redirected to their dashboard or homepage.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Check the advanced search feature for looking up potential partners based on specific criteria (e.g., age, location, interests).",
+          "expected": "The search results should accurately reflect users that meet the specified criteria.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Validate the chat functionality by initiating a private chat between two users.",
+          "expected": "Messages should be sent and received in real-time without errors and the chat should remain private.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Test the logout process to ensure users can safely exit their accounts.",
+          "expected": "The user should be logged out immediately and redirected to the homepage or login page.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 5,
+          "task": "Verify that error messages and prompts provide clear, user-friendly instructions when users perform invalid login actions (e.g., incorrect password).",
+          "expected": "Error messages should clearly explain the issue and provide guidance for resolution without technical jargon.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 6,
+          "task": "Verify that the website uses 'lemon chiffon' as the background color and 'chocolate' as the component color, as specified in the design requirements.",
+          "expected": "The website has a background color of 'lemon chiffon' and components (such as buttons, cards, headers, etc.) are styled with the color 'chocolate', accurately reflecting the design instruction.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 3,
+      "partial": 1,
+      "no": 3,
+      "total": 7,
+      "accuracy": 50.0,
+      "cost": {
+        "generation_usd": 0.15361,
+        "model_calls": 12,
+        "input_tokens_total": 295447,
+        "output_tokens": 16972,
+        "judge_usd": 0.7147
+      }
+    },
+    {
+      "turn": 2,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "runtime": {
+        "checks_affected": 2,
+        "errors": [
+          "http://localhost:5200/node_modules/.vite/deps/chunk-QXLG2TGQ.js?v=ee4b6958 518:37 \"Warning: Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffe"
+        ]
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the kundali matching tool and set the first person's moon sign to Cancer, gana to Manushya, and nadi to Madhya, then set the second person's moon sign to Libra, gana to Deva, and nadi to Adi.",
+          "expected": "The score reads 22 out of 36 (nadi 8 for differing nadis + gana 5 for the Deva-Manushya pairing + 0 for mismatched elements = 13 raw, scaled to 36 and rounded) and it carries a Moderate tag.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the kundali matching tool, set the first person to Taurus moon sign, Manushya gana, Adi nadi, and the second person to Gemini moon sign, Rakshasa gana, Adi nadi.",
+          "expected": "The score reads 2 out of 36 with a Weak tag — 1 raw point (gana only) scales to 1.71 which rounds up to 2, not down to 1.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open the kundali matching tool fresh and fill in only the first person's three fields, leaving the second person blank.",
+          "expected": "No score is shown — a prompt to complete the fields appears instead of a number, NaN, or 0 out of 36.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the kundali matching tool, set the first person to Aries moon sign, Deva gana, Adi nadi, and the second person to Leo moon sign, Rakshasa gana, Adi nadi.",
+          "expected": "The score reads 12 out of 36 and is tagged Moderate, not Weak — 12 is exactly one-third of 36 and only scores strictly under one-third are Weak.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Use the search or filtering controls to filter member profiles by a single criterion such as age or location.",
+          "expected": "Only profiles matching the chosen criterion remain in the results; profiles that do not match are no longer shown.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 1,
+      "partial": 0,
+      "no": 4,
+      "total": 5,
+      "accuracy": 20.0,
+      "cost": {
+        "generation_usd": 0.095597,
+        "model_calls": 5,
+        "input_tokens_total": 193156,
+        "output_tokens": 5686,
+        "judge_usd": 1.1915
+      }
+    },
+    {
+      "turn": 3,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Interests area and click through the Received, Sent, and Connections tabs.",
+          "expected": "Received lists exactly Rohan Mehta, Sara Khan, and Vikram Singh; Sent lists only Meera Nair; Connections lists only Priya Reddy.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the Received tab, accept Sara Khan's interest.",
+          "expected": "Sara disappears from Received (leaving Rohan and Vikram) and immediately appears in Connections alongside Priya.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the Received tab, decline Rohan Mehta's interest.",
+          "expected": "A confirmation prompt appears before anything happens; after confirming, Rohan is removed from Received and does not appear in Connections.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Find Daniel D'Souza in browse/search, click his Send Interest action, then open the Sent tab.",
+          "expected": "The action on Daniel's profile flips to a sent/disabled state, and Daniel now appears in the Sent tab along with Meera.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the kundali matching tool and set the first person's moon sign to Cancer, gana to Manushya, and nadi to Madhya, then set the second person's moon sign to Libra, gana to Deva, and nadi to Adi.",
+          "expected": "The score reads 22 out of 36 (nadi 8 for differing nadis + gana 5 for the Deva-Manushya pairing + 0 for mismatched elements = 13 raw, scaled to 36 and rounded) and it carries a Moderate tag.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 0,
+      "partial": 0,
+      "no": 5,
+      "total": 5,
+      "accuracy": 0.0,
+      "cost": {
+        "generation_usd": 0.302399,
+        "model_calls": 11,
+        "input_tokens_total": 738872,
+        "output_tokens": 18565,
+        "judge_usd": 0.7486
+      }
+    },
+    {
+      "turn": 4,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "runtime": {
+        "checks_affected": 1,
+        "errors": [
+          "http://localhost:5200/node_modules/.vite/deps/chunk-QXLG2TGQ.js?v=ee4b6958 518:37 \"Warning: Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffe"
+        ]
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Partner Preferences page and read the ranked list of members from top to bottom.",
+          "expected": "The order is Ananya Iyer 100%, Priya Reddy 100%, Meera Nair 75%, Sara Khan 50%, Rohan Mehta 50%, Vikram Singh 50%, Daniel D'Souza 25% — ties broken younger-first, so Ananya (27) sits above Priya (29) and the 50% group runs Sara (29), Rohan (31), Vikram (33), not alphabetically.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Look at Meera Nair's and Daniel D'Souza's match meters wherever their cards appear.",
+          "expected": "Meera shows 75% — her age 26 counts as inside 26-30 and only her 5'3\" height fails — while Daniel shows 25% with only height passing.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the Partner Preferences page, change the minimum height to 5'6\".",
+          "expected": "Ananya's and Priya's meters drop to 75% immediately (still tagged Strong) while Sara's stays at 50% since 5'6\" exactly still qualifies.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "In browse/search, find Priya Reddy's profile card.",
+          "expected": "Her card shows a 100% match meter tagged Strong, and her age reads '29 yrs'.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Interests area and click through the Received, Sent, and Connections tabs.",
+          "expected": "Received lists exactly Rohan Mehta, Sara Khan, and Vikram Singh; Sent lists only Meera Nair; Connections lists only Priya Reddy.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 1,
+      "partial": 0,
+      "no": 4,
+      "total": 5,
+      "accuracy": 20.0,
+      "cost": {
+        "generation_usd": 0.264867,
+        "model_calls": 8,
+        "input_tokens_total": 812087,
+        "output_tokens": 11798,
+        "judge_usd": 0.6828
+      }
+    },
+    {
+      "turn": 5,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "runtime": {
+        "checks_affected": 1,
+        "errors": [
+          "http://localhost:5200/node_modules/.vite/deps/chunk-QXLG2TGQ.js?v=ee4b6958 518:37 \"Warning: Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffe"
+        ]
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Quick Connect lobby and read tonight's lineup in order.",
+          "expected": "Exactly five profiles appear in the order Ananya Iyer, Meera Nair, Sara Khan, Rohan Mehta, Vikram Singh — Priya is absent because she's already a connection, and Daniel (the lowest match) didn't make the five.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Start the Quick Connect session, mark Interested on Ananya Iyer, then use the end-early option and look at the results.",
+          "expected": "The results show zero mutual matches — Ananya had not flagged interest in me, so my Interested alone does not create a mutual.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Start the session and mark Pass on all five profiles one after another, watching the progress marker.",
+          "expected": "The marker advances 1 of 5 through 5 of 5, then the session lands on the results view with no blank screen or sixth profile; results show no mutuals.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Start the session, Pass Ananya, mark Interested on Meera Nair, use the end-early option, then open the Connections tab in the Interests area.",
+          "expected": "Meera shows as a mutual on the results and appears in Connections, and her old pending entry is gone from the Sent list.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Partner Preferences page and read the ranked list of members from top to bottom.",
+          "expected": "The order is Ananya Iyer 100%, Priya Reddy 100%, Meera Nair 75%, Sara Khan 50%, Rohan Mehta 50%, Vikram Singh 50%, Daniel D'Souza 25% — ties broken younger-first, so Ananya (27) sits above Priya (29) and the 50% group runs Sara (29), Rohan (31), Vikram (33), not alphabetically.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 0,
+      "partial": 0,
+      "no": 5,
+      "total": 5,
+      "accuracy": 0.0,
+      "cost": {
+        "generation_usd": 0.347739,
+        "model_calls": 10,
+        "input_tokens_total": 1284352,
+        "output_tokens": 12735,
+        "judge_usd": 0.7722
+      }
+    },
+    {
+      "turn": 6,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "runtime": {
+        "checks_affected": 3,
+        "errors": [
+          "http://localhost:5200/node_modules/.vite/deps/chunk-QXLG2TGQ.js?v=ee4b6958 518:37 \"Warning: Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffe"
+        ]
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the search/browse page, then open the Interests area, and look at each page's background, content blocks, and heading.",
+          "expected": "Both pages use an ivory page background with deep maroon content blocks in cream text, and the page headings are centered on both.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the kundali matching tool and then the Quick Connect lobby.",
+          "expected": "Both show deep maroon content panels with rounded corners on an ivory background, and the lobby's primary start button is gold with dark text.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Find Priya Reddy's profile card in browse/search.",
+          "expected": "Her card is rounded and maroon-styled, her match meter reads 100% with a pill-shaped Strong badge, and her age reads '29 yrs'.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 3,
+          "task": "On the Partner Preferences page, change the minimum height to 5'6\" and watch the ranked list's verdict tags.",
+          "expected": "The tags render as pill-shaped badges and stay correct through the recalculation — Ananya and Priya move to 75% and still show Strong pills.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the kundali matching tool, set the first person to Taurus moon sign, Manushya gana, Adi nadi, and the second person to Gemini moon sign, Rakshasa gana, Adi nadi.",
+          "expected": "The score reads 2 out of 36 with a Weak tag — 1 raw point (gana only) scales to 1.71 which rounds up to 2, not down to 1.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 0,
+      "partial": 1,
+      "no": 4,
+      "total": 5,
+      "accuracy": 10.0,
+      "cost": {
+        "generation_usd": 0.512726,
+        "model_calls": 20,
+        "input_tokens_total": 2916495,
+        "output_tokens": 9188,
+        "judge_usd": 1.1181
+      }
+    },
+    {
+      "turn": 7,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the activity dashboard on a fresh load and read the tiles.",
+          "expected": "Pending received interests shows 3, pending sent shows 1, connections shows 1, the acceptance rate reads 50% (Priya accepted, Meera still pending), and the average match of connections reads 100% with a Strong tag.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the Interests area, accept Vikram Singh's received interest, then open the dashboard.",
+          "expected": "Connections shows 2 and pending received drops to 2, but the acceptance rate still reads 50% — accepting an interest I received doesn't change how many of my sent interests were accepted.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the Interests area, accept Rohan Mehta's received interest, then open the dashboard and read the average match tile.",
+          "expected": "The average match of connections now reads 75% (Priya's 100% and Rohan's 50% averaged) and is tagged Strong.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Start a Quick Connect session, Pass Ananya, Pass Meera, mark Interested on Sara Khan, end early, then open the dashboard.",
+          "expected": "Connections shows 2 (Priya plus the new mutual Sara), pending received drops to 2 because Sara's old interest was cleared, and the average match of connections reads 75% tagged Strong.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Start the Quick Connect session, mark Interested on Ananya Iyer, then use the end-early option and look at the results.",
+          "expected": "The results show zero mutual matches — Ananya had not flagged interest in me, so my Interested alone does not create a mutual.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 0,
+      "partial": 0,
+      "no": 5,
+      "total": 5,
+      "accuracy": 0.0,
+      "cost": {
+        "generation_usd": 0.318667,
+        "model_calls": 6,
+        "input_tokens_total": 966386,
+        "output_tokens": 6687,
+        "judge_usd": 0.6629
+      }
+    },
+    {
+      "turn": 8,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "runtime": {
+        "checks_affected": 1,
+        "errors": [
+          "http://localhost:5200/node_modules/.vite/deps/chunk-QXLG2TGQ.js?v=ee4b6958 518:37 \"Warning: Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffe"
+        ]
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "In the Verification Center, choose PAN and enter ABCDE12345, then try again with ABCDE1234F.",
+          "expected": "ABCDE12345 is rejected with a clear message (it ends in a digit, not a letter), while ABCDE1234F is accepted and the request shows as Under review.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 1,
+          "task": "Choose Aadhaar, submit 123456789012, then on the status page click the demo Approve button.",
+          "expected": "The 12-digit number is accepted, and after approving, the status shows approved and my own profile card displays the gold-check Verified badge.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "In search, turn on the Verified only toggle and also filter religion to Hindu.",
+          "expected": "Exactly Ananya Iyer, Vikram Singh, and Priya Reddy remain — Sara is excluded despite being verified (she's Muslim) and Rohan is excluded despite being Hindu (unverified).",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Submit a valid Aadhaar number 123456789012, then use the withdraw option on the pending request.",
+          "expected": "A confirmation prompt appears before the withdrawal happens; after confirming, the request is gone and the status returns to unverified.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the search/browse page, then open the Interests area, and look at each page's background, content blocks, and heading.",
+          "expected": "Both pages use an ivory page background with deep maroon content blocks in cream text, and the page headings are centered on both.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 0,
+      "partial": 1,
+      "no": 4,
+      "total": 5,
+      "accuracy": 10.0,
+      "cost": {
+        "generation_usd": 0.681098,
+        "model_calls": 17,
+        "input_tokens_total": 2856615,
+        "output_tokens": 15120,
+        "judge_usd": 0.8508
+      }
+    },
+    {
+      "turn": 9,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the privacy settings and switch photo visibility to hidden.",
+          "expected": "The preview card immediately swaps my photo for a silhouette/placeholder, with no save or reload needed.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "In privacy settings, switch the name display to initials.",
+          "expected": "The preview card instantly shows 'A.K.' in place of Arjun Kapoor.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Set who-can-message to connections only, then look at the message controls on member profiles in browse/search.",
+          "expected": "Only Priya Reddy's message control stays active; the other six members all show a locked message control that won't open a chat.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Set who-can-message to verified members only, then check the message controls on Rohan Mehta's and Sara Khan's profiles.",
+          "expected": "Rohan's message control is locked (he's unverified) while Sara's remains active (she's verified).",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the Received tab, decline Rohan Mehta's interest.",
+          "expected": "A confirmation prompt appears before anything happens; after confirming, Rohan is removed from Received and does not appear in Connections.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 0,
+      "partial": 0,
+      "no": 5,
+      "total": 5,
+      "accuracy": 0.0,
+      "cost": {
+        "generation_usd": 0.220649,
+        "model_calls": 8,
+        "input_tokens_total": 715251,
+        "output_tokens": 7968,
+        "judge_usd": 0.7011
+      }
+    },
+    {
+      "turn": 10,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the report builder, pick Priya Reddy, and generate the report.",
+          "expected": "The report shows a kundali score of 22 out of 36 tagged Moderate, a match meter of 100% tagged Strong, Priya marked as Verified, and her age as '29 yrs'.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the Partner Preferences page, change the minimum height to 5'6\", then generate Priya Reddy's report again.",
+          "expected": "The report's match line now reads 75% tagged Strong — it reflects the meter's current value rather than a stale 100%.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Generate Priya Reddy's report and look at how the output is presented.",
+          "expected": "The summary appears directly on the page as a readable text block containing both Arjun Kapoor and Priya Reddy — shown on screen, not delivered as a file download.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Accept Rohan Mehta's interest in the Received tab, then pick Rohan in the report builder and generate.",
+          "expected": "Rohan is now selectable as a connection and his report shows a kundali score of 2 out of 36 tagged Weak, a 50% match tagged Moderate, and no Verified mark.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the activity dashboard on a fresh load and read the tiles.",
+          "expected": "Pending received interests shows 3, pending sent shows 1, connections shows 1, the acceptance rate reads 50% (Priya accepted, Meera still pending), and the average match of connections reads 100% with a Strong tag.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 0,
+      "partial": 0,
+      "no": 5,
+      "total": 5,
+      "accuracy": 0.0,
+      "cost": {
+        "generation_usd": 0.24191,
+        "model_calls": 7,
+        "input_tokens_total": 755132,
+        "output_tokens": 7363,
+        "judge_usd": 0.714
+      }
+    }
+  ]
+}
