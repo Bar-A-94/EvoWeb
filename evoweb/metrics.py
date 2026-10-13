@@ -27,7 +27,7 @@ import statistics as st
 from collections import defaultdict
 from pathlib import Path
 
-from .paths import BENCHMARK, run_dir
+from .paths import BENCHMARK, ensure_data, run_dir
 from .scoring import ladder_from_result, load_expected_tasks, score_ladders, turn_score
 
 TURNS = list(range(1, 11))
@@ -82,6 +82,7 @@ def load_ladders(run_id: str, expect: int | None = N_SAMPLES) -> dict[int, dict]
 
 def expected_tasks(dataset: Path = BENCHMARK) -> dict[int, dict[int, int]]:
     """{sample index: {turn: number of judge tests}} -- the exact denominators of Q(t)."""
+    ensure_data(Path(dataset))
     return load_expected_tasks(str(dataset))
 
 
@@ -328,7 +329,8 @@ TABLE4_GROUPS = ("backward", "functional", "integration")  # paper column order
 
 def benchmark_rows(dataset: Path = BENCHMARK) -> list[dict]:
     """The 32 apps in run-index order (run sample index N == row position N, 1-based)."""
-    return [json.loads(line) for line in Path(dataset).open() if line.strip()]
+    ensure_data(Path(dataset))
+    return [json.loads(line) for line in Path(dataset).open(encoding="utf-8") if line.strip()]
 
 
 def incoming(row: dict, turn: int) -> list[dict]:

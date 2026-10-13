@@ -373,7 +373,7 @@ def load_expected_tasks(jsonl_path: str | Path) -> dict[int, dict[int, int]]:
     or errored turn records no task count of its own, and guessing one biases `delivered`.
     """
     expected: dict[int, dict[int, int]] = {}
-    with open(jsonl_path) as fh:
+    with open(jsonl_path, encoding="utf-8") as fh:
         for idx, line in enumerate(fh, start=1):
             line = line.strip()
             if not line:

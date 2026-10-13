@@ -10,11 +10,9 @@
     8
    ],
    "translations": {
-    "es": "página del Menú",
     "zh": "菜单页面",
     "he": "עמוד התפריט",
     "hi": "मेन्यू पेज",
-    "sw": "ukurasa wa Menyu",
     "de": "Menüseite",
     "fr": "page Menu"
    }
@@ -27,11 +25,9 @@
     1
    ],
    "translations": {
-    "es": "sala privada de póker",
     "zh": "私人扑克房",
     "he": "חדר הפוקר הפרטי",
     "hi": "प्राइवेट पोकर रूम",
-    "sw": "chumba cha faragha cha poka",
     "de": "Privater Pokerraum",
     "fr": "salle de poker privée"
    }
@@ -44,11 +40,9 @@
     1
    ],
    "translations": {
-    "es": "eventos y promociones",
     "zh": "活动与优惠",
     "he": "אירועים ומבצעים",
     "hi": "इवेंट्स और प्रमोशन्स",
-    "sw": "matukio na ofa",
     "de": "Veranstaltungen und Aktionen",
     "fr": "événements et promotions"
    }
@@ -62,11 +56,9 @@
     5
    ],
    "translations": {
-    "es": "eventos y promociones",
     "zh": "活动与优惠",
     "he": "אירועים ומבצעים",
     "hi": "इवेंट्स और प्रमोशन्स",
-    "sw": "matukio na ofa",
     "de": "Veranstaltungen und Aktionen",
     "fr": "événements et promotions"
    }
@@ -80,11 +72,9 @@
     2
    ],
    "translations": {
-    "es": "formulario de reservación",
     "zh": "预订表单",
     "he": "טופס ההזמנות",
     "hi": "रिज़र्वेशन फ़ॉर्म",
-    "sw": "fomu ya kuhifadhi nafasi",
     "de": "Reservierungsformular",
     "fr": "formulaire de réservation"
    }
@@ -101,11 +91,9 @@
     9
    ],
    "translations": {
-    "es": "Biblioteca de Bourbon",
     "zh": "波本酒库",
     "he": "ספריית הבורבון",
     "hi": "बर्बन लाइब्रेरी",
-    "sw": "Maktaba ya Bourbon",
     "de": "Bourbon-Bibliothek",
     "fr": "Bibliothèque des Bourbons"
    }
@@ -119,11 +107,9 @@
     3
    ],
    "translations": {
-    "es": "casilla de estilo bourbon",
     "zh": "波本类型复选框",
     "he": "תיבת הסימון של סגנון בורבון",
     "hi": "बर्बन स्टाइल बॉक्स",
-    "sw": "kisanduku cha mtindo wa bourbon",
     "de": "Stil-Kästchen Bourbon",
     "fr": "case de style Bourbon"
    }
@@ -137,11 +123,9 @@
     3
    ],
    "translations": {
-    "es": "proof mínimo",
     "zh": "最低酒度",
     "he": "פרוף מינימלי",
     "hi": "न्यूनतम प्रूफ़",
-    "sw": "proof ya chini",
     "de": "Mindest-Proof",
     "fr": "proof minimum"
    }
@@ -155,11 +139,9 @@
     3
    ],
    "translations": {
-    "es": "precio máximo por trago",
     "zh": "最高单杯价格",
     "he": "מחיר מקסימלי למנה",
     "hi": "अधिकतम पोर कीमत",
-    "sw": "bei ya juu ya kipimo",
     "de": "Höchstpreis pro Ausschank",
     "fr": "prix maximum par verre"
    }
@@ -174,11 +156,9 @@
     4
    ],
    "translations": {
-    "es": "Solo Socios",
     "zh": "仅限会员",
     "he": "חברים בלבד",
     "hi": "केवल सदस्य",
-    "sw": "Wanachama Pekee",
     "de": "Nur für Mitglieder",
     "fr": "Réservé aux membres"
    }
@@ -191,11 +171,9 @@
     4
    ],
    "translations": {
-    "es": "alto proof — se recomienda agua aparte",
     "zh": "高酒度 — 建议配水",
     "he": "פרוף גבוה — מומלץ מים בצד",
     "hi": "हाई प्रूफ़ — साथ में पानी लेने की सलाह",
-    "sw": "proof kubwa — inashauriwa maji pembeni",
     "de": "hoher Proof — Wasser dazu empfohlen",
     "fr": "proof élevé — verre d'eau recommandé"
    }
@@ -210,11 +188,9 @@
     8
    ],
    "translations": {
-    "es": "calendario de torneos",
     "zh": "锦标赛日历",
     "he": "לוח הטורנירים",
     "hi": "टूर्नामेंट कैलेंडर",
-    "sw": "kalenda ya mashindano",
     "de": "Turnierkalender",
     "fr": "calendrier des tournois"
    }
@@ -227,11 +203,9 @@
     3
    ],
    "translations": {
-    "es": "Mis Inscripciones",
     "zh": "我的报名",
     "he": "ההרשמות שלי",
     "hi": "मेरी रजिस्ट्रेशन",
-    "sw": "Usajili Wangu",
     "de": "Meine Anmeldungen",
     "fr": "Mes inscriptions"
    }
@@ -247,11 +221,9 @@
     10
    ],
    "translations": {
-    "es": "armador de degustaciones",
     "zh": "品鉴套组搭配器",
     "he": "בונה הפלייטים",
     "hi": "फ़्लाइट बिल्डर",
-    "sw": "Kitengeneza Seti za Kuonja",
     "de": "Verkostungs-Baukasten",
     "fr": "assembleur de dégustations"
    }
@@ -264,11 +236,9 @@
     4
    ],
    "translations": {
-    "es": "Mis Degustaciones",
     "zh": "我的品鉴套组",
     "he": "הפלייטים שלי",
     "hi": "मेरी फ़्लाइट्स",
-    "sw": "Seti Zangu za Kuonja",
     "de": "Meine Verkostungen",
     "fr": "Mes dégustations"
    }
@@ -282,11 +252,9 @@
     7
    ],
    "translations": {
-    "es": "tablero de noches",
     "zh": "夜场看板",
     "he": "לוח הלילות",
     "hi": "नाइट बोर्ड",
-    "sw": "ubao wa usiku",
     "de": "Nächte-Tafel",
     "fr": "tableau des soirées"
    }
@@ -300,11 +268,9 @@
     7
    ],
    "translations": {
-    "es": "Mis Pases",
     "zh": "我的通行证",
     "he": "הכרטיסים שלי",
     "hi": "मेरे पासेस",
-    "sw": "Pasi Zangu",
     "de": "Meine Pässe",
     "fr": "Mes pass"
    }
@@ -319,11 +285,9 @@
     10
    ],
    "translations": {
-    "es": "pase de invitado",
     "zh": "访客通行证",
     "he": "כרטיס אורח",
     "hi": "गेस्ट पास",
-    "sw": "pasi ya mgeni",
     "de": "Gästepass",
     "fr": "pass invité"
    }
@@ -336,11 +300,9 @@
     5
    ],
    "translations": {
-    "es": "agotado",
     "zh": "已售罄",
     "he": "אזל",
     "hi": "सोल्ड आउट",
-    "sw": "imeisha",
     "de": "ausverkauft",
     "fr": "complet"
    }
@@ -354,11 +316,9 @@
     10
    ],
    "translations": {
-    "es": "noches de torneo",
     "zh": "锦标赛之夜",
     "he": "לילות טורניר",
     "hi": "टूर्नामेंट नाइट्स",
-    "sw": "usiku wa mashindano",
     "de": "Turnierabende",
     "fr": "soirées de tournoi"
    }
@@ -373,11 +333,9 @@
     8
    ],
    "translations": {
-    "es": "estudio de tarjetas de regalo",
     "zh": "礼品卡工作室",
     "he": "סטודיו כרטיסי המתנה",
     "hi": "गिफ़्ट कार्ड स्टूडियो",
-    "sw": "studio ya kadi za zawadi",
     "de": "Geschenkkarten-Studio",
     "fr": "studio de cartes-cadeaux"
    }
@@ -390,11 +348,9 @@
     6
    ],
    "translations": {
-    "es": "historial de compras",
     "zh": "购买记录",
     "he": "היסטוריית הרכישות",
     "hi": "खरीद इतिहास",
-    "sw": "historia ya manunuzi",
     "de": "Kaufhistorie",
     "fr": "historique des achats"
    }
@@ -408,11 +364,9 @@
     9
    ],
    "translations": {
-    "es": "Libro del Jugador",
     "zh": "玩家积分簿",
     "he": "פנקס השחקן",
     "hi": "प्लेयर लेजर",
-    "sw": "Leja ya Mchezaji",
     "de": "Spielerbuch",
     "fr": "Carnet du Joueur"
    }
@@ -425,11 +379,9 @@
     9
    ],
    "translations": {
-    "es": "Diario de Catas",
     "zh": "品鉴日志",
     "he": "יומן הטעימות",
     "hi": "टेस्टिंग जर्नल",
-    "sw": "Jarida la Kuonja",
     "de": "Verkostungsjournal",
     "fr": "Journal de Dégustation"
    }
@@ -442,11 +394,9 @@
     9
    ],
    "translations": {
-    "es": "Alta Gama",
     "zh": "顶级酒架",
     "he": "המדף העליון",
     "hi": "टॉप शेल्फ",
-    "sw": "Rafu ya Juu",
     "de": "Spitzenregal",
     "fr": "Haut de Gamme"
    }
@@ -459,11 +409,9 @@
     10
    ],
    "translations": {
-    "es": "Planificador de la Noche",
     "zh": "夜晚行程规划器",
     "he": "מתכנן ערב הבילוי",
     "hi": "नाइट आउट प्लानर",
-    "sw": "Mpangaji wa Usiku",
     "de": "Abendplaner",
     "fr": "Planificateur de Soirée"
    }
@@ -476,11 +424,9 @@
     10
    ],
    "translations": {
-    "es": "Mi Noche",
     "zh": "我的夜晚",
     "he": "הלילה שלי",
     "hi": "मेरी नाइट",
-    "sw": "Usiku Wangu",
     "de": "Mein Abend",
     "fr": "Ma Soirée"
    }

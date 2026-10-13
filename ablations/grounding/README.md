@@ -3,8 +3,8 @@
 The request generator starts every follow-up from a feature of a real similar website
 (`data/similar_websites.json`). This ablation withholds that corpus, keeps everything else fixed
 (same author model) and compares the two datasets on the 30 apps they share:
-`data/evoweb_benchmark.jsonl` (grounded, 32 apps) against `data/ablation_no_grounding.jsonl`
-(no grounding, 30 apps). No benchmark runs are involved; everything reads only `data/`
+[the benchmark](https://huggingface.co/datasets/TD-Labs/EvoWeb) (grounded, 32 apps) against `data/ablation_no_grounding.jsonl`
+(no grounding, 30 apps). No benchmark runs are involved; everything else reads only `data/`
 (the apps' build prompts come from `data/legacy_webgen_bench_apps.jsonl`).
 
 Two results, as in the paper:

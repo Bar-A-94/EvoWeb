@@ -10,11 +10,9 @@
     5
    ],
    "translations": {
-    "es": "Haiku",
     "zh": "俳句",
     "he": "הייקו",
     "hi": "हाइकु",
-    "sw": "Haiku",
     "de": "Haiku",
     "fr": "Haïku"
    }
@@ -29,11 +27,9 @@
     9
    ],
    "translations": {
-    "es": "Soneto",
     "zh": "十四行诗",
     "he": "סונטה",
     "hi": "सॉनेट",
-    "sw": "Soneti",
     "de": "Sonett",
     "fr": "Sonnet"
    }
@@ -48,11 +44,9 @@
     6
    ],
    "translations": {
-    "es": "Limerick",
     "zh": "五行打油诗",
     "he": "לימריק",
     "hi": "लिमरिक",
-    "sw": "Limeriki",
     "de": "Limerick",
     "fr": "Limerick"
    }
@@ -67,11 +61,9 @@
     9
    ],
    "translations": {
-    "es": "Verso Libre",
     "zh": "自由诗",
     "he": "שירה חופשית",
     "hi": "मुक्त छंद",
-    "sw": "Ushairi Huru",
     "de": "Freie Verse",
     "fr": "Vers Libre"
    }
@@ -87,11 +79,9 @@
     9
    ],
    "translations": {
-    "es": "botón de destello",
     "zh": "闪耀按钮",
     "he": "כפתור נצנוץ",
     "hi": "स्पार्कल बटन",
-    "sw": "kitufe cha mng'aro",
     "de": "Funken-Button",
     "fr": "bouton d'étincelle"
    }
@@ -105,11 +95,9 @@
     4
    ],
    "translations": {
-    "es": "Tablero de la Semana",
     "zh": "本周榜单",
     "he": "לוח השבוע",
     "hi": "इस हफ़्ते का बोर्ड",
-    "sw": "Ubao wa Wiki Hii",
     "de": "Tafel der Woche",
     "fr": "Tableau de la Semaine"
    }
@@ -123,11 +111,9 @@
     5
    ],
    "translations": {
-    "es": "Laboratorio de Formas",
     "zh": "诗形实验室",
     "he": "מעבדת הצורות",
     "hi": "फ़ॉर्म लैब",
-    "sw": "Maabara ya Miundo",
     "de": "Formlabor",
     "fr": "Labo des Formes"
    }
@@ -141,11 +127,9 @@
     5
    ],
    "translations": {
-    "es": "Certificar",
     "zh": "认证",
     "he": "אשר צורה",
     "hi": "प्रमाणित करें",
-    "sw": "Thibitisha",
     "de": "Zertifizieren",
     "fr": "Certifier"
    }
@@ -158,11 +142,9 @@
     4
    ],
    "translations": {
-    "es": "forma verificada",
     "zh": "形式确认",
     "he": "צורה מאומתת",
     "hi": "फ़ॉर्म-सत्यापित",
-    "sw": "muundo umethibitishwa",
     "de": "formtreu",
     "fr": "forme vérifiée"
    }
@@ -177,11 +159,9 @@
     10
    ],
    "translations": {
-    "es": "Concursos",
     "zh": "赛事",
     "he": "תחרויות",
     "hi": "प्रतियोगिताएँ",
-    "sw": "Mashindano",
     "de": "Wettbewerbe",
     "fr": "Concours"
    }
@@ -195,11 +175,9 @@
     10
    ],
    "translations": {
-    "es": "Cerrar votación",
     "zh": "结束投票",
     "he": "סגור הצבעה",
     "hi": "मतदान बंद करें",
-    "sw": "Funga Upigaji Kura",
     "de": "Abstimmung schließen",
     "fr": "Clore le vote"
    }
@@ -215,11 +193,9 @@
     9
    ],
    "translations": {
-    "es": "Poetas",
     "zh": "诗人",
     "he": "משוררים",
     "hi": "कवि",
-    "sw": "Washairi",
     "de": "Dichter",
     "fr": "Poètes"
    }
@@ -233,11 +209,9 @@
     10
    ],
    "translations": {
-    "es": "Rincón de Críticas",
     "zh": "点评角",
     "he": "פינת הביקורת",
     "hi": "समीक्षा कॉर्नर",
-    "sw": "Kona ya Uhakiki",
     "de": "Kritik-Ecke",
     "fr": "Coin des Critiques"
    }
@@ -250,11 +224,9 @@
     8
    ],
    "translations": {
-    "es": "abierto a críticas",
     "zh": "欢迎点评",
     "he": "פתוח לביקורת",
     "hi": "फ़ीडबैक आमंत्रित",
-    "sw": "wazi kwa maoni",
     "de": "offen für Kritik",
     "fr": "ouvert aux critiques"
    }
@@ -267,11 +239,9 @@
     8
    ],
    "translations": {
-    "es": "ritmo",
     "zh": "节奏",
     "he": "מקצב",
     "hi": "लय",
-    "sw": "mdundo",
     "de": "Rhythmus",
     "fr": "rythme"
    }
@@ -284,11 +254,9 @@
     8
    ],
    "translations": {
-    "es": "resuelta",
     "zh": "已解决",
     "he": "טופל",
     "hi": "हल हो गया",
-    "sw": "imetatuliwa",
     "de": "erledigt",
     "fr": "résolue"
    }
@@ -301,11 +269,9 @@
     8
    ],
    "translations": {
-    "es": "Criticado",
     "zh": "已点评",
     "he": "עבר ביקורת",
     "hi": "समीक्षित",
-    "sw": "Imehakikiwa",
     "de": "Kritisiert",
     "fr": "Critiqué"
    }
@@ -318,11 +284,9 @@
     9
    ],
    "translations": {
-    "es": "Mi Antología",
     "zh": "我的诗集",
     "he": "האנתולוגיה שלי",
     "hi": "मेरी एंथोलॉजी",
-    "sw": "Antolojia Yangu",
     "de": "Meine Anthologie",
     "fr": "Mon Anthologie"
    }
@@ -335,11 +299,9 @@
     9
    ],
    "translations": {
-    "es": "agregar los tres mejores de la semana",
     "zh": "添加本周前三",
     "he": "הוסף את שלושת המובילים של השבוע",
     "hi": "इस हफ़्ते के टॉप तीन जोड़ें",
-    "sw": "ongeza tatu bora za wiki hii",
     "de": "Top drei der Woche hinzufügen",
     "fr": "ajouter le top trois de la semaine"
    }
@@ -352,11 +314,9 @@
     10
    ],
    "translations": {
-    "es": "Laureles de la Temporada",
     "zh": "赛季桂冠",
     "he": "זרי הדפנה של העונה",
     "hi": "सीज़न लॉरेल्स",
-    "sw": "Taji za Msimu",
     "de": "Saison-Lorbeeren",
     "fr": "Lauriers de la Saison"
    }
@@ -369,11 +329,9 @@
     10
    ],
    "translations": {
-    "es": "Publicar Laureles",
     "zh": "发布桂冠",
     "he": "פרסם זרי דפנה",
     "hi": "लॉरेल्स प्रकाशित करें",
-    "sw": "Chapisha Taji",
     "de": "Lorbeeren veröffentlichen",
     "fr": "Publier les Lauriers"
    }
@@ -386,11 +344,9 @@
     10
    ],
    "translations": {
-    "es": "Más Destellos",
     "zh": "最多闪耀",
     "he": "שיא הנצנוצים",
     "hi": "सबसे ज़्यादा स्पार्कल",
-    "sw": "Mng'aro Mwingi Zaidi",
     "de": "Meiste Funken",
     "fr": "Plus d'Étincelles"
    }
@@ -403,11 +359,9 @@
     10
    ],
    "translations": {
-    "es": "Campeón del Tablero",
     "zh": "榜单冠军",
     "he": "אלוף הלוח",
     "hi": "बोर्ड चैंपियन",
-    "sw": "Bingwa wa Ubao",
     "de": "Tafel-Champion",
     "fr": "Champion du Tableau"
    }
@@ -420,11 +374,9 @@
     10
    ],
    "translations": {
-    "es": "Laureado del Concurso",
     "zh": "赛事桂冠得主",
     "he": "זוכה התחרות",
     "hi": "प्रतियोगिता विजेता",
-    "sw": "Mshindi wa Shindano",
     "de": "Wettbewerbssieger",
     "fr": "Lauréat du Concours"
    }
@@ -437,11 +389,9 @@
     10
    ],
    "translations": {
-    "es": "Mejor Crítico",
     "zh": "最佳点评人",
     "he": "המבקר המוביל",
     "hi": "शीर्ष समीक्षक",
-    "sw": "Mhakiki Bora",
     "de": "Top-Kritiker",
     "fr": "Meilleur Critique"
    }

@@ -94,9 +94,8 @@ Under `generation/` (request 1) or `turn<N>/generation/` (requests 2-10):
 
 ## Tasksets
 
-`data/evoweb_benchmark.jsonl` (32 apps x 10 user requests) is committed. The smoke sets under
+`data/evoweb_benchmark.jsonl` (32 apps x 10 user requests) is downloaded from Hugging Face. The smoke sets under
 `tests/smoke_sets/` are rows of it with the follow-ups trimmed, written by
-`harness/make_tasksets.py` (the Dockerfile runs it during the build; run it yourself on bare
-metal), so they are not committed: `evoweb_smoke_2apps_3requests.jsonl`,
+`harness/make_tasksets.py` (`run_sample.sh` runs it before every ladder), so they are not committed: `evoweb_smoke_2apps_3requests.jsonl`,
 `evoweb_smoke_3apps_2requests.jsonl` and `evoweb_2requests.jsonl` (all 32 apps, 2 requests each).
 A set needs at least 2 requests per app: the harnesses reject a single-request row.

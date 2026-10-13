@@ -71,6 +71,10 @@ fi
 export API_KEY
 [ -n "${EVAL_API_KEY:-}" ] && export EVAL_API_KEY
 
+# The benchmark (and JSONL_FILE) from Hugging Face, plus the smoke sets, where this script reads them.
+export EVOWEB_DATA="$DATA_DIR" SMOKE_DIR="${SMOKE_DIR:-$(cd "${SCRIPT_DIR}/.." && pwd)/tests/smoke_sets}"
+python3 "${SCRIPT_DIR}/make_tasksets.py" ${JSONL_FILE:+"$JSONL_FILE"}
+
 MODEL="${MODEL:-anthropic/claude-sonnet-4-6}"
 PROVIDER="${PROVIDER:-Anthropic}"
 MAX_TOKENS="${MAX_TOKENS:-64000}"

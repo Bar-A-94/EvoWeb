@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Score the request-language runs of Table 3 (Sonnet 4.6 and Haiku 4.5 x 7 languages).
+"""Score the request-language runs of Table 3 (Sonnet 4.6 and Haiku 4.5 x 5 languages).
 
 The user writes in another language, the app stays in English: each arm ran on
 data/multilingual/evoweb_benchmark_<lang>.jsonl (translated request text, English UI mandate, the untouched
@@ -64,13 +64,11 @@ def main():
             expected = metrics.expected_tasks(MULTILINGUAL / f"evoweb_benchmark_{lang}.jsonl")
             m = score_arm(metrics.load_ladders(arms.MULTILINGUAL[model][lang]), expected)
             results[f"{model}-{lang}"] = m
-            star = "" if lang in arms.TABLE3_LANGS else " *"
             print(
-                f"| {arms.LANG_NAMES[lang]}{star} | {m['raw']:.1f} | {m['norm']:.1f} | "
+                f"| {arms.LANG_NAMES[lang]} | {m['raw']:.1f} | {m['norm']:.1f} | "
                 f"{m['grade']:.3f} | {m['auc_turns']:.2f} |"
             )
         print()
-    print("* run in the study but not in the paper's Table 3.")
     if a.json:
         Path(a.json).write_text(json.dumps(results, indent=1) + "\n")
         print("wrote", a.json)

@@ -11,8 +11,10 @@ import sys
 from pathlib import Path
 
 ML = Path(__file__).resolve().parent
+sys.path.insert(0, str(ML.parents[2]))
+from evoweb.paths import LANGS  # noqa: E402
+
 PARTS = ML / "parts"
-LANGS = ["es", "zh", "he", "hi", "sw", "de", "fr"]
 RTL = {"he"}
 
 CSS = """
@@ -54,12 +56,12 @@ def en_tasks(row):
 
 def render_app(app: str, enui: bool = False) -> str:
     d = PARTS / app
-    row = json.loads((d / "en.json").read_text())
-    anchors = json.loads((d / "anchors.json").read_text())["anchors"]
+    row = json.loads((d / "en.json").read_text(encoding="utf-8"))
+    anchors = json.loads((d / "anchors.json").read_text(encoding="utf-8"))["anchors"]
     xlate = [a for a in anchors if a["class"] == "translate"]
     suffix = "_enui" if enui else ""
     parts = {
-        g: json.loads((d / f"{g}{suffix}.json").read_text())
+        g: json.loads((d / f"{g}{suffix}.json").read_text(encoding="utf-8"))
         for g in LANGS
         if (d / f"{g}{suffix}.json").is_file()
     }

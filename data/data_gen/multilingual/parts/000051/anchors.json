@@ -8,11 +8,9 @@
     1
    ],
    "translations": {
-    "es": "Inicio",
     "zh": "首页",
     "he": "דף הבית",
     "hi": "होम",
-    "sw": "Nyumbani",
     "de": "Startseite",
     "fr": "Accueil"
    }
@@ -26,11 +24,9 @@
     2
    ],
    "translations": {
-    "es": "Sobre Nosotros",
     "zh": "关于我们",
     "he": "עלינו",
     "hi": "हमारे बारे में",
-    "sw": "Kuhusu Sisi",
     "de": "Über uns",
     "fr": "À propos"
    }
@@ -50,11 +46,9 @@
     9
    ],
    "translations": {
-    "es": "Empleos",
     "zh": "职位",
     "he": "משרות",
     "hi": "नौकरियां",
-    "sw": "Kazi",
     "de": "Jobs",
     "fr": "Emplois"
    }
@@ -71,11 +65,9 @@
     9
    ],
    "translations": {
-    "es": "Calculadora de pago",
     "zh": "薪酬计算器",
     "he": "מחשבון שכר",
     "hi": "वेतन कैलकुलेटर",
-    "sw": "Kikokotoo cha malipo",
     "de": "Lohnrechner",
     "fr": "Calculateur de paie"
    }
@@ -92,11 +84,9 @@
     10
    ],
    "translations": {
-    "es": "Mis Postulaciones",
     "zh": "我的申请",
     "he": "המועמדויות שלי",
     "hi": "मेरे आवेदन",
-    "sw": "Maombi Yangu",
     "de": "Meine Bewerbungen",
     "fr": "Mes candidatures"
    }
@@ -112,11 +102,9 @@
     10
    ],
    "translations": {
-    "es": "Panel del cliente",
     "zh": "客户仪表板",
     "he": "לוח הלקוח",
     "hi": "क्लाइंट डैशबोर्ड",
-    "sw": "Dashibodi ya mteja",
     "de": "Kunden-Dashboard",
     "fr": "Tableau de bord client"
    }
@@ -130,11 +118,9 @@
     9
    ],
    "translations": {
-    "es": "Panel del cliente",
     "zh": "客户仪表板",
     "he": "לוח הלקוח",
     "hi": "क्लाइंट डैशबोर्ड",
-    "sw": "Dashibodi ya mteja",
     "de": "Kunden-Dashboard",
     "fr": "Tableau de bord client"
    }
@@ -148,11 +134,9 @@
     9
    ],
    "translations": {
-    "es": "Panel del cliente",
     "zh": "客户仪表板",
     "he": "לוח הלקוח",
     "hi": "क्लाइंट डैशबोर्ड",
-    "sw": "Dashibodi ya mteja",
     "de": "Kunden-Dashboard",
     "fr": "Tableau de bord client"
    }
@@ -166,11 +150,9 @@
     9
    ],
    "translations": {
-    "es": "Directorio de clientes",
     "zh": "客户名录",
     "he": "מדריך הלקוחות",
     "hi": "क्लाइंट निर्देशिका",
-    "sw": "Orodha ya wateja",
     "de": "Kundenverzeichnis",
     "fr": "Annuaire des clients"
    }
@@ -184,11 +166,9 @@
     9
    ],
    "translations": {
-    "es": "Directorio de clientes",
     "zh": "客户名录",
     "he": "מדריך הלקוחות",
     "hi": "क्लाइंट निर्देशिका",
-    "sw": "Orodha ya wateja",
     "de": "Kundenverzeichnis",
     "fr": "Annuaire des clients"
    }
@@ -201,11 +181,9 @@
     9
    ],
    "translations": {
-    "es": "Directorio de clientes",
     "zh": "客户名录",
     "he": "מדריך הלקוחות",
     "hi": "क्लाइंट निर्देशिका",
-    "sw": "Orodha ya wateja",
     "de": "Kundenverzeichnis",
     "fr": "Annuaire des clients"
    }
@@ -219,11 +197,9 @@
     10
    ],
    "translations": {
-    "es": "Conductores",
     "zh": "司机",
     "he": "נהגים",
     "hi": "ड्राइवर",
-    "sw": "Madereva",
     "de": "Fahrer",
     "fr": "Chauffeurs"
    }
@@ -237,11 +213,9 @@
     10
    ],
    "translations": {
-    "es": "Ajuste de coincidencias",
     "zh": "匹配调节器",
     "he": "מכוון ההתאמות",
     "hi": "मैच ट्यूनर",
-    "sw": "Kirekebishi cha ulinganifu",
     "de": "Match-Regler",
     "fr": "Réglage des correspondances"
    }
@@ -258,11 +232,9 @@
     8
    ],
    "translations": {
-    "es": "estado",
     "zh": "州",
     "he": "מדינה",
     "hi": "राज्य",
-    "sw": "jimbo",
     "de": "Bundesstaat",
     "fr": "état"
    }
@@ -279,11 +251,9 @@
     9
    ],
    "translations": {
-    "es": "tipo de trabajo",
     "zh": "工作类型",
     "he": "סוג משרה",
     "hi": "नौकरी का प्रकार",
-    "sw": "aina ya kazi",
     "de": "Jobtyp",
     "fr": "type de poste"
    }
@@ -296,11 +266,9 @@
     2
    ],
    "translations": {
-    "es": "clase CDL",
     "zh": "CDL类别",
     "he": "סוג CDL",
     "hi": "CDL क्लास",
-    "sw": "daraja la CDL",
     "de": "CDL-Klasse",
     "fr": "classe CDL"
    }
@@ -317,11 +285,9 @@
     10
    ],
    "translations": {
-    "es": "Clase A",
     "zh": "A类",
     "he": "סוג A",
     "hi": "क्लास A",
-    "sw": "Daraja A",
     "de": "Klasse A",
     "fr": "Classe A"
    }
@@ -334,11 +300,9 @@
     2
    ],
    "translations": {
-    "es": "Clase B",
     "zh": "B类",
     "he": "סוג B",
     "hi": "क्लास B",
-    "sw": "Daraja B",
     "de": "Klasse B",
     "fr": "Classe B"
    }
@@ -354,11 +318,9 @@
     7
    ],
    "translations": {
-    "es": "pago semanal mínimo",
     "zh": "最低周薪",
     "he": "שכר שבועי מינימלי",
     "hi": "न्यूनतम साप्ताहिक वेतन",
-    "sw": "malipo ya chini ya wiki",
     "de": "Mindestwochenlohn",
     "fr": "salaire hebdomadaire minimum"
    }
@@ -372,11 +334,9 @@
     10
    ],
    "translations": {
-    "es": "casilla de pago mínimo",
     "zh": "最低薪酬输入框",
     "he": "תיבת השכר המינימלי",
     "hi": "न्यूनतम वेतन बॉक्स",
-    "sw": "kisanduku cha malipo ya chini",
     "de": "Mindestlohn-Feld",
     "fr": "case du salaire minimum"
    }
@@ -390,11 +350,9 @@
     5
    ],
    "translations": {
-    "es": "borrar todo",
     "zh": "清除全部",
     "he": "נקה הכל",
     "hi": "सभी साफ़ करें",
-    "sw": "futa yote",
     "de": "Alles zurücksetzen",
     "fr": "Tout effacer"
    }
@@ -410,11 +368,9 @@
     8
    ],
    "translations": {
-    "es": "centavos por milla",
     "zh": "每英里美分",
     "he": "סנט למייל",
     "hi": "सेंट प्रति मील",
-    "sw": "senti kwa maili",
     "de": "Cent pro Meile",
     "fr": "cents par mile"
    }
@@ -430,11 +386,9 @@
     8
    ],
    "translations": {
-    "es": "millas por semana",
     "zh": "每周英里数",
     "he": "מיילים לשבוע",
     "hi": "मील प्रति सप्ताह",
-    "sw": "maili kwa wiki",
     "de": "Meilen pro Woche",
     "fr": "miles par semaine"
    }
@@ -447,11 +401,9 @@
     3
    ],
    "translations": {
-    "es": "semanas en ruta por año",
     "zh": "每年在路上的周数",
     "he": "שבועות בדרכים בשנה",
     "hi": "प्रति वर्ष सड़क पर सप्ताह",
-    "sw": "wiki barabarani kwa mwaka",
     "de": "Wochen unterwegs pro Jahr",
     "fr": "semaines sur la route par an"
    }
@@ -464,11 +416,9 @@
     3
    ],
    "translations": {
-    "es": "bruto semanal",
     "zh": "周总收入",
     "he": "ברוטו שבועי",
     "hi": "साप्ताहिक सकल",
-    "sw": "jumla ya wiki",
     "de": "Wochenbrutto",
     "fr": "brut hebdomadaire"
    }
@@ -483,11 +433,9 @@
     8
    ],
    "translations": {
-    "es": "bruto semanal",
     "zh": "周总收入",
     "he": "ברוטו שבועי",
     "hi": "साप्ताहिक सकल",
-    "sw": "jumla ya wiki",
     "de": "Wochenbrutto",
     "fr": "brut hebdomadaire"
    }
@@ -501,11 +449,9 @@
     9
    ],
    "translations": {
-    "es": "Guardar objetivo",
     "zh": "保存目标",
     "he": "שמור יעד",
     "hi": "लक्ष्य सहेजें",
-    "sw": "Hifadhi lengo",
     "de": "Ziel speichern",
     "fr": "Enregistrer l'objectif"
    }
@@ -518,11 +464,9 @@
     3
    ],
    "translations": {
-    "es": "Guardar objetivo",
     "zh": "保存目标",
     "he": "שמור יעד",
     "hi": "लक्ष्य सहेजें",
-    "sw": "Hifadhi lengo",
     "de": "Ziel speichern",
     "fr": "Enregistrer l'objectif"
    }
@@ -539,11 +483,9 @@
     9
    ],
    "translations": {
-    "es": "destacado",
     "zh": "精选",
     "he": "מומלץ",
     "hi": "फ़ीचर्ड",
-    "sw": "maalum",
     "de": "hervorgehoben",
     "fr": "en vedette"
    }
@@ -556,11 +498,9 @@
     5
    ],
    "translations": {
-    "es": "Postulado",
     "zh": "已申请",
     "he": "מועמדות נשלחה",
     "hi": "आवेदन किया",
-    "sw": "Umeomba",
     "de": "Beworben",
     "fr": "Postulé"
    }
@@ -573,11 +513,9 @@
     5
    ],
    "translations": {
-    "es": "Retirar",
     "zh": "撤回",
     "he": "משיכת מועמדות",
     "hi": "वापस लें",
-    "sw": "Ondoa",
     "de": "Zurückziehen",
     "fr": "Retirer"
    }
@@ -591,11 +529,9 @@
     4
    ],
    "translations": {
-    "es": "Local",
     "zh": "本地",
     "he": "מקומי",
     "hi": "लोकल",
-    "sw": "Lokali",
     "de": "Lokal",
     "fr": "Local"
    }
@@ -610,11 +546,9 @@
     8
    ],
    "translations": {
-    "es": "Regional",
     "zh": "区域",
     "he": "אזורי",
     "hi": "क्षेत्रीय",
-    "sw": "Kikanda",
     "de": "Regional",
     "fr": "Régional"
    }
@@ -629,11 +563,9 @@
     10
    ],
    "translations": {
-    "es": "Enviada",
     "zh": "已提交",
     "he": "הוגשה",
     "hi": "सबमिट किया गया",
-    "sw": "Imewasilishwa",
     "de": "Eingereicht",
     "fr": "Envoyée"
    }
@@ -647,11 +579,9 @@
     10
    ],
    "translations": {
-    "es": "En revisión",
     "zh": "审核中",
     "he": "בבדיקה",
     "hi": "समीक्षाधीन",
-    "sw": "Inakaguliwa",
     "de": "In Prüfung",
     "fr": "En cours d'examen"
    }
@@ -665,11 +595,9 @@
     10
    ],
    "translations": {
-    "es": "Entrevista",
     "zh": "面试",
     "he": "ראיון",
     "hi": "इंटरव्यू",
-    "sw": "Usaili",
     "de": "Vorstellungsgespräch",
     "fr": "Entretien"
    }
@@ -682,11 +610,9 @@
     6
    ],
    "translations": {
-    "es": "Contratado",
     "zh": "已录用",
     "he": "התקבל",
     "hi": "नियुक्त",
-    "sw": "Ameajiriwa",
     "de": "Eingestellt",
     "fr": "Embauché"
    }
@@ -699,11 +625,9 @@
     6
    ],
    "translations": {
-    "es": "Rechazada",
     "zh": "已拒绝",
     "he": "נדחתה",
     "hi": "अस्वीकृत",
-    "sw": "Imekataliwa",
     "de": "Abgelehnt",
     "fr": "Refusée"
    }
@@ -716,11 +640,9 @@
     10
    ],
    "translations": {
-    "es": "Lun 9:00 AM",
     "zh": "周一上午9:00",
     "he": "יום שני 9:00 AM",
     "hi": "सोम 9:00 AM",
-    "sw": "Jumatatu 9:00 AM",
     "de": "Mo 9:00 AM",
     "fr": "Lun 9:00 AM"
    }
@@ -733,11 +655,9 @@
     10
    ],
    "translations": {
-    "es": "Mar 2:00 PM",
     "zh": "周二下午2:00",
     "he": "יום שלישי 2:00 PM",
     "hi": "मंगल 2:00 PM",
-    "sw": "Jumanne 2:00 PM",
     "de": "Di 2:00 PM",
     "fr": "Mar 2:00 PM"
    }
@@ -750,11 +670,9 @@
     10
    ],
    "translations": {
-    "es": "Jue 10:30 AM",
     "zh": "周四上午10:30",
     "he": "יום חמישי 10:30 AM",
     "hi": "गुरु 10:30 AM",
-    "sw": "Alhamisi 10:30 AM",
     "de": "Do 10:30 AM",
     "fr": "Jeu 10:30 AM"
    }

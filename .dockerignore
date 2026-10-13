@@ -1,4 +1,4 @@
-# The harness image needs harness/ and data/ only; keep the archives and run outputs out of the
+# The harness image needs harness/, evoweb/ and data/ only; keep the archives and run outputs out of the
 # build context so `docker build` does not copy hundreds of MB first.
 examples_artifacts/
 runs/
@@ -8,3 +8,7 @@ artifacts/
 __pycache__/
 *.pyc
 data/data_gen/
+# downloaded per ladder from Hugging Face (evoweb/paths.py): a copy baked into the image would be
+# used silently whenever a container's download fails
+data/evoweb_benchmark.jsonl
+data/multilingual/

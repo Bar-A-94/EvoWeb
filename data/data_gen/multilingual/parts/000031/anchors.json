@@ -8,11 +8,9 @@
         1
       ],
       "translations": {
-        "es": "foro de discusión",
         "zh": "讨论论坛",
         "he": "פורום הדיונים",
         "hi": "चर्चा फ़ोरम",
-        "sw": "jukwaa la majadiliano",
         "de": "Diskussionsforum",
         "fr": "forum de discussion"
       }
@@ -25,11 +23,9 @@
         2
       ],
       "translations": {
-        "es": "Nuevos",
         "zh": "最新",
         "he": "חדשים",
         "hi": "नए",
-        "sw": "Mpya",
         "de": "Neu",
         "fr": "Nouveau"
       }
@@ -44,11 +40,9 @@
         10
       ],
       "translations": {
-        "es": "Mejores",
         "zh": "最热",
         "he": "מובילים",
         "hi": "टॉप",
-        "sw": "Bora",
         "de": "Beste",
         "fr": "Meilleurs"
       }
@@ -64,11 +58,9 @@
         7
       ],
       "translations": {
-        "es": "Día",
         "zh": "天",
         "he": "יום",
         "hi": "दिन",
-        "sw": "Siku",
         "de": "Tag",
         "fr": "Jour"
       }
@@ -82,11 +74,9 @@
         4
       ],
       "translations": {
-        "es": "Día 1",
         "zh": "第1天",
         "he": "יום 1",
         "hi": "दिन 1",
-        "sw": "Siku 1",
         "de": "Tag 1",
         "fr": "Jour 1"
       }
@@ -101,11 +91,9 @@
         6
       ],
       "translations": {
-        "es": "Día 2",
         "zh": "第2天",
         "he": "יום 2",
         "hi": "दिन 2",
-        "sw": "Siku 2",
         "de": "Tag 2",
         "fr": "Jour 2"
       }
@@ -120,11 +108,9 @@
         6
       ],
       "translations": {
-        "es": "Día 3",
         "zh": "第3天",
         "he": "יום 3",
         "hi": "दिन 3",
-        "sw": "Siku 3",
         "de": "Tag 3",
         "fr": "Jour 3"
       }
@@ -137,11 +123,9 @@
         2
       ],
       "translations": {
-        "es": "Día 4",
         "zh": "第4天",
         "he": "יום 4",
         "hi": "दिन 4",
-        "sw": "Siku 4",
         "de": "Tag 4",
         "fr": "Jour 4"
       }
@@ -156,11 +140,9 @@
         7
       ],
       "translations": {
-        "es": "Día 5",
         "zh": "第5天",
         "he": "יום 5",
         "hi": "दिन 5",
-        "sw": "Siku 5",
         "de": "Tag 5",
         "fr": "Jour 5"
       }
@@ -176,11 +158,9 @@
         10
       ],
       "translations": {
-        "es": "Tendencias",
         "zh": "热门",
         "he": "מגמות",
         "hi": "ट्रेंडिंग",
-        "sw": "Zinazovuma",
         "de": "Trends",
         "fr": "Tendances"
       }
@@ -195,11 +175,9 @@
         10
       ],
       "translations": {
-        "es": "Mercado",
         "zh": "二手市场",
         "he": "שוק",
         "hi": "बाज़ार",
-        "sw": "Soko",
         "de": "Marktplatz",
         "fr": "Marché"
       }
@@ -214,11 +192,9 @@
         10
       ],
       "translations": {
-        "es": "Cola de Moderación",
         "zh": "审核队列",
         "he": "תור המודרציה",
         "hi": "मॉडरेशन कतार",
-        "sw": "Foleni ya Udhibiti",
         "de": "Moderationswarteschlange",
         "fr": "File de modération"
       }
@@ -231,11 +207,9 @@
         7
       ],
       "translations": {
-        "es": "registro de Eliminados",
         "zh": "已移除记录",
         "he": "יומן ההסרות",
         "hi": "हटाए गए का लॉग",
-        "sw": "kumbukumbu ya Zilizoondolewa",
         "de": "Protokoll der Entfernten",
         "fr": "journal des Supprimés"
       }
@@ -248,11 +222,9 @@
         7
       ],
       "translations": {
-        "es": "Restaurar",
         "zh": "恢复",
         "he": "שחזר",
         "hi": "पुनर्स्थापित करें",
-        "sw": "Rejesha",
         "de": "Wiederherstellen",
         "fr": "Restaurer"
       }
@@ -265,11 +237,9 @@
         7
       ],
       "translations": {
-        "es": "Eliminar",
         "zh": "移除",
         "he": "הסר",
         "hi": "हटाएँ",
-        "sw": "Ondoa",
         "de": "Entfernen",
         "fr": "Supprimer"
       }
@@ -282,11 +252,9 @@
         7
       ],
       "translations": {
-        "es": "Reportar",
         "zh": "举报",
         "he": "דווח",
         "hi": "रिपोर्ट करें",
-        "sw": "Ripoti",
         "de": "Melden",
         "fr": "Signaler"
       }
@@ -299,11 +267,9 @@
         9
       ],
       "translations": {
-        "es": "Resumen del Campus",
         "zh": "校园摘要",
         "he": "תקציר הקמפוס",
         "hi": "कैंपस डाइजेस्ट",
-        "sw": "Muhtasari wa Kampasi",
         "de": "Campus-Digest",
         "fr": "Digest du campus"
       }
@@ -316,11 +282,9 @@
         9
       ],
       "translations": {
-        "es": "Tablero de Resúmenes",
         "zh": "摘要看板",
         "he": "לוח התקצירים",
         "hi": "डाइजेस्ट बोर्ड",
-        "sw": "Ubao wa Muhtasari",
         "de": "Digest-Board",
         "fr": "Tableau des digests"
       }
@@ -333,11 +297,9 @@
         9
       ],
       "translations": {
-        "es": "Tendencias ahora",
         "zh": "热门动态",
         "he": "מגמות עכשיו",
         "hi": "अभी ट्रेंडिंग",
-        "sw": "Zinazovuma sasa",
         "de": "Trends jetzt",
         "fr": "Tendances du moment"
       }
@@ -350,11 +312,9 @@
         9
       ],
       "translations": {
-        "es": "Selección del Mercado",
         "zh": "二手市场精选",
         "he": "מבחר מהשוק",
         "hi": "बाज़ार की चुनिंदा चीज़ें",
-        "sw": "Vilivyoteuliwa sokoni",
         "de": "Marktplatz-Tipps",
         "fr": "Sélection du Marché"
       }
@@ -368,11 +328,9 @@
         8
       ],
       "translations": {
-        "es": "panel de filtros",
         "zh": "筛选面板",
         "he": "פאנל הסינון",
         "hi": "फ़िल्टर पैनल",
-        "sw": "paneli ya kuchuja",
         "de": "Filterpanel",
         "fr": "panneau de filtres"
       }
@@ -386,11 +344,9 @@
         8
       ],
       "translations": {
-        "es": "puntaje mínimo",
         "zh": "最低分数",
         "he": "ניקוד מינימלי",
         "hi": "न्यूनतम स्कोर",
-        "sw": "alama ya chini",
         "de": "Mindestpunktzahl",
         "fr": "score minimum"
       }
@@ -403,11 +359,9 @@
         6
       ],
       "translations": {
-        "es": "N coincidencias",
         "zh": "N 个匹配",
         "he": "N התאמות",
         "hi": "N मिलान",
-        "sw": "N zinazolingana",
         "de": "N Treffer",
         "fr": "N résultats"
       }
@@ -420,11 +374,9 @@
         6
       ],
       "translations": {
-        "es": "preajuste",
         "zh": "预设",
         "he": "פריסט",
         "hi": "प्रीसेट",
-        "sw": "mpangilio uliohifadhiwa",
         "de": "Voreinstellung",
         "fr": "préréglage"
       }
@@ -437,11 +389,9 @@
         8
       ],
       "translations": {
-        "es": "firmar este",
         "zh": "署名这条",
         "he": "לחתום על זה",
         "hi": "इस पर नाम डालें",
-        "sw": "tia saini hii",
         "de": "diesen signieren",
         "fr": "signer celui-ci"
       }
@@ -454,11 +404,9 @@
         8
       ],
       "translations": {
-        "es": "apodo",
         "zh": "昵称",
         "he": "כינוי",
         "hi": "उपनाम",
-        "sw": "jina la utani",
         "de": "Spitzname",
         "fr": "pseudo"
       }
@@ -471,11 +419,9 @@
         7
       ],
       "translations": {
-        "es": "spam",
         "zh": "垃圾信息",
         "he": "ספאם",
         "hi": "स्पैम",
-        "sw": "spamu",
         "de": "Spam",
         "fr": "spam"
       }
@@ -488,11 +434,9 @@
         7
       ],
       "translations": {
-        "es": "acoso",
         "zh": "骚扰",
         "he": "הטרדה",
         "hi": "उत्पीड़न",
-        "sw": "unyanyasaji",
         "de": "Belästigung",
         "fr": "harcèlement"
       }
@@ -505,11 +449,9 @@
         7
       ],
       "translations": {
-        "es": "trampa académica",
         "zh": "作弊",
         "he": "העתקה",
         "hi": "नकल",
-        "sw": "udanganyifu",
         "de": "Betrug",
         "fr": "triche"
       }
@@ -522,11 +464,9 @@
         7
       ],
       "translations": {
-        "es": "otro",
         "zh": "其他",
         "he": "אחר",
         "hi": "अन्य",
-        "sw": "nyingine",
         "de": "Sonstiges",
         "fr": "autre"
       }
@@ -543,11 +483,9 @@
         10
       ],
       "translations": {
-        "es": "campus",
         "zh": "校园",
         "he": "קמפוס",
         "hi": "कैंपस",
-        "sw": "kampasi",
         "de": "Campus",
         "fr": "campus"
       }
@@ -561,11 +499,9 @@
         7
       ],
       "translations": {
-        "es": "académico",
         "zh": "学业",
         "he": "לימודים",
         "hi": "पढ़ाई",
-        "sw": "masomo",
         "de": "Studium",
         "fr": "études"
       }
@@ -579,11 +515,9 @@
         8
       ],
       "translations": {
-        "es": "ayuda",
         "zh": "求助",
         "he": "עזרה",
         "hi": "मदद",
-        "sw": "msaada",
         "de": "Hilfe",
         "fr": "aide"
       }
@@ -596,11 +530,9 @@
         2
       ],
       "translations": {
-        "es": "comida",
         "zh": "美食",
         "he": "אוכל",
         "hi": "खाना",
-        "sw": "chakula",
         "de": "Essen",
         "fr": "nourriture"
       }
@@ -615,11 +547,9 @@
         8
       ],
       "translations": {
-        "es": "vivienda",
         "zh": "住宿",
         "he": "דיור",
         "hi": "आवास",
-        "sw": "makazi",
         "de": "Wohnen",
         "fr": "logement"
       }
@@ -633,11 +563,9 @@
         7
       ],
       "translations": {
-        "es": "electrónica",
         "zh": "电子产品",
         "he": "אלקטרוניקה",
         "hi": "इलेक्ट्रॉनिक्स",
-        "sw": "elektroniki",
         "de": "Elektronik",
         "fr": "électronique"
       }
@@ -650,11 +578,9 @@
         5
       ],
       "translations": {
-        "es": "Bueno",
         "zh": "良好",
         "he": "טוב",
         "hi": "अच्छा",
-        "sw": "Nzuri",
         "de": "Gut",
         "fr": "Bon"
       }
@@ -667,11 +593,9 @@
         5
       ],
       "translations": {
-        "es": "precio de menor a mayor",
         "zh": "价格从低到高",
         "he": "מחיר מהנמוך לגבוה",
         "hi": "कीमत कम से ज़्यादा",
-        "sw": "bei kutoka chini kwenda juu",
         "de": "Preis aufsteigend",
         "fr": "prix croissant"
       }
@@ -686,11 +610,9 @@
         10
       ],
       "translations": {
-        "es": "El 3er piso de la biblioteca es un zoológico en finales",
         "zh": "期末周图书馆三楼简直是动物园",
         "he": "קומה 3 בספרייה היא גן חיות בתקופת המבחנים",
         "hi": "फ़ाइनल के दौरान लाइब्रेरी की तीसरी मंज़िल चिड़ियाघर बन जाती है",
-        "sw": "Ghorofa ya 3 ya maktaba ni zoo wakati wa mitihani ya mwisho",
         "de": "Die 3. Etage der Bibliothek ist in der Prüfungszeit ein Zoo",
         "fr": "Le 3e étage de la bibliothèque est un zoo pendant les partiels"
       }
@@ -703,11 +625,9 @@
         2
       ],
       "translations": {
-        "es": "¿De verdad alguien aprobó el parcial de Econ 201?",
         "zh": "真的有人通过了 Econ 201 的期中考试吗？",
         "he": "מישהו באמת עבר את מבחן האמצע של Econ 201?",
         "hi": "क्या सच में किसी ने Econ 201 का मिडटर्म पास किया?",
-        "sw": "Kuna mtu yeyote alifaulu mtihani wa katikati wa Econ 201?",
         "de": "Hat die Econ 201 Zwischenprüfung wirklich jemand bestanden?",
         "fr": "Quelqu'un a-t-il vraiment réussi le partiel d'Econ 201 ?"
       }
@@ -720,11 +640,9 @@
         2
       ],
       "translations": {
-        "es": "Perdí un llavero azul cerca del comedor",
         "zh": "在食堂附近丢了一个蓝色钥匙扣",
         "he": "אבד לי מחזיק מפתחות כחול ליד חדר האוכל",
         "hi": "डाइनिंग हॉल के पास एक नीली चाबी का छल्ला खो गया",
-        "sw": "Nimepoteza kishikizi cha funguo cha bluu karibu na bwalo la chakula",
         "de": "Blauen Schlüsselanhänger in der Nähe der Mensa verloren",
         "fr": "J'ai perdu un porte-clés bleu près du resto U"
       }
@@ -742,11 +660,9 @@
         10
       ],
       "translations": {
-        "es": "¿Dónde comer rico y barato a poca distancia a pie?",
         "zh": "步行距离内最好的平价小吃在哪？",
         "he": "איפה אוכל זול וטוב במרחק הליכה?",
         "hi": "पैदल दूरी पर सबसे अच्छा सस्ता खाना कहाँ मिलेगा?",
-        "sw": "Chakula bora cha bei nafuu kwa umbali wa kutembea?",
         "de": "Bestes günstiges Essen in Laufnähe?",
         "fr": "Où bien manger pas cher à distance de marche ?"
       }
@@ -759,11 +675,9 @@
         2
       ],
       "translations": {
-        "es": "Mi compañero de cuarto se sigue comiendo mis sobras",
         "zh": "我室友老是偷吃我的剩饭",
         "he": "השותף שלי לחדר כל הזמן אוכל לי את השאריות",
         "hi": "मेरा रूममेट बार-बार मेरा बचा हुआ खाना खा जाता है",
-        "sw": "Mwenzangu wa chumba anaendelea kula mabaki yangu ya chakula",
         "de": "Mein Mitbewohner isst ständig meine Reste",
         "fr": "Mon colocataire mange toujours mes restes"
       }
@@ -776,11 +690,9 @@
         2
       ],
       "translations": {
-        "es": "Subarriendo de verano disponible, a 2 cuadras del patio central",
         "zh": "暑期转租，距中心草坪2个街区",
         "he": "סאבלט לקיץ פנוי, 2 בלוקים מהכיכר המרכזית",
         "hi": "गर्मियों की सबलेट उपलब्ध, क्वाड से 2 ब्लॉक दूर",
-        "sw": "Upangishaji wa kiangazi unapatikana, vitalu 2 kutoka uwanja wa kati",
         "de": "Sommer-Untermiete frei, 2 Blocks vom Campus-Platz",
         "fr": "Sous-location d'été disponible, à 2 pâtés de maisons du campus"
       }
@@ -795,11 +707,9 @@
         8
       ],
       "translations": {
-        "es": "subarriendo de verano",
         "zh": "暑期转租",
         "he": "סאבלט לקיץ",
         "hi": "गर्मियों की सबलेट",
-        "sw": "Upangishaji wa kiangazi",
         "de": "Sommer-Untermiete",
         "fr": "sous-location d'été"
       }
@@ -817,11 +727,9 @@
         10
       ],
       "translations": {
-        "es": "El Wi-Fi de North Hall se cayó OTRA VEZ",
         "zh": "North Hall 的 Wi-Fi 又断了",
         "he": "ה-Wi-Fi ב-North Hall נפל שוב",
         "hi": "North Hall में Wi-Fi फिर से बंद है",
-        "sw": "Wi-Fi ya North Hall imekufa TENA",
         "de": "Das Wi-Fi in North Hall ist SCHON WIEDER weg",
         "fr": "Le Wi-Fi de North Hall est ENCORE en panne"
       }
@@ -839,11 +747,9 @@
         10
       ],
       "translations": {
-        "es": "Wi-Fi de North Hall",
         "zh": "North Hall 的 Wi-Fi",
         "he": "Wi-Fi ב-North Hall",
         "hi": "North Hall में Wi-Fi",
-        "sw": "Wi-Fi ya North Hall",
         "de": "Wi-Fi in North Hall",
         "fr": "Wi-Fi de North Hall"
       }
@@ -857,11 +763,9 @@
         9
       ],
       "translations": {
-        "es": "Vendo mis respuestas viejas del examen de Chem 110",
         "zh": "出售我以前 Chem 110 的考试答案",
         "he": "מוכר את התשובות הישנות שלי למבחן של Chem 110",
         "hi": "Chem 110 के मेरे पुराने परीक्षा उत्तर बेच रहा हूँ",
-        "sw": "Nauza majibu yangu ya zamani ya mtihani wa Chem 110",
         "de": "Verkaufe meine alten Klausurlösungen für Chem 110",
         "fr": "Je vends mes anciennes réponses d'examen de Chem 110"
       }
@@ -874,11 +778,9 @@
         3
       ],
       "translations": {
-        "es": "¿Cuánto tiempo lleva caído el Wi-Fi de tu dormitorio esta semana?",
         "zh": "这周你宿舍的 Wi-Fi 断了多久了？",
         "he": "כמה זמן ה-Wi-Fi במעונות שלך מושבת השבוע?",
         "hi": "इस हफ़्ते आपके हॉस्टल का Wi-Fi कितनी देर से बंद है?",
-        "sw": "Wi-Fi ya bweni lako imekuwa haifanyi kazi kwa muda gani wiki hii?",
         "de": "Wie lange ist dein Wohnheim-Wi-Fi diese Woche schon ausgefallen?",
         "fr": "Depuis combien de temps le Wi-Fi de ta résidence est-il en panne cette semaine ?"
       }
@@ -892,11 +794,9 @@
         4
       ],
       "translations": {
-        "es": "Menos de una hora",
         "zh": "不到一小时",
         "he": "פחות משעה",
         "hi": "एक घंटे से कम",
-        "sw": "Chini ya saa moja",
         "de": "Weniger als eine Stunde",
         "fr": "Moins d'une heure"
       }
@@ -909,11 +809,9 @@
         3
       ],
       "translations": {
-        "es": "Medio día",
         "zh": "半天",
         "he": "חצי יום",
         "hi": "आधा दिन",
-        "sw": "Nusu siku",
         "de": "Einen halben Tag",
         "fr": "Une demi-journée"
       }
@@ -926,11 +824,9 @@
         3
       ],
       "translations": {
-        "es": "Días",
         "zh": "好几天",
         "he": "ימים",
         "hi": "कई दिन",
-        "sw": "Siku kadhaa",
         "de": "Tage",
         "fr": "Des jours"
       }
@@ -943,11 +839,9 @@
         8
       ],
       "translations": {
-        "es": "¿Estaba cerca de la entrada de la barra de ensaladas?",
         "zh": "是在沙拉吧入口附近吗？",
         "he": "זה היה ליד הכניסה לעמדת הסלטים?",
         "hi": "क्या वह सलाद बार के प्रवेश द्वार के पास था?",
-        "sw": "Je, kilikuwa karibu na mlango wa kaunta ya saladi?",
         "de": "War er in der Nähe vom Eingang der Salatbar?",
         "fr": "C'était près de l'entrée du bar à salades ?"
       }
@@ -960,11 +854,9 @@
         8
       ],
       "translations": {
-        "es": "¡Olvídenlo, acabo de ver un llavero azul en la recepción!",
         "zh": "算了——我刚在前台看到一个蓝色钥匙扣！",
         "he": "לא משנה — הרגע ראיתי מחזיק מפתחות כחול בדלפק הקבלה!",
         "hi": "कोई बात नहीं — मुझे अभी रिसेप्शन पर एक नीली चाबी का छल्ला दिखा!",
-        "sw": "Acha tu — nimeona kishikizi cha funguo cha bluu kwenye dawati la mapokezi!",
         "de": "Hat sich erledigt — habe gerade einen blauen Schlüsselanhänger an der Rezeption gesehen!",
         "fr": "Laissez tomber — je viens de voir un porte-clés bleu à l'accueil !"
       }
@@ -977,11 +869,9 @@
         8
       ],
       "translations": {
-        "es": "Revisa los objetos perdidos en la recepción",
         "zh": "去前台失物招领处看看",
         "he": "תבדוק באבידות ומציאות בדלפק הקבלה",
         "hi": "रिसेप्शन के खोया-पाया में देख लो",
-        "sw": "Angalia kwenye dawati la mapokezi la vitu vilivyopotea",
         "de": "Schau mal im Fundbüro an der Rezeption",
         "fr": "Va voir aux objets trouvés à l'accueil"
       }
@@ -994,11 +884,9 @@
         8
       ],
       "translations": {
-        "es": "Suerte, esas cosas desaparecen",
         "zh": "祝你好运，这种东西一般都找不回来",
         "he": "בהצלחה, הדברים האלה פשוט נעלמים",
         "hi": "गुड लक, ऐसी चीज़ें गायब ही हो जाती हैं",
-        "sw": "Kila la heri, vitu hivyo hupotea",
         "de": "Viel Glück, so was verschwindet einfach",
         "fr": "Bonne chance, ces trucs disparaissent"
       }
@@ -1012,11 +900,9 @@
         9
       ],
       "translations": {
-        "es": "Libro de texto de Cálculo 2",
         "zh": "微积分2课本",
         "he": "ספר לימוד קלקולוס 2",
         "hi": "कैलकुलस 2 की पाठ्यपुस्तक",
-        "sw": "Kitabu cha Kalkulasi 2",
         "de": "Lehrbuch Analysis 2",
         "fr": "Manuel d'Analyse 2"
       }
@@ -1030,11 +916,9 @@
         9
       ],
       "translations": {
-        "es": "Mini refrigerador",
         "zh": "小冰箱",
         "he": "מקרר קטן",
         "hi": "मिनी फ्रिज",
-        "sw": "Friji ndogo",
         "de": "Mini-Kühlschrank",
         "fr": "Mini-frigo"
       }
@@ -1048,11 +932,9 @@
         7
       ],
       "translations": {
-        "es": "Calculadora TI-84 Plus",
         "zh": "TI-84 Plus 计算器",
         "he": "מחשבון TI-84 Plus",
         "hi": "TI-84 Plus कैलकुलेटर",
-        "sw": "Kikokotoo cha TI-84 Plus",
         "de": "TI-84 Plus Taschenrechner",
         "fr": "Calculatrice TI-84 Plus"
       }
@@ -1066,11 +948,9 @@
         9
       ],
       "translations": {
-        "es": "partido de rivalidad contra State",
         "zh": "State 对抗赛",
         "he": "משחק היריבות מול State",
         "hi": "State प्रतिद्वंद्विता मैच",
-        "sw": "mchezo wa ushindani dhidi ya State",
         "de": "Derby gegen State",
         "fr": "match de rivalité contre State"
       }
@@ -1083,11 +963,9 @@
         5
       ],
       "translations": {
-        "es": "Bicicleta fixie, necesita llantas nuevas",
         "zh": "死飞自行车，需要换新轮胎",
         "he": "אופני פיקסי צריכים צמיגים חדשים",
         "hi": "फिक्सी साइकिल, नए टायर चाहिए",
-        "sw": "Baiskeli ya fixie inahitaji matairi mapya",
         "de": "Fixie-Rad braucht neue Reifen",
         "fr": "Vélo fixie a besoin de nouveaux pneus"
       }
@@ -1100,11 +978,9 @@
         9
       ],
       "translations": {
-        "es": "Resumen de la Semana 1",
         "zh": "第1周摘要",
         "he": "תקציר שבוע 1",
         "hi": "सप्ताह 1 डाइजेस्ट",
-        "sw": "Muhtasari wa Wiki 1",
         "de": "Digest Woche 1",
         "fr": "Digest Semaine 1"
       }

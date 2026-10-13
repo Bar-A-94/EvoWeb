@@ -14,11 +14,15 @@ _PKG = ML.parents[2]
 if str(_PKG) not in sys.path:
     sys.path.insert(0, str(_PKG))
 from evoweb.paths import BENCHMARK as DATA  # noqa: E402
+from evoweb.paths import ensure_data  # noqa: E402
 
 if __name__ == "__main__":
-    for line in DATA.open():
+    ensure_data(DATA)
+    for line in DATA.open(encoding="utf-8"):
         row = json.loads(line)
         d = ML / "parts" / row["id"]
         d.mkdir(parents=True, exist_ok=True)
-        (d / "en.json").write_text(json.dumps(row, indent=1, ensure_ascii=False) + "\n")
+        (d / "en.json").write_text(
+            json.dumps(row, indent=1, ensure_ascii=False) + "\n", encoding="utf-8"
+        )
         print("wrote", d / "en.json")

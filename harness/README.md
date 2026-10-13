@@ -18,7 +18,7 @@ What is in here:
 | `webvoyager/` | The judge: drives the served app in headless Chrome and returns YES / PARTIAL / NO per check |
 | `scoring.py` | Error taxonomy + verdict parsing; **byte-identical** to `../evoweb/scoring.py` (enforced by a test) |
 | `checkpoint.py` | Per-request checkpoint/restore for the Kubernetes path (`../infra/`); only active with `S3_BUCKET`, off by default |
-| `make_tasksets.py` | Derives the smoke sets in `../tests/smoke_sets/` from `../data/evoweb_benchmark.jsonl` (32 apps x 10 requests) |
+| `make_tasksets.py` | Downloads the latest benchmark from Hugging Face and derives the smoke sets in `../tests/smoke_sets/` from `../data/evoweb_benchmark.jsonl` (32 apps x 10 requests); `run_sample.sh` runs it before every ladder |
 | `setup_instance.sh`, `Dockerfile`, `requirements.txt` | Environment: Chrome + chromedriver, Node 22, Python 3, uv |
 
 ## Quick start (Docker)
@@ -126,7 +126,7 @@ variable reproduces the paper.
 | `EVAL_MODEL` | `claude-sonnet-4-6` | judge | the paper's judge |
 | `EVAL_API_URL` | `https://api.anthropic.com` | judge | |
 | `EVAL_PROVIDER` | inferred from `EVAL_API_URL` (`anthropic` if it contains `anthropic.com`, else `openai`) | judge | judge wire format |
-| `JSONL_FILE` | `evoweb_benchmark.jsonl` | `run_sample.sh` | a file under `../data/` (the benchmark, `multilingual/*.jsonl`, `ablation_no_grounding.jsonl`) or `../tests/smoke_sets/`, or a path; the image carries both |
+| `JSONL_FILE` | `evoweb_benchmark.jsonl` | `run_sample.sh` | a file under `../data/` (the benchmark, `multilingual/*.jsonl`, `ablation_no_grounding.jsonl`) or `../tests/smoke_sets/`, or a path |
 | `GENERATOR` | `openhands` | `run_single_sample.py` | `openhands` (the paper) \| `bash` \| `mini_swe_agent` \| `claude_code` (shipped, not used in the paper; see `generators/README.md`) |
 | `MAX_TOKENS` | `64000` | `--max-tokens` | not read on the harness path; sampling is pinned by the rows below |
 | `AGENT_MAX_TURNS` | `20` | `generators/backend.py` (`max_steps`) | agent turn budget **per user request** (ladder length comes from the dataset) |

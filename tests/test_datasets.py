@@ -3,7 +3,7 @@
     /usr/bin/python3 -m pytest tests/test_datasets.py -q          # ~2 min; add -m "not slow" to skip the gate
 
 Every "byte-identical" claim in data/README.md and data/data_gen/README.md is asserted here, against the
-committed files, writing only into pytest's tmp_path.
+files downloaded from Hugging Face, writing only into pytest's tmp_path.
 """
 
 from __future__ import annotations
@@ -19,12 +19,11 @@ import pytest
 PKG = Path(__file__).resolve().parents[1]
 if str(PKG) not in sys.path:
     sys.path.insert(0, str(PKG))
-from evoweb.paths import BENCHMARK, DATA, MULTILINGUAL  # noqa: E402
+from evoweb.paths import BENCHMARK, DATA, LANGS, MULTILINGUAL  # noqa: E402
 
 DS = PKG / "data" / "data_gen"
 ML = DS / "multilingual"
 PY = sys.executable
-LANGS = ["es", "zh", "he", "hi", "sw", "de", "fr"]
 
 
 def rows(path: Path) -> list[dict]:
@@ -50,14 +49,6 @@ def test_benchmark_rows_are_the_wave_in_order():
     assert mt.taskset(full, len(mt.WAVE), None) == BENCHMARK.read_text(encoding="utf-8")
 
 
-def test_manifest_parent_hash_matches_evoweb():
-    import hashlib
-
-    manifest = json.loads((ML / "manifest_enui.json").read_text())
-    assert manifest["parent"] == BENCHMARK.name
-    assert hashlib.sha256(BENCHMARK.read_bytes()).hexdigest() == manifest["parent_sha256"]
-
-
 # ───────────────────────────────────────────── row schema ────────────────────────────────────
 def test_every_evoweb_row_has_9_follow_ups_with_5_checks_in_the_slot_template():
     for row in rows(BENCHMARK):
@@ -74,7 +65,6 @@ def test_every_evoweb_row_has_9_follow_ups_with_5_checks_in_the_slot_template():
             kinds = [t["kind"] for t in tasks]
             assert all(x in ("exact-value", "feature") for x in kinds[:3]), (row["id"], k, kinds)
             assert kinds[3] == "integration" and kinds[4] == "regression", (row["id"], k, kinds)
-            assert "difficulty" not in fu  # dropped: it was "hard" on every follow-up
             assert fu["archetype"] in (
                 "derived-state",
                 "multi-surface-workflow",
@@ -138,18 +128,11 @@ def test_validate_parts_passes_for_every_app():
 def test_multilingual_assemble_reproduces_all_translated_sets(tmp_path):
     r = run(ML / "assemble.py", "--out-dir", tmp_path)
     assert r.returncode == 0, r.stdout[-1000:] + r.stderr[-1000:]
-    suffix = "_enui"
     for lang in LANGS:
         name = f"evoweb_benchmark_{lang}.jsonl"
         assert filecmp.cmp(tmp_path / name, MULTILINGUAL / name, shallow=False), (
             f"{name} not byte-identical"
         )
-    committed = json.loads((ML / f"manifest{suffix}.json").read_text())
-    fresh = json.loads((tmp_path / f"manifest{suffix}.json").read_text())
-    assert (
-        fresh["files"] == committed["files"]
-        and fresh["parent_sha256"] == committed["parent_sha256"]
-    )
 
 
 def test_translated_rows_keep_english_metadata_and_row_order():

@@ -8,11 +8,9 @@
     1
    ],
    "translations": {
-    "es": "oportunidades de negociación",
     "zh": "交易机会",
     "he": "הזדמנויות מסחר",
     "hi": "ट्रेडिंग अवसर",
-    "sw": "fursa za biashara",
     "de": "Handelsmöglichkeiten",
     "fr": "opportunités de trading"
    }
@@ -27,11 +25,9 @@
     3
    ],
    "translations": {
-    "es": "historial de operaciones",
     "zh": "交易历史",
     "he": "היסטוריית מסחר",
     "hi": "ट्रेडिंग इतिहास",
-    "sw": "historia ya biashara",
     "de": "Handelsverlauf",
     "fr": "historique des transactions"
    }
@@ -49,11 +45,9 @@
     10
    ],
    "translations": {
-    "es": "filtro de lotes",
     "zh": "筛选器",
     "he": "מסנן פריטים",
     "hi": "स्क्रीनर",
-    "sw": "kichujio cha bidhaa",
     "de": "Angebotsfilter",
     "fr": "filtre de lots"
    }
@@ -67,11 +61,9 @@
     3
    ],
    "translations": {
-    "es": "Coleccionables",
     "zh": "收藏品",
     "he": "פריטי אספנות",
     "hi": "कलेक्टिबल्स",
-    "sw": "Vitu vya Kukusanya",
     "de": "Sammlerstücke",
     "fr": "Objets de collection"
    }
@@ -88,11 +80,9 @@
     9
    ],
    "translations": {
-    "es": "Metales",
     "zh": "贵金属",
     "he": "מתכות",
     "hi": "धातु",
-    "sw": "Madini",
     "de": "Metalle",
     "fr": "Métaux"
    }
@@ -106,11 +96,9 @@
     5
    ],
    "translations": {
-    "es": "Muebles",
     "zh": "家具",
     "he": "ריהוט",
     "hi": "फर्नीचर",
-    "sw": "Samani",
     "de": "Möbel",
     "fr": "Mobilier"
    }
@@ -127,11 +115,9 @@
     10
    ],
    "translations": {
-    "es": "Cerrando",
     "zh": "即将结束",
     "he": "לקראת סגירה",
     "hi": "बंद हो रहा",
-    "sw": "Inafunga",
     "de": "Endet bald",
     "fr": "En clôture"
    }
@@ -148,11 +134,9 @@
     9
    ],
    "translations": {
-    "es": "Liquidado",
     "zh": "已成交",
     "he": "הושלם",
     "hi": "निपटाया गया",
-    "sw": "Imekamilika",
     "de": "Abgewickelt",
     "fr": "Réglé"
    }
@@ -168,11 +152,9 @@
     6
    ],
    "translations": {
-    "es": "ticket de puja",
     "zh": "出价单",
     "he": "טופס הצעה",
     "hi": "बिड टिकट",
-    "sw": "tikiti ya zabuni",
     "de": "Gebotsschein",
     "fr": "bulletin d'enchère"
    }
@@ -188,11 +170,9 @@
     7
    ],
    "translations": {
-    "es": "prima del comprador",
     "zh": "买家佣金",
     "he": "עמלת קונה",
     "hi": "खरीदार प्रीमियम",
-    "sw": "ada ya mnunuzi",
     "de": "Käuferaufgeld",
     "fr": "commission acheteur"
    }
@@ -208,11 +188,9 @@
     7
    ],
    "translations": {
-    "es": "tarifa de gestión",
     "zh": "手续费",
     "he": "דמי טיפול",
     "hi": "हैंडलिंग शुल्क",
-    "sw": "ada ya usimamizi",
     "de": "Bearbeitungsgebühr",
     "fr": "frais de dossier"
    }
@@ -228,11 +206,9 @@
     7
    ],
    "translations": {
-    "es": "total a pagar",
     "zh": "应付总额",
     "he": "סך הכול לתשלום",
     "hi": "कुल देय",
-    "sw": "jumla inayodaiwa",
     "de": "Gesamtbetrag",
     "fr": "total à payer"
    }
@@ -247,11 +223,9 @@
     10
    ],
    "translations": {
-    "es": "Mi lista de seguimiento",
     "zh": "我的关注列表",
     "he": "רשימת המעקב שלי",
     "hi": "मेरी वॉचलिस्ट",
-    "sw": "Orodha Yangu ya Kufuatilia",
     "de": "Meine Merkliste",
     "fr": "Ma liste de suivi"
    }
@@ -265,11 +239,9 @@
     9
    ],
    "translations": {
-    "es": "solo en seguimiento",
     "zh": "仅关注",
     "he": "רק במעקב",
     "hi": "केवल वॉचलिस्ट",
-    "sw": "zilizofuatiliwa pekee",
     "de": "nur beobachtete",
     "fr": "suivis uniquement"
    }
@@ -283,11 +255,9 @@
     7
    ],
    "translations": {
-    "es": "cerrar y liquidar",
     "zh": "结束并结算",
     "he": "סגירה וסילוק",
     "hi": "क्लोज-एंड-सेटल",
-    "sw": "funga na kamilisha",
     "de": "Abschließen und Abrechnen",
     "fr": "clôturer et régler"
    }
@@ -302,11 +272,9 @@
     10
    ],
    "translations": {
-    "es": "Ventas completadas",
     "zh": "已完成交易",
     "he": "מכירות שהושלמו",
     "hi": "पूर्ण बिक्री",
-    "sw": "Mauzo Yaliyokamilika",
     "de": "Abgeschlossene Verkäufe",
     "fr": "Ventes finalisées"
    }
@@ -321,11 +289,9 @@
     10
    ],
    "translations": {
-    "es": "Movimientos del mercado",
     "zh": "市场异动",
     "he": "מובילי שוק",
     "hi": "मार्केट मूवर्स",
-    "sw": "Mabadiliko ya Soko",
     "de": "Marktbewegungen",
     "fr": "Mouvements du marché"
    }
@@ -339,11 +305,9 @@
     9
    ],
    "translations": {
-    "es": "Mayores subidas",
     "zh": "涨幅榜",
     "he": "העולים המובילים",
     "hi": "टॉप गेनर्स",
-    "sw": "Wanaopanda Zaidi",
     "de": "Top-Gewinner",
     "fr": "Plus fortes hausses"
    }
@@ -356,11 +320,9 @@
     6
    ],
    "translations": {
-    "es": "Mayores bajadas",
     "zh": "跌幅榜",
     "he": "היורדים המובילים",
     "hi": "टॉप लूज़र्स",
-    "sw": "Wanaoshuka Zaidi",
     "de": "Top-Verlierer",
     "fr": "Plus fortes baisses"
    }
@@ -373,11 +335,9 @@
     6
    ],
    "translations": {
-    "es": "Más activos",
     "zh": "最活跃",
     "he": "הפעילים ביותר",
     "hi": "सर्वाधिक सक्रिय",
-    "sw": "Zilizo Hai Zaidi",
     "de": "Aktivste",
     "fr": "Plus actifs"
    }
@@ -390,11 +350,9 @@
     7
    ],
    "translations": {
-    "es": "nivel de precio",
     "zh": "价格水平",
     "he": "רמת מחיר",
     "hi": "प्राइस-लेवल",
-    "sw": "kiwango cha bei",
     "de": "Preisniveau",
     "fr": "niveau de prix"
    }
@@ -408,11 +366,9 @@
     10
    ],
    "translations": {
-    "es": "perfil del vendedor",
     "zh": "卖家主页",
     "he": "פרופיל מוכר",
     "hi": "विक्रेता प्रोफ़ाइल",
-    "sw": "wasifu wa muuzaji",
     "de": "Verkäuferprofil",
     "fr": "profil du vendeur"
    }
@@ -425,11 +381,9 @@
     8
    ],
    "translations": {
-    "es": "Mejores vendedores",
     "zh": "顶级卖家",
     "he": "המוכרים המובילים",
     "hi": "टॉप सेलर्स",
-    "sw": "Wauzaji Bora",
     "de": "Top-Verkäufer",
     "fr": "Meilleurs vendeurs"
    }

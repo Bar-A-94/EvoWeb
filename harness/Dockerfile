@@ -24,15 +24,15 @@ RUN bash /opt/setup_instance.sh && rm /opt/setup_instance.sh
 RUN apt-get update && apt-get install -y --no-install-recommends xvfb ffmpeg \
     && rm -rf /var/lib/apt/lists/*
 
-# 2. The harness and the dataset. data/ carries evoweb_benchmark.jsonl (the 32-app benchmark);
-#    make_tasksets.py writes the smoke sets into /app/tests/smoke_sets/.
+# 2. The harness. run_sample.sh downloads the benchmark from Hugging Face (evoweb/paths.py) at the
+#    start of every ladder.
 COPY harness/ /app/harness/
 COPY data/    /app/data/
-RUN python3 /app/harness/make_tasksets.py && test -f /app/data/evoweb_benchmark.jsonl
+COPY evoweb/  /app/evoweb/
 
 # Fail the BUILD if the worker's local imports do not resolve (a missing module used to
 # surface only as a fleet of containers dying on ImportError seconds after start).
-RUN cd /app/harness && python3 -c "import scoring, checkpoint, generators.backend, webvoyager.recording" \
+RUN cd /app/harness && python3 -c "import scoring, checkpoint, make_tasksets, generators.backend, webvoyager.recording" \
     && python3 -m py_compile run_single_sample.py scoring.py checkpoint.py make_tasksets.py \
     && python3 -c "import compileall, sys; sys.exit(0 if compileall.compile_dir('/app/harness', quiet=1) else 1)" \
     && echo "harness local imports OK"

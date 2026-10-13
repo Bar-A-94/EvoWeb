@@ -607,7 +607,7 @@ def run_evaluation(
     is enough; per-turn/per-retry videos would multiply S3 weight nobody watches.
     """
     # Load the test data to get UI tasks for this index
-    with open(TEST_DATA) as f:
+    with open(TEST_DATA, encoding="utf-8") as f:
         lines = f.readlines()
     sample = json.loads(lines[index - 1])  # 1-based index
     ui_tasks = ui_instruct_override if ui_instruct_override is not None else sample["ui_instruct"]
@@ -1193,7 +1193,7 @@ def main():
 
     # Validate index + load the sample row eagerly so we can detect multi-turn
     # (follow_ups present) before kicking off the rest of the pipeline.
-    with open(TEST_DATA) as f:
+    with open(TEST_DATA, encoding="utf-8") as f:
         all_lines = f.readlines()
     total_samples = len(all_lines)
     if args.index < 1 or args.index > total_samples:

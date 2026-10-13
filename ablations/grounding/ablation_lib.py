@@ -17,6 +17,7 @@ import random
 import re
 import statistics as st
 import sys
+from pathlib import Path
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
 _PKG = os.path.abspath(os.path.join(_HERE, "..", ".."))
@@ -24,6 +25,7 @@ if _PKG not in sys.path:
     sys.path.insert(0, _PKG)
 from evoweb.paths import ARTIFACTS as _ARTIFACTS  # noqa: E402
 from evoweb.paths import DATA as _DATA  # noqa: E402
+from evoweb.paths import ensure_data  # noqa: E402
 
 DATA = str(_DATA)
 ARTIFACTS = str(_ARTIFACTS)
@@ -68,6 +70,7 @@ def rows(arm_or_path):
     """Populated rows of an arm (by ARMS key) or of an explicit jsonl path / parts dir."""
     target = ARMS.get(arm_or_path, arm_or_path)
     path = target if os.path.isabs(target) else os.path.join(DATA, target)
+    ensure_data(Path(path))
     if os.path.isdir(path):
         out = []
         for f in sorted(glob.glob(os.path.join(path, "*.json"))):
@@ -75,7 +78,11 @@ def rows(arm_or_path):
             if o.get("follow_ups"):
                 out.append(_norm(o))
         return out
-    return [_norm(o) for o in (json.loads(x) for x in open(path)) if o.get("follow_ups")]
+    return [
+        _norm(o)
+        for o in (json.loads(x) for x in open(path, encoding="utf-8"))
+        if o.get("follow_ups")
+    ]
 
 
 def instructions(arm_or_path):

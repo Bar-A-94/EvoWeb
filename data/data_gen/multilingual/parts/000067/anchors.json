@@ -8,11 +8,9 @@
     1
    ],
    "translations": {
-    "es": "publicación de obituarios",
     "zh": "讣告发布",
     "he": "פרסום מודעות אבל",
     "hi": "मृत्युलेख प्रकाशन",
-    "sw": "kuchapisha tanzia",
     "de": "Veröffentlichung von Nachrufen",
     "fr": "publication d'avis de décès"
    }
@@ -25,11 +23,9 @@
     1
    ],
    "translations": {
-    "es": "funerarias",
     "zh": "殡仪馆",
     "he": "בתי לוויות",
     "hi": "शवगृह",
-    "sw": "nyumba za mazishi",
     "de": "Bestattungsinstitute",
     "fr": "pompes funèbres"
    }
@@ -43,11 +39,9 @@
     8
    ],
    "translations": {
-    "es": "condolencias",
     "zh": "悼念",
     "he": "תנחומים",
     "hi": "संवेदनाएँ",
-    "sw": "rambirambi",
     "de": "Kondolenzen",
     "fr": "condoléances"
    }
@@ -61,11 +55,9 @@
     2
    ],
    "translations": {
-    "es": "mensaje de condolencia",
     "zh": "悼念留言",
     "he": "הודעת תנחומים",
     "hi": "संवेदना संदेश",
-    "sw": "ujumbe wa rambirambi",
     "de": "Kondolenznachricht",
     "fr": "message de condoléances"
    }
@@ -78,11 +70,9 @@
     1
    ],
    "translations": {
-    "es": "estadísticas",
     "zh": "统计",
     "he": "סטטיסטיקה",
     "hi": "आँकड़े",
-    "sw": "takwimu",
     "de": "Statistiken",
     "fr": "statistiques"
    }
@@ -99,11 +89,9 @@
     10
    ],
    "translations": {
-    "es": "panel de control",
     "zh": "仪表板",
     "he": "לוח הבקרה",
     "hi": "डैशबोर्ड",
-    "sw": "dashibodi",
     "de": "Dashboard",
     "fr": "tableau de bord"
    }
@@ -119,11 +107,9 @@
     10
    ],
    "translations": {
-    "es": "diseñador de inscripciones",
     "zh": "碑文设计器",
     "he": "מעצב כתובות",
     "hi": "शिलालेख डिज़ाइनर",
-    "sw": "Mbunifu wa Maandishi ya Kaburi",
     "de": "Inschriften-Designer",
     "fr": "concepteur d'inscriptions"
    }
@@ -137,11 +123,9 @@
     3
    ],
    "translations": {
-    "es": "lista de memoriales",
     "zh": "纪念列表",
     "he": "רשימת הנצחות",
     "hi": "स्मारक सूची",
-    "sw": "orodha ya kumbukumbu",
     "de": "Gedenkliste",
     "fr": "liste des mémoriaux"
    }
@@ -155,11 +139,9 @@
     6
    ],
    "translations": {
-    "es": "epitafio",
     "zh": "墓志铭",
     "he": "כתובת מצבה",
     "hi": "समाधि-लेख",
-    "sw": "andiko la kaburi",
     "de": "Grabinschrift",
     "fr": "épitaphe"
    }
@@ -175,11 +157,9 @@
     8
    ],
    "translations": {
-    "es": "página de exploración",
     "zh": "浏览页面",
     "he": "עמוד עיון",
     "hi": "ब्राउज़ पेज",
-    "sw": "ukurasa wa kuvinjari",
     "de": "Stöberseite",
     "fr": "page de navigation"
    }
@@ -192,11 +172,9 @@
     10
    ],
    "translations": {
-    "es": "archivo de exploración",
     "zh": "浏览存档",
     "he": "ארכיון עיון",
     "hi": "ब्राउज़ संग्रह",
-    "sw": "kumbukumbu ya kuvinjari",
     "de": "Stöberarchiv",
     "fr": "archive de navigation"
    }
@@ -211,11 +189,9 @@
     10
    ],
    "translations": {
-    "es": "Veterano",
     "zh": "退伍军人",
     "he": "ותיק צבא",
     "hi": "पूर्व सैनिक",
-    "sw": "Mkongwe wa jeshi",
     "de": "Veteran",
     "fr": "Ancien combattant"
    }
@@ -229,11 +205,9 @@
     4
    ],
    "translations": {
-    "es": "Educador",
     "zh": "教育工作者",
     "he": "מחנך",
     "hi": "शिक्षाविद्",
-    "sw": "Mwalimu",
     "de": "Pädagoge",
     "fr": "Éducateur"
    }
@@ -246,11 +220,9 @@
     3
    ],
    "translations": {
-    "es": "Artista",
     "zh": "艺术家",
     "he": "אמן",
     "hi": "कलाकार",
-    "sw": "Msanii",
     "de": "Künstler",
     "fr": "Artiste"
    }
@@ -263,11 +235,9 @@
     3
    ],
    "translations": {
-    "es": "Líder comunitario",
     "zh": "社区领袖",
     "he": "מנהיג קהילה",
     "hi": "सामुदायिक नेता",
-    "sw": "Kiongozi wa jamii",
     "de": "Gemeindeleiter",
     "fr": "Responsable communautaire"
    }
@@ -280,11 +250,9 @@
     3
    ],
    "translations": {
-    "es": "filtro por década de nacimiento",
     "zh": "出生年代筛选器",
     "he": "מסנן עשור לידה",
     "hi": "जन्म-दशक फ़िल्टर",
-    "sw": "kichujio cha muongo wa kuzaliwa",
     "de": "Geburtsjahrzehnt-Filter",
     "fr": "filtre par décennie de naissance"
    }
@@ -298,11 +266,9 @@
     8
    ],
    "translations": {
-    "es": "fallecimiento más reciente primero",
     "zh": "最近逝世优先",
     "he": "הפטירה האחרונה תחילה",
     "hi": "सबसे हाल की मृत्यु पहले",
-    "sw": "aliyefariki hivi karibuni kwanza",
     "de": "neuester Todesfall zuerst",
     "fr": "décès le plus récent en premier"
    }
@@ -316,11 +282,9 @@
     8
    ],
    "translations": {
-    "es": "libro de condolencias",
     "zh": "留言簿",
     "he": "ספר אורחים",
     "hi": "अतिथि पुस्तिका",
-    "sw": "kitabu cha rambirambi",
     "de": "Kondolenzbuch",
     "fr": "livre de condoléances"
    }
@@ -334,11 +298,9 @@
     8
    ],
    "translations": {
-    "es": "libro de condolencias más activo",
     "zh": "留言最多的留言簿",
     "he": "ספר אורחים עמוס ביותר",
     "hi": "सबसे व्यस्त अतिथि पुस्तिका",
-    "sw": "kitabu cha rambirambi chenye shughuli nyingi zaidi",
     "de": "aktivstes Kondolenzbuch",
     "fr": "livre de condoléances le plus actif"
    }
@@ -352,11 +314,9 @@
     5
    ],
    "translations": {
-    "es": "En Esta Fecha",
     "zh": "在这一天",
     "he": "בתאריך זה",
     "hi": "इस तारीख़ को",
-    "sw": "Katika Tarehe Hii",
     "de": "An diesem Datum",
     "fr": "À cette date"
    }
@@ -369,11 +329,9 @@
     4
    ],
    "translations": {
-    "es": "aniversario de fallecimiento",
     "zh": "逝世纪念日",
     "he": "יום השנה לפטירה",
     "hi": "पुण्यतिथि",
-    "sw": "kumbukumbu ya kifo",
     "de": "Todestag",
     "fr": "anniversaire de décès"
    }
@@ -386,11 +344,9 @@
     4
    ],
    "translations": {
-    "es": "aniversario de nacimiento",
     "zh": "生日纪念日",
     "he": "יום השנה להולדת",
     "hi": "जन्मदिन की वर्षगाँठ",
-    "sw": "kumbukumbu ya kuzaliwa",
     "de": "Geburtstag",
     "fr": "anniversaire de naissance"
    }
@@ -403,11 +359,9 @@
     5
    ],
    "translations": {
-    "es": "cola de pendientes",
     "zh": "待审队列",
     "he": "תור הממתינים",
     "hi": "लंबित कतार",
-    "sw": "foleni ya yanayosubiri",
     "de": "Warteschlange für ausstehende Einträge",
     "fr": "file d'attente"
    }
@@ -421,11 +375,9 @@
     7
    ],
    "translations": {
-    "es": "cola de recuerdos pendientes",
     "zh": "待审回忆队列",
     "he": "תור הזיכרונות הממתינים",
     "hi": "लंबित स्मृतियों की कतार",
-    "sw": "foleni ya kumbukumbu zinazosubiri",
     "de": "Warteschlange für ausstehende Erinnerungen",
     "fr": "file d'attente des souvenirs"
    }
@@ -439,11 +391,9 @@
     7
    ],
    "translations": {
-    "es": "Tributos",
     "zh": "追思",
     "he": "מחוות",
     "hi": "श्रद्धांजलियाँ",
-    "sw": "Heshima",
     "de": "Würdigungen",
     "fr": "Hommages"
    }
@@ -457,11 +407,9 @@
     10
    ],
    "translations": {
-    "es": "fondo conmemorativo",
     "zh": "纪念基金",
     "he": "קרן הנצחה",
     "hi": "स्मृति कोष",
-    "sw": "mfuko wa kumbukumbu",
     "de": "Gedenkfonds",
     "fr": "fonds commémoratif"
    }
@@ -474,11 +422,9 @@
     6
    ],
    "translations": {
-    "es": "fondo activo",
     "zh": "进行中的基金",
     "he": "קרן פעילה",
     "hi": "सक्रिय कोष",
-    "sw": "mfuko unaoendelea",
     "de": "aktiver Fonds",
     "fr": "fonds actif"
    }
@@ -492,11 +438,9 @@
     10
    ],
    "translations": {
-    "es": "confirmación de asistencia",
     "zh": "出席回复",
     "he": "אישור הגעה",
     "hi": "उपस्थिति पुष्टि",
-    "sw": "uthibitisho wa mahudhurio",
     "de": "Rückmeldung",
     "fr": "confirmation de présence"
    }
@@ -510,11 +454,9 @@
     9
    ],
    "translations": {
-    "es": "asistencia prevista",
     "zh": "预计出席人数",
     "he": "מספר הנוכחים הצפוי",
     "hi": "अपेक्षित उपस्थिति संख्या",
-    "sw": "idadi ya wahudhuriaji inayotarajiwa",
     "de": "erwartete Teilnehmerzahl",
     "fr": "nombre de participants attendu"
    }
@@ -528,11 +470,9 @@
     9
    ],
    "translations": {
-    "es": "vista de asistencia prevista",
     "zh": "出席人数视图",
     "he": "תצוגת מספר הנוכחים",
     "hi": "उपस्थिति संख्या दृश्य",
-    "sw": "mwonekano wa idadi ya wahudhuriaji",
     "de": "Teilnehmerzahl-Ansicht",
     "fr": "vue du nombre de participants"
    }
@@ -546,11 +486,9 @@
     9
    ],
    "translations": {
-    "es": "disculpas",
     "zh": "无法出席",
     "he": "התנצלות",
     "hi": "असमर्थता",
-    "sw": "radhi",
     "de": "Absage",
     "fr": "excuses"
    }
@@ -563,11 +501,9 @@
     8
    ],
    "translations": {
-    "es": "total de mensajes",
     "zh": "留言总数",
     "he": "סך ההודעות",
     "hi": "कुल संदेश",
-    "sw": "jumla ya ujumbe",
     "de": "Gesamtzahl der Nachrichten",
     "fr": "nombre total de messages"
    }
@@ -580,11 +516,9 @@
     8
    ],
    "translations": {
-    "es": "responder",
     "zh": "回复",
     "he": "תגובה",
     "hi": "उत्तर",
-    "sw": "jibu",
     "de": "Antwort",
     "fr": "répondre"
    }
@@ -597,11 +531,9 @@
     9
    ],
    "translations": {
-    "es": "lista de tareas",
     "zh": "任务清单",
     "he": "רשימת משימות",
     "hi": "कार्यसूची",
-    "sw": "orodha ya kazi",
     "de": "Checkliste",
     "fr": "liste de tâches"
    }
@@ -614,11 +546,9 @@
     9
    ],
    "translations": {
-    "es": "Papeleo",
     "zh": "文书工作",
     "he": "ניירת",
     "hi": "कागज़ी कार्रवाई",
-    "sw": "Karatasi",
     "de": "Papierkram",
     "fr": "Papiers"
    }
@@ -631,11 +561,9 @@
     9
    ],
    "translations": {
-    "es": "Notificaciones",
     "zh": "通知",
     "he": "הודעות",
     "hi": "सूचनाएँ",
-    "sw": "Arifa",
     "de": "Benachrichtigungen",
     "fr": "Notifications"
    }
@@ -648,11 +576,9 @@
     9
    ],
    "translations": {
-    "es": "Hogar",
     "zh": "家务",
     "he": "משק בית",
     "hi": "घरेलू",
-    "sw": "Nyumbani",
     "de": "Haushalt",
     "fr": "Maison"
    }
@@ -665,11 +591,9 @@
     9
    ],
    "translations": {
-    "es": "Cancelar el periódico",
     "zh": "取消报纸订阅",
     "he": "לבטל את המנוי לעיתון",
     "hi": "अख़बार बंद कराना",
-    "sw": "Kusitisha gazeti",
     "de": "Zeitung abbestellen",
     "fr": "Résilier le journal"
    }
@@ -682,11 +606,9 @@
     9
    ],
    "translations": {
-    "es": "Devolver la silla de ruedas alquilada",
     "zh": "归还租借的轮椅",
     "he": "להחזיר את כיסא הגלגלים המושכר",
     "hi": "किराए की व्हीलचेयर लौटाना",
-    "sw": "Kurudisha kiti cha magurudumu cha kukodi",
     "de": "Den Mietrollstuhl zurückgeben",
     "fr": "Rendre le fauteuil roulant de location"
    }
@@ -699,11 +621,9 @@
     2
    ],
    "translations": {
-    "es": "12 de marzo de 1932",
     "zh": "1932年3月12日",
     "he": "12 במרץ 1932",
     "hi": "12 मार्च 1932",
-    "sw": "12 Machi 1932",
     "de": "12. März 1932",
     "fr": "12 mars 1932"
    }
@@ -718,11 +638,9 @@
     8
    ],
    "translations": {
-    "es": "5 de abril de 2024",
     "zh": "2024年4月5日",
     "he": "5 באפריל 2024",
     "hi": "5 अप्रैल 2024",
-    "sw": "5 Aprili 2024",
     "de": "5. April 2024",
     "fr": "5 avril 2024"
    }
@@ -736,11 +654,9 @@
     3
    ],
    "translations": {
-    "es": "4 de julio de 1945",
     "zh": "1945年7月4日",
     "he": "4 ביולי 1945",
     "hi": "4 जुलाई 1945",
-    "sw": "4 Julai 1945",
     "de": "4. Juli 1945",
     "fr": "4 juillet 1945"
    }
@@ -754,11 +670,9 @@
     3
    ],
    "translations": {
-    "es": "18 de enero de 2024",
     "zh": "2024年1月18日",
     "he": "18 בינואר 2024",
     "hi": "18 जनवरी 2024",
-    "sw": "18 Januari 2024",
     "de": "18. Januar 2024",
     "fr": "18 janvier 2024"
    }
@@ -772,11 +686,9 @@
     4
    ],
    "translations": {
-    "es": "29 de febrero de 1940",
     "zh": "1940年2月29日",
     "he": "29 בפברואר 1940",
     "hi": "29 फ़रवरी 1940",
-    "sw": "29 Februari 1940",
     "de": "29. Februar 1940",
     "fr": "29 février 1940"
    }
@@ -791,11 +703,9 @@
     8
    ],
    "translations": {
-    "es": "2 de diciembre de 2023",
     "zh": "2023年12月2日",
     "he": "2 בדצמבר 2023",
     "hi": "2 दिसंबर 2023",
-    "sw": "2 Desemba 2023",
     "de": "2. Dezember 2023",
     "fr": "2 décembre 2023"
    }
@@ -808,11 +718,9 @@
     3
    ],
    "translations": {
-    "es": "2 de febrero de 1950",
     "zh": "1950年2月2日",
     "he": "2 בפברואר 1950",
     "hi": "2 फ़रवरी 1950",
-    "sw": "2 Februari 1950",
     "de": "2. Februar 1950",
     "fr": "2 février 1950"
    }
@@ -825,11 +733,9 @@
     3
    ],
    "translations": {
-    "es": "3 de marzo de 2024",
     "zh": "2024年3月3日",
     "he": "3 במרץ 2024",
     "hi": "3 मार्च 2024",
-    "sw": "3 Machi 2024",
     "de": "3. März 2024",
     "fr": "3 mars 2024"
    }
@@ -842,11 +748,9 @@
     4
    ],
    "translations": {
-    "es": "5 de mayo de 1950",
     "zh": "1950年5月5日",
     "he": "5 במאי 1950",
     "hi": "5 मई 1950",
-    "sw": "5 Mei 1950",
     "de": "5. Mai 1950",
     "fr": "5 mai 1950"
    }
@@ -859,11 +763,9 @@
     4
    ],
    "translations": {
-    "es": "5 de abril de 2025",
     "zh": "2025年4月5日",
     "he": "5 באפריל 2025",
     "hi": "5 अप्रैल 2025",
-    "sw": "5 Aprili 2025",
     "de": "5. April 2025",
     "fr": "5 avril 2025"
    }
@@ -876,11 +778,9 @@
     7
    ],
    "translations": {
-    "es": "12 de abril de 2024",
     "zh": "2024年4月12日",
     "he": "12 באפריל 2024",
     "hi": "12 अप्रैल 2024",
-    "sw": "12 Aprili 2024",
     "de": "12. April 2024",
     "fr": "12 avril 2024"
    }
@@ -897,11 +797,9 @@
     8
    ],
    "translations": {
-    "es": "5 de abril",
     "zh": "4月5日",
     "he": "5 באפריל",
     "hi": "5 अप्रैल",
-    "sw": "5 Aprili",
     "de": "5. April",
     "fr": "5 avril"
    }
@@ -915,11 +813,9 @@
     4
    ],
    "translations": {
-    "es": "12 de marzo",
     "zh": "3月12日",
     "he": "12 במרץ",
     "hi": "12 मार्च",
-    "sw": "12 Machi",
     "de": "12. März",
     "fr": "12 mars"
    }
@@ -933,11 +829,9 @@
     4
    ],
    "translations": {
-    "es": "29 de febrero",
     "zh": "2月29日",
     "he": "29 בפברואר",
     "hi": "29 फ़रवरी",
-    "sw": "29 Februari",
     "de": "29. Februar",
     "fr": "29 février"
    }
@@ -950,11 +844,9 @@
     4
    ],
    "translations": {
-    "es": "1 de agosto",
     "zh": "8月1日",
     "he": "1 באוגוסט",
     "hi": "1 अगस्त",
-    "sw": "1 Agosti",
     "de": "1. August",
     "fr": "1er août"
    }

@@ -1,17 +1,18 @@
-"""Write the smoke subsets of the benchmark (data/evoweb_benchmark.jsonl) into tests/smoke_sets/.
+"""Download the latest benchmark from Hugging Face and write its smoke subsets into tests/smoke_sets/.
 
     python3 harness/make_tasksets.py
 
 WAVE is the 32-app EvoWeb set in its row order, which is also the 1-based sample index every
-run and every score uses; evoweb_benchmark.jsonl is committed in that order. The smoke sets are
-rows of it with the follow-ups trimmed, for runs that cost minutes; they are not committed.
-harness/Dockerfile runs this so the image carries them, and run_sample.sh looks for JSONL_FILE
-under tests/smoke_sets/ as well as data/.
+run and every score uses. The smoke sets are rows of it with the follow-ups trimmed, for runs
+that cost minutes; they are not committed. run_sample.sh runs this before every ladder and looks
+for JSONL_FILE under tests/smoke_sets/ as well as data/.
 """
 
 from __future__ import annotations
 
 import json
+import os
+import sys
 from pathlib import Path
 
 WAVE = """000001 000004 000006 000011 000014 000015 000017 000018 000021 000023 000030 000031
@@ -31,12 +32,12 @@ SETS = {
     "evoweb_2requests.jsonl": (len(WAVE), 2),
 }
 
-# Open-source layout: this file lives in PKG/harness/, the datasets in PKG/data/ (sibling of
-# harness/). The Dockerfile copies both to /app/harness and /app/data, so the same expression
-# resolves inside the image.
+# Open-source layout: this file lives in PKG/harness/, evoweb/ and the datasets beside it. The
+# Dockerfile copies them to /app, so the same expression resolves inside the image.
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "data"
-SMOKE_DIR = ROOT / "tests" / "smoke_sets"
+SMOKE_DIR = Path(os.environ.get("SMOKE_DIR") or ROOT / "tests" / "smoke_sets")
+sys.path.insert(0, str(ROOT))
+from evoweb.paths import BENCHMARK, DATA, ensure_data  # noqa: E402
 
 
 def taskset(rows: dict[str, str], apps: int, requests: int | None) -> str:
@@ -46,13 +47,15 @@ def taskset(rows: dict[str, str], apps: int, requests: int | None) -> str:
         if requests is not None:
             # requests counts the build too, so keep one fewer follow-up than requests.
             row["follow_ups"] = (row.get("follow_ups") or [])[: requests - 1]
-        out.append(json.dumps(row))
+        out.append(json.dumps(row, ensure_ascii=False))
     return "\n".join(out) + "\n"
 
 
 if __name__ == "__main__":
-    rows = {json.loads(line)["id"]: line for line in (DATA / "evoweb_benchmark.jsonl").open()}
+    # The benchmark, plus any dataset named on the command line (run_sample.sh passes JSONL_FILE).
+    ensure_data(BENCHMARK, *(DATA / a for a in sys.argv[1:]))
+    rows = {json.loads(line)["id"]: line for line in BENCHMARK.open(encoding="utf-8")}
     SMOKE_DIR.mkdir(parents=True, exist_ok=True)
     for name, (apps, requests) in SETS.items():
-        (SMOKE_DIR / name).write_text(taskset(rows, apps, requests))
+        (SMOKE_DIR / name).write_text(taskset(rows, apps, requests), encoding="utf-8")
         print(f"wrote {apps} rows to {SMOKE_DIR / name} ({requests or 'all'} requests each)")

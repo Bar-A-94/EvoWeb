@@ -12,11 +12,9 @@
     7
    ],
    "translations": {
-    "es": "¿Cómo mantengo viva la masa madre?",
     "zh": "怎么让酸面团酵头保持活性？",
     "he": "איך שומרים על מחמצת בחיים?",
     "hi": "खट्टे आटे का स्टार्टर ज़िंदा कैसे रखूँ?",
-    "sw": "Jinsi ya kuweka chachu ya unga hai?",
     "de": "Wie halte ich meinen Sauerteig-Ansatz am Leben?",
     "fr": "Comment garder mon levain vivant ?"
    }
@@ -30,11 +28,9 @@
     6
    ],
    "translations": {
-    "es": "¿Mejores aerolíneas económicas en Europa?",
     "zh": "欧洲最好的廉价航空公司是哪些？",
     "he": "מהן חברות התעופה הזולות הטובות באירופה?",
     "hi": "यूरोप की सबसे अच्छी सस्ती एयरलाइंस कौन सी हैं?",
-    "sw": "Mashirika bora ya ndege ya bei nafuu Ulaya?",
     "de": "Beste Billigfluglinien in Europa?",
     "fr": "Meilleures compagnies aériennes low cost en Europe ?"
    }
@@ -47,11 +43,9 @@
     2
    ],
    "translations": {
-    "es": "¿Por qué el ventilador de mi laptop siempre suena fuerte?",
     "zh": "为什么我的笔记本电脑风扇总是很吵？",
     "he": "למה המאוורר של הלפטופ שלי תמיד רועש?",
     "hi": "मेरे लैपटॉप का फैन हमेशा तेज़ आवाज़ क्यों करता है?",
-    "sw": "Kwa nini feni ya laptop yangu hupiga kelele kila wakati?",
     "de": "Warum ist der Lüfter meines Laptops immer so laut?",
     "fr": "Pourquoi le ventilateur de mon portable est-il toujours bruyant ?"
    }
@@ -65,11 +59,9 @@
     10
    ],
    "translations": {
-    "es": "¿El ayuno intermitente es seguro para principiantes?",
     "zh": "间歇性断食对新手安全吗？",
     "he": "האם צום לסירוגין בטוח למתחילים?",
     "hi": "क्या इंटरमिटेंट फास्टिंग शुरुआती लोगों के लिए सुरक्षित है?",
-    "sw": "Je, kufunga kwa vipindi ni salama kwa wanaoanza?",
     "de": "Ist Intervallfasten für Anfänger sicher?",
     "fr": "Le jeûne intermittent est-il sans danger pour les débutants ?"
    }
@@ -85,11 +77,9 @@
     10
    ],
    "translations": {
-    "es": "¿Cómo arreglar una rueda de bicicleta floja?",
     "zh": "怎么让晃动的自行车轮子稳住？",
     "he": "איך מתקנים גלגל אופניים מתנדנד?",
     "hi": "साइकिल का हिलता हुआ पहिया कैसे ठीक करें?",
-    "sw": "Jinsi ya kurekebisha gurudumu la baiskeli linaloyumba?",
     "de": "Wie repariert man ein eierndes Fahrradrad?",
     "fr": "Comment réparer une roue de vélo voilée ?"
    }
@@ -106,11 +96,9 @@
     10
    ],
    "translations": {
-    "es": "¿Cuál es la mejor forma de aprender Python?",
     "zh": "学习 Python 最好的方法是什么？",
     "he": "מה הדרך הטובה ביותר ללמוד Python?",
     "hi": "Python सीखने का सबसे अच्छा तरीका क्या है?",
-    "sw": "Njia bora ya kujifunza Python ni ipi?",
     "de": "Was ist der beste Weg, um Python zu lernen?",
     "fr": "Quelle est la meilleure façon d'apprendre Python ?"
    }
@@ -127,11 +115,9 @@
     7
    ],
    "translations": {
-    "es": "¿Puedo congelar albahaca fresca?",
     "zh": "新鲜罗勒可以冷冻吗？",
     "he": "אפשר להקפיא בזיליקום טרי?",
     "hi": "क्या मैं ताज़ी तुलसी को फ़्रीज़ कर सकता हूँ?",
-    "sw": "Naweza kugandisha mrehani mbichi?",
     "de": "Kann ich frisches Basilikum einfrieren?",
     "fr": "Puis-je congeler du basilic frais ?"
    }
@@ -150,11 +136,9 @@
     9
    ],
    "translations": {
-    "es": "#cocina",
     "zh": "#厨艺",
     "he": "#בישול",
     "hi": "#खानपान",
-    "sw": "#kupika",
     "de": "#kochen",
     "fr": "#cuisine"
    }
@@ -171,11 +155,9 @@
     9
    ],
    "translations": {
-    "es": "#ejercicio",
     "zh": "#健身",
     "he": "#בריאות",
     "hi": "#तंदुरुस्ती",
-    "sw": "#mazoezi",
     "de": "#sport",
     "fr": "#sport"
    }
@@ -192,11 +174,9 @@
     9
    ],
    "translations": {
-    "es": "#tecnología",
     "zh": "#科技",
     "he": "#טכנולוגיה",
     "hi": "#प्रौद्योगिकी",
-    "sw": "#teknolojia",
     "de": "#technik",
     "fr": "#techno"
    }
@@ -213,11 +193,9 @@
     9
    ],
    "translations": {
-    "es": "#viajes",
     "zh": "#旅行",
     "he": "#טיולים",
     "hi": "#यात्रा",
-    "sw": "#safari",
     "de": "#reisen",
     "fr": "#voyages"
    }
@@ -231,11 +209,9 @@
     3
    ],
    "translations": {
-    "es": "Mostrando",
     "zh": "显示",
     "he": "מוצגות",
     "hi": "दिखाए जा रहे हैं",
-    "sw": "Inaonyesha",
     "de": "Zeigt",
     "fr": "Affichage de"
    }
@@ -252,11 +228,9 @@
     10
    ],
    "translations": {
-    "es": "Sin responder",
     "zh": "未回答",
     "he": "ללא תשובה",
     "hi": "अनुत्तरित",
-    "sw": "Bila jibu",
     "de": "Unbeantwortet",
     "fr": "Sans réponse"
    }
@@ -269,11 +243,9 @@
     10
    ],
    "translations": {
-    "es": "Respondidas pero sin resolver",
     "zh": "已回答但未解决",
     "he": "נענו אך לא נפתרו",
     "hi": "उत्तर मिले पर हल नहीं हुए",
-    "sw": "Zimejibiwa lakini hazijatatuliwa",
     "de": "Beantwortet, aber nicht gelöst",
     "fr": "Répondues mais non résolues"
    }
@@ -286,11 +258,9 @@
     3
    ],
    "translations": {
-    "es": "Necesita respuesta",
     "zh": "需要回答",
     "he": "דרושה תשובה",
     "hi": "उत्तर चाहिए",
-    "sw": "Inahitaji jibu",
     "de": "Antwort nötig",
     "fr": "Réponse requise"
    }
@@ -305,11 +275,9 @@
     10
    ],
    "translations": {
-    "es": "Aceptar",
     "zh": "采纳",
     "he": "קבל",
     "hi": "स्वीकारें",
-    "sw": "Kubali",
     "de": "Akzeptieren",
     "fr": "Accepter"
    }
@@ -325,11 +293,9 @@
     10
    ],
    "translations": {
-    "es": "Resuelta",
     "zh": "已解决",
     "he": "נפתרה",
     "hi": "हल हो गया",
-    "sw": "Imetatuliwa",
     "de": "Gelöst",
     "fr": "Résolue"
    }
@@ -344,11 +310,9 @@
     9
    ],
    "translations": {
-    "es": "Temas",
     "zh": "话题",
     "he": "נושאים",
     "hi": "विषय",
-    "sw": "Mada",
     "de": "Themen",
     "fr": "Sujets"
    }
@@ -361,11 +325,9 @@
     6
    ],
    "translations": {
-    "es": "Destacadas",
     "zh": "精选",
     "he": "מומלצות",
     "hi": "विशेष",
-    "sw": "Maalum",
     "de": "Hervorgehoben",
     "fr": "À la une"
    }
@@ -378,11 +340,9 @@
     8
    ],
    "translations": {
-    "es": "DESTACADA",
     "zh": "精选",
     "he": "מומלצת",
     "hi": "विशेष",
-    "sw": "MAALUM",
     "de": "HERVORGEHOBEN",
     "fr": "À LA UNE"
    }
@@ -397,11 +357,9 @@
     9
    ],
    "translations": {
-    "es": "herramienta de recompensa",
     "zh": "悬赏工具",
     "he": "כלי פרס",
     "hi": "इनाम टूल",
-    "sw": "kifaa cha zawadi",
     "de": "Prämien-Werkzeug",
     "fr": "outil de prime"
    }
@@ -414,11 +372,9 @@
     7
    ],
    "translations": {
-    "es": "Sugerir edición",
     "zh": "建议修改",
     "he": "הצע עריכה",
     "hi": "संपादन सुझाएँ",
-    "sw": "Pendekeza hariri",
     "de": "Bearbeitung vorschlagen",
     "fr": "Proposer une modification"
    }
@@ -433,11 +389,9 @@
     10
    ],
    "translations": {
-    "es": "Revisión",
     "zh": "审核",
     "he": "ביקורת",
     "hi": "समीक्षा",
-    "sw": "Ukaguzi",
     "de": "Prüfung",
     "fr": "Révision"
    }
@@ -451,11 +405,9 @@
     10
    ],
    "translations": {
-    "es": "Aprobar",
     "zh": "批准",
     "he": "אשר",
     "hi": "स्वीकृत करें",
-    "sw": "Idhinisha",
     "de": "Genehmigen",
     "fr": "Approuver"
    }
@@ -468,11 +420,9 @@
     7
    ],
    "translations": {
-    "es": "Rechazar",
     "zh": "拒绝",
     "he": "דחה",
     "hi": "अस्वीकार करें",
-    "sw": "Kataa",
     "de": "Ablehnen",
     "fr": "Rejeter"
    }
@@ -485,11 +435,9 @@
     7
    ],
    "translations": {
-    "es": "editado",
     "zh": "已编辑",
     "he": "נערך",
     "hi": "संपादित",
-    "sw": "imehaririwa",
     "de": "bearbeitet",
     "fr": "modifié"
    }
@@ -502,11 +450,9 @@
     8
    ],
    "translations": {
-    "es": "Seguir",
     "zh": "关注",
     "he": "עקוב",
     "hi": "फ़ॉलो करें",
-    "sw": "Fuatilia",
     "de": "Folgen",
     "fr": "Suivre"
    }
@@ -520,11 +466,9 @@
     10
    ],
    "translations": {
-    "es": "Siguiendo",
     "zh": "关注中",
     "he": "עוקב אחרי",
     "hi": "फ़ॉलो कर रहे हैं",
-    "sw": "Unafuatilia",
     "de": "Ich folge",
     "fr": "Vous suivez"
    }
@@ -539,11 +483,9 @@
     10
    ],
    "translations": {
-    "es": "Resumen",
     "zh": "摘要",
     "he": "תקציר",
     "hi": "सारांश",
-    "sw": "Muhtasari",
     "de": "Übersicht",
     "fr": "Résumé"
    }
@@ -556,11 +498,9 @@
     10
    ],
    "translations": {
-    "es": "Triaje",
     "zh": "优先处理",
     "he": "מיון",
     "hi": "प्राथमिकता",
-    "sw": "Kipaumbele",
     "de": "Sichtung",
     "fr": "Triage"
    }
@@ -574,11 +514,9 @@
     5
    ],
    "translations": {
-    "es": "escribe cómo en el campo del título",
     "zh": "在标题栏中输入 怎么让",
     "he": "הקלד איך בשדה הכותרת",
     "hi": "शीर्षक फ़ील्ड में कैसे टाइप करें",
-    "sw": "andika jinsi katika sehemu ya kichwa",
     "de": "tippe Wie in das Titelfeld",
     "fr": "tapez comment dans le champ du titre"
    }
@@ -591,11 +529,9 @@
     3
    ],
    "translations": {
-    "es": "escribe có, luego agrega una letra más para formar cóm",
     "zh": "输入 怎么，然后再加一个字变成 怎么让",
     "he": "הקלד אי, ואז הוסף אות אחת נוספת כדי לקבל איך",
     "hi": "कै टाइप करें, फिर एक और अक्षर जोड़कर उसे कैस बनाएँ",
-    "sw": "andika ji, kisha ongeza herufi moja zaidi ili iwe jin",
     "de": "tippe Wi, dann füge einen weiteren Buchstaben hinzu, sodass Wie daraus wird",
     "fr": "tapez co, puis ajoutez une lettre pour obtenir com"
    }
@@ -608,11 +544,9 @@
     3
    ],
    "translations": {
-    "es": "Escribe albahaca en el campo del título del compositor",
     "zh": "在编辑器的标题栏中输入 新鲜罗勒",
     "he": "הקלד בזיליקום בשדה הכותרת של המחבר",
     "hi": "कंपोज़र के शीर्षक फ़ील्ड में तुलसी टाइप करें",
-    "sw": "Andika mrehani katika sehemu ya kichwa ya kitunga swali",
     "de": "Tippe Basilikum in das Titelfeld des Editors",
     "fr": "Tapez basilic dans le champ du titre du composeur"
    }

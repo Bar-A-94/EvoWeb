@@ -8,11 +8,9 @@
     1
    ],
    "translations": {
-    "es": "Inicio",
     "zh": "首页",
     "he": "דף הבית",
     "hi": "होम",
-    "sw": "Nyumbani",
     "de": "Startseite",
     "fr": "Accueil"
    }
@@ -28,11 +26,9 @@
     10
    ],
    "translations": {
-    "es": "Servicios",
     "zh": "服务",
     "he": "שירותים",
     "hi": "सेवाएं",
-    "sw": "Huduma",
     "de": "Leistungen",
     "fr": "Services"
    }
@@ -46,11 +42,9 @@
     6
    ],
    "translations": {
-    "es": "Talleres",
     "zh": "工作坊",
     "he": "סדנאות",
     "hi": "वर्कशॉप",
-    "sw": "Warsha",
     "de": "Workshops",
     "fr": "Ateliers"
    }
@@ -63,11 +57,9 @@
     1
    ],
    "translations": {
-    "es": "Clases en línea",
     "zh": "在线课程",
     "he": "שיעורים מקוונים",
     "hi": "ऑनलाइन कक्षाएं",
-    "sw": "Madarasa ya Mtandaoni",
     "de": "Online-Kurse",
     "fr": "Cours en ligne"
    }
@@ -80,11 +72,9 @@
     1
    ],
    "translations": {
-    "es": "Pódcasts",
     "zh": "播客",
     "he": "פודקאסטים",
     "hi": "पॉडकास्ट",
-    "sw": "Podikasti",
     "de": "Podcasts",
     "fr": "Podcasts"
    }
@@ -97,11 +87,9 @@
     1
    ],
    "translations": {
-    "es": "Blog",
     "zh": "博客",
     "he": "בלוגים",
     "hi": "ब्लॉग",
-    "sw": "Blogu",
     "de": "Blog",
     "fr": "Blog"
    }
@@ -114,11 +102,9 @@
     1
    ],
    "translations": {
-    "es": "Contacto",
     "zh": "联系我们",
     "he": "צור קשר",
     "hi": "संपर्क",
-    "sw": "Wasiliana Nasi",
     "de": "Kontakt",
     "fr": "Contact"
    }
@@ -137,11 +123,9 @@
     10
    ],
    "translations": {
-    "es": "buscador de programas",
     "zh": "课程查找器",
     "he": "מאתר תוכניות",
     "hi": "प्रोग्राम फाइंडर",
-    "sw": "kitafuta programu",
     "de": "Programmfinder",
     "fr": "recherche de programmes"
    }
@@ -155,11 +139,9 @@
     5
    ],
    "translations": {
-    "es": "precio máximo",
     "zh": "最高价格",
     "he": "מחיר מרבי",
     "hi": "अधिकतम कीमत",
-    "sw": "bei ya juu zaidi",
     "de": "Höchstpreis",
     "fr": "prix maximum"
    }
@@ -172,11 +154,9 @@
     2
    ],
    "translations": {
-    "es": "precio máximo",
     "zh": "最高价格",
     "he": "מחיר מרבי",
     "hi": "अधिकतम कीमत",
-    "sw": "bei ya juu zaidi",
     "de": "Höchstpreis",
     "fr": "prix maximum"
    }
@@ -189,11 +169,9 @@
     2
    ],
    "translations": {
-    "es": "agregar al carrito",
     "zh": "加入购物车",
     "he": "הוספה לסל",
     "hi": "कार्ट में जोड़ें",
-    "sw": "weka kwenye kikapu",
     "de": "In den Warenkorb",
     "fr": "ajouter au panier"
    }
@@ -207,11 +185,9 @@
     9
    ],
    "translations": {
-    "es": "agregar a la ruta",
     "zh": "加入学习路径",
     "he": "הוספה למסלול",
     "hi": "पाथ में जोड़ें",
-    "sw": "ongeza kwenye njia",
     "de": "Zum Pfad hinzufügen",
     "fr": "ajouter au parcours"
    }
@@ -228,11 +204,9 @@
     10
    ],
    "translations": {
-    "es": "rutas de aprendizaje",
     "zh": "学习路径",
     "he": "מסלולי למידה",
     "hi": "लर्निंग पाथ",
-    "sw": "njia za kujifunza",
     "de": "Lernpfade",
     "fr": "parcours d'apprentissage"
    }
@@ -248,11 +222,9 @@
     10
    ],
    "translations": {
-    "es": "cotizador",
     "zh": "报价计算器",
     "he": "מחשבון הצעת מחיר",
     "hi": "कोटेशन कैलकुलेटर",
-    "sw": "kikokotoo cha bei",
     "de": "Preisrechner",
     "fr": "estimateur"
    }
@@ -266,11 +238,9 @@
     4
    ],
    "translations": {
-    "es": "cotizador de capacitación para equipos",
     "zh": "团队培训报价计算器",
     "he": "מחשבון הצעת מחיר להדרכת צוותים",
     "hi": "टीम ट्रेनिंग कोटेशन कैलकुलेटर",
-    "sw": "kikokotoo cha bei ya mafunzo ya timu",
     "de": "Preisrechner für Teamschulungen",
     "fr": "estimateur de formation d'équipe"
    }
@@ -285,11 +255,9 @@
     10
    ],
    "translations": {
-    "es": "tamaño del equipo",
     "zh": "团队人数",
     "he": "גודל הצוות",
     "hi": "टीम का आकार",
-    "sw": "ukubwa wa timu",
     "de": "Teamgröße",
     "fr": "taille de l'équipe"
    }
@@ -302,11 +270,9 @@
     5
    ],
    "translations": {
-    "es": "Certificado de Finalización",
     "zh": "结业证书",
     "he": "תעודת סיום",
     "hi": "समापन प्रमाणपत्र",
-    "sw": "Cheti cha Kukamilisha",
     "de": "Abschlusszertifikat",
     "fr": "Certificat de Réussite"
    }
@@ -320,11 +286,9 @@
     10
    ],
    "translations": {
-    "es": "Mi Aprendizaje",
     "zh": "我的学习",
     "he": "הלמידה שלי",
     "hi": "मेरी लर्निंग",
-    "sw": "Kujifunza Kwangu",
     "de": "Mein Lernen",
     "fr": "Mon Apprentissage"
    }
@@ -337,11 +301,9 @@
     7
    ],
    "translations": {
-    "es": "Mis Inscripciones",
     "zh": "我的报名",
     "he": "ההרשמות שלי",
     "hi": "मेरे रजिस्ट्रेशन",
-    "sw": "Usajili Wangu",
     "de": "Meine Anmeldungen",
     "fr": "Mes Inscriptions"
    }
@@ -355,11 +317,9 @@
     8
    ],
    "translations": {
-    "es": "sesiones en vivo",
     "zh": "直播问答",
     "he": "מפגשים חיים",
     "hi": "लाइव सेशन",
-    "sw": "vipindi vya moja kwa moja",
     "de": "Live-Sessions",
     "fr": "sessions en direct"
    }
@@ -372,11 +332,9 @@
     9
    ],
    "translations": {
-    "es": "Encuentra tu capacitación",
     "zh": "找到适合你的培训",
     "he": "מצא את ההכשרה שלך",
     "hi": "अपनी ट्रेनिंग खोजें",
-    "sw": "Tafuta mafunzo yako",
     "de": "Finde deine Schulung",
     "fr": "Trouvez votre formation"
    }
@@ -389,11 +347,9 @@
     9
    ],
    "translations": {
-    "es": "emparejador de capacitación",
     "zh": "培训匹配器",
     "he": "מתאם הכשרות",
     "hi": "ट्रेनिंग मैचर",
-    "sw": "kilinganishi cha mafunzo",
     "de": "Schulungs-Matcher",
     "fr": "sélecteur de formation"
    }
@@ -413,11 +369,9 @@
     10
    ],
    "translations": {
-    "es": "Liderazgo",
     "zh": "领导力",
     "he": "מנהיגות",
     "hi": "नेतृत्व",
-    "sw": "Uongozi",
     "de": "Führung",
     "fr": "Leadership"
    }
@@ -433,11 +387,9 @@
     9
    ],
    "translations": {
-    "es": "Comunicación",
     "zh": "沟通",
     "he": "תקשורת",
     "hi": "संचार",
-    "sw": "Mawasiliano",
     "de": "Kommunikation",
     "fr": "Communication"
    }
@@ -453,11 +405,9 @@
     9
    ],
    "translations": {
-    "es": "Conflicto",
     "zh": "冲突",
     "he": "קונפליקט",
     "hi": "संघर्ष",
-    "sw": "Migogoro",
     "de": "Konflikt",
     "fr": "Conflit"
    }
@@ -475,11 +425,9 @@
     9
    ],
    "translations": {
-    "es": "Coaching",
     "zh": "教练",
     "he": "אימון",
     "hi": "कोचिंग",
-    "sw": "Ukocha",
     "de": "Coaching",
     "fr": "Coaching"
    }
@@ -493,11 +441,9 @@
     3
    ],
    "translations": {
-    "es": "En vivo",
     "zh": "直播",
     "he": "בשידור חי",
     "hi": "लाइव",
-    "sw": "Moja kwa Moja",
     "de": "Live",
     "fr": "En direct"
    }
@@ -511,11 +457,9 @@
     3
    ],
    "translations": {
-    "es": "Bajo demanda",
     "zh": "点播",
     "he": "לפי דרישה",
     "hi": "ऑन-डिमांड",
-    "sw": "Kwa Ombi",
     "de": "On-Demand",
     "fr": "À la demande"
    }
@@ -528,11 +472,9 @@
     9
    ],
    "translations": {
-    "es": "Individual",
     "zh": "个人",
     "he": "יחיד",
     "hi": "व्यक्ति",
-    "sw": "Mtu binafsi",
     "de": "Einzelperson",
     "fr": "Individuel"
    }
@@ -551,11 +493,9 @@
     10
    ],
    "translations": {
-    "es": "Gerente",
     "zh": "经理",
     "he": "מנהל",
     "hi": "मैनेजर",
-    "sw": "Meneja",
     "de": "Manager",
     "fr": "Manager"
    }
@@ -574,11 +514,9 @@
     9
    ],
    "translations": {
-    "es": "Ejecutivo",
     "zh": "高管",
     "he": "בכיר",
     "hi": "एग्जीक्यूटिव",
-    "sw": "Mtendaji",
     "de": "Führungskraft",
     "fr": "Dirigeant"
    }
@@ -598,11 +536,9 @@
     10
    ],
    "translations": {
-    "es": "Fundamentos del Liderazgo",
     "zh": "领导力基础",
     "he": "יסודות המנהיגות",
     "hi": "नेतृत्व की नींव",
-    "sw": "Misingi ya Uongozi",
     "de": "Grundlagen der Führung",
     "fr": "Fondamentaux du Leadership"
    }
@@ -623,11 +559,9 @@
     10
    ],
    "translations": {
-    "es": "Conversaciones Difíciles",
     "zh": "艰难对话",
     "he": "שיחות קשות",
     "hi": "मुश्किल बातचीत",
-    "sw": "Mazungumzo Magumu",
     "de": "Schwierige Gespräche",
     "fr": "Conversations Difficiles"
    }
@@ -643,11 +577,9 @@
     9
    ],
    "translations": {
-    "es": "Claves de Resolución de Conflictos",
     "zh": "冲突解决要点",
     "he": "יסודות יישוב קונפליקטים",
     "hi": "बुनियादी संघर्ष समाधान",
-    "sw": "Kanuni za Utatuzi wa Migogoro",
     "de": "Grundlagen der Konfliktlösung",
     "fr": "Essentiels de la Résolution de Conflit"
    }
@@ -664,11 +596,9 @@
     9
    ],
    "translations": {
-    "es": "Presencia del Ejecutivo",
     "zh": "高管影响力",
     "he": "נוכחות בכירים",
     "hi": "एग्जीक्यूटिव प्रेजेंस",
-    "sw": "Uwepo wa Mtendaji",
     "de": "Präsenz als Führungskraft",
     "fr": "Présence du Dirigeant"
    }
@@ -686,11 +616,9 @@
     9
    ],
    "translations": {
-    "es": "Coaching para el Desempeño",
     "zh": "绩效教练",
     "he": "אימון לביצועים",
     "hi": "प्रदर्शन के लिए कोचिंग",
-    "sw": "Ukocha kwa Utendaji",
     "de": "Coaching für Leistung",
     "fr": "Coaching de la Performance"
    }
@@ -703,11 +631,9 @@
     2
    ],
    "translations": {
-    "es": "Toma de Decisiones Estratégicas",
     "zh": "战略决策",
     "he": "קבלת החלטות אסטרטגיות",
     "hi": "रणनीतिक निर्णय-निर्माण",
-    "sw": "Kufanya Maamuzi ya Kimkakati",
     "de": "Strategische Entscheidungsfindung",
     "fr": "Prise de Décision Stratégique"
    }
@@ -723,11 +649,9 @@
     9
    ],
    "translations": {
-    "es": "Fundamentos de Comunicación en Equipo",
     "zh": "团队沟通基础",
     "he": "יסודות תקשורת צוותית",
     "hi": "टीम संचार की मूल बातें",
-    "sw": "Misingi ya Mawasiliano ya Timu",
     "de": "Grundlagen der Team-Kommunikation",
     "fr": "Bases de la Communication d'Équipe"
    }
@@ -743,11 +667,9 @@
     9
    ],
    "translations": {
-    "es": "Gestión de Equipos Remotos",
     "zh": "远程团队管理",
     "he": "ניהול צוותים מרוחקים",
     "hi": "रिमोट टीमों का प्रबंधन",
-    "sw": "Kusimamia Timu za Mbali",
     "de": "Remote-Teams führen",
     "fr": "Gestion des Équipes à Distance"
    }
@@ -766,11 +688,9 @@
     10
    ],
    "translations": {
-    "es": "Puesta en Marcha para Nuevos Gerentes",
     "zh": "新任经理快速上手",
     "he": "חניכת מנהלים חדשים",
     "hi": "नए मैनेजर की शुरुआत",
-    "sw": "Maandalizi ya Meneja Mpya",
     "de": "Onboarding für neue Manager",
     "fr": "Démarrage du Nouveau Manager"
    }
@@ -785,11 +705,9 @@
     10
    ],
    "translations": {
-    "es": "Liderar en Tiempos de Cambio",
     "zh": "变革中的领导力",
     "he": "להוביל בתוך שינוי",
     "hi": "बदलाव के दौर में नेतृत्व",
-    "sw": "Kuongoza Wakati wa Mabadiliko",
     "de": "Führen durch Veränderung",
     "fr": "Diriger dans le Changement"
    }
@@ -802,11 +720,9 @@
     7
    ],
    "translations": {
-    "es": "Pregúntame lo que Sea: Conversaciones Difíciles",
     "zh": "有问必答：艰难对话",
     "he": "שאל אותי הכול: שיחות קשות",
     "hi": "कुछ भी पूछें: मुश्किल बातचीत",
-    "sw": "Niulize Lolote: Mazungumzo Magumu",
     "de": "Frag mich alles: Schwierige Gespräche",
     "fr": "Demandez-moi n'importe quoi : Conversations Difficiles"
    }
@@ -820,11 +736,9 @@
     8
    ],
    "translations": {
-    "es": "Mesa Redonda de Ejecutivos",
     "zh": "高管圆桌会",
     "he": "שולחן עגול לבכירים",
     "hi": "एग्जीक्यूटिव राउंडटेबल",
-    "sw": "Meza Duara ya Mtendaji",
     "de": "Führungskraft-Roundtable",
     "fr": "Table Ronde des Dirigeants"
    }
@@ -838,11 +752,9 @@
     8
    ],
    "translations": {
-    "es": "Rituales de Equipos Remotos",
     "zh": "远程团队仪式",
     "he": "טקסים לצוות מרוחק",
     "hi": "रिमोट टीम की रस्में",
-    "sw": "Taratibu za Timu ya Mbali",
     "de": "Rituale für Remote-Teams",
     "fr": "Rituels d'Équipe à Distance"
    }

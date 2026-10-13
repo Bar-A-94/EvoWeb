@@ -1,13 +1,13 @@
 # Request-language ablation (Table 3)
 
 Does a coding agent do worse when the user writes in another language? Sec. 4.2 of the paper
-translates the ten requests of every EvoWeb app into French, German, Chinese, Hindi and Hebrew
-(Spanish and Swahili were run too but did not fit the table), keeps the application itself in
+translates the ten requests of every EvoWeb app into French, German, Chinese, Hindi and Hebrew,
+keeps the application itself in
 English, and re-runs Sonnet 4.6 and Haiku 4.5 with everything else unchanged.
 
 | What | Where |
 |---|---|
-| datasets | `data/multilingual/evoweb_benchmark_<lang>.jsonl` (`fr de zh hi he es sw`): translated request text, an explicit English-UI mandate in request 1, every feature / page / button referred to by its exact English name inside the foreign sentence, and the **untouched English judge tasks** (identical to `evoweb_benchmark.jsonl`) |
+| datasets | the `multilingual` config of [the HF dataset](https://huggingface.co/datasets/TD-Labs/EvoWeb) (splits `fr de zh hi he`): translated request text, an explicit English-UI mandate in request 1, every feature / page / button referred to by its exact English name inside the foreign sentence, and the **untouched English judge tasks** (identical to the English benchmark) |
 | runs | `evoweb.arms.MULTILINGUAL`: one full 32-app run per (model, language), `multilingual-sonnet-4.6-<lang>` and `multilingual-haiku-4.5-<lang>` in the released traces |
 | scoring | `ablations/multilingual/score_arms.py` |
 
@@ -18,8 +18,8 @@ python3 ablations/multilingual/score_arms.py --json out.json  # also write every
 ```
 
 Output, per model: raw accuracy, norm, Grade (norm-sweep AUC / 100) and Survival (turns-sweep
-AUC) for English (the model's Table 2 row, the mean of its three runs) and each of the seven
-languages, one run each; Spanish and Swahili are starred as outside the printed table. Grade is
+AUC) for English (the model's Table 2 row, the mean of its three runs) and each of the five
+languages, one run each. Grade is
 the number Table 3 prints.
 
 ## Why "English UI"

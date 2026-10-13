@@ -21,7 +21,7 @@ D = os.path.dirname(os.path.abspath(__file__))
 _PKG = os.path.abspath(os.path.join(D, "..", "..", ".."))
 if _PKG not in sys.path:
     sys.path.insert(0, _PKG)
-from evoweb.paths import DATA  # noqa: E402
+from evoweb.paths import DATA, ensure_data  # noqa: E402
 
 ARMS = {
     "grounded": "evoweb_benchmark.jsonl",
@@ -70,7 +70,8 @@ Reply with JSON only: {"winner":"A"|"B"|"tie","confidence":1-5,"reason":"at most
 
 
 def load(arm):
-    rows = {r["id"]: r for r in map(json.loads, open(os.path.join(DATA, ARMS[arm])))}
+    ensure_data(DATA / ARMS[arm])
+    rows = {r["id"]: r for r in map(json.loads, open(DATA / ARMS[arm], encoding="utf-8"))}
     if DROP:
         for r in rows.values():
             r["follow_ups"] = [f for f in r["follow_ups"] if f.get("archetype") not in DROP]

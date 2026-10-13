@@ -8,11 +8,9 @@
     1
    ],
    "translations": {
-    "es": "gestión de infraestructura",
     "zh": "基建管理",
     "he": "ניהול תשתיות",
     "hi": "अवसंरचना प्रबंधन",
-    "sw": "usimamizi wa miundombinu",
     "de": "Infrastrukturverwaltung",
     "fr": "gestion des infrastructures"
    }
@@ -26,11 +24,9 @@
     2
    ],
    "translations": {
-    "es": "gestión de compras",
     "zh": "采购管理",
     "he": "ניהול רכש",
     "hi": "खरीद प्रबंधन",
-    "sw": "usimamizi wa manunuzi",
     "de": "Beschaffungsverwaltung",
     "fr": "gestion des achats"
    }
@@ -44,11 +40,9 @@
     2
    ],
    "translations": {
-    "es": "gestión de personal",
     "zh": "人事管理",
     "he": "ניהול כוח אדם",
     "hi": "कार्मिक प्रबंधन",
-    "sw": "usimamizi wa wafanyakazi",
     "de": "Personalverwaltung",
     "fr": "gestion du personnel"
    }
@@ -64,11 +58,9 @@
     8
    ],
    "translations": {
-    "es": "gestión financiera",
     "zh": "财务管理",
     "he": "ניהול פיננסי",
     "hi": "वित्तीय प्रबंधन",
-    "sw": "usimamizi wa fedha",
     "de": "Finanzverwaltung",
     "fr": "gestion financière"
    }
@@ -81,11 +73,9 @@
     1
    ],
    "translations": {
-    "es": "gestión de licencias",
     "zh": "请假管理",
     "he": "ניהול חופשות",
     "hi": "अवकाश प्रबंधन",
-    "sw": "usimamizi wa likizo",
     "de": "Urlaubsverwaltung",
     "fr": "gestion des congés"
    }
@@ -99,11 +89,9 @@
     2
    ],
    "translations": {
-    "es": "licencias",
     "zh": "请假",
     "he": "חופשות",
     "hi": "अवकाश",
-    "sw": "likizo",
     "de": "Urlaub",
     "fr": "congés"
    }
@@ -119,11 +107,9 @@
     10
    ],
    "translations": {
-    "es": "toma de decisiones",
     "zh": "决策",
     "he": "קבלת החלטות",
     "hi": "निर्णय-निर्माण",
-    "sw": "utoaji maamuzi",
     "de": "Entscheidungsfindung",
     "fr": "prise de décision"
    }
@@ -141,11 +127,9 @@
     9
    ],
    "translations": {
-    "es": "Flota Vehicular",
     "zh": "车队",
     "he": "צי רכב",
     "hi": "वाहन बेड़ा",
-    "sw": "Kundi la Magari",
     "de": "Fuhrpark",
     "fr": "Parc de véhicules"
    }
@@ -164,11 +148,9 @@
     9
    ],
    "translations": {
-    "es": "Carreteras y Puentes",
     "zh": "道路与桥梁",
     "he": "כבישים וגשרים",
     "hi": "सड़क एवं पुल",
-    "sw": "Barabara na Madaraja",
     "de": "Straßen & Brücken",
     "fr": "Routes & Ponts"
    }
@@ -185,11 +167,9 @@
     10
    ],
    "translations": {
-    "es": "Suministros de Oficina",
     "zh": "办公用品",
     "he": "ציוד משרדי",
     "hi": "कार्यालय सामग्री",
-    "sw": "Vifaa vya Ofisi",
     "de": "Bürobedarf",
     "fr": "Fournitures de bureau"
    }
@@ -208,11 +188,9 @@
     10
    ],
    "translations": {
-    "es": "Equipos de TI",
     "zh": "IT设备",
     "he": "ציוד מחשוב",
     "hi": "आईटी उपकरण",
-    "sw": "Vifaa vya TEHAMA",
     "de": "IT-Ausstattung",
     "fr": "Équipement informatique"
    }
@@ -230,11 +208,9 @@
     9
    ],
    "translations": {
-    "es": "Capacitación del Personal",
     "zh": "员工培训",
     "he": "הכשרת עובדים",
     "hi": "स्टाफ प्रशिक्षण",
-    "sw": "Mafunzo ya Wafanyakazi",
     "de": "Personalschulung",
     "fr": "Formation du personnel"
    }
@@ -251,11 +227,9 @@
     9
    ],
    "translations": {
-    "es": "Parques Públicos",
     "zh": "公共公园",
     "he": "פארקים ציבוריים",
     "hi": "सार्वजनिक उद्यान",
-    "sw": "Bustani za Umma",
     "de": "Öffentliche Parks",
     "fr": "Parcs publics"
    }
@@ -271,11 +245,9 @@
     10
    ],
    "translations": {
-    "es": "líneas presupuestarias",
     "zh": "预算科目",
     "he": "סעיפי תקציב",
     "hi": "बजट मदें",
-    "sw": "vipengele vya bajeti",
     "de": "Budgetpositionen",
     "fr": "lignes budgétaires"
    }
@@ -289,11 +261,9 @@
     10
    ],
    "translations": {
-    "es": "departamento de Oficina",
     "zh": "办公部门",
     "he": "מחלקת משרד",
     "hi": "कार्यालय विभाग",
-    "sw": "idara ya Ofisi",
     "de": "Abteilung Büro",
     "fr": "département Bureau"
    }
@@ -309,11 +279,9 @@
     7
    ],
    "translations": {
-    "es": "generador de requisiciones",
     "zh": "申购单生成器",
     "he": "בונה דרישות רכש",
     "hi": "मांग-पत्र बिल्डर",
-    "sw": "kitengeneza ombi la manunuzi",
     "de": "Bedarfsanforderungs-Generator",
     "fr": "générateur de demandes d'achat"
    }
@@ -328,11 +296,9 @@
     7
    ],
    "translations": {
-    "es": "formulario de informe de gastos",
     "zh": "费用报销表单",
     "he": "טופס דוח הוצאות",
     "hi": "व्यय रिपोर्ट फ़ॉर्म",
-    "sw": "fomu ya ripoti ya gharama",
     "de": "Spesenabrechnungsformular",
     "fr": "formulaire de note de frais"
    }
@@ -350,11 +316,9 @@
     10
    ],
    "translations": {
-    "es": "cola de aprobaciones",
     "zh": "审批队列",
     "he": "תור אישורים",
     "hi": "अनुमोदन कतार",
-    "sw": "foleni ya idhini",
     "de": "Genehmigungswarteschlange",
     "fr": "file d'approbations"
    }
@@ -369,11 +333,9 @@
     7
    ],
    "translations": {
-    "es": "informe de utilización del presupuesto",
     "zh": "预算使用率报表",
     "he": "דוח ניצול תקציב",
     "hi": "बजट उपयोग रिपोर्ट",
-    "sw": "ripoti ya matumizi ya bajeti",
     "de": "Budget-Auslastungsbericht",
     "fr": "rapport d'utilisation du budget"
    }
@@ -389,11 +351,9 @@
     10
    ],
    "translations": {
-    "es": "informe de utilización",
     "zh": "使用率报表",
     "he": "דוח ניצול",
     "hi": "उपयोग रिपोर्ट",
-    "sw": "ripoti ya matumizi",
     "de": "Auslastungsbericht",
     "fr": "rapport d'utilisation"
    }
@@ -408,11 +368,9 @@
     8
    ],
    "translations": {
-    "es": "portal de proveedores",
     "zh": "供应商门户",
     "he": "פורטל ספקים",
     "hi": "विक्रेता पोर्टल",
-    "sw": "lango la wasambazaji",
     "de": "Lieferantenportal",
     "fr": "portail fournisseurs"
    }
@@ -427,11 +385,9 @@
     9
    ],
    "translations": {
-    "es": "sección de subvenciones",
     "zh": "拨款专区",
     "he": "מדור מענקים",
     "hi": "अनुदान अनुभाग",
-    "sw": "sehemu ya ruzuku",
     "de": "Fördermittelbereich",
     "fr": "section des subventions"
    }
@@ -444,11 +400,9 @@
     8
    ],
    "translations": {
-    "es": "planificador de escenarios",
     "zh": "假设情景规划器",
     "he": "מתכנן תרחישים",
     "hi": "परिदृश्य योजनाकार",
-    "sw": "kipangaji cha hali tofauti",
     "de": "Was-wäre-wenn-Planer",
     "fr": "planificateur de scénarios"
    }
@@ -461,11 +415,9 @@
     9
    ],
    "translations": {
-    "es": "panel de KPI",
     "zh": "KPI仪表板",
     "he": "לוח מחווני KPI",
     "hi": "KPI डैशबोर्ड",
-    "sw": "dashibodi ya KPI",
     "de": "KPI-Dashboard",
     "fr": "tableau de bord KPI"
    }
@@ -478,11 +430,9 @@
     10
    ],
    "translations": {
-    "es": "vista del concejo",
     "zh": "议会视图",
     "he": "תצוגת מועצה",
     "hi": "परिषद दृश्य",
-    "sw": "mwonekano wa baraza",
     "de": "Ratsansicht",
     "fr": "vue du conseil"
    }
@@ -495,11 +445,9 @@
     10
    ],
    "translations": {
-    "es": "Enviar al Concejo",
     "zh": "提交议会",
     "he": "שליחה למועצה",
     "hi": "परिषद को भेजें",
-    "sw": "Wasilisha kwa Baraza",
     "de": "An den Rat senden",
     "fr": "Soumettre au Conseil"
    }
@@ -513,11 +461,9 @@
     5
    ],
    "translations": {
-    "es": "Jefe de Departamento",
     "zh": "部门负责人",
     "he": "ראש מחלקה",
     "hi": "विभाग प्रमुख",
-    "sw": "Mkuu wa Idara",
     "de": "Abteilungsleiter",
     "fr": "Chef de Département"
    }
@@ -531,11 +477,9 @@
     5
    ],
    "translations": {
-    "es": "Director de Finanzas",
     "zh": "财务总监",
     "he": "מנהל כספים",
     "hi": "वित्त निदेशक",
-    "sw": "Mkurugenzi wa Fedha",
     "de": "Finanzdirektor",
     "fr": "Directeur Financier"
    }
@@ -549,11 +493,9 @@
     10
    ],
    "translations": {
-    "es": "Concejo Municipal",
     "zh": "市议会",
     "he": "מועצת העיר",
     "hi": "नगर परिषद",
-    "sw": "Baraza la Jiji",
     "de": "Stadtrat",
     "fr": "Conseil Municipal"
    }
@@ -569,11 +511,9 @@
     10
    ],
    "translations": {
-    "es": "Pendiente",
     "zh": "待审",
     "he": "ממתין",
     "hi": "लंबित",
-    "sw": "Inasubiri",
     "de": "Ausstehend",
     "fr": "En attente"
    }
@@ -586,11 +526,9 @@
     2
    ],
    "translations": {
-    "es": "Aprobado",
     "zh": "已批准",
     "he": "מאושר",
     "hi": "अनुमोदित",
-    "sw": "Imeidhinishwa",
     "de": "Genehmigt",
     "fr": "Approuvé"
    }
@@ -605,11 +543,9 @@
     10
    ],
    "translations": {
-    "es": "Rechazado",
     "zh": "已拒绝",
     "he": "נדחה",
     "hi": "अस्वीकृत",
-    "sw": "Imekataliwa",
     "de": "Abgelehnt",
     "fr": "Rejeté"
    }
@@ -624,11 +560,9 @@
     10
    ],
    "translations": {
-    "es": "En Riesgo",
     "zh": "有风险",
     "he": "בסיכון",
     "hi": "जोखिम में",
-    "sw": "Hatarini",
     "de": "Gefährdet",
     "fr": "À Risque"
    }
@@ -641,11 +575,9 @@
     4
    ],
    "translations": {
-    "es": "Agotado",
     "zh": "已用尽",
     "he": "מוצה",
     "hi": "समाप्त",
-    "sw": "Imeisha",
     "de": "Erschöpft",
     "fr": "Épuisé"
    }
@@ -659,11 +591,9 @@
     10
    ],
    "translations": {
-    "es": "Según lo Previsto",
     "zh": "按计划",
     "he": "בדרך הנכונה",
     "hi": "पटरी पर",
-    "sw": "Kwenye Mpango",
     "de": "Im Plan",
     "fr": "Dans les Temps"
    }
@@ -677,11 +607,9 @@
     10
    ],
    "translations": {
-    "es": "Fuera de Rumbo",
     "zh": "偏离计划",
     "he": "מחוץ למסלול",
     "hi": "पटरी से उतरा",
-    "sw": "Nje ya Mpango",
     "de": "Außer Plan",
     "fr": "Hors Délais"
    }
@@ -694,11 +622,9 @@
     5
    ],
    "translations": {
-    "es": "Adjudicar",
     "zh": "授标",
     "he": "הענקה",
     "hi": "आवंटित करें",
-    "sw": "Tunuku",
     "de": "Zuschlag erteilen",
     "fr": "Attribuer"
    }
@@ -711,11 +637,9 @@
     5
    ],
    "translations": {
-    "es": "Adjudicado",
     "zh": "已授标",
     "he": "הוענק",
     "hi": "आवंटित",
-    "sw": "Imetunukiwa",
     "de": "Zuschlag erteilt",
     "fr": "Attribué"
    }
@@ -728,11 +652,9 @@
     5
    ],
    "translations": {
-    "es": "No seleccionado",
     "zh": "未选中",
     "he": "לא נבחר",
     "hi": "चयनित नहीं",
-    "sw": "Haikuchaguliwa",
     "de": "Nicht ausgewählt",
     "fr": "Non retenu"
    }
@@ -746,11 +668,9 @@
     9
    ],
    "translations": {
-    "es": "Iniciativa de Agua Limpia",
     "zh": "清洁水计划",
     "he": "יוזמת מים נקיים",
     "hi": "स्वच्छ जल पहल",
-    "sw": "Mpango wa Maji Safi",
     "de": "Initiative Sauberes Wasser",
     "fr": "Initiative Eau Potable"
    }
@@ -763,11 +683,9 @@
     6
    ],
    "translations": {
-    "es": "Modernización de Servicios Digitales",
     "zh": "数字服务现代化",
     "he": "מודרניזציה של שירותים דיגיטליים",
     "hi": "डिजिटल सेवा आधुनिकीकरण",
-    "sw": "Uboreshaji wa Huduma za Kidijitali",
     "de": "Modernisierung der digitalen Dienste",
     "fr": "Modernisation des Services Numériques"
    }
@@ -780,11 +698,9 @@
     6
    ],
    "translations": {
-    "es": "Alcance Comunitario de Salud",
     "zh": "社区健康外展",
     "he": "הסברת בריאות קהילתית",
     "hi": "सामुदायिक स्वास्थ्य पहुंच",
-    "sw": "Huduma za Afya kwa Jamii",
     "de": "Gemeindegesundheitsprogramm",
     "fr": "Sensibilisation à la Santé Communautaire"
    }
@@ -797,11 +713,9 @@
     9
    ],
    "translations": {
-    "es": "Baches reparados",
     "zh": "已修补坑洼",
     "he": "מפגעי כביש שתוקנו",
     "hi": "गड्ढे मरम्मत किए गए",
-    "sw": "Mashimo yaliyorekebishwa",
     "de": "Reparierte Schlaglöcher",
     "fr": "Nids-de-poule réparés"
    }
@@ -814,11 +728,9 @@
     9
    ],
    "translations": {
-    "es": "Permisos digitalizados",
     "zh": "已数字化许可证",
     "he": "היתרים שעברו דיגיטציה",
     "hi": "परमिट डिजिटल किए गए",
-    "sw": "Vibali vilivyodijitishwa",
     "de": "Digitalisierte Genehmigungen",
     "fr": "Permis numérisés"
    }
@@ -831,11 +743,9 @@
     9
    ],
    "translations": {
-    "es": "Sesiones de capacitación realizadas",
     "zh": "已举办培训场次",
     "he": "מפגשי הדרכה שהתקיימו",
     "hi": "आयोजित प्रशिक्षण सत्र",
-    "sw": "Vipindi vya mafunzo vilivyofanyika",
     "de": "Durchgeführte Schulungen",
     "fr": "Sessions de formation tenues"
    }
@@ -848,11 +758,9 @@
     9
    ],
    "translations": {
-    "es": "Inspecciones de parques",
     "zh": "公园巡检",
     "he": "ביקורות בפארקים",
     "hi": "उद्यान निरीक्षण",
-    "sw": "Ukaguzi wa bustani",
     "de": "Parkinspektionen",
     "fr": "Inspections de parcs"
    }
@@ -865,11 +773,9 @@
     9
    ],
    "translations": {
-    "es": "Vehículos de flota atendidos",
     "zh": "已保养车队车辆",
     "he": "רכבי צי שטופלו",
     "hi": "बेड़े के वाहन सर्विस किए गए",
-    "sw": "Magari ya kundi yaliyohudumiwa",
     "de": "Gewartete Fuhrparkfahrzeuge",
     "fr": "Véhicules du parc entretenus"
    }
@@ -883,11 +789,9 @@
     10
    ],
    "translations": {
-    "es": "Repavimentación con grava, sección Nanshan",
     "zh": "Nanshan路段砾石路面翻新",
     "he": "ריבוד מחדש בחצץ, מקטע Nanshan",
     "hi": "बजरी पुनःसतहीकरण, Nanshan खंड",
-    "sw": "Uwekaji changarawe upya, sehemu ya Nanshan",
     "de": "Schottererneuerung, Abschnitt Nanshan",
     "fr": "Réfection en gravier, section Nanshan"
    }
@@ -900,11 +804,9 @@
     10
    ],
    "translations": {
-    "es": "Adenda de Infraestructura de Junio",
     "zh": "六月基建补充文件",
     "he": "נספח תשתיות יוני",
     "hi": "जून अवसंरचना परिशिष्ट",
-    "sw": "Nyongeza ya Miundombinu ya Juni",
     "de": "Infrastruktur-Nachtrag Juni",
     "fr": "Addendum Infrastructure de Juin"
    }

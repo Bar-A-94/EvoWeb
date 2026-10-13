@@ -16,3 +16,6 @@ __pycache__/
 tests/smoke_sets/
 .nfs*
 .DS_Store
+# downloaded from Hugging Face by evoweb.paths.ensure_data
+data/evoweb_benchmark.jsonl
+data/multilingual/

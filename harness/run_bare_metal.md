@@ -24,8 +24,8 @@ export CHROME_BIN=/usr/bin/google-chrome CHROMEDRIVER_BIN=/usr/bin/chromedriver
 
 ## 2. Write the smoke sets (optional)
 
-The benchmark itself, `data/evoweb_benchmark.jsonl`, is committed. The short sets used for
-smoke tests are derived from it and are not:
+The benchmark itself, `data/evoweb_benchmark.jsonl`, is downloaded from Hugging Face at the start of
+every run. The short sets used for smoke tests are derived from it:
 
 ```bash
 python3 harness/make_tasksets.py      # writes tests/smoke_sets/*.jsonl

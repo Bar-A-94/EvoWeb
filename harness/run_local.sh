@@ -19,6 +19,7 @@
 #     HARNESS_ANTHROPIC_EFFORT MINI_MODEL_CLASS
 #     WEBGEN_EFFICIENCY_NUDGE WEBGEN_NAV_GUIDANCE WEBGEN_TURN_TIMEOUT HARNESS_LLM_TIMEOUT WEBGEN_PROXY_TIMEOUT
 #     UV_EXCLUDE_NEWER EXTENSIONS_REF WEBGEN_RECORD_VIDEO SKIP_UI_EVAL
+#     EVOWEB_HF_REVISION (default: the dataset's latest commit at launch) EVOWEB_NO_DOWNLOAD
 #   Unset variables fall back to the paper defaults inside run_sample.sh (see README.md).
 #
 # Example (Claude Sonnet 4.6 as model and judge, 32 ladders, 8 at a time):
@@ -57,6 +58,13 @@ if [ "${#SAMPLES[@]}" -eq 0 ]; then
     exit 2
 fi
 
+# One Hugging Face data revision for every ladder of the run: the latest at launch (offline: "main").
+if [ -z "${EVOWEB_HF_REVISION:-}" ]; then
+    EVOWEB_HF_REVISION="$(PYTHONPATH="$(dirname "$0")/.." python3 -m evoweb.paths revision 2>/dev/null || echo main)"
+fi
+export EVOWEB_HF_REVISION
+echo "[run_local] data: Hugging Face revision ${EVOWEB_HF_REVISION}"
+
 # Environment passthrough: only variables that are set reach the container, so run_sample.sh's
 # paper defaults apply to everything the user did not override.
 PASS=(
@@ -68,6 +76,7 @@ PASS=(
     HARNESS_ANTHROPIC_EFFORT MINI_MODEL_CLASS
     WEBGEN_EFFICIENCY_NUDGE WEBGEN_NAV_GUIDANCE WEBGEN_TURN_TIMEOUT HARNESS_LLM_TIMEOUT WEBGEN_PROXY_TIMEOUT
     UV_EXCLUDE_NEWER EXTENSIONS_REF WEBGEN_RECORD_VIDEO SKIP_UI_EVAL
+    EVOWEB_HF_REVISION EVOWEB_NO_DOWNLOAD
 )
 ENV_ARGS=()
 for v in "${PASS[@]}"; do

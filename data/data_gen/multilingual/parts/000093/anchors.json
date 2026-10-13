@@ -9,11 +9,9 @@
     2
    ],
    "translations": {
-    "es": "obras creativas",
     "zh": "创意作品",
     "he": "יצירות",
     "hi": "रचनात्मक कृतियाँ",
-    "sw": "kazi za ubunifu",
     "de": "kreative Werke",
     "fr": "œuvres créatives"
    }
@@ -26,11 +24,9 @@
     1
    ],
    "translations": {
-    "es": "Obras Creativas",
     "zh": "创意作品",
     "he": "יצירות",
     "hi": "रचनात्मक कृतियाँ",
-    "sw": "Kazi za Ubunifu",
     "de": "Kreative Werke",
     "fr": "Œuvres créatives"
    }
@@ -43,11 +39,9 @@
     1
    ],
    "translations": {
-    "es": "Inicio",
     "zh": "首页",
     "he": "בית",
     "hi": "होम",
-    "sw": "Nyumbani",
     "de": "Startseite",
     "fr": "Accueil"
    }
@@ -60,11 +54,9 @@
     1
    ],
    "translations": {
-    "es": "Compartir Ideas",
     "zh": "分享创意",
     "he": "שיתוף רעיונות",
     "hi": "विचार साझा करें",
-    "sw": "Shiriki Mawazo",
     "de": "Ideen teilen",
     "fr": "Partager des idées"
    }
@@ -77,11 +69,9 @@
     1
    ],
    "translations": {
-    "es": "Debates",
     "zh": "讨论",
     "he": "דיונים",
     "hi": "चर्चाएँ",
-    "sw": "Majadiliano",
     "de": "Diskussionen",
     "fr": "Discussions"
    }
@@ -95,11 +85,9 @@
     2
    ],
    "translations": {
-    "es": "debates",
     "zh": "讨论",
     "he": "דיונים",
     "hi": "चर्चाएँ",
-    "sw": "majadiliano",
     "de": "Diskussionen",
     "fr": "discussions"
    }
@@ -112,11 +100,9 @@
     1
    ],
    "translations": {
-    "es": "Interacciones",
     "zh": "互动",
     "he": "אינטראקציות",
     "hi": "इंटरैक्शन",
-    "sw": "Mwingiliano",
     "de": "Interaktionen",
     "fr": "Interactions"
    }
@@ -129,11 +115,9 @@
     1
    ],
    "translations": {
-    "es": "formulario de compartir ideas",
     "zh": "分享创意表单",
     "he": "טופס שיתוף רעיונות",
     "hi": "विचार साझा करने का फ़ॉर्म",
-    "sw": "fomu ya kushiriki mawazo",
     "de": "Formular zum Teilen von Ideen",
     "fr": "formulaire de partage d'idées"
    }
@@ -146,11 +130,9 @@
     1
    ],
    "translations": {
-    "es": "sección de ideas compartidas",
     "zh": "已分享创意专区",
     "he": "אזור הרעיונות המשותפים",
     "hi": "साझा किए गए विचार अनुभाग",
-    "sw": "sehemu ya mawazo yaliyoshirikiwa",
     "de": "Bereich für geteilte Ideen",
     "fr": "section des idées partagées"
    }
@@ -165,11 +147,9 @@
     7
    ],
    "translations": {
-    "es": "#naturaleza",
     "zh": "#自然",
     "he": "#טבע",
     "hi": "#प्रकृति",
-    "sw": "#asili",
     "de": "#natur",
     "fr": "#nature"
    }
@@ -182,11 +162,9 @@
     2
    ],
    "translations": {
-    "es": "#abstracto",
     "zh": "#抽象",
     "he": "#מופשט",
     "hi": "#अमूर्त",
-    "sw": "#dhahania",
     "de": "#abstrakt",
     "fr": "#abstrait"
    }
@@ -200,11 +178,9 @@
     4
    ],
    "translations": {
-    "es": "#animales",
     "zh": "#动物",
     "he": "#חיות",
     "hi": "#जानवर",
-    "sw": "#wanyama",
     "de": "#tiere",
     "fr": "#animaux"
    }
@@ -217,11 +193,9 @@
     4
    ],
    "translations": {
-    "es": "#urbano",
     "zh": "#都市",
     "he": "#אורבני",
     "hi": "#शहरी",
-    "sw": "#mijini",
     "de": "#urban",
     "fr": "#urbain"
    }
@@ -235,11 +209,9 @@
     9
    ],
    "translations": {
-    "es": "#espacio",
     "zh": "#太空",
     "he": "#חלל",
     "hi": "#अंतरिक्ष",
-    "sw": "#anga",
     "de": "#weltraum",
     "fr": "#espace"
    }
@@ -252,11 +224,9 @@
     2
    ],
    "translations": {
-    "es": "Arte Digital",
     "zh": "数字艺术",
     "he": "אמנות דיגיטלית",
     "hi": "डिजिटल आर्ट",
-    "sw": "Sanaa ya Kidijitali",
     "de": "Digitale Kunst",
     "fr": "Art numérique"
    }
@@ -270,11 +240,9 @@
     4
    ],
    "translations": {
-    "es": "Escultura",
     "zh": "雕塑",
     "he": "פיסול",
     "hi": "मूर्तिकला",
-    "sw": "Uchongaji",
     "de": "Skulptur",
     "fr": "Sculpture"
    }
@@ -288,11 +256,9 @@
     4
    ],
    "translations": {
-    "es": "Arte en Papel",
     "zh": "纸艺",
     "he": "אומנות נייר",
     "hi": "पेपरक्राफ्ट",
-    "sw": "Sanaa ya Karatasi",
     "de": "Papierkunst",
     "fr": "Art du papier"
    }
@@ -305,11 +271,9 @@
     2
    ],
    "translations": {
-    "es": "Fotografía",
     "zh": "摄影",
     "he": "צילום",
     "hi": "फ़ोटोग्राफ़ी",
-    "sw": "Upigaji Picha",
     "de": "Fotografie",
     "fr": "Photographie"
    }
@@ -323,11 +287,9 @@
     3
    ],
    "translations": {
-    "es": "ordenar por me gusta",
     "zh": "按点赞数排序",
     "he": "מיון לפי לייקים",
     "hi": "लाइक के अनुसार क्रमबद्ध",
-    "sw": "panga kwa mapendwa",
     "de": "nach Likes sortieren",
     "fr": "trier par j'aime"
    }
@@ -343,11 +305,9 @@
     10
    ],
    "translations": {
-    "es": "Puntaje de Chispa",
     "zh": "火花分数",
     "he": "ניקוד ניצוץ",
     "hi": "स्पार्क स्कोर",
-    "sw": "Alama ya Cheche",
     "de": "Funken-Score",
     "fr": "Score Étincelle"
    }
@@ -362,11 +322,9 @@
     10
    ],
    "translations": {
-    "es": "chispa",
     "zh": "火花",
     "he": "ניצוץ",
     "hi": "चिंगारी",
-    "sw": "cheche",
     "de": "Funke",
     "fr": "étincelle"
    }
@@ -380,11 +338,9 @@
     5
    ],
    "translations": {
-    "es": "Brasa",
     "zh": "余烬",
     "he": "גחלת",
     "hi": "अंगारा",
-    "sw": "Kaa la Moto",
     "de": "Glut",
     "fr": "Braise"
    }
@@ -398,11 +354,9 @@
     5
    ],
    "translations": {
-    "es": "Llama",
     "zh": "火焰",
     "he": "להבה",
     "hi": "लौ",
-    "sw": "Mwali",
     "de": "Flamme",
     "fr": "Flamme"
    }
@@ -416,11 +370,9 @@
     8
    ],
    "translations": {
-    "es": "Hoguera",
     "zh": "烈焰",
     "he": "מדורה",
     "hi": "ज्वाला",
-    "sw": "Mwako",
     "de": "Inferno",
     "fr": "Brasier"
    }
@@ -434,11 +386,9 @@
     6
    ],
    "translations": {
-    "es": "Favoritos",
     "zh": "收藏",
     "he": "מועדפים",
     "hi": "पसंदीदा",
-    "sw": "Vipendwa",
     "de": "Favoriten",
     "fr": "Favoris"
    }
@@ -452,11 +402,9 @@
     7
    ],
    "translations": {
-    "es": "Comunidades",
     "zh": "社区",
     "he": "קהילות",
     "hi": "समुदाय",
-    "sw": "Jumuiya",
     "de": "Gemeinschaften",
     "fr": "Communautés"
    }
@@ -470,11 +418,9 @@
     9
    ],
    "translations": {
-    "es": "Unirse",
     "zh": "加入",
     "he": "הצטרף",
     "hi": "शामिल हों",
-    "sw": "Jiunge",
     "de": "Beitreten",
     "fr": "Rejoindre"
    }
@@ -488,11 +434,9 @@
     9
    ],
    "translations": {
-    "es": "Destacados de la Semana",
     "zh": "每周聚光灯",
     "he": "זרקור שבועי",
     "hi": "साप्ताहिक स्पॉटलाइट",
-    "sw": "Mwangaza wa Wiki",
     "de": "Wöchentliches Rampenlicht",
     "fr": "Coup de projecteur hebdomadaire"
    }
@@ -505,11 +449,9 @@
     7
    ],
    "translations": {
-    "es": "insignia de campeón",
     "zh": "冠军徽章",
     "he": "תג אלוף",
     "hi": "चैंपियन बैज",
-    "sw": "beji ya bingwa",
     "de": "Champion-Abzeichen",
     "fr": "badge de champion"
    }
@@ -522,11 +464,9 @@
     7
    ],
    "translations": {
-    "es": "campeón",
     "zh": "冠军",
     "he": "אלוף",
     "hi": "चैंपियन",
-    "sw": "bingwa",
     "de": "Champion",
     "fr": "champion"
    }
@@ -540,11 +480,9 @@
     10
    ],
    "translations": {
-    "es": "cerrar y coronar",
     "zh": "关闭并加冕",
     "he": "סגור והכתר",
     "hi": "बंद करें और ताज पहनाएँ",
-    "sw": "funga na tawaza",
     "de": "schließen und krönen",
     "fr": "clôturer et couronner"
    }
@@ -559,11 +497,9 @@
     10
    ],
    "translations": {
-    "es": "estadísticas de artistas",
     "zh": "艺术家洞察",
     "he": "תובנות אמנים",
     "hi": "कलाकार इनसाइट्स",
-    "sw": "takwimu za wasanii",
     "de": "Künstler-Statistiken",
     "fr": "statistiques des artistes"
    }
@@ -576,11 +512,9 @@
     8
    ],
    "translations": {
-    "es": "Estadísticas de Artistas",
     "zh": "艺术家洞察",
     "he": "תובנות אמנים",
     "hi": "कलाकार इनसाइट्स",
-    "sw": "Takwimu za Wasanii",
     "de": "Künstler-Statistiken",
     "fr": "Statistiques des artistes"
    }
@@ -593,11 +527,9 @@
     10
    ],
    "translations": {
-    "es": "feed de actividad",
     "zh": "活动动态",
     "he": "פיד פעילות",
     "hi": "गतिविधि फ़ीड",
-    "sw": "mlisho wa shughuli",
     "de": "Aktivitäts-Feed",
     "fr": "fil d'activité"
    }
@@ -610,11 +542,9 @@
     10
    ],
    "translations": {
-    "es": "Desafío Wild Growth abierto",
     "zh": "Wild Growth 挑战已开启",
     "he": "אתגר Wild Growth נפתח",
     "hi": "Wild Growth चुनौती शुरू हुई",
-    "sw": "Changamoto ya Wild Growth imefunguliwa",
     "de": "Wild Growth Challenge eröffnet",
     "fr": "Défi Wild Growth ouvert"
    }
@@ -627,11 +557,9 @@
     10
    ],
    "translations": {
-    "es": "Comunidad Space Dreamers creada",
     "zh": "Space Dreamers 社区已创建",
     "he": "קהילת Space Dreamers נוצרה",
     "hi": "Space Dreamers समुदाय बनाया गया",
-    "sw": "Jumuiya ya Space Dreamers imeundwa",
     "de": "Space Dreamers Gemeinschaft erstellt",
     "fr": "Communauté Space Dreamers créée"
    }
@@ -644,11 +572,9 @@
     10
    ],
    "translations": {
-    "es": "Nebula Whale destacada",
     "zh": "Nebula Whale 被设为精选",
     "he": "Nebula Whale הוצג כמומלץ",
     "hi": "Nebula Whale को फीचर किया गया",
-    "sw": "Nebula Whale imeangaziwa",
     "de": "Nebula Whale hervorgehoben",
     "fr": "Nebula Whale mis en avant"
    }
@@ -661,11 +587,9 @@
     10
    ],
    "translations": {
-    "es": "hace 3 días",
     "zh": "3天前",
     "he": "לפני 3 ימים",
     "hi": "3 दिन पहले",
-    "sw": "siku 3 zilizopita",
     "de": "vor 3 Tagen",
     "fr": "il y a 3 jours"
    }
@@ -678,11 +602,9 @@
     10
    ],
    "translations": {
-    "es": "hace 5 días",
     "zh": "5天前",
     "he": "לפני 5 ימים",
     "hi": "5 दिन पहले",
-    "sw": "siku 5 zilizopita",
     "de": "vor 5 Tagen",
     "fr": "il y a 5 jours"
    }
@@ -695,11 +617,9 @@
     10
    ],
    "translations": {
-    "es": "hace 8 días",
     "zh": "8天前",
     "he": "לפני 8 ימים",
     "hi": "8 दिन पहले",
-    "sw": "siku 8 zilizopita",
     "de": "vor 8 Tagen",
     "fr": "il y a 8 jours"
    }

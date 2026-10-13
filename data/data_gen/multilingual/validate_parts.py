@@ -3,7 +3,7 @@
 
 The translation is trusted only where a machine can verify it:
 - structure: instructions "1".."10" present and non-empty, task_edits indices valid
-- language: zh/he/hi instructions are mostly target-script; es/sw carry target stopwords
+- language: zh/he/hi instructions are mostly target-script; de/fr carry target stopwords
 - invariants: every $-amount, decimal, percentage and signed American odds in an EN
   instruction/task survives byte-identical in its translation; every class=="keep"
   anchor (brands, teams, tickers, CSS color keywords, URLs) survives wherever its
@@ -34,12 +34,12 @@ import sys
 from pathlib import Path
 
 ML = Path(__file__).resolve().parent
+sys.path.insert(0, str(ML.parents[2]))
+from evoweb.paths import LANGS  # noqa: E402
+
 PARTS = ML / "parts"
-LANGS = ["es", "zh", "he", "hi", "sw", "de", "fr"]
 SCRIPT_RANGES = {"zh": (0x4E00, 0x9FFF), "he": (0x0590, 0x05FF), "hi": (0x0900, 0x097F)}
 STOPWORD_HINTS = {
-    "es": ["de", "el", "la", "que", "un", "una", "para", "con", "los", "las", "cada"],
-    "sw": ["ya", "na", "kwa", "wa", "za", "la", "katika", "kila", "iwe", "kwenye"],
     "de": ["der", "die", "das", "und", "mit", "ein", "eine", "jede", "alle", "soll"],
     "fr": ["le", "la", "les", "des", "une", "pour", "avec", "que", "chaque", "doit"],
 }
@@ -47,7 +47,7 @@ STOPWORD_HINTS = {
 NUM_RE = re.compile(
     r"\$\d[\d,]*(?:\.\d+)?|\b\d+\.\d+\b|\b\d+(?:\.\d+)?%|(?<![\w\d.$])[+-]\d{2,4}\b"
 )
-MIN_LEN_RATIO = {"zh": 0.15, "he": 0.4, "hi": 0.4, "es": 0.5, "sw": 0.5, "de": 0.5, "fr": 0.5}
+MIN_LEN_RATIO = {"zh": 0.15, "he": 0.4, "hi": 0.4, "de": 0.5, "fr": 0.5}
 
 
 def en_turns(row) -> dict[int, str]:
@@ -89,7 +89,7 @@ def has_stopwords(text: str, lang: str, n: int = 2) -> bool:
 def check_app(app: str) -> tuple[list[str], list[str]]:
     errors, warnings = [], []
     d = PARTS / app
-    row = json.loads((d / "en.json").read_text())
+    row = json.loads((d / "en.json").read_text(encoding="utf-8"))
     turns, tasks = en_turns(row), en_tasks(row)
     corpus = (
         "\n".join(turns.values())
@@ -97,7 +97,7 @@ def check_app(app: str) -> tuple[list[str], list[str]]:
         + "\n".join(t["task"] + "\n" + t["expected_result"] for ts in tasks.values() for t in ts)
     )
 
-    anchors = json.loads((d / "anchors.json").read_text())["anchors"]
+    anchors = json.loads((d / "anchors.json").read_text(encoding="utf-8"))["anchors"]
     xlate = [a for a in anchors if a["class"] == "translate"]
     keep = [a for a in anchors if a["class"] == "keep"]
     for a in anchors:
@@ -115,7 +115,7 @@ def check_app(app: str) -> tuple[list[str], list[str]]:
         if not f.is_file():
             errors.append(f"{lang}: file missing")
             continue
-        part = json.loads(f.read_text())
+        part = json.loads(f.read_text(encoding="utf-8"))
         instr = part.get("instructions", {})
         for t in range(1, 11):
             src, dst = turns[t], instr.get(str(t), "")
@@ -209,15 +209,15 @@ def check_app_enui(app: str) -> tuple[list[str], list[str]]:
     embedded English labels would otherwise drag zh/he/hi under the script threshold."""
     errors, warnings = [], []
     d = PARTS / app
-    row = json.loads((d / "en.json").read_text())
+    row = json.loads((d / "en.json").read_text(encoding="utf-8"))
     turns = en_turns(row)
-    anchors = json.loads((d / "anchors.json").read_text())["anchors"]
+    anchors = json.loads((d / "anchors.json").read_text(encoding="utf-8"))["anchors"]
     for lang in LANGS:
         f = d / f"{lang}_enui.json"
         if not f.is_file():
             errors.append(f"{lang}: {f.name} missing")
             continue
-        part = json.loads(f.read_text())
+        part = json.loads(f.read_text(encoding="utf-8"))
         if part.get("task_edits"):
             errors.append(f"{lang}: enui variant must not carry task_edits")
         instr = part.get("instructions", {})

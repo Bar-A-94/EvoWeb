@@ -6,11 +6,9 @@
       "kind": "ui_label",
       "turns": [2, 3, 8, 9, 10],
       "translations": {
-        "es": "Calculadora de Comisiones",
         "zh": "费用计算器",
         "he": "מחשבון עמלות",
         "hi": "फ़ीस कैलकुलेटर",
-        "sw": "Kikokotoo cha Ada",
         "de": "Gebührenrechner",
         "fr": "Calculateur de Frais"
       }
@@ -21,11 +19,9 @@
       "kind": "ui_label",
       "turns": [3, 4, 5, 6, 9],
       "translations": {
-        "es": "Libro de Operaciones",
         "zh": "交易账本",
         "he": "יומן עסקאות",
         "hi": "ट्रेड लेजर",
-        "sw": "Leja ya Biashara",
         "de": "Handelsbuch",
         "fr": "Registre des Transactions"
       }
@@ -36,11 +32,9 @@
       "kind": "ui_label",
       "turns": [4, 5, 10],
       "translations": {
-        "es": "Centro de Pagos",
         "zh": "提现中心",
         "he": "מרכז התשלומים",
         "hi": "पेआउट सेंटर",
-        "sw": "Kituo cha Malipo",
         "de": "Auszahlungszentrum",
         "fr": "Centre de Paiement"
       }
@@ -51,11 +45,9 @@
       "kind": "ui_label",
       "turns": [5, 7, 9],
       "translations": {
-        "es": "Tabla de Clasificación",
         "zh": "排行榜",
         "he": "לוח המובילים",
         "hi": "लीडरबोर्ड",
-        "sw": "Jedwali la Viongozi",
         "de": "Bestenliste",
         "fr": "Classement"
       }
@@ -66,11 +58,9 @@
       "kind": "ui_label",
       "turns": [6, 10],
       "translations": {
-        "es": "Modo Práctica",
         "zh": "练习模式",
         "he": "מצב תרגול",
         "hi": "प्रैक्टिस मोड",
-        "sw": "Hali ya Mazoezi",
         "de": "Übungsmodus",
         "fr": "Mode Entraînement"
       }
@@ -81,11 +71,9 @@
       "kind": "ui_label",
       "turns": [7, 8, 9],
       "translations": {
-        "es": "Filtro de Ofertas",
         "zh": "报价筛选器",
         "he": "מסנן הצעות",
         "hi": "ऑफ़र स्क्रीनर",
-        "sw": "Kichujio cha Ofa",
         "de": "Angebotsfilter",
         "fr": "Filtre des Offres"
       }
@@ -96,11 +84,9 @@
       "kind": "ui_label",
       "turns": [10],
       "translations": {
-        "es": "Estados de Cuenta del Vendedor",
         "zh": "卖家结算单",
         "he": "דוחות מוכר",
         "hi": "विक्रेता स्टेटमेंट",
-        "sw": "Taarifa za Muuzaji",
         "de": "Verkäuferabrechnungen",
         "fr": "Relevés Vendeur"
       }
@@ -111,11 +97,9 @@
       "kind": "ui_label",
       "turns": [8],
       "translations": {
-        "es": "Negociar",
         "zh": "议价",
         "he": "משא ומתן",
         "hi": "मोलभाव करें",
-        "sw": "Jadiliana",
         "de": "Verhandeln",
         "fr": "Négocier"
       }
@@ -126,11 +110,9 @@
       "kind": "ui_label",
       "turns": [3, 4, 5, 6, 9, 10],
       "translations": {
-        "es": "En Depósito",
         "zh": "托管中",
         "he": "בנאמנות",
         "hi": "एस्क्रो में",
-        "sw": "Kwenye Escrow",
         "de": "In Treuhand",
         "fr": "Sous Séquestre"
       }
@@ -141,11 +123,9 @@
       "kind": "ui_label",
       "turns": [3, 4, 5, 10],
       "translations": {
-        "es": "Liberado",
         "zh": "已放行",
         "he": "שוחרר",
         "hi": "जारी किया गया",
-        "sw": "Imeachiliwa",
         "de": "Freigegeben",
         "fr": "Libéré"
       }
@@ -156,11 +136,9 @@
       "kind": "ui_label",
       "turns": [3, 4, 5],
       "translations": {
-        "es": "Reembolsado",
         "zh": "已退款",
         "he": "הוחזר",
         "hi": "वापस किया गया",
-        "sw": "Imerejeshwa",
         "de": "Erstattet",
         "fr": "Remboursé"
       }
@@ -171,11 +149,9 @@
       "kind": "ui_label",
       "turns": [3, 4, 5, 6, 9, 10],
       "translations": {
-        "es": "En Disputa",
         "zh": "有争议",
         "he": "במחלוקת",
         "hi": "विवादित",
-        "sw": "Ina Mzozo",
         "de": "Strittig",
         "fr": "En Litige"
       }
@@ -186,11 +162,9 @@
       "kind": "ui_label",
       "turns": [1],
       "translations": {
-        "es": "en disputa",
         "zh": "有争议",
         "he": "במחלוקת",
         "hi": "विवादित",
-        "sw": "ina mzozo",
         "de": "strittig",
         "fr": "en litige"
       }
@@ -201,11 +175,9 @@
       "kind": "ui_label",
       "turns": [4, 5, 10],
       "translations": {
-        "es": "ganancias acumuladas",
         "zh": "累计收入",
         "he": "רווח מצטבר",
         "hi": "कुल अर्जित राशि",
-        "sw": "mapato ya jumla",
         "de": "Gesamtverdienst",
         "fr": "gains cumulés"
       }
@@ -216,11 +188,9 @@
       "kind": "ui_label",
       "turns": [4, 5],
       "translations": {
-        "es": "saldo disponible",
         "zh": "可用余额",
         "he": "יתרה זמינה",
         "hi": "उपलब्ध शेष",
-        "sw": "salio linalopatikana",
         "de": "verfügbares Guthaben",
         "fr": "solde disponible"
       }
@@ -231,11 +201,9 @@
       "kind": "ui_label",
       "turns": [3, 4, 6, 9],
       "translations": {
-        "es": "volumen total liberado",
         "zh": "已放行总额",
         "he": "סך הנפח ששוחרר",
         "hi": "कुल जारी की गई राशि",
-        "sw": "jumla ya thamani iliyoachiliwa",
         "de": "gesamtes freigegebenes Volumen",
         "fr": "volume total libéré"
       }
@@ -246,11 +214,9 @@
       "kind": "ui_label",
       "turns": [3],
       "translations": {
-        "es": "bloqueado en depósito",
         "zh": "托管锁定金额",
         "he": "נעול בנאמנות",
         "hi": "एस्क्रो में लॉक",
-        "sw": "iliyofungwa kwenye escrow",
         "de": "in Treuhand gesperrt",
         "fr": "bloqué sous séquestre"
       }
@@ -261,11 +227,9 @@
       "kind": "ui_label",
       "turns": [3, 6],
       "translations": {
-        "es": "bloqueado en depósito",
         "zh": "托管锁定金额",
         "he": "נעול בנאמנות",
         "hi": "एस्क्रो में लॉक",
-        "sw": "iliyofungwa kwenye escrow",
         "de": "in Treuhand gesperrt",
         "fr": "bloqué sous séquestre"
       }
@@ -276,11 +240,9 @@
       "kind": "ui_label",
       "turns": [3],
       "translations": {
-        "es": "desglose por vendedor",
         "zh": "各卖家明细",
         "he": "פילוח לפי מוכר",
         "hi": "प्रति-विक्रेता विवरण",
-        "sw": "mchanganuo kwa kila muuzaji",
         "de": "Aufschlüsselung pro Verkäufer",
         "fr": "répartition par vendeur"
       }
@@ -291,11 +253,9 @@
       "kind": "ui_label",
       "turns": [7, 9],
       "translations": {
-        "es": "reputación mínima",
         "zh": "最低信誉分",
         "he": "מוניטין מינימלי",
         "hi": "न्यूनतम प्रतिष्ठा",
-        "sw": "sifa ya chini",
         "de": "Mindestreputation",
         "fr": "réputation minimale"
       }
@@ -306,11 +266,9 @@
       "kind": "ui_label",
       "turns": [7],
       "translations": {
-        "es": "precio máximo",
         "zh": "最高价格",
         "he": "מחיר מקסימלי",
         "hi": "अधिकतम मूल्य",
-        "sw": "bei ya juu",
         "de": "Höchstpreis",
         "fr": "prix maximum"
       }
@@ -321,11 +279,9 @@
       "kind": "ui_label",
       "turns": [8],
       "translations": {
-        "es": "precio propuesto",
         "zh": "提议价格",
         "he": "מחיר מוצע",
         "hi": "प्रस्तावित मूल्य",
-        "sw": "bei inayopendekezwa",
         "de": "Vorschlagspreis",
         "fr": "prix proposé"
       }
@@ -336,11 +292,9 @@
       "kind": "content_text",
       "turns": [7],
       "translations": {
-        "es": "Transferencia Bancaria",
         "zh": "银行转账",
         "he": "העברה בנקאית",
         "hi": "बैंक ट्रांसफ़र",
-        "sw": "Uhamisho wa Benki",
         "de": "Banküberweisung",
         "fr": "Virement Bancaire"
       }
@@ -351,11 +305,9 @@
       "kind": "content_text",
       "turns": [7],
       "translations": {
-        "es": "Efectivo",
         "zh": "现金",
         "he": "מזומן",
         "hi": "नकद",
-        "sw": "Fedha Taslimu",
         "de": "Bargeld",
         "fr": "Espèces"
       }
@@ -366,11 +318,9 @@
       "kind": "ui_label",
       "turns": [7],
       "translations": {
-        "es": "Mostrando X de Y ofertas",
         "zh": "显示 X 个报价，共 Y 个",
         "he": "מוצגות X מתוך Y הצעות",
         "hi": "Y में से X ऑफ़र दिखाए जा रहे हैं",
-        "sw": "Inaonyesha ofa X kati ya Y",
         "de": "X von Y Angeboten werden angezeigt",
         "fr": "Affichage de X offres sur Y"
       }
@@ -381,11 +331,9 @@
       "kind": "ui_label",
       "turns": [7],
       "translations": {
-        "es": "Mostrando 2 de 6 ofertas",
         "zh": "显示 2 个报价，共 6 个",
         "he": "מוצגות 2 מתוך 6 הצעות",
         "hi": "6 में से 2 ऑफ़र दिखाए जा रहे हैं",
-        "sw": "Inaonyesha ofa 2 kati ya 6",
         "de": "2 von 6 Angeboten werden angezeigt",
         "fr": "Affichage de 2 offres sur 6"
       }
@@ -396,11 +344,9 @@
       "kind": "ui_label",
       "turns": [7],
       "translations": {
-        "es": "Mostrando 4 de 6 ofertas",
         "zh": "显示 4 个报价，共 6 个",
         "he": "מוצגות 4 מתוך 6 הצעות",
         "hi": "6 में से 4 ऑफ़र दिखाए जा रहे हैं",
-        "sw": "Inaonyesha ofa 4 kati ya 6",
         "de": "4 von 6 Angeboten werden angezeigt",
         "fr": "Affichage de 4 offres sur 6"
       }

@@ -12,11 +12,9 @@
     9
    ],
    "translations": {
-    "es": "archivo",
     "zh": "存档",
     "he": "ארכיון",
     "hi": "संग्रह",
-    "sw": "kumbukumbu",
     "de": "Archiv",
     "fr": "archives"
    }
@@ -31,11 +29,9 @@
     8
    ],
    "translations": {
-    "es": "Mesa de Revisión",
     "zh": "审核台",
     "he": "שולחן הבדיקה",
     "hi": "समीक्षा डेस्क",
-    "sw": "Dawati la Ukaguzi",
     "de": "Prüfstelle",
     "fr": "Bureau de Révision"
    }
@@ -49,11 +45,9 @@
     10
    ],
    "translations": {
-    "es": "Pregunta a la Comunidad",
     "zh": "向社区提问",
     "he": "שאלו את הקהילה",
     "hi": "समुदाय से पूछें",
-    "sw": "Uliza Jamii",
     "de": "Frag die Community",
     "fr": "Demandez à la Communauté"
    }
@@ -66,11 +60,9 @@
     10
    ],
    "translations": {
-    "es": "Mi Muro",
     "zh": "我的订阅",
     "he": "הפיד שלי",
     "hi": "मेरी फ़ीड",
-    "sw": "Mlisho Wangu",
     "de": "Mein Feed",
     "fr": "Mon Fil"
    }
@@ -83,11 +75,9 @@
     8
    ],
    "translations": {
-    "es": "Tendencias de la Semana",
     "zh": "本周热门",
     "he": "המובילים השבוע",
     "hi": "इस हफ़्ते ट्रेंडिंग",
-    "sw": "Zinazovuma Wiki Hii",
     "de": "Diese Woche im Trend",
     "fr": "Tendances de la Semaine"
    }
@@ -100,11 +90,9 @@
     7
    ],
    "translations": {
-    "es": "Esta Semana en Salud",
     "zh": "本周健康",
     "he": "השבוע בבריאות",
     "hi": "इस हफ़्ते स्वास्थ्य में",
-    "sw": "Wiki Hii Katika Afya",
     "de": "Diese Woche in Sachen Gesundheit",
     "fr": "Cette Semaine en Santé"
    }
@@ -117,11 +105,9 @@
     8
    ],
    "translations": {
-    "es": "panel de interacción",
     "zh": "互动仪表盘",
     "he": "לוח מעורבות",
     "hi": "एंगेजमेंट डैशबोर्ड",
-    "sw": "dashibodi ya mwingiliano",
     "de": "Engagement-Dashboard",
     "fr": "tableau de bord d'engagement"
    }
@@ -134,11 +120,9 @@
     7
    ],
    "translations": {
-    "es": "compositor del boletín",
     "zh": "摘要编辑器",
     "he": "עורך התקציר",
     "hi": "डाइजेस्ट कंपोज़र",
-    "sw": "kitunga muhtasari",
     "de": "Digest-Editor",
     "fr": "compositeur de newsletter"
    }
@@ -152,11 +136,9 @@
     9
    ],
    "translations": {
-    "es": "casilla de suscripción",
     "zh": "订阅框",
     "he": "תיבת הרשמה",
     "hi": "सब्सक्राइब बॉक्स",
-    "sw": "kisanduku cha kujiandikisha",
     "de": "Abo-Feld",
     "fr": "boîte d'abonnement"
    }
@@ -169,11 +151,9 @@
     4
    ],
    "translations": {
-    "es": "tablón de discusión",
     "zh": "讨论区",
     "he": "לוח הדיונים",
     "hi": "चर्चा बोर्ड",
-    "sw": "ubao wa majadiliano",
     "de": "Diskussionsforum",
     "fr": "forum de discussion"
    }
@@ -187,11 +167,9 @@
     9
    ],
    "translations": {
-    "es": "página principal de la comunidad",
     "zh": "社区主页",
     "he": "עמוד הבית של הקהילה",
     "hi": "समुदाय का मुख्य पेज",
-    "sw": "ukurasa mkuu wa jamii",
     "de": "Community-Startseite",
     "fr": "page d'accueil de la communauté"
    }
@@ -206,11 +184,9 @@
     6
    ],
    "translations": {
-    "es": "solo revisados",
     "zh": "仅已审核",
     "he": "נבדקו בלבד",
     "hi": "केवल समीक्षित",
-    "sw": "zilizokaguliwa pekee",
     "de": "nur geprüfte",
     "fr": "révisés uniquement"
    }
@@ -224,11 +200,9 @@
     3
    ],
    "translations": {
-    "es": "tiempo máximo de lectura",
     "zh": "最长阅读时间",
     "he": "זמן קריאה מרבי",
     "hi": "अधिकतम पठन समय",
-    "sw": "muda wa juu wa kusoma",
     "de": "maximale Lesezeit",
     "fr": "temps de lecture maximum"
    }
@@ -241,11 +215,9 @@
     8
    ],
    "translations": {
-    "es": "corte de puntuación",
     "zh": "分数下限",
     "he": "סף ניקוד",
     "hi": "स्कोर कटऑफ़",
-    "sw": "kikomo cha alama",
     "de": "Score-Grenzwert",
     "fr": "seuil de score"
    }
@@ -262,11 +234,9 @@
     9
    ],
    "translations": {
-    "es": "Revisado Médicamente",
     "zh": "医学审核",
     "he": "נבדק רפואית",
     "hi": "चिकित्सकीय समीक्षित",
-    "sw": "Imekaguliwa Kitabibu",
     "de": "Medizinisch geprüft",
     "fr": "Révisé Médicalement"
    }
@@ -284,11 +254,9 @@
     9
    ],
    "translations": {
-    "es": "Editorial",
     "zh": "编辑部",
     "he": "מערכת",
     "hi": "संपादकीय",
-    "sw": "Uhariri",
     "de": "Redaktionell",
     "fr": "Éditorial"
    }
@@ -303,11 +271,9 @@
     7
    ],
    "translations": {
-    "es": "min de lectura",
     "zh": "分钟阅读",
     "he": "דקות קריאה",
     "hi": "मिनट पठन",
-    "sw": "dakika za kusoma",
     "de": "Min. Lesezeit",
     "fr": "min de lecture"
    }
@@ -320,11 +286,9 @@
     2
    ],
    "translations": {
-    "es": "Mostrando X de 8 artículos",
     "zh": "显示 8 篇文章中的 X 篇",
     "he": "מוצגים X מתוך 8 מאמרים",
     "hi": "8 लेखों में से X दिखाए जा रहे हैं",
-    "sw": "Inaonyesha X kati ya makala 8",
     "de": "X von 8 Artikeln werden angezeigt",
     "fr": "Affichage de X sur 8 articles"
    }
@@ -338,11 +302,9 @@
     4
    ],
    "translations": {
-    "es": "Mostrando 2 de 8 artículos",
     "zh": "显示 8 篇文章中的 2 篇",
     "he": "מוצגים 2 מתוך 8 מאמרים",
     "hi": "8 लेखों में से 2 दिखाए जा रहे हैं",
-    "sw": "Inaonyesha 2 kati ya makala 8",
     "de": "2 von 8 Artikeln werden angezeigt",
     "fr": "Affichage de 2 sur 8 articles"
    }
@@ -355,11 +317,9 @@
     10
    ],
    "translations": {
-    "es": "Siguiendo",
     "zh": "已关注",
     "he": "עוקב",
     "hi": "फ़ॉलो किया",
-    "sw": "Ninafuatilia",
     "de": "Folge ich",
     "fr": "Suivi"
    }
@@ -372,11 +332,9 @@
     10
    ],
    "translations": {
-    "es": "Elección del cuestionario",
     "zh": "测验选择",
     "he": "בחירת השאלון",
     "hi": "क्विज़ चयन",
-    "sw": "Chaguo la Jaribio",
     "de": "Quiz-Wahl",
     "fr": "Choix du quiz"
    }
@@ -389,11 +347,9 @@
     10
    ],
    "translations": {
-    "es": "Elección del cuestionario",
     "zh": "测验选择",
     "he": "בחירת השאלון",
     "hi": "क्विज़ चयन",
-    "sw": "Chaguo la Jaribio",
     "de": "Quiz-Wahl",
     "fr": "Choix du quiz"
    }
@@ -406,11 +362,9 @@
     3
    ],
    "translations": {
-    "es": "¿Cuál es tu enfoque de bienestar?",
     "zh": "你的健康关注点是什么？",
     "he": "מהו מוקד הבריאות שלך?",
     "hi": "आपका वेलनेस फ़ोकस क्या है?",
-    "sw": "Lengo la ustawi wako ni lipi?",
     "de": "Was ist dein Wellness-Fokus?",
     "fr": "Quel est votre axe bien-être ?"
    }
@@ -424,11 +378,9 @@
     5
    ],
    "translations": {
-    "es": "enfoque de bienestar",
     "zh": "健康关注点",
     "he": "מוקד הבריאות",
     "hi": "वेलनेस फ़ोकस",
-    "sw": "lengo la ustawi",
     "de": "Wellness-Fokus",
     "fr": "axe bien-être"
    }
@@ -446,11 +398,9 @@
     10
    ],
    "translations": {
-    "es": "Nutrición",
     "zh": "营养",
     "he": "תזונה",
     "hi": "पोषण",
-    "sw": "Lishe",
     "de": "Ernährung",
     "fr": "Nutrition"
    }
@@ -469,11 +419,9 @@
     10
    ],
    "translations": {
-    "es": "Ejercicio",
     "zh": "健身",
     "he": "כושר",
     "hi": "फ़िटनेस",
-    "sw": "Utimamu wa Mwili",
     "de": "Fitness",
     "fr": "Forme physique"
    }
@@ -493,11 +441,9 @@
     10
    ],
    "translations": {
-    "es": "Sueño",
     "zh": "睡眠",
     "he": "שינה",
     "hi": "नींद",
-    "sw": "Usingizi",
     "de": "Schlaf",
     "fr": "Sommeil"
    }
@@ -513,11 +459,9 @@
     5
    ],
    "translations": {
-    "es": "Mente",
     "zh": "心理",
     "he": "נפש",
     "hi": "मन",
-    "sw": "Akili",
     "de": "Psyche",
     "fr": "Mental"
    }
@@ -536,11 +480,9 @@
     10
    ],
    "translations": {
-    "es": "Entendiendo las bacterias intestinales",
     "zh": "了解肠道细菌",
     "he": "להבין את חיידקי המעיים",
     "hi": "आंत के बैक्टीरिया को समझना",
-    "sw": "Kuelewa bakteria ya utumbo",
     "de": "Darmbakterien verstehen",
     "fr": "Comprendre les bactéries intestinales"
    }
@@ -559,11 +501,9 @@
     10
    ],
    "translations": {
-    "es": "bacterias intestinales",
     "zh": "肠道细菌",
     "he": "חיידקי המעיים",
     "hi": "आंत के बैक्टीरिया",
-    "sw": "bakteria ya utumbo",
     "de": "Darmbakterien",
     "fr": "bactéries intestinales"
    }
@@ -579,11 +519,9 @@
     10
    ],
    "translations": {
-    "es": "Guía para principiantes de preparación de comidas",
     "zh": "备餐入门指南",
     "he": "מדריך למתחילים בהכנת ארוחות",
     "hi": "भोजन तैयारी की शुरुआती गाइड",
-    "sw": "Mwongozo wa anayeanza wa kuandaa milo",
     "de": "Anfängerleitfaden zur Essensvorbereitung",
     "fr": "Guide du débutant pour la préparation des repas"
    }
@@ -600,11 +538,9 @@
     10
    ],
    "translations": {
-    "es": "preparación de comidas",
     "zh": "备餐",
     "he": "הכנת ארוחות",
     "hi": "भोजन तैयारी",
-    "sw": "kuandaa milo",
     "de": "Essensvorbereitung",
     "fr": "préparation des repas"
    }
@@ -620,11 +556,9 @@
     10
    ],
    "translations": {
-    "es": "Mitos de la hidratación desmentidos",
     "zh": "破解补水迷思",
     "he": "מיתוסים על שתייה מנופצים",
     "hi": "हाइड्रेशन के मिथक ध्वस्त",
-    "sw": "Kuvunja imani potofu za unywaji maji",
     "de": "Hydrations-Mythen entlarvt",
     "fr": "Mythes sur l'hydratation démystifiés"
    }
@@ -640,11 +574,9 @@
     8
    ],
    "translations": {
-    "es": "Rutina matutina de estiramientos de 10 minutos",
     "zh": "10 分钟晨间拉伸例程",
     "he": "שגרת מתיחות בוקר של 10 דקות",
     "hi": "10 मिनट की सुबह की स्ट्रेचिंग दिनचर्या",
-    "sw": "Ratiba ya kunyoosha mwili ya dakika 10 asubuhi",
     "de": "10-minütige Morgen-Dehnroutine",
     "fr": "Routine d'étirements matinaux de 10 minutes"
    }
@@ -659,11 +591,9 @@
     7
    ],
    "translations": {
-    "es": "Entrenamiento de fuerza después de los 50",
     "zh": "50 岁后的力量训练",
     "he": "אימוני כוח אחרי גיל 50",
     "hi": "50 के बाद स्ट्रेंथ ट्रेनिंग",
-    "sw": "Mazoezi ya nguvu baada ya miaka 50",
     "de": "Krafttraining ab 50",
     "fr": "Musculation après 50 ans"
    }
@@ -678,11 +608,9 @@
     6
    ],
    "translations": {
-    "es": "La ciencia de las duchas frías",
     "zh": "冷水澡的科学",
     "he": "המדע שמאחורי מקלחות קרות",
     "hi": "ठंडे स्नान का विज्ञान",
-    "sw": "Sayansi ya kuoga maji baridi",
     "de": "Die Wissenschaft der kalten Duschen",
     "fr": "La science des douches froides"
    }
@@ -699,11 +627,9 @@
     10
    ],
    "translations": {
-    "es": "Deuda de sueño: ¿mito o realidad?",
     "zh": "睡眠债：迷思还是真实？",
     "he": "חוב שינה: מיתוס או מציאות?",
     "hi": "नींद का कर्ज़: मिथक या हकीकत?",
-    "sw": "Deni la usingizi: uongo au ukweli?",
     "de": "Schlafschuld: Mythos oder Realität?",
     "fr": "Dette de sommeil : mythe ou réalité ?"
    }
@@ -719,11 +645,9 @@
     8
    ],
    "translations": {
-    "es": "Manejar el estrés en el trabajo",
     "zh": "应对工作压力",
     "he": "ניהול לחץ בעבודה",
     "hi": "काम पर तनाव संभालना",
-    "sw": "Kudhibiti msongo kazini",
     "de": "Stress am Arbeitsplatz bewältigen",
     "fr": "Gérer le stress au travail"
    }
@@ -736,11 +660,9 @@
     4
    ],
    "translations": {
-    "es": "¿Mejores fuentes de proteína para vegetarianos?",
     "zh": "素食者最好的蛋白质来源？",
     "he": "מהם מקורות החלבון הטובים ביותר לצמחונים?",
     "hi": "शाकाहारियों के लिए सबसे अच्छे प्रोटीन स्रोत?",
-    "sw": "Vyanzo bora vya protini kwa walaji mboga?",
     "de": "Beste Proteinquellen für Vegetarier?",
     "fr": "Meilleures sources de protéines pour les végétariens ?"
    }
@@ -753,11 +675,9 @@
     4
    ],
    "translations": {
-    "es": "¿Es seguro el ayuno intermitente?",
     "zh": "间歇性禁食安全吗？",
     "he": "האם צום לסירוגין בטוח?",
     "hi": "क्या रुक-रुक कर उपवास सुरक्षित है?",
-    "sw": "Je, kufunga kwa vipindi ni salama?",
     "de": "Ist Intervallfasten sicher?",
     "fr": "Le jeûne intermittent est-il sûr ?"
    }
@@ -774,11 +694,9 @@
     10
    ],
    "translations": {
-    "es": "Dolor de rodilla después de correr",
     "zh": "跑步后膝盖疼痛",
     "he": "כאבי ברך אחרי ריצה",
     "hi": "दौड़ने के बाद घुटने में दर्द",
-    "sw": "Maumivu ya goti baada ya kukimbia",
     "de": "Knieschmerzen nach dem Laufen",
     "fr": "Douleur au genou après la course"
    }
@@ -792,11 +710,9 @@
     5
    ],
    "translations": {
-    "es": "No puedo dormirme antes de las 2am",
     "zh": "凌晨 2am 前睡不着",
     "he": "לא מצליח להירדם לפני 2am",
     "hi": "2am से पहले नींद नहीं आती",
-    "sw": "Siwezi kulala kabla ya 2am",
     "de": "Ich kann vor 2am nicht einschlafen",
     "fr": "Impossible de m'endormir avant 2am"
    }
@@ -810,11 +726,9 @@
     10
    ],
    "translations": {
-    "es": "Me duele la rodilla después de cada entrenamiento y mi sueño es un desastre",
     "zh": "我每次锻炼后膝盖都疼，而且睡眠一团糟",
     "he": "כואבת לי הברך אחרי כל אימון והשינה שלי הרוסה",
     "hi": "हर वर्कआउट के बाद मेरा घुटना दुखता है और मेरी नींद बिगड़ी हुई है",
-    "sw": "Goti langu linauma baada ya kila mazoezi na usingizi wangu umeharibika",
     "de": "Mein Knie schmerzt nach jedem Workout und mein Schlaf ist ein Chaos",
     "fr": "Mon genou me fait mal après chaque entraînement et mon sommeil est un désastre"
    }
@@ -827,11 +741,9 @@
     5
    ],
    "translations": {
-    "es": "¿El estrés arruina el sueño?",
     "zh": "压力会毁掉睡眠吗？",
     "he": "האם לחץ הורס את השינה?",
     "hi": "क्या तनाव नींद को बिगाड़ता है?",
-    "sw": "Je, msongo huharibu usingizi?",
     "de": "Ruiniert Stress den Schlaf?",
     "fr": "Le stress ruine-t-il le sommeil ?"
    }
@@ -844,11 +756,9 @@
     5
    ],
    "translations": {
-    "es": "Cuánta proteína necesito",
     "zh": "我需要多少蛋白质",
     "he": "כמה חלבון אני צריך",
     "hi": "मुझे कितना प्रोटीन चाहिए",
-    "sw": "Nahitaji protini kiasi gani",
     "de": "Wie viel Protein brauche ich",
     "fr": "De combien de protéines ai-je besoin"
    }
@@ -861,11 +771,9 @@
     5
    ],
    "translations": {
-    "es": "¿Una siesta corta sirve para la deuda de sueño?",
     "zh": "小睡对睡眠债有帮助吗？",
     "he": "האם תנומה קצרה עוזרת לחוב שינה?",
     "hi": "क्या छोटी झपकी नींद के कर्ज़ के लिए अच्छी है?",
-    "sw": "Je, usingizi mfupi husaidia deni la usingizi?",
     "de": "Ist ein kurzes Nickerchen gut gegen Schlafschuld?",
     "fr": "Une courte sieste est-elle bonne pour la dette de sommeil ?"
    }
@@ -879,11 +787,9 @@
     5
    ],
    "translations": {
-    "es": "proteína",
     "zh": "蛋白质",
     "he": "חלבון",
     "hi": "प्रोटीन",
-    "sw": "protini",
     "de": "Protein",
     "fr": "protéine"
    }
@@ -897,11 +803,9 @@
     10
    ],
    "translations": {
-    "es": "entrenamiento",
     "zh": "锻炼",
     "he": "אימון",
     "hi": "वर्कआउट",
-    "sw": "mazoezi",
     "de": "Workout",
     "fr": "entraînement"
    }
@@ -915,11 +819,9 @@
     10
    ],
    "translations": {
-    "es": "rodilla",
     "zh": "膝盖",
     "he": "ברך",
     "hi": "घुटना",
-    "sw": "goti",
     "de": "Knie",
     "fr": "genou"
    }
@@ -933,11 +835,9 @@
     10
    ],
    "translations": {
-    "es": "sueño",
     "zh": "睡眠",
     "he": "שינה",
     "hi": "नींद",
-    "sw": "usingizi",
     "de": "Schlaf",
     "fr": "sommeil"
    }
@@ -950,11 +850,9 @@
     5
    ],
    "translations": {
-    "es": "estrés",
     "zh": "压力",
     "he": "לחץ",
     "hi": "तनाव",
-    "sw": "msongo",
     "de": "Stress",
     "fr": "stress"
    }
@@ -967,11 +865,9 @@
     5
    ],
    "translations": {
-    "es": "siesta",
     "zh": "小睡",
     "he": "תנומה",
     "hi": "झपकी",
-    "sw": "usingizi mfupi",
     "de": "Nickerchen",
     "fr": "sieste"
    }
@@ -984,11 +880,9 @@
     2
    ],
    "translations": {
-    "es": "¡Buenos consejos, gracias!",
     "zh": "很棒的建议，谢谢！",
     "he": "טיפים מעולים, תודה!",
     "hi": "बढ़िया सुझाव, धन्यवाद!",
-    "sw": "Vidokezo vizuri, asante!",
     "de": "Tolle Tipps, danke!",
     "fr": "Super conseils, merci !"
    }
@@ -1002,11 +896,9 @@
     7
    ],
    "translations": {
-    "es": "Prueba con el rodillo de espuma",
     "zh": "试试泡沫轴放松",
     "he": "נסה גלגלת קצף",
     "hi": "फोम रोलिंग आज़माएं",
-    "sw": "Jaribu kujikanda kwa roli ya povu",
     "de": "Probier Faszienrollen",
     "fr": "Essaie le rouleau de massage"
    }
@@ -1019,11 +911,9 @@
     8
    ],
    "translations": {
-    "es": "A mí me pasa igual",
     "zh": "我也是",
     "he": "גם אצלי",
     "hi": "मेरे साथ भी यही है",
-    "sw": "Mimi pia",
     "de": "Bei mir auch",
     "fr": "Pareil pour moi"
    }

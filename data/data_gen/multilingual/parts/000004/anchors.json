@@ -8,11 +8,9 @@
     1
    ],
    "translations": {
-    "es": "Visualización de datos",
     "zh": "数据可视化",
     "he": "הדמיית נתונים",
     "hi": "डेटा विज़ुअलाइज़ेशन",
-    "sw": "Taswira ya Data",
     "de": "Datenvisualisierung",
     "fr": "Visualisation des données"
    }
@@ -25,11 +23,9 @@
     1
    ],
    "translations": {
-    "es": "Predicción de partidos",
     "zh": "比赛预测",
     "he": "חיזוי משחקים",
     "hi": "मैच भविष्यवाणी",
-    "sw": "Utabiri wa Mechi",
     "de": "Spielprognose",
     "fr": "Prédiction de matchs"
    }
@@ -42,11 +38,9 @@
     1
    ],
    "translations": {
-    "es": "Buscar",
     "zh": "搜索",
     "he": "חיפוש",
     "hi": "खोज",
-    "sw": "Tafuta",
     "de": "Suche",
     "fr": "Recherche"
    }
@@ -61,11 +55,9 @@
     10
    ],
    "translations": {
-    "es": "Clasificación de equipos",
     "zh": "球队排名",
     "he": "דירוג קבוצות",
     "hi": "टीम रैंकिंग",
-    "sw": "Viwango vya Timu",
     "de": "Teamrangliste",
     "fr": "Classement des équipes"
    }
@@ -78,11 +70,9 @@
     1
    ],
    "translations": {
-    "es": "Rendimiento de jugadores",
     "zh": "球员表现",
     "he": "ביצועי שחקנים",
     "hi": "खिलाड़ी प्रदर्शन",
-    "sw": "Utendaji wa Wachezaji",
     "de": "Spielerleistung",
     "fr": "Performance des joueurs"
    }
@@ -96,11 +86,9 @@
     4
    ],
    "translations": {
-    "es": "Recomendaciones de apuestas",
     "zh": "投注推荐",
     "he": "המלצות הימורים",
     "hi": "सट्टेबाज़ी सिफ़ारिशें",
-    "sw": "Mapendekezo ya Kubeti",
     "de": "Wettempfehlungen",
     "fr": "Recommandations de paris"
    }
@@ -118,11 +106,9 @@
     10
    ],
    "translations": {
-    "es": "Tablero de cuotas",
     "zh": "赔率板",
     "he": "לוח יחסי הימור",
     "hi": "ऑड्स बोर्ड",
-    "sw": "Ubao wa Odds",
     "de": "Quotenboard",
     "fr": "Tableau des cotes"
    }
@@ -137,11 +123,9 @@
     5
    ],
    "translations": {
-    "es": "Probabilidad implícita de victoria",
     "zh": "隐含胜率",
     "he": "הסתברות ניצחון גלומה",
     "hi": "निहित जीत संभावना",
-    "sw": "Uwezekano wa ushindi unaodokezwa",
     "de": "implizite Siegwahrscheinlichkeit",
     "fr": "probabilité de victoire implicite"
    }
@@ -160,11 +144,9 @@
     9
    ],
    "translations": {
-    "es": "Mejor precio",
     "zh": "最佳赔率",
     "he": "המחיר הטוב ביותר",
     "hi": "सर्वश्रेष्ठ भाव",
-    "sw": "Bei bora",
     "de": "Bestpreis",
     "fr": "meilleur prix"
    }
@@ -178,11 +160,9 @@
     7
    ],
    "translations": {
-    "es": "Viernes",
     "zh": "周五",
     "he": "שישי",
     "hi": "शुक्रवार",
-    "sw": "Ijumaa",
     "de": "Freitag",
     "fr": "vendredi"
    }
@@ -196,11 +176,9 @@
     7
    ],
    "translations": {
-    "es": "Domingo",
     "zh": "周日",
     "he": "ראשון",
     "hi": "रविवार",
-    "sw": "Jumapili",
     "de": "Sonntag",
     "fr": "dimanche"
    }
@@ -215,11 +193,9 @@
     5
    ],
    "translations": {
-    "es": "Boleta de apuestas",
     "zh": "投注单",
     "he": "טופס הימור",
     "hi": "बेट स्लिप",
-    "sw": "Slipu ya Kubeti",
     "de": "Wettschein",
     "fr": "coupon de pari"
    }
@@ -234,11 +210,9 @@
     9
    ],
    "translations": {
-    "es": "Importe apostado",
     "zh": "投注金额",
     "he": "סכום הימור",
     "hi": "दांव राशि",
-    "sw": "Kiasi cha dau",
     "de": "Einsatz",
     "fr": "mise"
    }
@@ -253,11 +227,9 @@
     10
    ],
    "translations": {
-    "es": "Agregar a la boleta",
     "zh": "加入投注单",
     "he": "הוספה לטופס",
     "hi": "स्लिप में जोड़ें",
-    "sw": "Ongeza kwenye slipu",
     "de": "Zum Wettschein hinzufügen",
     "fr": "Ajouter au coupon"
    }
@@ -271,11 +243,9 @@
     5
    ],
    "translations": {
-    "es": "Pago",
     "zh": "派彩",
     "he": "תשלום",
     "hi": "भुगतान",
-    "sw": "Malipo",
     "de": "Auszahlung",
     "fr": "gain"
    }
@@ -290,11 +260,9 @@
     10
    ],
    "translations": {
-    "es": "Ganancia",
     "zh": "盈利",
     "he": "רווח",
     "hi": "लाभ",
-    "sw": "Faida",
     "de": "Gewinn",
     "fr": "bénéfice"
    }
@@ -308,11 +276,9 @@
     4
    ],
    "translations": {
-    "es": "Cuota combinada",
     "zh": "综合赔率",
     "he": "יחס משולב",
     "hi": "संयुक्त ऑड्स",
-    "sw": "Odds za pamoja",
     "de": "Gesamtquote",
     "fr": "cote combinée"
    }
@@ -328,11 +294,9 @@
     10
    ],
    "translations": {
-    "es": "Mejores apuestas",
     "zh": "最佳投注",
     "he": "ההימורים הטובים ביותר",
     "hi": "सर्वश्रेष्ठ दांव",
-    "sw": "Beti Bora",
     "de": "Beste Wetten",
     "fr": "Meilleurs paris"
    }
@@ -345,11 +309,9 @@
     4
    ],
    "translations": {
-    "es": "Ventaja mínima",
     "zh": "最小优势",
     "he": "יתרון מינימלי",
     "hi": "न्यूनतम बढ़त",
-    "sw": "Faida ya thamani ya chini",
     "de": "Mindestvorteil",
     "fr": "avantage minimum"
    }
@@ -365,11 +327,9 @@
     10
    ],
    "translations": {
-    "es": "Ventaja",
     "zh": "优势",
     "he": "יתרון",
     "hi": "बढ़त",
-    "sw": "Faida ya thamani",
     "de": "Vorteil",
     "fr": "avantage"
    }
@@ -382,11 +342,9 @@
     8
    ],
    "translations": {
-    "es": "Ventaja objetivo",
     "zh": "目标优势",
     "he": "יתרון יעד",
     "hi": "लक्ष्य बढ़त",
-    "sw": "Lengo la faida ya thamani",
     "de": "Zielvorteil",
     "fr": "avantage cible"
    }
@@ -402,11 +360,9 @@
     10
    ],
    "translations": {
-    "es": "Mis boletos",
     "zh": "我的注单",
     "he": "הכרטיסים שלי",
     "hi": "मेरे टिकट",
-    "sw": "Tiketi Zangu",
     "de": "Meine Tickets",
     "fr": "Mes tickets"
    }
@@ -420,11 +376,9 @@
     7
    ],
    "translations": {
-    "es": "Banca",
     "zh": "本金",
     "he": "קופה",
     "hi": "बैंकरोल",
-    "sw": "Mtaji",
     "de": "Bankroll",
     "fr": "bankroll"
    }
@@ -439,11 +393,9 @@
     9
    ],
    "translations": {
-    "es": "Ganado",
     "zh": "已赢",
     "he": "זכה",
     "hi": "जीता",
-    "sw": "Imeshinda",
     "de": "Gewonnen",
     "fr": "Gagné"
    }
@@ -457,11 +409,9 @@
     9
    ],
    "translations": {
-    "es": "Perdido",
     "zh": "已输",
     "he": "הפסיד",
     "hi": "हारा",
-    "sw": "Imepoteza",
     "de": "Verloren",
     "fr": "Perdu"
    }
@@ -476,11 +426,9 @@
     10
    ],
    "translations": {
-    "es": "Pendiente",
     "zh": "待定",
     "he": "ממתין",
     "hi": "लंबित",
-    "sw": "Inasubiri",
     "de": "ausstehend",
     "fr": "en attente"
    }
@@ -493,11 +441,9 @@
     5
    ],
    "translations": {
-    "es": "Colocar boleto",
     "zh": "提交注单",
     "he": "הנחת כרטיס",
     "hi": "टिकट लगाएँ",
-    "sw": "Weka tiketi",
     "de": "Ticket platzieren",
     "fr": "Placer le ticket"
    }
@@ -510,11 +456,9 @@
     5
    ],
    "translations": {
-    "es": "Pantalla de revisión",
     "zh": "复核页面",
     "he": "מסך סקירה",
     "hi": "समीक्षा स्क्रीन",
-    "sw": "Skrini ya mapitio",
     "de": "Prüfungsansicht",
     "fr": "écran de vérification"
    }
@@ -528,11 +472,9 @@
     8
    ],
    "translations": {
-    "es": "Panel de ajustes",
     "zh": "调整面板",
     "he": "לוח התאמות",
     "hi": "समायोजन पैनल",
-    "sw": "Paneli ya Marekebisho",
     "de": "Anpassungspanel",
     "fr": "panneau d'ajustements"
    }
@@ -546,11 +488,9 @@
     8
    ],
    "translations": {
-    "es": "Jugador estrella ausente",
     "zh": "主力球员缺阵",
     "he": "שחקן מפתח נעדר",
     "hi": "स्टार खिलाड़ी बाहर",
-    "sw": "Mchezaji nyota hayupo",
     "de": "Starspieler fällt aus",
     "fr": "joueur vedette absent"
    }
@@ -565,11 +505,9 @@
     8
    ],
    "translations": {
-    "es": "Partidos consecutivos",
     "zh": "背靠背",
     "he": "משחקים רצופים",
     "hi": "बैक-टू-बैक",
-    "sw": "Mechi mfululizo",
     "de": "Back-to-Back",
     "fr": "back-to-back"
    }
@@ -582,11 +520,9 @@
     6
    ],
    "translations": {
-    "es": "Restablecer",
     "zh": "重置",
     "he": "איפוס",
     "hi": "रीसेट",
-    "sw": "Weka upya",
     "de": "Zurücksetzen",
     "fr": "Réinitialiser"
    }
@@ -600,11 +536,9 @@
     8
    ],
    "translations": {
-    "es": "aj.",
     "zh": "调",
     "he": "מות'",
     "hi": "समा.",
-    "sw": "marek.",
     "de": "ang.",
     "fr": "aj."
    }
@@ -617,11 +551,9 @@
     6
    ],
    "translations": {
-    "es": "Probabilidad de victoria",
     "zh": "胜率",
     "he": "הסתברות ניצחון",
     "hi": "जीत संभावना",
-    "sw": "Uwezekano wa ushindi",
     "de": "Siegwahrscheinlichkeit",
     "fr": "probabilité de victoire"
    }
@@ -635,11 +567,9 @@
     10
    ],
    "translations": {
-    "es": "Centro de investigación",
     "zh": "对阵研究中心",
     "he": "מרכז מחקר",
     "hi": "रिसर्च सेंटर",
-    "sw": "Kituo cha Utafiti",
     "de": "Recherchezentrum",
     "fr": "centre de recherche"
    }
@@ -652,11 +582,9 @@
     7
    ],
    "translations": {
-    "es": "Investigar",
     "zh": "研究",
     "he": "מחקר",
     "hi": "रिसर्च",
-    "sw": "Utafiti",
     "de": "Recherche",
     "fr": "Recherche"
    }
@@ -669,11 +597,9 @@
     7
    ],
    "translations": {
-    "es": "Directo",
     "zh": "胜负",
     "he": "ניצחון ישיר",
     "hi": "सीधा",
-    "sw": "Ushindi wa moja kwa moja",
     "de": "Direkt",
     "fr": "Direct"
    }
@@ -686,11 +612,9 @@
     7
    ],
    "translations": {
-    "es": "Contra el hándicap",
     "zh": "让分战绩",
     "he": "מול הפער",
     "hi": "स्प्रेड के विरुद्ध",
-    "sw": "Dhidi ya spredi",
     "de": "Gegen das Handicap",
     "fr": "contre le handicap"
    }
@@ -703,11 +627,9 @@
     7
    ],
    "translations": {
-    "es": "Más/Menos",
     "zh": "大小分",
     "he": "מעל/מתחת",
     "hi": "ओवर/अंडर",
-    "sw": "Juu/Chini",
     "de": "Über/Unter",
     "fr": "Plus/Moins"
    }
@@ -720,11 +642,9 @@
     7
    ],
    "translations": {
-    "es": "Empate",
     "zh": "走盘",
     "he": "תיקו",
     "hi": "पुश",
-    "sw": "Sare",
     "de": "Unentschieden",
     "fr": "Égalité"
    }
@@ -737,11 +657,9 @@
     7
    ],
    "translations": {
-    "es": "Hándicap",
     "zh": "让分",
     "he": "פער",
     "hi": "स्प्रेड",
-    "sw": "Spredi",
     "de": "Handicap",
     "fr": "handicap"
    }
@@ -754,11 +672,9 @@
     7
    ],
    "translations": {
-    "es": "No hay enfrentamientos registrados",
     "zh": "暂无交手记录",
     "he": "אין מפגשים בתיק",
     "hi": "फ़ाइल में मुकाबले दर्ज नहीं हैं",
-    "sw": "Hakuna mikutano iliyorekodiwa",
     "de": "Keine Duelle erfasst",
     "fr": "Pas de confrontations enregistrées"
    }
@@ -771,11 +687,9 @@
     7
    ],
    "translations": {
-    "es": "Resumen",
     "zh": "汇总栏",
     "he": "רצועת סיכום",
     "hi": "सारांश पट्टी",
-    "sw": "Ukanda wa muhtasari",
     "de": "Zusammenfassung",
     "fr": "Résumé"
    }
@@ -788,11 +702,9 @@
     7
    ],
    "translations": {
-    "es": "Enfrentamientos",
     "zh": "交手记录",
     "he": "מפגשים",
     "hi": "मुकाबले",
-    "sw": "Mikutano",
     "de": "Duelle",
     "fr": "Confrontations"
    }
@@ -805,11 +717,9 @@
     8
    ],
    "translations": {
-    "es": "Alertas",
     "zh": "提醒",
     "he": "התראות",
     "hi": "अलर्ट",
-    "sw": "Arifa",
     "de": "Warnungen",
     "fr": "Alertes"
    }
@@ -822,11 +732,9 @@
     8
    ],
    "translations": {
-    "es": "Vigilar",
     "zh": "关注",
     "he": "מעקב",
     "hi": "निगरानी",
-    "sw": "Fuatilia",
     "de": "Beobachten",
     "fr": "Surveiller"
    }
@@ -839,11 +747,9 @@
     8
    ],
    "translations": {
-    "es": "Vigilado",
     "zh": "已关注",
     "he": "במעקב",
     "hi": "निगरानी में",
-    "sw": "Inafuatiliwa",
     "de": "Beobachtet",
     "fr": "Surveillé"
    }
@@ -856,11 +762,9 @@
     8
    ],
    "translations": {
-    "es": "Activada",
     "zh": "已触发",
     "he": "הופעלה",
     "hi": "सक्रिय",
-    "sw": "Imeamilishwa",
     "de": "Ausgelöst",
     "fr": "Déclenchée"
    }
@@ -873,11 +777,9 @@
     8
    ],
    "translations": {
-    "es": "Armada",
     "zh": "待触发",
     "he": "דרוכה",
     "hi": "तैयार",
-    "sw": "Imeandaliwa",
     "de": "Scharf",
     "fr": "Armée"
    }
@@ -891,11 +793,9 @@
     10
    ],
    "translations": {
-    "es": "Rendimiento",
     "zh": "业绩",
     "he": "ביצועים",
     "hi": "प्रदर्शन",
-    "sw": "Utendaji",
     "de": "Leistung",
     "fr": "Performance"
    }
@@ -909,11 +809,9 @@
     10
    ],
    "translations": {
-    "es": "Ganancia neta",
     "zh": "净盈利",
     "he": "רווח נטו",
     "hi": "शुद्ध लाभ",
-    "sw": "Faida halisi",
     "de": "Nettogewinn",
     "fr": "bénéfice net"
    }
@@ -926,11 +824,9 @@
     9
    ],
    "translations": {
-    "es": "ROI",
     "zh": "投资回报率",
     "he": "ROI",
     "hi": "ROI",
-    "sw": "ROI",
     "de": "ROI",
     "fr": "ROI"
    }
@@ -943,11 +839,9 @@
     9
    ],
    "translations": {
-    "es": "Simples",
     "zh": "单注",
     "he": "בודדים",
     "hi": "सिंगल",
-    "sw": "Beti za pekee",
     "de": "Einzelwetten",
     "fr": "paris simples"
    }
@@ -960,11 +854,9 @@
     9
    ],
    "translations": {
-    "es": "Combinadas",
     "zh": "串关",
     "he": "משולבים",
     "hi": "पार्ले",
-    "sw": "Beti za mchanganyiko",
     "de": "Kombiwetten",
     "fr": "paris combinés"
    }
@@ -977,11 +869,9 @@
     9
    ],
    "translations": {
-    "es": "Total apostado",
     "zh": "总投注额",
     "he": "סך ההימורים",
     "hi": "कुल दांव",
-    "sw": "Jumla iliyowekwa",
     "de": "Gesamteinsatz",
     "fr": "total misé"
    }
@@ -995,11 +885,9 @@
     10
    ],
    "translations": {
-    "es": "Registro de boletos liquidados",
     "zh": "已结算注单明细",
     "he": "יומן כרטיסים שנסגרו",
     "hi": "निपटाए गए टिकट बहीखाता",
-    "sw": "Daftari la tiketi zilizotatuliwa",
     "de": "Journal der abgerechneten Tickets",
     "fr": "registre des tickets réglés"
    }
@@ -1013,11 +901,9 @@
     9
    ],
    "translations": {
-    "es": "Récord",
     "zh": "战绩",
     "he": "מאזן",
     "hi": "रिकॉर्ड",
-    "sw": "Rekodi",
     "de": "Bilanz",
     "fr": "bilan"
    }

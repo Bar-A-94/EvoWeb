@@ -3,8 +3,8 @@
 The scripts behind Section 5.1 of the paper: does the dependency DAG make requests harder,
 and which checks carry that difficulty. They read the released traces
 (`examples_artifacts/traces.zip`, the paper's runs of the four Anthropic models, unpacked to
-`examples_artifacts/traces/` on first use; override with `EVOWEB_TRACES`) and the benchmark
-`data/evoweb_benchmark.jsonl`, take their runs from `evoweb/arms.py` (`DAG_TABLE`: the first two
+`examples_artifacts/traces/` on first use; override with `EVOWEB_TRACES`) and
+[the benchmark](https://huggingface.co/datasets/TD-Labs/EvoWeb) from Hugging Face, take their runs from `evoweb/arms.py` (`DAG_TABLE`: the first two
 runs of each of the four models) and write into `artifacts/` (override with `EVOWEB_ARTIFACTS`).
 Four ladders of Sonnet 4.6's two runs were re-run after an infrastructure error once Table 4
 had been made, so the Sonnet 4.6 row these scripts print differs slightly from the paper's

@@ -10,20 +10,16 @@ Usage: python3 assemble.py [--enui] [--out-dir DIR] [lang ...]
 """
 
 import copy
-import hashlib
 import json
 import subprocess
 import sys
-from datetime import date
 from pathlib import Path
 
 ML = Path(__file__).resolve().parent
 _PKG = ML.parents[2]
 if str(_PKG) not in sys.path:
     sys.path.insert(0, str(_PKG))
-from evoweb.paths import BENCHMARK, MULTILINGUAL  # noqa: E402
-
-LANGS = ["es", "zh", "he", "hi", "sw", "de", "fr"]
+from evoweb.paths import BENCHMARK, LANGS, MULTILINGUAL, ensure_data  # noqa: E402
 
 
 def apply(row: dict, part: dict) -> dict:
@@ -45,9 +41,9 @@ def apply(row: dict, part: dict) -> dict:
 if __name__ == "__main__":
     argv = sys.argv[1:]
     # --enui: the English-UI variant (translated instructions, EN anchors, untouched
-    # tasks) -> evoweb_benchmark_<lang>.jsonl + manifest_enui.json
+    # tasks) -> evoweb_benchmark_<lang>.jsonl
     enui = True  # only the English-UI variant ships; --enui is accepted and implied
-    # --out-dir <dir>: write the jsonl files and the manifest there instead of data/multilingual / this directory
+    # --out-dir <dir>: write the jsonl files there instead of data/multilingual
     # (so a reproduction check never touches the committed copies).
     out_dir = Path(argv[argv.index("--out-dir") + 1]) if "--out-dir" in argv else None
     if out_dir is not None:
@@ -55,30 +51,19 @@ if __name__ == "__main__":
         out_dir.mkdir(parents=True, exist_ok=True)
     langs = [a for a in argv if a != "--enui"] or LANGS
     suffix = "_enui" if enui else ""
+    ensure_data(BENCHMARK)
     src = BENCHMARK
-    rows = [json.loads(line) for line in src.open()]
+    rows = [json.loads(line) for line in src.open(encoding="utf-8")]
     check = [sys.executable, str(ML / "validate_parts.py")] + (["--enui"] if enui else [])
     if subprocess.run(check).returncode:
         sys.exit("validate_parts.py failed; not assembling")
-    manifest = {
-        "parent": src.name,
-        "parent_sha256": hashlib.sha256(src.read_bytes()).hexdigest(),
-        "date": date.today().isoformat(),
-        "translator": "claude-opus (workflow evoweb-translate" + ("-enui)" if enui else ")"),
-        "files": {},
-    }
     for lang in langs:
         out = (out_dir or MULTILINGUAL) / f"evoweb_benchmark_{lang}.jsonl"
         lines = []
         for row in rows:
-            part = json.loads((ML / "parts" / row["id"] / f"{lang}{suffix}.json").read_text())
+            part = json.loads(
+                (ML / "parts" / row["id"] / f"{lang}{suffix}.json").read_text(encoding="utf-8")
+            )
             lines.append(json.dumps(apply(row, part), ensure_ascii=False))
-        out.write_text("\n".join(lines) + "\n")
-        manifest["files"][out.name] = {
-            "sha256": hashlib.sha256(out.read_bytes()).hexdigest(),
-            "rows": len(lines),
-        }
+        out.write_text("\n".join(lines) + "\n", encoding="utf-8")
         print("wrote", out)
-    mpath = (out_dir or ML) / f"manifest{suffix}.json"
-    mpath.write_text(json.dumps(manifest, indent=1) + "\n")
-    print("wrote", mpath)

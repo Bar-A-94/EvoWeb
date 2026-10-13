@@ -6,10 +6,17 @@ line position (`evoweb/scoring.py:load_expected_tasks`). Never re-sort a dataset
 
 ## Files
 
+`evoweb_benchmark.jsonl` and `multilingual/` are not committed: they are downloaded, the latest
+version each time, from [Hugging Face](https://huggingface.co/datasets/TD-Labs/EvoWeb) by `evoweb/paths.py:ensure_data`
+(scoring, the tests and every harness run call it; `python3 -m evoweb.paths` does it by hand).
+A local copy is used when the download fails. `harness/run_local.sh` pins one revision for the whole
+run (`EVOWEB_HF_REVISION`, default the latest commit at launch); `EVOWEB_NO_DOWNLOAD=1` keeps local
+files (e.g. your own `assemble.py` output) instead of re-downloading them.
+
 | file | rows | what it is | paper element |
 |---|---|---|---|
-| **`evoweb_benchmark.jsonl`** | 32 | **the benchmark**: 32 apps, a build request and 9 follow-up requests each, with the judge's checks | Tables 2 and 4, Figures 3 and 4, App. F |
-| `multilingual/evoweb_benchmark_<lang>.jsonl` | 32 | the benchmark with the user's requests translated into French, German, Chinese, Hindi, Hebrew, Spanish or Swahili (`fr de zh hi he es sw`); the app and the judge's checks stay in English | Table 3 |
+| **[`evoweb_benchmark.jsonl`](https://huggingface.co/datasets/TD-Labs/EvoWeb)** | 32 | **the benchmark**: 32 apps, a build request and 9 follow-up requests each, with the judge's checks | Tables 2 and 4, Figures 3 and 4, App. F |
+| [`multilingual/evoweb_benchmark_<lang>.jsonl`](https://huggingface.co/datasets/TD-Labs/EvoWeb) | 32 | the benchmark with the user's requests translated into French, German, Chinese, Hindi or Hebrew (`fr de zh hi he`); the app and the judge's checks stay in English | Table 3 |
 | `ablation_no_grounding.jsonl` | 30 | the ablation: 30 of the benchmark apps with follow-up requests written without the real-website corpus | App. C.1 |
 | `legacy_webgen_bench_apps.jsonl` | 101 | the WebGen-Bench base apps: build prompt and judge tasks, no follow-ups | source of every first request |
 | `similar_websites.json` | 101 entries | the grounding corpus: per app (`app_idx`), real similar websites with `name`, `url`, `what_it_does` and `interesting_features` | input to the request generator; App. C.1 |
@@ -33,6 +40,7 @@ ui_instruct         [ {task, expected_result, task_category{primary_category, su
                     the judge's checks for the first request (4-9 per app)
 follow_ups          [ 9 x {                                   request k = follow_ups[k-2], k = 2..10
     archetype       derived-state | multi-surface-workflow | interactive-tool | design-restyle
+    difficulty      "hard" on every follow-up; unused
     instruction     the user's request
     source_website, source_feature      the real product feature the request was grounded in
                     (the no-grounding set carries `feature_rationale` instead)
@@ -42,6 +50,7 @@ dependency_graph    {nodes: [{id: "T1".."T10", label, archetype}],
                      edges: [{from, to, what}]}        what = the concrete thing `to` relies on
 global_rules        [ 3 x {rule, introduced_in_turn} ]  app-wide rules the requests introduce
 pinned_seed         {entity, introduced_in_turn (2 or 3), records_gist, [records]}
+                    records, when present, is a string (JSON-encoded where it is a list)
                     the fixed demo data every exact-value check is written against
 target_app_summary  prose description of the app the 10 requests build towards
 ```

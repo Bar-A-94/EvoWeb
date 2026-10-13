@@ -2,7 +2,7 @@
 
 The follow-up requests and their checks were written by LLM agents running a **Claude Code
 Workflow** (the `.js` scripts), then audited and assembled by small deterministic Python scripts.
-The datasets themselves are committed in `data/`. A generation run writes one part file per app
+The datasets themselves are in `data/` (the benchmark is downloaded from Hugging Face). A generation run writes one part file per app
 into a parts directory under `data/` (not committed: the assembled dataset carries every field of
 every part), then the deterministic steps audit and assemble them.
 

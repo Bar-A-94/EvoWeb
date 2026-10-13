@@ -1,7 +1,7 @@
 # Grounding ablation: blind realism judge (paper Table 7)
 
 Does an LLM judge prefer follow-up requests written from real websites over ones written without
-them? Arms: `data/evoweb_benchmark.jsonl` (grounded) vs `data/ablation_no_grounding.jsonl`
+them? Arms: [the benchmark](https://huggingface.co/datasets/TD-Labs/EvoWeb) (grounded) vs `data/ablation_no_grounding.jsonl`
 (no grounding), the 30 apps in both, same author model.
 
 ```text

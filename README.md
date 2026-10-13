@@ -109,7 +109,8 @@ models): `python3 -m evoweb.compare_to_released "Haiku 4.5" runs/haiku`.
 
 ```
 harness/        the agent (OpenHands) + judge (WebVoyager) runner, its Dockerfile and launchers
-data/           the benchmark (evoweb_benchmark.jsonl), its translations (multilingual/), the no-grounding
+data/           the benchmark (evoweb_benchmark.jsonl) and its translations (multilingual/), both downloaded
+                from Hugging Face on use (evoweb/paths.py), the no-grounding
                 ablation set, the WebGen-Bench base apps and data_gen/ with the scripts that
                 generated them; data/README.md documents the format
 evoweb/         scoring (scoring.py holds the metric definitions, metrics.py the paper's aggregates) and the

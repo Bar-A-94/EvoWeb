@@ -13,11 +13,9 @@
         9
       ],
       "translations": {
-        "es": "Registro de envíos",
         "zh": "发送记录",
         "he": "יומן שליחה",
         "hi": "डिलीवरी लॉग",
-        "sw": "Kumbukumbu za Utumaji",
         "de": "Zustellungsprotokoll",
         "fr": "Journal d'envoi"
       }
@@ -32,11 +30,9 @@
         9
       ],
       "translations": {
-        "es": "Lista de bloqueo",
         "zh": "屏蔽名单",
         "he": "רשימת חסימה",
         "hi": "ब्लॉकलिस्ट",
-        "sw": "Orodha ya Kuzuia",
         "de": "Sperrliste",
         "fr": "Liste de blocage"
       }
@@ -52,11 +48,9 @@
         10
       ],
       "translations": {
-        "es": "Bandeja de salida",
         "zh": "发件箱",
         "he": "תיבת יוצאים",
         "hi": "आउटबॉक्स",
-        "sw": "Kikasha cha Kutuma",
         "de": "Postausgang",
         "fr": "Boîte d'envoi"
       }
@@ -72,11 +66,9 @@
         10
       ],
       "translations": {
-        "es": "Analíticas",
         "zh": "数据分析",
         "he": "אנליטיקה",
         "hi": "एनालिटिक्स",
-        "sw": "Takwimu",
         "de": "Analysen",
         "fr": "Analyses"
       }
@@ -89,11 +81,9 @@
         10
       ],
       "translations": {
-        "es": "Resumen",
         "zh": "摘要",
         "he": "תקציר",
         "hi": "डाइजेस्ट",
-        "sw": "Muhtasari",
         "de": "Zusammenfassung",
         "fr": "Récapitulatif"
       }
@@ -108,11 +98,9 @@
         10
       ],
       "translations": {
-        "es": "Enviar ahora",
         "zh": "立即发送",
         "he": "שלח עכשיו",
         "hi": "अभी भेजें",
-        "sw": "Tuma sasa",
         "de": "Jetzt senden",
         "fr": "Envoyer maintenant"
       }
@@ -130,11 +118,9 @@
         10
       ],
       "translations": {
-        "es": "Entregado",
         "zh": "已送达",
         "he": "נמסר",
         "hi": "डिलीवर्ड",
-        "sw": "Imefikishwa",
         "de": "Zugestellt",
         "fr": "Livré"
       }
@@ -151,11 +137,9 @@
         10
       ],
       "translations": {
-        "es": "Rebotado",
         "zh": "已退回",
         "he": "הוחזר",
         "hi": "बाउंस",
-        "sw": "Imerudishwa",
         "de": "Unzustellbar",
         "fr": "Rejeté"
       }
@@ -172,11 +156,9 @@
         10
       ],
       "translations": {
-        "es": "Fallido",
         "zh": "失败",
         "he": "נכשל",
         "hi": "विफल",
-        "sw": "Imeshindikana",
         "de": "Fehlgeschlagen",
         "fr": "Échoué"
       }
@@ -189,11 +171,9 @@
         9
       ],
       "translations": {
-        "es": "Entregado",
         "zh": "已送达",
         "he": "נמסר",
         "hi": "डिलीवर्ड",
-        "sw": "Imefikishwa",
         "de": "Zugestellt",
         "fr": "Livré"
       }
@@ -206,11 +186,9 @@
         9
       ],
       "translations": {
-        "es": "Rebotado",
         "zh": "已退回",
         "he": "הוחזר",
         "hi": "बाउंस",
-        "sw": "Imerudishwa",
         "de": "Unzustellbar",
         "fr": "Rejeté"
       }
@@ -223,11 +201,9 @@
         9
       ],
       "translations": {
-        "es": "Fallido",
         "zh": "失败",
         "he": "נכשל",
         "hi": "विफल",
-        "sw": "Imeshindikana",
         "de": "Fehlgeschlagen",
         "fr": "Échoué"
       }
@@ -244,11 +220,9 @@
         10
       ],
       "translations": {
-        "es": "tasa de apertura",
         "zh": "打开率",
         "he": "שיעור פתיחה",
         "hi": "ओपन रेट",
-        "sw": "kiwango cha kufunguliwa",
         "de": "Öffnungsrate",
         "fr": "taux d'ouverture"
       }
@@ -261,11 +235,9 @@
         4
       ],
       "translations": {
-        "es": "tasa de rebote",
         "zh": "退回率",
         "he": "שיעור החזרות",
         "hi": "बाउंस रेट",
-        "sw": "kiwango cha kurudishwa",
         "de": "Rückläuferquote",
         "fr": "taux de rejet"
       }
@@ -278,11 +250,9 @@
         4
       ],
       "translations": {
-        "es": "Total de correos",
         "zh": "邮件总数",
         "he": "סך המיילים",
         "hi": "कुल ईमेल",
-        "sw": "Jumla ya barua pepe",
         "de": "Gesamtzahl der E-Mails",
         "fr": "Nombre total d'e-mails"
       }
@@ -296,11 +266,9 @@
         10
       ],
       "translations": {
-        "es": "total de correos",
         "zh": "邮件总数",
         "he": "סך המיילים",
         "hi": "कुल ईमेल",
-        "sw": "jumla ya barua pepe",
         "de": "Gesamtzahl der E-Mails",
         "fr": "nombre total d'e-mails"
       }
@@ -314,11 +282,9 @@
         10
       ],
       "translations": {
-        "es": "Fans de Nova",
         "zh": "Nova 粉丝",
         "he": "אוהדי Nova",
         "hi": "Nova प्रशंसक",
-        "sw": "Mashabiki wa Nova",
         "de": "Nova-Fans",
         "fr": "Fans de Nova"
       }
@@ -331,11 +297,9 @@
         5
       ],
       "translations": {
-        "es": "Revisión trimestral",
         "zh": "季度回顾",
         "he": "סקירה רבעונית",
         "hi": "तिमाही समीक्षा",
-        "sw": "Mapitio ya robo mwaka",
         "de": "Quartalsrückblick",
         "fr": "Bilan trimestriel"
       }
@@ -349,11 +313,9 @@
         9
       ],
       "translations": {
-        "es": "La venta de primavera empieza ya",
         "zh": "春季大促现已开启",
         "he": "מבצע האביב מתחיל עכשיו",
         "hi": "स्प्रिंग सेल अभी शुरू",
-        "sw": "Ofa ya masika inaanza sasa",
         "de": "Frühlingsangebot startet jetzt",
         "fr": "Les soldes de printemps commencent"
       }
@@ -367,11 +329,9 @@
         9
       ],
       "translations": {
-        "es": "La venta termina pronto",
         "zh": "大促即将结束",
         "he": "המבצע נגמר בקרוב",
         "hi": "सेल जल्द खत्म",
-        "sw": "Ofa inaisha hivi karibuni",
         "de": "Angebot endet bald",
         "fr": "Les soldes finissent bientôt"
       }
@@ -384,11 +344,9 @@
         6
       ],
       "translations": {
-        "es": "Para:",
         "zh": "收件人:",
         "he": "אל:",
         "hi": "प्रति:",
-        "sw": "Kwa:",
         "de": "An:",
         "fr": "À :"
       }

@@ -6,11 +6,9 @@
       "kind": "ui_label",
       "turns": [2, 3, 5, 6, 7, 10],
       "translations": {
-        "es": "clasificador de afinidad",
         "zh": "匹配排名器",
         "he": "מדרג התאמה",
         "hi": "फ़िट रैंकर",
-        "sw": "kipanga ulinganifu",
         "de": "Passungs-Ranking",
         "fr": "classement d'affinité"
       }
@@ -21,11 +19,9 @@
       "kind": "ui_label",
       "turns": [2, 3, 5, 10],
       "translations": {
-        "es": "Afinidad",
         "zh": "匹配",
         "he": "התאמה",
         "hi": "फ़िट",
-        "sw": "Ulinganifu",
         "de": "Passung",
         "fr": "Affinité"
       }
@@ -36,11 +32,9 @@
       "kind": "ui_label",
       "turns": [2, 3, 5, 10],
       "translations": {
-        "es": "mejores afinidades",
         "zh": "最佳匹配",
         "he": "התאמות מובילות",
         "hi": "शीर्ष फ़िट",
-        "sw": "zinazolingana zaidi",
         "de": "beste Passungen",
         "fr": "meilleures affinités"
       }
@@ -51,11 +45,9 @@
       "kind": "ui_label",
       "turns": [2, 6, 10],
       "translations": {
-        "es": "estancias",
         "zh": "住宿",
         "he": "שהיות",
         "hi": "ठहराव",
-        "sw": "malazi",
         "de": "Unterkünfte",
         "fr": "séjours"
       }
@@ -66,11 +58,9 @@
       "kind": "ui_label",
       "turns": [2, 3, 5, 6],
       "translations": {
-        "es": "casilla de presupuesto",
         "zh": "预算框",
         "he": "תיבת תקציב",
         "hi": "बजट बॉक्स",
-        "sw": "kisanduku cha bajeti",
         "de": "Budgetfeld",
         "fr": "champ de budget"
       }
@@ -81,11 +71,9 @@
       "kind": "content_text",
       "turns": [2, 10],
       "translations": {
-        "es": "Frente al agua",
         "zh": "海滨",
         "he": "על המים",
         "hi": "वॉटरफ़्रंट",
-        "sw": "Ufukweni",
         "de": "Am Wasser",
         "fr": "Bord de l'eau"
       }
@@ -96,11 +84,9 @@
       "kind": "content_text",
       "turns": [2, 3],
       "translations": {
-        "es": "Admite mascotas",
         "zh": "可携宠物",
         "he": "ידידותי לחיות מחמד",
         "hi": "पालतू-अनुकूल",
-        "sw": "Inaruhusu wanyama",
         "de": "Haustierfreundlich",
         "fr": "Animaux acceptés"
       }
@@ -111,11 +97,9 @@
       "kind": "content_text",
       "turns": [2, 3],
       "translations": {
-        "es": "Económico",
         "zh": "经济实惠",
         "he": "חסכוני",
         "hi": "किफ़ायती",
-        "sw": "Nafuu",
         "de": "Günstig",
         "fr": "Économique"
       }
@@ -126,11 +110,9 @@
       "kind": "content_text",
       "turns": [2],
       "translations": {
-        "es": "Ideal para familias",
         "zh": "适合家庭",
         "he": "ידידותי למשפחות",
         "hi": "परिवार-अनुकूल",
-        "sw": "Inafaa familia",
         "de": "Familienfreundlich",
         "fr": "Idéal en famille"
       }
@@ -141,11 +123,9 @@
       "kind": "ui_label",
       "turns": [3, 4, 6, 7],
       "translations": {
-        "es": "estimador de costo del viaje",
         "zh": "行程费用估算器",
         "he": "מחשבון עלות הטיול",
         "hi": "यात्रा लागत अनुमानक",
-        "sw": "kikokotoo cha gharama za safari",
         "de": "Reisekostenrechner",
         "fr": "estimateur de coût du voyage"
       }
@@ -156,11 +136,9 @@
       "kind": "ui_label",
       "turns": [3, 4, 6, 7, 8],
       "translations": {
-        "es": "estimador",
         "zh": "估算器",
         "he": "מחשבון",
         "hi": "अनुमानक",
-        "sw": "kikokotoo",
         "de": "Kostenrechner",
         "fr": "estimateur"
       }
@@ -171,11 +149,9 @@
       "kind": "ui_label",
       "turns": [3, 4, 10],
       "translations": {
-        "es": "entrada",
         "zh": "入住",
         "he": "כניסה",
         "hi": "चेक-इन",
-        "sw": "kuingia",
         "de": "Anreise",
         "fr": "arrivée"
       }
@@ -186,11 +162,9 @@
       "kind": "ui_label",
       "turns": [3, 4],
       "translations": {
-        "es": "salida",
         "zh": "退房",
         "he": "יציאה",
         "hi": "चेक-आउट",
-        "sw": "kuondoka",
         "de": "Abreise",
         "fr": "départ"
       }
@@ -201,11 +175,9 @@
       "kind": "ui_label",
       "turns": [3, 4, 7, 9],
       "translations": {
-        "es": "tarifa de limpieza",
         "zh": "清洁费",
         "he": "דמי ניקיון",
         "hi": "सफ़ाई शुल्क",
-        "sw": "ada ya usafi",
         "de": "Reinigungsgebühr",
         "fr": "frais de ménage"
       }
@@ -216,11 +188,9 @@
       "kind": "ui_label",
       "turns": [3, 4, 7, 9],
       "translations": {
-        "es": "cargo por servicio",
         "zh": "服务费",
         "he": "דמי שירות",
         "hi": "सेवा शुल्क",
-        "sw": "ada ya huduma",
         "de": "Servicegebühr",
         "fr": "frais de service"
       }
@@ -231,11 +201,9 @@
       "kind": "ui_label",
       "turns": [3, 4, 7],
       "translations": {
-        "es": "descuento por estancia larga",
         "zh": "长住折扣",
         "he": "הנחת שהייה ארוכה",
         "hi": "लंबे प्रवास की छूट",
-        "sw": "punguzo la ukaaji mrefu",
         "de": "Langzeitrabatt",
         "fr": "remise long séjour"
       }
@@ -246,11 +214,9 @@
       "kind": "ui_label",
       "turns": [3, 4, 7],
       "translations": {
-        "es": "subtotal por noche",
         "zh": "每晚小计",
         "he": "סכום ביניים ללילה",
         "hi": "प्रति-रात उप-योग",
-        "sw": "jumla ndogo ya kila usiku",
         "de": "Zwischensumme pro Nacht",
         "fr": "sous-total par nuit"
       }
@@ -261,11 +227,9 @@
       "kind": "ui_label",
       "turns": [8],
       "translations": {
-        "es": "total general",
         "zh": "总计",
         "he": "סך הכול",
         "hi": "कुल योग",
-        "sw": "jumla kuu",
         "de": "Gesamtsumme",
         "fr": "total général"
       }
@@ -276,11 +240,9 @@
       "kind": "ui_label",
       "turns": [4],
       "translations": {
-        "es": "Bandeja del anfitrión",
         "zh": "房东收件箱",
         "he": "תיבת המארח",
         "hi": "होस्ट इनबॉक्स",
-        "sw": "Kikasha cha Mwenyeji",
         "de": "Gastgeber-Posteingang",
         "fr": "Boîte de réception hôte"
       }
@@ -291,11 +253,9 @@
       "kind": "ui_label",
       "turns": [4, 5, 6, 7, 9, 10],
       "translations": {
-        "es": "Bandeja del anfitrión",
         "zh": "房东收件箱",
         "he": "תיבת המארח",
         "hi": "होस्ट इनबॉक्स",
-        "sw": "Kikasha cha Mwenyeji",
         "de": "Gastgeber-Posteingang",
         "fr": "Boîte de réception hôte"
       }
@@ -306,11 +266,9 @@
       "kind": "ui_label",
       "turns": [1, 4, 6],
       "translations": {
-        "es": "registro de reservas",
         "zh": "预订记录",
         "he": "רשומות ההזמנות",
         "hi": "बुकिंग रिकॉर्ड",
-        "sw": "rekodi za uhifadhi",
         "de": "Buchungsübersicht",
         "fr": "historique des réservations"
       }
@@ -321,11 +279,9 @@
       "kind": "ui_label",
       "turns": [4, 5, 6, 7],
       "translations": {
-        "es": "Pendiente",
         "zh": "待处理",
         "he": "ממתין",
         "hi": "लंबित",
-        "sw": "Inasubiri",
         "de": "Ausstehend",
         "fr": "En attente"
       }
@@ -336,11 +292,9 @@
       "kind": "ui_label",
       "turns": [4, 5, 6, 9],
       "translations": {
-        "es": "Confirmada",
         "zh": "已确认",
         "he": "מאושר",
         "hi": "पुष्ट",
-        "sw": "Imethibitishwa",
         "de": "Bestätigt",
         "fr": "Confirmée"
       }
@@ -351,11 +305,9 @@
       "kind": "ui_label",
       "turns": [4, 6],
       "translations": {
-        "es": "Rechazada",
         "zh": "已拒绝",
         "he": "נדחה",
         "hi": "अस्वीकृत",
-        "sw": "Imekataliwa",
         "de": "Abgelehnt",
         "fr": "Refusée"
       }
@@ -366,11 +318,9 @@
       "kind": "ui_label",
       "turns": [4, 6],
       "translations": {
-        "es": "Reserva inmediata",
         "zh": "即时预订",
         "he": "הזמנה מיידית",
         "hi": "तत्काल बुकिंग",
-        "sw": "Hifadhi Papo Hapo",
         "de": "Sofortbuchung",
         "fr": "Réservation instantanée"
       }
@@ -381,11 +331,9 @@
       "kind": "ui_label",
       "turns": [4, 5, 6, 9, 10],
       "translations": {
-        "es": "aprobar",
         "zh": "批准",
         "he": "אישור",
         "hi": "मंज़ूर",
-        "sw": "idhinisha",
         "de": "genehmigen",
         "fr": "approuver"
       }
@@ -396,11 +344,9 @@
       "kind": "ui_label",
       "turns": [4],
       "translations": {
-        "es": "rechazar",
         "zh": "拒绝",
         "he": "דחייה",
         "hi": "अस्वीकार",
-        "sw": "kataa",
         "de": "ablehnen",
         "fr": "refuser"
       }
@@ -411,11 +357,9 @@
       "kind": "ui_label",
       "turns": [5, 6, 8],
       "translations": {
-        "es": "calendario de disponibilidad",
         "zh": "空房日历",
         "he": "לוח זמינות",
         "hi": "उपलब्धता कैलेंडर",
-        "sw": "kalenda ya upatikanaji",
         "de": "Belegungskalender",
         "fr": "calendrier de disponibilité"
       }
@@ -426,11 +370,9 @@
       "kind": "ui_label",
       "turns": [5, 6, 10],
       "translations": {
-        "es": "agosto",
         "zh": "8月",
         "he": "אוגוסט",
         "hi": "अगस्त",
-        "sw": "Agosti",
         "de": "August",
         "fr": "août"
       }
@@ -441,11 +383,9 @@
       "kind": "ui_label",
       "turns": [5, 10],
       "translations": {
-        "es": "septiembre",
         "zh": "9月",
         "he": "ספטמבר",
         "hi": "सितंबर",
-        "sw": "Septemba",
         "de": "September",
         "fr": "septembre"
       }
@@ -456,11 +396,9 @@
       "kind": "ui_label",
       "turns": [5, 10],
       "translations": {
-        "es": "octubre",
         "zh": "10月",
         "he": "אוקטובר",
         "hi": "अक्टूबर",
-        "sw": "Oktoba",
         "de": "Oktober",
         "fr": "octobre"
       }
@@ -471,11 +409,9 @@
       "kind": "ui_label",
       "turns": [7, 8, 9],
       "translations": {
-        "es": "lista de favoritos",
         "zh": "收藏清单",
         "he": "רשימת המועדפים",
         "hi": "पसंदीदा सूची",
-        "sw": "orodha ya vipendwa",
         "de": "Merkliste",
         "fr": "liste de favoris"
       }
@@ -486,11 +422,9 @@
       "kind": "ui_label",
       "turns": [7, 9],
       "translations": {
-        "es": "fechas del viaje",
         "zh": "行程日期",
         "he": "תאריכי הטיול",
         "hi": "यात्रा की तारीख़ें",
-        "sw": "tarehe za safari",
         "de": "Reisedaten",
         "fr": "dates du voyage"
       }
@@ -501,11 +435,9 @@
       "kind": "ui_label",
       "turns": [8],
       "translations": {
-        "es": "planificador de viaje",
         "zh": "行程规划器",
         "he": "מתכנן הטיול",
         "hi": "यात्रा प्लानर",
-        "sw": "kipanga safari",
         "de": "Reiseplaner",
         "fr": "planificateur de voyage"
       }
@@ -516,11 +448,9 @@
       "kind": "ui_label",
       "turns": [8],
       "translations": {
-        "es": "finalizar",
         "zh": "完成",
         "he": "סיום",
         "hi": "अंतिम रूप",
-        "sw": "kamilisha",
         "de": "abschließen",
         "fr": "finaliser"
       }
@@ -531,11 +461,9 @@
       "kind": "ui_label",
       "turns": [9],
       "translations": {
-        "es": "estadísticas del barrio",
         "zh": "社区洞察",
         "he": "תובנות שכונה",
         "hi": "मोहल्ला अंतर्दृष्टि",
-        "sw": "maarifa ya mitaa",
         "de": "Viertel-Statistiken",
         "fr": "statistiques de quartier"
       }
@@ -546,11 +474,9 @@
       "kind": "ui_label",
       "turns": [9],
       "translations": {
-        "es": "más reservado",
         "zh": "预订最多",
         "he": "המוזמנת ביותר",
         "hi": "सबसे ज़्यादा बुक",
-        "sw": "iliyohifadhiwa zaidi",
         "de": "am häufigsten gebucht",
         "fr": "le plus réservé"
       }
@@ -561,11 +487,9 @@
       "kind": "ui_label",
       "turns": [9],
       "translations": {
-        "es": "tarifa promedio por noche",
         "zh": "平均每晚价格",
         "he": "מחיר ממוצע ללילה",
         "hi": "औसत प्रति-रात दर",
-        "sw": "wastani wa bei ya usiku",
         "de": "Durchschnittspreis pro Nacht",
         "fr": "tarif moyen par nuit"
       }
@@ -576,11 +500,9 @@
       "kind": "ui_label",
       "turns": [9],
       "translations": {
-        "es": "calificación promedio",
         "zh": "平均评分",
         "he": "דירוג ממוצע",
         "hi": "औसत रेटिंग",
-        "sw": "wastani wa ukadiriaji",
         "de": "Durchschnittsbewertung",
         "fr": "note moyenne"
       }
@@ -591,11 +513,9 @@
       "kind": "ui_label",
       "turns": [10],
       "translations": {
-        "es": "Buscador de estancias flexibles",
         "zh": "灵活入住查找器",
         "he": "מאתר שהות גמישה",
         "hi": "लचीला प्रवास खोजक",
-        "sw": "Kitafutaji cha ukaaji unaonyumbulika",
         "de": "Suche für flexible Aufenthalte",
         "fr": "Recherche de séjours flexibles"
       }
@@ -606,11 +526,9 @@
       "kind": "ui_label",
       "turns": [10],
       "translations": {
-        "es": "Buscador",
         "zh": "查找器",
         "he": "מאתר",
         "hi": "खोजक",
-        "sw": "Kitafutaji",
         "de": "Suche",
         "fr": "Recherche"
       }
@@ -621,11 +539,9 @@
       "kind": "ui_label",
       "turns": [10],
       "translations": {
-        "es": "casilla de noches",
         "zh": "晚数框",
         "he": "תיבת הלילות",
         "hi": "रातों का बॉक्स",
-        "sw": "kisanduku cha usiku",
         "de": "Nächtefeld",
         "fr": "champ de nuits"
       }

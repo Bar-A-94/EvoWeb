@@ -13,7 +13,7 @@ live reproduction test and the ablation scripts take the run ids from the three 
 
 The released traces are the paper's runs of the four Anthropic models (Fable 5, Opus 4.8,
 Sonnet 4.6, Haiku 4.5), three runs each, plus the multilingual runs of Sonnet 4.6 and Haiku 4.5
-in seven languages. The paper's other models' runs are not released.
+in five languages. The paper's other models' runs are not released.
 
 TABLE2        Table 2 / App. F / Figure 3: model -> its three runs. A model row averages its
               runs (mean, and population std where n > 1).
@@ -27,6 +27,8 @@ setting a run was made with, for re-running it under the same conditions.
 """
 
 from __future__ import annotations
+
+from .paths import LANGS  # noqa: F401  (Table 3's languages, re-exported)
 
 # ---------------------------------------------------------------- Table 2 / App. F / Figure 3
 TABLE2: dict[str, list[str]] = {
@@ -61,11 +63,6 @@ DAG_TABLE: dict[str, list[str]] = {m: runs[:2] for m, runs in TABLE2.items()}
 # The user writes in another language and the app stays in English: the request text is
 # translated (data/multilingual/evoweb_benchmark_<lang>.jsonl); the judge tasks are the English
 # originals.
-#
-# LANGS is every language that was run, in the paper's order. Only the first five are printed in
-# Table 3 (TABLE3_LANGS); Spanish and Swahili ran under the same setup and are released too.
-LANGS: tuple[str, ...] = ("fr", "de", "zh", "hi", "he", "es", "sw")
-TABLE3_LANGS: tuple[str, ...] = LANGS[:5]
 LANG_NAMES: dict[str, str] = {
     "en": "English",
     "fr": "French",
@@ -73,25 +70,19 @@ LANG_NAMES: dict[str, str] = {
     "zh": "Chinese",
     "hi": "Hindi",
     "he": "Hebrew",
-    "es": "Spanish",
-    "sw": "Swahili",
 }
 # model -> language -> run id.
 MULTILINGUAL: dict[str, dict[str, str]] = {
     "Sonnet 4.6": {
-        "es": "multilingual-sonnet-4.6-es",
         "fr": "multilingual-sonnet-4.6-fr",
         "de": "multilingual-sonnet-4.6-de",
-        "sw": "multilingual-sonnet-4.6-sw",
         "zh": "multilingual-sonnet-4.6-zh",
         "hi": "multilingual-sonnet-4.6-hi",
         "he": "multilingual-sonnet-4.6-he",
     },
     "Haiku 4.5": {
-        "es": "multilingual-haiku-4.5-es",
         "fr": "multilingual-haiku-4.5-fr",
         "de": "multilingual-haiku-4.5-de",
-        "sw": "multilingual-haiku-4.5-sw",
         "zh": "multilingual-haiku-4.5-zh",
         "hi": "multilingual-haiku-4.5-hi",
         "he": "multilingual-haiku-4.5-he",
