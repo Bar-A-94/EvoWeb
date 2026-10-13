@@ -21,11 +21,11 @@ def test_zip_under_github_limit_holds_all_apps_and_no_images():
     for app in apps:
         assert f"{RUN}/{app}/result.json" in names
         for t in range(1, 11):
-            turn = f"{RUN}/{app}/" + ("" if t == 1 else f"turn{t}/")
+            req_dir = f"{RUN}/{app}/" + ("" if t == 1 else f"turn{t}/")
             assert (
-                f"{turn}generation/trajectory.jsonl" in names
-                or f"{turn}checkpoint/state.json" in names
-            ), turn
+                f"{req_dir}generation/trajectory.jsonl" in names
+                or f"{req_dir}checkpoint/state.json" in names
+            ), req_dir
         assert f"{RUN}/{app}/turn10/eval/tasks.jsonl" in names
 
 

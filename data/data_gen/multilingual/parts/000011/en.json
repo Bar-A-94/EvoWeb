@@ -166,8 +166,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 1,
+     "kind": "backward",
+     "copied_from_request": 1,
      "task": "Go to the race selection and choose Dwarfs.",
      "expected_result": "Dwarfs is shown as the selected race and its unique attributes are displayed.",
      "task_category": {
@@ -234,8 +234,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "Go to the bank page, choose the iron-to-gold exchange, and type 100 into the amount field.",
      "expected_result": "The live preview shows exactly 30 gold to be received (the 10% merchant cut is applied before rounding down), not 29 or 33.",
      "task_category": {
@@ -303,8 +303,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "Open the reports page and read the chronicle's summary figures.",
      "expected_result": "All-time win rate reads 67% while recent form reads 50% (the three most recent battle days are Day 5, 7 and 9, which take in four battles — two wins, two defeats — not the 33% a last-three-battles reading would give); total plunder reads 1,560 gold and 785 iron, and total soldiers lost reads 133.",
      "task_category": {
@@ -372,8 +372,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "On the bank page's merchant exchange, type 2000 into the iron-to-gold amount field.",
      "expected_result": "The exchange refuses the amount because only 1,800 iron is held: an error indication appears and no gold conversion is offered.",
      "task_category": {
@@ -441,8 +441,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 4,
+     "kind": "backward",
+     "copied_from_request": 4,
      "task": "Open the reports page and look at the Duskwing Riders defeat entry.",
      "expected_result": "No salvage option is offered on the Duskwing Riders entry (defeats leave no lootable field), while victory entries do show one.",
      "task_category": {
@@ -509,8 +509,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "Open the reports page and read the order of the six battle entries from top to bottom.",
      "expected_result": "Ironhold Clan (Day 9) first, then the two Day 7 battles with Duskwing Riders before Silverpine Sentinels (alphabetical tiebreak, not the order they were fought in), then Stonebeard Clan (Day 5), Grimfang Horde (Day 4), and Ashen Elves (Day 2) last.",
      "task_category": {
@@ -578,8 +578,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 5,
+     "kind": "backward",
+     "copied_from_request": 5,
      "task": "Open the Hall of Plaques page and look at the Plunderer plaque.",
      "expected_result": "Plunderer shows the Bronze tier with progress 1,560 gold toward the 1,600 needed for Silver (40 more needed) — salvage gold is not counted.",
      "task_category": {
@@ -647,8 +647,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 6,
+     "kind": "backward",
+     "copied_from_request": 6,
      "task": "On the battle simulator, pick Ironhold Clan from the rematch picker, type 200 into the attacker field and 0 into the luck field.",
      "expected_result": "The defender field pre-fills with 80 (double the 40 soldiers lost to them, not 40 itself), morale shows 40, and round one of the log shows the outnumbered defenders trading up: 20 defender casualties (a quarter of 200 times morale 0.40) against 22 attacker casualties (a quarter of their bonus-boosted 88).",
      "task_category": {
@@ -716,8 +716,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 7,
+     "kind": "backward",
+     "copied_from_request": 7,
      "task": "From the messages page, send a join request to the Crimson Pact and wait for the reply.",
      "expected_result": "An acceptance reply appears in the messages list, and the Crimson Pact roster now lists Ravenspire with the member count reading 4.",
      "task_category": {
@@ -731,174 +731,174 @@
    ]
   }
  ],
- "target_app_summary": "The text-based strategy game has grown from a resource-and-battle skeleton into a full empire sim. The bank became a live merchant exchange with cut-before-round conversion math; the reports page became a seeded war chronicle whose six pinned battles feed almost everything downstream: salvage expeditions harvest debris from its victories, a Hall of Plaques tiers its aggregates, a round-by-round battle simulator pre-fills rematches from its opponents, alliance join letters quote its record, and a power score counts its victories. On top sit alliance diplomacy with tagged rivals on the ranking, a Territories module whose outposts re-sort the ranking live with alphabetical tiebreaks, a royal war-room restyle unifying five pages, and a Herald's Proclamation composer that publishes a live-valued summary of the chronicle, plaques, power/rank and alliance state to the messages page. The feature graph is hub-shaped around the chronicle (T3) with two chains three deep (T1-T3-T5-T10 and T1-T3-T9-T10).",
+ "target_app_summary": "The text-based strategy game has grown from a resource-and-battle skeleton into a full empire sim. The bank became a live merchant exchange with cut-before-round conversion math; the reports page became a seeded war chronicle whose six pinned battles feed almost everything downstream: salvage expeditions harvest debris from its victories, a Hall of Plaques tiers its aggregates, a round-by-round battle simulator pre-fills rematches from its opponents, alliance join letters quote its record, and a power score counts its victories. On top sit alliance diplomacy with tagged rivals on the ranking, a Territories module whose outposts re-sort the ranking live with alphabetical tiebreaks, a royal war-room restyle unifying five pages, and a Herald's Proclamation composer that publishes a live-valued summary of the chronicle, plaques, power/rank and alliance state to the messages page. The feature graph is hub-shaped around the chronicle (R3) with two chains three deep (R1-R3-R5-R10 and R1-R3-R9-R10).",
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "merchant exchange",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "war chronicle",
     "archetype": "derived-state"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "salvage expeditions",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "Hall of Plaques",
     "archetype": "derived-state"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "battle simulator",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "alliance diplomacy",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "war-room restyle",
     "archetype": "design-restyle"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "territories & power ranking",
     "archetype": "derived-state"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "Herald's Proclamation",
     "archetype": "multi-surface-workflow"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T2",
+    "from": "R1",
+    "to": "R2",
     "what": "bank page and resource stockpile"
    },
    {
-    "from": "T1",
-    "to": "T3",
+    "from": "R1",
+    "to": "R3",
     "what": "reports page"
    },
    {
-    "from": "T2",
-    "to": "T3",
+    "from": "R2",
+    "to": "R3",
     "what": "merchant rate math values the iron haul"
    },
    {
-    "from": "T2",
-    "to": "T4",
+    "from": "R2",
+    "to": "R4",
     "what": "salvage wheat costs and haul credits hit the stockpile seeded at the bank"
    },
    {
-    "from": "T3",
-    "to": "T4",
+    "from": "R3",
+    "to": "R4",
     "what": "chronicle victories define salvageable fields"
    },
    {
-    "from": "T3",
-    "to": "T5",
+    "from": "R3",
+    "to": "R5",
     "what": "plaque tiers aggregate chronicle stats"
    },
    {
-    "from": "T4",
-    "to": "T5",
+    "from": "R4",
+    "to": "R5",
     "what": "salvage hauls are explicitly excluded from the Plunderer plaque's plunder total"
    },
    {
-    "from": "T3",
-    "to": "T6",
+    "from": "R3",
+    "to": "R6",
     "what": "rematch picker lists chronicle opponents"
    },
    {
-    "from": "T1",
-    "to": "T7",
+    "from": "R1",
+    "to": "R7",
     "what": "messages and ranking pages"
    },
    {
-    "from": "T3",
-    "to": "T7",
+    "from": "R3",
+    "to": "R7",
     "what": "join letter quotes chronicle record"
    },
    {
-    "from": "T1",
-    "to": "T8",
+    "from": "R1",
+    "to": "R8",
     "what": "restyles base page blocks and headings"
    },
    {
-    "from": "T2",
-    "to": "T8",
+    "from": "R2",
+    "to": "R8",
     "what": "restyles merchant exchange buttons"
    },
    {
-    "from": "T3",
-    "to": "T8",
+    "from": "R3",
+    "to": "R8",
     "what": "restyles chronicle outcome badges"
    },
    {
-    "from": "T5",
-    "to": "T8",
+    "from": "R5",
+    "to": "R8",
     "what": "restyles plaque stat numerals"
    },
    {
-    "from": "T6",
-    "to": "T8",
+    "from": "R6",
+    "to": "R8",
     "what": "restyles simulator buttons and blocks"
    },
    {
-    "from": "T1",
-    "to": "T9",
+    "from": "R1",
+    "to": "R9",
     "what": "ranking page"
    },
    {
-    "from": "T2",
-    "to": "T9",
+    "from": "R2",
+    "to": "R9",
     "what": "outpost costs debit the stockpile seeded at the bank"
    },
    {
-    "from": "T3",
-    "to": "T9",
+    "from": "R3",
+    "to": "R9",
     "what": "power score counts chronicle victories"
    },
    {
-    "from": "T7",
-    "to": "T9",
+    "from": "R7",
+    "to": "R9",
     "what": "re-ranks among alliance-tagged rivals"
    },
    {
-    "from": "T3",
-    "to": "T10",
+    "from": "R3",
+    "to": "R10",
     "what": "battle record section values"
    },
    {
-    "from": "T5",
-    "to": "T10",
+    "from": "R5",
+    "to": "R10",
     "what": "plaques section tiers"
    },
    {
-    "from": "T7",
-    "to": "T10",
+    "from": "R7",
+    "to": "R10",
     "what": "alliance tag section"
    },
    {
-    "from": "T9",
-    "to": "T10",
+    "from": "R9",
+    "to": "R10",
     "what": "power and rank section"
    }
   ]
@@ -906,20 +906,20 @@
  "global_rules": [
   {
    "rule": "Any action that spends or converts resources shows the exact numbers involved and requires an explicit confirm before it applies, everywhere in the app.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Battle outcomes are always shown as a green Victory badge or a red Defeat badge, on every surface where an outcome appears.",
-   "introduced_in_turn": 3
+   "introduced_in_request": 3
   },
   {
    "rule": "Anything time-related is stamped in game-day form like 'Day 9' — never a real calendar date — everywhere in the app.",
-   "introduced_in_turn": 3
+   "introduced_in_request": 3
   }
  ],
  "pinned_seed": {
   "entity": "six battle reports in the war chronicle",
-  "introduced_in_turn": 3,
+  "introduced_in_request": 3,
   "records_gist": "D2 W Ashen Elves -12 +380g/220i; D4 W Grimfang Horde -18 +265g/340i; D5 W Stonebeard Clan -9 +410g/95i; D7 W Silverpine Sentinels -21 +505g/130i; D7 L Duskwing Riders -33; D9 L Ironhold Clan -40 (totals 1,560g / 785i / 133 lost; 4W-2L all-time 67%; recent form covers battle days 5/7/9 = four battles 2W-2L = 50%, vs 33% from a naive last-three-battles read)"
  }
 }

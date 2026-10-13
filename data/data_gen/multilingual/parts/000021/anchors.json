@@ -4,7 +4,7 @@
    "en": "menu page",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1,
     2,
     8
@@ -21,7 +21,7 @@
    "en": "private poker room",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -36,7 +36,7 @@
    "en": "events and promotions",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -51,7 +51,7 @@
    "en": "events & promotions",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     5
    ],
@@ -67,7 +67,7 @@
    "en": "reservation form",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1,
     2
    ],
@@ -83,7 +83,7 @@
    "en": "Bourbon Library",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -102,7 +102,7 @@
    "en": "Bourbon style box",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3
    ],
@@ -118,7 +118,7 @@
    "en": "minimum proof",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3
    ],
@@ -134,7 +134,7 @@
    "en": "maximum pour price",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3
    ],
@@ -150,7 +150,7 @@
    "en": "Members Only",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     4
@@ -167,7 +167,7 @@
    "en": "high proof — water back recommended",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     4
    ],
    "translations": {
@@ -182,7 +182,7 @@
    "en": "tournament calendar",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     5,
     8
@@ -199,7 +199,7 @@
    "en": "My Registrations",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3
    ],
    "translations": {
@@ -214,7 +214,7 @@
    "en": "flight builder",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     6,
     8,
@@ -232,7 +232,7 @@
    "en": "My Flights",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4
    ],
    "translations": {
@@ -247,7 +247,7 @@
    "en": "night board",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     7
    ],
@@ -263,7 +263,7 @@
    "en": "My Passes",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     7
    ],
@@ -279,7 +279,7 @@
    "en": "guest pass",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     7,
     10
@@ -296,7 +296,7 @@
    "en": "sold out",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5
    ],
    "translations": {
@@ -311,7 +311,7 @@
    "en": "tournament nights",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     10
    ],
@@ -327,7 +327,7 @@
    "en": "gift card studio",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6,
     7,
     8
@@ -344,7 +344,7 @@
    "en": "purchase history",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6
    ],
    "translations": {
@@ -359,7 +359,7 @@
    "en": "Player's Ledger",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7,
     9
    ],
@@ -375,7 +375,7 @@
    "en": "Tasting Journal",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -390,7 +390,7 @@
    "en": "Top Shelf",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -405,7 +405,7 @@
    "en": "Night Out Planner",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -420,7 +420,7 @@
    "en": "My Night",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -615,7 +615,7 @@
    "en": "gold",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     8
    ]
   }

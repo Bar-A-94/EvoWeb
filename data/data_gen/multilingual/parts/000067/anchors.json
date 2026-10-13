@@ -4,7 +4,7 @@
    "en": "obituary publishing",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -19,7 +19,7 @@
    "en": "mortuaries",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -34,7 +34,7 @@
    "en": "condolences",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1,
     8
    ],
@@ -50,7 +50,7 @@
    "en": "condolence message",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1,
     2
    ],
@@ -66,7 +66,7 @@
    "en": "statistics",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -81,7 +81,7 @@
    "en": "dashboard",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1,
     5,
     7,
@@ -100,7 +100,7 @@
    "en": "inscription designer",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     6,
@@ -118,7 +118,7 @@
    "en": "memorial list",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3
    ],
@@ -134,7 +134,7 @@
    "en": "epitaph",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     6
    ],
@@ -150,7 +150,7 @@
    "en": "browse page",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     6,
@@ -168,7 +168,7 @@
    "en": "browse archive",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -183,7 +183,7 @@
    "en": "Veteran",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     10
@@ -200,7 +200,7 @@
    "en": "Educator",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4
    ],
@@ -216,7 +216,7 @@
    "en": "Artist",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3
    ],
    "translations": {
@@ -231,7 +231,7 @@
    "en": "Community Leader",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3
    ],
    "translations": {
@@ -246,7 +246,7 @@
    "en": "birth-decade filter",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3
    ],
    "translations": {
@@ -261,7 +261,7 @@
    "en": "newest passing first",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     8
    ],
@@ -277,7 +277,7 @@
    "en": "guestbook",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     8
    ],
@@ -293,7 +293,7 @@
    "en": "busiest guestbook",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     8
    ],
@@ -309,7 +309,7 @@
    "en": "On This Date",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     5
    ],
@@ -325,7 +325,7 @@
    "en": "passing anniversary",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4
    ],
    "translations": {
@@ -340,7 +340,7 @@
    "en": "birthday anniversary",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4
    ],
    "translations": {
@@ -355,7 +355,7 @@
    "en": "pending queue",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5
    ],
    "translations": {
@@ -370,7 +370,7 @@
    "en": "pending memories queue",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     7
    ],
@@ -386,7 +386,7 @@
    "en": "Tributes",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     7
    ],
@@ -402,7 +402,7 @@
    "en": "memorial fund",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6,
     10
    ],
@@ -418,7 +418,7 @@
    "en": "active fund",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6
    ],
    "translations": {
@@ -433,7 +433,7 @@
    "en": "RSVP",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7,
     10
    ],
@@ -449,7 +449,7 @@
    "en": "expected headcount",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7,
     9
    ],
@@ -465,7 +465,7 @@
    "en": "headcount view",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7,
     9
    ],
@@ -481,7 +481,7 @@
    "en": "regrets",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7,
     9
    ],
@@ -497,7 +497,7 @@
    "en": "message total",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -512,7 +512,7 @@
    "en": "reply",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -527,7 +527,7 @@
    "en": "checklist",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -542,7 +542,7 @@
    "en": "Paperwork",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -557,7 +557,7 @@
    "en": "Notifications",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -572,7 +572,7 @@
    "en": "Household",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -587,7 +587,7 @@
    "en": "Cancel the newspaper",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -602,7 +602,7 @@
    "en": "Return the wheelchair rental",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -617,7 +617,7 @@
    "en": "March 12, 1932",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2
    ],
    "translations": {
@@ -632,7 +632,7 @@
    "en": "April 5, 2024",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     8
@@ -649,7 +649,7 @@
    "en": "July 4, 1945",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3
    ],
@@ -665,7 +665,7 @@
    "en": "January 18, 2024",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3
    ],
@@ -681,7 +681,7 @@
    "en": "February 29, 1940",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     4
    ],
@@ -697,7 +697,7 @@
    "en": "December 2, 2023",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     8
@@ -714,7 +714,7 @@
    "en": "February 2, 1950",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     3
    ],
    "translations": {
@@ -729,7 +729,7 @@
    "en": "March 3, 2024",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     3
    ],
    "translations": {
@@ -744,7 +744,7 @@
    "en": "May 5, 1950",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     4
    ],
    "translations": {
@@ -759,7 +759,7 @@
    "en": "April 5, 2025",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     4
    ],
    "translations": {
@@ -774,7 +774,7 @@
    "en": "April 12, 2024",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     7
    ],
    "translations": {
@@ -789,7 +789,7 @@
    "en": "April 5",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -808,7 +808,7 @@
    "en": "March 12",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     4
    ],
@@ -824,7 +824,7 @@
    "en": "February 29",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     4
    ],
@@ -840,7 +840,7 @@
    "en": "August 1",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     4
    ],
    "translations": {
@@ -855,7 +855,7 @@
    "en": "Harold Finch",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -871,7 +871,7 @@
    "en": "Rosa Delgado",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -885,7 +885,7 @@
    "en": "Miriam Okafor",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -897,7 +897,7 @@
    "en": "Walter Brandt",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -908,7 +908,7 @@
    "en": "Lena Kowalski",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -919,7 +919,7 @@
    "en": "Samuel Whitcombe",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -930,7 +930,7 @@
    "en": "Clara Voss",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3
    ]
   },
@@ -938,7 +938,7 @@
    "en": "Nora Bell",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     4
    ]
   },
@@ -946,7 +946,7 @@
    "en": "Tomás Rivera",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     5,
     7
    ]
@@ -955,7 +955,7 @@
    "en": "Grace Lin",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     5,
     6
    ]
@@ -964,7 +964,7 @@
    "en": "Sam Porter",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     5
    ]
   },
@@ -972,7 +972,7 @@
    "en": "June Park",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     8
    ]
   },
@@ -980,7 +980,7 @@
    "en": "Ellen Finch",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     7,
     9
    ]
@@ -989,7 +989,7 @@
    "en": "Marcus Webb",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     7,
     9
    ]
@@ -998,7 +998,7 @@
    "en": "Dana Cruz",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     7,
     9
    ]
@@ -1007,7 +1007,7 @@
    "en": "Ira Gold",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     7
    ]
   },
@@ -1015,7 +1015,7 @@
    "en": "Faye Marsh",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     7
    ]
   },
@@ -1023,7 +1023,7 @@
    "en": "Test Donor",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     6
    ]
   },
@@ -1031,7 +1031,7 @@
    "en": "Harold",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -1047,7 +1047,7 @@
    "en": "Rosa",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -1061,7 +1061,7 @@
    "en": "Miriam",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -1073,7 +1073,7 @@
    "en": "Walter",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -1084,7 +1084,7 @@
    "en": "Lena",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -1095,7 +1095,7 @@
    "en": "Samuel",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -1106,7 +1106,7 @@
    "en": "Ellen",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     6,
     7,
     9
@@ -1116,7 +1116,7 @@
    "en": "Marcus",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     7,
     9
    ]
@@ -1125,7 +1125,7 @@
    "en": "Priya",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     9
    ]
   },
@@ -1133,7 +1133,7 @@
    "en": "Hendersons",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     6
    ]
   },
@@ -1141,7 +1141,7 @@
    "en": "VFW Post 12",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     6
    ]
   },
@@ -1149,7 +1149,7 @@
    "en": "PTA",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     6
    ]
   },
@@ -1157,7 +1157,7 @@
    "en": "1932–2024",
    "class": "keep",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     3,
     4,
     5,
@@ -1169,7 +1169,7 @@
    "en": "cornsilk",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1
    ]
   },
@@ -1177,7 +1177,7 @@
    "en": "peru",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1,
     10
    ]
@@ -1186,7 +1186,7 @@
    "en": "forest green",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     10
    ]
   },
@@ -1194,7 +1194,7 @@
    "en": "wheat",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     10
    ]
   }

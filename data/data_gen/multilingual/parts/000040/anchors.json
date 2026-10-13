@@ -4,7 +4,7 @@
    "en": "Home",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -19,7 +19,7 @@
    "en": "Services",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1,
     2,
     6,
@@ -37,7 +37,7 @@
    "en": "Workshops",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1,
     6
    ],
@@ -53,7 +53,7 @@
    "en": "Online Classes",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -68,7 +68,7 @@
    "en": "Podcasts",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -83,7 +83,7 @@
    "en": "Blogs",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -98,7 +98,7 @@
    "en": "Contact",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -113,7 +113,7 @@
    "en": "program finder",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -134,7 +134,7 @@
    "en": "max price",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     5
    ],
@@ -150,7 +150,7 @@
    "en": "max-price",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2
    ],
    "translations": {
@@ -165,7 +165,7 @@
    "en": "add-to-cart",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2
    ],
    "translations": {
@@ -180,7 +180,7 @@
    "en": "add-to-path",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     9
    ],
@@ -196,7 +196,7 @@
    "en": "learning paths",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     5,
     6,
@@ -215,7 +215,7 @@
    "en": "estimator",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     6,
@@ -233,7 +233,7 @@
    "en": "team training estimator",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4
    ],
@@ -249,7 +249,7 @@
    "en": "team size",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     10
@@ -266,7 +266,7 @@
    "en": "Certificate of Completion",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5
    ],
    "translations": {
@@ -281,7 +281,7 @@
    "en": "My Learning",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8,
     10
    ],
@@ -297,7 +297,7 @@
    "en": "My Registrations",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7
    ],
    "translations": {
@@ -312,7 +312,7 @@
    "en": "live sessions",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7,
     8
    ],
@@ -328,7 +328,7 @@
    "en": "Find your training",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -343,7 +343,7 @@
    "en": "training matcher",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -358,7 +358,7 @@
    "en": "Leadership",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -380,7 +380,7 @@
    "en": "Communication",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -398,7 +398,7 @@
    "en": "Conflict",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -416,7 +416,7 @@
    "en": "Coaching",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     4,
     5,
@@ -436,7 +436,7 @@
    "en": "Live",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3
    ],
@@ -452,7 +452,7 @@
    "en": "On-Demand",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3
    ],
@@ -468,7 +468,7 @@
    "en": "Individual",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -483,7 +483,7 @@
    "en": "Manager",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     5,
     6,
@@ -504,7 +504,7 @@
    "en": "Executive",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -525,7 +525,7 @@
    "en": "Foundations of Leadership",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -547,7 +547,7 @@
    "en": "Difficult Conversations",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -570,7 +570,7 @@
    "en": "Conflict Resolution Essentials",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -588,7 +588,7 @@
    "en": "Executive Presence",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -607,7 +607,7 @@
    "en": "Coaching for Performance",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     4,
     5,
@@ -627,7 +627,7 @@
    "en": "Strategic Decision Making",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2
    ],
    "translations": {
@@ -642,7 +642,7 @@
    "en": "Team Communication Basics",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -660,7 +660,7 @@
    "en": "Managing Remote Teams",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -678,7 +678,7 @@
    "en": "New Manager Ramp-Up",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     4,
     5,
     6,
@@ -699,7 +699,7 @@
    "en": "Leading Through Change",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     7,
     8,
     10
@@ -716,7 +716,7 @@
    "en": "Ask Me Anything: Difficult Conversations",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     7
    ],
    "translations": {
@@ -731,7 +731,7 @@
    "en": "Executive Roundtable",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     7,
     8
    ],
@@ -747,7 +747,7 @@
    "en": "Remote Team Rituals",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     7,
     8
    ],
@@ -763,7 +763,7 @@
    "en": "light cyan",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1,
     6
    ]
@@ -772,7 +772,7 @@
    "en": "cadet blue",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1
    ]
   },
@@ -780,7 +780,7 @@
    "en": "deep teal",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     6
    ]
   },
@@ -788,7 +788,7 @@
    "en": "dark slate",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     6,
     9
    ]
@@ -797,7 +797,7 @@
    "en": "#0F766E",
    "class": "keep",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     6
    ]
   },
@@ -805,7 +805,7 @@
    "en": "#334155",
    "class": "keep",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     6,
     9
    ]
@@ -814,7 +814,7 @@
    "en": "12px",
    "class": "keep",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     6,
     9
    ]
@@ -823,7 +823,7 @@
    "en": "USD",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     10
    ]
   },
@@ -831,7 +831,7 @@
    "en": "CAD",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     10
    ]
   },
@@ -839,7 +839,7 @@
    "en": "GBP",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     10
    ]
   },
@@ -847,7 +847,7 @@
    "en": "EUR",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     10
    ]
   },
@@ -855,7 +855,7 @@
    "en": "Quick Start",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     5
    ]
   },
@@ -863,7 +863,7 @@
    "en": "Solo Track",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     4
    ]
   },
@@ -871,7 +871,7 @@
    "en": "Jordan",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     7
    ]
   }

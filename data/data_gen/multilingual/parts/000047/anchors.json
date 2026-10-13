@@ -4,7 +4,7 @@
    "en": "infrastructure management",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -19,7 +19,7 @@
    "en": "procurement management",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1,
     2
    ],
@@ -35,7 +35,7 @@
    "en": "personnel management",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1,
     2
    ],
@@ -51,7 +51,7 @@
    "en": "financial management",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1,
     2,
     6,
@@ -69,7 +69,7 @@
    "en": "leave management",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -84,7 +84,7 @@
    "en": "leave",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1,
     2
    ],
@@ -100,7 +100,7 @@
    "en": "decision-making",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1,
     4,
     9,
@@ -118,7 +118,7 @@
    "en": "Vehicle Fleet",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     4,
     5,
@@ -138,7 +138,7 @@
    "en": "Roads & Bridges",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -159,7 +159,7 @@
    "en": "Office Supplies",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     4,
     5,
@@ -178,7 +178,7 @@
    "en": "IT Equipment",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -199,7 +199,7 @@
    "en": "Staff Training",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -219,7 +219,7 @@
    "en": "Public Parks",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     4,
     6,
@@ -238,7 +238,7 @@
    "en": "budget lines",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     7,
     8,
@@ -256,7 +256,7 @@
    "en": "Office department",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     10
    ],
@@ -272,7 +272,7 @@
    "en": "requisition builder",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -290,7 +290,7 @@
    "en": "expense report form",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     7
@@ -307,7 +307,7 @@
    "en": "approvals queue",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     7,
@@ -327,7 +327,7 @@
    "en": "budget utilization report",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     6,
     7
@@ -344,7 +344,7 @@
    "en": "utilization report",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     6,
     7,
@@ -362,7 +362,7 @@
    "en": "vendor portal",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     7,
     8
@@ -379,7 +379,7 @@
    "en": "grants section",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6,
     7,
     9
@@ -396,7 +396,7 @@
    "en": "what-if planner",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -411,7 +411,7 @@
    "en": "KPI dashboard",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -426,7 +426,7 @@
    "en": "council view",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -441,7 +441,7 @@
    "en": "Submit to Council",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -456,7 +456,7 @@
    "en": "Department Head",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     5
    ],
@@ -472,7 +472,7 @@
    "en": "Finance Director",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     5
    ],
@@ -488,7 +488,7 @@
    "en": "City Council",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     10
    ],
@@ -504,7 +504,7 @@
    "en": "Pending",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     7,
@@ -522,7 +522,7 @@
    "en": "Approved",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2
    ],
    "translations": {
@@ -537,7 +537,7 @@
    "en": "Rejected",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     10
@@ -554,7 +554,7 @@
    "en": "At Risk",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     9,
     10
@@ -571,7 +571,7 @@
    "en": "Exhausted",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4
    ],
    "translations": {
@@ -586,7 +586,7 @@
    "en": "On Track",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9,
     10
    ],
@@ -602,7 +602,7 @@
    "en": "Off Track",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9,
     10
    ],
@@ -618,7 +618,7 @@
    "en": "Award",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5
    ],
    "translations": {
@@ -633,7 +633,7 @@
    "en": "Awarded",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5
    ],
    "translations": {
@@ -648,7 +648,7 @@
    "en": "Not selected",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5
    ],
    "translations": {
@@ -663,7 +663,7 @@
    "en": "Clean Water Initiative",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     6,
     9
    ],
@@ -679,7 +679,7 @@
    "en": "Digital Services Modernization",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     6
    ],
    "translations": {
@@ -694,7 +694,7 @@
    "en": "Community Health Outreach",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     6
    ],
    "translations": {
@@ -709,7 +709,7 @@
    "en": "Potholes repaired",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -724,7 +724,7 @@
    "en": "Permits digitized",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -739,7 +739,7 @@
    "en": "Training sessions held",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -754,7 +754,7 @@
    "en": "Park inspections",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -769,7 +769,7 @@
    "en": "Fleet vehicles serviced",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -784,7 +784,7 @@
    "en": "Gravel resurfacing, Nanshan section",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     5,
     10
    ],
@@ -800,7 +800,7 @@
    "en": "June Infrastructure Addendum",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -815,7 +815,7 @@
    "en": "Li Wei",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3,
     7
    ]
@@ -824,7 +824,7 @@
    "en": "Chen Fang",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3
    ]
   },
@@ -832,7 +832,7 @@
    "en": "Zhang Min",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     8,
     9,
     10
@@ -842,7 +842,7 @@
    "en": "Shenzhen",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     1
    ]
   },
@@ -850,7 +850,7 @@
    "en": "Shenzhen Tech Supply",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     5
    ]
   },
@@ -858,7 +858,7 @@
    "en": "Pearl Office Systems",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     5,
     8
    ]
@@ -867,7 +867,7 @@
    "en": "Huaqiang Electronics",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     5,
     8
    ]
@@ -876,7 +876,7 @@
    "en": "Bay Rubber Co",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     5
    ]
   },
@@ -884,7 +884,7 @@
    "en": "light pink",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1,
     2,
     7
@@ -894,7 +894,7 @@
    "en": "medium violet red",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1,
     7
    ]
@@ -903,7 +903,7 @@
    "en": "dark plum",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     7
    ]
   },
@@ -911,7 +911,7 @@
    "en": "REQ-001",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     2,
     5,
     8
@@ -921,7 +921,7 @@
    "en": "REQ-002",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     2,
     5,
     10
@@ -931,7 +931,7 @@
    "en": "REQ-003",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     5
    ]
   },
@@ -939,7 +939,7 @@
    "en": "EXP-001",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     3,
     4,
     7
@@ -949,7 +949,7 @@
    "en": "EXP-002",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     3
    ]
   },
@@ -957,7 +957,7 @@
    "en": "EXP-003",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     8,
     9,
     10
@@ -967,7 +967,7 @@
    "en": "BID",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     5
    ]
   },
@@ -975,7 +975,7 @@
    "en": "BID-001",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     5,
     8
    ]
@@ -984,7 +984,7 @@
    "en": "BID-002",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     5
    ]
   },
@@ -992,7 +992,7 @@
    "en": "BID-003",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     5
    ]
   },
@@ -1000,7 +1000,7 @@
    "en": "DEC",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     10
    ]
   },
@@ -1008,7 +1008,7 @@
    "en": "DEC-001",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     10
    ]
   },
@@ -1016,7 +1016,7 @@
    "en": "DEC-002",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     10
    ]
   }

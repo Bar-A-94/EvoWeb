@@ -4,7 +4,7 @@
    "en": "moon sign",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     6
@@ -21,7 +21,7 @@
    "en": "kundali matching tool",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     6
@@ -38,7 +38,7 @@
    "en": "kundali score",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -53,7 +53,7 @@
    "en": "Strong",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     4,
     6,
@@ -72,7 +72,7 @@
    "en": "Moderate",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     6,
@@ -90,7 +90,7 @@
    "en": "Weak",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     6,
     10
@@ -107,7 +107,7 @@
    "en": "Interests",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     5,
@@ -127,7 +127,7 @@
    "en": "Received",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     5,
@@ -146,7 +146,7 @@
    "en": "Sent",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     5
@@ -163,7 +163,7 @@
    "en": "Connections",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     5,
@@ -182,7 +182,7 @@
    "en": "Send Interest",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3
    ],
    "translations": {
@@ -197,7 +197,7 @@
    "en": "Partner Preferences",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     5,
     6,
@@ -215,7 +215,7 @@
    "en": "Quick Connect",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     6,
     7
@@ -232,7 +232,7 @@
    "en": "Interested",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     7
    ],
@@ -248,7 +248,7 @@
    "en": "Pass",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     7
    ],
@@ -264,7 +264,7 @@
    "en": "activity dashboard",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7,
     10
    ],
@@ -280,7 +280,7 @@
    "en": "acceptance rate",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7,
     10
    ],
@@ -296,7 +296,7 @@
    "en": "average match",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7,
     10
    ],
@@ -312,7 +312,7 @@
    "en": "Pending received interests",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7,
     10
    ],
@@ -328,7 +328,7 @@
    "en": "Verification Center",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -343,7 +343,7 @@
    "en": "Verified",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8,
     10
    ],
@@ -359,7 +359,7 @@
    "en": "Verified only",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -374,7 +374,7 @@
    "en": "Under review",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -389,7 +389,7 @@
    "en": "Approve",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -404,7 +404,7 @@
    "en": "Hindu",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     3,
     4,
     8
@@ -421,7 +421,7 @@
    "en": "Muslim",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     3,
     8
    ],
@@ -437,7 +437,7 @@
    "en": "Christian",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     3
    ],
    "translations": {
@@ -452,7 +452,7 @@
    "en": "hidden",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -467,7 +467,7 @@
    "en": "initials",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -482,7 +482,7 @@
    "en": "connections only",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -497,7 +497,7 @@
    "en": "verified members only",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -512,7 +512,7 @@
    "en": "Compatibility Report",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -527,7 +527,7 @@
    "en": "27 yrs",
    "class": "translate",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     4
    ],
    "translations": {
@@ -542,7 +542,7 @@
    "en": "29 yrs",
    "class": "translate",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     4,
     6,
     10
@@ -559,7 +559,7 @@
    "en": "Aries",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     10
    ],
@@ -575,7 +575,7 @@
    "en": "Taurus",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     6
    ],
@@ -591,7 +591,7 @@
    "en": "Gemini",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     6,
     10
@@ -608,7 +608,7 @@
    "en": "Cancer",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     10
@@ -625,7 +625,7 @@
    "en": "Leo",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     10
    ],
@@ -641,7 +641,7 @@
    "en": "Virgo",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     10
    ],
@@ -657,7 +657,7 @@
    "en": "Libra",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     10
@@ -674,7 +674,7 @@
    "en": "Scorpio",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     10
    ],
@@ -690,7 +690,7 @@
    "en": "Sagittarius",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2
    ],
    "translations": {
@@ -705,7 +705,7 @@
    "en": "Capricorn",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2
    ],
    "translations": {
@@ -720,7 +720,7 @@
    "en": "Aquarius",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2
    ],
    "translations": {
@@ -735,7 +735,7 @@
    "en": "Pisces",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     10
    ],
@@ -751,7 +751,7 @@
    "en": "lemon chiffon",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1
    ]
   },
@@ -759,7 +759,7 @@
    "en": "chocolate",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1,
     6
    ]
@@ -768,7 +768,7 @@
    "en": "ivory",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     6,
     8
    ]
@@ -777,7 +777,7 @@
    "en": "maroon",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     6,
     8
    ]
@@ -786,7 +786,7 @@
    "en": "cream",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     6,
     8
    ]
@@ -795,7 +795,7 @@
    "en": "gold",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     6,
     8
    ]
@@ -804,7 +804,7 @@
    "en": "Ananya Iyer",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3,
     4,
     5,
@@ -816,7 +816,7 @@
    "en": "Rohan Mehta",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3,
     4,
     5,
@@ -829,7 +829,7 @@
    "en": "Sara Khan",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3,
     4,
     5,
@@ -841,7 +841,7 @@
    "en": "Vikram Singh",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3,
     4,
     5,
@@ -853,7 +853,7 @@
    "en": "Meera Nair",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3,
     4,
     5
@@ -863,7 +863,7 @@
    "en": "Daniel D'Souza",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3,
     4,
     5
@@ -873,7 +873,7 @@
    "en": "Priya Reddy",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3,
     4,
     5,
@@ -887,7 +887,7 @@
    "en": "Ananya",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3,
     4,
     5,
@@ -901,7 +901,7 @@
    "en": "Rohan",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3,
     4,
     5,
@@ -915,7 +915,7 @@
    "en": "Sara",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3,
     4,
     5,
@@ -929,7 +929,7 @@
    "en": "Vikram",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3,
     4,
     5,
@@ -942,7 +942,7 @@
    "en": "Meera",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3,
     4,
     5,
@@ -954,7 +954,7 @@
    "en": "Daniel",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3,
     4,
     5,
@@ -965,7 +965,7 @@
    "en": "Priya",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3,
     4,
     5,
@@ -980,7 +980,7 @@
    "en": "Arjun Kapoor",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     9,
     10
    ]
@@ -989,7 +989,7 @@
    "en": "A.K.",
    "class": "keep",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     9
    ]
   },
@@ -997,7 +997,7 @@
    "en": "Deva",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     10
@@ -1007,7 +1007,7 @@
    "en": "Manushya",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     6,
@@ -1018,7 +1018,7 @@
    "en": "Rakshasa",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     6,
     10
@@ -1028,7 +1028,7 @@
    "en": "Adi",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     6,
@@ -1039,7 +1039,7 @@
    "en": "Madhya",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     10
@@ -1049,7 +1049,7 @@
    "en": "Antya",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     10
    ]
@@ -1058,7 +1058,7 @@
    "en": "gana",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     6,
@@ -1069,7 +1069,7 @@
    "en": "nadi",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     6,
@@ -1080,7 +1080,7 @@
    "en": "Aadhaar",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     8
    ]
   },
@@ -1088,7 +1088,7 @@
    "en": "PAN",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     8
    ]
   }

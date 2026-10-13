@@ -24,10 +24,10 @@ SETS = {
     "evoweb_smoke_2apps_3requests.jsonl": (2, 3),
     "evoweb_smoke_3apps_2requests.jsonl": (3, 2),
     # Shortest ladder the HARNESS generators accept, all 32 apps, row order (and therefore
-    # --start-idx) identical to evoweb_benchmark.jsonl. For per-app turn-1 experiments: turn 1 is judged
-    # exactly as in the full run, at ~2 turns of cost instead of 10.
+    # --start-idx) identical to evoweb_benchmark.jsonl. For per-app request-1 experiments: request 1 is judged
+    # exactly as in the full run, at ~2 requests of cost instead of 10.
     # NOT 1 request: run_single_sample rejects a row with no follow_ups for openhands/bash/
-    # mini/claude_code ("needs a multi-turn dataset"), so a 1-request set errors out before
+    # mini/claude_code ("needs a multi-request dataset"), so a 1-request set errors out before
     # generating anything. Verified 2026-08-31 on six wasted dispatches.
     "evoweb_2requests.jsonl": (len(WAVE), 2),
 }

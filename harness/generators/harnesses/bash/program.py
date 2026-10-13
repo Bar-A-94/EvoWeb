@@ -26,7 +26,7 @@ BACKOFF = 2.0
 # HARNESS_LLM_TIMEOUT is the ONE knob for every harness's per-call deadline, so a harness
 # comparison is not secretly a timeout comparison. 300s (the old value, and litellm's default
 # that openhands explicitly overrides) is too short for a thinking model on a large context:
-# measured 2026-08-30, sonnet at a 16k thinking budget blew through it at turn 4 with 104
+# measured 2026-08-30, sonnet at a 16k thinking budget blew through it at request 4 with 104
 # prior messages, retried 4x, and the ladder died. Stays below the proxy's forward timeout so
 # a genuinely stuck call still surfaces client-side first.
 REQUEST_TIMEOUT = int(os.environ.get("HARNESS_LLM_TIMEOUT") or 1200)
@@ -114,7 +114,7 @@ def call_model(url: str, key: str, body: dict) -> dict:
         method="POST",
     )
     # Retry transient failures. The other three arms retry inside their own clients (litellm, the
-    # Agent SDK, openhands' retry_decorator), so without this one 429 or 529 ends the turn, and
+    # Agent SDK, openhands' retry_decorator), so without this one 429 or 529 ends the request, and
     # skip-on-failure then discards every later user request in the ladder: an arm asymmetry in a
     # comparison meant to differ only by scaffold. Honour retry-after when the server sends it.
     for attempt in range(RETRIES):
@@ -148,8 +148,8 @@ def main() -> int:
     parser.add_argument("--base-url", default="https://api.anthropic.com")
     parser.add_argument("--key-var", default="BASH_AGENT_API_KEY")
     parser.add_argument("--task-file", required=True)
-    # Multi-turn: the accumulated conversation of the earlier turns, tool results included.
-    # Read before the new task and rewritten after, so turn N starts where turn N-1 stopped
+    # Multi-request: the accumulated conversation of the earlier requests, tool results included.
+    # Read before the new task and rewritten after, so request N starts where request N-1 stopped
     # rather than re-deriving the app from the files on disk.
     parser.add_argument("--history-file")
     parser.add_argument("--system-file")

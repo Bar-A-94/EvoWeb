@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render viewer.html: per app, EN | translated instructions side by side per turn,
+"""Render viewer.html: per app, EN | translated instructions side by side per request,
 plus the task edits, with translate-anchors highlighted. For human review before runs.
 
 Usage: python3 make_viewer.py [app_id ...]   (default: every app with anchors.json)
@@ -40,7 +40,7 @@ def mark_anchors(text: str, needles: list[str]) -> str:
     return out
 
 
-def en_turns(row):
+def en_requests(row):
     out = {1: row["instruction"]}
     for i, f in enumerate(row.get("follow_ups", []), start=2):
         out[i] = f["instruction"]
@@ -65,7 +65,7 @@ def render_app(app: str, enui: bool = False) -> str:
         for g in LANGS
         if (d / f"{g}{suffix}.json").is_file()
     }
-    turns, tasks = en_turns(row), en_tasks(row)
+    requests, tasks = en_requests(row), en_tasks(row)
     # English-UI variant: every anchor stays English, so highlight the EN forms in every column
     needles_for = (
         (lambda g: [a["en"] for a in anchors])
@@ -91,11 +91,11 @@ def render_app(app: str, enui: bool = False) -> str:
 
     for t in range(1, 11):
         out.append(
-            f"<h3>Turn {t}</h3><table><tr><th>en</th>"
+            f"<h3>Request {t}</h3><table><tr><th>en</th>"
             + "".join(f"<th>{g}</th>" for g in parts)
             + "</tr><tr>"
         )
-        out.append(f"<td>{mark_anchors(turns[t], [a['en'] for a in xlate])}</td>")
+        out.append(f"<td>{mark_anchors(requests[t], [a['en'] for a in xlate])}</td>")
         for g, p in parts.items():
             cls = " class=rtl" if g in RTL else ""
             out.append(
@@ -105,7 +105,7 @@ def render_app(app: str, enui: bool = False) -> str:
         if enui:
             continue  # judge tasks are the EN originals — nothing to show
         edits = {
-            g: {(e["turn"], e["task_index"]): e for e in p.get("task_edits", [])}
+            g: {(e["request"], e["task_index"]): e for e in p.get("task_edits", [])}
             for g, p in parts.items()
         }
         for i, task in enumerate(tasks[t]):

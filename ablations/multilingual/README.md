@@ -17,7 +17,7 @@ python3 ablations/multilingual/score_arms.py "Sonnet 4.6"     # one model
 python3 ablations/multilingual/score_arms.py --json out.json  # also write every arm's metrics
 ```
 
-Output, per model: raw accuracy, norm, Grade (norm-sweep AUC / 100) and Survival (turns-sweep
+Output, per model: raw accuracy, norm, Grade (norm-sweep AUC / 100) and Survival (requests-survived
 AUC) for English (the model's Table 2 row, the mean of its three runs) and each of the five
 languages, one run each. Grade is
 the number Table 3 prints.

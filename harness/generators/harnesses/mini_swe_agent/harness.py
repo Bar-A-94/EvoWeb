@@ -95,7 +95,7 @@ def launch(
             str(max_steps),
             "--output",
             str(out / TRAJECTORY),
-            # Beside the workspace, not inside it: the conversation has to survive every turn of
+            # Beside the workspace, not inside it: the conversation has to survive every request of
             # a ladder, and anything written into the workspace becomes part of the app under test.
             "--history-file",
             str(workspace.parent / f"mswe_history_{workspace.name}.json"),
@@ -110,7 +110,7 @@ def launch(
 
 
 def reply(out: Path) -> str | None:
-    """The turn's answer: the submission if there is one, else the last assistant prose.
+    """The request's answer: the submission if there is one, else the last assistant prose.
 
     Not stdout, which is progress chatter. `info.submission` is the answer upstream itself
     considers final, so prefer it -- but only when it is non-empty: on a real run of ours it was

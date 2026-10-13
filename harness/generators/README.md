@@ -81,7 +81,7 @@ run_local.sh / run_sample.sh
   generators/capture.py             a proxy every model call passes through
 ```
 
-`capture.py` is why cost and multi-turn are measurable at all: it is the one point all four
+`capture.py` is why cost and multi-request runs are measurable at all: it is the one point all four
 harnesses cross, so tokens are counted the same way for each. It also applies the
 `HARNESS_*` sampling pins listed in `../README.md`.
 

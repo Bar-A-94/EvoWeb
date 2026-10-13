@@ -4,7 +4,7 @@
    "en": "data visualization",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -19,7 +19,7 @@
    "en": "match prediction",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -34,7 +34,7 @@
    "en": "search",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -49,7 +49,7 @@
    "en": "team rankings",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1,
     2,
     10
@@ -66,7 +66,7 @@
    "en": "player performance",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -81,7 +81,7 @@
    "en": "betting recommendations",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1,
     4
    ],
@@ -97,7 +97,7 @@
    "en": "odds board",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -117,7 +117,7 @@
    "en": "implied win probability",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     4,
     5
@@ -134,7 +134,7 @@
    "en": "best price",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -155,7 +155,7 @@
    "en": "Friday",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     7
    ],
@@ -171,7 +171,7 @@
    "en": "Sunday",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     7
    ],
@@ -187,7 +187,7 @@
    "en": "bet slip",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     5
@@ -204,7 +204,7 @@
    "en": "stake",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     5,
     9
@@ -221,7 +221,7 @@
    "en": "add-to-slip",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     5,
     10
@@ -238,7 +238,7 @@
    "en": "payout",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     5
    ],
@@ -254,7 +254,7 @@
    "en": "profit",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     9,
     10
@@ -271,7 +271,7 @@
    "en": "combined odds",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4
    ],
@@ -287,7 +287,7 @@
    "en": "Best Bets",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     6,
     8,
@@ -305,7 +305,7 @@
    "en": "minimum-edge",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4
    ],
    "translations": {
@@ -320,7 +320,7 @@
    "en": "edge",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     6,
     8,
@@ -338,7 +338,7 @@
    "en": "target edge",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -353,7 +353,7 @@
    "en": "My Tickets",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     7,
     9,
@@ -371,7 +371,7 @@
    "en": "bankroll",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     7
    ],
@@ -387,7 +387,7 @@
    "en": "Won",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     7,
     9
@@ -404,7 +404,7 @@
    "en": "Lost",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     9
    ],
@@ -420,7 +420,7 @@
    "en": "pending",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     9,
     10
@@ -437,7 +437,7 @@
    "en": "place-ticket",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5
    ],
    "translations": {
@@ -452,7 +452,7 @@
    "en": "review screen",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5
    ],
    "translations": {
@@ -467,7 +467,7 @@
    "en": "adjustments panel",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6,
     8
    ],
@@ -483,7 +483,7 @@
    "en": "star-player-sidelined",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6,
     8
    ],
@@ -499,7 +499,7 @@
    "en": "back-to-back",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6,
     7,
     8
@@ -516,7 +516,7 @@
    "en": "reset",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6
    ],
    "translations": {
@@ -531,7 +531,7 @@
    "en": "adj",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6,
     8
    ],
@@ -547,7 +547,7 @@
    "en": "win-probability box",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6
    ],
    "translations": {
@@ -562,7 +562,7 @@
    "en": "research center",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7,
     10
    ],
@@ -578,7 +578,7 @@
    "en": "research link",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7
    ],
    "translations": {
@@ -593,7 +593,7 @@
    "en": "straight-up",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7
    ],
    "translations": {
@@ -608,7 +608,7 @@
    "en": "against-the-spread",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7
    ],
    "translations": {
@@ -623,7 +623,7 @@
    "en": "over/under",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7
    ],
    "translations": {
@@ -638,7 +638,7 @@
    "en": "push",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7
    ],
    "translations": {
@@ -653,7 +653,7 @@
    "en": "spread",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7
    ],
    "translations": {
@@ -668,7 +668,7 @@
    "en": "no-meetings-on-file",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     7
    ],
    "translations": {
@@ -683,7 +683,7 @@
    "en": "summary strip",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7
    ],
    "translations": {
@@ -698,7 +698,7 @@
    "en": "meetings",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7
    ],
    "translations": {
@@ -713,7 +713,7 @@
    "en": "Alerts",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -728,7 +728,7 @@
    "en": "watch",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -743,7 +743,7 @@
    "en": "watched",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -758,7 +758,7 @@
    "en": "fired",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -773,7 +773,7 @@
    "en": "armed",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -788,7 +788,7 @@
    "en": "Performance",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9,
     10
    ],
@@ -804,7 +804,7 @@
    "en": "net profit",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9,
     10
    ],
@@ -820,7 +820,7 @@
    "en": "ROI",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -835,7 +835,7 @@
    "en": "singles",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -850,7 +850,7 @@
    "en": "parlays",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -865,7 +865,7 @@
    "en": "total staked",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -880,7 +880,7 @@
    "en": "settled-ticket ledger",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9,
     10
    ],
@@ -896,7 +896,7 @@
    "en": "record",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7,
     9
    ],
@@ -912,7 +912,7 @@
    "en": "Celtics",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -925,7 +925,7 @@
    "en": "Knicks",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -939,7 +939,7 @@
    "en": "Lakers",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -951,7 +951,7 @@
    "en": "Bulls",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -966,7 +966,7 @@
    "en": "Suns",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -978,7 +978,7 @@
    "en": "Heat",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -991,7 +991,7 @@
    "en": "Nuggets",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3
    ]
@@ -1000,7 +1000,7 @@
    "en": "Raptors",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3
    ]
@@ -1009,7 +1009,7 @@
    "en": "Warriors",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     7,
     10
@@ -1019,7 +1019,7 @@
    "en": "Mavericks",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     4,
     5,
@@ -1034,7 +1034,7 @@
    "en": "Bucks",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -1045,7 +1045,7 @@
    "en": "Hornets",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -1059,7 +1059,7 @@
    "en": "BetNova",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -1072,7 +1072,7 @@
    "en": "HoopLine",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -1084,7 +1084,7 @@
    "en": "CourtSide",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -1096,7 +1096,7 @@
    "en": "ghost white",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1,
     10
    ]
@@ -1105,7 +1105,7 @@
    "en": "slate gray",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1
    ]
   },
@@ -1113,7 +1113,7 @@
    "en": "emerald",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     10
    ]
   },
@@ -1121,7 +1121,7 @@
    "en": "@",
    "class": "keep",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -1135,7 +1135,7 @@
    "en": "NaN",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     3
    ]
   }

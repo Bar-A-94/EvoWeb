@@ -228,12 +228,12 @@ async def prompt(
     except RequestError as error:
         detail = error.data.get("details") if isinstance(error.data, dict) else None
         # Claude Code reports a spent turn budget as an ACP error. Raising here recorded the
-        # turn as an infrastructure failure and killed the rest of the ladder.
+        # request as an infrastructure failure and killed the rest of the ladder.
         if BUDGET_REACHED.search(detail or str(error)):
             print(
                 f"[acp] user request ended on its turn budget: {detail or error}", file=sys.stderr
             )
-            # A marker, not silence: the caller records it so a truncated turn is not scored as
+            # A marker, not silence: the caller records it so a truncated request is not scored as
             # a model that simply stopped talking.
             return BUDGET_MARKER
         raise RuntimeError(detail or str(error)) from error
@@ -332,7 +332,7 @@ async def run_once(config: dict) -> str:
 
 
 class LiveACPSession:
-    """One live ACP process, connection, and session shared by several turns."""
+    """One live ACP process, connection, and session shared by several requests."""
 
     def __init__(self) -> None:
         self.client = TrajectoryClient()

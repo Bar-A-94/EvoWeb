@@ -11,6 +11,10 @@ Merge rule: for every CLEAN index take that app's row of the base dataset (data/
 101 WebGen-Bench apps) and copy the part's follow_ups plus its audit metadata onto it. Only those
 rows are written, in app order; the row position is the sample index every run and score uses.
 
+The generator prompts (*.js) output the old terms (copied_from_turn, kind "regression", T1..T10);
+every written row goes through paper_terms() so the dataset carries the paper's terms
+(copied_from_request, kind "backward", R1..R10).
+
 Usage:
   python3 assemble_dataset.py --parts <dir> --out <out.jsonl> --clean 4,14,17,... [--base data/legacy_webgen_bench_apps.jsonl]
   python3 assemble_dataset.py --parts <dir> --out <out.jsonl> --clean-from-audit   # trust audit_parts.py
@@ -28,7 +32,11 @@ _HERE = os.path.dirname(os.path.abspath(__file__))
 _PKG = os.path.abspath(os.path.join(_HERE, "..", ".."))
 if _PKG not in sys.path:
     sys.path.insert(0, _PKG)
-from evoweb.paths import DATA as _DATA
+if _HERE not in sys.path:
+    sys.path.insert(0, _HERE)
+from paper_terms import paper_terms  # noqa: E402
+
+from evoweb.paths import DATA as _DATA  # noqa: E402
 
 DEFAULT_BASE = os.path.join(str(_DATA), "legacy_webgen_bench_apps.jsonl")
 # Audit metadata copied onto each populated row. The harness ignores unknown top-level fields; the
@@ -56,7 +64,6 @@ def main():
     a = ap.parse_args()
 
     if a.clean_from_audit:
-        sys.path.insert(0, _HERE)
         from audit_parts import audit, load_base  # noqa: E402
 
         variant = "nogrounding" if "no_grounding" in a.parts or "nogrounding" in a.parts else "dag"
@@ -102,7 +109,7 @@ def main():
     with open(a.out, "w") as fh:
         for i, row in enumerate(rows, start=1):
             if i in written:
-                fh.write(json.dumps(row) + "\n")
+                fh.write(json.dumps(paper_terms(row)) + "\n")
 
     skipped = [i for i in clean if i not in written]
     tasks = [

@@ -7,9 +7,13 @@ MECHANICAL rules: an earlier draft shipped 5 samples with banned controls despit
 v3 added a verify pass in the first place. This script re-checks the deterministic rules from the part
 files alone, so a violation cannot survive on an agent's say-so.
 
-Checks (per sample): structure and slot/kind template, banned controls, verbatim regressions
-(character-for-character against the cited turn, base app included), exact-value coverage from the
-pinned-seed turn onward, counter cap, archetype mix, and the dependency_graph shape/depth.
+Checks (per sample): structure and slot/kind template, banned controls, verbatim backward checks
+(character-for-character against the cited request, base app included), exact-value coverage from the
+pinned-seed request onward, counter cap, archetype mix, and the dependency_graph shape/depth.
+
+The generator prompts (*.js) still output the old terms (copied_from_turn, kind "regression",
+T1..T10); every part/row is first normalised with paper_terms(), so the audit runs on the paper's
+terms (copied_from_request, kind "backward", R1..R10) for raw parts and the published dataset alike.
 
 Usage:
   python3 audit_parts.py <parts_dir | dataset.jsonl> [--variant dag|nogrounding] [--base data/legacy_webgen_bench_apps.jsonl] [--quiet]
@@ -32,7 +36,11 @@ _HERE = os.path.dirname(os.path.abspath(__file__))
 _PKG = os.path.abspath(os.path.join(_HERE, "..", ".."))
 if _PKG not in sys.path:
     sys.path.insert(0, _PKG)
-from evoweb.paths import DATA as _DATA
+if _HERE not in sys.path:
+    sys.path.insert(0, _HERE)
+from paper_terms import paper_terms  # noqa: E402
+
+from evoweb.paths import DATA as _DATA  # noqa: E402
 
 DEFAULT_BASE = os.path.join(str(_DATA), "legacy_webgen_bench_apps.jsonl")
 
@@ -69,6 +77,7 @@ def load_base(path):
 
 def audit(part, base_tasks, variant):
     """-> (violations, warnings). Only violations mark a sample dirty."""
+    part = paper_terms(part)
     v, warn = [], []
     idx = part.get("app_idx")
     fus = part.get("follow_ups") or []
@@ -79,10 +88,10 @@ def audit(part, base_tasks, variant):
     integration_kind = "integration"
     archetypes = []
     counter_tasks = 0
-    exact_by_turn = {}
+    exact_by_request = {}
 
     for k, fu in enumerate(fus, start=2):
-        where = f"T{k}"
+        where = f"R{k}"
         archetypes.append(fu.get("archetype"))
         tasks = fu.get("ui_instruct") or []
         if len(tasks) != 5:
@@ -94,9 +103,9 @@ def audit(part, base_tasks, variant):
                 v.append(f"{where}: slots 1-3 kinds {kinds[:3]}, expected feature/exact-value")
             if kinds[3] != integration_kind:
                 v.append(f"{where}: slot 4 kind {kinds[3]!r}, expected {integration_kind!r}")
-            if kinds[4] != "regression":
-                v.append(f"{where}: slot 5 kind {kinds[4]!r}, expected 'regression'")
-        exact_by_turn[k] = sum(1 for k2 in kinds if k2 == "exact-value")
+            if kinds[4] != "backward":
+                v.append(f"{where}: slot 5 kind {kinds[4]!r}, expected 'backward'")
+        exact_by_request[k] = sum(1 for k2 in kinds if k2 == "exact-value")
 
         blob = " ".join(
             [fu.get("instruction") or ""]
@@ -110,38 +119,42 @@ def audit(part, base_tasks, variant):
             if COUNTER_HINT.search(t.get("expected_result") or ""):
                 counter_tasks += 1
 
-        # verbatim regression: the copied task must exist character-for-character in its source turn
-        reg = tasks[4] if len(tasks) == 5 else None
-        if reg and reg.get("kind") == "regression":
-            src = reg.get("copied_from_turn")
+        # verbatim backward check: the copied task must exist character-for-character in its
+        # source request
+        bwd = tasks[4] if len(tasks) == 5 else None
+        if bwd and bwd.get("kind") == "backward":
+            src = bwd.get("copied_from_request")
             if src is None:
-                v.append(f"{where}: regression has no copied_from_turn")
+                v.append(f"{where}: backward check has no copied_from_request")
             elif src == 1:
-                # copied_from_turn=1 is AUTHORED against the base app, not copied: the spec says
-                # "for turn 2, instead write one task against the BASE app using ONLY behavior the
-                # build prompt explicitly asked for". Verbatim matching does not apply.
-                if not (reg.get("task") or "").strip():
-                    v.append(f"{where}: base-app regression task is empty")
+                # copied_from_request=1 is AUTHORED against the base app, not copied: the generator
+                # prompt (in its own words) says "for turn 2, instead write one task against the BASE
+                # app using ONLY behavior the build prompt explicitly asked for". Verbatim matching
+                # does not apply.
+                if not (bwd.get("task") or "").strip():
+                    v.append(f"{where}: base-app backward task is empty")
             elif 2 <= src < k:
                 pool = [
                     (t.get("task"), t.get("expected_result"))
                     for t in (fus[src - 2].get("ui_instruct") or [])
                 ]
-                if (reg.get("task"), reg.get("expected_result")) not in pool:
-                    v.append(f"{where}: regression not verbatim from T{src}")
+                if (bwd.get("task"), bwd.get("expected_result")) not in pool:
+                    v.append(f"{where}: backward check not verbatim from R{src}")
             else:
-                v.append(f"{where}: regression copied_from_turn={src} is not an earlier turn")
+                v.append(
+                    f"{where}: backward check copied_from_request={src} is not an earlier request"
+                )
 
-    # exact-value coverage from the pinned-seed turn onward
-    seed_turn = (part.get("pinned_seed") or {}).get("introduced_in_turn")
-    if seed_turn is None:
-        v.append("pinned_seed: missing introduced_in_turn")
+    # exact-value coverage from the pinned-seed request onward
+    seed_request = (part.get("pinned_seed") or {}).get("introduced_in_request")
+    if seed_request is None:
+        v.append("pinned_seed: missing introduced_in_request")
     else:
-        if seed_turn not in (2, 3):
-            v.append(f"pinned_seed: introduced_in_turn={seed_turn}, expected 2 or 3")
-        for k in range(max(seed_turn, 2), 11):
-            if exact_by_turn.get(k, 0) < 1:
-                v.append(f"T{k}: no exact-value task (pinned seed is T{seed_turn})")
+        if seed_request not in (2, 3):
+            v.append(f"pinned_seed: introduced_in_request={seed_request}, expected 2 or 3")
+        for k in range(max(seed_request, 2), 11):
+            if exact_by_request.get(k, 0) < 1:
+                v.append(f"R{k}: no exact-value task (pinned seed is R{seed_request})")
 
     if counter_tasks > 2:
         warn.append(
@@ -167,8 +180,8 @@ def audit(part, base_tasks, variant):
     g = part.get("dependency_graph") or {}
     nodes = {n.get("id") for n in (g.get("nodes") or [])}
     edges = [(e.get("from"), e.get("to")) for e in (g.get("edges") or [])]
-    if nodes != {f"T{i}" for i in range(1, 11)}:
-        v.append(f"dag: nodes are not exactly T1-T10 ({len(nodes)} found)")
+    if nodes != {f"R{i}" for i in range(1, 11)}:
+        v.append(f"dag: nodes are not exactly R1-R10 ({len(nodes)} found)")
     for a, b in edges:
         try:
             if int(str(a)[1:]) >= int(str(b)[1:]):
@@ -180,7 +193,7 @@ def audit(part, base_tasks, variant):
             1
             for _, b in edges
             if b
-            and b != "T1"
+            and b != "R1"
             and str(b)[1:].isdigit()
             and int(str(b)[1:]) >= 2
             and any(str(a)[1:].isdigit() and int(str(a)[1:]) >= 2 for a, bb in edges if bb == b)
@@ -195,7 +208,7 @@ def audit(part, base_tasks, variant):
     ]
     if len(fu_on_fu) < 3:
         v.append(f"dag: only {len(fu_on_fu)} follow-up-on-follow-up edges (need >= 3)")
-    # longest path from T1
+    # longest path from R1
     adj = {}
     for a, b in edges:
         adj.setdefault(a, []).append(b)
@@ -212,17 +225,17 @@ def audit(part, base_tasks, variant):
         depth_cache[n] = best
         return best
 
-    # Rule 4 asks for a chain >= 3 deep. Measuring it only from T1 over-filters relative to the
-    # CONTROL, whose own published distribution contains a depth-2-from-T1 sample (the benchmark: one
-    # of 32). A ladder with a real 4-deep chain that simply is not rooted at T1 still has the
+    # Rule 4 asks for a chain >= 3 deep. Measuring it only from R1 over-filters relative to the
+    # CONTROL, whose own published distribution contains a depth-2-from-R1 sample (the benchmark: one
+    # of 32). A ladder with a real 4-deep chain that simply is not rooted at R1 still has the
     # breakage cascade the rule exists to create, so that shape WARNS instead of failing; a
     # ladder with no deep chain anywhere is a genuine violation.
     deepest_anywhere = max((depth(n) for n in nodes), default=0)
-    if depth("T1") < 3:
+    if depth("R1") < 3:
         if deepest_anywhere >= 3:
             warn.append(
-                f"dag: longest chain is {deepest_anywhere} but not rooted at T1 "
-                f"(from-T1 depth {depth('T1')}) — the control tolerates this shape"
+                f"dag: longest chain is {deepest_anywhere} but not rooted at R1 "
+                f"(from-R1 depth {depth('R1')}) — the control tolerates this shape"
             )
         else:
             v.append(f"dag: no chain >= 3 deep anywhere (deepest {deepest_anywhere})")

@@ -4,7 +4,7 @@
       "en": "personality assessment",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         1
       ],
       "translations": {
@@ -19,7 +19,7 @@
       "en": "beige",
       "class": "keep",
       "kind": "css_visual",
-      "turns": [
+      "requests": [
         1,
         10
       ]
@@ -28,7 +28,7 @@
       "en": "saddle brown",
       "class": "keep",
       "kind": "css_visual",
-      "turns": [
+      "requests": [
         1
       ]
     },
@@ -36,7 +36,7 @@
       "en": "screener",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         2,
         3,
         4,
@@ -56,7 +56,7 @@
       "en": "max price",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         2,
         3,
         6
@@ -73,7 +73,7 @@
       "en": "Showing X of 7 coaches",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         2
       ],
       "translations": {
@@ -88,7 +88,7 @@
       "en": "Career",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         2,
         3
       ],
@@ -104,7 +104,7 @@
       "en": "Wellness",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         2,
         3
       ],
@@ -120,7 +120,7 @@
       "en": "Mindfulness",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         2,
         3
       ],
@@ -136,7 +136,7 @@
       "en": "Leadership",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         2,
         5
       ],
@@ -152,7 +152,7 @@
       "en": "Executive",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         2
       ],
       "translations": {
@@ -167,7 +167,7 @@
       "en": "Resume",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         2,
         4
       ],
@@ -183,7 +183,7 @@
       "en": "Interview Prep",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         2
       ],
       "translations": {
@@ -198,7 +198,7 @@
       "en": "per session",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         2,
         3,
         4,
@@ -216,7 +216,7 @@
       "en": "cost estimator",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         3,
         4
       ],
@@ -232,7 +232,7 @@
       "en": "estimator",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         3,
         4,
         8
@@ -249,7 +249,7 @@
       "en": "Request free intro call",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         4
       ],
       "translations": {
@@ -264,7 +264,7 @@
       "en": "free intro call",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         4
       ],
       "translations": {
@@ -279,7 +279,7 @@
       "en": "Coach Inbox",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         4,
         5,
         7
@@ -296,7 +296,7 @@
       "en": "My requests",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         4,
         7
       ],
@@ -312,7 +312,7 @@
       "en": "Pending",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         4,
         5
       ],
@@ -328,7 +328,7 @@
       "en": "Accepted",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         4,
         7
       ],
@@ -344,7 +344,7 @@
       "en": "Declined",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         4
       ],
       "translations": {
@@ -359,7 +359,7 @@
       "en": "Decline",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         4
       ],
       "translations": {
@@ -374,7 +374,7 @@
       "en": "Accept",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         7
       ],
       "translations": {
@@ -389,7 +389,7 @@
       "en": "Hoping to prep for a VP-level move this fall.",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         4,
         5
       ],
@@ -405,7 +405,7 @@
       "en": "No reviews yet",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         5,
         7
       ],
@@ -421,7 +421,7 @@
       "en": "minimum rating",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         5
       ],
       "translations": {
@@ -436,7 +436,7 @@
       "en": "session planner",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         6,
         9
       ],
@@ -452,7 +452,7 @@
       "en": "planner",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         6,
         9
       ],
@@ -468,7 +468,7 @@
       "en": "wraps up on",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         6
       ],
       "translations": {
@@ -483,7 +483,7 @@
       "en": "every two weeks",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         6
       ],
       "translations": {
@@ -498,7 +498,7 @@
       "en": "weekly",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         6
       ],
       "translations": {
@@ -513,7 +513,7 @@
       "en": "My coaching hub",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         7,
         10
       ],
@@ -529,7 +529,7 @@
       "en": "hub",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         7,
         10
       ],
@@ -545,7 +545,7 @@
       "en": "engagement journal",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         8
       ],
       "translations": {
@@ -560,7 +560,7 @@
       "en": "journal",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         8
       ],
       "translations": {
@@ -575,7 +575,7 @@
       "en": "Copy summary",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         8
       ],
       "translations": {
@@ -590,7 +590,7 @@
       "en": "Practiced difficult feedback conversation",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         8
       ],
       "translations": {
@@ -605,7 +605,7 @@
       "en": "Set a 90-day leadership plan",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         8
       ],
       "translations": {
@@ -620,7 +620,7 @@
       "en": "Get promoted to Senior PM",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         9
       ],
       "translations": {
@@ -635,7 +635,7 @@
       "en": "Improve public speaking",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         9
       ],
       "translations": {
@@ -650,7 +650,7 @@
       "en": "Build a morning routine",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         9
       ],
       "translations": {
@@ -665,7 +665,7 @@
       "en": "Find a mentor in fintech",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         9
       ],
       "translations": {
@@ -680,7 +680,7 @@
       "en": "goals page",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         9,
         10
       ],
@@ -696,7 +696,7 @@
       "en": "Ben Whitaker",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2,
         4,
         5,
@@ -707,7 +707,7 @@
       "en": "Derek Okafor",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2,
         3,
         4,
@@ -723,7 +723,7 @@
       "en": "Tom Alvarez",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2,
         3,
         5,
@@ -735,7 +735,7 @@
       "en": "Maya Chen",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2,
         3,
         5,
@@ -748,7 +748,7 @@
       "en": "Hana Suzuki",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2,
         3,
         5,
@@ -759,7 +759,7 @@
       "en": "Priya Nair",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2,
         4,
         5,
@@ -771,7 +771,7 @@
       "en": "Sofia Ricci",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2,
         3,
         4,
@@ -784,7 +784,7 @@
       "en": "Ben",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2,
         4,
         5,
@@ -795,7 +795,7 @@
       "en": "Derek",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2,
         3,
         4,
@@ -811,7 +811,7 @@
       "en": "Tom",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2,
         3,
         5,
@@ -823,7 +823,7 @@
       "en": "Maya",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2,
         3,
         5,
@@ -836,7 +836,7 @@
       "en": "Hana",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2,
         3,
         5,
@@ -847,7 +847,7 @@
       "en": "Priya",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2,
         4,
         5,
@@ -859,7 +859,7 @@
       "en": "Sofia",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2,
         3,
         4,
@@ -872,7 +872,7 @@
       "en": "VP",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         4,
         5
       ]
@@ -881,7 +881,7 @@
       "en": "Senior PM",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         9
       ]
     }

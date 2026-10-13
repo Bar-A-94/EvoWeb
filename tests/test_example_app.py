@@ -25,11 +25,11 @@ def test_every_request_has_generation_and_judge_artifacts():
     names, _ = names_and_result()
     assert f"{APP}/README.md" in names
     for t in range(1, 11):
-        turn = f"{APP}/" + ("" if t == 1 else f"turn{t}/")
-        assert f"{turn}generation/trajectory.jsonl" in names, turn
-        assert f"{turn}generation/workspace/package.json" in names, turn
-        sessions = {n.split("/")[-2] for n in names if n.startswith(f"{turn}eval/results/")}
-        assert sessions, turn
+        req_dir = f"{APP}/" + ("" if t == 1 else f"turn{t}/")
+        assert f"{req_dir}generation/trajectory.jsonl" in names, req_dir
+        assert f"{req_dir}generation/workspace/package.json" in names, req_dir
+        sessions = {n.split("/")[-2] for n in names if n.startswith(f"{req_dir}eval/results/")}
+        assert sessions, req_dir
         for s in sessions:
-            assert f"{turn}eval/results/{s}/interact_messages.json" in names, s
-            assert any(n.startswith(f"{turn}eval/results/{s}/screenshot") for n in names), s
+            assert f"{req_dir}eval/results/{s}/interact_messages.json" in names, s
+            assert any(n.startswith(f"{req_dir}eval/results/{s}/screenshot") for n in names), s

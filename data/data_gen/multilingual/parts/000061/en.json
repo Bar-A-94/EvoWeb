@@ -129,8 +129,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 1,
+     "kind": "backward",
+     "copied_from_request": 1,
      "task": "Open the leaderboard from the main screen.",
      "expected_result": "Players are listed with their scores in descending order, highest first.",
      "task_category": {
@@ -197,8 +197,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "In the Avatar Studio, type 'greengreta' into the nickname field.",
      "expected_result": "The name is rejected as already taken even though it's typed in lowercase, and saving stays blocked with a friendly message.",
      "task_category": {
@@ -265,8 +265,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "Open the My Journey page and look at the overall accuracy stat.",
      "expected_result": "It reads 80.6% — computed as 58 correct out of 72 total items across the six seeded rounds, not 78.2% (the average of the per-round percentages).",
      "task_category": {
@@ -333,8 +333,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "In the Avatar Studio, click a different animal and then a different accessory without saving.",
      "expected_result": "The big preview updates immediately after each click, showing the newly chosen animal and accessory.",
      "task_category": {
@@ -400,8 +400,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 4,
+     "kind": "backward",
+     "copied_from_request": 4,
      "task": "Open the Recycle City map fresh.",
      "expected_result": "Park, Kitchen and School are open while Factory is the only locked spot — School counts as open because a Kitchen round hit 250 pts, even though School has never been played.",
      "task_category": {
@@ -469,8 +469,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "On the My Journey page, look at the best-round spotlight.",
      "expected_result": "It shows the Kitchen Cleanup round with 260 pts and 14 of 15 correct (93.3%) — the score tie with the other 260 pts round is broken by accuracy.",
      "task_category": {
@@ -538,8 +538,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 5,
+     "kind": "backward",
+     "copied_from_request": 5,
      "task": "On the Impact Calculator, type a number into the aluminium cans box, then clear it out completely.",
      "expected_result": "The results treat the empty box as zero and show clean numbers — no NaN, blank, or frozen values.",
      "task_category": {
@@ -607,8 +607,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 6,
+     "kind": "backward",
+     "copied_from_request": 6,
      "task": "Open the Sticker Shop for the first time.",
      "expected_result": "The spendable balance shows 22 stars — only the four seeded rounds at or above three-quarters accuracy bank spendable stars (4+6+7+5, with the 9-of-12 round counting because it sits exactly on the bar), not 27 (the plain sum of all six rounds' stars) — and all five stickers are listed with none owned.",
      "task_category": {
@@ -675,8 +675,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 8,
+     "kind": "backward",
+     "copied_from_request": 8,
      "task": "Open the Challenge Builder's first step.",
      "expected_result": "The target score field comes pre-filled with 260 — the best score in the journey — not blank, zero, or the most recent round's score.",
      "task_category": {
@@ -690,149 +690,149 @@
    ]
   }
  ],
- "target_app_summary": "The little sorting game has grown into a full kids' eco-arcade. Identity and progression came first: an Avatar Studio with validated nicknames, then a My Journey stats page that logs every finished round (seeded with six exact rounds) and computes weighted accuracy, recent-form vs all-time averages, and a tie-broken best-round spotlight. On top of the journey grew a Recycle City map whose four themed spots unlock from history scores, an Impact Calculator with a lifetime counter, a star-currency Sticker Shop, a teacher-facing Challenge Builder that draws item piles from the map and pre-fills targets from the journey, and a dedup-collectible Fact Card Album banked by spot visits. A Deep Sea Rescue restyle swept the game, map, journey and shop, and everything converges in an Eco Hero Certificate maker that renders the buddy, stars, best round, sticker count and fact completion in a live preview plus copyable text block. The graph is journey-centric: T3 feeds T4, T5, T6, T8, T9 and T10, with a four-deep chain T1-T3-T4-T9-T10.",
+ "target_app_summary": "The little sorting game has grown into a full kids' eco-arcade. Identity and progression came first: an Avatar Studio with validated nicknames, then a My Journey stats page that logs every finished round (seeded with six exact rounds) and computes weighted accuracy, recent-form vs all-time averages, and a tie-broken best-round spotlight. On top of the journey grew a Recycle City map whose four themed spots unlock from history scores, an Impact Calculator with a lifetime counter, a star-currency Sticker Shop, a teacher-facing Challenge Builder that draws item piles from the map and pre-fills targets from the journey, and a dedup-collectible Fact Card Album banked by spot visits. A Deep Sea Rescue restyle swept the game, map, journey and shop, and everything converges in an Eco Hero Certificate maker that renders the buddy, stars, best round, sticker count and fact completion in a live preview plus copyable text block. The graph is journey-centric: R3 feeds R4, R5, R6, R8, R9 and R10, with a four-deep chain R1-R3-R4-R9-R10.",
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "Avatar Studio",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "My Journey dashboard",
     "archetype": "derived-state"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "Recycle City map",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "Impact Calculator",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "Sticker Shop",
     "archetype": "derived-state"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "Deep Sea restyle",
     "archetype": "design-restyle"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "Challenge Builder",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "Fact Card Album",
     "archetype": "derived-state"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "Certificate Maker",
     "archetype": "multi-surface-workflow"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T2",
+    "from": "R1",
+    "to": "R2",
     "what": "leaderboard page hosts the saved buddy profile"
    },
    {
-    "from": "T1",
-    "to": "T3",
+    "from": "R1",
+    "to": "R3",
     "what": "finished games log rounds into the journey"
    },
    {
-    "from": "T1",
-    "to": "T4",
+    "from": "R1",
+    "to": "R4",
     "what": "each map spot runs the core tap-to-sort game"
    },
    {
-    "from": "T3",
-    "to": "T4",
+    "from": "R3",
+    "to": "R4",
     "what": "spot unlocks judged from journey round scores; spot rounds log there"
    },
    {
-    "from": "T3",
-    "to": "T5",
+    "from": "R3",
+    "to": "R5",
     "what": "lifetime correct-sorts counter from journey history"
    },
    {
-    "from": "T3",
-    "to": "T6",
+    "from": "R3",
+    "to": "R6",
     "what": "spendable balance = stars from three-quarters-accurate journey rounds minus spends"
    },
    {
-    "from": "T1",
-    "to": "T7",
+    "from": "R1",
+    "to": "R7",
     "what": "restyles the game screen"
    },
    {
-    "from": "T3",
-    "to": "T7",
+    "from": "R3",
+    "to": "R7",
     "what": "restyles My Journey"
    },
    {
-    "from": "T4",
-    "to": "T7",
+    "from": "R4",
+    "to": "R7",
     "what": "restyles the city map"
    },
    {
-    "from": "T6",
-    "to": "T7",
+    "from": "R6",
+    "to": "R7",
     "what": "restyles the Sticker Shop"
    },
    {
-    "from": "T4",
-    "to": "T8",
+    "from": "R4",
+    "to": "R8",
     "what": "builder uses the map spots' item piles"
    },
    {
-    "from": "T3",
-    "to": "T8",
+    "from": "R3",
+    "to": "R8",
     "what": "target pre-fills from journey best; challenges log to journey"
    },
    {
-    "from": "T3",
-    "to": "T9",
+    "from": "R3",
+    "to": "R9",
     "what": "seeded journey rounds (Park and Kitchen spots) determine which cards start collected"
    },
    {
-    "from": "T4",
-    "to": "T9",
+    "from": "R4",
+    "to": "R9",
     "what": "finishing a spot's round banks that spot's fact cards"
    },
    {
-    "from": "T2",
-    "to": "T10",
+    "from": "R2",
+    "to": "R10",
     "what": "certificate stars the studio buddy (avatar + nickname)"
    },
    {
-    "from": "T3",
-    "to": "T10",
+    "from": "R3",
+    "to": "R10",
     "what": "certificate pulls stars banked and best-round spotlight"
    },
    {
-    "from": "T6",
-    "to": "T10",
+    "from": "R6",
+    "to": "R10",
     "what": "certificate shows stickers owned count"
    },
    {
-    "from": "T9",
-    "to": "T10",
+    "from": "R9",
+    "to": "R10",
     "what": "certificate shows fact-card completion"
    }
   ]
@@ -840,20 +840,20 @@
  "global_rules": [
   {
    "rule": "Kids' nicknames always display in ALL CAPS everywhere in the app, now and for anything added later.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Scores always read with a 'pts' suffix after the number (like '260 pts') everywhere in the app.",
-   "introduced_in_turn": 3
+   "introduced_in_request": 3
   },
   {
    "rule": "Anything locked, anywhere in the app now or later, shows a little padlock plus exactly what's needed to unlock it.",
-   "introduced_in_turn": 4
+   "introduced_in_request": 4
   }
  ],
  "pinned_seed": {
   "entity": "six logged game rounds in the My Journey history",
-  "introduced_in_turn": 3,
+  "introduced_in_request": 3,
   "records_gist": "oldest to newest: Park Patrol 180pts 9/12 4 stars; Kitchen Cleanup 260pts 13/15 6 stars; Park Patrol 140pts 6/10 3 stars; Kitchen Cleanup 260pts 14/15 7 stars; Park Patrol 220pts 11/12 5 stars; Park Patrol 90pts 5/8 2 stars",
   "records": [
    {

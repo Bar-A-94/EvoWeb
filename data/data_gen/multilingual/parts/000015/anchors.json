@@ -4,7 +4,7 @@
    "en": "Home",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     9,
     10
@@ -21,7 +21,7 @@
    "en": "About Us",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1,
     2
    ],
@@ -37,7 +37,7 @@
    "en": "Services",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1,
     2,
     6
@@ -54,7 +54,7 @@
    "en": "Contact Us",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1,
     2,
     10
@@ -71,7 +71,7 @@
    "en": "Meet Our Team",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -91,7 +91,7 @@
    "en": "Cost Estimator",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     9
@@ -108,7 +108,7 @@
    "en": "Plan Your Visit",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     6,
     9,
@@ -126,7 +126,7 @@
    "en": "Request an Appointment",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     7,
     9
@@ -143,7 +143,7 @@
    "en": "My Requests",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     7,
     9,
@@ -161,7 +161,7 @@
    "en": "Requests Board",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7,
     10
    ],
@@ -177,7 +177,7 @@
    "en": "Notices",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -192,7 +192,7 @@
    "en": "Pediatrics",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     6,
@@ -210,7 +210,7 @@
    "en": "Family Medicine",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     5
@@ -227,7 +227,7 @@
    "en": "Internal Medicine",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     9
@@ -244,7 +244,7 @@
    "en": "Sports Medicine",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     6
@@ -261,7 +261,7 @@
    "en": "Dermatology",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3
    ],
@@ -277,7 +277,7 @@
    "en": "medicine",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     6,
     8
    ],
@@ -293,7 +293,7 @@
    "en": "Accepting",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2
    ],
    "translations": {
@@ -308,7 +308,7 @@
    "en": "waitlist",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     5,
     7
@@ -325,7 +325,7 @@
    "en": "Pending",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     7,
     9
@@ -342,7 +342,7 @@
    "en": "Confirmed",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     7,
     9,
@@ -360,7 +360,7 @@
    "en": "Declined",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     7,
     9
@@ -377,7 +377,7 @@
    "en": "Confirm",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7,
     10
    ],
@@ -393,7 +393,7 @@
    "en": "Decline",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7
    ],
    "translations": {
@@ -408,7 +408,7 @@
    "en": "self-pay",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     5
@@ -425,7 +425,7 @@
    "en": "flu shot",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3
    ],
    "translations": {
@@ -440,7 +440,7 @@
    "en": "basic blood panel",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3
    ],
    "translations": {
@@ -455,7 +455,7 @@
    "en": "sports physical form",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3
    ],
    "translations": {
@@ -470,7 +470,7 @@
    "en": "Monday",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     5,
     6,
@@ -488,7 +488,7 @@
    "en": "Tuesday",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     4,
     6,
@@ -506,7 +506,7 @@
    "en": "Wednesday",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     5,
     6
@@ -523,7 +523,7 @@
    "en": "Thursday",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     5,
     6
@@ -540,7 +540,7 @@
    "en": "Friday",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     5,
     6,
@@ -558,7 +558,7 @@
    "en": "Saturday",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     6,
     9,
@@ -576,7 +576,7 @@
    "en": "Sunday",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     9
    ],
@@ -592,7 +592,7 @@
    "en": "Flu Shot Clinic Saturdays",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -607,7 +607,7 @@
    "en": "Holiday Closure July 3",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -622,7 +622,7 @@
    "en": "Measles Advisory",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -637,7 +637,7 @@
    "en": "New Provider Welcome",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -652,7 +652,7 @@
    "en": "Parking Lot Repaving",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -667,7 +667,7 @@
    "en": "Closure",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -682,7 +682,7 @@
    "en": "Health Alert",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -697,7 +697,7 @@
    "en": "General",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -712,7 +712,7 @@
    "en": "June",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -727,7 +727,7 @@
    "en": "July",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -742,7 +742,7 @@
    "en": "Dr.",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -758,7 +758,7 @@
    "en": "Chen",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -772,7 +772,7 @@
    "en": "Reyes",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -787,7 +787,7 @@
    "en": "Hardin",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -801,7 +801,7 @@
    "en": "Webb",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -816,7 +816,7 @@
    "en": "Natarajan",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -832,7 +832,7 @@
    "en": "Vasquez",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -846,7 +846,7 @@
    "en": "Okafor",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -858,7 +858,7 @@
    "en": "Lucy",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2
    ]
   },
@@ -866,7 +866,7 @@
    "en": "Samuel",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2
    ]
   },
@@ -874,7 +874,7 @@
    "en": "Tom",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2
    ]
   },
@@ -882,7 +882,7 @@
    "en": "Marcus",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2
    ]
   },
@@ -890,7 +890,7 @@
    "en": "Priya",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2
    ]
   },
@@ -898,7 +898,7 @@
    "en": "Elena",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2
    ]
   },
@@ -906,7 +906,7 @@
    "en": "Amara",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2
    ]
   },
@@ -914,7 +914,7 @@
    "en": "light cyan",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1,
     9
    ]
@@ -923,7 +923,7 @@
    "en": "cadet blue",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1
    ]
   },
@@ -931,7 +931,7 @@
    "en": "AM",
    "class": "keep",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     4,
     8
    ]
@@ -940,7 +940,7 @@
    "en": "PM",
    "class": "keep",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     4,
     8
    ]
@@ -949,7 +949,7 @@
    "en": "(555) 210-4477",
    "class": "keep",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     4
    ]
   },
@@ -957,7 +957,7 @@
    "en": "English",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     10
    ]
   },
@@ -965,7 +965,7 @@
    "en": "Español",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     10
    ]
   }

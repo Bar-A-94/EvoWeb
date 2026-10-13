@@ -4,7 +4,7 @@
    "en": "Haiku",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     4,
     5
@@ -21,7 +21,7 @@
    "en": "Sonnet",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     4,
     9
@@ -38,7 +38,7 @@
    "en": "Limerick",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     4,
     6
@@ -55,7 +55,7 @@
    "en": "Free Verse",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     4,
     9
@@ -72,7 +72,7 @@
    "en": "sparkle button",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     6,
@@ -90,7 +90,7 @@
    "en": "This Week's Board",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4
    ],
@@ -106,7 +106,7 @@
    "en": "Form Lab",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     5
    ],
@@ -122,7 +122,7 @@
    "en": "Certify",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     5
    ],
@@ -138,7 +138,7 @@
    "en": "form-true",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4
    ],
    "translations": {
@@ -153,7 +153,7 @@
    "en": "Contests",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     7,
     10
@@ -170,7 +170,7 @@
    "en": "Close Voting",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     10
    ],
@@ -186,7 +186,7 @@
    "en": "Poets",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6,
     7,
     8,
@@ -204,7 +204,7 @@
    "en": "Critique Corner",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8,
     10
    ],
@@ -220,7 +220,7 @@
    "en": "feedback-welcome",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -235,7 +235,7 @@
    "en": "rhythm",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -250,7 +250,7 @@
    "en": "resolved",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -265,7 +265,7 @@
    "en": "Critiqued",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -280,7 +280,7 @@
    "en": "My Anthology",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -295,7 +295,7 @@
    "en": "add-this-week's-top-three",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -310,7 +310,7 @@
    "en": "Season Laurels",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -325,7 +325,7 @@
    "en": "Publish Laurels",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -340,7 +340,7 @@
    "en": "Most Sparkled",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -355,7 +355,7 @@
    "en": "Board Champion",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -370,7 +370,7 @@
    "en": "Contest Laureate",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -385,7 +385,7 @@
    "en": "Top Critic",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -400,7 +400,7 @@
    "en": "Cinders",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -413,7 +413,7 @@
    "en": "Harbor Glass",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -426,7 +426,7 @@
    "en": "Wren Song",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -441,7 +441,7 @@
    "en": "Salt Meadow",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -453,7 +453,7 @@
    "en": "The Unsent Letter",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     8,
     10
@@ -463,7 +463,7 @@
    "en": "Juniper",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -475,7 +475,7 @@
    "en": "Night Ferry",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -487,7 +487,7 @@
    "en": "Tideline",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     5
    ]
   },
@@ -495,7 +495,7 @@
    "en": "Mara Voss",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     6,
     8
@@ -505,7 +505,7 @@
    "en": "Theo Rin",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     6,
     8
@@ -515,7 +515,7 @@
    "en": "Ivy Chen",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     6,
     8
@@ -525,7 +525,7 @@
    "en": "Priya Anand",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     6,
     8
@@ -535,7 +535,7 @@
    "en": "Lena Brook",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     5
    ]
   },
@@ -543,7 +543,7 @@
    "en": "Rhea Solano",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     8,
     10
    ]
@@ -552,7 +552,7 @@
    "en": "Sam Kade",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     8
    ]
   },
@@ -560,7 +560,7 @@
    "en": "Noor",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3
    ]
   },
@@ -568,7 +568,7 @@
    "en": "Ada",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     8
    ]
   },
@@ -576,7 +576,7 @@
    "en": "The Turning Tide",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     5,
     7
    ]
@@ -585,7 +585,7 @@
    "en": "light goldenrod",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1,
     7
    ]
@@ -594,7 +594,7 @@
    "en": "olive drab",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1,
     7,
     9

@@ -17,7 +17,7 @@ the figure options need `matplotlib` (`pip install -r requirements.txt`).
 | `python3 ablations/dag/dag_slot.py --four-group` | Grade per check type (functional / integration / global_rule / backward, x100) with the shared gate, plus the ungated RAW version | **Table 4** (via `evoweb.metrics.grade_by_type`) |
 | `python3 ablations/dag/dag_slot.py --three-group` | The same without the global-rule split | An earlier form of Table 4 |
 | `python3 ablations/dag/dag_slot.py [--figures]` | Integration slot vs the other four checks: RAW and NORM@55 per request, pairwise separations; `--figures` adds `slot_vs_rest.png`, `slot_auc_shared.png`, `slot_auc.png` | Sec. 5.1 discussion |
-| `python3 ablations/dag/dag_depth_score.py` | Request score of requests 8-10 vs DAG depth and in-degree, one colour per model: `dag_depth_score.png`, `dag_depth_score_by_request.png`, `dag_indegree_t10_fits.png`, `dag_depth_score.json` and a slope table | **Figure 4** |
+| `python3 ablations/dag/dag_depth_score.py` | Request score of requests 8-10 vs DAG depth and in-degree, one colour per model: `dag_depth_score.png`, `dag_depth_score_by_request.png`, `dag_indegree_r10_fits.png`, `dag_depth_score.json` and a slope table | **Figure 4** |
 | `python3 ablations/dag/output_tokens_by_step.py [--json PATH] [--png PATH]` | Output tokens per agent step (mean +- std, request counts) from the released per-request `model_calls.jsonl` | **Figure 3c** is the cumulative version |
 | `python3 ablations/dag/judge_steps_dag.py --logs-root DIR [--by-verdict]` | Judge iterations per check, by check type, from the judge transcripts (`<run-id>/<app>/turnN/eval/results/task*/agent.log`) | Sec. 5.1 / App. D discussion |
 
@@ -28,13 +28,13 @@ models print `--`.
 
 ## Check types
 
-Every follow-up request (T2-T10) carries five judge checks, by slot (`task_idx`):
+Every follow-up request (R2-R10) carries five judge checks, by slot (`task_idx`):
 
 | slot | type | what it tests |
 |---|---|---|
 | 0-2 | functional | the request's own feature (exact values, behaviour) |
 | 3 | integration | the DAG's own check: the new feature composed with an earlier request's |
-| 4 | backward | a regression check on an earlier feature |
+| 4 | backward | a check copied from an earlier request, re-testing its feature |
 
 When a request has no incoming DAG edge, slot 3 has nothing to integrate with and checks one of
 the app's global rules instead; `dag_global_rule_checks.py` lists those 18 requests and every

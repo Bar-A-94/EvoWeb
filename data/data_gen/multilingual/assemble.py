@@ -30,8 +30,8 @@ def apply(row: dict, part: dict) -> dict:
     for e in part.get("task_edits", []):
         tasks = (
             out["ui_instruct"]
-            if e["turn"] == 1
-            else out["follow_ups"][e["turn"] - 2]["ui_instruct"]
+            if e["request"] == 1
+            else out["follow_ups"][e["request"] - 2]["ui_instruct"]
         )
         tasks[e["task_index"]]["task"] = e["task"]
         tasks[e["task_index"]]["expected_result"] = e["expected_result"]

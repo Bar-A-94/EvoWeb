@@ -126,7 +126,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the site and watch the offers area without clicking anything.",
      "expected_result": "The offers carousel advances to the next offer on its own after a few seconds.",
      "task_category": {
@@ -135,7 +135,7 @@
        "Dynamic Content Rendering"
       ]
      },
-     "copied_from_turn": 1
+     "copied_from_request": 1
     }
    ]
   },
@@ -194,7 +194,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Scroll to the Supporter Wall and look for Maria Alvarez.",
      "expected_result": "Maria Alvarez appears exactly once with a combined total of $550 and a Gold badge — not as two separate gift entries.",
      "task_category": {
@@ -204,7 +204,7 @@
        "Dynamic Content Rendering"
       ]
      },
-     "copied_from_turn": 2
+     "copied_from_request": 2
     }
    ]
   },
@@ -262,7 +262,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "On the pledge form, click the $50 tier and check the fee-cover checkbox.",
      "expected_result": "Before submitting anything, the summary updates live to show a $1.75 processing fee and a $51.75 total.",
      "task_category": {
@@ -272,7 +272,7 @@
        "Form Interaction"
       ]
      },
-     "copied_from_turn": 3
+     "copied_from_request": 3
     }
    ]
   },
@@ -330,7 +330,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the Campaign Pulse dashboard.",
      "expected_result": "The total raised reads $2,040 and the progress toward the $8,000 goal shows 25.5% (not a rounded 25% or 26%).",
      "task_category": {
@@ -340,7 +340,7 @@
        "Details Information"
       ]
      },
-     "copied_from_turn": 4
+     "copied_from_request": 4
     }
    ]
   },
@@ -398,7 +398,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Scroll to the Supporter Wall and look for Maria Alvarez.",
      "expected_result": "Maria Alvarez appears exactly once with a combined total of $550 and a Gold badge — not as two separate gift entries.",
      "task_category": {
@@ -408,7 +408,7 @@
        "Dynamic Content Rendering"
       ]
      },
-     "copied_from_turn": 2
+     "copied_from_request": 2
     }
    ]
   },
@@ -467,7 +467,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Add Silent Auction Preview and Donor Lunch to the plan and open the review.",
      "expected_result": "No overlap is flagged — one ends at 12:30 PM exactly as the other starts — and the plan can be confirmed with both sessions.",
      "task_category": {
@@ -477,7 +477,7 @@
        "Workflow Completion"
       ]
      },
-     "copied_from_turn": 5
+     "copied_from_request": 5
     }
    ]
   },
@@ -534,7 +534,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "In the partner directory, check the Clean Water and Education cause boxes and set the region to North.",
      "expected_result": "Exactly two partners remain: Clearwater Trust and ReadRight Alliance — either checked cause counts, but both results are in the North.",
      "task_category": {
@@ -544,7 +544,7 @@
        "Search & Filter"
       ]
      },
-     "copied_from_turn": 6
+     "copied_from_request": 6
     }
    ]
   },
@@ -603,7 +603,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "On the Supporter Wall, find Priya Shah and Lena Fischer.",
      "expected_result": "Priya Shah shows a Gold badge at exactly $500 and Lena Fischer shows a Silver badge at exactly $100 — the tier thresholds include the boundary amounts.",
      "task_category": {
@@ -612,7 +612,7 @@
        "Details Information"
       ]
      },
-     "copied_from_turn": 2
+     "copied_from_request": 2
     }
    ]
   },
@@ -671,7 +671,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open Share Studio and click the progress template button.",
      "expected_result": "The generated message includes $2,040 and 25.5% — the live campaign numbers, not placeholders.",
      "task_category": {
@@ -681,7 +681,7 @@
        "Data Consistency"
       ]
      },
-     "copied_from_turn": 7
+     "copied_from_request": 7
     }
    ]
   }
@@ -690,120 +690,120 @@
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "Supporter wall",
     "archetype": "derived-state"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "Pledge builder",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "Campaign dashboard",
     "archetype": "derived-state"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "Day schedule planner",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "Partner directory",
     "archetype": "derived-state"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "Share studio",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "Updates hub",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "Visual refresh",
     "archetype": "design-restyle"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "Impact report",
     "archetype": "derived-state"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T2",
+    "from": "R1",
+    "to": "R2",
     "what": "wall section embeds into the one-page layout below testimonials"
    },
    {
-    "from": "T1",
-    "to": "T3",
+    "from": "R1",
+    "to": "R3",
     "what": "homepage offer tiers become the pledge form's entry points"
    },
    {
-    "from": "T2",
-    "to": "T3",
+    "from": "R2",
+    "to": "R3",
     "what": "pledges fold into wall entries and cumulative tier badges"
    },
    {
-    "from": "T2",
-    "to": "T4",
+    "from": "R2",
+    "to": "R4",
     "what": "dashboard aggregates the wall's gift records"
    },
    {
-    "from": "T3",
-    "to": "T4",
+    "from": "R3",
+    "to": "R4",
     "what": "new pledges update totals and leaderboard live"
    },
    {
-    "from": "T4",
-    "to": "T7",
+    "from": "R4",
+    "to": "R7",
     "what": "templates insert the dashboard's live computed stats"
    },
    {
-    "from": "T2",
-    "to": "T10",
+    "from": "R2",
+    "to": "R10",
     "what": "per-cause totals from wall gift records"
    },
    {
-    "from": "T3",
-    "to": "T10",
+    "from": "R3",
+    "to": "R10",
     "what": "cause-tagged pledges move impact unit counts"
    },
    {
-    "from": "T4",
-    "to": "T10",
+    "from": "R4",
+    "to": "R10",
     "what": "report grand total reconciles with dashboard total"
    },
    {
-    "from": "T1",
-    "to": "T9",
+    "from": "R1",
+    "to": "R9",
     "what": "restyles homepage offers/buttons/headings"
    },
    {
-    "from": "T2",
-    "to": "T9",
+    "from": "R2",
+    "to": "R9",
     "what": "restyles tier badges and wall cards"
    },
    {
-    "from": "T4",
-    "to": "T9",
+    "from": "R4",
+    "to": "R9",
     "what": "restyles dashboard headings and dollar figures"
    },
    {
-    "from": "T6",
-    "to": "T9",
+    "from": "R6",
+    "to": "R9",
     "what": "restyles partner cards and directory controls"
    }
   ]
@@ -811,20 +811,20 @@
  "global_rules": [
   {
    "rule": "Every dollar figure anywhere in the app is written with a $ sign and comma thousands separators (e.g. $1,255).",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Any ranking of people or teams anywhere in the app breaks ties alphabetically.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Wherever a cause appears in the app it is shown as a colored chip: Clean Water steel blue, Education plum purple, Food Relief olive green.",
-   "introduced_in_turn": 3
+   "introduced_in_request": 3
   }
  ],
  "pinned_seed": {
   "entity": "8 donor gifts (7 unique supporters) on the supporter wall",
-  "introduced_in_turn": 2,
+  "introduced_in_request": 2,
   "records_gist": "Maria Alvarez $250 + $300 (River Runners, Clean Water), James O'Neil $145 (Bright Sparks, Education), Priya Shah $500 (Bright Sparks, Education), Tom Becker $95 (River Runners, Food Relief), Lena Fischer $100 (Green Hearts, Food Relief), Sam Waters $40 (Green Hearts, Clean Water), Dana Cole $610 (Green Hearts, Education); total $2,040, team tie RR=BS=$645"
  }
 }

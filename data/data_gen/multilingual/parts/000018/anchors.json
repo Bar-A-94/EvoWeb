@@ -4,7 +4,7 @@
       "en": "Home",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         1
       ],
       "translations": {
@@ -19,7 +19,7 @@
       "en": "Services",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         1
       ],
       "translations": {
@@ -34,7 +34,7 @@
       "en": "Book Now",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         1
       ],
       "translations": {
@@ -49,7 +49,7 @@
       "en": "Contact Us",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         1
       ],
       "translations": {
@@ -64,7 +64,7 @@
       "en": "service status",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         1,
         7,
         10
@@ -81,7 +81,7 @@
       "en": "Instant Quote",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         2
       ],
       "translations": {
@@ -96,7 +96,7 @@
       "en": "enter a valid number",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         2
       ],
       "translations": {
@@ -111,7 +111,7 @@
       "en": "Certificates",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         3,
         4,
         7
@@ -128,7 +128,7 @@
       "en": "unredeemed",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         3,
         4
       ],
@@ -144,7 +144,7 @@
       "en": "Enjoy a spotless kitchen!",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         3
       ],
       "translations": {
@@ -159,7 +159,7 @@
       "en": "Reviews",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         4,
         6,
         9,
@@ -177,7 +177,7 @@
       "en": "Compare Packages",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         6,
         8
       ],
@@ -193,7 +193,7 @@
       "en": "Central",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         5
       ],
       "translations": {
@@ -208,7 +208,7 @@
       "en": "North",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         5
       ],
       "translations": {
@@ -223,7 +223,7 @@
       "en": "South",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         5,
         7
       ],
@@ -239,7 +239,7 @@
       "en": "travel fee",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         5,
         7
       ],
@@ -255,7 +255,7 @@
       "en": "ZIP",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         5,
         7
       ],
@@ -271,7 +271,7 @@
       "en": "service-area checker",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         5,
         7
       ],
@@ -287,7 +287,7 @@
       "en": "Book this quote",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         7
       ],
       "translations": {
@@ -302,7 +302,7 @@
       "en": "confirmed",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         7
       ],
       "translations": {
@@ -317,7 +317,7 @@
       "en": "Plans",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         8,
         9,
         10
@@ -334,7 +334,7 @@
       "en": "Weekly",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         8,
         10
       ],
@@ -350,7 +350,7 @@
       "en": "Biweekly",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         8
       ],
       "translations": {
@@ -365,7 +365,7 @@
       "en": "Monthly",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         8
       ],
       "translations": {
@@ -380,7 +380,7 @@
       "en": "Enroll",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         8
       ],
       "translations": {
@@ -395,7 +395,7 @@
       "en": "Business Snapshot",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         10
       ],
       "translations": {
@@ -410,7 +410,7 @@
       "en": "booked revenue",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         10
       ],
       "translations": {
@@ -425,7 +425,7 @@
       "en": "outstanding gift balance",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         10
       ],
       "translations": {
@@ -440,7 +440,7 @@
       "en": "Quick Tidy",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2,
         4,
         5,
@@ -453,7 +453,7 @@
       "en": "Sparkle Standard",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2,
         4,
         5,
@@ -466,7 +466,7 @@
       "en": "Eco Fresh",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2,
         3,
         4,
@@ -479,7 +479,7 @@
       "en": "Office Refresh",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2,
         6,
         8
@@ -489,7 +489,7 @@
       "en": "Deep Shine",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2,
         3,
         4,
@@ -504,7 +504,7 @@
       "en": "Move-Out Master",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2,
         6,
         7
@@ -514,7 +514,7 @@
       "en": "Hannah",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         3,
         4
       ]
@@ -523,7 +523,7 @@
       "en": "Omar",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         3
       ]
     },
@@ -531,7 +531,7 @@
       "en": "Dana",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         4,
         6
       ]
@@ -540,7 +540,7 @@
       "en": "Priya",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         4,
         6
       ]
@@ -549,7 +549,7 @@
       "en": "Marcus",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         4
       ]
     },
@@ -557,7 +557,7 @@
       "en": "Elena",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         4,
         6
       ]
@@ -566,7 +566,7 @@
       "en": "Tom",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         4
       ]
     },
@@ -574,7 +574,7 @@
       "en": "Aisha",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         4,
         6
       ]
@@ -583,7 +583,7 @@
       "en": "Leo",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         4,
         6
       ]
@@ -592,7 +592,7 @@
       "en": "Grace",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         4
       ]
     },
@@ -600,7 +600,7 @@
       "en": "Rosa",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         7,
         10
       ]
@@ -609,7 +609,7 @@
       "en": "Ben",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         7,
         10
       ]
@@ -618,7 +618,7 @@
       "en": "Nina",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         10
       ]
     },
@@ -626,7 +626,7 @@
       "en": "GIFT-2201",
       "class": "keep",
       "kind": "tech",
-      "turns": [
+      "requests": [
         3,
         4,
         7,
@@ -638,7 +638,7 @@
       "en": "GIFT-2214",
       "class": "keep",
       "kind": "tech",
-      "turns": [
+      "requests": [
         3
       ]
     },
@@ -646,7 +646,7 @@
       "en": "azure mist",
       "class": "keep",
       "kind": "css_visual",
-      "turns": [
+      "requests": [
         1
       ]
     },
@@ -654,7 +654,7 @@
       "en": "dark slate blue",
       "class": "keep",
       "kind": "css_visual",
-      "turns": [
+      "requests": [
         1,
         9
       ]
@@ -663,7 +663,7 @@
       "en": "deep teal",
       "class": "keep",
       "kind": "css_visual",
-      "turns": [
+      "requests": [
         9
       ]
     },
@@ -671,7 +671,7 @@
       "en": "golden yellow",
       "class": "keep",
       "kind": "css_visual",
-      "turns": [
+      "requests": [
         9
       ]
     },
@@ -679,7 +679,7 @@
       "en": "light-gray",
       "class": "keep",
       "kind": "css_visual",
-      "turns": [
+      "requests": [
         9
       ]
     },
@@ -687,7 +687,7 @@
       "en": "3h 15m",
       "class": "keep",
       "kind": "value_format",
-      "turns": [
+      "requests": [
         2,
         3,
         7
@@ -697,7 +697,7 @@
       "en": "2h 45m",
       "class": "keep",
       "kind": "value_format",
-      "turns": [
+      "requests": [
         2
       ]
     },
@@ -705,7 +705,7 @@
       "en": "2h 15m",
       "class": "keep",
       "kind": "value_format",
-      "turns": [
+      "requests": [
         2,
         5
       ]
@@ -714,7 +714,7 @@
       "en": "1h 30m",
       "class": "keep",
       "kind": "value_format",
-      "turns": [
+      "requests": [
         6,
         8
       ]
@@ -723,7 +723,7 @@
       "en": "Jun 14",
       "class": "keep",
       "kind": "value_format",
-      "turns": [
+      "requests": [
         4
       ]
     },
@@ -731,7 +731,7 @@
       "en": "Jun 10",
       "class": "keep",
       "kind": "value_format",
-      "turns": [
+      "requests": [
         4
       ]
     },
@@ -739,7 +739,7 @@
       "en": "Jun 8",
       "class": "keep",
       "kind": "value_format",
-      "turns": [
+      "requests": [
         4
       ]
     },
@@ -747,7 +747,7 @@
       "en": "Jun 5",
       "class": "keep",
       "kind": "value_format",
-      "turns": [
+      "requests": [
         4
       ]
     },
@@ -755,7 +755,7 @@
       "en": "Jun 1",
       "class": "keep",
       "kind": "value_format",
-      "turns": [
+      "requests": [
         4
       ]
     },
@@ -763,7 +763,7 @@
       "en": "May 28",
       "class": "keep",
       "kind": "value_format",
-      "turns": [
+      "requests": [
         4
       ]
     },
@@ -771,7 +771,7 @@
       "en": "Jul 12",
       "class": "keep",
       "kind": "value_format",
-      "turns": [
+      "requests": [
         7
       ]
     },
@@ -779,7 +779,7 @@
       "en": "Jul 19",
       "class": "keep",
       "kind": "value_format",
-      "turns": [
+      "requests": [
         7
       ]
     },
@@ -787,7 +787,7 @@
       "en": "9:00 AM",
       "class": "keep",
       "kind": "value_format",
-      "turns": [
+      "requests": [
         7
       ]
     },
@@ -795,7 +795,7 @@
       "en": "12:30 PM",
       "class": "keep",
       "kind": "value_format",
-      "turns": [
+      "requests": [
         7
       ]
     },
@@ -803,7 +803,7 @@
       "en": "3:00 PM",
       "class": "keep",
       "kind": "value_format",
-      "turns": [
+      "requests": [
         7
       ]
     }

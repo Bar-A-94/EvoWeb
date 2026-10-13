@@ -140,8 +140,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 1,
+     "kind": "backward",
+     "copied_from_request": 1,
      "task": "Use the product registration form to register a product named Test Widget and submit it.",
      "expected_result": "A confirmation appears showing the product was registered along with a unique product ID assigned to it.",
      "task_category": {
@@ -207,8 +207,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "Open the Lots page and find the LOT-COF-01 card.",
      "expected_result": "LOT-COF-01 shows 3 member products and its rolled-up status reads Flagged with a red status pill - one flagged member (PT-1003) makes the whole lot Flagged even though its other two members are In Transit and Delivered.",
      "task_category": {
@@ -276,8 +276,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "Paste the single line 'PT-1004, Delivered, Hamburg Hub, 2026-04-05' into the bulk importer's paste box.",
      "expected_result": "The line is marked invalid with a reason saying the date is earlier than PT-1004's latest journey event (its Rotterdam Port arrival on Apr 10, 2026), the running tally shows 0 valid and 1 invalid, and importing commits nothing.",
      "task_category": {
@@ -344,8 +344,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "Open the Lots page on a freshly loaded app and read the order of the lot cards from top to bottom.",
      "expected_result": "Exactly three lot cards appear ordered LOT-TEA-02, then LOT-COF-01, then LOT-CAC-03 - most recent journey activity first (Apr 15, Mar 20, Mar 1 2026 respectively), not alphabetical order and not the order the lots were entered.",
      "task_category": {
@@ -410,8 +410,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 4,
+     "kind": "backward",
+     "copied_from_request": 4,
      "task": "Open the Scan Monitor with the threshold box at its default of 2 and check which products carry the suspicious flag.",
      "expected_result": "Exactly PT-1003 and PT-1006 are flagged suspicious (4 scans within Mar 9-11 and 3 scans within Feb 20-22 respectively); PT-1001 is NOT flagged even though it has 3 lifetime scans, because they are spread a month apart - no 7-day stretch holds more than 2.",
      "task_category": {
@@ -479,8 +479,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 5,
+     "kind": "backward",
+     "copied_from_request": 5,
      "task": "Start a recall on LOT-CAC-03, confirm it on the review screen, then mark PT-1006 as retrieved and then PT-1007 as retrieved.",
      "expected_result": "After the first tick the recall shows 1 of 2 retrieved and stays open; the moment PT-1007 is ticked it reads 2 of 2 and the recall automatically closes as Completed, while both products still show status Recalled.",
      "task_category": {
@@ -547,8 +547,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 6,
+     "kind": "backward",
+     "copied_from_request": 6,
      "task": "Open the product registration page and then the Scan Monitor page.",
      "expected_result": "Both pages show the shared skin: a left-aligned page title with a short firebrick underline bar, primary buttons as firebrick pills with white text, product IDs in a monospace face on the monitor, all on the misty rose background.",
      "task_category": {
@@ -614,8 +614,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 7,
+     "kind": "backward",
+     "copied_from_request": 7,
      "task": "Open the Chain Audit page on a freshly loaded app and read every issue it lists.",
      "expected_result": "Exactly two issues appear: PT-1005 and PT-1007, each cited for a Delivered event with no Shipped leg before it (PT-1005's Osaka Depot delivery on Apr 15, 2026 and PT-1007's Antwerp Hub delivery on Mar 1, 2026); PT-1003 is NOT listed even though its status is Flagged - a flag is not a custody gap - and the other four products audit clean.",
      "task_category": {
@@ -683,8 +683,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 8,
+     "kind": "backward",
+     "copied_from_request": 8,
      "task": "On the Screener, tick both the Delivered and In Transit status checkboxes and pick Bogota in the origin picker.",
      "expected_result": "Exactly PT-1001 and PT-1002 remain in the results (any-of across the two ticked statuses, and-ed with the origin), and the live counter reads 2 of 7 products.",
      "task_category": {
@@ -702,160 +702,160 @@
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "Lot grouping & rollups",
     "archetype": "derived-state"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "Bulk event importer",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "Scan burst monitor",
     "archetype": "derived-state"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "Lot recall workflow",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "Unified brand restyle",
     "archetype": "design-restyle"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "Chain integrity audit",
     "archetype": "derived-state"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "Registry screener & presets",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "Counterfeit investigations",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "Checkpoint analytics",
     "archetype": "derived-state"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T2",
+    "from": "R1",
+    "to": "R2",
     "what": "product statuses and journey events feed lot rollups"
    },
    {
-    "from": "T1",
-    "to": "T3",
+    "from": "R1",
+    "to": "R3",
     "what": "importer appends events to product journeys and statuses"
    },
    {
-    "from": "T2",
-    "to": "T3",
+    "from": "R2",
+    "to": "R3",
     "what": "imported Flagged event flips the lot rollup"
    },
    {
-    "from": "T1",
-    "to": "T4",
+    "from": "R1",
+    "to": "R4",
     "what": "verification checks logged as scans"
    },
    {
-    "from": "T2",
-    "to": "T5",
+    "from": "R2",
+    "to": "R5",
     "what": "lot membership defines recall scope and counts"
    },
    {
-    "from": "T1",
-    "to": "T5",
+    "from": "R1",
+    "to": "R5",
     "what": "recall flips statuses shown in registry and inquiry"
    },
    {
-    "from": "T1",
-    "to": "T6",
+    "from": "R1",
+    "to": "R6",
     "what": "restyles registration page"
    },
    {
-    "from": "T2",
-    "to": "T6",
+    "from": "R2",
+    "to": "R6",
     "what": "restyles Lots page"
    },
    {
-    "from": "T3",
-    "to": "T6",
+    "from": "R3",
+    "to": "R6",
     "what": "restyles bulk importer"
    },
    {
-    "from": "T4",
-    "to": "T6",
+    "from": "R4",
+    "to": "R6",
     "what": "restyles Scan Monitor"
    },
    {
-    "from": "T5",
-    "to": "T6",
+    "from": "R5",
+    "to": "R6",
     "what": "restyles Recalls page"
    },
    {
-    "from": "T1",
-    "to": "T7",
+    "from": "R1",
+    "to": "R7",
     "what": "journey event sequences audited for custody gaps"
    },
    {
-    "from": "T2",
-    "to": "T7",
+    "from": "R2",
+    "to": "R7",
     "what": "issues grouped and ranked per lot"
    },
    {
-    "from": "T3",
-    "to": "T7",
+    "from": "R3",
+    "to": "R7",
     "what": "imported events re-audited the moment they commit"
    },
    {
-    "from": "T1",
-    "to": "T8",
+    "from": "R1",
+    "to": "R8",
     "what": "screener filters the product registry"
    },
    {
-    "from": "T2",
-    "to": "T8",
+    "from": "R2",
+    "to": "R8",
     "what": "lot picker dimension from lot grouping"
    },
    {
-    "from": "T1",
-    "to": "T9",
+    "from": "R1",
+    "to": "R9",
     "what": "ID validation and Flagged status flip in registry"
    },
    {
-    "from": "T4",
-    "to": "T9",
+    "from": "R4",
+    "to": "R9",
     "what": "scan history shown as investigation evidence"
    },
    {
-    "from": "T2",
-    "to": "T9",
+    "from": "R2",
+    "to": "R9",
     "what": "lot rollup flips on counterfeit confirmation"
    },
    {
-    "from": "T1",
-    "to": "T10",
+    "from": "R1",
+    "to": "R10",
     "what": "aggregates journey events by location"
    },
    {
-    "from": "T3",
-    "to": "T10",
+    "from": "R3",
+    "to": "R10",
     "what": "imported events and new locations feed checkpoint rollup"
    }
   ]
@@ -863,20 +863,20 @@
  "global_rules": [
   {
    "rule": "Product IDs are always displayed in the PT-#### style everywhere in the app",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Statuses always render as colored pills: green for Delivered, amber for In Transit, red for Flagged or Recalled, on every surface",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "All dates display in written 'Mon D, YYYY' style (e.g. Apr 20, 2026), never numeric slash formats",
-   "introduced_in_turn": 3
+   "introduced_in_request": 3
   }
  ],
  "pinned_seed": {
   "entity": "7 traced products across 3 lots with full journey events",
-  "introduced_in_turn": 2,
+  "introduced_in_request": 2,
   "records_gist": "PT-1001..PT-1007 in LOT-COF-01/LOT-TEA-02/LOT-CAC-03; statuses In Transit/Delivered/Flagged; events Feb 10-Apr 15 2026 incl. double Rotterdam Port visit (PT-1001) and same-day Hanoi events (PT-1003)"
  }
 }

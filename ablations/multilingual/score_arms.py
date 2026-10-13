@@ -4,7 +4,7 @@
 The user writes in another language, the app stays in English: each arm ran on
 data/multilingual/evoweb_benchmark_<lang>.jsonl (translated request text, English UI mandate, the untouched
 English judge tasks) with the model's Table 2 sampling. Scored with the shared `evoweb.scoring` module -- the same avg_raw / avg_norm and the
-two 1%-step gate sweeps (Grade = norm AUC / 100, Survival = turns AUC) as Table 2. n=1 per
+two 1%-step gate sweeps (Grade = norm AUC / 100, Survival = requests-survived AUC) as Table 2. n=1 per
 arm; the English reference is the model's Table 2 row.
 
 Usage (from anywhere):
@@ -32,7 +32,7 @@ def score_arm(ladders, expected):
         "auc_norm": s["auc_norm"],
         "auc_turns": s["auc_turns"],
         "grade": s["grade"],
-        "mean_depth": sum(metrics.turns_before_gate(b, 0.0001) for b in ladders.values())
+        "mean_depth": sum(metrics.requests_before_gate(b, 0.0001) for b in ladders.values())
         / len(ladders),
     }
 

@@ -59,7 +59,7 @@ def launch(
         str(task_file),
         "--trajectory",
         str(out / TRAJECTORY),
-        # Beside the workspace, not inside it: the conversation has to survive every turn of a
+        # Beside the workspace, not inside it: the conversation has to survive every request of a
         # ladder, and anything written into the workspace becomes part of the app under test.
         "--history-file",
         str(workspace.parent / f"history_{workspace.name}.json"),

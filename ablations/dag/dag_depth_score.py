@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Does the DAG's structure add difficulty? Request score vs DAG depth / in-degree, T8-T10.
+"""Does the DAG's structure add difficulty? Request score vs DAG depth / in-degree, R8-R10.
 
 For every app and every follow-up request t, the dependency_graph gives two structural
 measures of how much earlier work the request leans on:
-    depth      longest dependency chain ending at T{t} (T1 = 0; a request with no incoming
+    depth      longest dependency chain ending at R{t} (R1 = 0; a request with no incoming
                edge also has depth 0), i.e. the node's depth in the DAG
-    in-degree  number of incoming edges (how many earlier features T{t} must compose with)
+    in-degree  number of incoming edges (how many earlier features R{t} must compose with)
 The request score is the ungated grade of that request: mean verdict weight (yes 1,
 partial 0.5, no 0) over its five checks, for the runs in which it was judged. Restricting to
 requests 8, 9 and 10 holds the context length roughly fixed, so what is left of the trend is
@@ -22,7 +22,7 @@ Usage (from anywhere):
     python3 ablations/dag/dag_depth_score.py     # ARTIFACTS/dag_depth_score.png + slope table
                                                  # + dag_depth_score_by_request.png (one row per
                                                  #   request 8, 9, 10 and a pooled 8-10 row)
-                                                 # + dag_indegree_t10_fits.png (request 10 vs
+                                                 # + dag_indegree_r10_fits.png (request 10 vs
                                                  #   in-degree, weighted fit lines only)
                                                  # + dag_depth_score.json (the plotted data)
 """
@@ -64,12 +64,12 @@ def _runs(model):
 
 
 def request_scores(model):
-    """{(app_index, turn): [score per run in which the turn was judged]}."""
+    """{(app_index, request): [score per run in which the request was judged]}."""
     return metrics.request_scores(_runs(model), REQUESTS)
 
 
 def points(model, struct, axis):
-    """{turn: {x: (mean score, n apps)}} for one model on one structural axis.
+    """{request: {x: (mean score, n apps)}} for one model on one structural axis.
 
     `struct` is accepted for the callers' convenience; `metrics.dag_points` derives the same
     structure from the dataset rows."""
@@ -80,13 +80,13 @@ def grid_figure(struct, models, color, out):
     """4 rows (request 8, 9, 10, pooled 8-10) x 2 panels (depth, in-degree)."""
     fig, axes = plt.subplots(4, 2, figsize=(14, 19), sharey=True)
     rows = [((t,), f"request {t}") for t in REQUESTS] + [(REQUESTS, "requests 8-10 pooled")]
-    for r, (turns, label) in enumerate(rows):
+    for r, (reqs, label) in enumerate(rows):
         for c, (axis, xlabel) in enumerate((("depth", "DAG depth"), ("indeg", "in-degree"))):
             ax = axes[r][c]
             for m in models:
                 pts = points(m, struct, axis)
-                bucket = defaultdict(list)  # x -> per-(app, request) means, pooled over turns
-                for t in turns:
+                bucket = defaultdict(list)  # x -> per-(app, request) means, pooled over requests
+                for t in reqs:
                     for x, (y, n) in pts[t].items():
                         bucket[x].extend([y] * n)
                 pooled = {x: (st.mean(v), len(v)) for x, v in bucket.items()}
@@ -95,7 +95,7 @@ def grid_figure(struct, models, color, out):
                         x,
                         y,
                         s=18 + 10 * n,
-                        marker=MARKER[turns[0]] if len(turns) == 1 else "D",
+                        marker=MARKER[reqs[0]] if len(reqs) == 1 else "D",
                         color=color[m],
                         alpha=0.75,
                         edgecolor="white",
@@ -162,19 +162,19 @@ def export_json(struct, models, out):
         scores = request_scores(m)
         for axis in ("depth", "indeg"):
             sec = data[axis].setdefault(m, {})
-            for tn in REQUESTS:
+            for rn in REQUESTS:
                 per_x = defaultdict(dict)
                 for (idx, t), per_run in scores.items():
-                    if t == tn:
-                        x = struct[idx][0 if axis == "depth" else 1][tn]
+                    if t == rn:
+                        x = struct[idx][0 if axis == "depth" else 1][rn]
                         per_x[x][str(idx)] = round(st.mean(per_run), 2)
-                sec[str(tn)] = {
+                sec[str(rn)] = {
                     str(x): {"mean": round(st.mean(v.values()), 2), "n": len(v), "apps": v}
                     for x, v in sorted(per_x.items())
                 }
             pts = points(m, struct, axis)
             data["slopes"].setdefault(m, {})[axis] = {
-                **{str(tn): round(wls({tn: pts[tn]})[0], 3) for tn in REQUESTS},
+                **{str(rn): round(wls({rn: pts[rn]})[0], 3) for rn in REQUESTS},
                 "pooled": round(wls(pts)[0], 3),
             }
     with open(out, "w") as fh:
@@ -183,13 +183,13 @@ def export_json(struct, models, out):
     print("wrote", out)
 
 
-def fits_only_figure(struct, models, color, out, turn=10, axis="indeg"):
+def fits_only_figure(struct, models, color, out, request=10, axis="indeg"):
     """One request, one axis: the per-model weighted fit lines without the points."""
     fig, ax = plt.subplots(figsize=(8, 5.5))
     for m in models:
         pts = points(m, struct, axis)
-        slope, icpt, (x0, x1) = wls({turn: pts[turn]})
-        n = sum(n for _, n in pts[turn].values())
+        slope, icpt, (x0, x1) = wls({request: pts[request]})
+        n = sum(n for _, n in pts[request].values())
         ax.plot(
             [x0, x1],
             [icpt + slope * x0, icpt + slope * x1],
@@ -203,7 +203,7 @@ def fits_only_figure(struct, models, color, out, turn=10, axis="indeg"):
     ax.set_xlabel("in-degree of request 10 (incoming DAG edges)")
     ax.set_ylabel("request score, % (weighted least-squares fit)")
     ax.set_title(
-        f"Request {turn}: score vs in-degree, fit lines only (EvoWeb, paper arms)",
+        f"Request {request}: score vs in-degree, fit lines only (EvoWeb, paper arms)",
         fontsize=11,
         loc="left",
     )
@@ -237,13 +237,13 @@ def main():
     ):
         for m in models:
             pts = points(m, struct, axis)
-            for tn in REQUESTS:
-                for x, (y, n) in sorted(pts[tn].items()):
+            for rn in REQUESTS:
+                for x, (y, n) in sorted(pts[rn].items()):
                     ax.scatter(
                         x,
                         y,
                         s=18 + 14 * n,
-                        marker=MARKER[tn],
+                        marker=MARKER[rn],
                         color=color[m],
                         alpha=0.75,
                         edgecolor="white",
@@ -292,7 +292,7 @@ def main():
     print("wrote", a.out)
     grid_figure(struct, models, color, a.out.replace(".png", "_by_request.png"))
     fits_only_figure(
-        struct, models, color, os.path.join(os.path.dirname(a.out), "dag_indegree_t10_fits.png")
+        struct, models, color, os.path.join(os.path.dirname(a.out), "dag_indegree_r10_fits.png")
     )
     export_json(struct, models, a.out.replace(".png", ".json"))
 

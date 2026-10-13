@@ -131,8 +131,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 1,
+     "kind": "backward",
+     "copied_from_request": 1,
      "task": "Open an obituary from the main obituaries listing, type a condolence message into its message form, and submit it.",
      "expected_result": "The condolence message appears under that obituary, visible with the rest of its messages.",
      "task_category": {
@@ -200,8 +200,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "In the inscription designer, pick Rosa Delgado from the memorial list and look at the preview.",
      "expected_result": "The preview fills in 'Rosa Delgado' with her dates July 4, 1945 – January 18, 2024 and shows the age she reached as 78 — not 79 — because the July birthday had not yet arrived by January.",
      "task_category": {
@@ -269,8 +269,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "On the browse page, select both the Veteran and Educator categories.",
      "expected_result": "Exactly 4 memorials show — Harold Finch, Walter Brandt, Samuel Whitcombe, and Rosa Delgado — with Samuel Whitcombe listed once (not duplicated for holding both tags), and the visible count reads 4.",
      "task_category": {
@@ -338,8 +338,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 4,
+     "kind": "backward",
+     "copied_from_request": 4,
      "task": "On the 'On This Date' page, type April 5 as the date.",
      "expected_result": "Exactly two people appear — Harold Finch (1932–2024) and Miriam Okafor (1958–2024) — both marked as passing anniversaries.",
      "task_category": {
@@ -407,8 +407,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "In the inscription designer, pick Harold Finch, type the epitaph 'A devoted father, grandfather, and friend to absolutely everyone' (well over 40 characters), and try to save.",
      "expected_result": "The designer flags the epitaph as over the 40-character limit and refuses to save; no inscription appears on Harold Finch's obituary page.",
      "task_category": {
@@ -475,8 +475,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 5,
+     "kind": "backward",
+     "copied_from_request": 5,
      "task": "Open the pending memories queue on the dashboard, then approve the memory from Tomás Rivera.",
      "expected_result": "The queue starts with exactly 3 pending memories for Rosa Delgado; after approving, 2 remain pending and Tomás Rivera's memory appears in the Tributes section on Rosa's obituary page.",
      "task_category": {
@@ -544,8 +544,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "On the browse page with no filters applied, choose the 'newest passing first' sort.",
      "expected_result": "The order is Harold Finch, Miriam Okafor, Lena Kowalski, Samuel Whitcombe, Rosa Delgado, Walter Brandt — Harold and Miriam share April 5, 2024 and tie alphabetically, and Walter (December 2, 2023) comes last, proving real date ordering rather than text ordering.",
      "task_category": {
@@ -613,8 +613,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 7,
+     "kind": "backward",
+     "copied_from_request": 7,
      "task": "Open the dashboard's headcount view for Harold Finch's service.",
      "expected_result": "The expected headcount reads 6 (Ellen Finch's 4 plus Marcus Webb's 2, with Dana Cruz's 3 regrets excluded — not 9 and not 3), and all three responses are listed.",
      "task_category": {
@@ -682,8 +682,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 6,
+     "kind": "backward",
+     "copied_from_request": 6,
      "task": "Open Harold Finch's memorial fund.",
      "expected_result": "It shows $2,175 raised toward the $4,000 goal, with progress reading 54% — a whole number, not 54.4% or 54.375%.",
      "task_category": {
@@ -701,135 +701,135 @@
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "Headstone inscription designer",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "Category browse archive",
     "archetype": "derived-state"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "On This Date lookup",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "Memory approval queue",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "Memorial fund drives",
     "archetype": "derived-state"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "Service RSVP headcounts",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "Threaded guestbooks",
     "archetype": "derived-state"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "Family task checklist",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "Forest green restyle",
     "archetype": "design-restyle"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T2",
+    "from": "R1",
+    "to": "R2",
     "what": "designer picks any base memorial, pulls its name and dates, and saves the finished inscription onto that obituary page"
    },
    {
-    "from": "T1",
-    "to": "T3",
+    "from": "R1",
+    "to": "R3",
     "what": "pinned and newly published tagged memorials populate the browse archive; the base publish form gains a category picker"
    },
    {
-    "from": "T1",
-    "to": "T4",
+    "from": "R1",
+    "to": "R4",
     "what": "lookup matches birth/death dates of pinned and newly published memorials"
    },
    {
-    "from": "T1",
-    "to": "T5",
+    "from": "R1",
+    "to": "R5",
     "what": "memories submitted on base obituary pages, moderated in the dashboard"
    },
    {
-    "from": "T1",
-    "to": "T6",
+    "from": "R1",
+    "to": "R6",
     "what": "fund drives attach to base obituary pages"
    },
    {
-    "from": "T3",
-    "to": "T6",
+    "from": "R3",
+    "to": "R6",
     "what": "browse archive gains an active-fund filter"
    },
    {
-    "from": "T1",
-    "to": "T7",
+    "from": "R1",
+    "to": "R7",
     "what": "RSVPs attach to base funeral arrangement listings"
    },
    {
-    "from": "T1",
-    "to": "T8",
+    "from": "R1",
+    "to": "R8",
     "what": "replies extend the base condolence messages"
    },
    {
-    "from": "T3",
-    "to": "T8",
+    "from": "R3",
+    "to": "R8",
     "what": "reply counts feed the browse archive's busiest-guestbook sort"
    },
    {
-    "from": "T1",
-    "to": "T9",
+    "from": "R1",
+    "to": "R9",
     "what": "checklist progress overview lives on the dashboard"
    },
    {
-    "from": "T1",
-    "to": "T10",
+    "from": "R1",
+    "to": "R10",
     "what": "restyles base dashboard and obituary pages"
    },
    {
-    "from": "T2",
-    "to": "T10",
+    "from": "R2",
+    "to": "R10",
     "what": "restyles the inscription designer's save button and headings"
    },
    {
-    "from": "T3",
-    "to": "T10",
+    "from": "R3",
+    "to": "R10",
     "what": "restyles browse archive cards and tag badges"
    },
    {
-    "from": "T5",
-    "to": "T10",
+    "from": "R5",
+    "to": "R10",
     "what": "restyles the dashboard approve button"
    },
    {
-    "from": "T6",
-    "to": "T10",
+    "from": "R6",
+    "to": "R10",
     "what": "restyles fund pages and pledge button"
    },
    {
-    "from": "T7",
-    "to": "T10",
+    "from": "R7",
+    "to": "R10",
     "what": "restyles service/RSVP pages and RSVP button"
    }
   ]
@@ -837,20 +837,20 @@
  "global_rules": [
   {
    "rule": "All dates anywhere in the app are written with the month spelled out, like 'March 12, 1932' — never numeric forms like 03/12/32.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Every deceased person's name, wherever it appears, is followed by their lifespan years in parentheses, e.g. 'Harold Finch (1932–2024)'.",
-   "introduced_in_turn": 3
+   "introduced_in_request": 3
   },
   {
    "rule": "Any action that declines, removes, or deletes content asks for confirmation ('are you sure') first, app-wide.",
-   "introduced_in_turn": 5
+   "introduced_in_request": 5
   }
  ],
  "pinned_seed": {
   "entity": "6 preloaded memorials",
-  "introduced_in_turn": 2,
+  "introduced_in_request": 2,
   "records_gist": "Harold Finch (Veteran, Mar 12 1932 – Apr 5 2024); Rosa Delgado (Educator, Jul 4 1945 – Jan 18 2024); Miriam Okafor (Artist, Nov 30 1958 – Apr 5 2024); Walter Brandt (Veteran, Feb 29 1940 – Dec 2 2023); Lena Kowalski (Community Leader, Sep 9 1951 – Mar 12 2024); Samuel Whitcombe (Veteran + Educator, Jun 21 1929 – Feb 14 2024)",
   "records": [
    {

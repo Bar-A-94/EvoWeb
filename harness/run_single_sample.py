@@ -50,20 +50,20 @@ def _utc_stamp() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%d_%H-%M")  # noqa: UP017
 
 
-# A turn must reach this score for the ladder to continue. -1 disables score gating
-# entirely (every score passes, 0 included): every surviving ladder runs all its turns and
-# per-turn scores are directly comparable with no survivor bias. History: >0 originally,
-# 0.5 for the 2026-08 EvoWeb runs, -1 since 2026-08-18. NOTE: an errored turn (status !=
+# A request must reach this score for the ladder to continue. -1 disables score gating
+# entirely (every score passes, 0 included): every surviving ladder runs all its requests and
+# per-request scores are directly comparable with no survivor bias. History: >0 originally,
+# 0.5 for the 2026-08 EvoWeb runs, -1 since 2026-08-18. NOTE: an errored request (status !=
 # "success") still ends the ladder — there is no coherent workspace to build on.
 TURN_GATE_THRESHOLD = -1
 
 
-def ladder_continues(turn_status: str, turn_score: float) -> tuple[bool, str]:
-    """A turn under TURN_GATE_THRESHOLD ends the ladder; at -1 nothing does (score-wise)."""
-    passed = turn_status == "success" and turn_score >= TURN_GATE_THRESHOLD
+def ladder_continues(request_status: str, request_score: float) -> tuple[bool, str]:
+    """A request under TURN_GATE_THRESHOLD ends the ladder; at -1 nothing does (score-wise)."""
+    passed = request_status == "success" and request_score >= TURN_GATE_THRESHOLD
     reason = (
         "previous_turn_below_threshold"
-        if turn_status == "success"
+        if request_status == "success"
         else "previous_turn_did_not_complete"
     )
     return passed, reason
@@ -208,16 +208,16 @@ def _open_stage_log(output_dir: Path, stage: str) -> IO[str]:
     return open(logs_dir / f"{stage}.log", "a", encoding="utf-8", buffering=1)
 
 
-def _classify_turn_failure(turn_err):
-    """-> (turn_status, error_class, error_detail) for a failed turn.
+def _classify_request_failure(request_err):
+    """-> (request_status, error_class, error_detail) for a failed request.
 
     Classifying here — with the exception in hand — is what makes a run auditable. Recovering the cause
     by grepping agent logs after the fact is unreliable: a degenerate repetition loop arrives wrapped in
     APIConnectionError, so it reads as infrastructure unless inspected carefully.
     """
-    cls = classify_error(f"{turn_err}")
+    cls = classify_error(f"{request_err}")
     status = "context_exceeded" if cls == "context_exceeded" else "error"
-    detail = " ".join(str(turn_err).split())[:300]
+    detail = " ".join(str(request_err).split())[:300]
     return status, cls, detail
 
 
@@ -319,13 +319,13 @@ RUNTIME_ERROR = re.compile(
 )
 
 
-def turn_spend(turn_dir: Path) -> dict:
-    """This turn's own agent spend, from the summary the generator wrote for it.
+def request_spend(request_dir: Path) -> dict:
+    """This request's own agent spend, from the summary the generator wrote for it.
 
-    Never raises: it is read while building the turn record, outside the per-turn try, so an
-    evicted pod's half-written summary would otherwise discard every scored turn in the sample.
+    Never raises: it is read while building the request record, outside the per-request try, so an
+    evicted pod's half-written summary would otherwise discard every scored request in the sample.
     """
-    path = turn_dir / "generation" / "summary.json"
+    path = request_dir / "generation" / "summary.json"
     try:
         return _read_spend(path)
     except (OSError, ValueError):
@@ -349,14 +349,14 @@ def _read_spend(path: Path) -> dict:
     }
 
 
-def judge_cost(turn_dir: Path) -> float | None:
-    """What the judge spent on this turn, summed over its per-check agent logs.
+def judge_cost(request_dir: Path) -> float | None:
+    """What the judge spent on this request, summed over its per-check agent logs.
 
     WebVoyager prints its own running total ("Total cost: 0.4498") as the last such line of each
     check's agent.log, so the judge is priced by its own accounting rather than ours: its calls
     do not pass through the capture proxy.
     """
-    logs = sorted((turn_dir / "eval" / "results").glob("*/agent.log"))
+    logs = sorted((request_dir / "eval" / "results").glob("*/agent.log"))
     if not logs:
         return None
     total = 0.0
@@ -381,18 +381,18 @@ def judge_cost(turn_dir: Path) -> float | None:
     return round(total, 4) if priced else None
 
 
-def runtime_errors(turn_dir: Path) -> dict:
-    """Uncaught JS the judge's own browser saw this turn, read back off its console capture.
+def runtime_errors(request_dir: Path) -> dict:
+    """Uncaught JS the judge's own browser saw this request, read back off its console capture.
 
     `npm run build` structurally cannot see these. app000028 built clean ("built in 1.65s")
     while every route rendered blank, because a ReferenceError throws at runtime inside the
-    context provider that wraps the app. Its last three turns scored 0/0/20 and all three
+    context provider that wraps the app. Its last three requests scored 0/0/20 and all three
     still reported success, so a dead app was published as model quality. Flagged, never
-    used to drop a turn: dropping a model's worst outcomes is the censoring trap.
+    used to drop a request: dropping a model's worst outcomes is the censoring trap.
     """
     messages: dict[str, int] = {}
     affected = 0
-    for path in sorted(turn_dir.glob("eval/results/task*/console_errors.json")):
+    for path in sorted(request_dir.glob("eval/results/task*/console_errors.json")):
         try:
             entries = json.loads(path.read_text())
         except (OSError, ValueError):
@@ -416,7 +416,7 @@ def compile_check(app_dir: Path, output_dir: Path) -> dict:
     """`npm run build` once, recorded. This pipeline only ever ran `npm install` + `npm run
     dev`, and vite dev compiles per module on request, so a module that does not build
     surfaced only if the judge happened to open that page — and the console capture is a
-    load-time snapshot, so nothing watched for it. A turn is FLAGGED, never dropped:
+    load-time snapshot, so nothing watched for it. A request is FLAGGED, never dropped:
     skipping never-built apps deletes a model's worst outcomes.
     """
     log = output_dir / "logs" / "build.log"
@@ -596,15 +596,15 @@ def run_evaluation(
 ) -> dict:
     """Run WebVoyager evaluation for one sample.
 
-    ``ui_instruct_override`` (multi-turn use): if provided, these tasks are
-    evaluated instead of the sample's top-level ui_instruct. The per-turn
-    orchestrator passes turn N's follow_ups[N-1].ui_instruct here so each
-    turn is graded against its own task list against its own running app.
-    Default (None) preserves single-turn behaviour exactly.
+    ``ui_instruct_override`` (multi-request use): if provided, these tasks are
+    evaluated instead of the sample's top-level ui_instruct. The per-request
+    orchestrator passes request N's follow_ups[N-1].ui_instruct here so each
+    request is graded against its own task list against its own running app.
+    Default (None) preserves single-request behaviour exactly.
 
     record_video records the judge session (Xvfb+ffmpeg) to output_dir/videos/.
     Only the FIRST eval in the process records — one inspection video per pod
-    is enough; per-turn/per-retry videos would multiply S3 weight nobody watches.
+    is enough; per-request/per-retry videos would multiply S3 weight nobody watches.
     """
     # Load the test data to get UI tasks for this index
     with open(TEST_DATA, encoding="utf-8") as f:
@@ -734,7 +734,7 @@ def run_evaluation(
         )
 
     # Parse results — pass through the same tasks list we evaluated so
-    # parse_eval_results scores against turn-specific ui_instruct when an
+    # parse_eval_results scores against request-specific ui_instruct when an
     # override was used.
     parse_sample = dict(sample)
     parse_sample["ui_instruct"] = ui_tasks
@@ -1097,7 +1097,7 @@ def main():
         "--s3-bucket",
         type=str,
         default=None,
-        help="Optional S3 bucket for uploading results + per-turn checkpoints (default env S3_BUCKET; "
+        help="Optional S3 bucket for uploading results + per-request checkpoints (default env S3_BUCKET; "
         "empty or 'none' = disabled, everything stays under --output-dir)",
     )
     parser.add_argument(
@@ -1191,7 +1191,7 @@ def main():
     output_dir.mkdir(parents=True, exist_ok=True)
     (output_dir / "logs").mkdir(parents=True, exist_ok=True)
 
-    # Validate index + load the sample row eagerly so we can detect multi-turn
+    # Validate index + load the sample row eagerly so we can detect multi-request
     # (follow_ups present) before kicking off the rest of the pipeline.
     with open(TEST_DATA, encoding="utf-8") as f:
         all_lines = f.readlines()
@@ -1201,10 +1201,10 @@ def main():
         sys.exit(1)
     sample_row = json.loads(all_lines[args.index - 1])
     follow_ups = sample_row.get("follow_ups") or []
-    n_turns = 1 + len(follow_ups)
-    if n_turns > 1:
+    n_requests = 1 + len(follow_ups)
+    if n_requests > 1:
         log(
-            f"Multi-turn sample detected: {n_turns} turns (1 initial + {len(follow_ups)} follow-ups)"
+            f"Multi-request sample detected: {n_requests} requests (1 initial + {len(follow_ups)} follow-ups)"
         )
 
     # S3 config ("none" disables upload)
@@ -1248,26 +1248,26 @@ def main():
 
         result["base_trajectory"] = base_trajectory
 
-        # 1-4+6. The ladder: generation and eval interleaved per turn.
-        result_turns = None  # set by the ladder loop
+        # 1-4+6. The ladder: generation and eval interleaved per request.
+        result_requests = None  # set by the ladder loop
 
-        if n_turns == 1:
+        if n_requests == 1:
             # A ladder needs at least two requests (the build plus one follow-up).
             raise RuntimeError(
-                f"--generator {args.generator} needs a multi-turn dataset; "
+                f"--generator {args.generator} needs a multi-request dataset; "
                 f"this row has no follow_ups. Use a ladder taskset (data/ or tests/smoke_sets/)."
             )
-        # Each turn edits the same workspace AND carries the conversation forward via
+        # Each request edits the same workspace AND carries the conversation forward via
         # history + session_file. A harness that cannot resume is refused in
         # backend.generate rather than run as N one-shot builds.
-        ui_instruct_per_turn = [sample_row["ui_instruct"]] + [
+        ui_instruct_per_request = [sample_row["ui_instruct"]] + [
             fu.get("ui_instruct", []) for fu in follow_ups
         ]
-        turn_results: list[dict] = []
-        turn_history: list[dict] = []
+        request_results: list[dict] = []
+        request_history: list[dict] = []
         eval_results: dict | None = None
         app_info = None
-        prev_turn_passed = True
+        prev_request_passed = True
         prev_fail_reason = "previous_turn_did_not_complete"
         zip_path = None
         # Where the app under test lives across the whole ladder; checkpoint/restore
@@ -1275,10 +1275,10 @@ def main():
         ws_root = output_dir.parent / "acp-workspaces"
         ws_dir = ws_root / f"sample_{args.index:06d}"
 
-        # Resume from the last completed turn if a checkpoint exists (a prior
+        # Resume from the last completed request if a checkpoint exists (a prior
         # pod attempt was evicted mid-ladder). Falls back to a fresh start on
         # any checkpoint failure, so this can never worsen a run.
-        start_turn = 1
+        start_request = 1
         if s3_bucket:
             k = checkpoint.latest_checkpoint(s3_bucket, run_id, args.index)
             if k:
@@ -1288,24 +1288,26 @@ def main():
                 if got:
                     (
                         _,
-                        turn_results,
-                        prev_turn_passed,
-                        turn_history,
+                        request_results,
+                        prev_request_passed,
+                        request_history,
                         prev_fail_reason,
                     ) = got
                     app_info = {"app_dir": str(ws_dir), "start_action": "npm run dev"}
-                    start_turn = k + 1
-                    log(f"RESUME: checkpoint at turn {k} — continuing from turn {start_turn}")
+                    start_request = k + 1
+                    log(
+                        f"RESUME: checkpoint at request {k} — continuing from request {start_request}"
+                    )
                 else:
-                    log(f"Checkpoint at turn {k} unreadable — starting fresh from turn 1")
+                    log(f"Checkpoint at request {k} unreadable — starting fresh from request 1")
 
-        for n in range(start_turn, n_turns + 1):
-            turn_label = f"turn {n}/{n_turns}"
-            log(f"=== {turn_label} ===")
+        for n in range(start_request, n_requests + 1):
+            request_label = f"request {n}/{n_requests}"
+            log(f"=== {request_label} ===")
 
-            if n > 1 and not prev_turn_passed:
-                log(f"  {turn_label} skipped: {prev_fail_reason.replace('_', ' ')}")
-                turn_results.append(
+            if n > 1 and not prev_request_passed:
+                log(f"  {request_label} skipped: {prev_fail_reason.replace('_', ' ')}")
+                request_results.append(
                     {
                         "turn": n,
                         "status": "skipped",
@@ -1321,28 +1323,28 @@ def main():
                 continue
 
             instruction = sample_row["instruction"] if n == 1 else follow_ups[n - 2]["instruction"]
-            turn_dir = output_dir if n == 1 else (output_dir / f"turn{n}")
-            turn_dir.mkdir(parents=True, exist_ok=True)
-            (turn_dir / "logs").mkdir(parents=True, exist_ok=True)
+            request_dir = output_dir if n == 1 else (output_dir / f"turn{n}")
+            request_dir.mkdir(parents=True, exist_ok=True)
+            (request_dir / "logs").mkdir(parents=True, exist_ok=True)
 
-            turn_status = "success"
-            turn_build: dict | None = None
-            turn_runtime: dict = {}
-            turn_error_class = None
-            turn_error_detail = None
-            turn_eval: dict | None = None
-            turn_app_proc = None
-            # A harness resumes through its own session/history, so every turn after
+            request_status = "success"
+            request_build: dict | None = None
+            request_runtime: dict = {}
+            request_error_class = None
+            request_error_detail = None
+            request_eval: dict | None = None
+            request_app_proc = None
+            # A harness resumes through its own session/history, so every request after
             # the first is a resumed conversation. (The flag says we ASKED to resume;
             # history_lost below says whether it arrived.)
-            turn_resumed = n > 1
+            request_resumed = n > 1
             try:
-                # The harness edits the same workspace every turn and carries the
+                # The harness edits the same workspace every request and carries the
                 # conversation forward: `history` is the accumulated [user, assistant]
-                # of the earlier turns and `session_file` lets an ACP agent resume its
-                # own session instead of replaying. Without both, turn N would open a
+                # of the earlier requests and `session_file` lets an ACP agent resume its
+                # own session instead of replaying. Without both, request N would open a
                 # blank session and see only the files on disk, which is a sequence of
-                # one-shot builds wearing a multi-turn label.
+                # one-shot builds wearing a multi-request label.
                 template = (
                     Path(args.website_template) if args.website_template else WEBSITE_TEMPLATE
                 )
@@ -1352,31 +1354,33 @@ def main():
                     instruction=instruction,
                     model=args.model,
                     api_key=api_key,
-                    output_dir=turn_dir,
+                    output_dir=request_dir,
                     workspaces=output_dir.parent / "acp-workspaces",
                     base_url=args.api_url or DEFAULT_ACP_BASE_URL,
                     api=ACP_APIS.get(args.provider, "openai-completions"),
                     template=template,
                     task_id=sample_row.get("id"),
-                    history=list(turn_history),
+                    history=list(request_history),
                     session_file=output_dir / "acp_session.txt",
                     # One step budget for every harness (AGENT_MAX_TURNS), so a harness
                     # comparison is not secretly a comparison of step budgets.
                     max_steps=int(os.environ.get("AGENT_MAX_TURNS") or DEFAULT_MAX_STEPS),
                 )
-                turn_history.append({"role": "user", "content": instruction})
-                turn_history.append({"role": "assistant", "content": app_info.get("reply") or ""})
+                request_history.append({"role": "user", "content": instruction})
+                request_history.append(
+                    {"role": "assistant", "content": app_info.get("reply") or ""}
+                )
 
-                _npm_install(Path(app_info["app_dir"]), ["npm install"], turn_dir)
-                turn_build = compile_check(Path(app_info["app_dir"]), turn_dir)
-                turn_app_proc = start_app(
+                _npm_install(Path(app_info["app_dir"]), ["npm install"], request_dir)
+                request_build = compile_check(Path(app_info["app_dir"]), request_dir)
+                request_app_proc = start_app(
                     app_info["app_dir"],
                     app_info["start_action"],
                     APP_PORT_BASE,
-                    turn_dir,
+                    request_dir,
                 )
                 if not args.skip_ui_eval:
-                    turn_eval = run_evaluation(
+                    request_eval = run_evaluation(
                         args.index,
                         APP_PORT_BASE,
                         eval_provider,
@@ -1384,29 +1388,29 @@ def main():
                         eval_api_key,
                         eval_model,
                         args.python_path,
-                        turn_dir,
-                        ui_instruct_override=ui_instruct_per_turn[n - 1],
+                        request_dir,
+                        ui_instruct_override=ui_instruct_per_request[n - 1],
                         record_video=args.record_video,
                     )
                 else:
-                    log(f"  --skip-ui-eval set: skipping WebVoyager UI eval for {turn_label}")
-            except Exception as turn_err:
-                log(f"  {turn_label} failed: {turn_err}")
-                if turn_status == "success":
-                    # Classify WHY the turn failed and record it, so infra-caused losses can be
+                    log(f"  --skip-ui-eval set: skipping WebVoyager UI eval for {request_label}")
+            except Exception as request_err:
+                log(f"  {request_label} failed: {request_err}")
+                if request_status == "success":
+                    # Classify WHY the request failed and record it, so infra-caused losses can be
                     # censored from metrics without after-the-fact log forensics.
-                    turn_status, turn_error_class, turn_error_detail = _classify_turn_failure(
-                        turn_err
+                    request_status, request_error_class, request_error_detail = (
+                        _classify_request_failure(request_err)
                     )
-                    log(f"  {turn_label} error_class={turn_error_class}")
+                    log(f"  {request_label} error_class={request_error_class}")
                 log(traceback.format_exc())
             finally:
-                if turn_app_proc and turn_app_proc.poll() is None:
-                    turn_app_proc.terminate()
+                if request_app_proc and request_app_proc.poll() is None:
+                    request_app_proc.terminate()
                     try:
-                        turn_app_proc.wait(timeout=5)
+                        request_app_proc.wait(timeout=5)
                     except subprocess.TimeoutExpired:
-                        turn_app_proc.kill()
+                        request_app_proc.kill()
                 subprocess.run(
                     "pm2 delete all 2>/dev/null",
                     shell=True,
@@ -1415,55 +1419,57 @@ def main():
                 _kill_port(APP_PORT_BASE)
                 time.sleep(1)
 
-            turn_yes = (turn_eval or {}).get("yes", 0)
-            turn_partial = (turn_eval or {}).get("partial", 0)
-            turn_total = (turn_eval or {}).get("total", 0)
-            turn_score = (turn_yes + 0.5 * turn_partial) / turn_total if turn_total > 0 else 0
-            prev_turn_passed, prev_fail_reason = ladder_continues(turn_status, turn_score)
-            turn_runtime = runtime_errors(turn_dir)
+            request_yes = (request_eval or {}).get("yes", 0)
+            request_partial = (request_eval or {}).get("partial", 0)
+            request_total = (request_eval or {}).get("total", 0)
+            request_score = (
+                (request_yes + 0.5 * request_partial) / request_total if request_total > 0 else 0
+            )
+            prev_request_passed, prev_fail_reason = ladder_continues(request_status, request_score)
+            request_runtime = runtime_errors(request_dir)
 
-            turn_results.append(
+            request_results.append(
                 {
                     "turn": n,
-                    "status": turn_status,
+                    "status": request_status,
                     # Did it compile? compile_check runs at the top of this block.
-                    # Flagged, never used to drop a turn.
-                    **({"build": turn_build} if turn_build else {}),
+                    # Flagged, never used to drop a request.
+                    **({"build": request_build} if request_build else {}),
                     # Built and served fine, rendered blank: the compile gate cannot see a runtime
                     # throw. Recorded on BOTH record sites — adding "build" to only one is how it
                     # silently never appeared in any result.json.
-                    **({"runtime": turn_runtime} if turn_runtime else {}),
+                    **({"runtime": request_runtime} if request_runtime else {}),
                     # WHY it failed — consumed by scoring.py to censor infra-caused losses
-                    **({"error_class": turn_error_class} if turn_error_class else {}),
-                    **({"error_detail": turn_error_detail} if turn_error_detail else {}),
-                    "resumed_trajectory": turn_resumed,
+                    **({"error_class": request_error_class} if request_error_class else {}),
+                    **({"error_detail": request_error_detail} if request_error_detail else {}),
+                    "resumed_trajectory": request_resumed,
                     # resumed_trajectory only says we ASKED to resume. This says whether the
                     # conversation actually arrived: the harness discards the history before
-                    # it knows the agent still has the session, so a lost one runs the turn on
+                    # it knows the agent still has the session, so a lost one runs the request on
                     # the instruction alone and still reports success.
                     **({"history_lost": True} if (app_info or {}).get("history_lost") else {}),
-                    "tasks": (turn_eval or {}).get("tasks", []),
+                    "tasks": (request_eval or {}).get("tasks", []),
                     **(
                         {
-                            "judge_errors": turn_eval["judge_errors"],
-                            "judge_error_tasks": turn_eval.get("judge_error_tasks", 0),
+                            "judge_errors": request_eval["judge_errors"],
+                            "judge_error_tasks": request_eval.get("judge_error_tasks", 0),
                         }
-                        if (turn_eval or {}).get("judge_errors")
+                        if (request_eval or {}).get("judge_errors")
                         else {}
                     ),
-                    "yes": turn_yes,
-                    "partial": (turn_eval or {}).get("partial", 0),
-                    "no": (turn_eval or {}).get("no", 0),
-                    "total": turn_total,
-                    "accuracy": (turn_eval or {}).get("accuracy", 0),
-                    # From THIS turn's summary.json: app_info is loop-carried, so a failed
-                    # turn used to republish the previous turn's spend.
-                    "cost": {**turn_spend(turn_dir), "judge_usd": judge_cost(turn_dir)},
+                    "yes": request_yes,
+                    "partial": (request_eval or {}).get("partial", 0),
+                    "no": (request_eval or {}).get("no", 0),
+                    "total": request_total,
+                    "accuracy": (request_eval or {}).get("accuracy", 0),
+                    # From THIS request's summary.json: app_info is loop-carried, so a failed
+                    # request used to republish the previous request's spend.
+                    "cost": {**request_spend(request_dir), "judge_usd": judge_cost(request_dir)},
                 }
             )
 
-            # Checkpoint this turn so a future eviction resumes here instead
-            # of restarting at turn 1. Best-effort: never let it abort the run.
+            # Checkpoint this request so a future eviction resumes here instead
+            # of restarting at request 1. Best-effort: never let it abort the run.
             if s3_bucket and ws_dir.exists():
                 try:
                     checkpoint.save_checkpoint(
@@ -1472,21 +1478,21 @@ def main():
                         args.index,
                         n,
                         ws_dir,
-                        turn_results,
-                        prev_turn_passed,
-                        turn_history,
+                        request_results,
+                        prev_request_passed,
+                        request_history,
                         prev_fail_reason,
                     )
-                    log(f"  {turn_label} checkpointed")
+                    log(f"  {request_label} checkpointed")
                 except Exception as ckpt_err:
-                    log(f"  {turn_label} checkpoint failed (non-fatal): {ckpt_err}")
+                    log(f"  {request_label} checkpoint failed (non-fatal): {ckpt_err}")
 
-        scored_turns = [t for t in turn_results if t.get("total", 0) > 0]
-        if scored_turns:
-            agg_yes = sum(t["yes"] for t in scored_turns)
-            agg_partial = sum(t.get("partial", 0) for t in scored_turns)
-            agg_no = sum(t.get("no", 0) for t in scored_turns)
-            agg_total = sum(t["total"] for t in scored_turns)
+        scored_requests = [t for t in request_results if t.get("total", 0) > 0]
+        if scored_requests:
+            agg_yes = sum(t["yes"] for t in scored_requests)
+            agg_partial = sum(t.get("partial", 0) for t in scored_requests)
+            agg_no = sum(t.get("no", 0) for t in scored_requests)
+            agg_total = sum(t["total"] for t in scored_requests)
             eval_results = {
                 "yes": agg_yes,
                 "partial": agg_partial,
@@ -1495,19 +1501,19 @@ def main():
                 "accuracy": round((agg_yes + 0.5 * agg_partial) / agg_total * 100, 1)
                 if agg_total
                 else 0,
-                "tasks": scored_turns[0].get("tasks", []),
+                "tasks": scored_requests[0].get("tasks", []),
             }
-        result_turns = turn_results
+        result_requests = request_results
 
         # 6.5. Appearance grading (reuses the still-running app on APP_PORT_BASE).
         # Skipped silently when no model is configured so non-VLM eval models
-        # don't break the pipeline. Also skipped for multi-turn samples since
-        # the per-turn apps are already stopped by this point (re-starting
-        # would double the per-turn wall time for a feature most multi-turn
+        # don't break the pipeline. Also skipped for multi-request samples since
+        # the per-request apps are already stopped by this point (re-starting
+        # would double the per-request wall time for a feature most multi-request
         # runs don't request).
         appearance_grade_result = None
-        if appearance_api_model and n_turns > 1:
-            log("Skipping appearance grading on multi-turn sample (apps already stopped)")
+        if appearance_api_model and n_requests > 1:
+            log("Skipping appearance grading on multi-request sample (apps already stopped)")
             appearance_api_model = ""  # disable the path below uniformly
         if appearance_api_model:
             try:
@@ -1532,12 +1538,12 @@ def main():
         screenshots = []
         if eval_results is not None:
             eval_results_dir = output_dir / "eval" / "results"
-            if not eval_results_dir.is_dir() and result_turns:
-                for tr in reversed(result_turns):
-                    turn_n = tr.get("turn", 0)
+            if not eval_results_dir.is_dir() and result_requests:
+                for tr in reversed(result_requests):
+                    request_n = tr.get("turn", 0)
                     cand = (
-                        (output_dir / f"turn{turn_n}" / "eval" / "results")
-                        if turn_n > 1
+                        (output_dir / f"turn{request_n}" / "eval" / "results")
+                        if request_n > 1
                         else eval_results_dir
                     )
                     if cand.is_dir():
@@ -1565,15 +1571,15 @@ def main():
         # over however many checks it managed (34-42 vs 49-52 for a complete one), so the
         # shortfall was invisible and the mean silently mixed complete and truncated ladders.
         # Name it: complete/truncated, where it stopped and why.
-        if result_turns:
-            done = [t for t in result_turns if t.get("status") == "success"]
+        if result_requests:
+            done = [t for t in result_requests if t.get("status") == "success"]
             stop = next(
-                (t for t in result_turns if t.get("status") not in ("success", "skipped")), None
+                (t for t in result_requests if t.get("status") not in ("success", "skipped")), None
             )
             result["ladder"] = {
-                "turns_expected": len(result_turns),
+                "turns_expected": len(result_requests),
                 "turns_completed": len(done),
-                "complete": len(done) == len(result_turns),
+                "complete": len(done) == len(result_requests),
                 **(
                     {"stopped_at_turn": stop.get("turn"), "stopped_because": stop.get("status")}
                     if stop
@@ -1593,10 +1599,11 @@ def main():
                 result["videos"] = eval_results["videos"]
         if appearance_grade_result is not None:
             result["appearance"] = appearance_grade_result
-        # Multi-turn: attach the per-turn array. Aggregator detects this and
-        # produces the per-turn breakdown; single-turn samples never set it.
-        if n_turns > 1:
-            result["turns"] = result_turns
+        # Multi-request: attach the per-request array. Aggregator detects this and
+        # produces the per-request breakdown; single-request samples never set it.
+        # The key stays "turns" (and each entry's "turn") to match the released traces.
+        if n_requests > 1:
+            result["turns"] = result_requests
 
     except Exception as e:
         # Log the full traceback to our (teed) stderr so it lands in

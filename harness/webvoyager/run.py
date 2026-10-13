@@ -156,7 +156,7 @@ CHROMEDRIVER_BINARY = os.environ.get("CHROMEDRIVER_BIN") or _resolve_chromedrive
 def driver_config(args: argparse.Namespace) -> webdriver.ChromeOptions:
     options = webdriver.ChromeOptions()
     # A native alert/confirm/print stops Selenium dead: `unexpected alert open` raised on 2 of
-    # 7 checks in a canary, the eval process exited 1, and the whole 10-turn ladder was
+    # 7 checks in a canary, the eval process exited 1, and the whole 10-request ladder was
     # recorded as an error. 'accept' dismisses it so capture proceeds; DIALOG_SHIM below is
     # what keeps the message visible to the judge instead of losing it.
     options.set_capability("unhandledPromptBehavior", "accept")

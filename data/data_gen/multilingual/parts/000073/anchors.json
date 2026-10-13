@@ -4,7 +4,7 @@
    "en": "Analytics",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -24,7 +24,7 @@
    "en": "Preview",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     5,
@@ -45,7 +45,7 @@
    "en": "Goals",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -60,7 +60,7 @@
    "en": "Digest",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9,
     10
    ],
@@ -76,7 +76,7 @@
    "en": "link manager",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -98,7 +98,7 @@
    "en": "Top 3",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     7
@@ -115,7 +115,7 @@
    "en": "Live",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     5,
@@ -133,7 +133,7 @@
    "en": "Hidden",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     5,
@@ -152,7 +152,7 @@
    "en": "Move Up",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6
    ],
    "translations": {
@@ -167,7 +167,7 @@
    "en": "Move Down",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6
    ],
    "translations": {
@@ -182,7 +182,7 @@
    "en": "Reached",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -197,7 +197,7 @@
    "en": "Coming up",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -212,7 +212,7 @@
    "en": "Work",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     8
    ],
@@ -228,7 +228,7 @@
    "en": "Content",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     6,
     8
@@ -245,7 +245,7 @@
    "en": "Offers",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     6,
     8,
@@ -263,7 +263,7 @@
    "en": "Community",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     8
    ],
@@ -279,7 +279,7 @@
    "en": "clicks",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -300,7 +300,7 @@
    "en": "viewing-as-of",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     5,
     6,
@@ -318,7 +318,7 @@
    "en": "profile setup",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -333,7 +333,7 @@
    "en": "My Portfolio",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -346,7 +346,7 @@
    "en": "YouTube Channel",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -359,7 +359,7 @@
    "en": "Newsletter",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -372,7 +372,7 @@
    "en": "Merch Store",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -386,7 +386,7 @@
    "en": "Podcast",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     4,
     5,
@@ -397,7 +397,7 @@
    "en": "Discord",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -410,7 +410,7 @@
    "en": "Book a Call",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     4,
     5,
@@ -422,7 +422,7 @@
    "en": "Casey Quinn",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     10
    ]
   },
@@ -430,7 +430,7 @@
    "en": "CQ",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     10
    ]
   },
@@ -438,7 +438,7 @@
    "en": "myportfolio.dev",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     2
    ]
   },
@@ -446,7 +446,7 @@
    "en": "youtube.com/@casey",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     2
    ]
   },
@@ -454,7 +454,7 @@
    "en": "caseywrites.substack.com",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     2
    ]
   },
@@ -462,7 +462,7 @@
    "en": "shop.casey.co",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     2
    ]
   },
@@ -470,7 +470,7 @@
    "en": "pod.casey.co",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     2
    ]
   },
@@ -478,7 +478,7 @@
    "en": "discord.gg/casey",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     2
    ]
   },
@@ -486,7 +486,7 @@
    "en": "cal.com/casey",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     2
    ]
   },
@@ -494,7 +494,7 @@
    "en": "blog.casey.co",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     2
    ]
   },
@@ -502,7 +502,7 @@
    "en": "gallery.casey.co",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     2
    ]
   },
@@ -510,7 +510,7 @@
    "en": "free.casey.co",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     3
    ]
   },
@@ -518,7 +518,7 @@
    "en": "papaya whip",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1,
     7
    ]
@@ -527,7 +527,7 @@
    "en": "dark orange",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1,
     7
    ]
@@ -536,7 +536,7 @@
    "en": "teal",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     7,
     10
    ]
@@ -545,7 +545,7 @@
    "en": "white",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     7,
     10
    ]
@@ -554,7 +554,7 @@
    "en": "green",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     3
    ]
   },
@@ -562,7 +562,7 @@
    "en": "gray",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     3,
     7
    ]
@@ -571,7 +571,7 @@
    "en": "#0F766E",
    "class": "keep",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     7
    ]
   }

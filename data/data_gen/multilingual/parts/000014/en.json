@@ -120,7 +120,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Fill out the lead form with valid personal information and credit status details and submit it.",
      "expected_result": "The form submits successfully and a confirmation message appears indicating the lead information was recorded.",
      "task_category": {
@@ -129,7 +129,7 @@
        "Form Operations"
       ]
      },
-     "copied_from_turn": 1
+     "copied_from_request": 1
     }
    ]
   },
@@ -187,7 +187,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the Score Improvement Estimator, type 820 as the current score, and type 3 into the collections field, leaving late payments and hard inquiries at 0.",
      "expected_result": "The projected score displays as 850 (Excellent) — capped at the maximum — not 895.",
      "task_category": {
@@ -197,7 +197,7 @@
        "Boundary Handling"
       ]
      },
-     "copied_from_turn": 2
+     "copied_from_request": 2
     }
    ]
   },
@@ -255,7 +255,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the Client Success Stories page and sort by biggest gain with no filters applied.",
      "expected_result": "The list starts Sofia (+112 pts), Marcus (+84 pts), then Priya (+67 pts) ahead of Denise (+67 pts) because Priya's 4-month program is shorter, and the average gain for the visible stories reads +64.6 pts — not +64 or +64.57.",
      "task_category": {
@@ -265,7 +265,7 @@
        "Calculation Accuracy"
       ]
      },
-     "copied_from_turn": 3
+     "copied_from_request": 3
     }
    ]
   },
@@ -323,7 +323,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "In the Dispute Letter Builder, select Equifax as the bureau, choose 'Not my account' as the reason, type 'Capital One' as the creditor name, and type '44127788' as the account number.",
      "expected_result": "A valid letter preview is produced whose reference code reads exactly EQ-CAPI-8.",
      "task_category": {
@@ -333,7 +333,7 @@
        "Form Operations"
       ]
      },
-     "copied_from_turn": 4
+     "copied_from_request": 4
     }
    ]
   },
@@ -391,7 +391,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "On the Score Improvement Estimator, type 545 as the current score, then type 2 into the collections field, without clicking any calculate or submit button.",
      "expected_result": "The projection updates by itself as values are typed: the current score is shown as 545 (Poor) and the projected score as 595 (Fair).",
      "task_category": {
@@ -401,7 +401,7 @@
        "Calculation Accuracy"
       ]
      },
-     "copied_from_turn": 2
+     "copied_from_request": 2
     }
    ]
   },
@@ -460,7 +460,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the dispute tracker and check the available status actions on the Portfolio Recovery case, which starts as a Draft.",
      "expected_result": "The only forward move offered is to Sent — there is no option to mark a Draft case as Resolved directly.",
      "task_category": {
@@ -470,7 +470,7 @@
        "State Transitions"
       ]
      },
-     "copied_from_turn": 5
+     "copied_from_request": 5
     }
    ]
   },
@@ -529,7 +529,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "On the Client Success Stories page, filter to the Premium plan only.",
      "expected_result": "Only Sofia, Marcus, and Priya remain visible, and the average gain updates to +87.7 pts.",
      "task_category": {
@@ -539,7 +539,7 @@
        "Calculation Accuracy"
       ]
      },
-     "copied_from_turn": 3
+     "copied_from_request": 3
     }
    ]
   },
@@ -598,7 +598,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the Impact Dashboard and read the average gain stat.",
      "expected_result": "The average gain reads +64.6 pts — not +64, +64.5, or +64.57.",
      "task_category": {
@@ -608,7 +608,7 @@
        "Rounding"
       ]
      },
-     "copied_from_turn": 6
+     "copied_from_request": 6
     }
    ]
   },
@@ -667,7 +667,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Start the enrollment flow, pick the Standard plan, add the credit monitoring add-on, enter name 'Dana Cole' and email 'dana@mail.com' in the contact step, and continue to the review step.",
      "expected_result": "The review shows a monthly total of $99.98 and a first payment of $124.98, which includes the $25.00 one-time setup fee.",
      "task_category": {
@@ -677,7 +677,7 @@
        "Workflow"
       ]
      },
-     "copied_from_turn": 8
+     "copied_from_request": 8
     }
    ]
   }
@@ -686,120 +686,120 @@
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "Score improvement estimator",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "Client success stories",
     "archetype": "derived-state"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "Dispute letter builder",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "Dispute case tracker",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "Impact dashboard",
     "archetype": "derived-state"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "Brand restyle",
     "archetype": "design-restyle"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "Plan enrollment flow",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "Dispute strategy advisor",
     "archetype": "derived-state"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "Consultation booking",
     "archetype": "multi-surface-workflow"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T2",
+    "from": "R1",
+    "to": "R2",
     "what": "inquiry's captured score prefills the estimator"
    },
    {
-    "from": "T1",
-    "to": "T4",
+    "from": "R1",
+    "to": "R4",
     "what": "lead form's submitted name auto-signs the generated dispute letters"
    },
    {
-    "from": "T4",
-    "to": "T5",
+    "from": "R4",
+    "to": "R5",
     "what": "saved letters become Draft dispute cases"
    },
    {
-    "from": "T3",
-    "to": "T6",
+    "from": "R3",
+    "to": "R6",
     "what": "aggregates the seven pinned success stories"
    },
    {
-    "from": "T5",
-    "to": "T6",
+    "from": "R5",
+    "to": "R6",
     "what": "items-resolved stat counts tracker's resolved cases live"
    },
    {
-    "from": "T1",
-    "to": "T7",
+    "from": "R1",
+    "to": "R7",
     "what": "restyles home page and lead form"
    },
    {
-    "from": "T2",
-    "to": "T7",
+    "from": "R2",
+    "to": "R7",
     "what": "restyles estimator page"
    },
    {
-    "from": "T3",
-    "to": "T7",
+    "from": "R3",
+    "to": "R7",
     "what": "restyles success stories page and plan badges"
    },
    {
-    "from": "T4",
-    "to": "T7",
+    "from": "R4",
+    "to": "R7",
     "what": "restyles letter builder page"
    },
    {
-    "from": "T5",
-    "to": "T7",
+    "from": "R5",
+    "to": "R7",
     "what": "restyles dispute tracker and status badges"
    },
    {
-    "from": "T6",
-    "to": "T7",
+    "from": "R6",
+    "to": "R7",
     "what": "restyles impact dashboard page"
    },
    {
-    "from": "T2",
-    "to": "T8",
+    "from": "R2",
+    "to": "R8",
     "what": "estimator's plan recommendation preselects the enrollment plan"
    },
    {
-    "from": "T5",
-    "to": "T9",
+    "from": "R5",
+    "to": "R9",
     "what": "advisor rolls live tracker cases into per-creditor next actions and priority rankings"
    }
   ]
@@ -807,20 +807,20 @@
  "global_rules": [
   {
    "rule": "Every displayed credit score carries its band label next to it — under 580 Poor, 580-669 Fair, 670-739 Good, 740-799 Very Good, 800+ Excellent — e.g. '612 (Fair)'.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Every form or tool surface keeps a visible 'Start over' control that resets it to its initial blank state.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Score gains always render with a leading plus sign and 'pts' suffix, e.g. '+84 pts'.",
-   "introduced_in_turn": 3
+   "introduced_in_request": 3
   }
  ],
  "pinned_seed": {
   "entity": "7 client success stories",
-  "introduced_in_turn": 3,
+  "introduced_in_request": 3,
   "records_gist": "Marcus/Atlanta Premium 6mo 5-star 541->625 (+84); Denise/Tampa Standard 9mo 4-star 588->655 (+67); Priya/Austin Premium 4mo 5-star 612->679 (+67); Walter/Cleveland Basic 3mo 3-star 601->639 (+38); Sofia/Phoenix Premium 12mo 5-star 559->671 (+112); James/Baltimore Standard 7mo 4-star 566->621 (+55); Keisha/Memphis Basic 5mo 4-star 597->626 (+29) — total +452, avg +64.6, Premium avg +87.7"
  }
 }

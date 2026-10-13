@@ -120,15 +120,15 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 1,
+     "kind": "backward",
+     "copied_from_request": 1,
      "task": "On the leads page, open Tom Okafor's lead and change his status to Contacted.",
      "expected_result": "Tom Okafor's row now shows status Contacted.",
      "task_category": {
       "primary_category": "Functional Testing",
       "subcategories": [
        "CRUD Operations",
-       "Regression"
+       "Backward"
       ]
      }
     }
@@ -189,15 +189,15 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "On the leads page, click the engagement score column or control to sort leads from highest to lowest score, then read the top two rows.",
      "expected_result": "Priya Nair is first and Lena Fischer second, both with score 6 and a Hot tag — Priya ranks above Lena because her $22,000 deal is larger than Lena's $15,750.",
      "task_category": {
       "primary_category": "Data Display Testing",
       "subcategories": [
        "Sorting",
-       "Regression"
+       "Backward"
       ]
      }
     }
@@ -258,15 +258,15 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "Open the saved 'Proposal Follow-Up' template and preview it with Priya Nair · Cobalt Analytics selected as the lead.",
      "expected_result": "The preview reads 'Hi Priya, checking in on the $22,000 proposal for Cobalt Analytics.'",
      "task_category": {
       "primary_category": "Data Display Testing",
       "subcategories": [
        "Text Substitution",
-       "Regression"
+       "Backward"
       ]
      }
     }
@@ -327,15 +327,15 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "Open Diego Santos's activity log, record one call, then look at his score and temperature tag.",
      "expected_result": "His score changes from 2 to 3 and the tag flips from Cold to Warm.",
      "task_category": {
       "primary_category": "Functional Testing",
       "subcategories": [
        "Data Calculation",
-       "Regression"
+       "Backward"
       ]
      }
     }
@@ -396,15 +396,15 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 4,
+     "kind": "backward",
+     "copied_from_request": 4,
      "task": "Open the reports page and read the weighted pipeline forecast headline number, then scan the per-lead breakdown.",
      "expected_result": "The headline reads $33,020 and Diego Santos does not appear in the breakdown — Lost leads are excluded from the weighted total.",
      "task_category": {
       "primary_category": "Data Display Testing",
       "subcategories": [
        "Data Calculation",
-       "Regression"
+       "Backward"
       ]
      }
     }
@@ -466,15 +466,15 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 5,
+     "kind": "backward",
+     "copied_from_request": 5,
      "task": "Move Rosa Delgado into Proposal and look at her message history.",
      "expected_result": "A new message reads 'Hi Rosa, checking in on the $12,000 proposal for Brightline Media.'",
      "task_category": {
       "primary_category": "Functional Testing",
       "subcategories": [
        "Automation Trigger",
-       "Regression"
+       "Backward"
       ]
      }
     }
@@ -536,15 +536,15 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "In the template editor, type {{firstname}} into the message body and try to save the template.",
      "expected_result": "The editor flags {{firstname}} as an unsupported placeholder and the save is blocked until it's removed.",
      "task_category": {
       "primary_category": "Functional Testing",
       "subcategories": [
        "Form Validation",
-       "Regression"
+       "Backward"
       ]
      }
     }
@@ -605,15 +605,15 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 7,
+     "kind": "backward",
+     "copied_from_request": 7,
      "task": "In the outreach hub, click the simulate-open control on Marcus Webb's message, then go to the leads page and check Marcus Webb's row.",
      "expected_result": "The envelope marker on his row shows opened and his engagement score now reads 8 with a Hot tag (it was 5, Warm, before the open).",
      "task_category": {
       "primary_category": "Functional Testing",
       "subcategories": [
        "Cross-feature Integration",
-       "Regression"
+       "Backward"
       ]
      }
     }
@@ -675,15 +675,15 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 8,
+     "kind": "backward",
+     "copied_from_request": 8,
      "task": "Open the reports dashboard and read the average deal size tile.",
      "expected_result": "$12,690 — the average over the five open leads only ($8,500, $12,000, $15,750, $22,000, $5,200); a build that averages in the Lost lead would wrongly show $12,125.",
      "task_category": {
       "primary_category": "Data Display Testing",
       "subcategories": [
        "Data Calculation",
-       "Regression"
+       "Backward"
       ]
      }
     }
@@ -694,150 +694,150 @@
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "engagement scoring + activity log",
     "archetype": "derived-state"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "message template studio",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "weighted pipeline forecast",
     "archetype": "derived-state"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "automation rules + tasks",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "app-wide facelift",
     "archetype": "design-restyle"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "outreach hub + open tracking",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "KPI dashboard builder",
     "archetype": "derived-state"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "lead-capture form builder",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "inbox/pipeline triage",
     "archetype": "multi-surface-workflow"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T2",
+    "from": "R1",
+    "to": "R2",
     "what": "base leads table and status editing that scores/activities attach to"
    },
    {
-    "from": "T1",
-    "to": "T3",
+    "from": "R1",
+    "to": "R3",
     "what": "message-sending flow the templates plug into"
    },
    {
-    "from": "T1",
-    "to": "T4",
+    "from": "R1",
+    "to": "R4",
     "what": "settings page hosting probabilities; lead stages and deal values"
    },
    {
-    "from": "T3",
-    "to": "T5",
+    "from": "R3",
+    "to": "R5",
     "what": "saved templates with placeholders that rules send"
    },
    {
-    "from": "T1",
-    "to": "T5",
+    "from": "R1",
+    "to": "R5",
     "what": "lead status changes that trigger rules"
    },
    {
-    "from": "T1",
-    "to": "T6",
+    "from": "R1",
+    "to": "R6",
     "what": "leads, reports, settings pages restyled"
    },
    {
-    "from": "T2",
-    "to": "T6",
+    "from": "R2",
+    "to": "R6",
     "what": "score temperature tags restyled as pills"
    },
    {
-    "from": "T3",
-    "to": "T6",
+    "from": "R3",
+    "to": "R6",
     "what": "template studio restyled"
    },
    {
-    "from": "T4",
-    "to": "T6",
+    "from": "R4",
+    "to": "R6",
     "what": "forecast breakdown table restyled"
    },
    {
-    "from": "T5",
-    "to": "T6",
+    "from": "R5",
+    "to": "R6",
     "what": "tasks page restyled"
    },
    {
-    "from": "T5",
-    "to": "T7",
+    "from": "R5",
+    "to": "R7",
     "what": "automation-sent messages populate the hub feed"
    },
    {
-    "from": "T2",
-    "to": "T7",
+    "from": "R2",
+    "to": "R7",
     "what": "opens add +3 to the engagement score and re-rank"
    },
    {
-    "from": "T2",
-    "to": "T8",
+    "from": "R2",
+    "to": "R8",
     "what": "average engagement score tile aggregates scores"
    },
    {
-    "from": "T4",
-    "to": "T8",
+    "from": "R4",
+    "to": "R8",
     "what": "forecast tile must mirror the forecast page total"
    },
    {
-    "from": "T1",
-    "to": "T9",
+    "from": "R1",
+    "to": "R9",
     "what": "test-submit creates a real lead in the CRM"
    },
    {
-    "from": "T9",
-    "to": "T10",
+    "from": "R9",
+    "to": "R10",
     "what": "web-form submissions land in the Inbox"
    },
    {
-    "from": "T4",
-    "to": "T10",
+    "from": "R4",
+    "to": "R10",
     "what": "promotion adds value x stage probability to the forecast"
    },
    {
-    "from": "T2",
-    "to": "T10",
+    "from": "R2",
+    "to": "R10",
     "what": "inbox leads excluded from score rankings"
    },
    {
-    "from": "T8",
-    "to": "T10",
+    "from": "R8",
+    "to": "R10",
     "what": "inbox leads excluded from dashboard tiles"
    }
   ]
@@ -845,20 +845,20 @@
  "global_rules": [
   {
    "rule": "Every engagement score, anywhere it appears in the app, carries a temperature tag: 0-2 Cold, 3-5 Warm, 6+ Hot.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Leads are always written as first and last name, a middle dot, then company (e.g. 'Rosa Delgado · Brightline Media') everywhere they are referenced.",
-   "introduced_in_turn": 3
+   "introduced_in_request": 3
   },
   {
    "rule": "Wherever stages appear as a list (dropdowns, breakdowns, reports), they follow pipeline order New, Contacted, Qualified, Proposal, Won, Lost — never alphabetical.",
-   "introduced_in_turn": 4
+   "introduced_in_request": 4
   }
  ],
  "pinned_seed": {
   "entity": "6 sales leads with company, deal value, stage, and logged activities",
-  "introduced_in_turn": 2,
+  "introduced_in_request": 2,
   "records_gist": "Marcus Webb/Ironpeak $8,500 Contacted (1 call, 2 sent emails -> score 5); Rosa Delgado/Brightline $12,000 Qualified (2 calls, 1 reply -> 5); Lena Fischer/Quartzline $15,750 Qualified (1 call, 1 sent, 1 reply -> 6); Priya Nair/Cobalt $22,000 Proposal (3 calls, 1 reply -> 6); Tom Okafor/Harbor & Finch $5,200 New (none -> 0); Diego Santos/Alturas $9,300 Lost (2 calls -> 2)"
  }
 }

@@ -44,12 +44,12 @@ follow_ups          [ 9 x {                                   request k = follow
     instruction     the user's request
     source_website, source_feature      the real product feature the request was grounded in
                     (the no-grounding set carries `feature_rationale` instead)
-    ui_instruct     [ 5 x {kind, task, expected_result, task_category, [copied_from_turn]} ]
+    ui_instruct     [ 5 x {kind, task, expected_result, task_category, [copied_from_request]} ]
   } ]
-dependency_graph    {nodes: [{id: "T1".."T10", label, archetype}],
+dependency_graph    {nodes: [{id: "R1".."R10", label, archetype}],
                      edges: [{from, to, what}]}        what = the concrete thing `to` relies on
-global_rules        [ 3 x {rule, introduced_in_turn} ]  app-wide rules the requests introduce
-pinned_seed         {entity, introduced_in_turn (2 or 3), records_gist, [records]}
+global_rules        [ 3 x {rule, introduced_in_request} ]  app-wide rules the requests introduce
+pinned_seed         {entity, introduced_in_request (2 or 3), records_gist, [records]}
                     records, when present, is a string (JSON-encoded where it is a list)
                     the fixed demo data every exact-value check is written against
 target_app_summary  prose description of the app the 10 requests build towards
@@ -66,6 +66,6 @@ Every follow-up request carries exactly five judge checks in a fixed order (`tas
 |---|---|---|
 | 0, 1, 2 | `exact-value` or `feature` | **functional**: the request's own feature; `exact-value` pins a number, ordering or label derived from the pinned seed data |
 | 3 | `integration` | **integration**: the new feature combined with one built earlier, along an edge of `dependency_graph`. When the request has **no incoming edge** the check verifies one of the `global_rules` instead (18 of the 288 follow-up requests); Table 4 scores those separately |
-| 4 | `regression` | **backward**: a check copied from an earlier request (`copied_from_turn`), to see whether the earlier feature still works |
+| 4 | `backward` | **backward**: a check copied from an earlier request (`copied_from_request`), to see whether the earlier feature still works |
 
 The first request is judged with the row's own `ui_instruct` (WebGen-Bench's original checks).

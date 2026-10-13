@@ -14,7 +14,7 @@ import subprocess
 import time
 from pathlib import Path
 
-# Pid-seeded (parallel pods) and incremented per eval (sequential turns).
+# Pid-seeded (parallel pods) and incremented per eval (sequential requests).
 _DISPLAY_NO = itertools.count(90 + os.getpid() % 50)
 
 
@@ -47,7 +47,7 @@ class SessionRecording:
 def start_session_recording(output_dir: Path, log=print) -> SessionRecording | None:
     """Start Xvfb + ffmpeg writing output_dir/videos/webvoyager_<tag>.mp4.
 
-    The video name carries output_dir.name so multi-turn videos don't collide.
+    The video name carries output_dir.name so multi-request videos don't collide.
     Returns None (with a warning) when Xvfb/ffmpeg are missing — the caller
     falls back to a headless, unrecorded eval."""
     xvfb_bin, ffmpeg_bin = shutil.which("Xvfb"), shutil.which("ffmpeg")

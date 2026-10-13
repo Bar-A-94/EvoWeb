@@ -36,7 +36,7 @@ pytestmark = pytest.mark.skipif(
     os.environ.get("EVOWEB_LIVE") != "1", reason="live reproduction is opt-in: set EVOWEB_LIVE=1"
 )
 
-TURNS = metrics.TURNS
+REQUESTS = metrics.REQUESTS
 
 # model key -> (paper row, generator model id, provider, API_URL, key env var)
 MODELS = {
@@ -124,11 +124,11 @@ def test_fresh_run_within_replicate_envelope(key, apps, out_root):
     infra = [
         (sid, t)
         for sid, b in fresh.items()
-        for t in TURNS
+        for t in REQUESTS
         if (b.get(t) or {}).get("status") == "error"
     ]
     assert not infra, (
-        f"{key}: infrastructure-errored turns {infra}; repair (re-run those apps) before judging"
+        f"{key}: infrastructure-errored requests {infra}; repair (re-run those apps) before judging"
     )
     g_fresh = grade(fresh, expected)
 

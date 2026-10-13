@@ -55,41 +55,41 @@ def test_every_evoweb_row_has_9_follow_ups_with_5_checks_in_the_slot_template():
         fus = row["follow_ups"]
         assert len(fus) == 9
         assert {n["id"] for n in row["dependency_graph"]["nodes"]} == {
-            f"T{i}" for i in range(1, 11)
+            f"R{i}" for i in range(1, 11)
         }
         assert len(row["global_rules"]) == 3
-        assert row["pinned_seed"]["introduced_in_turn"] in (2, 3)
+        assert row["pinned_seed"]["introduced_in_request"] in (2, 3)
         for k, fu in enumerate(fus, start=2):
             tasks = fu["ui_instruct"]
             assert len(tasks) == 5, (row["id"], k)
             kinds = [t["kind"] for t in tasks]
             assert all(x in ("exact-value", "feature") for x in kinds[:3]), (row["id"], k, kinds)
-            assert kinds[3] == "integration" and kinds[4] == "regression", (row["id"], k, kinds)
+            assert kinds[3] == "integration" and kinds[4] == "backward", (row["id"], k, kinds)
             assert fu["archetype"] in (
                 "derived-state",
                 "multi-surface-workflow",
                 "interactive-tool",
                 "design-restyle",
             )
-            src = tasks[4]["copied_from_turn"]
+            src = tasks[4]["copied_from_request"]
             assert 1 <= src < k
-            if src >= 2:  # verbatim from the cited turn (turn 1 regressions are authored)
+            if src >= 2:  # verbatim from the cited request (request-1 backward checks are authored)
                 pool = {(t["task"], t["expected_result"]) for t in fus[src - 2]["ui_instruct"]}
                 assert (tasks[4]["task"], tasks[4]["expected_result"]) in pool
 
 
-def test_exactly_18_global_rule_turns_have_no_incoming_dag_edge():
+def test_exactly_18_global_rule_requests_have_no_incoming_dag_edge():
     """Table 4's 'integration excluding the 18 global-rule checks'."""
     no_incoming = 0
     for row in rows(BENCHMARK):
         targets = {e["to"] for e in row["dependency_graph"]["edges"]}
         for e in row["dependency_graph"]["edges"]:
             assert int(e["from"][1:]) < int(e["to"][1:]), (row["id"], e)
-        no_incoming += sum(1 for k in range(2, 11) if f"T{k}" not in targets)
+        no_incoming += sum(1 for k in range(2, 11) if f"R{k}" not in targets)
     assert no_incoming == 18
 
 
-def test_turn_1_is_byte_identical_across_arms():
+def test_request_1_is_byte_identical_across_arms():
     ctl = {r["id"]: r for r in rows(BENCHMARK)}
     for fn in ("ablation_no_grounding.jsonl",):
         for r in rows(DATA / fn):
@@ -101,6 +101,72 @@ def test_turn_1_is_byte_identical_across_arms():
 
 
 # ───────────────────────────────────────────── audit ─────────────────────────────────────────
+def test_shipped_sets_already_use_the_paper_terms():
+    """paper_terms() (applied by assemble_dataset.py) is a no-op on every shipped row."""
+    sys.path.insert(0, str(DS))
+    from paper_terms import paper_terms  # noqa: E402
+
+    for path in (BENCHMARK, DATA / "ablation_no_grounding.jsonl"):
+        for r in rows(path):
+            assert paper_terms(r) == r, (path.name, r["id"])
+
+
+def test_generator_output_with_the_old_terms_audits_and_assembles_to_the_shipped_set(tmp_path):
+    """The .js generators still write the old terms; audit + assemble must give the shipped set.
+
+    Parts are rebuilt from ablation_no_grounding.jsonl in the generator's own vocabulary
+    (copied_from_turn, kind "regression", T1..T10), then audited and assembled from scratch.
+    """
+    import re
+
+    sys.path.insert(0, str(DS))
+    from assemble_dataset import META_FIELDS  # noqa: E402
+    from paper_terms import KEYS, TEXT_FIELDS, VALUES  # noqa: E402
+
+    old_keys = {v: k for k, v in KEYS.items()}
+    old_values = {v: k for k, v in VALUES.items()}
+    graph_id = re.compile(r"\bR(10|[1-9])\b")
+    text = [
+        (re.compile(r"\brequest(s?) (?=\d)"), r"turn\1 "),
+        (re.compile(r"\b(four|nine|later|late) request(s?)\b"), r"\1 turn\2"),
+    ]
+
+    def old_terms(o, key=None):
+        if isinstance(o, dict):
+            return {old_keys.get(k, k): old_terms(v, k) for k, v in o.items()}
+        if isinstance(o, list):
+            return [old_terms(x, key) for x in o]
+        if not isinstance(o, str):
+            return o
+        if key in ("kind", "subcategories"):
+            return old_values.get(o, o)
+        if key in ("id", "from", "to"):
+            return graph_id.sub(r"T\1", o)
+        if key in TEXT_FIELDS:
+            o = graph_id.sub(r"T\1", o)
+            for pat, rep in text:
+                o = pat.sub(rep, o)
+        return o
+
+    shipped = DATA / "ablation_no_grounding.jsonl"
+    parts = tmp_path / "ablation_dataset_no_grounding"
+    parts.mkdir()
+    for r in rows(shipped):
+        part = {"app_idx": int(r["id"]), "follow_ups": r["follow_ups"]}
+        part |= {k: r[k] for k in META_FIELDS if k in r}
+        part = old_terms(part)
+        assert "copied_from_turn" in json.dumps(part)  # really the generator's vocabulary
+        (parts / f"{r['id']}.json").write_text(json.dumps(part, indent=1))
+
+    audit = run(DS / "audit_parts.py", parts, "--variant", "nogrounding", "--quiet")
+    assert "DIRTY 0" in audit.stdout, audit.stdout[-1000:]
+    out = tmp_path / "out.jsonl"
+    ids = ",".join(str(int(r["id"])) for r in rows(shipped))  # the workflows' own assembly command
+    r = run(DS / "assemble_dataset.py", "--parts", parts, "--out", out, "--clean", ids)
+    assert r.returncode == 0, r.stdout[-1000:] + r.stderr[-1000:]
+    assert out.read_bytes() == shipped.read_bytes()
+
+
 def test_audit_parts_verdicts_match_the_shipped_sets():
     def clean_dirty(dataset):
         r = run(DS / "audit_parts.py", DATA / dataset, "--quiet")

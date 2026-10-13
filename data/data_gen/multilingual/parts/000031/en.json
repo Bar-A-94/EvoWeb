@@ -140,8 +140,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 1,
+     "kind": "backward",
+     "copied_from_request": 1,
      "task": "Post a new discussion containing the word quantum, then type quantum into the search.",
      "expected_result": "The just-posted discussion shows up in the search results.",
      "task_category": {
@@ -211,8 +211,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "In the feed, switch the sort to Top and read the first three posts.",
      "expected_result": "'Library 3rd floor is a zoo during finals' (+38) first, then 'Best cheap eats within walking distance?' (+22, 18 replies), then 'Wi-Fi in North Hall is down AGAIN' (+22, 7 replies) — the Econ post's 30 upvotes only net +8 so it is not in the top three, and the reply-count tiebreak puts cheap eats above Wi-Fi.",
      "task_category": {
@@ -281,8 +281,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "Open the Wi-Fi in North Hall post and look at its poll before voting.",
      "expected_result": "'Under an hour' shows 52.9% and the total reads 17 votes.",
      "task_category": {
@@ -350,8 +350,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "Find the roommate-leftovers post and the Econ midterm post in the feed and check the score each one displays.",
      "expected_result": "The roommate post (15 up / 15 down) shows 0 with no sign, and the Econ post (30 up / 22 down) shows +8 with the plus sign — not raw upvote counts like 15 or 30.",
      "task_category": {
@@ -419,8 +419,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 4,
+     "kind": "backward",
+     "copied_from_request": 4,
      "task": "Open the Trending tab and read the top three entries.",
      "expected_result": "#1 'Best cheap eats within walking distance?' (+22, 18 replies), #2 'Wi-Fi in North Hall is down AGAIN' (+22, 7 replies), #3 the Econ midterm post (+8) — the library post is absent even at +38 because Day 2 falls outside the Day 3-or-later window.",
      "task_category": {
@@ -488,8 +488,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 5,
+     "kind": "backward",
+     "copied_from_request": 5,
      "task": "Find the TI-84 Plus calculator listing in the Marketplace and look at its category badge.",
      "expected_result": "The category reads #electronics — lowercase with the leading #, matching how topic tags look everywhere else in the app.",
      "task_category": {
@@ -557,8 +557,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 6,
+     "kind": "backward",
+     "copied_from_request": 6,
      "task": "In the screener panel, tick the campus and housing topics and type 1 into the minimum score box.",
      "expected_result": "Exactly three posts remain — the library post, the Wi-Fi post, and the summer sublet; the roommate #housing post is excluded because its score is 0, below the minimum of 1.",
      "task_category": {
@@ -626,8 +626,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 7,
+     "kind": "backward",
+     "copied_from_request": 7,
      "task": "Open the Moderation Queue and note what's in it; then go to the feed, downvote the 'Selling my old exam answers for Chem 110' post once, and check the queue again.",
      "expected_result": "At first the queue holds only the roommate-leftovers post with 2 reports; the single downvote takes the chem post from -3 to -4, and it then appears in the queue as well.",
      "task_category": {
@@ -697,8 +697,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "In the feed, switch the sort to Top and read the first three posts.",
      "expected_result": "'Library 3rd floor is a zoo during finals' (+38) first, then 'Best cheap eats within walking distance?' (+22, 18 replies), then 'Wi-Fi in North Hall is down AGAIN' (+22, 7 replies) — the Econ post's 30 upvotes only net +8 so it is not in the top three, and the reply-count tiebreak puts cheap eats above Wi-Fi.",
      "task_category": {
@@ -713,139 +713,139 @@
    ]
   }
  ],
- "target_app_summary": "The anonymous campus forum grows into a full campus community platform. Discovery gets serious: an up/down voting system with net scores and tie-aware Top/New sorting feeds a windowed Trending tab, a multi-criteria screener with saved presets, and a publishable Campus Digest that snapshots trending posts and marketplace deals into frozen editions. Community tooling arrives via attachable opinion polls with live one-decimal percentage bars, per-thread emoji personas with an optional identity-reveal signature, and a report-driven Moderation Queue whose auto-flagging fires off vote-score thresholds. A three-step Marketplace adds practical campus utility with validated listings, category badges and price sorting. A final design pass unifies feed, Trending, Marketplace and Moderation Queue under one pill-badge, accent-stripe, signed-score visual language. The graph runs deep: voting (T2) powers Trending (T4), the screener (T6) and moderation auto-flagging (T7), while the Digest (T9) aggregates Trending and Marketplace output — a 3-deep chain T1-T2-T4-T9.",
+ "target_app_summary": "The anonymous campus forum grows into a full campus community platform. Discovery gets serious: an up/down voting system with net scores and tie-aware Top/New sorting feeds a windowed Trending tab, a multi-criteria screener with saved presets, and a publishable Campus Digest that snapshots trending posts and marketplace deals into frozen editions. Community tooling arrives via attachable opinion polls with live one-decimal percentage bars, per-thread emoji personas with an optional identity-reveal signature, and a report-driven Moderation Queue whose auto-flagging fires off vote-score thresholds. A three-step Marketplace adds practical campus utility with validated listings, category badges and price sorting. A final design pass unifies feed, Trending, Marketplace and Moderation Queue under one pill-badge, accent-stripe, signed-score visual language. The graph runs deep: voting (R2) powers Trending (R4), the screener (R6) and moderation auto-flagging (R7), while the Digest (R9) aggregates Trending and Marketplace output — a 3-deep chain R1-R2-R4-R9.",
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "voting & Top/New sort",
     "archetype": "derived-state"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "opinion polls",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "Trending tab",
     "archetype": "derived-state"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "Marketplace",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "feed screener & presets",
     "archetype": "derived-state"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "Moderation Queue",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "thread emoji personas",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "Campus Digest builder",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "unified visual restyle",
     "archetype": "design-restyle"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T2",
+    "from": "R1",
+    "to": "R2",
     "what": "up/down votes and sort modes attach to the base feed's posts"
    },
    {
-    "from": "T1",
-    "to": "T3",
+    "from": "R1",
+    "to": "R3",
     "what": "polls ride on the base composer and published posts"
    },
    {
-    "from": "T2",
-    "to": "T4",
+    "from": "R2",
+    "to": "R4",
     "what": "trending ranks by the voting system's net scores"
    },
    {
-    "from": "T1",
-    "to": "T6",
+    "from": "R1",
+    "to": "R6",
     "what": "screener filters the base feed's post list and keyword search"
    },
    {
-    "from": "T2",
-    "to": "T6",
+    "from": "R2",
+    "to": "R6",
     "what": "minimum-score filter reads net vote scores"
    },
    {
-    "from": "T1",
-    "to": "T7",
+    "from": "R1",
+    "to": "R7",
     "what": "reports are filed on base feed posts"
    },
    {
-    "from": "T2",
-    "to": "T7",
+    "from": "R2",
+    "to": "R7",
     "what": "auto-flagging fires when net score hits the threshold"
    },
    {
-    "from": "T1",
-    "to": "T8",
+    "from": "R1",
+    "to": "R8",
     "what": "personas attach to base threads and replies"
    },
    {
-    "from": "T4",
-    "to": "T9",
+    "from": "R4",
+    "to": "R9",
     "what": "digest embeds the current trending top-3 with scores"
    },
    {
-    "from": "T5",
-    "to": "T9",
+    "from": "R5",
+    "to": "R9",
     "what": "digest pulls the three cheapest marketplace listings"
    },
    {
-    "from": "T1",
-    "to": "T10",
+    "from": "R1",
+    "to": "R10",
     "what": "restyles the main feed's cards, tags and buttons"
    },
    {
-    "from": "T2",
-    "to": "T10",
+    "from": "R2",
+    "to": "R10",
     "what": "restyles the voting system's net scores (bold, green/red/gray by sign)"
    },
    {
-    "from": "T4",
-    "to": "T10",
+    "from": "R4",
+    "to": "R10",
     "what": "restyles the Trending tab"
    },
    {
-    "from": "T5",
-    "to": "T10",
+    "from": "R5",
+    "to": "R10",
     "what": "restyles the Marketplace"
    },
    {
-    "from": "T6",
-    "to": "T10",
+    "from": "R6",
+    "to": "R10",
     "what": "the screener's preset-save button gets the primary-action pill styling"
    },
    {
-    "from": "T7",
-    "to": "T10",
+    "from": "R7",
+    "to": "R10",
     "what": "restyles the Moderation Queue"
    }
   ]
@@ -853,20 +853,20 @@
  "global_rules": [
   {
    "rule": "Net vote scores are always displayed with an explicit + sign when positive (e.g. +22), a plain 0 at zero, and a minus when negative — on every surface, including features added later.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Every topic or category label anywhere in the app is rendered lowercase with a leading # (e.g. #housing, #electronics) — app-wide, now and for anything added later.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Every count in the app is correctly pluralized ('1 vote' / '2 votes', '1 match', '1 report') — never '1 votes' — everywhere, forever.",
-   "introduced_in_turn": 3
+   "introduced_in_request": 3
   }
  ],
  "pinned_seed": {
   "entity": "7 forum posts (title, #topic, up/down votes, Day label, reply count)",
-  "introduced_in_turn": 2,
+  "introduced_in_request": 2,
   "records_gist": "Library zoo #campus 41/3 Day2 12r; Econ midterm #academics 30/22 Day4 25r; Lost keychain #help 9/1 Day5 4r; Cheap eats #food 24/2 Day5 18r; Roommate leftovers #housing 15/15 Day1 31r; Summer sublet #housing 6/2 Day3 2r; Wi-Fi North Hall #campus 24/2 Day5 7r"
  }
 }

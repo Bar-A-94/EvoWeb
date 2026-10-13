@@ -1,12 +1,12 @@
 """The paper's arithmetic, lifted verbatim from the study scripts that produced the tables.
 
-Everything takes run ids (directories under `paths.TRACES`) or ladders ({sample: {turn: turn
-dict}}) and returns plain numbers. No I/O outside `paths`.
+Everything takes run ids (directories under `paths.TRACES`) or ladders ({sample: {request:
+request dict}}) and returns plain numbers. No I/O outside `paths`.
 
 Sec. 3.4 of the paper, in the code's terms:
-    accuracy a_r        scoring.turn_score(turn) / 100 (mean verdict weight over the tests)
+    accuracy a_r        scoring.request_score(request) / 100 (mean verdict weight over the tests)
     Q(t)                score_ladders(gate(ladders, t))["avg_norm"]  (delivered functionality, %)
-    S(t)                mean over ladders of turns_before_gate(ladder, t)
+    S(t)                mean over ladders of requests_before_gate(ladder, t)
     Grade               trapezoid AUC of Q(t) over t = 0..100 %, /100 (auc_norm), then /100 again
                         to report on [0, 1]
     Survival            trapezoid AUC of S(t) over t = 0..100 %, /100 (auc_turns)
@@ -28,9 +28,9 @@ from collections import defaultdict
 from pathlib import Path
 
 from .paths import BENCHMARK, ensure_data, run_dir
-from .scoring import ladder_from_result, load_expected_tasks, score_ladders, turn_score
+from .scoring import ladder_from_result, load_expected_tasks, request_score, score_ladders
 
-TURNS = list(range(1, 11))
+REQUESTS = list(range(1, 11))
 FOLLOW_UPS = list(range(2, 11))
 THRESHOLDS = list(range(0, 101))  # gate threshold, percent
 N_SAMPLES = 32
@@ -70,7 +70,7 @@ ZAI_PRICES = {
 
 
 def load_ladders(run_id: str, expect: int | None = N_SAMPLES) -> dict[int, dict]:
-    """{sample index: {turn: turn dict}} from every <sample>/result.json of a run."""
+    """{sample index: {request: request dict}} from every <sample>/result.json of a run."""
     ladders = {}
     for f in sorted(run_dir(run_id).glob("*/result.json")):
         r = json.loads(f.read_text())
@@ -81,35 +81,35 @@ def load_ladders(run_id: str, expect: int | None = N_SAMPLES) -> dict[int, dict]
 
 
 def expected_tasks(dataset: Path = BENCHMARK) -> dict[int, dict[int, int]]:
-    """{sample index: {turn: number of judge tests}} -- the exact denominators of Q(t)."""
+    """{sample index: {request: number of judge tests}} -- the exact denominators of Q(t)."""
     ensure_data(Path(dataset))
     return load_expected_tasks(str(dataset))
 
 
 def gate(ladders: dict, threshold: float) -> dict:
-    """Replay a tolerance gate offline: the first turn scoring below `threshold` (percent) or
-    producing no verdict still counts, every later turn is 'skipped' (contributes zero)."""
+    """Replay a tolerance gate offline: the first request scoring below `threshold` (percent)
+    or producing no verdict still counts, every later request is 'skipped' (contributes zero)."""
     out = {}
-    for sid, by_turn in ladders.items():
+    for sid, by_request in ladders.items():
         gated, kept = False, {}
-        for t in TURNS:
-            turn = by_turn.get(t)
+        for t in REQUESTS:
+            request = by_request.get(t)
             if gated:
                 kept[t] = {"turn": t, "status": "skipped", "total": 0}
                 continue
-            kept[t] = copy.deepcopy(turn) if turn else turn
-            score = turn_score(turn)
+            kept[t] = copy.deepcopy(request) if request else request
+            score = request_score(request)
             if score is None or score < threshold:
                 gated = True
         out[sid] = kept
     return out
 
 
-def turns_before_gate(by_turn: dict, threshold: float) -> int:
+def requests_before_gate(by_request: dict, threshold: float) -> int:
     """Consecutive requests from the first whose accuracy is at least `threshold` (S(t))."""
     n = 0
-    for t in TURNS:
-        score = turn_score(by_turn.get(t))
+    for t in REQUESTS:
+        score = request_score(by_request.get(t))
         if score is None or score < threshold:
             break
         n += 1
@@ -124,7 +124,7 @@ def auc(curve: list[float]) -> float:
 def quality_sweep(ladders: dict, expected: dict) -> list[float]:
     """Q(t) in percent for every threshold in THRESHOLDS."""
     return [
-        score_ladders(gate(ladders, t), TURNS, expected_by_sample=expected)["avg_norm"]
+        score_ladders(gate(ladders, t), REQUESTS, expected_by_sample=expected)["avg_norm"]
         for t in THRESHOLDS
     ]
 
@@ -132,13 +132,13 @@ def quality_sweep(ladders: dict, expected: dict) -> list[float]:
 def survival_sweep(ladders: dict) -> list[float]:
     """S(t), mean requests survived, for every threshold in THRESHOLDS."""
     return [
-        sum(turns_before_gate(b, t) for b in ladders.values()) / len(ladders) for t in THRESHOLDS
+        sum(requests_before_gate(b, t) for b in ladders.values()) / len(ladders) for t in THRESHOLDS
     ]
 
 
 def run_scores(ladders: dict, expected: dict) -> dict:
     """raw / norm (ungated), grade (= auc_norm / 100), survival (= auc_turns), and both sweeps."""
-    sc = score_ladders(ladders, TURNS, expected_by_sample=expected)
+    sc = score_ladders(ladders, REQUESTS, expected_by_sample=expected)
     q, s = quality_sweep(ladders, expected), survival_sweep(ladders)
     return {
         "raw": sc["avg_raw"],
@@ -156,16 +156,16 @@ def run_scores(ladders: dict, expected: dict) -> dict:
 
 
 def iter_requests(run_id: str):
-    """Yield (sample index, turn, [status-200 call records sorted by ts]) per request.
+    """Yield (sample index, request, [status-200 call records sorted by ts]) per request.
 
-    Turn 1's log sits at <sample>/generation/model_calls.jsonl, turn N >= 2 at
+    Request 1's log sits at <sample>/generation/model_calls.jsonl, request N >= 2 at
     <sample>/turnN/generation/. Requests whose wire log was lost (a pod restart before upload)
     are absent, as they were in the paper's numbers. Only the released fields are read:
     ts, duration_s, status, model, tools, usage.
     """
     for sample in sorted(run_dir(run_id).glob("[0-9]" * 6)):
         idx = int(sample.name)
-        for tn in TURNS:
+        for tn in REQUESTS:
             f = (sample if tn == 1 else sample / f"turn{tn}") / "generation" / "model_calls.jsonl"
             if not f.is_file():
                 continue
@@ -317,8 +317,8 @@ def arm_metrics(run_ids: list[str], expected: dict) -> dict:
 
 
 # ---------------------------------------------------------------- Table 4: Grade by test type
-# Every follow-up request (T2-T10) carries five checks: task_idx 0-2 functional (exact-value +
-# feature), 3 integration (the DAG's own check), 4 backward (regression). The slot-3 check of a
+# Every follow-up request (2-10) carries five checks: task_idx 0-2 functional (exact-value +
+# feature), 3 integration (the DAG's own check), 4 backward. The slot-3 check of a
 # request with NO incoming DAG edge has nothing earlier to integrate with and verifies one of the
 # app's global rules instead; it is scored as "global_rule", not integration.
 
@@ -333,25 +333,25 @@ def benchmark_rows(dataset: Path = BENCHMARK) -> list[dict]:
     return [json.loads(line) for line in Path(dataset).open(encoding="utf-8") if line.strip()]
 
 
-def incoming(row: dict, turn: int) -> list[dict]:
-    return [e for e in row["dependency_graph"]["edges"] if e["to"] == f"T{turn}"]
+def incoming(row: dict, request: int) -> list[dict]:
+    return [e for e in row["dependency_graph"]["edges"] if e["to"] == f"R{request}"]
 
 
-def global_rule_turns(rows: list[dict] | None = None) -> set[tuple[int, int]]:
-    """{(sample index, turn)} of follow-up requests whose slot-3 check is a global-rule check."""
+def global_rule_requests(rows: list[dict] | None = None) -> set[tuple[int, int]]:
+    """{(sample index, request)} of follow-up requests whose slot-3 check is a global-rule check."""
     rows = rows or benchmark_rows()
     out = set()
     for i, row in enumerate(rows, start=1):
         for fu_i in range(len(row["follow_ups"])):
-            turn = fu_i + 2
-            if not incoming(row, turn):
-                out.add((i, turn))
+            request = fu_i + 2
+            if not incoming(row, request):
+                out.add((i, request))
     return out
 
 
-def check_group(idx: int, turn: int, task_idx: int, gr_turns: set) -> str | None:
+def check_group(idx: int, request: int, task_idx: int, gr_requests: set) -> str | None:
     if task_idx == 3:
-        return "global_rule" if (idx, turn) in gr_turns else "integration"
+        return "global_rule" if (idx, request) in gr_requests else "integration"
     if task_idx == 4:
         return "backward"
     if task_idx in (0, 1, 2):
@@ -359,27 +359,27 @@ def check_group(idx: int, turn: int, task_idx: int, gr_turns: set) -> str | None
     return None
 
 
-def per_app_turn_groups(run_id: str, gr_turns: set) -> dict:
-    """app -> {"all": turn -> overall accuracy, "grp": turn -> {group: accuracy | None},
-    "present": turn -> groups the dataset gives this turn}. Unjudged group scores 0 when the
-    dataset has it on the turn; a group with no slot on the turn is None."""
+def per_app_request_groups(run_id: str, gr_requests: set) -> dict:
+    """app -> {"all": request -> overall accuracy, "grp": request -> {group: accuracy | None},
+    "present": request -> groups the dataset gives this request}. Unjudged group scores 0 when
+    the dataset has it on the request; a group with no slot on the request is None."""
     out = {}
     for f in sorted(run_dir(run_id).glob("*/result.json")):
         r = json.loads(f.read_text())
         idx = int(r["index"])
-        for turn in r.get("turns", []):
-            tn = turn.get("turn")
+        for request in r.get("turns", []):
+            tn = request.get("turn")
             if not tn:
                 continue
             cell = {g: [0.0, 0] for g in GROUPS}
             tot = [0.0, 0]
-            for t in turn.get("tasks", []):
+            for t in request.get("tasks", []):
                 v = VERDICT_W.get(t.get("verdict"))
                 if v is None:
                     continue
                 tot[0] += v
                 tot[1] += 1
-                g = check_group(idx, tn, t.get("task_idx"), gr_turns) if tn >= 2 else None
+                g = check_group(idx, tn, t.get("task_idx"), gr_requests) if tn >= 2 else None
                 if g:
                     cell[g][0] += v
                     cell[g][1] += 1
@@ -391,7 +391,7 @@ def per_app_turn_groups(run_id: str, gr_turns: set) -> dict:
                     "grp": {},
                     "all": {},
                     "present": {
-                        t: {check_group(idx, t, ti, gr_turns) for ti in range(5)}
+                        t: {check_group(idx, t, ti, gr_requests) for ti in range(5)}
                         for t in FOLLOW_UPS
                     },
                 },
@@ -407,10 +407,10 @@ def per_app_turn_groups(run_id: str, gr_turns: set) -> dict:
 
 
 def replay_group(app: dict, group: str, th: float) -> tuple[list[float], int]:
-    """([group accuracy per follow-up cell carrying the group], follow-up turns survived) under
+    """([group accuracy per follow-up cell carrying the group], follow-up requests survived) under
     the SHARED gate: the overall five-check accuracy decides progression, so every group dies on
-    the same turn and only the numerator is group-specific. A cell scores 0 once the ladder is
-    dead or the turn was unjudged."""
+    the same request and only the numerator is group-specific. A cell scores 0 once the ladder is
+    dead or the request was unjudged."""
     t1 = app["all"].get(1)
     alive = not (t1 is None or t1 * 100 < th)
     cells, survived = [], 0
@@ -427,11 +427,11 @@ def replay_group(app: dict, group: str, th: float) -> tuple[list[float], int]:
     return cells, survived
 
 
-def grade_by_type(run_ids: list[str], gr_turns: set | None = None) -> dict:
+def grade_by_type(run_ids: list[str], gr_requests: set | None = None) -> dict:
     """{group: (mean, std, n) of the group's Grade over the runs} for one model, plus
     "survival" (shared gate, one per model). Grade on [0, 1]."""
-    gr_turns = global_rule_turns() if gr_turns is None else gr_turns
-    runs = [per_app_turn_groups(rid, gr_turns) for rid in run_ids]
+    gr_requests = global_rule_requests() if gr_requests is None else gr_requests
+    runs = [per_app_request_groups(rid, gr_requests) for rid in run_ids]
     out = {}
     for g in GROUPS:
         per_run = []
@@ -459,8 +459,8 @@ FIG4_REQUESTS = (8, 9, 10)
 
 
 def structure(row: dict) -> tuple[dict[int, int], dict[int, int]]:
-    """(depth, in-degree) per turn 1..10 from the app's dependency_graph. depth = longest
-    dependency chain ending at the request (T1 = 0; no incoming edge = 0)."""
+    """(depth, in-degree) per request 1..10 from the app's dependency_graph. depth = longest
+    dependency chain ending at the request (R1 = 0; no incoming edge = 0)."""
     inc = defaultdict(list)
     for e in row["dependency_graph"]["edges"]:
         inc[int(e["to"][1:])].append(int(e["from"][1:]))
@@ -471,19 +471,19 @@ def structure(row: dict) -> tuple[dict[int, int], dict[int, int]]:
 
 
 def request_scores(run_ids: list[str], requests=FIG4_REQUESTS) -> dict:
-    """{(sample index, turn): [accuracy % per run in which the request was judged]}."""
+    """{(sample index, request): [accuracy % per run in which the request was judged]}."""
     out = defaultdict(list)
     for rid in run_ids:
         for f in sorted(run_dir(rid).glob("*/result.json")):
             r = json.loads(f.read_text())
             idx = int(r["index"])
-            for turn in r.get("turns", []):
-                tn = turn.get("turn")
+            for request in r.get("turns", []):
+                tn = request.get("turn")
                 if tn not in requests:
                     continue
                 w = [
                     VERDICT_W[t["verdict"]]
-                    for t in turn.get("tasks", [])
+                    for t in request.get("tasks", [])
                     if t.get("verdict") in VERDICT_W
                 ]
                 if w:
@@ -492,7 +492,7 @@ def request_scores(run_ids: list[str], requests=FIG4_REQUESTS) -> dict:
 
 
 def dag_points(run_ids: list[str], axis: str, rows: list[dict] | None = None) -> dict:
-    """{turn: {x: (mean accuracy %, n apps)}} on axis "depth" or "indeg"; each app's score is
+    """{request: {x: (mean accuracy %, n apps)}} on axis "depth" or "indeg"; each app's score is
     first averaged over the runs that judged it."""
     rows = rows or benchmark_rows()
     struct = {i: structure(row) for i, row in enumerate(rows, start=1)}
@@ -507,10 +507,10 @@ def dag_points(run_ids: list[str], axis: str, rows: list[dict] | None = None) ->
 
 
 def wls(pts: dict) -> tuple[float, float, tuple[int, int]]:
-    """Weighted least-squares (slope, intercept, (x min, x max)) over {turn: {x: (y, n)}}."""
+    """Weighted least-squares (slope, intercept, (x min, x max)) over {request: {x: (y, n)}}."""
     xs, ys, ws = [], [], []
-    for per_turn in pts.values():
-        for x, (y, n) in per_turn.items():
+    for per_request in pts.values():
+        for x, (y, n) in per_request.items():
             xs.append(x)
             ys.append(y)
             ws.append(n)

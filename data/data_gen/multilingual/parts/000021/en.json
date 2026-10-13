@@ -121,8 +121,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 1,
+     "kind": "backward",
+     "copied_from_request": 1,
      "task": "Fill in and submit the online reservation form with a name and party details.",
      "expected_result": "The form accepts the input and shows a confirmation message that the reservation was received.",
      "task_category": {
@@ -188,8 +188,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "In the Bourbon Library, check only the Bourbon style box, type 100 into the minimum proof box, and type 20 into the maximum pour price box.",
      "expected_result": "Exactly three pours remain — Copper Stakes Single Barrel, Old Bluff Bottled-in-Bond, and Full House Toasted (proof-100 Old Bluff and $20 Full House sit right on the boundaries and are included); High Card Rye (a rye) and Riverboat Reserve ($22) do not appear.",
      "task_category": {
@@ -255,8 +255,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "In the Bourbon Library with no filters set, apply the sort by pour price from low to high.",
      "expected_result": "Amber Creek Small Batch ($12) is listed before High Card Rye ($12) — the $12 tie breaks alphabetically — and Dead Man's Hand Barrel Proof ($26) is last.",
      "task_category": {
@@ -324,8 +324,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "Open the tournament calendar in the events & promotions area.",
      "expected_result": "Five tournaments are listed soonest-first — Summer Showdown Main Event (Aug 14), Midnight Bourbon Bounty (Aug 21), High Card Heads-Up (Sep 5), Rookie Night Freeroll (Sep 12), Autumn All-In Classic (Sep 26) — and High Card Heads-Up shows exactly 1 seat left.",
      "task_category": {
@@ -393,8 +393,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 4,
+     "kind": "backward",
+     "copied_from_request": 4,
      "task": "In the flight builder, select Amber Creek Small Batch, Velvet Ace Wheated, and Old Bluff Bottled-in-Bond, then add High Card Rye as a fourth pour.",
      "expected_result": "At three pours the total reads $42 with no discount; as soon as the fourth pour is added the 10% flight discount kicks in and the total reads $48.60 — not $54.",
      "task_category": {
@@ -461,8 +461,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 5,
+     "kind": "backward",
+     "copied_from_request": 5,
      "task": "Claim a guest pass for Aug 22 on the night board, then try to claim Aug 22 again.",
      "expected_result": "The first claim drops Aug 22's remaining count from 10 to 9 and lands a pass in My Passes showing the date, the $40 price, and a code starting 'AIB-'; the second attempt is refused with a message about the one-pass-per-night rule and the count stays at 9.",
      "task_category": {
@@ -529,8 +529,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 6,
+     "kind": "backward",
+     "copied_from_request": 6,
      "task": "In the gift card studio, pick the $150 card, then switch the pick to the $50 card.",
      "expected_result": "With $150 picked the preview shows $165 of total value — the printed $15 bonus included; the moment the pick changes to $50 the preview shows exactly $50, with no bonus.",
      "task_category": {
@@ -597,8 +597,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 7,
+     "kind": "backward",
+     "copied_from_request": 7,
      "task": "Open the Player's Ledger page.",
      "expected_result": "The total reads exactly 297 points and the tier shows High Roller — 97 from the Dealer's Choice flight (2 per dollar of the discounted $48.60), 50 from the Summer Showdown seat, 150 from the $150 gift card (bonus value earns nothing).",
      "task_category": {
@@ -665,8 +665,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 4,
+     "kind": "backward",
+     "copied_from_request": 4,
      "task": "In the flight builder, select Amber Creek Small Batch, then also select Dead Man's Hand Barrel Proof.",
      "expected_result": "After the first pick the running total reads $12 with average proof 92.0; the moment Dead Man's Hand is added the total updates to $38, the average proof to 110.2, and the high-proof water-back note appears.",
      "task_category": {
@@ -680,144 +680,144 @@
    ]
   }
  ],
- "target_app_summary": "The All-In Bourbon Bar's brochure site has grown into a full club platform. Discovery grew a multi-criteria Bourbon Library screener that feeds an interactive Build-a-Flight tool and a rated Tasting Journal with a Top Shelf leaderboard. The poker side grew a tournament calendar with a real registration workflow, a one-click Guest Pass night board with claim caps and cancellations that reopen sold-out nights, all respecting tournament blackout nights, and a capstone Night Out Planner that assembles tournaments, saved flights, and plus-one passes into one costed, points-previewed itinerary. Commerce and loyalty grew a denomination-pick gift card studio with printed bonus tiers and a per-keystroke card preview and a Player's Ledger that rolls flights, registrations, and card purchases into a tiered points balance, and a site-wide 'card table' restyle unified the look. The graph's spine is T1->T2->T4->T7->T10, with the ledger (T7) fanning in from three earlier features and the planner (T10) fanning in from four.",
+ "target_app_summary": "The All-In Bourbon Bar's brochure site has grown into a full club platform. Discovery grew a multi-criteria Bourbon Library screener that feeds an interactive Build-a-Flight tool and a rated Tasting Journal with a Top Shelf leaderboard. The poker side grew a tournament calendar with a real registration workflow, a one-click Guest Pass night board with claim caps and cancellations that reopen sold-out nights, all respecting tournament blackout nights, and a capstone Night Out Planner that assembles tournaments, saved flights, and plus-one passes into one costed, points-previewed itinerary. Commerce and loyalty grew a denomination-pick gift card studio with printed bonus tiers and a per-keystroke card preview and a Player's Ledger that rolls flights, registrations, and card purchases into a tiered points balance, and a site-wide 'card table' restyle unified the look. The graph's spine is R1->R2->R4->R7->R10, with the ledger (R7) fanning in from three earlier features and the planner (R10) fanning in from four.",
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "Bourbon Library screener",
     "archetype": "derived-state"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "Tournament calendar & registration",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "Build-a-Flight tool",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "Guest Pass night board",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "Gift card studio",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "Player's Ledger points",
     "archetype": "derived-state"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "Card-table restyle",
     "archetype": "design-restyle"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "Tasting Journal & leaderboard",
     "archetype": "derived-state"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "Night Out Planner",
     "archetype": "multi-surface-workflow"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T2",
+    "from": "R1",
+    "to": "R2",
     "what": "library entry link lives on the base menu page"
    },
    {
-    "from": "T1",
-    "to": "T3",
+    "from": "R1",
+    "to": "R3",
     "what": "calendar embedded in the base events & promotions area"
    },
    {
-    "from": "T2",
-    "to": "T4",
+    "from": "R2",
+    "to": "R4",
     "what": "flight pours, prices, proofs, and members-only tags come from the library"
    },
    {
-    "from": "T3",
-    "to": "T5",
+    "from": "R3",
+    "to": "R5",
     "what": "tournament dates black out guest-pass nights"
    },
    {
-    "from": "T1",
-    "to": "T6",
+    "from": "R1",
+    "to": "R6",
     "what": "gift card studio lives on the base promotions side"
    },
    {
-    "from": "T4",
-    "to": "T7",
+    "from": "R4",
+    "to": "R7",
     "what": "points from saved flights' discounted totals"
    },
    {
-    "from": "T3",
-    "to": "T7",
+    "from": "R3",
+    "to": "R7",
     "what": "50 points per tournament registration"
    },
    {
-    "from": "T6",
-    "to": "T7",
+    "from": "R6",
+    "to": "R7",
     "what": "points per dollar paid on gift cards"
    },
    {
-    "from": "T1",
-    "to": "T8",
+    "from": "R1",
+    "to": "R8",
     "what": "restyles home and menu pages"
    },
    {
-    "from": "T2",
-    "to": "T8",
+    "from": "R2",
+    "to": "R8",
     "what": "restyles the Bourbon Library page"
    },
    {
-    "from": "T3",
-    "to": "T8",
+    "from": "R3",
+    "to": "R8",
     "what": "restyles the tournament calendar"
    },
    {
-    "from": "T4",
-    "to": "T8",
+    "from": "R4",
+    "to": "R8",
     "what": "restyles the flight builder"
    },
    {
-    "from": "T2",
-    "to": "T9",
+    "from": "R2",
+    "to": "R9",
     "what": "ratings attach to library bourbons; averages shown on library cards; price tiebreak"
    },
    {
-    "from": "T3",
-    "to": "T10",
+    "from": "R3",
+    "to": "R10",
     "what": "tournament anchors and buy-ins"
    },
    {
-    "from": "T4",
-    "to": "T10",
+    "from": "R4",
+    "to": "R10",
     "what": "attaches saved flights at discounted price"
    },
    {
-    "from": "T5",
-    "to": "T10",
+    "from": "R5",
+    "to": "R10",
     "what": "guest nights, $40 pass, tournament-night block"
    },
    {
-    "from": "T7",
-    "to": "T10",
+    "from": "R7",
+    "to": "R10",
     "what": "points preview computed under the ledger's rules"
    }
   ]
@@ -825,20 +825,20 @@
  "global_rules": [
   {
    "rule": "Whiskey strength always displays in the dual format 'X proof (Y% ABV)' everywhere in the app.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Anything members-only wears a small gold 'Members Only' tag, on every surface.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Every confirmation the site issues (bookings, purchases, plans) carries a code starting with 'AIB-'.",
-   "introduced_in_turn": 3
+   "introduced_in_request": 3
   }
  ],
  "pinned_seed": {
   "entity": "8 bourbon library pours",
-  "introduced_in_turn": 2,
+  "introduced_in_request": 2,
   "records_gist": "Amber Creek 92pf/6yr/$12; Copper Stakes 110pf/9yr/$18 members; Riverboat 100pf/12yr/$22; High Card Rye 96pf/4yr/$12; Dead Man's Hand 128.4pf/8yr/$26 members; Velvet Ace 90pf/5yr/$14; Old Bluff 100pf/6yr/$16; Full House 104pf/NAS/$20"
  }
 }

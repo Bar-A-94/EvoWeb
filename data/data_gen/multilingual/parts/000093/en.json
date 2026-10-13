@@ -129,8 +129,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 1,
+     "kind": "backward",
+     "copied_from_request": 1,
      "task": "Open the discussions area and post a new comment that says 'Love this place'.",
      "expected_result": "The comment 'Love this place' appears in the discussion area right after posting.",
      "task_category": {
@@ -198,8 +198,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "Use the sort-by-likes option in the browse explorer.",
      "expected_result": "Midnight Library comes first, and Origami Tide appears directly above Rust & Roses — the 95-likes tie broken alphabetically by title.",
      "task_category": {
@@ -266,8 +266,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "Select the Papercraft category and the #animals tag chip together in the browse explorer.",
      "expected_result": "Only Paper Dragons remains visible — works matching just the category or just the tag are filtered out.",
      "task_category": {
@@ -335,8 +335,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "On the Spark Score page, type 100 into the views field, 10 into likes, and 4 into comments.",
      "expected_result": "The score reads 50.0 and the tier shows Flame — a score of exactly 50 lands in Flame, not Ember.",
      "task_category": {
@@ -404,8 +404,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 4,
+     "kind": "backward",
+     "copied_from_request": 4,
      "task": "On Nebula Whale's card in the browse explorer, click the heart, then click it again.",
      "expected_result": "The like count goes from 320 to 321 and back to 320, and Nebula Whale does not remain on the Favorites page.",
      "task_category": {
@@ -473,8 +473,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 5,
+     "kind": "backward",
+     "copied_from_request": 5,
      "task": "On the Communities page, use the create form to submit a new community named 'Nature Collective'.",
      "expected_result": "The form rejects it with a friendly message about the name already being taken, and the communities list still shows only the two seeded groups.",
      "task_category": {
@@ -542,8 +542,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "On the Spark Score page, use the prefill picker to choose Ink Tempest.",
      "expected_result": "Views, likes, and comments fill with 430, 60, and 3, the score reads 178.0, and the tier shows Blaze.",
      "task_category": {
@@ -610,8 +610,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 6,
+     "kind": "backward",
+     "copied_from_request": 6,
      "task": "Open the Weekly Spotlight page without doing anything else first.",
      "expected_result": "The podium reads Glass Comet (61) first, Clockwork Garden (45) second, Paper Dragons (45) third — the 45-45 tie resolved alphabetically by title, and not the all-time leader Midnight Library on top.",
      "task_category": {
@@ -679,8 +679,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 8,
+     "kind": "backward",
+     "copied_from_request": 8,
      "task": "Open the artists insights page.",
      "expected_result": "Sana Okafor is ranked first with an average Spark Score of 721.5 and Theo Voss is last with 409.5.",
      "task_category": {
@@ -694,164 +694,164 @@
    ]
   }
  ],
- "target_app_summary": "World of Imagination grows from a simple showcase-and-discuss site into a full creative community platform. Discovery gets a real gallery explorer with category/tag cross-filtering and tie-aware sorting over a pinned set of eight works, plus a Spark Score calculator that turns engagement numbers into tiered scores. Social mechanics arrive as a heart/favorites system whose live counts ripple outward into a Weekly Spotlight leaderboard, a per-artist insights dashboard built on the Spark formula, and community-run challenges that crown champions back on the gallery cards. Communities themselves become a multi-page workflow (browse, create with validation, join, post in pinned threads), and everything feeds a notification bell with a filterable activity feed. A late full-app restyle sweeps coral accents, centered serif headings, and a consistent card treatment across every surface. The feature graph fans out from the explorer (T2) into hearts, the calculator prefill, and challenges, with deep chains like explorer to hearts to spotlight and explorer to calculator to artist analytics.",
+ "target_app_summary": "World of Imagination grows from a simple showcase-and-discuss site into a full creative community platform. Discovery gets a real gallery explorer with category/tag cross-filtering and tie-aware sorting over a pinned set of eight works, plus a Spark Score calculator that turns engagement numbers into tiered scores. Social mechanics arrive as a heart/favorites system whose live counts ripple outward into a Weekly Spotlight leaderboard, a per-artist insights dashboard built on the Spark formula, and community-run challenges that crown champions back on the gallery cards. Communities themselves become a multi-page workflow (browse, create with validation, join, post in pinned threads), and everything feeds a notification bell with a filterable activity feed. A late full-app restyle sweeps coral accents, centered serif headings, and a consistent card treatment across every surface. The feature graph fans out from the explorer (R2) into hearts, the calculator prefill, and challenges, with deep chains like explorer to hearts to spotlight and explorer to calculator to artist analytics.",
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "gallery explorer + seed",
     "archetype": "derived-state"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "Spark Score calculator",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "hearts & favorites",
     "archetype": "derived-state"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "communities workflow",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "weekly spotlight leaderboard",
     "archetype": "derived-state"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "community challenges",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "artist insights rollup",
     "archetype": "derived-state"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "full-app restyle",
     "archetype": "design-restyle"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "activity feed & bell",
     "archetype": "multi-surface-workflow"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T2",
+    "from": "R1",
+    "to": "R2",
     "what": "upgrades the base browse-works page into the explorer"
    },
    {
-    "from": "T2",
-    "to": "T3",
+    "from": "R2",
+    "to": "R3",
     "what": "prefill picker pulls a gallery work's seeded stats"
    },
    {
-    "from": "T2",
-    "to": "T4",
+    "from": "R2",
+    "to": "R4",
     "what": "heart toggle lives on the explorer's work cards"
    },
    {
-    "from": "T2",
-    "to": "T5",
+    "from": "R2",
+    "to": "R5",
     "what": "community theme galleries pull the explorer's tagged works"
    },
    {
-    "from": "T2",
-    "to": "T6",
+    "from": "R2",
+    "to": "R6",
     "what": "spotlight ranks the explorer's seeded works by their weekly like numbers"
    },
    {
-    "from": "T4",
-    "to": "T6",
+    "from": "R4",
+    "to": "R6",
     "what": "live hearts count toward weekly like totals"
    },
    {
-    "from": "T5",
-    "to": "T7",
+    "from": "R5",
+    "to": "R7",
     "what": "challenges are created and run inside community pages"
    },
    {
-    "from": "T2",
-    "to": "T7",
+    "from": "R2",
+    "to": "R7",
     "what": "champion badge lands on the winner's explorer card"
    },
    {
-    "from": "T2",
-    "to": "T8",
+    "from": "R2",
+    "to": "R8",
     "what": "artist rollups aggregate the explorer's seeded works and their stats"
    },
    {
-    "from": "T3",
-    "to": "T8",
+    "from": "R3",
+    "to": "R8",
     "what": "artist averages computed with the Spark Score formula"
    },
    {
-    "from": "T4",
-    "to": "T8",
+    "from": "R4",
+    "to": "R8",
     "what": "hearts collected feed artist rollups live"
    },
    {
-    "from": "T4",
-    "to": "T10",
+    "from": "R4",
+    "to": "R10",
     "what": "hearts given are logged as feed events"
    },
    {
-    "from": "T5",
-    "to": "T10",
+    "from": "R5",
+    "to": "R10",
     "what": "community joins are logged as feed events"
    },
    {
-    "from": "T7",
-    "to": "T10",
+    "from": "R7",
+    "to": "R10",
     "what": "challenge closings and crownings are logged as feed events"
    },
    {
-    "from": "T1",
-    "to": "T9",
+    "from": "R1",
+    "to": "R9",
     "what": "restyles the base share-ideas and discussion pages"
    },
    {
-    "from": "T2",
-    "to": "T9",
+    "from": "R2",
+    "to": "R9",
     "what": "restyles the explorer's work cards"
    },
    {
-    "from": "T4",
-    "to": "T9",
+    "from": "R4",
+    "to": "R9",
     "what": "restyles the favorites page"
    },
    {
-    "from": "T5",
-    "to": "T9",
+    "from": "R5",
+    "to": "R9",
     "what": "restyles community pages"
    },
    {
-    "from": "T6",
-    "to": "T9",
+    "from": "R6",
+    "to": "R9",
     "what": "restyles the spotlight podium and list"
    },
    {
-    "from": "T7",
-    "to": "T9",
+    "from": "R7",
+    "to": "R9",
     "what": "restyles the challenge enter and close-and-crown buttons"
    },
    {
-    "from": "T8",
-    "to": "T9",
+    "from": "R8",
+    "to": "R9",
     "what": "restyles the artists insights page"
    }
   ]
@@ -859,20 +859,20 @@
  "global_rules": [
   {
    "rule": "Any displayed count of 1000 or more is shown compact with one decimal, like 1.2k, everywhere in the app.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Tags are always rendered with a leading # (e.g. #space) on every surface.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Nothing empty is ever left blank: any empty view or empty result set shows a playful note that mentions a spark.",
-   "introduced_in_turn": 3
+   "introduced_in_request": 3
   }
  ],
  "pinned_seed": {
   "entity": "8 creative works in the gallery explorer",
-  "introduced_in_turn": 2,
+  "introduced_in_request": 2,
   "records_gist": "Nebula Whale/Mira Chen/Digital Art/space+animals/1200v/320L(12wk)/14c; Clockwork Garden/Theo Voss/Sculpture/steampunk+nature/800v/210L(45wk)/8c; Paper Dragons/Mira Chen/Papercraft/fantasy+animals/940v/180L(45wk)/22c; Midnight Library/Sana Okafor/Digital Art/fantasy+architecture/2100v/450L(8wk)/31c; Rust & Roses/Theo Voss/Photography/nature+urban/640v/95L(30wk)/5c; Glass Comet/Lena Petrov/Sculpture/space/1500v/275L(61wk)/17c; Ink Tempest/Sana Okafor/Digital Art/abstract/430v/60L(2wk)/3c; Origami Tide/Lena Petrov/Papercraft/nature+abstract/1100v/95L(19wk)/9c"
  }
 }

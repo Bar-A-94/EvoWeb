@@ -4,7 +4,7 @@
       "en": "fit ranker",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [2, 3, 5, 6, 7, 10],
+      "requests": [2, 3, 5, 6, 7, 10],
       "translations": {
         "zh": "匹配排名器",
         "he": "מדרג התאמה",
@@ -17,7 +17,7 @@
       "en": "Fit",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [2, 3, 5, 10],
+      "requests": [2, 3, 5, 10],
       "translations": {
         "zh": "匹配",
         "he": "התאמה",
@@ -30,7 +30,7 @@
       "en": "top fits",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [2, 3, 5, 10],
+      "requests": [2, 3, 5, 10],
       "translations": {
         "zh": "最佳匹配",
         "he": "התאמות מובילות",
@@ -43,7 +43,7 @@
       "en": "stays",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [2, 6, 10],
+      "requests": [2, 6, 10],
       "translations": {
         "zh": "住宿",
         "he": "שהיות",
@@ -56,7 +56,7 @@
       "en": "budget box",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [2, 3, 5, 6],
+      "requests": [2, 3, 5, 6],
       "translations": {
         "zh": "预算框",
         "he": "תיבת תקציב",
@@ -69,7 +69,7 @@
       "en": "Waterfront",
       "class": "translate",
       "kind": "content_text",
-      "turns": [2, 10],
+      "requests": [2, 10],
       "translations": {
         "zh": "海滨",
         "he": "על המים",
@@ -82,7 +82,7 @@
       "en": "Pet-friendly",
       "class": "translate",
       "kind": "content_text",
-      "turns": [2, 3],
+      "requests": [2, 3],
       "translations": {
         "zh": "可携宠物",
         "he": "ידידותי לחיות מחמד",
@@ -95,7 +95,7 @@
       "en": "Budget",
       "class": "translate",
       "kind": "content_text",
-      "turns": [2, 3],
+      "requests": [2, 3],
       "translations": {
         "zh": "经济实惠",
         "he": "חסכוני",
@@ -108,7 +108,7 @@
       "en": "Family-friendly",
       "class": "translate",
       "kind": "content_text",
-      "turns": [2],
+      "requests": [2],
       "translations": {
         "zh": "适合家庭",
         "he": "ידידותי למשפחות",
@@ -121,7 +121,7 @@
       "en": "trip cost estimator",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [3, 4, 6, 7],
+      "requests": [3, 4, 6, 7],
       "translations": {
         "zh": "行程费用估算器",
         "he": "מחשבון עלות הטיול",
@@ -134,7 +134,7 @@
       "en": "estimator",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [3, 4, 6, 7, 8],
+      "requests": [3, 4, 6, 7, 8],
       "translations": {
         "zh": "估算器",
         "he": "מחשבון",
@@ -147,7 +147,7 @@
       "en": "check-in",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [3, 4, 10],
+      "requests": [3, 4, 10],
       "translations": {
         "zh": "入住",
         "he": "כניסה",
@@ -160,7 +160,7 @@
       "en": "check-out",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [3, 4],
+      "requests": [3, 4],
       "translations": {
         "zh": "退房",
         "he": "יציאה",
@@ -173,7 +173,7 @@
       "en": "cleaning fee",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [3, 4, 7, 9],
+      "requests": [3, 4, 7, 9],
       "translations": {
         "zh": "清洁费",
         "he": "דמי ניקיון",
@@ -186,7 +186,7 @@
       "en": "service fee",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [3, 4, 7, 9],
+      "requests": [3, 4, 7, 9],
       "translations": {
         "zh": "服务费",
         "he": "דמי שירות",
@@ -199,7 +199,7 @@
       "en": "long-stay discount",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [3, 4, 7],
+      "requests": [3, 4, 7],
       "translations": {
         "zh": "长住折扣",
         "he": "הנחת שהייה ארוכה",
@@ -212,7 +212,7 @@
       "en": "nightly subtotal",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [3, 4, 7],
+      "requests": [3, 4, 7],
       "translations": {
         "zh": "每晚小计",
         "he": "סכום ביניים ללילה",
@@ -225,7 +225,7 @@
       "en": "grand total",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [8],
+      "requests": [8],
       "translations": {
         "zh": "总计",
         "he": "סך הכול",
@@ -238,7 +238,7 @@
       "en": "Host Inbox",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [4],
+      "requests": [4],
       "translations": {
         "zh": "房东收件箱",
         "he": "תיבת המארח",
@@ -251,7 +251,7 @@
       "en": "host inbox",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [4, 5, 6, 7, 9, 10],
+      "requests": [4, 5, 6, 7, 9, 10],
       "translations": {
         "zh": "房东收件箱",
         "he": "תיבת המארח",
@@ -264,7 +264,7 @@
       "en": "booking records",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [1, 4, 6],
+      "requests": [1, 4, 6],
       "translations": {
         "zh": "预订记录",
         "he": "רשומות ההזמנות",
@@ -277,7 +277,7 @@
       "en": "Pending",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [4, 5, 6, 7],
+      "requests": [4, 5, 6, 7],
       "translations": {
         "zh": "待处理",
         "he": "ממתין",
@@ -290,7 +290,7 @@
       "en": "Confirmed",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [4, 5, 6, 9],
+      "requests": [4, 5, 6, 9],
       "translations": {
         "zh": "已确认",
         "he": "מאושר",
@@ -303,7 +303,7 @@
       "en": "Declined",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [4, 6],
+      "requests": [4, 6],
       "translations": {
         "zh": "已拒绝",
         "he": "נדחה",
@@ -316,7 +316,7 @@
       "en": "Instant Book",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [4, 6],
+      "requests": [4, 6],
       "translations": {
         "zh": "即时预订",
         "he": "הזמנה מיידית",
@@ -329,7 +329,7 @@
       "en": "approve",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [4, 5, 6, 9, 10],
+      "requests": [4, 5, 6, 9, 10],
       "translations": {
         "zh": "批准",
         "he": "אישור",
@@ -342,7 +342,7 @@
       "en": "decline",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [4],
+      "requests": [4],
       "translations": {
         "zh": "拒绝",
         "he": "דחייה",
@@ -355,7 +355,7 @@
       "en": "availability calendar",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [5, 6, 8],
+      "requests": [5, 6, 8],
       "translations": {
         "zh": "空房日历",
         "he": "לוח זמינות",
@@ -368,7 +368,7 @@
       "en": "August",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [5, 6, 10],
+      "requests": [5, 6, 10],
       "translations": {
         "zh": "8月",
         "he": "אוגוסט",
@@ -381,7 +381,7 @@
       "en": "September",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [5, 10],
+      "requests": [5, 10],
       "translations": {
         "zh": "9月",
         "he": "ספטמבר",
@@ -394,7 +394,7 @@
       "en": "October",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [5, 10],
+      "requests": [5, 10],
       "translations": {
         "zh": "10月",
         "he": "אוקטובר",
@@ -407,7 +407,7 @@
       "en": "shortlist",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [7, 8, 9],
+      "requests": [7, 8, 9],
       "translations": {
         "zh": "收藏清单",
         "he": "רשימת המועדפים",
@@ -420,7 +420,7 @@
       "en": "trip dates",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [7, 9],
+      "requests": [7, 9],
       "translations": {
         "zh": "行程日期",
         "he": "תאריכי הטיול",
@@ -433,7 +433,7 @@
       "en": "trip planner",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [8],
+      "requests": [8],
       "translations": {
         "zh": "行程规划器",
         "he": "מתכנן הטיול",
@@ -446,7 +446,7 @@
       "en": "finalize",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [8],
+      "requests": [8],
       "translations": {
         "zh": "完成",
         "he": "סיום",
@@ -459,7 +459,7 @@
       "en": "neighborhood insights",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [9],
+      "requests": [9],
       "translations": {
         "zh": "社区洞察",
         "he": "תובנות שכונה",
@@ -472,7 +472,7 @@
       "en": "most-booked",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [9],
+      "requests": [9],
       "translations": {
         "zh": "预订最多",
         "he": "המוזמנת ביותר",
@@ -485,7 +485,7 @@
       "en": "average nightly rate",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [9],
+      "requests": [9],
       "translations": {
         "zh": "平均每晚价格",
         "he": "מחיר ממוצע ללילה",
@@ -498,7 +498,7 @@
       "en": "average rating",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [9],
+      "requests": [9],
       "translations": {
         "zh": "平均评分",
         "he": "דירוג ממוצע",
@@ -511,7 +511,7 @@
       "en": "flexible-stay finder",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [10],
+      "requests": [10],
       "translations": {
         "zh": "灵活入住查找器",
         "he": "מאתר שהות גמישה",
@@ -524,7 +524,7 @@
       "en": "finder",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [10],
+      "requests": [10],
       "translations": {
         "zh": "查找器",
         "he": "מאתר",
@@ -537,7 +537,7 @@
       "en": "nights box",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [10],
+      "requests": [10],
       "translations": {
         "zh": "晚数框",
         "he": "תיבת הלילות",
@@ -550,103 +550,103 @@
       "en": "linen",
       "class": "keep",
       "kind": "css_visual",
-      "turns": [1, 2, 6]
+      "requests": [1, 2, 6]
     },
     {
       "en": "maroon",
       "class": "keep",
       "kind": "css_visual",
-      "turns": [1, 2, 6]
+      "requests": [1, 2, 6]
     },
     {
       "en": "Aug",
       "class": "keep",
       "kind": "value_format",
-      "turns": [4, 5, 6, 7, 8, 10]
+      "requests": [4, 5, 6, 7, 8, 10]
     },
     {
       "en": "Sep",
       "class": "keep",
       "kind": "value_format",
-      "turns": [3, 4, 5, 7, 8, 9]
+      "requests": [3, 4, 5, 7, 8, 9]
     },
     {
       "en": "Oct",
       "class": "keep",
       "kind": "value_format",
-      "turns": [4, 9]
+      "requests": [4, 9]
     },
     {
       "en": "Harbor Loft",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [2, 4, 5, 6, 8, 9, 10]
+      "requests": [2, 4, 5, 6, 8, 9, 10]
     },
     {
       "en": "Garden Studio",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [2, 3, 4, 5, 6, 10]
+      "requests": [2, 3, 4, 5, 6, 10]
     },
     {
       "en": "Sunset Flat",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [2, 3, 4, 5, 7, 10]
+      "requests": [2, 3, 4, 5, 7, 10]
     },
     {
       "en": "Maple Suite",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [2, 4, 5, 6, 7, 9]
+      "requests": [2, 4, 5, 6, 7, 9]
     },
     {
       "en": "Cedar Corner",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [2, 3, 4, 7, 8, 9]
+      "requests": [2, 3, 4, 7, 8, 9]
     },
     {
       "en": "Dockside Nook",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [2, 3, 5, 6, 9, 10]
+      "requests": [2, 3, 5, 6, 9, 10]
     },
     {
       "en": "Willow Walk-up",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [2, 3, 5, 7, 8, 9]
+      "requests": [2, 3, 5, 7, 8, 9]
     },
     {
       "en": "Old Port",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [2, 3, 5, 9]
+      "requests": [2, 3, 5, 9]
     },
     {
       "en": "Midtown",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [2, 3, 5, 9]
+      "requests": [2, 3, 5, 9]
     },
     {
       "en": "Riverside",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [2, 3, 7, 9]
+      "requests": [2, 3, 7, 9]
     },
     {
       "en": "Priya",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [4, 5, 7, 9, 10]
+      "requests": [4, 5, 7, 9, 10]
     },
     {
       "en": "Marco",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [4, 5, 6, 9]
+      "requests": [4, 5, 6, 9]
     }
   ]
 }

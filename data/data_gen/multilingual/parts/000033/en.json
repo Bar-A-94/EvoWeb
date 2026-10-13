@@ -121,7 +121,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the question 'How do I keep sourdough starter alive?' and look at its answers.",
      "expected_result": "Three answers are listed under the question.",
      "task_category": {
@@ -131,7 +131,7 @@
        "Seed Data"
       ]
      },
-     "copied_from_turn": 1
+     "copied_from_request": 1
     }
    ]
   },
@@ -191,7 +191,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Toggle on the #tech and #fitness tag pills and select the unanswered option.",
      "expected_result": "Exactly two questions show — 'How to fix a wobbly bike wheel?' and 'What's the best way to learn Python?' — and the readout says Showing 2 of 7 questions.",
      "task_category": {
@@ -202,7 +202,7 @@
        "Counter Consistency"
       ]
      },
-     "copied_from_turn": 2
+     "copied_from_request": 2
     }
    ]
   },
@@ -262,7 +262,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the question list with no filters applied and read the questions from top to bottom.",
      "expected_result": "Order is: intermittent fasting (+12), sourdough starter (+8), learn Python (+8), laptop fan (+5), budget airlines (+5), bike wheel (0), freeze basil (-2). In particular the laptop fan question (4 answers) sits above budget airlines (2 answers) despite both being +5, and sourdough (3 answers) sits above Python (0 answers).",
      "task_category": {
@@ -273,7 +273,7 @@
        "Seed Data"
       ]
      },
-     "copied_from_turn": 2
+     "copied_from_request": 2
     }
    ]
   },
@@ -332,7 +332,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the ask composer and type how into the title field.",
      "expected_result": "Exactly two duplicate suggestions appear: 'How do I keep sourdough starter alive?' and 'How to fix a wobbly bike wheel?'.",
      "task_category": {
@@ -342,7 +342,7 @@
        "Case-Insensitive Matching"
       ]
      },
-     "copied_from_turn": 3
+     "copied_from_request": 3
     }
    ]
   },
@@ -402,7 +402,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Toggle on the #cooking tag pill and select the unanswered option.",
      "expected_result": "No questions match, and a sensible empty-state message appears instead of a blank area, leftover rows, or a crash.",
      "task_category": {
@@ -412,7 +412,7 @@
        "Empty State"
       ]
      },
-     "copied_from_turn": 2
+     "copied_from_request": 2
     }
    ]
   },
@@ -472,7 +472,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "In the question list's screener, select the Solved option.",
      "expected_result": "Exactly one question shows: 'How do I keep sourdough starter alive?' — not the five questions that merely have answers.",
      "task_category": {
@@ -482,7 +482,7 @@
        "Solved vs Answered Distinction"
       ]
      },
-     "copied_from_turn": 4
+     "copied_from_request": 4
     }
    ]
   },
@@ -542,7 +542,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the Topics page and read the tag cards in order.",
      "expected_result": "Cards read #cooking, #fitness, #tech, #travel — the three two-question tags alphabetical ahead of #travel with 1 — and NOT ordered by combined score (which would put #tech, at +13, first).",
      "task_category": {
@@ -552,7 +552,7 @@
        "Tiebreak Handling"
       ]
      },
-     "copied_from_turn": 5
+     "copied_from_request": 5
     }
    ]
   },
@@ -612,7 +612,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the bounty tool on 'What's the best way to learn Python?' and type 49, then change it to 60, then to 75.",
      "expected_result": "At 49 an under-the-50-minimum message shows and confirm is locked; at 60 it stays locked because 60 isn't a step of 25; at 75 the error clears and confirm unlocks — each reaction happening as the value is typed.",
      "task_category": {
@@ -623,7 +623,7 @@
        "Live Feedback"
       ]
      },
-     "copied_from_turn": 6
+     "copied_from_request": 6
     }
    ]
   },
@@ -683,7 +683,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the Digest page and read the generated text.",
      "expected_result": "The first line says Following 2 questions, and the sourdough line (+8) sits above the bike wheel line (0) — score order, not the order they were followed in (bike wheel was followed first).",
      "task_category": {
@@ -693,7 +693,7 @@
        "Count Consistency"
       ]
      },
-     "copied_from_turn": 8
+     "copied_from_request": 8
     }
    ]
   }
@@ -702,160 +702,160 @@
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "tag screener + seed",
     "archetype": "derived-state"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "ask composer + dup detect",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "accept-answer workflow",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "topics analytics hub",
     "archetype": "derived-state"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "bounty system",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "edit review queue",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "follow & digest builder",
     "archetype": "derived-state"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "site-wide restyle",
     "archetype": "design-restyle"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "triage dashboard",
     "archetype": "derived-state"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T2",
+    "from": "R1",
+    "to": "R2",
     "what": "base question list it screens and sorts"
    },
    {
-    "from": "T1",
-    "to": "T3",
+    "from": "R1",
+    "to": "R3",
     "what": "existing questions matched for duplicates"
    },
    {
-    "from": "T2",
-    "to": "T3",
+    "from": "R2",
+    "to": "R3",
     "what": "tag system behind the required tag picker"
    },
    {
-    "from": "T1",
-    "to": "T4",
+    "from": "R1",
+    "to": "R4",
     "what": "answer ratings used for ordering"
    },
    {
-    "from": "T2",
-    "to": "T4",
+    "from": "R2",
+    "to": "R4",
     "what": "screener gains Solved filter and list badge"
    },
    {
-    "from": "T2",
-    "to": "T5",
+    "from": "R2",
+    "to": "R5",
     "what": "tag system aggregated into per-tag cards"
    },
    {
-    "from": "T4",
-    "to": "T5",
+    "from": "R4",
+    "to": "R5",
     "what": "accepted-answer state feeds solved counts"
    },
    {
-    "from": "T2",
-    "to": "T6",
+    "from": "R2",
+    "to": "R6",
     "what": "Featured strip pinned above the screener list"
    },
    {
-    "from": "T1",
-    "to": "T7",
+    "from": "R1",
+    "to": "R7",
     "what": "posted answers receive edit suggestions"
    },
    {
-    "from": "T2",
-    "to": "T7",
+    "from": "R2",
+    "to": "R7",
     "what": "pending Review entries show each question's tag"
    },
    {
-    "from": "T2",
-    "to": "T8",
+    "from": "R2",
+    "to": "R8",
     "what": "digest lines carry each question's tag"
    },
    {
-    "from": "T6",
-    "to": "T8",
+    "from": "R6",
+    "to": "R8",
     "what": "bounty markers appended to digest lines"
    },
    {
-    "from": "T2",
-    "to": "T9",
+    "from": "R2",
+    "to": "R9",
     "what": "screener/list page restyled"
    },
    {
-    "from": "T4",
-    "to": "T9",
+    "from": "R4",
+    "to": "R9",
     "what": "Solved badge restyled to dark green pill"
    },
    {
-    "from": "T5",
-    "to": "T9",
+    "from": "R5",
+    "to": "R9",
     "what": "Topics page restyled"
    },
    {
-    "from": "T7",
-    "to": "T9",
+    "from": "R7",
+    "to": "R9",
     "what": "Review page restyled"
    },
    {
-    "from": "T8",
-    "to": "T9",
+    "from": "R8",
+    "to": "R9",
     "what": "Digest page restyled"
    },
    {
-    "from": "T2",
-    "to": "T10",
+    "from": "R2",
+    "to": "R10",
     "what": "triage rows show each question's tag"
    },
    {
-    "from": "T4",
-    "to": "T10",
+    "from": "R4",
+    "to": "R10",
     "what": "accepted state splits open vs solved"
    },
    {
-    "from": "T6",
-    "to": "T10",
+    "from": "R6",
+    "to": "R10",
     "what": "bounty drives the urgency ranking"
    },
    {
-    "from": "T7",
-    "to": "T10",
+    "from": "R7",
+    "to": "R10",
     "what": "pending-edit count read from review queue"
    }
   ]
@@ -863,20 +863,20 @@
  "global_rules": [
   {
    "rule": "Scores always display with an explicit sign everywhere in the app: +8, -2, and a bare 0 only for zero.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Tags always render as lowercase pills prefixed with # everywhere they appear.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Any question with zero answers shows a small amber 'Needs answer' badge wherever it is listed, on all current and future surfaces.",
-   "introduced_in_turn": 3
+   "introduced_in_request": 3
   }
  ],
  "pinned_seed": {
   "entity": "7 seeded questions with tags, signed scores, and answer counts",
-  "introduced_in_turn": 2,
+  "introduced_in_request": 2,
   "records_gist": "sourdough #cooking +8/3ans; airlines #travel +5/2ans; laptop fan #tech +5/4ans; fasting #fitness +12/1ans; bike wheel #fitness 0/0ans; python #tech +8/0ans; basil #cooking -2/1ans"
  }
 }

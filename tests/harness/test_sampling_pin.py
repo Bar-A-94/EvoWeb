@@ -110,7 +110,7 @@ def test_every_harness_reads_the_same_per_call_timeout_knob():
 
     openhands pinned 1200s while bash used 300s and mini_swe_agent inherited litellm's 300s
     default — so calls openhands would let finish were killed in the other two. Measured
-    2026-08-30: sonnet at a 16k thinking budget hit bash's 300s at turn 4 (104 prior
+    2026-08-30: sonnet at a 16k thinking budget hit bash's 300s at request 4 (104 prior
     messages), retried 4x, and the ladder died.
     """
     root = CAPTURE.parents[1] / "generators" / "harnesses"

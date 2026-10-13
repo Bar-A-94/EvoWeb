@@ -15,7 +15,7 @@ EDIT_TOOL = "file_editor (command, path, old_str/new_str)"
 # excluding only the key left the subagent live. Check the "Loaded N tools from spec" line.
 DEFAULT_EXCLUDE = ["task_tracker", "task_tool_set", "task"]
 APPENDS_SYSTEM_PROMPT = False
-# ACP session resume, verified on the wire: turn 2 carried turn 1's full context.
+# ACP session resume, verified on the wire: request 2 carried request 1's full context.
 SUPPORTS_RESUME = True
 # Upstream's cap (LocalConversation.max_iteration_per_run) is unreachable over ACP: no env var,
 # no CLI flag, and the settings store is an Agent spec. entry.py patches the constructor.

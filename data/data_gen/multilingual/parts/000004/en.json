@@ -140,8 +140,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 1,
+     "kind": "backward",
+     "copied_from_request": 1,
      "task": "Navigate to the team rankings section.",
      "expected_result": "A ranked list of basketball teams is displayed with standings information for each team.",
      "task_category": {
@@ -207,8 +207,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "Find the Nuggets @ Raptors game on the odds board and look at how the best price is marked.",
      "expected_result": "The +170 price is flagged as best at both BetNova and CourtSide — both books marked — while HoopLine's +165 is not marked as best.",
      "task_category": {
@@ -275,8 +275,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "Add the Celtics @ Knicks and Lakers @ Bulls games to the bet slip, then type 10 into the stake box.",
      "expected_result": "The slip shows payout $44.10 and profit $34.10 at combined odds of +341, with a 25.5% chance of hitting — not $42.46, which would mean the legs were priced off the first-listed book instead of the best prices (-125 and +145).",
      "task_category": {
@@ -344,8 +344,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "Open the odds board and read the implied win probability shown for the Celtics @ Knicks game's best price.",
      "expected_result": "It reads 55.6%, derived from the best home price of -125 at HoopLine — not 56.5%, which would mean it was computed from BetNova's -130.",
      "task_category": {
@@ -413,8 +413,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 4,
+     "kind": "backward",
+     "copied_from_request": 4,
      "task": "Open the Best Bets page on a fresh load and read the top three plays in order.",
      "expected_result": "Top three are Bulls (+3.2), Hornets (+2.6), Knicks (+2.4). The Mavericks are not in the top three — if they appear second, edges were computed from first-listed book prices instead of best prices.",
      "task_category": {
@@ -482,8 +482,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 5,
+     "kind": "backward",
+     "copied_from_request": 5,
      "task": "On the My Tickets page, settle the pending $20 Mavericks ticket as Won and read the bankroll.",
      "expected_result": "The bankroll reads $1,013.51 — the full $33.51 payout at -148 credited on top of $980. Not $1,013.33 (that used -150 instead of the best price) and not $993.51 (that credited profit without returning the stake).",
      "task_category": {
@@ -551,8 +551,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 6,
+     "kind": "backward",
+     "copied_from_request": 6,
      "task": "Flip the star-player-sidelined switch for the Celtics @ Knicks game, then open the Best Bets rankings.",
      "expected_result": "The Knicks' adjusted probability shows 50.0% with an edge of -5.6, the Knicks drop out of the top three, and the top three now read Bulls, Hornets, Mavericks, with an 'adj' marker on the Knicks play.",
      "task_category": {
@@ -620,8 +620,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 7,
+     "kind": "backward",
+     "copied_from_request": 7,
      "task": "In the research center, pick the Knicks and the Celtics and read the summary strip above the meetings list.",
      "expected_result": "Straight-up record 3-3, against-the-spread 3-3, and over/under 1-4-1 — the 232-point game on a 232 line counted as a push, not folded into overs or unders — with all 6 of 6 meetings showing.",
      "task_category": {
@@ -689,8 +689,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 8,
+     "kind": "backward",
+     "copied_from_request": 8,
      "task": "On Best Bets, set a watch on the Mavericks play with a target edge of 2.2, then open the Alerts page.",
      "expected_result": "The Mavericks watch shows a live edge of +2.3 against the 2.2 target and reads fired with a green pill — not armed at +2.0, which is what you'd see if the edge were figured off BetNova's -150 instead of the best-price -148.",
      "task_category": {
@@ -704,149 +704,149 @@
    ]
   }
  ],
- "target_app_summary": "The basketball prediction site grows into a full line-shopping and bet-management platform. A pinned six-game weekend odds board carrying the base model's win probabilities and home moneylines at three sportsbooks becomes the data spine: a parlay slip books legs at best prices, the base betting-recommendations feature is rebuilt into a Best Bets value-edge ranking, an adjustments panel lets users override model probabilities and re-rank the edges live, and watch alerts with typed target edges flip between fired and armed as those numbers move. A ticket-placement workflow with a bankroll feeds a Performance analytics page (ROI, records, singles-vs-parlays, a cent-locked settled-ticket ledger), while the base match-history lookup is upgraded into a matchup research center grading past meetings against closing lines with ATS/over-under records and push handling, deep-linked from the board. A final emerald rebrand sweeps every surface including the original rankings page. The graph roots at the base app: predictions -> board -> slip -> tickets -> performance (5 deep from T1) and board -> edge finder -> adjustments -> watch alerts.",
+ "target_app_summary": "The basketball prediction site grows into a full line-shopping and bet-management platform. A pinned six-game weekend odds board carrying the base model's win probabilities and home moneylines at three sportsbooks becomes the data spine: a parlay slip books legs at best prices, the base betting-recommendations feature is rebuilt into a Best Bets value-edge ranking, an adjustments panel lets users override model probabilities and re-rank the edges live, and watch alerts with typed target edges flip between fired and armed as those numbers move. A ticket-placement workflow with a bankroll feeds a Performance analytics page (ROI, records, singles-vs-parlays, a cent-locked settled-ticket ledger), while the base match-history lookup is upgraded into a matchup research center grading past meetings against closing lines with ATS/over-under records and push handling, deep-linked from the board. A final emerald rebrand sweeps every surface including the original rankings page. The graph roots at the base app: predictions -> board -> slip -> tickets -> performance (5 deep from R1) and board -> edge finder -> adjustments -> watch alerts.",
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "Multi-book odds board",
     "archetype": "derived-state"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "Parlay bet slip",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "Best Bets edge finder",
     "archetype": "derived-state"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "Ticket booking & bankroll",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "Model adjustments panel",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "Matchup research center",
     "archetype": "derived-state"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "Edge watch alerts",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "Performance analytics",
     "archetype": "derived-state"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "Emerald rebrand",
     "archetype": "design-restyle"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T2",
+    "from": "R1",
+    "to": "R2",
     "what": "board carries the base model's win probabilities per game"
    },
    {
-    "from": "T1",
-    "to": "T4",
+    "from": "R1",
+    "to": "R4",
     "what": "rebuilds the base betting recommendations as market-relative value edges"
    },
    {
-    "from": "T1",
-    "to": "T7",
+    "from": "R1",
+    "to": "R7",
     "what": "upgrades the base match-history lookup with betting-market grading"
    },
    {
-    "from": "T2",
-    "to": "T3",
+    "from": "R2",
+    "to": "R3",
     "what": "slip legs priced at the board's best prices"
    },
    {
-    "from": "T2",
-    "to": "T4",
+    "from": "R2",
+    "to": "R4",
     "what": "edges computed off best-price implied probabilities"
    },
    {
-    "from": "T2",
-    "to": "T7",
+    "from": "R2",
+    "to": "R7",
     "what": "board research links + upcoming-game banner with best price"
    },
    {
-    "from": "T3",
-    "to": "T5",
+    "from": "R3",
+    "to": "R5",
     "what": "tickets are placed from the slip's legs and stake"
    },
    {
-    "from": "T4",
-    "to": "T6",
+    "from": "R4",
+    "to": "R6",
     "what": "adjusted probabilities re-rank the edge list live"
    },
    {
-    "from": "T4",
-    "to": "T8",
+    "from": "R4",
+    "to": "R8",
     "what": "watch targets and live edges pulled from the Best Bets list"
    },
    {
-    "from": "T5",
-    "to": "T9",
+    "from": "R5",
+    "to": "R9",
     "what": "aggregates the settled ticket ledger and bankroll math"
    },
    {
-    "from": "T1",
-    "to": "T10",
+    "from": "R1",
+    "to": "R10",
     "what": "restyles team rankings page"
    },
    {
-    "from": "T2",
-    "to": "T10",
+    "from": "R2",
+    "to": "R10",
     "what": "restyles odds board"
    },
    {
-    "from": "T4",
-    "to": "T10",
+    "from": "R4",
+    "to": "R10",
     "what": "restyles Best Bets with green/red value coloring"
    },
    {
-    "from": "T5",
-    "to": "T10",
+    "from": "R5",
+    "to": "R10",
     "what": "restyles My Tickets cards"
    },
    {
-    "from": "T7",
-    "to": "T10",
+    "from": "R7",
+    "to": "R10",
     "what": "restyles research center"
    },
    {
-    "from": "T9",
-    "to": "T10",
+    "from": "R9",
+    "to": "R10",
     "what": "restyles Performance figures green/red"
    },
    {
-    "from": "T6",
-    "to": "T8",
+    "from": "R6",
+    "to": "R8",
     "what": "adjusted probabilities flip watches between fired and armed live"
    },
    {
-    "from": "T3",
-    "to": "T10",
+    "from": "R3",
+    "to": "R10",
     "what": "restyles the add-to-slip primary action controls emerald"
    }
   ]
@@ -854,20 +854,20 @@
  "global_rules": [
   {
    "rule": "Odds are always displayed in American form with an explicit sign (+145, -125), never as decimal odds, everywhere in the app.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Matchups are always written as away team @ home team on every surface.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Any status anywhere is shown as a colored pill: amber for pending/in-progress, green for won/positive, red for lost/negative.",
-   "introduced_in_turn": 5
+   "introduced_in_request": 5
   }
  ],
  "pinned_seed": {
   "entity": "6 weekend NBA games with model home-win probabilities and home moneylines at three books (BetNova, HoopLine, CourtSide)",
-  "introduced_in_turn": 2,
+  "introduced_in_request": 2,
   "records_gist": "Fri Celtics@Knicks 58% -130/-125/-135; Fri Lakers@Bulls 44% +140/+145/+140; Sat Suns@Heat 51% -105/-110/-102; Sat Nuggets@Raptors 38% +170/+165/+170; Sun Warriors@Mavericks 62% -150/-155/-148; Sun Bucks@Hornets 47% +120/+118/+125"
  }
 }

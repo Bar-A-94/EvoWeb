@@ -135,14 +135,14 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 1,
+     "kind": "backward",
+     "copied_from_request": 1,
      "task": "Open the goal tracking area and add a new goal named 'Improve delegation'.",
      "expected_result": "The new goal appears in the goal list right after being added.",
      "task_category": {
       "primary_category": "Functional Testing",
       "subcategories": [
-       "Regression",
+       "Backward",
        "CRUD"
       ]
      }
@@ -203,14 +203,14 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "On the coach screener, check the Career and Wellness specialty boxes and type 120 into the max price field.",
      "expected_result": "Exactly four coaches remain, listed cheapest-first as Derek Okafor, Tom Alvarez, Hana Suzuki, Maya Chen (each price tie A-to-Z by first name); Sofia Ricci, who has Career but costs $180, is filtered out.",
      "task_category": {
       "primary_category": "Functional Testing",
       "subcategories": [
-       "Regression",
+       "Backward",
        "Filtering"
       ]
      }
@@ -272,14 +272,14 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "Open the cost estimator on Derek Okafor's profile and type 8 into the sessions field.",
      "expected_result": "The 15% tier applies: total $646.00, savings $114.00, and an effective rate of $80.75 per session — all shown without pressing any calculate button.",
      "task_category": {
       "primary_category": "Functional Testing",
       "subcategories": [
-       "Regression",
+       "Backward",
        "Calculation"
       ]
      }
@@ -343,14 +343,14 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 4,
+     "kind": "backward",
+     "copied_from_request": 4,
      "task": "Open the Coach Inbox screen for intro-call requests.",
      "expected_result": "Exactly one request is waiting: a Pending request to Priya Nair with the message 'Hoping to prep for a VP-level move this fall.'",
      "task_category": {
       "primary_category": "Data Display Testing",
       "subcategories": [
-       "Regression",
+       "Backward",
        "Seeded Data"
       ]
      }
@@ -412,14 +412,14 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "With no specialty boxes checked, type 50 into the max price field, then clear the field.",
      "expected_result": "At 50 no coaches match and a friendly empty state shows instead of cards or a crash; clearing the field brings all seven coaches back.",
      "task_category": {
       "primary_category": "Functional Testing",
       "subcategories": [
-       "Regression",
+       "Backward",
        "Empty State"
       ]
      }
@@ -481,14 +481,14 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 5,
+     "kind": "backward",
+     "copied_from_request": 5,
      "task": "On the screener, switch the sort to rating, highest first, with no filters applied.",
      "expected_result": "The order reads Priya Nair 4.8, Maya Chen 4.7, Tom Alvarez 4.7, Sofia Ricci 4.5, Hana Suzuki 4.5, Derek Okafor 4.0, then Ben Whitaker with no rating — Sofia sits above Hana because her 4.5 comes from four reviews versus Hana's two, and Maya sits above Tom on the first-name tiebreak.",
      "task_category": {
       "primary_category": "Data Display Testing",
       "subcategories": [
-       "Regression",
+       "Backward",
        "Sorting"
       ]
      }
@@ -550,14 +550,14 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "In Derek Okafor's estimator, type 3 into the sessions field, then change it to 4.",
      "expected_result": "At 3 the total is $285.00 with no discount; at 4 it becomes $342.00 with the 10% tier shown — the figures update as the number changes.",
      "task_category": {
       "primary_category": "Functional Testing",
       "subcategories": [
-       "Regression",
+       "Backward",
        "Boundary Condition"
       ]
      }
@@ -619,14 +619,14 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 6,
+     "kind": "backward",
+     "copied_from_request": 6,
      "task": "On the session planner, set the start date to Jul 22, pick the every-two-weeks rhythm, and type 4 for the number of sessions.",
      "expected_result": "Four dates appear — Jul 22, Aug 5, Aug 19, Sep 2 — with the wraps-up line reading Sep 2, and the Aug 5 row flagged as clashing with the Derek Okafor session already on the calendar.",
      "task_category": {
       "primary_category": "Functional Testing",
       "subcategories": [
-       "Regression",
+       "Backward",
        "Date Arithmetic"
       ]
      }
@@ -688,14 +688,14 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 7,
+     "kind": "backward",
+     "copied_from_request": 7,
      "task": "Open My coaching hub and read the upcoming-sessions tile.",
      "expected_result": "The sessions are in date order — Maya Chen Jul 30 first, then Derek Okafor Aug 5, then Priya Nair Aug 14 — not in the order they were booked or mentioned.",
      "task_category": {
       "primary_category": "Data Display Testing",
       "subcategories": [
-       "Regression",
+       "Backward",
        "Sorting"
       ]
      }
@@ -707,140 +707,140 @@
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "coach screener directory",
     "archetype": "derived-state"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "booking cost estimator",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "intro-call request workflow",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "ratings and reviews",
     "archetype": "derived-state"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "session block planner",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "coaching hub dashboard",
     "archetype": "derived-state"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "engagement journal and export",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "goal milestone rollups",
     "archetype": "derived-state"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "unified visual system",
     "archetype": "design-restyle"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T2",
+    "from": "R1",
+    "to": "R2",
     "what": "coach search surface extended into the screener; cards open base profiles"
    },
    {
-    "from": "T2",
-    "to": "T3",
+    "from": "R2",
+    "to": "R3",
     "what": "estimator opens from directory cards and uses seeded per-session rates"
    },
    {
-    "from": "T2",
-    "to": "T4",
+    "from": "R2",
+    "to": "R4",
     "what": "intro-call request button lives on each directory coach's profile"
    },
    {
-    "from": "T1",
-    "to": "T5",
+    "from": "R1",
+    "to": "R5",
     "what": "session completion state gates which sessions can be rated"
    },
    {
-    "from": "T2",
-    "to": "T5",
+    "from": "R2",
+    "to": "R5",
     "what": "averages on screener cards; rating sort and min-rating filter added to screener"
    },
    {
-    "from": "T1",
-    "to": "T6",
+    "from": "R1",
+    "to": "R6",
     "what": "planner clash flags are checked live against sessions booked on the base calendar"
    },
    {
-    "from": "T1",
-    "to": "T7",
+    "from": "R1",
+    "to": "R7",
     "what": "upcoming-sessions tile draws on base scheduling"
    },
    {
-    "from": "T4",
-    "to": "T7",
+    "from": "R4",
+    "to": "R7",
     "what": "pending intro-request tile with inline accept synced to the inbox"
    },
    {
-    "from": "T5",
-    "to": "T7",
+    "from": "R5",
+    "to": "R7",
     "what": "unrated-completed-sessions tile with inline rating that updates averages"
    },
    {
-    "from": "T1",
-    "to": "T8",
+    "from": "R1",
+    "to": "R8",
     "what": "notes attach to base session detail pages"
    },
    {
-    "from": "T5",
-    "to": "T8",
+    "from": "R5",
+    "to": "R8",
     "what": "journal timeline and export show submitted star ratings, dash when unrated"
    },
    {
-    "from": "T1",
-    "to": "T9",
+    "from": "R1",
+    "to": "R9",
     "what": "milestones extend the base goal tracker"
    },
    {
-    "from": "T2",
-    "to": "T10",
+    "from": "R2",
+    "to": "R10",
     "what": "restyles screener cards, buttons, rating badges"
    },
    {
-    "from": "T4",
-    "to": "T10",
+    "from": "R4",
+    "to": "R10",
     "what": "restyles trial-request status words into colored chips"
    },
    {
-    "from": "T7",
-    "to": "T10",
+    "from": "R7",
+    "to": "R10",
     "what": "restyles hub tiles to the shared card treatment"
    },
    {
-    "from": "T9",
-    "to": "T10",
+    "from": "R9",
+    "to": "R10",
     "what": "restyles goal cards and progress surfaces"
    },
    {
-    "from": "T1",
-    "to": "T10",
+    "from": "R1",
+    "to": "R10",
     "what": "restyles base profile pages and page headings"
    }
   ]
@@ -848,20 +848,20 @@
  "global_rules": [
   {
    "rule": "Any coach rate shown anywhere is spelled out like '$120 per session', never a bare number.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Every percentage anywhere in the app (discounts, goal progress, anything else) is a whole number with a % sign, no decimals.",
-   "introduced_in_turn": 3
+   "introduced_in_request": 3
   },
   {
    "rule": "Any cancel, decline, or delete action anywhere asks for confirmation before it goes through.",
-   "introduced_in_turn": 4
+   "introduced_in_request": 4
   }
  ],
  "pinned_seed": {
   "entity": "7 coaches in the screener directory",
-  "introduced_in_turn": 2,
+  "introduced_in_request": 2,
   "records_gist": "Ben Whitaker $75/3yr (Interview Prep+Resume), Derek Okafor $95/5yr (Career+Interview Prep), Tom Alvarez $95/6yr (Wellness+Mindfulness), Maya Chen $120/8yr (Career+Leadership), Hana Suzuki $120/9yr (Wellness+Leadership), Priya Nair $150/12yr (Executive+Leadership), Sofia Ricci $180/15yr (Executive+Career)"
  }
 }

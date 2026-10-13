@@ -56,7 +56,7 @@ def test_the_proxy_deadline_is_above_the_client_deadline():
 
     At FORWARD_TIMEOUT=900 with the harness's 1200s client timeout, any call needing 15-20
     minutes came back as a 502 the client retried until the ladder died — measured on
-    sonnet's app-3 turn 9 (five calls, each exactly 900.1s, status 502, twice in a row).
+    sonnet's app-3 request 9 (five calls, each exactly 900.1s, status 502, twice in a row).
     """
     entry = (CAPTURE.parents[1] / "generators" / "harnesses" / "openhands" / "entry.py").read_text()
     m = re.search(r'OPENHANDS_LLM_TIMEOUT["\']?\s*[,:=]\s*["\']?(\d+)', entry)

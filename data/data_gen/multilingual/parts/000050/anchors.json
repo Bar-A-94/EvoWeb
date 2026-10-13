@@ -4,7 +4,7 @@
       "en": "data management",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [1],
+      "requests": [1],
       "translations": {
         "zh": "数据管理",
         "he": "ניהול נתונים",
@@ -17,7 +17,7 @@
       "en": "cohort screener",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [2, 3, 4, 5, 6, 8],
+      "requests": [2, 3, 4, 5, 6, 8],
       "translations": {
         "zh": "队列筛选器",
         "he": "מסנן קוהורטה",
@@ -30,7 +30,7 @@
       "en": "age group",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [2, 3, 4, 5, 6, 7, 9],
+      "requests": [2, 3, 4, 5, 6, 7, 9],
       "translations": {
         "zh": "年龄组",
         "he": "קבוצת גיל",
@@ -43,7 +43,7 @@
       "en": "ethnicity",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [2, 3, 4, 5, 6, 7, 9],
+      "requests": [2, 3, 4, 5, 6, 7, 9],
       "translations": {
         "zh": "族裔",
         "he": "מוצא אתני",
@@ -56,7 +56,7 @@
       "en": "Black",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [2, 3, 5],
+      "requests": [2, 3, 5],
       "translations": {
         "zh": "黑人",
         "he": "שחורה",
@@ -69,7 +69,7 @@
       "en": "Hispanic",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [2, 4, 5, 6],
+      "requests": [2, 4, 5, 6],
       "translations": {
         "zh": "拉丁裔",
         "he": "היספנית",
@@ -82,7 +82,7 @@
       "en": "Asian",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [2, 7],
+      "requests": [2, 7],
       "translations": {
         "zh": "亚裔",
         "he": "אסייתית",
@@ -95,7 +95,7 @@
       "en": "White",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [2],
+      "requests": [2],
       "translations": {
         "zh": "白人",
         "he": "לבנה",
@@ -108,7 +108,7 @@
       "en": "Week",
       "class": "translate",
       "kind": "content_text",
-      "turns": [2],
+      "requests": [2],
       "translations": {
         "zh": "周",
         "he": "שבוע",
@@ -121,7 +121,7 @@
       "en": "matching X of Y",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [2],
+      "requests": [2],
       "translations": {
         "zh": "匹配 X / 共 Y",
         "he": "תואמות X מתוך Y",
@@ -134,7 +134,7 @@
       "en": "clear-all",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [2],
+      "requests": [2],
       "translations": {
         "zh": "全部清除",
         "he": "נקה הכול",
@@ -147,7 +147,7 @@
       "en": "Wellness Self-Check",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [3, 4, 10],
+      "requests": [3, 4, 10],
       "translations": {
         "zh": "健康自测",
         "he": "בדיקה עצמית לרווחה",
@@ -160,7 +160,7 @@
       "en": "Needs attention",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [3],
+      "requests": [3],
       "translations": {
         "zh": "需要关注",
         "he": "דורש תשומת לב",
@@ -173,7 +173,7 @@
       "en": "needs attention",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [5],
+      "requests": [5],
       "translations": {
         "zh": "需要关注",
         "he": "דורש תשומת לב",
@@ -186,7 +186,7 @@
       "en": "Fair",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [3, 4, 10],
+      "requests": [3, 4, 10],
       "translations": {
         "zh": "一般",
         "he": "בינוני",
@@ -199,7 +199,7 @@
       "en": "Thriving",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [3, 10],
+      "requests": [3, 10],
       "translations": {
         "zh": "蓬勃",
         "he": "משגשג",
@@ -212,7 +212,7 @@
       "en": "Section A",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [4, 6, 9],
+      "requests": [4, 6, 9],
       "translations": {
         "zh": "第 A 部分",
         "he": "חלק A",
@@ -225,7 +225,7 @@
       "en": "Section B",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [4, 6],
+      "requests": [4, 6],
       "translations": {
         "zh": "第 B 部分",
         "he": "חלק B",
@@ -238,7 +238,7 @@
       "en": "Section C",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [4],
+      "requests": [4],
       "translations": {
         "zh": "第 C 部分",
         "he": "חלק C",
@@ -251,7 +251,7 @@
       "en": "General Health",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [4],
+      "requests": [4],
       "translations": {
         "zh": "总体健康",
         "he": "בריאות כללית",
@@ -264,7 +264,7 @@
       "en": "Reproductive Health",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [4],
+      "requests": [4],
       "translations": {
         "zh": "生殖健康",
         "he": "בריאות הרבייה",
@@ -277,7 +277,7 @@
       "en": "Mental Health",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [4],
+      "requests": [4],
       "translations": {
         "zh": "心理健康",
         "he": "בריאות הנפש",
@@ -290,7 +290,7 @@
       "en": "Next",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [4, 6, 8],
+      "requests": [4, 6, 8],
       "translations": {
         "zh": "下一步",
         "he": "הבא",
@@ -303,7 +303,7 @@
       "en": "Yes",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [4, 6],
+      "requests": [4, 6],
       "translations": {
         "zh": "是",
         "he": "כן",
@@ -316,7 +316,7 @@
       "en": "No",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [4],
+      "requests": [4],
       "translations": {
         "zh": "否",
         "he": "לא",
@@ -329,7 +329,7 @@
       "en": "Have you ever been pregnant?",
       "class": "translate",
       "kind": "content_text",
-      "turns": [4],
+      "requests": [4],
       "translations": {
         "zh": "您曾经怀孕过吗？",
         "he": "האם היית בהריון אי פעם?",
@@ -342,7 +342,7 @@
       "en": "Fill with sample answers",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [4],
+      "requests": [4],
       "translations": {
         "zh": "填入示例答案",
         "he": "מלא בתשובות לדוגמה",
@@ -355,7 +355,7 @@
       "en": "insights strip",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [5, 7, 8],
+      "requests": [5, 7, 8],
       "translations": {
         "zh": "洞察条",
         "he": "רצועת תובנות",
@@ -368,7 +368,7 @@
       "en": "Follow-Up Queue",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [6, 8, 10],
+      "requests": [6, 8, 10],
       "translations": {
         "zh": "跟进队列",
         "he": "תור מעקב",
@@ -381,7 +381,7 @@
       "en": "Pending",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [6, 8, 10],
+      "requests": [6, 8, 10],
       "translations": {
         "zh": "待处理",
         "he": "ממתין",
@@ -394,7 +394,7 @@
       "en": "Contacted",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [6, 8, 10],
+      "requests": [6, 8, 10],
       "translations": {
         "zh": "已联系",
         "he": "נוצר קשר",
@@ -407,7 +407,7 @@
       "en": "Resolved",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [6, 8, 10],
+      "requests": [6, 8, 10],
       "translations": {
         "zh": "已解决",
         "he": "טופל",
@@ -420,7 +420,7 @@
       "en": "score under 5",
       "class": "translate",
       "kind": "content_text",
-      "turns": [6, 8],
+      "requests": [6, 8],
       "translations": {
         "zh": "评分低于 5",
         "he": "ציון מתחת ל-5",
@@ -433,7 +433,7 @@
       "en": "left voicemail",
       "class": "translate",
       "kind": "content_text",
-      "turns": [6, 8],
+      "requests": [6, 8],
       "translations": {
         "zh": "已留语音留言",
         "he": "הושארה הודעה קולית",
@@ -446,7 +446,7 @@
       "en": "all good",
       "class": "translate",
       "kind": "content_text",
-      "turns": [6, 8],
+      "requests": [6, 8],
       "translations": {
         "zh": "一切正常",
         "he": "הכול תקין",
@@ -459,7 +459,7 @@
       "en": "check sleep",
       "class": "translate",
       "kind": "content_text",
-      "turns": [6],
+      "requests": [6],
       "translations": {
         "zh": "检查睡眠",
         "he": "לבדוק שינה",
@@ -472,7 +472,7 @@
       "en": "flag control",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [6],
+      "requests": [6],
       "translations": {
         "zh": "标记控件",
         "he": "פקד סימון",
@@ -485,7 +485,7 @@
       "en": "survey wizard",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [4, 8, 9],
+      "requests": [4, 8, 9],
       "translations": {
         "zh": "问卷向导",
         "he": "אשף הסקר",
@@ -498,7 +498,7 @@
       "en": "export composer",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [7, 9],
+      "requests": [7, 9],
       "translations": {
         "zh": "导出编排器",
         "he": "מחולל הייצוא",
@@ -511,7 +511,7 @@
       "en": "Question Bank",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [9],
+      "requests": [9],
       "translations": {
         "zh": "题库",
         "he": "מאגר שאלות",
@@ -524,7 +524,7 @@
       "en": "How healthy do you feel overall?",
       "class": "translate",
       "kind": "content_text",
-      "turns": [9],
+      "requests": [9],
       "translations": {
         "zh": "您总体上觉得自己有多健康？",
         "he": "עד כמה את מרגישה בריאה באופן כללי?",
@@ -537,7 +537,7 @@
       "en": "Program Outcomes",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [10],
+      "requests": [10],
       "translations": {
         "zh": "项目成果",
         "he": "תוצאות התוכנית",
@@ -550,7 +550,7 @@
       "en": "resolution rate",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [10],
+      "requests": [10],
       "translations": {
         "zh": "解决率",
         "he": "שיעור פתרון",
@@ -563,7 +563,7 @@
       "en": "outcome funnel",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [10],
+      "requests": [10],
       "translations": {
         "zh": "成果漏斗",
         "he": "משפך תוצאות",
@@ -576,7 +576,7 @@
       "en": "suggested flags",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [10],
+      "requests": [10],
       "translations": {
         "zh": "建议标记",
         "he": "סימונים מוצעים",
@@ -586,32 +586,32 @@
       }
     },
 
-    {"en": "WHS-####", "class": "keep", "kind": "tech", "turns": [2, 7]},
-    {"en": "WHS-1001", "class": "keep", "kind": "tech", "turns": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
-    {"en": "WHS-1002", "class": "keep", "kind": "tech", "turns": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
-    {"en": "WHS-1003", "class": "keep", "kind": "tech", "turns": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
-    {"en": "WHS-1004", "class": "keep", "kind": "tech", "turns": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
-    {"en": "WHS-1005", "class": "keep", "kind": "tech", "turns": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
-    {"en": "WHS-1006", "class": "keep", "kind": "tech", "turns": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
-    {"en": "WHS-1007", "class": "keep", "kind": "tech", "turns": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
-    {"en": "WHS-1008", "class": "keep", "kind": "tech", "turns": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
-    {"en": "WHS-1009", "class": "keep", "kind": "tech", "turns": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
-    {"en": "whitesmoke", "class": "keep", "kind": "css_visual", "turns": [1]},
-    {"en": "dark cyan", "class": "keep", "kind": "css_visual", "turns": [1, 6, 8]},
-    {"en": "light-cyan", "class": "keep", "kind": "css_visual", "turns": [8]},
-    {"en": "white", "class": "keep", "kind": "css_visual", "turns": [8]},
-    {"en": "amber", "class": "keep", "kind": "css_visual", "turns": [6]},
-    {"en": "green", "class": "keep", "kind": "css_visual", "turns": [6]},
-    {"en": "monospace", "class": "keep", "kind": "tech", "turns": [8]},
-    {"en": "12px", "class": "keep", "kind": "value_format", "turns": [8]},
-    {"en": "18-29", "class": "keep", "kind": "value_format", "turns": [2, 3]},
-    {"en": "30-44", "class": "keep", "kind": "value_format", "turns": [2, 3, 4, 6]},
-    {"en": "45-59", "class": "keep", "kind": "value_format", "turns": [2]},
-    {"en": "60+", "class": "keep", "kind": "value_format", "turns": [2, 5, 7]},
-    {"en": "0-7", "class": "keep", "kind": "value_format", "turns": [3]},
-    {"en": "/ 10", "class": "keep", "kind": "value_format", "turns": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
-    {"en": "v1", "class": "keep", "kind": "tech", "turns": [9]},
-    {"en": "v2", "class": "keep", "kind": "tech", "turns": [9]},
-    {"en": "v3", "class": "keep", "kind": "tech", "turns": [9]}
+    {"en": "WHS-####", "class": "keep", "kind": "tech", "requests": [2, 7]},
+    {"en": "WHS-1001", "class": "keep", "kind": "tech", "requests": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
+    {"en": "WHS-1002", "class": "keep", "kind": "tech", "requests": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
+    {"en": "WHS-1003", "class": "keep", "kind": "tech", "requests": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
+    {"en": "WHS-1004", "class": "keep", "kind": "tech", "requests": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
+    {"en": "WHS-1005", "class": "keep", "kind": "tech", "requests": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
+    {"en": "WHS-1006", "class": "keep", "kind": "tech", "requests": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
+    {"en": "WHS-1007", "class": "keep", "kind": "tech", "requests": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
+    {"en": "WHS-1008", "class": "keep", "kind": "tech", "requests": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
+    {"en": "WHS-1009", "class": "keep", "kind": "tech", "requests": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
+    {"en": "whitesmoke", "class": "keep", "kind": "css_visual", "requests": [1]},
+    {"en": "dark cyan", "class": "keep", "kind": "css_visual", "requests": [1, 6, 8]},
+    {"en": "light-cyan", "class": "keep", "kind": "css_visual", "requests": [8]},
+    {"en": "white", "class": "keep", "kind": "css_visual", "requests": [8]},
+    {"en": "amber", "class": "keep", "kind": "css_visual", "requests": [6]},
+    {"en": "green", "class": "keep", "kind": "css_visual", "requests": [6]},
+    {"en": "monospace", "class": "keep", "kind": "tech", "requests": [8]},
+    {"en": "12px", "class": "keep", "kind": "value_format", "requests": [8]},
+    {"en": "18-29", "class": "keep", "kind": "value_format", "requests": [2, 3]},
+    {"en": "30-44", "class": "keep", "kind": "value_format", "requests": [2, 3, 4, 6]},
+    {"en": "45-59", "class": "keep", "kind": "value_format", "requests": [2]},
+    {"en": "60+", "class": "keep", "kind": "value_format", "requests": [2, 5, 7]},
+    {"en": "0-7", "class": "keep", "kind": "value_format", "requests": [3]},
+    {"en": "/ 10", "class": "keep", "kind": "value_format", "requests": [2, 3, 4, 5, 6, 7, 8, 9, 10]},
+    {"en": "v1", "class": "keep", "kind": "tech", "requests": [9]},
+    {"en": "v2", "class": "keep", "kind": "tech", "requests": [9]},
+    {"en": "v3", "class": "keep", "kind": "tech", "requests": [9]}
   ]
 }

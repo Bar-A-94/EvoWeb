@@ -35,7 +35,7 @@ THINKING_BUDGET = 4096
 # The proxy must NEVER be the component that gives up first: it sits between the harness and
 # the provider, so a proxy deadline shorter than the client's turns a slow-but-valid call into
 # a 502 the client then retries until the ladder dies. At 900s it did exactly that — sonnet's
-# app-3 turn 9 issued five calls, each cut at 900.1s with status 502, killing the ladder twice
+# app-3 request 9 issued five calls, each cut at 900.1s with status 502, killing the ladder twice
 # in a row (2026-08-27), and the same bug is behind the historical "sonnet 502 retries" noise.
 # It biases against whichever model thinks longest per call, which is the opposite of what a
 # model comparison wants. Keep this strictly ABOVE OPENHANDS_LLM_TIMEOUT (1200s, pinned in

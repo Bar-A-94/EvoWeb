@@ -142,8 +142,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 1,
+     "kind": "backward",
+     "copied_from_request": 1,
      "task": "Open any article and submit a comment that says 'Great tips, thanks!'.",
      "expected_result": "The comment appears in the article's comment section immediately after posting.",
      "task_category": {
@@ -210,8 +210,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "On the archive page, type 5 into the maximum read time box.",
      "expected_result": "Only the three articles of 5 minutes or less remain visible — Hydration Myths Debunked at exactly '5 min read', 10-Minute Morning Stretch Routine, and The Science of Cold Showers.",
      "task_category": {
@@ -277,8 +277,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "On the archive page, check the Nutrition category and switch on the reviewed-only toggle.",
      "expected_result": "Exactly two articles remain — Understanding Gut Bacteria and Beginner's Guide to Meal Prep — and the counter reads 'Showing 2 of 8 articles'.",
      "task_category": {
@@ -346,8 +346,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "Take the quiz, picking the Nutrition-tagged option on questions 1 and 3, the Fitness-tagged option on questions 2 and 4, and the Sleep-tagged option on question 5.",
      "expected_result": "The results card names Fitness as the wellness focus — the two-two tie with Nutrition breaks toward Fitness because it was picked more recently.",
      "task_category": {
@@ -415,8 +415,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "Open the archive page with no filters applied and look at the top of the list.",
      "expected_result": "Sleep Debt: Myth or Real? sits above Understanding Gut Bacteria — both have 3,200 views, and the newer article wins the tie.",
      "task_category": {
@@ -483,8 +483,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 4,
+     "kind": "backward",
+     "copied_from_request": 4,
      "task": "In the Fitness board, open 'Knee pain after running', type a reply saying 'Try foam rolling' and post it, then go back to the board's thread list.",
      "expected_result": "The reply appears in the thread and the thread's reply count in the board list now shows 2.",
      "task_category": {
@@ -552,8 +552,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 6,
+     "kind": "backward",
+     "copied_from_request": 6,
      "task": "At the Review Desk, open Sleep Debt: Myth or Real?, tick both checklist items but leave the reviewer unpicked, and try to approve.",
      "expected_result": "Approval is blocked (button disabled or a clear message) until a reviewer is chosen; the article stays in the queue tagged Editorial.",
      "task_category": {
@@ -621,8 +621,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 7,
+     "kind": "backward",
+     "copied_from_request": 7,
      "task": "In the digest subscribe box, type sam@wellness and submit, then change it to sam@wellness.com and submit again.",
      "expected_result": "The first attempt shows an inline error and no confirmation; the second shows a success confirmation.",
      "task_category": {
@@ -689,8 +689,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 5,
+     "kind": "backward",
+     "copied_from_request": 5,
      "task": "Type 'My knee hurts after every workout and my sleep is a mess' into the Ask the Community box.",
      "expected_result": "The helper routes to the Fitness board — two keyword hits (knee, workout) beat Sleep's single hit even though 'sleep' comes last — and beneath the verdict it lists Fitness's one seeded thread, 'Knee pain after running'.",
      "task_category": {
@@ -708,145 +708,145 @@
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "Article archive screener",
     "archetype": "derived-state"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "Wellness focus quiz",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "Community topic boards",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "Community question router",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "Editorial review desk",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "Weekly digest composer",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "Engagement dashboard",
     "archetype": "derived-state"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "Site-wide visual refresh",
     "archetype": "design-restyle"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "My Feed reconciliation",
     "archetype": "derived-state"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T2",
+    "from": "R1",
+    "to": "R2",
     "what": "base blog articles and article pages the archive lists and links to"
    },
    {
-    "from": "T2",
-    "to": "T3",
+    "from": "R2",
+    "to": "R3",
     "what": "archive articles ranked by view counts for result-card recommendations"
    },
    {
-    "from": "T1",
-    "to": "T4",
+    "from": "R1",
+    "to": "R4",
     "what": "topic categories and category pages that host board links"
    },
    {
-    "from": "T4",
-    "to": "T5",
+    "from": "R4",
+    "to": "R5",
     "what": "routed questions land on the seeded boards; the winning board's threads are listed for duplicate checks and the pre-titled question posts there as a new thread"
    },
    {
-    "from": "T1",
-    "to": "T6",
+    "from": "R1",
+    "to": "R6",
     "what": "badge flip rendered on base article pages"
    },
    {
-    "from": "T2",
-    "to": "T6",
+    "from": "R2",
+    "to": "R6",
     "what": "approval moves articles into the archive's reviewed-only filter"
    },
    {
-    "from": "T6",
-    "to": "T7",
+    "from": "R6",
+    "to": "R7",
     "what": "Review Desk approval gates digest eligibility"
    },
    {
-    "from": "T2",
-    "to": "T7",
+    "from": "R2",
+    "to": "R7",
     "what": "read-time metadata summed into the live digest total"
    },
    {
-    "from": "T2",
-    "to": "T8",
+    "from": "R2",
+    "to": "R8",
     "what": "views and read times feed the views-per-minute score"
    },
    {
-    "from": "T4",
-    "to": "T8",
+    "from": "R4",
+    "to": "R8",
     "what": "board thread/reply activity aggregated per topic"
    },
    {
-    "from": "T1",
-    "to": "T9",
+    "from": "R1",
+    "to": "R9",
     "what": "restyles homepage and article pages"
    },
    {
-    "from": "T2",
-    "to": "T9",
+    "from": "R2",
+    "to": "R9",
     "what": "restyles archive cards and badge pills"
    },
    {
-    "from": "T4",
-    "to": "T9",
+    "from": "R4",
+    "to": "R9",
     "what": "restyles community landing and boards"
    },
    {
-    "from": "T3",
-    "to": "T9",
+    "from": "R3",
+    "to": "R9",
     "what": "restyles quiz flow and results card"
    },
    {
-    "from": "T7",
-    "to": "T9",
+    "from": "R7",
+    "to": "R9",
     "what": "restyles the digest subscribe button as a teal primary action"
    },
    {
-    "from": "T1",
-    "to": "T10",
+    "from": "R1",
+    "to": "R10",
     "what": "followed topics drive the feed's contents"
    },
    {
-    "from": "T3",
-    "to": "T10",
+    "from": "R3",
+    "to": "R10",
     "what": "latest quiz focus adds its topic's articles to the feed"
    },
    {
-    "from": "T2",
-    "to": "T10",
+    "from": "R2",
+    "to": "R10",
     "what": "feed items ranked by archive view counts with badge/read-time labels"
    }
   ]
@@ -854,20 +854,20 @@
  "global_rules": [
   {
    "rule": "Every article, anywhere it appears (lists, search results, quiz recommendations, digest, feed), carries either a 'Medically Reviewed' tag (with the doctor's name where there's room) or an 'Editorial' tag.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Read times are always written as 'X min read' everywhere in the app.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Any empty list or section anywhere shows a friendly nothing-here message with a nudge to act, never a blank area.",
-   "introduced_in_turn": 4
+   "introduced_in_request": 4
   }
  ],
  "pinned_seed": {
   "entity": "8 seeded health articles",
-  "introduced_in_turn": 2,
+  "introduced_in_request": 2,
   "records_gist": "Gut Bacteria (Nutrition, Jan 12, 9min, reviewed Wexler, 3200v); Meal Prep (Nutrition, Feb 8, 12min, reviewed Ortiz, 1450v); Hydration Myths (Nutrition, Mar 30, 5min, unreviewed, 610v); Morning Stretch (Fitness, Mar 3, 4min, reviewed Ortiz, 980v); Strength After 50 (Fitness, Apr 2, 8min, reviewed Ortiz, 1450v); Cold Showers (Fitness, May 15, 3min, unreviewed, 190v); Sleep Debt (Sleep, Apr 20, 6min, unreviewed, 3200v); Managing Stress (Mind, May 1, 7min, unreviewed, 2750v)"
  }
 }

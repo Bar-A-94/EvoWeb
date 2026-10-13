@@ -4,7 +4,7 @@
    "en": "creative works",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1,
     2
    ],
@@ -20,7 +20,7 @@
    "en": "Creative Works",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -35,7 +35,7 @@
    "en": "Home",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -50,7 +50,7 @@
    "en": "Share Ideas",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -65,7 +65,7 @@
    "en": "Discussions",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -80,7 +80,7 @@
    "en": "discussions",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1,
     2
    ],
@@ -96,7 +96,7 @@
    "en": "Interactions",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -111,7 +111,7 @@
    "en": "share ideas form",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -126,7 +126,7 @@
    "en": "shared ideas section",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -141,7 +141,7 @@
    "en": "#nature",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     5,
     7
@@ -158,7 +158,7 @@
    "en": "#abstract",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2
    ],
    "translations": {
@@ -173,7 +173,7 @@
    "en": "#animals",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     4
    ],
@@ -189,7 +189,7 @@
    "en": "#urban",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     4
    ],
    "translations": {
@@ -204,7 +204,7 @@
    "en": "#space",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     5,
     9
    ],
@@ -220,7 +220,7 @@
    "en": "Digital Art",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2
    ],
    "translations": {
@@ -235,7 +235,7 @@
    "en": "Sculpture",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     4
    ],
@@ -251,7 +251,7 @@
    "en": "Papercraft",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     4
    ],
@@ -267,7 +267,7 @@
    "en": "Photography",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2
    ],
    "translations": {
@@ -282,7 +282,7 @@
    "en": "sort-by-likes",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3
    ],
@@ -298,7 +298,7 @@
    "en": "Spark Score",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     5,
     8,
@@ -316,7 +316,7 @@
    "en": "spark",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     3,
     4,
     10
@@ -333,7 +333,7 @@
    "en": "Ember",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     5
    ],
@@ -349,7 +349,7 @@
    "en": "Flame",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     5
    ],
@@ -365,7 +365,7 @@
    "en": "Blaze",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     8
    ],
@@ -381,7 +381,7 @@
    "en": "Favorites",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     6
    ],
@@ -397,7 +397,7 @@
    "en": "Communities",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     7
    ],
@@ -413,7 +413,7 @@
    "en": "join",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     9
    ],
@@ -429,7 +429,7 @@
    "en": "Weekly Spotlight",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6,
     9
    ],
@@ -445,7 +445,7 @@
    "en": "champion badge",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7
    ],
    "translations": {
@@ -460,7 +460,7 @@
    "en": "champion",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7
    ],
    "translations": {
@@ -475,7 +475,7 @@
    "en": "close-and-crown",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7,
     10
    ],
@@ -491,7 +491,7 @@
    "en": "artists insights",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8,
     9,
     10
@@ -508,7 +508,7 @@
    "en": "Artists insights",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -523,7 +523,7 @@
    "en": "activity feed",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -538,7 +538,7 @@
    "en": "Wild Growth challenge opened",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -553,7 +553,7 @@
    "en": "Space Dreamers community created",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -568,7 +568,7 @@
    "en": "Nebula Whale featured",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -583,7 +583,7 @@
    "en": "3 days ago",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -598,7 +598,7 @@
    "en": "5 days ago",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -613,7 +613,7 @@
    "en": "8 days ago",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -628,7 +628,7 @@
    "en": "World of Imagination",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     1
    ]
   },
@@ -636,7 +636,7 @@
    "en": "azure mist",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1
    ]
   },
@@ -644,7 +644,7 @@
    "en": "dark slate blue",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1
    ]
   },
@@ -652,7 +652,7 @@
    "en": "warm coral",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     9
    ]
   },
@@ -660,7 +660,7 @@
    "en": "#FF6F61",
    "class": "keep",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     9
    ]
   },
@@ -668,7 +668,7 @@
    "en": "Love this place",
    "class": "keep",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2
    ]
   },
@@ -676,7 +676,7 @@
    "en": "Nebula Whale",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     4,
     6,
@@ -688,7 +688,7 @@
    "en": "Clockwork Garden",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     5,
     6,
@@ -701,7 +701,7 @@
    "en": "Paper Dragons",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     4,
     6,
@@ -712,7 +712,7 @@
    "en": "Midnight Library",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     6,
@@ -723,7 +723,7 @@
    "en": "Rust & Roses",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -736,7 +736,7 @@
    "en": "Glass Comet",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -748,7 +748,7 @@
    "en": "Ink Tempest",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     6,
@@ -759,7 +759,7 @@
    "en": "Origami Tide",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -772,7 +772,7 @@
    "en": "Mira Chen",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     8
    ]
@@ -781,7 +781,7 @@
    "en": "Theo Voss",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     8,
     10
@@ -791,7 +791,7 @@
    "en": "Sana Okafor",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     8,
     10
@@ -801,7 +801,7 @@
    "en": "Lena Petrov",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     8
    ]
@@ -810,7 +810,7 @@
    "en": "Nature Collective",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     5,
     7,
     9,
@@ -821,7 +821,7 @@
    "en": "Space Dreamers",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     5,
     10
    ]
@@ -830,7 +830,7 @@
    "en": "Wild Growth",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     7,
     10
    ]

@@ -14,7 +14,7 @@ from evoweb import metrics, scoring  # noqa: E402
 from evoweb.paths import BENCHMARK  # noqa: E402
 
 
-def turn(t, yes, partial, no, status="success"):
+def request(t, yes, partial, no, status="success"):
     return {
         "turn": t,
         "status": status,
@@ -25,12 +25,12 @@ def turn(t, yes, partial, no, status="success"):
     }
 
 
-def test_turn_score():
-    assert scoring.turn_score(turn(1, 4, 1, 2)) == pytest.approx(4.5 / 7 * 100)
-    assert scoring.turn_score(turn(2, 5, 0, 0)) == 100.0
-    assert scoring.turn_score(turn(2, 0, 0, 5)) == 0.0
-    assert scoring.turn_score(None) is None
-    assert scoring.turn_score({"turn": 3, "status": "error", "total": 0}) is None
+def test_request_score():
+    assert scoring.request_score(request(1, 4, 1, 2)) == pytest.approx(4.5 / 7 * 100)
+    assert scoring.request_score(request(2, 5, 0, 0)) == 100.0
+    assert scoring.request_score(request(2, 0, 0, 5)) == 0.0
+    assert scoring.request_score(None) is None
+    assert scoring.request_score({"turn": 3, "status": "error", "total": 0}) is None
 
 
 def test_parse_verdict():
@@ -45,10 +45,10 @@ def test_parse_verdict():
 def test_score_ladders_synthetic():
     # Two ladders, three requests. Sample 2's request 3 errored (no verdict).
     ladders = {
-        1: {1: turn(1, 5, 0, 0), 2: turn(2, 4, 0, 1), 3: turn(3, 2, 2, 1)},
+        1: {1: request(1, 5, 0, 0), 2: request(2, 4, 0, 1), 3: request(3, 2, 2, 1)},
         2: {
-            1: turn(1, 3, 0, 2),
-            2: turn(2, 5, 0, 0),
+            1: request(1, 3, 0, 2),
+            2: request(2, 5, 0, 0),
             3: {"turn": 3, "status": "error", "total": 0},
         },
     }
@@ -65,16 +65,16 @@ def test_score_ladders_synthetic():
 
 
 def test_gate_and_survival():
-    by_turn = {t: turn(t, 5, 0, 0) for t in range(1, 11)}
-    by_turn[4] = turn(4, 2, 1, 2)  # 50 %
-    assert metrics.turns_before_gate(by_turn, 0) == 10
-    assert metrics.turns_before_gate(by_turn, 50) == 10
-    assert metrics.turns_before_gate(by_turn, 51) == 3
-    gated = metrics.gate({1: by_turn}, 51)[1]
+    by_request = {t: request(t, 5, 0, 0) for t in range(1, 11)}
+    by_request[4] = request(4, 2, 1, 2)  # 50 %
+    assert metrics.requests_before_gate(by_request, 0) == 10
+    assert metrics.requests_before_gate(by_request, 50) == 10
+    assert metrics.requests_before_gate(by_request, 51) == 3
+    gated = metrics.gate({1: by_request}, 51)[1]
     assert gated[4]["total"] == 5  # the failing request still counts
     assert gated[5]["status"] == "skipped" and gated[5]["total"] == 0
     # S(t) of a perfect ladder is 10 at every threshold -> Survival 10
-    perfect = {1: {t: turn(t, 5, 0, 0) for t in range(1, 11)}}
+    perfect = {1: {t: request(t, 5, 0, 0) for t in range(1, 11)}}
     assert metrics.auc(metrics.survival_sweep(perfect)) == pytest.approx(10.0)
 
 
@@ -83,13 +83,13 @@ def test_load_expected_tasks_evoweb():
         pytest.skip(f"{BENCHMARK} missing")
     expected = scoring.load_expected_tasks(str(BENCHMARK))
     assert sorted(expected) == list(range(1, 33))
-    for per_turn in expected.values():
-        assert sorted(per_turn) == list(range(1, 11))
-        assert all(per_turn[t] == 5 for t in range(2, 11))
-        assert per_turn[1] >= 4
+    for per_request in expected.values():
+        assert sorted(per_request) == list(range(1, 11))
+        assert all(per_request[t] == 5 for t in range(2, 11))
+        assert per_request[1] >= 4
 
 
-def test_global_rule_turns_evoweb():
+def test_global_rule_requests_evoweb():
     if not BENCHMARK.is_file():
         pytest.skip(f"{BENCHMARK} missing")
-    assert len(metrics.global_rule_turns()) == 18
+    assert len(metrics.global_rule_requests()) == 18

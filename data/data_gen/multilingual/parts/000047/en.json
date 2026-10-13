@@ -143,7 +143,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Navigate to the personnel management area and open the leave section.",
      "expected_result": "A leave application area (form or list) is visible, the page renders with content (not blank), and the page background is light pink.",
      "task_category": {
@@ -153,7 +153,7 @@
        "base app"
       ]
      },
-     "copied_from_turn": 1
+     "copied_from_request": 1
     }
    ]
   },
@@ -212,7 +212,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the requisition builder and select IT Equipment as the budget line.",
      "expected_result": "The remaining funds shown for IT Equipment read $1,500 (allocated $60,000 minus $58,500 spent), not the allocated amount.",
      "task_category": {
@@ -222,7 +222,7 @@
        "seed data"
       ]
      },
-     "copied_from_turn": 2
+     "copied_from_request": 2
     }
    ]
   },
@@ -281,7 +281,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the expense report form, enter purpose 'Test trip', departure date 2026-03-10, return date 2026-03-08, add one item 'Taxi' at $20, and try to submit.",
      "expected_result": "Submission is blocked because the return date is before departure, and no new report appears in the approvals queue.",
      "task_category": {
@@ -291,7 +291,7 @@
        "date logic"
       ]
      },
-     "copied_from_turn": 3
+     "copied_from_request": 3
     }
    ]
   },
@@ -350,7 +350,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "In the requisition builder select Staff Training, then type quantity 2 and unit price 2500.",
      "expected_result": "The live total reads $5,000 and the approval tier shows Finance Director — exactly $5,000 does NOT fall in the Department Head tier.",
      "task_category": {
@@ -360,7 +360,7 @@
        "live computation"
       ]
      },
-     "copied_from_turn": 2
+     "copied_from_request": 2
     }
    ]
   },
@@ -419,7 +419,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the budget utilization report and read the line ordering.",
      "expected_result": "Order is: Public Parks 100.0%, IT Equipment 97.5%, Roads & Bridges 70.0%, Vehicle Fleet 70.0%, Office Supplies 61.3%, Staff Training 44.0% — Roads & Bridges comes before Vehicle Fleet on the 70.0% tie per the alphabetical tie-break (the ledger seeds Vehicle Fleet first, so a sort that just keeps ledger order would show the pair flipped), and the headline flag count reads 2.",
      "task_category": {
@@ -429,7 +429,7 @@
        "aggregate count"
       ]
      },
-     "copied_from_turn": 4
+     "copied_from_request": 4
     }
    ]
   },
@@ -488,7 +488,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the expense approvals queue and look at EXP-001 from Li Wei.",
      "expected_result": "Its itemized total reads $785 (340 + 360 + 85) and it carries an amber Pending pill.",
      "task_category": {
@@ -498,7 +498,7 @@
        "seed data"
       ]
      },
-     "copied_from_turn": 3
+     "copied_from_request": 3
     }
    ]
   },
@@ -557,7 +557,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the review screen for REQ-001 in the vendor portal area.",
      "expected_result": "Huaqiang Electronics' $10,850 quote (BID-001, submitted June 2) is highlighted as best — it ties Pearl Office Systems on amount but came in four days earlier, so the earliest-submitted tie-break wins even though Pearl sits higher in the quote list.",
      "task_category": {
@@ -567,7 +567,7 @@
        "ranking"
       ]
      },
-     "copied_from_turn": 5
+     "copied_from_request": 5
     }
    ]
   },
@@ -626,7 +626,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the grants section and look at Clean Water Initiative.",
      "expected_result": "It shows $20,800 spent, $29,200 remaining, and 41% used — 20,800 of 50,000 is 41.6%, which rounds down to 41; a build that rounds to nearest would show 42%.",
      "task_category": {
@@ -636,7 +636,7 @@
        "seed data"
       ]
      },
-     "copied_from_turn": 6
+     "copied_from_request": 6
     }
    ]
   },
@@ -695,7 +695,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "In the utilization report find the Office department rollup.",
      "expected_result": "The Office department (Office Supplies + IT Equipment) shows 90.3% used ($67,700 of $75,000, rounded to one decimal — not 90.2 or 90.27).",
      "task_category": {
@@ -705,7 +705,7 @@
        "rounding"
       ]
      },
-     "copied_from_turn": 4
+     "copied_from_request": 4
     }
    ]
   }
@@ -714,155 +714,155 @@
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "requisition builder + budget lines",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "expense approval workflow",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "budget utilization report",
     "archetype": "derived-state"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "vendor quote portal",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "grant tracking module",
     "archetype": "derived-state"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "plum-and-pink restyle",
     "archetype": "design-restyle"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "what-if budget planner",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "KPI status dashboard",
     "archetype": "derived-state"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "council decision packets",
     "archetype": "multi-surface-workflow"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T2",
+    "from": "R1",
+    "to": "R2",
     "what": "builder lives in the base procurement module"
    },
    {
-    "from": "T2",
-    "to": "T3",
+    "from": "R2",
+    "to": "R3",
     "what": "approved expenses post into budget lines' spent totals"
    },
    {
-    "from": "T2",
-    "to": "T4",
+    "from": "R2",
+    "to": "R4",
     "what": "rolls up the budget lines ledger"
    },
    {
-    "from": "T3",
-    "to": "T4",
+    "from": "R3",
+    "to": "R4",
     "what": "utilization moves when expenses are approved"
    },
    {
-    "from": "T2",
-    "to": "T5",
+    "from": "R2",
+    "to": "R5",
     "what": "builder submissions appear as open solicitations"
    },
    {
-    "from": "T1",
-    "to": "T7",
+    "from": "R1",
+    "to": "R7",
     "what": "restyles the original module pages"
    },
    {
-    "from": "T2",
-    "to": "T7",
+    "from": "R2",
+    "to": "R7",
     "what": "restyles budget lines and requisition builder"
    },
    {
-    "from": "T3",
-    "to": "T7",
+    "from": "R3",
+    "to": "R7",
     "what": "restyles expense form and approvals queue"
    },
    {
-    "from": "T4",
-    "to": "T7",
+    "from": "R4",
+    "to": "R7",
     "what": "restyles the utilization report"
    },
    {
-    "from": "T5",
-    "to": "T7",
+    "from": "R5",
+    "to": "R7",
     "what": "restyles the vendor portal"
    },
    {
-    "from": "T6",
-    "to": "T7",
+    "from": "R6",
+    "to": "R7",
     "what": "restyles the grants section"
    },
    {
-    "from": "T2",
-    "to": "T8",
+    "from": "R2",
+    "to": "R8",
     "what": "planner clones the budget lines ledger"
    },
    {
-    "from": "T3",
-    "to": "T8",
+    "from": "R3",
+    "to": "R8",
     "what": "baseline spent includes posted approved expenses"
    },
    {
-    "from": "T2",
-    "to": "T9",
+    "from": "R2",
+    "to": "R9",
     "what": "KPI status compares progress to line utilization"
    },
    {
-    "from": "T3",
-    "to": "T9",
+    "from": "R3",
+    "to": "R9",
     "what": "approving an expense can flip a KPI status"
    },
    {
-    "from": "T2",
-    "to": "T10",
+    "from": "R2",
+    "to": "R10",
     "what": "packet totals allocated/spent/remaining across the budget lines ledger and uses the $25,000 council tier to pick qualifying requests"
    },
    {
-    "from": "T3",
-    "to": "T10",
+    "from": "R3",
+    "to": "R10",
     "what": "compiled spent totals reflect approved expense reports posted onto the lines"
    },
    {
-    "from": "T4",
-    "to": "T10",
+    "from": "R4",
+    "to": "R10",
     "what": "packet embeds the utilization report's flagged-line count"
    },
    {
-    "from": "T9",
-    "to": "T10",
+    "from": "R9",
+    "to": "R10",
     "what": "packet embeds live KPI tallies"
    },
    {
-    "from": "T5",
-    "to": "T10",
+    "from": "R5",
+    "to": "R10",
     "what": "packet pulls council-tier open procurement requests"
    }
   ]
@@ -870,20 +870,20 @@
  "global_rules": [
   {
    "rule": "Every submitted/created record gets a type-prefixed sequential reference: its own letter prefix plus a three-digit counter (REQ-001, EXP-001, BID-001, ...), counting up per type, for every submittable thing in the app now and later.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Every status badge app-wide is a colored pill: amber for Pending, green for Approved, red for Rejected — on every surface, now and for anything added later.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Any rejection anywhere in the app requires the approver to type a reason, and that reason is displayed on the rejected record.",
-   "introduced_in_turn": 3
+   "introduced_in_request": 3
   }
  ],
  "pinned_seed": {
   "entity": "6 municipal budget lines",
-  "introduced_in_turn": 2,
+  "introduced_in_request": 2,
   "records_gist": "Vehicle Fleet 45000/31500, Roads & Bridges 120000/84000, Office Supplies 15000/9200, IT Equipment 60000/58500, Staff Training 25000/11000, Public Parks 80000/80000 (allocated/spent, ledger insertion order)"
  }
 }

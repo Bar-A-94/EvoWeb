@@ -4,7 +4,7 @@
    "en": "Panels",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -24,7 +24,7 @@
    "en": "Peak 1",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     5
@@ -41,7 +41,7 @@
    "en": "Ridge West",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -60,7 +60,7 @@
    "en": "Ridge East",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -79,7 +79,7 @@
    "en": "Gable 1",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -97,7 +97,7 @@
    "en": "Corner 2",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -117,7 +117,7 @@
    "en": "Chimney 3",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -138,7 +138,7 @@
    "en": "South",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     5,
     8
@@ -155,7 +155,7 @@
    "en": "East",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -176,7 +176,7 @@
    "en": "fleet",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -198,7 +198,7 @@
    "en": "yield",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -218,7 +218,7 @@
    "en": "savings calculator",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     8
@@ -235,7 +235,7 @@
    "en": "alert center",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     6,
     7,
@@ -253,7 +253,7 @@
    "en": "report builder",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     7
    ],
@@ -269,7 +269,7 @@
    "en": "environmental impact",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8,
     10
    ],
@@ -285,7 +285,7 @@
    "en": "power flow",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -300,7 +300,7 @@
    "en": "System Health",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -315,7 +315,7 @@
    "en": "historical data",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1,
     2
    ],
@@ -331,7 +331,7 @@
    "en": "historical chart",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6,
     9
    ],
@@ -347,7 +347,7 @@
    "en": "real-time data",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -362,7 +362,7 @@
    "en": "solar power generation",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -377,7 +377,7 @@
    "en": "power consumption",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -392,7 +392,7 @@
    "en": "battery percentage",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -407,7 +407,7 @@
    "en": "Healthy",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6,
     9,
     10
@@ -424,7 +424,7 @@
    "en": "Watch",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6,
     9,
     10
@@ -441,7 +441,7 @@
    "en": "Fault",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6,
     9,
     10
@@ -458,7 +458,7 @@
    "en": "Active",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4
    ],
    "translations": {
@@ -473,7 +473,7 @@
    "en": "Resolved",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     7
    ],
@@ -489,7 +489,7 @@
    "en": "everything",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5
    ],
    "translations": {
@@ -504,7 +504,7 @@
    "en": "none",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5
    ],
    "translations": {
@@ -519,7 +519,7 @@
    "en": "electricity rate",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4
    ],
@@ -535,7 +535,7 @@
    "en": "system cost",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4
    ],
@@ -551,7 +551,7 @@
    "en": "rate",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     8
@@ -568,7 +568,7 @@
    "en": "cost",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     8
@@ -585,7 +585,7 @@
    "en": "sun level",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -600,7 +600,7 @@
    "en": "home load",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -615,7 +615,7 @@
    "en": "battery percent",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -630,7 +630,7 @@
    "en": "peak sun hours",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6,
     9
    ],
@@ -646,7 +646,7 @@
    "en": "expected baseline",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6,
     9
    ],
@@ -662,7 +662,7 @@
    "en": "yearly savings",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     8
    ],
@@ -678,7 +678,7 @@
    "en": "payback",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     8
@@ -695,7 +695,7 @@
    "en": "honeydew",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1,
     7
    ]
@@ -704,7 +704,7 @@
    "en": "dark olive green",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1
    ]
   },
@@ -712,7 +712,7 @@
    "en": "kWh",
    "class": "keep",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -728,7 +728,7 @@
    "en": "kW",
    "class": "keep",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     2,
     9
    ]
@@ -737,7 +737,7 @@
    "en": "W",
    "class": "keep",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     2,
     5,
     9
@@ -747,7 +747,7 @@
    "en": "kg",
    "class": "keep",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     8,
     10
    ]
@@ -756,7 +756,7 @@
    "en": "CO2",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     8,
     10
    ]
@@ -765,7 +765,7 @@
    "en": "NaN",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     3,
     5,
     8

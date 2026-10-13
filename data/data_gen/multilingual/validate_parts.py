@@ -7,18 +7,18 @@ The translation is trusted only where a machine can verify it:
 - invariants: every $-amount, decimal, percentage and signed American odds in an EN
   instruction/task survives byte-identical in its translation; every class=="keep"
   anchor (brands, teams, tickers, CSS color keywords, URLs) survives wherever its
-  exact form appears within its declared turns
+  exact form appears within its declared requests
 - anchors: every class=="translate" anchor's canonical translation appears in the
-  translated instruction of each declared turn whose EN instruction uses the label
+  translated instruction of each declared request whose EN instruction uses the label
 - task edits: tasks stay English; an edit exists for EVERY task whose EN text uses a
   translate anchor's exact form (nothing missed), carries both the translated anchor
   and the EN gloss, and leaks no target-script text beyond the anchor substitutions
 
 Anchor detection is the exact label form at word boundaries, case-sensitive, and only
-inside the anchor's declared "turns" — prose that happens to reuse a label's word in
+inside the anchor's declared "requests" — prose that happens to reuse a label's word in
 lowercase ("the three weights", "a value equal to") is the translator's judgment, not
 a hard requirement; raw substring matching drowned real checks in false positives
-('Core' inside "score", 'navy' re-described by hex in the restyle turn).
+('Core' inside "score", 'navy' re-described by hex in the restyle request).
 
 Errors fail the run (exit 1); warnings are printed for review.
 
@@ -50,7 +50,7 @@ NUM_RE = re.compile(
 MIN_LEN_RATIO = {"zh": 0.15, "he": 0.4, "hi": 0.4, "de": 0.5, "fr": 0.5}
 
 
-def en_turns(row) -> dict[int, str]:
+def en_requests(row) -> dict[int, str]:
     out = {1: row["instruction"]}
     for i, f in enumerate(row.get("follow_ups", []), start=2):
         out[i] = f["instruction"]
@@ -69,8 +69,8 @@ def uses(anchor_en: str, text: str) -> bool:
     return re.search(rf"(?<!\w){re.escape(anchor_en)}(?!\w)", text) is not None
 
 
-def anchor_turns(a: dict) -> set[int]:
-    return set(a.get("turns") or range(1, 11))
+def anchor_requests(a: dict) -> set[int]:
+    return set(a.get("requests") or range(1, 11))
 
 
 def script_ratio(text: str, lang: str) -> float:
@@ -90,9 +90,9 @@ def check_app(app: str) -> tuple[list[str], list[str]]:
     errors, warnings = [], []
     d = PARTS / app
     row = json.loads((d / "en.json").read_text(encoding="utf-8"))
-    turns, tasks = en_turns(row), en_tasks(row)
+    requests, tasks = en_requests(row), en_tasks(row)
     corpus = (
-        "\n".join(turns.values())
+        "\n".join(requests.values())
         + "\n"
         + "\n".join(t["task"] + "\n" + t["expected_result"] for ts in tasks.values() for t in ts)
     )
@@ -118,8 +118,8 @@ def check_app(app: str) -> tuple[list[str], list[str]]:
         part = json.loads(f.read_text(encoding="utf-8"))
         instr = part.get("instructions", {})
         for t in range(1, 11):
-            src, dst = turns[t], instr.get(str(t), "")
-            tag = f"{lang} T{t}"
+            src, dst = requests[t], instr.get(str(t), "")
+            tag = f"{lang} R{t}"
             if not dst:
                 errors.append(f"{tag}: instruction missing/empty")
                 continue
@@ -135,15 +135,15 @@ def check_app(app: str) -> tuple[list[str], list[str]]:
                 if lit not in dst:
                     errors.append(f"{tag}: numeric literal {lit!r} lost")
             for a in keep:
-                if t in anchor_turns(a) and uses(a["en"], src) and a["en"] not in dst:
+                if t in anchor_requests(a) and uses(a["en"], src) and a["en"] not in dst:
                     # colors are pinned visually (and by hex, which NUM-like checks keep);
-                    # losing the keyword in a turn that re-describes them is reviewable, not fatal
+                    # losing the keyword in a request that re-describes them is reviewable, not fatal
                     (warnings if a.get("kind") == "css_visual" else errors).append(
                         f"{tag}: keep-anchor {a['en']!r} lost"
                     )
             for a in xlate:
                 if (
-                    t in anchor_turns(a)
+                    t in anchor_requests(a)
                     and uses(a["en"], src)
                     and a["translations"][lang].casefold() not in dst.casefold()
                 ):
@@ -152,9 +152,9 @@ def check_app(app: str) -> tuple[list[str], list[str]]:
                     )
 
         # --- task edits ---
-        edits = {(e["turn"], e["task_index"]): e for e in part.get("task_edits", [])}
+        edits = {(e["request"], e["task_index"]): e for e in part.get("task_edits", [])}
         for (t, i), e in edits.items():
-            tag = f"{lang} T{t} task{i}"
+            tag = f"{lang} R{t} task{i}"
             if t not in tasks or not 0 <= i < len(tasks[t]):
                 errors.append(f"{tag}: no such task")
                 continue
@@ -168,10 +168,10 @@ def check_app(app: str) -> tuple[list[str], list[str]]:
                     if lit not in dst:
                         errors.append(f"{tag}: {field} numeric literal {lit!r} lost")
                 for a in keep:
-                    if t in anchor_turns(a) and uses(a["en"], src) and a["en"] not in dst:
+                    if t in anchor_requests(a) and uses(a["en"], src) and a["en"] not in dst:
                         errors.append(f"{tag}: {field} keep-anchor {a['en']!r} lost")
                 for a in xlate:
-                    if t in anchor_turns(a) and uses(a["en"], src):
+                    if t in anchor_requests(a) and uses(a["en"], src):
                         if a["translations"][lang].casefold() not in dst.casefold():
                             errors.append(f"{tag}: {field} lacks translated {a['en']!r}")
                         if a["en"].casefold() not in dst.casefold():
@@ -192,9 +192,9 @@ def check_app(app: str) -> tuple[list[str], list[str]]:
         for t, ts in tasks.items():
             for i, task in enumerate(ts):
                 text = task["task"] + " " + task["expected_result"]
-                needed = [a["en"] for a in xlate if t in anchor_turns(a) and uses(a["en"], text)]
+                needed = [a["en"] for a in xlate if t in anchor_requests(a) and uses(a["en"], text)]
                 if needed and (t, i) not in edits:
-                    errors.append(f"{lang} T{t} task{i}: uses {needed} but has no edit")
+                    errors.append(f"{lang} R{t} task{i}: uses {needed} but has no edit")
     return errors, warnings
 
 
@@ -210,7 +210,7 @@ def check_app_enui(app: str) -> tuple[list[str], list[str]]:
     errors, warnings = [], []
     d = PARTS / app
     row = json.loads((d / "en.json").read_text(encoding="utf-8"))
-    turns = en_turns(row)
+    requests = en_requests(row)
     anchors = json.loads((d / "anchors.json").read_text(encoding="utf-8"))["anchors"]
     for lang in LANGS:
         f = d / f"{lang}_enui.json"
@@ -222,8 +222,8 @@ def check_app_enui(app: str) -> tuple[list[str], list[str]]:
             errors.append(f"{lang}: enui variant must not carry task_edits")
         instr = part.get("instructions", {})
         for t in range(1, 11):
-            src, dst = turns[t], instr.get(str(t), "")
-            tag = f"{lang} enui T{t}"
+            src, dst = requests[t], instr.get(str(t), "")
+            tag = f"{lang} enui R{t}"
             if not dst:
                 errors.append(f"{tag}: instruction missing/empty")
                 continue
@@ -236,7 +236,7 @@ def check_app_enui(app: str) -> tuple[list[str], list[str]]:
                     errors.append(f"{tag}: numeric literal {lit!r} lost")
             stripped = dst
             for a in anchors:
-                if t in anchor_turns(a) and uses(a["en"], src):
+                if t in anchor_requests(a) and uses(a["en"], src):
                     if a["en"] not in dst:
                         (warnings if a.get("kind") == "css_visual" else errors).append(
                             f"{tag}: anchor {a['en']!r} must appear in English verbatim"

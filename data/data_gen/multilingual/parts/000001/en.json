@@ -141,8 +141,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 1,
+     "kind": "backward",
+     "copied_from_request": 1,
      "task": "Type CMET into the stock search and generate a report with all content options selected.",
      "expected_result": "A report for the searched stock appears, including basic stock information, market trends, and financial data sections.",
      "task_category": {
@@ -209,8 +209,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "On the screener, clear any active filters, then sort the results by the P/E column in ascending order.",
      "expected_result": "The first three rows are Baltic Freight (9.8), Comet Energy (12.6), then Fjord Pharma (12.6) — the 12.6 tie is broken alphabetically by ticker, so CMET comes before FJRD.",
      "task_category": {
@@ -278,8 +278,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "From the screener results, click the add-to-watchlist control on the Comet Energy row and choose the Core group, then open the Watchlist page.",
      "expected_result": "No duplicate is created — the watchlist still has exactly three entries with a single Comet Energy row, and the app indicates it was already saved.",
      "task_category": {
@@ -348,8 +348,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "On the screener, check the Technology and Healthcare sector boxes and type 1.0 into the minimum dividend yield box.",
      "expected_result": "Only Fjord Pharma and Helix Software remain in the results — Argent Micro and Ember Semiconductor are excluded for low yield — and the match readout says 2 of 8.",
      "task_category": {
@@ -417,8 +417,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 4,
+     "kind": "backward",
+     "copied_from_request": 4,
      "task": "Open the Positions view on a fresh load and read the weight column.",
      "expected_result": "Fjord Pharma's weight reads 37.1% (not 37.0%), so the three weights 33.7%, 37.1%, and 29.2% total exactly 100.0%, and total market value shows $9,070.50.",
      "task_category": {
@@ -487,8 +487,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 5,
+     "kind": "backward",
+     "copied_from_request": 5,
      "task": "Open the Ratings page and read the ranking from the top.",
      "expected_result": "Baltic Freight ranks first with a total of 20 and grade A (20 lands on the A boundary, not B), and the three stocks tied at 16 appear in the order Ember Semiconductor, Greenline Utilities, Helix Software.",
      "task_category": {
@@ -557,8 +557,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 6,
+     "kind": "backward",
+     "copied_from_request": 6,
      "task": "In the Alerts Center, edit the Fjord Pharma yield rule's threshold from 3 to 2.5.",
      "expected_result": "The rule still shows watching — Fjord's yield is exactly 2.5%, and 'above' is strict, so an exactly-equal value does not trigger.",
      "task_category": {
@@ -626,8 +626,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 7,
+     "kind": "backward",
+     "copied_from_request": 7,
      "task": "Type automation into the earnings highlights search box.",
      "expected_result": "Three stocks appear in the order Ember Semiconductor (2 matches), Argent Micro (1 match), Helix Software (1 match) — most matches first, the 1-1 tie alphabetical by ticker — with a grand total of 4 and every occurrence of 'automation' highlighted.",
      "task_category": {
@@ -695,8 +695,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 8,
+     "kind": "backward",
+     "copied_from_request": 8,
      "task": "In the Compare tool, select Comet Energy and Fjord Pharma.",
      "expected_result": "The P/E row highlights both columns (each is 12.6), dividend yield highlights Comet Energy (5.1% vs 2.5%), health score highlights Fjord Pharma (18 vs 17), and the win tally reads 2 for Comet Energy and 2 for Fjord Pharma.",
      "task_category": {
@@ -714,140 +714,140 @@
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "multi-criteria stock screener",
     "archetype": "derived-state"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "grouped watchlist",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "portfolio positions calculator",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "health score ratings",
     "archetype": "derived-state"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "alerts center",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "earnings transcript search",
     "archetype": "derived-state"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "side-by-side compare tool",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "theming restyle",
     "archetype": "design-restyle"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "command center dashboard",
     "archetype": "derived-state"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T2",
+    "from": "R1",
+    "to": "R2",
     "what": "report generation launched from screener result rows"
    },
    {
-    "from": "T2",
-    "to": "T3",
+    "from": "R2",
+    "to": "R3",
     "what": "add-to-watchlist buttons on screener result rows"
    },
    {
-    "from": "T1",
-    "to": "T3",
+    "from": "R1",
+    "to": "R3",
     "what": "add-to-watchlist button on generated report pages"
    },
    {
-    "from": "T3",
-    "to": "T4",
+    "from": "R3",
+    "to": "R4",
     "what": "position rows attach to watchlist entries"
    },
    {
-    "from": "T1",
-    "to": "T5",
+    "from": "R1",
+    "to": "R5",
     "what": "health score section embedded in generated reports"
    },
    {
-    "from": "T3",
-    "to": "T6",
+    "from": "R3",
+    "to": "R6",
     "what": "alert rules attach only to watchlist stocks"
    },
    {
-    "from": "T1",
-    "to": "T7",
+    "from": "R1",
+    "to": "R7",
     "what": "earnings highlights section in generated reports"
    },
    {
-    "from": "T5",
-    "to": "T8",
+    "from": "R5",
+    "to": "R8",
     "what": "health score totals compared and highlighted in the grid"
    },
    {
-    "from": "T1",
-    "to": "T9",
+    "from": "R1",
+    "to": "R9",
     "what": "report page restyled"
    },
    {
-    "from": "T2",
-    "to": "T9",
+    "from": "R2",
+    "to": "R9",
     "what": "screener page restyled"
    },
    {
-    "from": "T3",
-    "to": "T9",
+    "from": "R3",
+    "to": "R9",
     "what": "watchlist page restyled"
    },
    {
-    "from": "T5",
-    "to": "T9",
+    "from": "R5",
+    "to": "R9",
     "what": "ratings page restyled"
    },
    {
-    "from": "T6",
-    "to": "T9",
+    "from": "R6",
+    "to": "R9",
     "what": "alerts center restyled"
    },
    {
-    "from": "T4",
-    "to": "T10",
+    "from": "R4",
+    "to": "R10",
     "what": "portfolio tile totals value and gain from positions"
    },
    {
-    "from": "T6",
-    "to": "T10",
+    "from": "R6",
+    "to": "R10",
     "what": "alerts tile counts currently triggered rules"
    },
    {
-    "from": "T5",
-    "to": "T10",
+    "from": "R5",
+    "to": "R10",
     "what": "top-rated tile names best health score and grade"
    },
    {
-    "from": "T3",
-    "to": "T10",
+    "from": "R3",
+    "to": "R10",
     "what": "watchlist tile shows per-group counts"
    }
   ]
@@ -855,20 +855,20 @@
  "global_rules": [
   {
    "rule": "Every percentage anywhere in the app (yields, gains, weights, and anything added later) is shown with exactly one decimal place and a % sign, like 4.2% — never 4.20% or 4%.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Wherever a stock appears anywhere in the app, its ticker is shown in a small navy badge in front of the company name, like [FJRD] Fjord Pharma.",
-   "introduced_in_turn": 3
+   "introduced_in_request": 3
   },
   {
    "rule": "Any list of stocks where the user has not chosen a sort defaults to alphabetical order by ticker, app-wide.",
-   "introduced_in_turn": 4
+   "introduced_in_request": 4
   }
  ],
  "pinned_seed": {
   "entity": "8 fictional stocks (ticker, sector, price, P/E, market cap, dividend yield)",
-  "introduced_in_turn": 2,
+  "introduced_in_request": 2,
   "records_gist": "ARGN Tech $84.50 PE31.4 $142B 0.0%; BLTC Industrials $23.75 PE9.8 $8B 4.2%; CMET Energy $61.20 PE12.6 $54B 5.1%; DRFT Consumer $9.15 PE22.0 $2B 1.8%; EMBR Tech $147.30 PE41.7 $210B 0.4%; FJRD Healthcare $33.60 PE12.6 $18B 2.5%; GRNL Utilities $54.80 PE15.5 $27B 3.9%; HLXS Tech $58.90 PE27.3 $65B 1.1% — deliberate P/E tie CMET/FJRD at 12.6 and boundary yields/buckets"
  }
 }

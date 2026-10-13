@@ -2,15 +2,15 @@
 # requires-python = ">=3.11"
 # dependencies = ["mini-swe-agent=={version}"]
 # ///
-"""mini-swe-agent, with the conversation carried across turns.
+"""mini-swe-agent, with the conversation carried across requests.
 
 Upstream has no resume path: DefaultAgent.run() does `self.messages = []` and re-seeds
-[system, instance] every call, so a follow-up turn would rebuild the app from nothing and the
+[system, instance] every call, so a follow-up request would rebuild the app from nothing and the
 ladder would score a fresh build as a continuation.
 
 The seam is that first seed. run() clears the list and immediately calls add_messages(system,
 instance); intercepting that one call lets us restore the prior conversation and append only the
-new user turn, while every bit of upstream's loop and error handling runs untouched.
+new user request, while every bit of upstream's loop and error handling runs untouched.
 """
 
 import json
@@ -52,7 +52,7 @@ def _replayable(messages: list[dict]) -> list[dict]:
 
 
 class ResumingAgent(DefaultAgent):
-    """DefaultAgent that continues a previous turn instead of starting from an empty list."""
+    """DefaultAgent that continues a previous request instead of starting from an empty list."""
 
     def __init__(self, *args, history_path: Path | None = None, **kwargs):
         super().__init__(*args, **kwargs)
@@ -68,12 +68,12 @@ class ResumingAgent(DefaultAgent):
     def add_messages(self, *messages: dict) -> list[dict]:
         # The one call worth intercepting: run() has just emptied self.messages and is seeding
         # [system, instance]. The prior conversation already carries its own system message, so
-        # restore it and keep only the new instance (user) turn. Every later call passes through.
+        # restore it and keep only the new instance (user) request. Every later call passes through.
         if self._prior and not self._seeded:
             self._seeded = True
             self.messages = list(self._prior)
             messages = tuple(m for m in messages if m.get("role") != "system")
-            # The prior turn ends on an observation, which is role `user`, so the new task would
+            # The prior request ends on an observation, which is role `user`, so the new task would
             # be a second user message in a row. Fold it into that observation rather than betting
             # on the provider tolerating consecutive same-role turns.
             if (
@@ -93,11 +93,11 @@ class ResumingAgent(DefaultAgent):
         try:
             return super().run(task, **kwargs)
         finally:
-            # Persist even when the turn ends badly: the next turn resuming from a partial
+            # Persist even when the request ends badly: the next request resuming from a partial
             # conversation beats it silently starting over.
             keep = _replayable(self.messages)
             # run() clears self.messages before re-seeding, so an early raise would otherwise
-            # replace a good multi-turn history with []. Write atomically: a pod killed mid-write
+            # replace a good multi-request history with []. Write atomically: a pod killed mid-write
             # leaves truncated JSON that the loader reads as "no prior conversation".
             if self._history_path and len(keep) >= len(self._prior):
                 self._history_path.parent.mkdir(parents=True, exist_ok=True)

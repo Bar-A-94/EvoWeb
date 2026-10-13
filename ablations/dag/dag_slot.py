@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """DAG integration check (slot 3) vs the other four checks; Grade by test type (Table 4).
 
-Every follow-up request (T2-T10) carries exactly one `integration` check at task_idx 3 (the
-DAG check -- combine features built in earlier requests) and one `regression` (backward) check
+Every follow-up request (R2-R10) carries exactly one `integration` check at task_idx 3 (the
+DAG check -- combine features built in earlier requests) and one `backward` check
 at task_idx 4; slots 0-2 are feature / exact-value (functional). Scoring the integration slot
 and the other checks separately WITHIN the same runs cancels run luck in the contrast.
 
-Raw = (yes + 0.5*partial) / judged over judged tasks only; errored turns drop whole turns
-from both groups equally. Turn 1 is excluded from the contrast (different task structure,
+Raw = (yes + 0.5*partial) / judged over judged tasks only; errored requests drop whole requests
+from both groups equally. Request 1 is excluded from the contrast (different task structure,
 no kind labels) but participates in gate replays.
 
 Usage (from anywhere):
@@ -19,10 +19,10 @@ Usage (from anywhere):
                                                     # rule" instead of integration
 
 Figures:
-    slot_vs_rest.png     per-turn RAW (ungated) and NORM (gate@55 replayed on the
-                         overall turn score)
+    slot_vs_rest.png     per-request RAW (ungated) and NORM (gate@55 replayed on the
+                         overall request score)
     slot_auc_shared.png  gate-threshold sweeps 0-100 with the SHARED all-five-check gate
-                         (both groups die on the same turn; only the norm is per-group).
+                         (both groups die on the same request; only the norm is per-group).
                          This is the fair contrast -- see replay() for why.
     slot_auc.png         the same sweeps where each group's OWN score gates progression.
                          A counterfactual, NOT a difficulty measurement: a 1-check group
@@ -43,7 +43,7 @@ from collections import defaultdict
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
 from evoweb import arms, metrics  # noqa: E402
-from evoweb.metrics import global_rule_turns  # noqa: E402
+from evoweb.metrics import global_rule_requests  # noqa: E402
 from evoweb.paths import ARTIFACTS, run_dir  # noqa: E402
 
 # PAPER SETUP (Table 4's runs): the DAG_TABLE runs, then every other Table 2 model on its
@@ -73,7 +73,7 @@ def results(rd):
 
 
 def load_kind_map():
-    """(run_sample_index, turn, task_idx) -> (kind, task, expected) from the dataset.
+    """(run_sample_index, request, task_idx) -> (kind, task, expected) from the dataset.
 
     Run sample index N is the 1-based ROW position in the jsonl (row ids like '000004'
     are non-contiguous pool ids -- do not use them). Mapping verified by exact text
@@ -99,11 +99,11 @@ def score_run(rd, kinds):
     for f in results(rd):
         r = json.load(open(f))
         idx = int(r["index"])
-        for turn in r.get("turns", []):
-            tn = turn.get("turn")
-            if not tn or tn < 2:
+        for req in r.get("turns", []):  # result.json keeps the key "turns" (one per request)
+            rn = req.get("turn")
+            if not rn or rn < 2:
                 continue
-            for t in turn.get("tasks", []):
+            for t in req.get("tasks", []):
                 v = VERDICT_W.get(t.get("verdict"))
                 if v is None:
                     continue
@@ -111,9 +111,9 @@ def score_run(rd, kinds):
                 group = "slot" if ti == 3 else "rest"
                 acc[group][0] += v
                 acc[group][1] += 1
-                kind, task_txt, expected_txt = kinds[(idx, tn, ti)]
+                kind, task_txt, expected_txt = kinds[(idx, rn, ti)]
                 assert (t["task"], t["expected"]) == (task_txt, expected_txt), (
-                    f"dataset/run task text mismatch at index={idx} turn={tn} task_idx={ti}"
+                    f"dataset/run task text mismatch at index={idx} request={rn} task_idx={ti}"
                 )
                 acc[f"kind:{kind}"][0] += v
                 acc[f"kind:{kind}"][1] += 1
@@ -125,36 +125,36 @@ def pct(pair):
     return s / n * 100.0 if n else float("nan")
 
 
-def per_app_turn(rd):
-    """app -> {"grp": turn -> (slot, rest), "all": turn -> overall raw, "reached": set}.
+def per_app_request(rd):
+    """app -> {"grp": request -> (slot, rest), "all": request -> overall raw, "reached": set}.
 
-    "all" includes T1 (needed to replay the gate); "grp" starts at T2. A turn absent from
+    "all" includes R1 (needed to replay the gate); "grp" starts at R2. A request absent from
     "all" was never judged (errored) and kills the replayed ladder like a sub-threshold one.
-    "reached" is the set of turns surviving the gate@GATE_T replay (failing turn included).
+    "reached" is the set of requests surviving the gate@GATE_T replay (failing request included).
     """
     out = {}
     for f in results(rd):
         r = json.load(open(f))
         idx = int(r["index"])
-        for turn in r.get("turns", []):
-            tn = turn.get("turn")
-            if not tn:
+        for req in r.get("turns", []):  # result.json keeps the key "turns" (one per request)
+            rn = req.get("turn")
+            if not rn:
                 continue
             cell = {"slot": [0.0, 0], "rest": [0.0, 0]}
-            for t in turn.get("tasks", []):
+            for t in req.get("tasks", []):
                 v = VERDICT_W.get(t.get("verdict"))
                 if v is None:
                     continue
-                g = "slot" if tn >= 2 and t.get("task_idx") == 3 else "rest"
+                g = "slot" if rn >= 2 and t.get("task_idx") == 3 else "rest"
                 cell[g][0] += v
                 cell[g][1] += 1
             judged = cell["slot"][1] + cell["rest"][1]
             if not judged:
                 continue
             app = out.setdefault(idx, {"grp": {}, "all": {}})
-            app["all"][tn] = (cell["slot"][0] + cell["rest"][0]) / judged
-            if tn >= 2:
-                app["grp"][tn] = (
+            app["all"][rn] = (cell["slot"][0] + cell["rest"][0]) / judged
+            if rn >= 2:
+                app["grp"][rn] = (
                     cell["slot"][0] / cell["slot"][1] if cell["slot"][1] else None,
                     cell["rest"][0] / cell["rest"][1] if cell["rest"][1] else None,
                 )
@@ -192,7 +192,7 @@ def print_tables():
         vals = [v for v, _ in per_arm[arm].get(group, [])]
         return st.mean(vals) if vals else float("nan")
 
-    print("== integration slot (task_idx 3) vs the other four checks -- raw %, T2-T10 ==")
+    print("== integration slot (task_idx 3) vs the other four checks -- raw %, R2-R10 ==")
     print(f"{'model':18} {'rest(4/5)':>10} {'integration':>12} {'penalty':>9}  judged(slot/run)")
     for arm in ARMS:
         rest, slot = cell(arm, "rest"), cell(arm, "slot")
@@ -200,8 +200,8 @@ def print_tables():
         runs_txt = " / ".join(f"{v:.1f}" for v, _ in per_arm[arm]["slot"])
         print(f"{arm:18} {rest:10.1f} {slot:12.1f} {slot - rest:+9.1f}  n={nj} [{runs_txt}]")
 
-    print("\n== per-kind raw % (T2-T10) ==")
-    kinds_order = ["exact-value", "feature", "regression", "integration"]
+    print("\n== per-kind raw % (R2-R10) ==")
+    kinds_order = ["exact-value", "feature", "backward", "integration"]
     print(f"{'model':18} " + " ".join(f"{k:>12}" for k in kinds_order))
     for arm in ARMS:
         print(f"{arm:18} " + " ".join(f"{cell(arm, 'kind:' + k):12.1f}" for k in kinds_order))
@@ -225,10 +225,10 @@ def print_tables():
     sep_slot = abs(cell("Sonnet 4.6", "slot") - cell("Haiku 4.5", "slot"))
     print(f"\nheadline ratio (Sonnet-Haiku): slot/rest separation = {sep_slot / sep_rest:.2f}x")
 
-    print(f"\n== NORM@{GATE_T} per group (shared all-five-check gate replayed, T2-T10) ==")
+    print(f"\n== NORM@{GATE_T} per group (shared all-five-check gate replayed, R2-R10) ==")
     print(f"{'model':18} {'rest(4/5)':>10} {'integration':>12} {'penalty':>9}")
     for arm in ARMS:
-        runs = [per_app_turn(run_dir(rid)) for rid in ARMS[arm]]
+        runs = [per_app_request(run_dir(rid)) for rid in ARMS[arm]]
         apps = sorted(set().union(*[set(r) for r in runs]))
         cur = {g: curve(runs, apps, gi, "norm") for g, gi in (("slot", 0), ("rest", 1))}
         m = {g: st.mean([cur[g][t][0] for t in FOLLOW_UPS if t in cur[g]]) for g in cur}
@@ -239,7 +239,7 @@ def print_tables():
 
 
 def curve(runs, apps, gi, metric):
-    """turn -> (mean across runs, std across runs). metric 'norm' replays gate@GATE_T."""
+    """request -> (mean across runs, std across runs). metric 'norm' replays gate@GATE_T."""
     out = {}
     for t in FOLLOW_UPS:
         per_run = []
@@ -268,7 +268,7 @@ def fig_slot_vs_rest(plt, out_path):
     fig, axes = plt.subplots(2, 2, figsize=(15.0, 9.8), sharex=True)
     means = {}
     for col, model in enumerate(models):
-        runs = [per_app_turn(run_dir(rid)) for rid in ARMS[model]]
+        runs = [per_app_request(run_dir(rid)) for rid in ARMS[model]]
         apps = sorted(set().union(*[set(r) for r in runs]))
         for row, metric in enumerate(("raw", "norm")):
             ax = axes[row][col]
@@ -305,7 +305,7 @@ def fig_slot_vs_rest(plt, out_path):
             ax.text(
                 0.98,
                 0.06,
-                f"mean T2-T10\n  integration {ms:5.1f}\n  other four  {mr:5.1f}\n"
+                f"mean R2-R10\n  integration {ms:5.1f}\n  other four  {mr:5.1f}\n"
                 f"  difference  {ms - mr:+5.1f}",
                 transform=ax.transAxes,
                 ha="right",
@@ -315,9 +315,9 @@ def fig_slot_vs_rest(plt, out_path):
                 bbox=dict(boxstyle="round,pad=0.45", facecolor="#f8fafc", edgecolor="#cbd5e1"),
             )
     for ax in axes[1]:
-        ax.set_xlabel("turn")
+        ax.set_xlabel("request")
         ax.set_xticks(FOLLOW_UPS)
-        ax.set_xticklabels([f"T{t}" for t in FOLLOW_UPS])
+        ax.set_xticklabels([f"R{t}" for t in FOLLOW_UPS])
 
     adv = {}
     for metric in ("raw", "norm"):
@@ -333,12 +333,12 @@ def fig_slot_vs_rest(plt, out_path):
         fontsize=12.5,
     )
     note = (
-        "RAW counts only judged turns. NORM replays the 55% gate offline (runs execute "
+        "RAW counts only judged requests. NORM replays the 55% gate offline (runs execute "
         "ungated, "
-        "every turn judged): the first turn below 55% overall -- T1 included -- kills the "
+        "every request judged): the first request below 55% overall -- R1 included -- kills the "
         "ladder; "
-        "the failing turn still counts, later turns score 0.\n"
-        "Both curves come from the same runs, so run luck cancels in the contrast. Turn 1 is "
+        "the failing request still counts, later requests score 0.\n"
+        "Both curves come from the same runs, so run luck cancels in the contrast. Request 1 is "
         "the "
         "base build and has no typed checks. Judge: Sonnet 4.6."
     )
@@ -353,24 +353,24 @@ def fig_slot_vs_rest(plt, out_path):
 
 
 def replay(app, gi, th, gate="shared"):
-    """(avg group-NORM over T2..T10, follow-up turns survived) for one app at threshold th.
+    """(avg group-NORM over R2..R10, follow-up requests survived) for one app at threshold th.
 
-    gate="shared" -- the OVERALL five-check turn score gates progression, so both groups die
-    on exactly the same turn and only the norm is group-specific. This is the fair contrast.
+    gate="shared" -- the OVERALL five-check request score gates progression, so both groups die
+    on exactly the same request and only the norm is group-specific. This is the fair contrast.
     A 1-check group and a 4-check group are NOT gate-comparable at equal thresholds: one
     check scores only 0/50/100, so every threshold above 50 demands a perfect verdict each
-    turn, while four checks can absorb a failure (3 yes + 1 no = 75 still passes 55). Gating
+    request, while four checks can absorb a failure (3 yes + 1 no = 75 still passes 55). Gating
     each group on itself therefore charges the integration slot for its coarse granularity on
     top of its difficulty, and the two are inseparable in the result.
 
     gate="own" -- the group's own score both gates and norms. Keep it as the counterfactual
     "what if the benchmark were only this check group", not as a difficulty measurement.
 
-    Either way T1 (no typed checks) gates the first step on the overall score for both groups,
-    the failing turn still counts, and an unjudged turn kills the ladder.
+    Either way R1 (no typed checks) gates the first step on the overall score for both groups,
+    the failing request still counts, and an unjudged request kills the ladder.
     """
-    t1 = app["all"].get(1)
-    if t1 is None or t1 * 100 < th:
+    r1 = app["all"].get(1)
+    if r1 is None or r1 * 100 < th:
         return 0.0, 0
     kept, survived, alive = [], 0, True
     for t in FOLLOW_UPS:
@@ -385,9 +385,9 @@ def replay(app, gi, th, gate="shared"):
             kept.append(0.0)
             alive = False
             continue
-        # A group with no judged task in a turn the shared gate kept alive would otherwise
-        # sink that group alone; audited as never happening on these runs (0/4023 turns).
-        kept.append(s if s is not None else 0.0)  # the failing turn itself still counts
+        # A group with no judged task in a request the shared gate kept alive would otherwise
+        # sink that group alone; audited as never happening on these runs (0/4023 requests).
+        kept.append(s if s is not None else 0.0)  # the failing request itself still counts
         if judge * 100 < th:
             alive = False
         else:
@@ -413,10 +413,10 @@ def auc(curve_pts):
 
 
 def auc_table(gate):
-    """{(model, group): [AUC per run]} plus {model: turns-survived AUC} for one gate mode."""
+    """{(model, group): [AUC per run]} plus {model: requests-survived AUC} for one gate mode."""
     aucs, surv = {}, {}
     for model in FIG_MODELS:
-        runs = [per_app_turn(run_dir(rid)) for rid in ARMS[model]]
+        runs = [per_app_request(run_dir(rid)) for rid in ARMS[model]]
         for grp, gi in (("rest", 1), ("slot", 0)):
             norm_runs, surv_runs = sweep(runs, gi, gate)
             aucs[(model, grp)] = [auc(c) for c in norm_runs]
@@ -462,7 +462,7 @@ def fig_auc(plt, out_path, gate="shared"):
     ]
     ax.legend(handles=handles, loc="upper right", fontsize=9.5, ncol=2)
     drives = (
-        "the SHARED all-five-check turn score drives the gate (fair contrast)"
+        "the SHARED all-five-check request score drives the gate (fair contrast)"
         if gate == "shared"
         else "each check group's OWN score drives the gate (counterfactual)"
     )
@@ -472,12 +472,12 @@ def fig_auc(plt, out_path, gate="shared"):
         fontsize=12.5,
     )
     ax.set_xlabel("gate threshold (%)")
-    ax.set_ylabel("avg NORM (%), T2-T10")
+    ax.set_ylabel("avg NORM (%), R2-R10")
     ax.set_ylim(0, 100)
     ax.grid(alpha=0.25)
 
     axt.axis("off")
-    surv_hdr = "turns survived" if gate == "shared" else "survived s/r"
+    surv_hdr = "requests survived" if gate == "shared" else "survived s/r"
     tbl = [
         f"NORM sweep AUC (trapezoid over thresholds 0-100, /100) -- {gate} gate",
         "",
@@ -517,17 +517,17 @@ def fig_auc(plt, out_path, gate="shared"):
     if gate == "shared":
         note = (
             "Both groups ride the SAME ladder: progression is gated on the overall five-check "
-            "turn "
-            "score, so slot and rest die on the same turn and only the norm differs. This is "
+            "request "
+            "score, so slot and rest die on the same request and only the norm differs. This is "
             "the\n"
             "like-for-like comparison. Gating each group on itself instead (slot_auc.png) "
             "charges the integration slot for granularity as well as difficulty: one check "
             "scores\n"
-            "only 0/50/100, so any threshold above 50 demands a perfect verdict every turn, "
+            "only 0/50/100, so any threshold above 50 demands a perfect verdict every request, "
             "while "
             "four checks can absorb one failure.\n"
-            "T1 (no typed checks) gates the first step identically. Failing turn still counts; "
-            "unjudged turn kills the ladder. Turns-survived is set by the shared gate, so it "
+            "R1 (no typed checks) gates the first step identically. Failing request still counts; "
+            "unjudged request kills the ladder. Requests-survived is set by the shared gate, so it "
             "is\n"
             "identical for both groups and reported once. Judge: Sonnet 4.6."
         )
@@ -535,16 +535,16 @@ def fig_auc(plt, out_path, gate="shared"):
         note = (
             "COUNTERFACTUAL, not a difficulty measurement: every ladder is replayed as if "
             "scored "
-            "by one check group alone -- the group's per-turn score gates progression AND is "
+            "by one check group alone -- the group's per-request score gates progression AND is "
             "the "
             "norm.\n"
             "The integration group holds ONE check (0/50/100 only), so above threshold 50 its "
-            "gate demands a perfect verdict every turn while the four-check group can absorb a "
+            "gate demands a perfect verdict every request while the four-check group can absorb a "
             "failure. The gap below therefore mixes difficulty with granularity -- use "
             "slot_auc_shared.png for the fair contrast.\n"
-            "T1 (no typed checks) gates the first step identically for both groups. Failing "
-            "turn "
-            "still counts; unjudged turn kills the ladder. Judge: Sonnet 4.6."
+            "R1 (no typed checks) gates the first step identically for both groups. Failing "
+            "request "
+            "still counts; unjudged request kills the ladder. Judge: Sonnet 4.6."
         )
     fig.text(0.02, 0.012, note, fontsize=8.2, color="#4a5568")
     plt.tight_layout(rect=[0, 0.075 if gate == "shared" else 0.045, 1, 1])
@@ -557,7 +557,7 @@ def fig_auc(plt, out_path, gate="shared"):
         print(
             f"  [{gate:6s}] NORM sweep AUC {model:13s} integration {n_s:5.1f}+-{sd_s:.1f}  "
             f"other four {n_r:5.1f}+-{sd_r:.1f}  diff {n_s - n_r:+5.1f}  "
-            f"turns survived {surv[(model, 'slot')]:.2f}/{surv[(model, 'rest')]:.2f}"
+            f"requests survived {surv[(model, 'slot')]:.2f}/{surv[(model, 'rest')]:.2f}"
         )
 
 
@@ -565,32 +565,32 @@ def fig_auc(plt, out_path, gate="shared"):
 # Splits the five follow-up checks by task_idx instead of two ways:
 #   functional  = task_idx {0,1,2}  (exact-value + feature, three checks)
 #   integration = task_idx == 3     (the DAG's own check, one check)
-#   backward    = task_idx == 4     (the regression / backward-compatibility check, one check)
+#   backward    = task_idx == 4     (the backward-compatibility check, one check)
 # and, in the four-way split, the slot-3 check of a request with NO incoming DAG edge is
 #   global_rule                     (it verifies one of the app's global_rules, not a
 #                                    dependency -- dag_global_rule_checks.py lists them)
 # Everything below uses the SHARED all-five-check gate (the fair contrast, see replay()):
-# progression is decided by the overall turn score, so turns-survived is one number per model,
+# progression is decided by the overall request score, so requests-survived is one number per model,
 # not one per group. The cells and the replay are evoweb.metrics' (the Table 4 code), keyed
 # by task_idx rather than the kind map. Table 4 of the paper is the four-way split.
 G3 = ("functional", "integration", "backward")
 G4 = ("functional", "integration", "global_rule", "backward")
-GLOBAL_RULE_TURNS = global_rule_turns()  # {(run index, turn)}
+GLOBAL_RULE_REQUESTS = global_rule_requests()  # {(run index, request)}
 
 
-def group_table(groups, gr_turns, models, header):
+def group_table(groups, gr_requests, models, header):
     """Print the shared-gate per-group AUC table as GitHub-flavoured markdown.
 
-    The per-(turn, group) cells and the gate replay are `evoweb.metrics.per_app_turn_groups`
-    and `replay_group`. `gr_turns` is the set
-    of (app, turn) whose slot-3 check is a global-rule check; pass an empty set for the
+    The per-(request, group) cells and the gate replay are `evoweb.metrics.per_app_request_groups`
+    and `replay_group`. `gr_requests` is the set
+    of (app, request) whose slot-3 check is a global-rule check; pass an empty set for the
     three-way split, where every slot-3 check counts as integration.
     """
     aucn = {}  # (model, group) -> [AUC-NORM per run]
     raw = {}  # (model, group) -> [RAW % per run]: mean over judged cells, no gate
     survm = {}  # model -> AUC-Survival (shared gate, one per model)
     for model in models:
-        runs = [metrics.per_app_turn_groups(rid, gr_turns) for rid in ARMS[model]]
+        runs = [metrics.per_app_request_groups(rid, gr_requests) for rid in ARMS[model]]
         for g in groups:
             raw[(model, g)] = [
                 st.mean(
@@ -649,10 +649,10 @@ def three_group_table(models=TABLE_MODELS):
 
 
 def four_group_table(models=TABLE_MODELS):
-    n = len(GLOBAL_RULE_TURNS)
+    n = len(GLOBAL_RULE_REQUESTS)
     group_table(
         G4,
-        GLOBAL_RULE_TURNS,
+        GLOBAL_RULE_REQUESTS,
         models,
         f"four-way AUC-NORM (shared gate): slot-3 checks on the {n} requests with no "
         "incoming DAG edge scored as global_rule (Table 4, x100)",

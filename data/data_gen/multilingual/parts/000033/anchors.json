@@ -4,7 +4,7 @@
    "en": "How do I keep sourdough starter alive?",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -23,7 +23,7 @@
    "en": "Best budget airlines in Europe?",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     6
    ],
@@ -39,7 +39,7 @@
    "en": "Why is my laptop fan always loud?",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2
    ],
    "translations": {
@@ -54,7 +54,7 @@
    "en": "Is intermittent fasting safe for beginners?",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     10
    ],
@@ -70,7 +70,7 @@
    "en": "How to fix a wobbly bike wheel?",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -88,7 +88,7 @@
    "en": "What's the best way to learn Python?",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     6,
@@ -107,7 +107,7 @@
    "en": "Can I freeze fresh basil?",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -126,7 +126,7 @@
    "en": "#cooking",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -147,7 +147,7 @@
    "en": "#fitness",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -166,7 +166,7 @@
    "en": "#tech",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -185,7 +185,7 @@
    "en": "#travel",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     5,
     6,
@@ -204,7 +204,7 @@
    "en": "Showing",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3
    ],
@@ -220,7 +220,7 @@
    "en": "unanswered",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -239,7 +239,7 @@
    "en": "answered-but-not-solved",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -254,7 +254,7 @@
    "en": "Needs answer",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3
    ],
    "translations": {
@@ -269,7 +269,7 @@
    "en": "Accept",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     5,
     10
@@ -286,7 +286,7 @@
    "en": "Solved",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     7,
     9,
@@ -304,7 +304,7 @@
    "en": "Topics",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     8,
     9
@@ -321,7 +321,7 @@
    "en": "Featured",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6
    ],
    "translations": {
@@ -336,7 +336,7 @@
    "en": "FEATURED",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -351,7 +351,7 @@
    "en": "bounty tool",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6,
     8,
     9
@@ -368,7 +368,7 @@
    "en": "Suggest Edit",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7
    ],
    "translations": {
@@ -383,7 +383,7 @@
    "en": "Review",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7,
     9,
     10
@@ -400,7 +400,7 @@
    "en": "Approve",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7,
     10
    ],
@@ -416,7 +416,7 @@
    "en": "Reject",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7
    ],
    "translations": {
@@ -431,7 +431,7 @@
    "en": "edited",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7
    ],
    "translations": {
@@ -446,7 +446,7 @@
    "en": "Follow",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -461,7 +461,7 @@
    "en": "Following",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8,
     10
    ],
@@ -477,7 +477,7 @@
    "en": "Digest",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8,
     9,
     10
@@ -494,7 +494,7 @@
    "en": "Triage",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -509,7 +509,7 @@
    "en": "type how into the title field",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     3,
     5
    ],
@@ -525,7 +525,7 @@
    "en": "type ho, then add one more letter to make it how",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     3
    ],
    "translations": {
@@ -540,7 +540,7 @@
    "en": "Type basil into the composer's title field",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     3
    ],
    "translations": {
@@ -555,7 +555,7 @@
    "en": "Python",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -568,7 +568,7 @@
    "en": "beige",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1,
     9
    ]
@@ -577,7 +577,7 @@
    "en": "saddle brown",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1,
     9
    ]
@@ -586,7 +586,7 @@
    "en": "saddle-brown",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     9
    ]
   },
@@ -594,7 +594,7 @@
    "en": "dark green",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     9
    ]
   },
@@ -602,7 +602,7 @@
    "en": "amber",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     3
    ]
   },
@@ -610,7 +610,7 @@
    "en": "small caps",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     9
    ]
   },
@@ -618,7 +618,7 @@
    "en": "1px",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     9
    ]
   },
@@ -626,7 +626,7 @@
    "en": "12px",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     9
    ]
   },
@@ -634,7 +634,7 @@
    "en": "pts",
    "class": "keep",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     6,
     8
    ]

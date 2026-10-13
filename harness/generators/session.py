@@ -136,11 +136,11 @@ def _acp_config(
     session_path: Path | None = None,
 ) -> Path:
     config = out / "acp_config.json"
-    # Multi-turn: `history` is the accumulated [user, assistant, ...] of the earlier turns and
+    # Multi-request: `history` is the accumulated [user, assistant, ...] of the earlier requests and
     # `session_path` persists the ACP session id across them. The client uses whichever the
     # agent supports — it resumes and sends only the new tail when the agent advertises
     # resume, and otherwise opens a new session and replays the whole role-tagged transcript.
-    # Single-turn callers pass neither and get the previous one-message behaviour.
+    # Single-request callers pass neither and get the previous one-message behaviour.
     config.write_text(
         json.dumps(
             {

@@ -138,8 +138,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 1,
+     "kind": "backward",
+     "copied_from_request": 1,
      "task": "In the link manager, use the add link form to create a link titled Gallery with URL gallery.casey.co.",
      "expected_result": "Gallery appears in the link list showing the title Gallery and the URL gallery.casey.co.",
      "task_category": {
@@ -206,8 +206,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "Open the Analytics page and read the Top 3 leaderboard.",
      "expected_result": "The Top 3 reads My Portfolio, YouTube Channel, Merch Store in that order — Merch Store (not Newsletter) takes third place because the 987-click tie breaks alphabetically by title.",
      "task_category": {
@@ -274,8 +274,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "Open the Analytics page and find the total clicks figure.",
      "expected_result": "The total still reads 6,356 clicks — Discord's 88 historical clicks count toward the total even while it is Hidden.",
      "task_category": {
@@ -343,8 +343,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "On the Analytics page, scroll to the row for Book a Call.",
      "expected_result": "It shows 0 clicks and a 0.0% share — no blank cell, NaN, or missing row.",
      "task_category": {
@@ -412,8 +412,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 4,
+     "kind": "backward",
+     "copied_from_request": 4,
      "task": "On the Preview page, type July 10, 2026 into the viewing-as-of date box, then change it to July 11, 2026.",
      "expected_result": "Book a Call is still shown on July 10 (the end date is inclusive) and disappears on July 11, updating live without a page reload.",
      "task_category": {
@@ -481,8 +481,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "Open the Analytics page and find the total clicks figure.",
      "expected_result": "The total still reads 6,356 clicks — Discord's 88 historical clicks count toward the total even while it is Hidden.",
      "task_category": {
@@ -549,8 +549,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 5,
+     "kind": "backward",
+     "copied_from_request": 5,
      "task": "Open the Analytics page and read the group rollup.",
      "expected_result": "Groups rank Work (2,450 clicks), Offers (1,974 clicks), Content (1,844 clicks), then Community (88 clicks) — Offers sits above Content.",
      "task_category": {
@@ -618,8 +618,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 6,
+     "kind": "backward",
+     "copied_from_request": 6,
      "task": "In the link manager, look at the Offers group section.",
      "expected_result": "Merch Store is listed above Newsletter — the pin floats it over the original order, which had Newsletter first.",
      "task_category": {
@@ -686,8 +686,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 7,
+     "kind": "backward",
+     "copied_from_request": 7,
      "task": "Open the Preview page and look at the link buttons and section headers.",
      "expected_result": "Every link button is a fully rounded pill, the group section headers have a thin teal underline, and the background is white.",
      "task_category": {
@@ -705,155 +705,155 @@
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "click analytics dashboard",
     "archetype": "derived-state"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "public preview + visibility",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "scheduling + date simulator",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "link groups + rollups",
     "archetype": "derived-state"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "pin and reorder manager",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "teal rebrand",
     "archetype": "design-restyle"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "click goals tracker",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "weekly digest report",
     "archetype": "derived-state"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "profile setup wizard",
     "archetype": "multi-surface-workflow"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T2",
+    "from": "R1",
+    "to": "R2",
     "what": "analytics rows mirror the manager's link list"
    },
    {
-    "from": "T1",
-    "to": "T3",
+    "from": "R1",
+    "to": "R3",
     "what": "preview renders the manager's links as buttons"
    },
    {
-    "from": "T2",
-    "to": "T3",
+    "from": "R2",
+    "to": "R3",
     "what": "preview clicks increment analytics counts and totals"
    },
    {
-    "from": "T3",
-    "to": "T4",
+    "from": "R3",
+    "to": "R4",
     "what": "as-of date control filters the preview's visible buttons"
    },
    {
-    "from": "T2",
-    "to": "T5",
+    "from": "R2",
+    "to": "R5",
     "what": "group rollups aggregate analytics click totals"
    },
    {
-    "from": "T3",
-    "to": "T5",
+    "from": "R3",
+    "to": "R5",
     "what": "preview sections hide when no link is visible"
    },
    {
-    "from": "T5",
-    "to": "T6",
+    "from": "R5",
+    "to": "R6",
     "what": "pins and move buttons operate within group sections"
    },
    {
-    "from": "T3",
-    "to": "T6",
+    "from": "R3",
+    "to": "R6",
     "what": "preview button order mirrors the manager's order"
    },
    {
-    "from": "T1",
-    "to": "T7",
+    "from": "R1",
+    "to": "R7",
     "what": "restyles the link manager page"
    },
    {
-    "from": "T2",
-    "to": "T7",
+    "from": "R2",
+    "to": "R7",
     "what": "restyles the Analytics page"
    },
    {
-    "from": "T3",
-    "to": "T7",
+    "from": "R3",
+    "to": "R7",
     "what": "restyles the Preview page"
    },
    {
-    "from": "T5",
-    "to": "T7",
+    "from": "R5",
+    "to": "R7",
     "what": "teal underline restyles the group section headers"
    },
    {
-    "from": "T2",
-    "to": "T8",
+    "from": "R2",
+    "to": "R8",
     "what": "goal progress computed from tracked click counts"
    },
    {
-    "from": "T3",
-    "to": "T8",
+    "from": "R3",
+    "to": "R8",
     "what": "preview clicks advance goal progress bars"
    },
    {
-    "from": "T2",
-    "to": "T9",
+    "from": "R2",
+    "to": "R9",
     "what": "digest totals and top link from click data"
    },
    {
-    "from": "T4",
-    "to": "T9",
+    "from": "R4",
+    "to": "R9",
     "what": "Coming up section reads schedule windows vs as-of date"
    },
    {
-    "from": "T8",
-    "to": "T9",
+    "from": "R8",
+    "to": "R9",
     "what": "digest counts goals reached vs in progress"
    },
    {
-    "from": "T3",
-    "to": "T10",
+    "from": "R3",
+    "to": "R10",
     "what": "wizard publishes header onto the Preview page"
    },
    {
-    "from": "T4",
-    "to": "T10",
+    "from": "R4",
+    "to": "R10",
     "what": "the published header sits above the Preview's schedule-filtered buttons at the as-of date"
    },
    {
-    "from": "T9",
-    "to": "T10",
+    "from": "R9",
+    "to": "R10",
     "what": "digest signed with the published display name"
    }
   ]
@@ -861,20 +861,20 @@
  "global_rules": [
   {
    "rule": "Click counts are always written with comma thousands separators followed by the word 'clicks' (e.g. '2,450 clicks'), never bare digits, on every surface now and later.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "A link's status is always shown as a colored pill badge — green when publicly visible, gray when not — never plain text, on every surface now and later.",
-   "introduced_in_turn": 3
+   "introduced_in_request": 3
   },
   {
    "rule": "Any newly created link starts as Hidden until explicitly toggled Live, wherever in the app it gets created.",
-   "introduced_in_turn": 3
+   "introduced_in_request": 3
   }
  ],
  "pinned_seed": {
   "entity": "7 link-tree links with click counts",
-  "introduced_in_turn": 2,
+  "introduced_in_request": 2,
   "records_gist": "My Portfolio 2450, YouTube Channel 1204, Newsletter 987, Merch Store 987 (tie), Podcast 640, Discord 88, Book a Call 0 — total 6,356; tie forces alphabetical tiebreak, zero-click link forces 0.0% boundary",
   "records": "My Portfolio (myportfolio.dev) 2450 clicks; YouTube Channel (youtube.com/@casey) 1204; Newsletter (caseywrites.substack.com) 987; Merch Store (shop.casey.co) 987; Podcast (pod.casey.co) 640; Discord (discord.gg/casey) 88; Book a Call (cal.com/casey) 0"
  }

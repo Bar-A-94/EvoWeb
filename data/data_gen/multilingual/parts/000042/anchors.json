@@ -4,7 +4,7 @@
       "en": "Delivery Log",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         2,
         3,
         4,
@@ -24,7 +24,7 @@
       "en": "Blocklist",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         3,
         5,
         9
@@ -41,7 +41,7 @@
       "en": "Outbox",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         5,
         7,
         9,
@@ -59,7 +59,7 @@
       "en": "Analytics",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         4,
         6,
         9,
@@ -77,7 +77,7 @@
       "en": "Digest",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         10
       ],
       "translations": {
@@ -92,7 +92,7 @@
       "en": "Send now",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         5,
         9,
         10
@@ -109,7 +109,7 @@
       "en": "delivered",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         2,
         3,
         4,
@@ -129,7 +129,7 @@
       "en": "bounced",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         2,
         3,
         4,
@@ -148,7 +148,7 @@
       "en": "failed",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         2,
         3,
         4,
@@ -167,7 +167,7 @@
       "en": "Delivered",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         9
       ],
       "translations": {
@@ -182,7 +182,7 @@
       "en": "Bounced",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         9
       ],
       "translations": {
@@ -197,7 +197,7 @@
       "en": "Failed",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         9
       ],
       "translations": {
@@ -212,7 +212,7 @@
       "en": "open rate",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         4,
         6,
         7,
@@ -231,7 +231,7 @@
       "en": "bounce rate",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         4
       ],
       "translations": {
@@ -246,7 +246,7 @@
       "en": "Total emails",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         4
       ],
       "translations": {
@@ -261,7 +261,7 @@
       "en": "total emails",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         4,
         10
       ],
@@ -277,7 +277,7 @@
       "en": "Nova fans",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         8,
         10
       ],
@@ -293,7 +293,7 @@
       "en": "Quarterly review",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         5
       ],
       "translations": {
@@ -308,7 +308,7 @@
       "en": "Spring sale starts now",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         7,
         9
       ],
@@ -324,7 +324,7 @@
       "en": "Sale ends soon",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         7,
         9
       ],
@@ -340,7 +340,7 @@
       "en": "To:",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         6
       ],
       "translations": {
@@ -355,7 +355,7 @@
       "en": "cornsilk",
       "class": "keep",
       "kind": "css_visual",
-      "turns": [
+      "requests": [
         1,
         9
       ]
@@ -364,7 +364,7 @@
       "en": "peru",
       "class": "keep",
       "kind": "css_visual",
-      "turns": [
+      "requests": [
         1,
         9
       ]
@@ -373,7 +373,7 @@
       "en": "#2D6A4F",
       "class": "keep",
       "kind": "css_visual",
-      "turns": [
+      "requests": [
         9
       ]
     },
@@ -381,7 +381,7 @@
       "en": "dev@nova.io",
       "class": "keep",
       "kind": "tech",
-      "turns": [
+      "requests": [
         2,
         4,
         7,
@@ -393,7 +393,7 @@
       "en": "ben@acme.com",
       "class": "keep",
       "kind": "tech",
-      "turns": [
+      "requests": [
         2,
         3,
         4,
@@ -406,7 +406,7 @@
       "en": "cara@nova.io",
       "class": "keep",
       "kind": "tech",
-      "turns": [
+      "requests": [
         2,
         3,
         6,
@@ -420,7 +420,7 @@
       "en": "ana@acme.com",
       "class": "keep",
       "kind": "tech",
-      "turns": [
+      "requests": [
         2,
         3,
         4,
@@ -434,7 +434,7 @@
       "en": "eli@orbit.dev",
       "class": "keep",
       "kind": "tech",
-      "turns": [
+      "requests": [
         2,
         3
       ]
@@ -443,7 +443,7 @@
       "en": "fay@orbit.dev",
       "class": "keep",
       "kind": "tech",
-      "turns": [
+      "requests": [
         2,
         5,
         7
@@ -453,7 +453,7 @@
       "en": "gus@acme.com",
       "class": "keep",
       "kind": "tech",
-      "turns": [
+      "requests": [
         2,
         3,
         4,
@@ -466,7 +466,7 @@
       "en": "spam-trap@bait.org",
       "class": "keep",
       "kind": "tech",
-      "turns": [
+      "requests": [
         3
       ]
     },
@@ -474,7 +474,7 @@
       "en": "test@example.com",
       "class": "keep",
       "kind": "tech",
-      "turns": [
+      "requests": [
         2
       ]
     },
@@ -482,7 +482,7 @@
       "en": "temp@late.io",
       "class": "keep",
       "kind": "tech",
-      "turns": [
+      "requests": [
         10
       ]
     },
@@ -490,7 +490,7 @@
       "en": "CARA@NOVA.IO",
       "class": "keep",
       "kind": "tech",
-      "turns": [
+      "requests": [
         3
       ]
     },
@@ -498,7 +498,7 @@
       "en": "ANA@ACME.COM",
       "class": "keep",
       "kind": "tech",
-      "turns": [
+      "requests": [
         6
       ]
     },
@@ -506,7 +506,7 @@
       "en": "not-an-email",
       "class": "keep",
       "kind": "tech",
-      "turns": [
+      "requests": [
         3,
         5
       ]
@@ -515,7 +515,7 @@
       "en": "nova.io",
       "class": "keep",
       "kind": "tech",
-      "turns": [
+      "requests": [
         2,
         3,
         4,
@@ -530,7 +530,7 @@
       "en": "acme.com",
       "class": "keep",
       "kind": "tech",
-      "turns": [
+      "requests": [
         2,
         3,
         4,
@@ -544,7 +544,7 @@
       "en": "legacy.net",
       "class": "keep",
       "kind": "tech",
-      "turns": [
+      "requests": [
         8
       ]
     },
@@ -552,7 +552,7 @@
       "en": "{{first_name}}",
       "class": "keep",
       "kind": "tech",
-      "turns": [
+      "requests": [
         6,
         8
       ]
@@ -561,7 +561,7 @@
       "en": "{{company}}",
       "class": "keep",
       "kind": "tech",
-      "turns": [
+      "requests": [
         6
       ]
     },
@@ -569,7 +569,7 @@
       "en": "{{firstname}}",
       "class": "keep",
       "kind": "tech",
-      "turns": [
+      "requests": [
         6
       ]
     },
@@ -577,7 +577,7 @@
       "en": "A/B",
       "class": "keep",
       "kind": "tech",
-      "turns": [
+      "requests": [
         7,
         9
       ]
@@ -586,7 +586,7 @@
       "en": "Slack",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         10
       ]
     }

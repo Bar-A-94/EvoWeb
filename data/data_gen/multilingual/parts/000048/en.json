@@ -131,7 +131,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Clock in as any employee and then clock out, then open that employee's attendance records.",
      "expected_result": "A completed attendance entry for that session appears in the employee's records.",
      "task_category": {
@@ -140,7 +140,7 @@
        "Core flow"
       ]
      },
-     "copied_from_turn": 1
+     "copied_from_request": 1
     }
    ]
   },
@@ -199,7 +199,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the weekly rollup board and read the ranking from top to bottom.",
      "expected_result": "Leo Vance (42h 0m), Maya Chen (40h 0m), Ana Beck (37h 0m), Priya Nair (37h 0m), Sam Ortiz (32h 0m), Omar Diaz (20h 0m) - Ana Beck sits above Priya Nair because the 37h 0m tie breaks alphabetically.",
      "task_category": {
@@ -210,7 +210,7 @@
        "Aggregation"
       ]
      },
-     "copied_from_turn": 2
+     "copied_from_request": 2
     }
    ]
   },
@@ -268,7 +268,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Type 4217, use the offered Clock In, then enter 4217 again.",
      "expected_result": "The second entry identifies Maya Chen again but now offers Clock Out instead of Clock In - her status toggled.",
      "task_category": {
@@ -278,7 +278,7 @@
        "Live input feedback"
       ]
      },
-     "copied_from_turn": 3
+     "copied_from_request": 3
     }
    ]
   },
@@ -338,7 +338,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Find Leo Vance on the weekly rollup board and read his weekly total.",
      "expected_result": "42h 0m - his Saturday 7h is counted, so it is not 35h 0m.",
      "task_category": {
@@ -348,7 +348,7 @@
        "Boundary handling"
       ]
      },
-     "copied_from_turn": 2
+     "copied_from_request": 2
     }
    ]
   },
@@ -408,7 +408,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Find Leo Vance on the overtime board.",
      "expected_result": "He carries a weekly overtime flag of 2h 0m over, and no daily flags at all (every day was 7h) - a build that only checks days over 8h shows Leo clean, which is wrong.",
      "task_category": {
@@ -418,7 +418,7 @@
        "Aggregation"
       ]
      },
-     "copied_from_turn": 4
+     "copied_from_request": 4
     }
    ]
   },
@@ -478,7 +478,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the leave view and read Priya Nair's and Omar Diaz's remaining PTO balances.",
      "expected_result": "Priya shows 12 of 15 remaining (her 3 approved vacation days deducted); Omar still shows 6 of 6 - his pending request deducts nothing, so not 4.",
      "task_category": {
@@ -488,7 +488,7 @@
        "Pending vs approved state"
       ]
      },
-     "copied_from_turn": 5
+     "copied_from_request": 5
     }
    ]
   },
@@ -549,7 +549,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Select Leo Vance in the pay calculator with the multiplier at its starting 1.5.",
      "expected_result": "Total gross is $817.00 - regular $760.00 plus overtime $57.00 - not the flat $798.00 you'd get by ignoring his 2h of weekly overtime.",
      "task_category": {
@@ -560,7 +560,7 @@
        "Overtime split"
       ]
      },
-     "copied_from_turn": 6
+     "copied_from_request": 6
     }
    ]
   },
@@ -619,7 +619,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "On the kiosk, type just 42 into the PIN entry.",
      "expected_result": "No employee is matched yet and the punch action is unavailable - the kiosk shows two of four digits entered, nothing more.",
      "task_category": {
@@ -629,7 +629,7 @@
        "Input validation"
       ]
      },
-     "copied_from_turn": 3
+     "copied_from_request": 3
     }
    ]
   },
@@ -690,7 +690,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Find Omar Diaz on the adherence scoreboard.",
      "expected_result": "Exactly 83% - he worked 5 of his 6 scheduled days (Saturday missed) and 5/6 rounds to 83, not 84 and not 83.3%.",
      "task_category": {
@@ -700,159 +700,159 @@
        "Derived score"
       ]
      },
-     "copied_from_turn": 9
+     "copied_from_request": 9
     }
    ]
   }
  ],
- "target_app_summary": "The base time-attendance app grows into a full workforce operations suite for a small company. A pinned six-person roster with an exact seeded week of hours (Mar 2-7, 2026) feeds a ranked weekly rollup, an overtime/exceptions board, a live pay-stub calculator, a filterable payroll report with on-screen export, and a schedule-adherence scoreboard. Around that analytics core sit workflows and tools: a PIN kiosk that punches straight into timesheets, a PTO/leave center with request-approve-deduct mechanics, and a punch-correction queue whose approvals rewrite timesheet days and cascade through the rollup and overtime flags. The graph runs deep: roster/timesheets (T2) feed overtime (T4) which feeds payroll (T6) and correction propagation (T8), while leave (T5) feeds both the report export (T7) and adherence scoring (T9); a final restyle (T10) sweeps six surfaces. App-wide conventions - 'Xh Ym' durations, 'Mon, Mar 2' dates, and confirm-before-approve/reject - are introduced early and silently enforced on every later surface.",
+ "target_app_summary": "The base time-attendance app grows into a full workforce operations suite for a small company. A pinned six-person roster with an exact seeded week of hours (Mar 2-7, 2026) feeds a ranked weekly rollup, an overtime/exceptions board, a live pay-stub calculator, a filterable payroll report with on-screen export, and a schedule-adherence scoreboard. Around that analytics core sit workflows and tools: a PIN kiosk that punches straight into timesheets, a PTO/leave center with request-approve-deduct mechanics, and a punch-correction queue whose approvals rewrite timesheet days and cascade through the rollup and overtime flags. The graph runs deep: roster/timesheets (R2) feed overtime (R4) which feeds payroll (R6) and correction propagation (R8), while leave (R5) feeds both the report export (R7) and adherence scoring (R9); a final restyle (R10) sweeps six surfaces. App-wide conventions - 'Xh Ym' durations, 'Mon, Mar 2' dates, and confirm-before-approve/reject - are introduced early and silently enforced on every later surface.",
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "roster + weekly rollup",
     "archetype": "derived-state"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "PIN kiosk",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "overtime exceptions board",
     "archetype": "derived-state"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "leave & PTO center",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "pay-stub calculator",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "payroll report export",
     "archetype": "derived-state"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "punch correction queue",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "adherence scoreboard",
     "archetype": "derived-state"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "navy restyle",
     "archetype": "design-restyle"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T2",
+    "from": "R1",
+    "to": "R2",
     "what": "rolls up the base app's attendance records"
    },
    {
-    "from": "T1",
-    "to": "T3",
+    "from": "R1",
+    "to": "R3",
     "what": "kiosk punches toggle the base clock-in/out status"
    },
    {
-    "from": "T2",
-    "to": "T3",
+    "from": "R2",
+    "to": "R3",
     "what": "PINs resolve against the seeded roster; punches land in timesheets"
    },
    {
-    "from": "T2",
-    "to": "T4",
+    "from": "R2",
+    "to": "R4",
     "what": "overtime computed over the seeded week's timesheets"
    },
    {
-    "from": "T2",
-    "to": "T5",
+    "from": "R2",
+    "to": "R5",
     "what": "PTO balances start from the roster's seeded allowances"
    },
    {
-    "from": "T2",
-    "to": "T6",
+    "from": "R2",
+    "to": "R6",
     "what": "wages and weekly hours from roster/timesheets"
    },
    {
-    "from": "T4",
-    "to": "T6",
+    "from": "R4",
+    "to": "R6",
     "what": "regular/overtime hour split from the overtime classification"
    },
    {
-    "from": "T2",
-    "to": "T7",
+    "from": "R2",
+    "to": "R7",
     "what": "report rows built from timesheet weekly hours"
    },
    {
-    "from": "T5",
-    "to": "T7",
+    "from": "R5",
+    "to": "R7",
     "what": "approved (never pending) leave lines in the export"
    },
    {
-    "from": "T2",
-    "to": "T8",
+    "from": "R2",
+    "to": "R8",
     "what": "approved corrections rewrite timesheet days and re-rank the rollup"
    },
    {
-    "from": "T4",
-    "to": "T8",
+    "from": "R4",
+    "to": "R8",
     "what": "approved corrections re-trigger overtime flags"
    },
    {
-    "from": "T2",
-    "to": "T9",
+    "from": "R2",
+    "to": "R9",
     "what": "adherence compares schedule against timesheet punches"
    },
    {
-    "from": "T5",
-    "to": "T9",
+    "from": "R5",
+    "to": "R9",
     "what": "approved leave counts as covered days in the score"
    },
    {
-    "from": "T1",
-    "to": "T10",
+    "from": "R1",
+    "to": "R10",
     "what": "restyles the base dashboard"
    },
    {
-    "from": "T2",
-    "to": "T10",
+    "from": "R2",
+    "to": "R10",
     "what": "restyles the weekly rollup"
    },
    {
-    "from": "T3",
-    "to": "T10",
+    "from": "R3",
+    "to": "R10",
     "what": "restyles the kiosk"
    },
    {
-    "from": "T4",
-    "to": "T10",
+    "from": "R4",
+    "to": "R10",
     "what": "restyles the overtime board"
    },
    {
-    "from": "T5",
-    "to": "T10",
+    "from": "R5",
+    "to": "R10",
     "what": "restyles the leave center"
    },
    {
-    "from": "T6",
-    "to": "T10",
+    "from": "R6",
+    "to": "R10",
     "what": "restyles the pay calculator"
    }
   ]
@@ -860,20 +860,20 @@
  "global_rules": [
   {
    "rule": "Durations are always displayed as hours and minutes like '7h 30m' - never decimal hours - everywhere in the app, now and for anything added later.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
-   "rule": "Dates are always written weekday-first like 'Mon, Mar 2' everywhere in the app from turn 4 onward.",
-   "introduced_in_turn": 4
+   "rule": "Dates are always written weekday-first like 'Mon, Mar 2' everywhere in the app from request 4 onward.",
+   "introduced_in_request": 4
   },
   {
    "rule": "Any approve or reject action anywhere in the app asks for confirmation before it goes through.",
-   "introduced_in_turn": 5
+   "introduced_in_request": 5
   }
  ],
  "pinned_seed": {
   "entity": "6 employees with department, hourly wage, PTO allowance, and exact daily hours for the week of Mon Mar 2 - Sat Mar 7, 2026",
-  "introduced_in_turn": 2,
+  "introduced_in_request": 2,
   "records_gist": "Maya Chen FrontDesk $22 12PTO 8h x5 (40h); Leo Vance Warehouse $19 8PTO 7h x6 Mon-Sat (42h); Priya Nair FrontDesk $24 15PTO 9h30/6/8/7h30/6 (37h); Sam Ortiz Warehouse $19 10PTO 8h Mon,Tue,Thu,Fri, missed Wed (32h); Ana Beck Sales $28 12PTO 7h15/7h45/8/6/8 (37h, ties Priya); Omar Diaz Sales $26 6PTO 4h x5 (20h)"
  }
 }

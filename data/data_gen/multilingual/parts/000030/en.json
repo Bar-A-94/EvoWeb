@@ -108,8 +108,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 1,
+     "kind": "backward",
+     "copied_from_request": 1,
      "task": "Type 'SQL' into the site's search.",
      "expected_result": "Search results include the article SQL Indexing Demystified.",
      "task_category": {
@@ -175,8 +175,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "In the article screener, set the category control to Web Development and click the #performance tag chip.",
      "expected_result": "Exactly two articles remain: Taming React Re-renders and Debugging Memory Leaks in Node. SQL Indexing Demystified (which has #performance but lives in Databases) is NOT listed.",
      "task_category": {
@@ -243,8 +243,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "On the Understanding TCP Handshakes article, click the 🔥 reaction, then click 🔥 again.",
      "expected_result": "After the first click the 🔥 count goes from 0 to 1 and the combined total from 2 to 3, updating immediately; the second click returns them to 0 and 2.",
      "task_category": {
@@ -312,8 +312,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "Set the category to Databases, save the current filter combo under the name 'db picks', change the category to Algorithms, then recall the 'db picks' preset.",
      "expected_result": "Recalling the preset restores the category control to Databases and the list again shows only SQL Indexing Demystified.",
      "task_category": {
@@ -381,8 +381,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 4,
+     "kind": "backward",
+     "copied_from_request": 4,
      "task": "Start the Share a Solution flow, type 'Tips' as the title, leave the code block empty, and try to continue to the review step.",
      "expected_result": "It refuses to advance and visibly flags both problems — the title being under 10 characters and the missing code block.",
      "task_category": {
@@ -449,8 +449,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 5,
+     "kind": "backward",
+     "copied_from_request": 5,
      "task": "Open the Trending This Week dashboard and read the ranked list.",
      "expected_result": "The top five in order: Debugging Memory Leaks in Node (score 840), Intro to Binary Trees (610), Taming React Re-renders (610), REST vs GraphQL (490), SQL Indexing Demystified (480) — NOT the all-time-views order that would put REST vs GraphQL first.",
      "task_category": {
@@ -518,8 +518,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "With no filters applied, set the sort control to this week's views.",
      "expected_result": "Debugging Memory Leaks in Node appears above Intro to Binary Trees — both have 540 views this week and the tie breaks alphabetically by title — with Taming React Re-renders (320) next.",
      "task_category": {
@@ -587,8 +587,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 7,
+     "kind": "backward",
+     "copied_from_request": 7,
      "task": "Open the Reading List page as seeded.",
      "expected_result": "Debugging Memory Leaks in Node shows an 11 min read (2,100 words rounded up, not 10 or 10.5), SQL Indexing Demystified shows 6 min, and the remaining total reads 17 min with 2 items unread.",
      "task_category": {
@@ -656,8 +656,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 8,
+     "kind": "backward",
+     "copied_from_request": 8,
      "task": "With the queue as seeded, publish it and look at the homepage's featured card.",
      "expected_result": "The featured card shows REST vs GraphQL with its view count shortened as 15.6k.",
      "task_category": {
@@ -671,154 +671,154 @@
    ]
   }
  ],
- "target_app_summary": "The little technical-articles site grows into a full developer knowledge hub. Discovery gets deep: a multi-criteria article screener with saved presets and tie-aware sorting, plus a Trending This Week dashboard that scores articles from weekly views and emoji reactions. Community output becomes first-class: an emoji reaction system, a validated multi-step Share-a-Solution publishing flow, a contributor level system where reactions received and published solutions jointly gate Reader/Rising/Expert/Legend tiers (both conditions required, so the most-reacted author can still sit at Rising), and a curated Featured Queue that feeds the homepage. Personal tooling arrives with a bookmark-driven Reading List with rounded-up read times and progress tracking, and everything is capped by a Weekly Digest builder that auto-assembles trending, featured, and contributor-spotlight content behind per-section include/exclude toggles into a publishable digest with a live-rebuilding plain-text copy block. A mid-ladder site-wide restyle (dark slate header, teal actions, difficulty-colored card accents) must land consistently on every earlier surface. The feature graph runs deep: reactions feed trending, trending feeds the featured queue, and trending + featured + contributor levels all converge in the digest (T1->T3->T5->T8->T10).",
+ "target_app_summary": "The little technical-articles site grows into a full developer knowledge hub. Discovery gets deep: a multi-criteria article screener with saved presets and tie-aware sorting, plus a Trending This Week dashboard that scores articles from weekly views and emoji reactions. Community output becomes first-class: an emoji reaction system, a validated multi-step Share-a-Solution publishing flow, a contributor level system where reactions received and published solutions jointly gate Reader/Rising/Expert/Legend tiers (both conditions required, so the most-reacted author can still sit at Rising), and a curated Featured Queue that feeds the homepage. Personal tooling arrives with a bookmark-driven Reading List with rounded-up read times and progress tracking, and everything is capped by a Weekly Digest builder that auto-assembles trending, featured, and contributor-spotlight content behind per-section include/exclude toggles into a publishable digest with a live-rebuilding plain-text copy block. A mid-ladder site-wide restyle (dark slate header, teal actions, difficulty-colored card accents) must land consistently on every earlier surface. The feature graph runs deep: reactions feed trending, trending feeds the featured queue, and trending + featured + contributor levels all converge in the digest (R1->R3->R5->R8->R10).",
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "article screener + seed",
     "archetype": "derived-state"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "emoji reaction system",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "share-a-solution workflow",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "trending dashboard",
     "archetype": "derived-state"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "dark developer restyle",
     "archetype": "design-restyle"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "reading list",
     "archetype": "derived-state"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "featured queue curation",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "contributor levels",
     "archetype": "derived-state"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "weekly digest builder",
     "archetype": "multi-surface-workflow"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T2",
+    "from": "R1",
+    "to": "R2",
     "what": "article list & detail the screener filters and opens"
    },
    {
-    "from": "T1",
-    "to": "T3",
+    "from": "R1",
+    "to": "R3",
     "what": "article cards/detail host the reaction bars"
    },
    {
-    "from": "T1",
-    "to": "T4",
+    "from": "R1",
+    "to": "R4",
     "what": "extends base solutions area with community publishing"
    },
    {
-    "from": "T3",
-    "to": "T5",
+    "from": "R3",
+    "to": "R5",
     "what": "trending score adds 10 points per reaction, live"
    },
    {
-    "from": "T1",
-    "to": "T5",
+    "from": "R1",
+    "to": "R5",
     "what": "trending panel sits on the base homepage"
    },
    {
-    "from": "T1",
-    "to": "T6",
+    "from": "R1",
+    "to": "R6",
     "what": "restyles article list & detail pages"
    },
    {
-    "from": "T2",
-    "to": "T6",
+    "from": "R2",
+    "to": "R6",
     "what": "restyles the screener page"
    },
    {
-    "from": "T4",
-    "to": "T6",
+    "from": "R4",
+    "to": "R6",
     "what": "restyles the Community Solutions page"
    },
    {
-    "from": "T5",
-    "to": "T6",
+    "from": "R5",
+    "to": "R6",
     "what": "restyles the trending dashboard"
    },
    {
-    "from": "T1",
-    "to": "T7",
+    "from": "R1",
+    "to": "R7",
     "what": "bookmarks base articles into the reading list"
    },
    {
-    "from": "T4",
-    "to": "T7",
+    "from": "R4",
+    "to": "R7",
     "what": "community solutions bookmarkable, keep Community label"
    },
    {
-    "from": "T5",
-    "to": "T8",
+    "from": "R5",
+    "to": "R8",
     "what": "'Pull this week's #1' grabs trending top item"
    },
    {
-    "from": "T1",
-    "to": "T8",
+    "from": "R1",
+    "to": "R8",
     "what": "published featured card lands on the homepage"
    },
    {
-    "from": "T4",
-    "to": "T8",
+    "from": "R4",
+    "to": "R8",
     "what": "community solutions get 'Feature this' buttons; queue seeds the CORS solution"
    },
    {
-    "from": "T3",
-    "to": "T9",
+    "from": "R3",
+    "to": "R9",
     "what": "reactions received feed the level thresholds, live"
    },
    {
-    "from": "T4",
-    "to": "T9",
+    "from": "R4",
+    "to": "R9",
     "what": "published solutions gate Expert/Legend; share flow gains an author picker"
    },
    {
-    "from": "T5",
-    "to": "T10",
+    "from": "R5",
+    "to": "R10",
     "what": "digest embeds trending top-3 in score order"
    },
    {
-    "from": "T8",
-    "to": "T10",
+    "from": "R8",
+    "to": "R10",
     "what": "digest embeds the queue's #1 featured item"
    },
    {
-    "from": "T9",
-    "to": "T10",
+    "from": "R9",
+    "to": "R10",
     "what": "digest spotlights the highest-level contributor"
    }
   ]
@@ -826,20 +826,20 @@
  "global_rules": [
   {
    "rule": "View counts of 1,000 or more are always shortened to one decimal with a 'k' (e.g. 12.1k) everywhere in the app.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Anything with a difficulty level wears a colored badge everywhere it appears: green Beginner, amber Intermediate, red Advanced.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Community-authored solutions carry a visible 'Community' label anywhere they show up across the app.",
-   "introduced_in_turn": 4
+   "introduced_in_request": 4
   }
  ],
  "pinned_seed": {
   "entity": "6 technical articles",
-  "introduced_in_turn": 2,
+  "introduced_in_request": 2,
   "records_gist": "Taming React Re-renders/Priya/WebDev/#react#performance/Adv/8400+320wk/1800w; SQL Indexing Demystified/Marcus/Databases/#sql#performance/Int/12100+150wk/1200w; Intro to Binary Trees/Priya/Algorithms/#datastructures/Beg/3300+540wk/900w; Debugging Memory Leaks in Node/Elena/WebDev/#node#performance/Adv/6750+540wk/2100w; REST vs GraphQL/Marcus/WebDev/#api/Int/15600+90wk/1500w; Understanding TCP Handshakes/Elena/Networking/#networking/Beg/980+210wk/600w"
  }
 }

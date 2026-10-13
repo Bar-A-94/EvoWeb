@@ -4,7 +4,7 @@
       "en": "discussion forum",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         1
       ],
       "translations": {
@@ -19,7 +19,7 @@
       "en": "New",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         2
       ],
       "translations": {
@@ -34,7 +34,7 @@
       "en": "Top",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         2,
         3,
         10
@@ -51,7 +51,7 @@
       "en": "Day",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         2,
         4,
         6,
@@ -69,7 +69,7 @@
       "en": "Day 1",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         2,
         4
       ],
@@ -85,7 +85,7 @@
       "en": "Day 2",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         2,
         4,
         6
@@ -102,7 +102,7 @@
       "en": "Day 3",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         2,
         4,
         6
@@ -119,7 +119,7 @@
       "en": "Day 4",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         2
       ],
       "translations": {
@@ -134,7 +134,7 @@
       "en": "Day 5",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         2,
         4,
         7
@@ -151,7 +151,7 @@
       "en": "Trending",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         4,
         6,
         9,
@@ -169,7 +169,7 @@
       "en": "Marketplace",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         5,
         7,
         10
@@ -186,7 +186,7 @@
       "en": "Moderation Queue",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         7,
         9,
         10
@@ -203,7 +203,7 @@
       "en": "Removed log",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         7
       ],
       "translations": {
@@ -218,7 +218,7 @@
       "en": "Restore",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         7
       ],
       "translations": {
@@ -233,7 +233,7 @@
       "en": "Remove",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         7
       ],
       "translations": {
@@ -248,7 +248,7 @@
       "en": "Report",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         7
       ],
       "translations": {
@@ -263,7 +263,7 @@
       "en": "Campus Digest",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         9
       ],
       "translations": {
@@ -278,7 +278,7 @@
       "en": "Digest Board",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         9
       ],
       "translations": {
@@ -293,7 +293,7 @@
       "en": "Trending now",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         9
       ],
       "translations": {
@@ -308,7 +308,7 @@
       "en": "Marketplace picks",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         9
       ],
       "translations": {
@@ -323,7 +323,7 @@
       "en": "screener panel",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         6,
         8
       ],
@@ -339,7 +339,7 @@
       "en": "minimum score",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         6,
         8
       ],
@@ -355,7 +355,7 @@
       "en": "N matches",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         6
       ],
       "translations": {
@@ -370,7 +370,7 @@
       "en": "preset",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         6
       ],
       "translations": {
@@ -385,7 +385,7 @@
       "en": "sign this one",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         8
       ],
       "translations": {
@@ -400,7 +400,7 @@
       "en": "nickname",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         8
       ],
       "translations": {
@@ -415,7 +415,7 @@
       "en": "spam",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         7
       ],
       "translations": {
@@ -430,7 +430,7 @@
       "en": "harassment",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         7
       ],
       "translations": {
@@ -445,7 +445,7 @@
       "en": "cheating",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         7
       ],
       "translations": {
@@ -460,7 +460,7 @@
       "en": "other",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         7
       ],
       "translations": {
@@ -475,7 +475,7 @@
       "en": "campus",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         2,
         4,
         6,
@@ -494,7 +494,7 @@
       "en": "academics",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         2,
         7
       ],
@@ -510,7 +510,7 @@
       "en": "help",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         2,
         8
       ],
@@ -526,7 +526,7 @@
       "en": "food",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         2
       ],
       "translations": {
@@ -541,7 +541,7 @@
       "en": "housing",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         2,
         6,
         8
@@ -558,7 +558,7 @@
       "en": "electronics",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         5,
         7
       ],
@@ -574,7 +574,7 @@
       "en": "Good",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         5
       ],
       "translations": {
@@ -589,7 +589,7 @@
       "en": "price low to high",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         5
       ],
       "translations": {
@@ -604,7 +604,7 @@
       "en": "Library 3rd floor is a zoo during finals",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         2,
         3,
         10
@@ -621,7 +621,7 @@
       "en": "Did anyone actually pass the Econ 201 midterm?",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         2
       ],
       "translations": {
@@ -636,7 +636,7 @@
       "en": "Lost a blue keychain near the dining hall",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         2
       ],
       "translations": {
@@ -651,7 +651,7 @@
       "en": "Best cheap eats within walking distance?",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         2,
         3,
         4,
@@ -671,7 +671,7 @@
       "en": "My roommate keeps eating my leftovers",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         2
       ],
       "translations": {
@@ -686,7 +686,7 @@
       "en": "Summer sublet available, 2 blocks from the quad",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         2
       ],
       "translations": {
@@ -701,7 +701,7 @@
       "en": "summer sublet",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         6,
         7,
         8
@@ -718,7 +718,7 @@
       "en": "Wi-Fi in North Hall is down AGAIN",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         2,
         3,
         4,
@@ -738,7 +738,7 @@
       "en": "Wi-Fi in North Hall",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         2,
         3,
         4,
@@ -758,7 +758,7 @@
       "en": "Selling my old exam answers for Chem 110",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         7,
         9
       ],
@@ -774,7 +774,7 @@
       "en": "How long has your dorm Wi-Fi been out this week?",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         3
       ],
       "translations": {
@@ -789,7 +789,7 @@
       "en": "Under an hour",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         3,
         4
       ],
@@ -805,7 +805,7 @@
       "en": "Half a day",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         3
       ],
       "translations": {
@@ -820,7 +820,7 @@
       "en": "Days",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         3
       ],
       "translations": {
@@ -835,7 +835,7 @@
       "en": "Was it near the salad bar entrance?",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         8
       ],
       "translations": {
@@ -850,7 +850,7 @@
       "en": "Never mind — just spotted a blue keychain at the front desk!",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         8
       ],
       "translations": {
@@ -865,7 +865,7 @@
       "en": "Check the front desk lost and found",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         8
       ],
       "translations": {
@@ -880,7 +880,7 @@
       "en": "Good luck, those things vanish",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         8
       ],
       "translations": {
@@ -895,7 +895,7 @@
       "en": "Calc 2 textbook",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         5,
         9
       ],
@@ -911,7 +911,7 @@
       "en": "Mini fridge",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         5,
         9
       ],
@@ -927,7 +927,7 @@
       "en": "TI-84 Plus calculator",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         5,
         7
       ],
@@ -943,7 +943,7 @@
       "en": "State rivalry game",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         5,
         9
       ],
@@ -959,7 +959,7 @@
       "en": "Fixie bike needs new tires",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         5
       ],
       "translations": {
@@ -974,7 +974,7 @@
       "en": "Week 1 Digest",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         9
       ],
       "translations": {
@@ -989,7 +989,7 @@
       "en": "honeydew",
       "class": "keep",
       "kind": "css_visual",
-      "turns": [
+      "requests": [
         1,
         10
       ]
@@ -998,7 +998,7 @@
       "en": "dark olive green",
       "class": "keep",
       "kind": "css_visual",
-      "turns": [
+      "requests": [
         1,
         10
       ]
@@ -1007,7 +1007,7 @@
       "en": "Wi-Fi",
       "class": "keep",
       "kind": "tech",
-      "turns": [
+      "requests": [
         2,
         3,
         4,
@@ -1021,7 +1021,7 @@
       "en": "North Hall",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2,
         3,
         4,
@@ -1034,7 +1034,7 @@
       "en": "Econ 201",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2
       ]
     },
@@ -1042,7 +1042,7 @@
       "en": "Chem 110",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         7,
         9
       ]
@@ -1051,7 +1051,7 @@
       "en": "Stewart",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         5
       ]
     },
@@ -1059,7 +1059,7 @@
       "en": "TI-84 Plus",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         5,
         7
       ]
@@ -1068,7 +1068,7 @@
       "en": "State",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         5,
         9
       ]
@@ -1077,7 +1077,7 @@
       "en": "Yik Yak",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2,
         4,
         8
@@ -1087,7 +1087,7 @@
       "en": "Fizz",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         5,
         8
       ]
@@ -1096,7 +1096,7 @@
       "en": "🎓",
       "class": "keep",
       "kind": "value_format",
-      "turns": [
+      "requests": [
         8
       ]
     }

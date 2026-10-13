@@ -128,8 +128,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 1,
+     "kind": "backward",
+     "copied_from_request": 1,
      "task": "In the historical data section, enter a start date and an end date to run a query.",
      "expected_result": "A chart or trend view for the selected period is displayed without errors.",
      "task_category": {
@@ -197,8 +197,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "Open the Panels page and read the ranked panel list from top to bottom.",
      "expected_result": "The order is Peak 1 (yield 35.0), Ridge East (33.0), Ridge West (33.0), Corner 2 (30.0), Gable 1 (28.0), Chimney 3 (18.0) — Ridge East sits above Ridge West on the alphabetical tiebreak, and Corner 2 sits above Gable 1 even though Gable 1 produced more kWh.",
      "task_category": {
@@ -265,8 +265,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "On the savings calculator, type 0.30 into the electricity rate field and 9000 into the system cost field.",
      "expected_result": "Yearly savings show $982.02 (3,273.40 kWh x $0.30) and the payback reads 9 years, 2 months — the partial month rounds up, so not 9 years 1 month and not a bare decimal like 9.2 years.",
      "task_category": {
@@ -334,8 +334,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "On the Panels page, find the rollup figures for the South array, the East array, and the whole fleet.",
      "expected_result": "South shows 38.75 kWh, East shows 24.20 kWh, and the fleet shows 62.95 kWh with a total rated capacity of 2,100 W — the two array totals sum exactly to the fleet total.",
      "task_category": {
@@ -403,8 +403,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 4,
+     "kind": "backward",
+     "copied_from_request": 4,
      "task": "In the alert center's rules area, type 33.0 as a new rule threshold and add the rule.",
      "expected_result": "Exactly 3 alerts are active — Corner 2, Gable 1, and Chimney 3 — while Ridge East and Ridge West (sitting exactly at 33.0) are not flagged, Chimney 3 appears only once even though the pre-set 25.0 rule also catches it, and the navigation badge reads 3.",
      "task_category": {
@@ -472,8 +472,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 5,
+     "kind": "backward",
+     "copied_from_request": 5,
      "task": "In the report builder, click the East quick button and read the generated report.",
      "expected_result": "The report shows 3 panels, combined output 24.20 kWh, average yield 25.3 (the plain mean of 30.0, 28.0 and 18.0 — not the size-weighted 25.5), best panel Corner 2, worst panel Chimney 3.",
      "task_category": {
@@ -541,8 +541,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "Type 0.30 into the rate field and 9000 into the cost field, then replace the rate with the letters abc.",
      "expected_result": "The last good results (yearly savings $982.02, payback 9 years 2 months) stay on screen with a small note about the invalid input — no blanked results, no NaN, no crash.",
      "task_category": {
@@ -609,8 +609,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 6,
+     "kind": "backward",
+     "copied_from_request": 6,
      "task": "On the historical chart, toggle the expected baseline on and leave peak sun hours at the default 5.0.",
      "expected_result": "The performance readout shows 85.6% (62.95 kWh actual vs 73.50 kWh expected for the week) with a Watch health read — not 85.7%, not 86%, and not Healthy or Fault.",
      "task_category": {
@@ -678,8 +678,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 8,
+     "kind": "backward",
+     "copied_from_request": 8,
      "task": "Open the environmental impact page and read the weekly and annual CO2 figures.",
      "expected_result": "The weekly figure reads 25.18 kg (62.95 kWh x 0.4) and the annual projection reads 1.31 t — the 1,309.36 kg crosses the 1,000 kg line so it shows in tonnes with two decimals, not as 1,309.36 kg and not rounded to 1.3 t.",
      "task_category": {
@@ -693,134 +693,134 @@
    ]
   }
  ],
- "target_app_summary": "The solar dashboard has grown into a full home-solar operations platform. A panel fleet registry with per-array rollups and yield rankings became the backbone: it feeds a live-typing savings and payback calculator, a threshold-based alert workflow with rules, an active list and a resolved log, a copyable panel report builder, an expected-vs-actual performance overlay on the historical chart, an environmental impact page that converts fleet output into CO2 avoided and tree equivalents, a physics-honest power flow simulator, and finally a System Health score that reconciles the alert center and fleet yields into one graded number with to-dos. A design refresh mid-way moved the whole app from honeydew to a cream-and-amber card system. The graph is hub-and-spoke around the registry (T2, itself built off the base dashboard, feeds every later turn) with one deep chain rooted at the base — base to registry to alert center to health score — so early breakage compounds; three app-wide conventions (two-decimal kWh, invalid-input-never-blanks, dot-plus-word statuses) are tested silently on every new surface.",
+ "target_app_summary": "The solar dashboard has grown into a full home-solar operations platform. A panel fleet registry with per-array rollups and yield rankings became the backbone: it feeds a live-typing savings and payback calculator, a threshold-based alert workflow with rules, an active list and a resolved log, a copyable panel report builder, an expected-vs-actual performance overlay on the historical chart, an environmental impact page that converts fleet output into CO2 avoided and tree equivalents, a physics-honest power flow simulator, and finally a System Health score that reconciles the alert center and fleet yields into one graded number with to-dos. A design refresh mid-way moved the whole app from honeydew to a cream-and-amber card system. The graph is hub-and-spoke around the registry (R2, itself built off the base dashboard, feeds every later request) with one deep chain rooted at the base — base to registry to alert center to health score — so early breakage compounds; three app-wide conventions (two-decimal kWh, invalid-input-never-blanks, dot-plus-word statuses) are tested silently on every new surface.",
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "Panel performance registry",
     "archetype": "derived-state"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "Savings & payback calculator",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "Alert center workflow",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "Panel report builder",
     "archetype": "derived-state"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "Expected baseline overlay",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "Cream & amber restyle",
     "archetype": "design-restyle"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "Environmental impact page",
     "archetype": "derived-state"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "Power flow simulator",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "System health score",
     "archetype": "derived-state"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T2",
+    "from": "R1",
+    "to": "R2",
     "what": "panels page breaks the base dashboard's generation figures down per panel"
    },
    {
-    "from": "T2",
-    "to": "T3",
+    "from": "R2",
+    "to": "R3",
     "what": "fleet weekly total (62.95 kWh) x 52 drives annual savings"
    },
    {
-    "from": "T2",
-    "to": "T4",
+    "from": "R2",
+    "to": "R4",
     "what": "panel yield figures evaluated against alert rules"
    },
    {
-    "from": "T2",
-    "to": "T5",
+    "from": "R2",
+    "to": "R5",
     "what": "selected panels' outputs and yields aggregated into report"
    },
    {
-    "from": "T2",
-    "to": "T6",
+    "from": "R2",
+    "to": "R6",
     "what": "fleet rated capacity and weekly actual feed expected baseline and ratio"
    },
    {
-    "from": "T1",
-    "to": "T6",
+    "from": "R1",
+    "to": "R6",
     "what": "overlays baseline on the base historical chart"
    },
    {
-    "from": "T1",
-    "to": "T7",
+    "from": "R1",
+    "to": "R7",
     "what": "restyles the base dashboard"
    },
    {
-    "from": "T2",
-    "to": "T7",
+    "from": "R2",
+    "to": "R7",
     "what": "restyles the panels page"
    },
    {
-    "from": "T3",
-    "to": "T7",
+    "from": "R3",
+    "to": "R7",
     "what": "restyles the calculator page"
    },
    {
-    "from": "T4",
-    "to": "T7",
+    "from": "R4",
+    "to": "R7",
     "what": "restyles the alert center"
    },
    {
-    "from": "T2",
-    "to": "T8",
+    "from": "R2",
+    "to": "R8",
     "what": "fleet weekly total (62.95 kWh) converts into all CO2 figures"
    },
    {
-    "from": "T3",
-    "to": "T8",
+    "from": "R3",
+    "to": "R8",
     "what": "annual CO2 rides on the calculator's 3,273.40 kWh weekly-times-52 basis"
    },
    {
-    "from": "T2",
-    "to": "T9",
+    "from": "R2",
+    "to": "R9",
     "what": "full-sun generation equals fleet rated 2.10 kW"
    },
    {
-    "from": "T4",
-    "to": "T10",
+    "from": "R4",
+    "to": "R10",
     "what": "score deducts 15 per active alert; acknowledging updates it"
    },
    {
-    "from": "T2",
-    "to": "T10",
+    "from": "R2",
+    "to": "R10",
     "what": "fleet average yield (29.5) triggers the under-30 penalty"
    }
   ]
@@ -828,20 +828,20 @@
  "global_rules": [
   {
    "rule": "Energy values are always displayed as kWh with exactly two decimals (9.00 kWh, 62.95 kWh) everywhere in the app.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Invalid input never blanks a result anywhere: the last valid output stays on screen alongside a small note about the bad input.",
-   "introduced_in_turn": 3
+   "introduced_in_request": 3
   },
   {
    "rule": "Every status or health indicator is a colored dot plus a word (red dot 'Active', green dot 'Resolved'), never color alone.",
-   "introduced_in_turn": 4
+   "introduced_in_request": 4
   }
  ],
  "pinned_seed": {
   "entity": "6 solar panels across two arrays",
-  "introduced_in_turn": 2,
+  "introduced_in_request": 2,
   "records_gist": "South: Peak 1 400W/14.00kWh, Ridge West 400W/13.20, Ridge East 350W/11.55; East: Gable 1 350W/9.80, Corner 2 300W/9.00, Chimney 3 300W/5.40 — fleet 2,100W rated, 62.95 kWh/week"
  }
 }

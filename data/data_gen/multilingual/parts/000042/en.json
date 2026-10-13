@@ -153,17 +153,17 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Compose an email with recipient test@example.com and subject Hello, send it, then open the sent emails area.",
      "expected_result": "The Hello email to test@example.com appears among the sent emails.",
      "task_category": {
       "primary_category": "Functional Testing",
       "subcategories": [
-       "Regression",
+       "Backward",
        "Email Sending"
       ]
      },
-     "copied_from_turn": 1
+     "copied_from_request": 1
     }
    ]
   },
@@ -222,17 +222,17 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "On the Delivery Log page, choose the delivered status filter and type acme into the search box.",
      "expected_result": "Exactly 3 rows remain — gus@acme.com, ana@acme.com, and ben@acme.com, newest first — with the bounced and failed entries gone.",
      "task_category": {
       "primary_category": "Functional Testing",
       "subcategories": [
-       "Regression",
+       "Backward",
        "Filtering"
       ]
      },
-     "copied_from_turn": 2
+     "copied_from_request": 2
     }
    ]
   },
@@ -291,17 +291,17 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the Delivery Log page fresh.",
      "expected_result": "All seven seeded entries are shown newest first — gus@acme.com's Jan 9 email at the top and dev@nova.io's Jan 3 email at the bottom — each with a colored status badge.",
      "task_category": {
       "primary_category": "Data Display Testing",
       "subcategories": [
-       "Regression",
+       "Backward",
        "Sorting"
       ]
      },
-     "copied_from_turn": 2
+     "copied_from_request": 2
     }
    ]
   },
@@ -360,17 +360,17 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "On the Blocklist page, type not-an-email into the add-address field and try to add it.",
      "expected_result": "An invalid-format indication appears while the text is being entered, and the address is not added — the list still shows only its two entries.",
      "task_category": {
       "primary_category": "Functional Testing",
       "subcategories": [
-       "Regression",
+       "Backward",
        "Input Validation"
       ]
      },
-     "copied_from_turn": 3
+     "copied_from_request": 3
     }
    ]
   },
@@ -429,17 +429,17 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the Analytics page and check the open rate.",
      "expected_result": "The open rate reads 80.0% — 4 of the 5 delivered emails were opened at least once; a value like 57.1% would mean bounced and failed emails were wrongly counted in the denominator.",
      "task_category": {
       "primary_category": "Data Display Testing",
       "subcategories": [
-       "Regression",
+       "Backward",
        "Computed Values"
       ]
      },
-     "copied_from_turn": 4
+     "copied_from_request": 4
     }
    ]
   },
@@ -499,17 +499,17 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the Outbox page.",
      "expected_result": "The frozen clock Jan 10, 2025, 9:00 AM is shown, and the three queued emails read top to bottom: fay@orbit.dev (Jan 11 3:00 PM), then ben@acme.com, then gus@acme.com — the two Jan 12 10:00 AM items are tie-broken alphabetically, not listed in the order they were added.",
      "task_category": {
       "primary_category": "Data Display Testing",
       "subcategories": [
-       "Regression",
+       "Backward",
        "Sorting"
       ]
      },
-     "copied_from_turn": 5
+     "copied_from_request": 5
     }
    ]
   },
@@ -568,17 +568,17 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Type 'Hi {{first_name}}' into the body, then pick cara@nova.io as the sample recipient from the delivery-log people.",
      "expected_result": "The first-name field prefills to Cara and the preview reads 'Hi Cara'.",
      "task_category": {
       "primary_category": "Functional Testing",
       "subcategories": [
-       "Regression",
+       "Backward",
        "Live Preview"
       ]
      },
-     "copied_from_turn": 6
+     "copied_from_request": 6
     }
    ]
   },
@@ -637,17 +637,17 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the A/B results view for the seeded 'Spring sale starts now' vs 'Sale ends soon' test.",
      "expected_result": "Variant A is the winner with a 27.5% open rate against B's 26.7% — even though B had more raw opens (16 vs 11).",
      "task_category": {
       "primary_category": "Data Display Testing",
       "subcategories": [
-       "Regression",
+       "Backward",
        "Computed Values"
       ]
      },
-     "copied_from_turn": 7
+     "copied_from_request": 7
     }
    ]
   },
@@ -706,17 +706,17 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the saved 'Nova fans' segment.",
      "expected_result": "It has exactly one member, dev@nova.io — cara@nova.io matches the nova.io domain but is left out because she is blocklisted, so the count reads 1, not 2.",
      "task_category": {
       "primary_category": "Data Display Testing",
       "subcategories": [
-       "Regression",
+       "Backward",
        "Computed Membership"
       ]
      },
-     "copied_from_turn": 8
+     "copied_from_request": 8
     }
    ]
   }
@@ -725,180 +725,180 @@
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "delivery activity log",
     "archetype": "derived-state"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "suppression blocklist",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "analytics dashboard",
     "archetype": "derived-state"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "scheduled-send outbox",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "personalization live preview",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "A/B subject testing",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "audience segments",
     "archetype": "derived-state"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "app-wide restyle",
     "archetype": "design-restyle"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "live account digest",
     "archetype": "derived-state"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T2",
+    "from": "R1",
+    "to": "R2",
     "what": "compose-sent emails append to the log"
    },
    {
-    "from": "T1",
-    "to": "T3",
+    "from": "R1",
+    "to": "R3",
     "what": "blocklist gates compose sending"
    },
    {
-    "from": "T2",
-    "to": "T4",
+    "from": "R2",
+    "to": "R4",
     "what": "aggregates the seven seeded log records"
    },
    {
-    "from": "T1",
-    "to": "T5",
+    "from": "R1",
+    "to": "R5",
     "what": "scheduling starts from compose"
    },
    {
-    "from": "T2",
-    "to": "T5",
+    "from": "R2",
+    "to": "R5",
     "what": "Send now dispatches items into the log"
    },
    {
-    "from": "T1",
-    "to": "T6",
+    "from": "R1",
+    "to": "R6",
     "what": "preview pane lives inside compose"
    },
    {
-    "from": "T2",
-    "to": "T6",
+    "from": "R2",
+    "to": "R6",
     "what": "sample recipient picked from log addresses"
    },
    {
-    "from": "T2",
-    "to": "T7",
+    "from": "R2",
+    "to": "R7",
     "what": "audience from log; launch writes log entries"
    },
    {
-    "from": "T3",
-    "to": "T7",
+    "from": "R3",
+    "to": "R7",
     "what": "audience skips blocklisted addresses"
    },
    {
-    "from": "T2",
-    "to": "T8",
+    "from": "R2",
+    "to": "R8",
     "what": "membership and engagement from log opens"
    },
    {
-    "from": "T3",
-    "to": "T8",
+    "from": "R3",
+    "to": "R8",
     "what": "segments exclude blocklisted addresses"
    },
    {
-    "from": "T1",
-    "to": "T8",
+    "from": "R1",
+    "to": "R8",
     "what": "saved segment fills compose recipients"
    },
    {
-    "from": "T1",
-    "to": "T9",
+    "from": "R1",
+    "to": "R9",
     "what": "restyles compose"
    },
    {
-    "from": "T2",
-    "to": "T9",
+    "from": "R2",
+    "to": "R9",
     "what": "restyles delivery log badges"
    },
    {
-    "from": "T3",
-    "to": "T9",
+    "from": "R3",
+    "to": "R9",
     "what": "restyles blocklist page"
    },
    {
-    "from": "T4",
-    "to": "T9",
+    "from": "R4",
+    "to": "R9",
     "what": "restyles analytics page"
    },
    {
-    "from": "T5",
-    "to": "T9",
+    "from": "R5",
+    "to": "R9",
     "what": "restyles outbox page"
    },
    {
-    "from": "T6",
-    "to": "T9",
+    "from": "R6",
+    "to": "R9",
     "what": "restyles preview panel"
    },
    {
-    "from": "T7",
-    "to": "T9",
+    "from": "R7",
+    "to": "R9",
     "what": "restyles A/B area"
    },
    {
-    "from": "T8",
-    "to": "T9",
+    "from": "R8",
+    "to": "R9",
     "what": "restyles segments page"
    },
    {
-    "from": "T2",
-    "to": "T10",
+    "from": "R2",
+    "to": "R10",
     "what": "log totals in digest"
    },
    {
-    "from": "T3",
-    "to": "T10",
+    "from": "R3",
+    "to": "R10",
     "what": "blocklist size in digest"
    },
    {
-    "from": "T4",
-    "to": "T10",
+    "from": "R4",
+    "to": "R10",
     "what": "digest rates mirror analytics"
    },
    {
-    "from": "T5",
-    "to": "T10",
+    "from": "R5",
+    "to": "R10",
     "what": "pending outbox count in digest"
    },
    {
-    "from": "T8",
-    "to": "T10",
+    "from": "R8",
+    "to": "R10",
     "what": "saved segment count in digest"
    }
   ]
@@ -906,20 +906,20 @@
  "global_rules": [
   {
    "rule": "Delivery statuses always render as colored badges: green for delivered, amber for bounced, red for failed, everywhere a status appears.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Email addresses always display in lowercase across the whole app, regardless of how they were typed.",
-   "introduced_in_turn": 3
+   "introduced_in_request": 3
   },
   {
    "rule": "Every percentage in the app is shown with exactly one decimal place (e.g. 80.0%, never 80% or 80.00%).",
-   "introduced_in_turn": 4
+   "introduced_in_request": 4
   }
  ],
  "pinned_seed": {
   "entity": "7 delivery-log records",
-  "introduced_in_turn": 2,
+  "introduced_in_request": 2,
   "records_gist": "dev@nova.io promo delivered 3 opens Jan3; ben@acme.com invoice delivered 0 Jan4; cara@nova.io welcome bounced 0 Jan5; ana@acme.com welcome delivered 3 Jan6; eli@orbit.dev invoice failed 0 Jan7; fay@orbit.dev promo delivered 1 Jan8; gus@acme.com welcome delivered 2 Jan9"
  }
 }

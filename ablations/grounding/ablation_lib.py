@@ -86,7 +86,7 @@ def rows(arm_or_path):
 
 
 def instructions(arm_or_path):
-    """app id -> its 9 follow-up instructions, in turn order."""
+    """app id -> its 9 follow-up instructions, in request order."""
     return {int(r["id"]): [f["instruction"] for f in r["follow_ups"]] for r in rows(arm_or_path)}
 
 

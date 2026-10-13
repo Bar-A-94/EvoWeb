@@ -120,8 +120,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 1,
+     "kind": "backward",
+     "copied_from_request": 1,
      "task": "From the Services page, add a service to the cart, proceed to checkout, and complete the purchase.",
      "expected_result": "The service lands in the cart, checkout accepts the details, and a confirmation message appears after completing the purchase.",
      "task_category": {
@@ -188,8 +188,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "On the program finder, check the Leadership and Communication category filters and set the format filter to Live.",
      "expected_result": "Exactly four programs are listed — Foundations of Leadership, Difficult Conversations, Executive Presence, and Managing Remote Teams — and the live match count reads 4.",
      "task_category": {
@@ -257,8 +257,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "On the team training estimator, pick Difficult Conversations and type 12 into the team size box.",
      "expected_result": "As typed, the quote updates without any submit action: it shows a 10% discount applied and a final total of $1,944.00.",
      "task_category": {
@@ -326,8 +326,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "On the program finder, clear any other filters and type 200 into the max price box.",
      "expected_result": "Only Difficult Conversations, Conflict Resolution Essentials, and Team Communication Basics remain visible; Managing Remote Teams at $210 is filtered out.",
      "task_category": {
@@ -395,8 +395,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 4,
+     "kind": "backward",
+     "copied_from_request": 4,
      "task": "Open the saved learning paths page and look at New Manager Ramp-Up.",
      "expected_result": "It contains Foundations of Leadership, Difficult Conversations, and Coaching for Performance, with a combined price of $680 and a total of 16 hrs.",
      "task_category": {
@@ -464,8 +464,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 5,
+     "kind": "backward",
+     "copied_from_request": 5,
      "task": "Open the New Manager Ramp-Up path and look at its progress readout.",
      "expected_result": "With Foundations of Leadership already marked done, it reads 6 of 16 hrs completed and the percent shows 38% (not 37%).",
      "task_category": {
@@ -533,8 +533,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 7,
+     "kind": "backward",
+     "copied_from_request": 7,
      "task": "Open the live sessions page and register for Executive Roundtable, entering a name and a valid email.",
      "expected_result": "Because all 10 seats are taken, no seat is granted; the flow offers a waitlist spot instead and the confirmation shows waitlist position 1.",
      "task_category": {
@@ -602,8 +602,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 6,
+     "kind": "backward",
+     "copied_from_request": 6,
      "task": "On the program finder, look at the Executive Presence card.",
      "expected_result": "Its price reads $320 in bold dark slate (#334155) and the card has visibly rounded 12px corners.",
      "task_category": {
@@ -671,8 +671,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 8,
+     "kind": "backward",
+     "copied_from_request": 8,
      "task": "Open the My Learning dashboard right after loading the app.",
      "expected_result": "It reads 18 hrs committed (16 from the New Manager Ramp-Up path plus 2 from the Leading Through Change registration), 6 hrs completed, an overall 33%, 1 saved path, and 0 certificates.",
      "task_category": {
@@ -690,130 +690,130 @@
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "program finder",
     "archetype": "derived-state"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "team quote estimator",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "learning path builder",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "progress and certificates",
     "archetype": "derived-state"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "site-wide restyle",
     "archetype": "design-restyle"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "live session registration",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "my learning dashboard",
     "archetype": "derived-state"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "training matcher",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "multi-currency pricing",
     "archetype": "derived-state"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T2",
+    "from": "R1",
+    "to": "R2",
     "what": "existing cart/checkout used by finder add-to-cart"
    },
    {
-    "from": "T2",
-    "to": "T4",
+    "from": "R2",
+    "to": "R4",
     "what": "add-to-path action on finder results"
    },
    {
-    "from": "T4",
-    "to": "T5",
+    "from": "R4",
+    "to": "R5",
     "what": "done toggles and progress on saved paths"
    },
    {
-    "from": "T1",
-    "to": "T6",
+    "from": "R1",
+    "to": "R6",
     "what": "restyles base Services and Workshops pages"
    },
    {
-    "from": "T2",
-    "to": "T6",
+    "from": "R2",
+    "to": "R6",
     "what": "restyles finder cards and buttons"
    },
    {
-    "from": "T3",
-    "to": "T6",
+    "from": "R3",
+    "to": "R6",
     "what": "restyles estimator page"
    },
    {
-    "from": "T4",
-    "to": "T6",
+    "from": "R4",
+    "to": "R6",
     "what": "restyles learning paths pages"
    },
    {
-    "from": "T4",
-    "to": "T8",
+    "from": "R4",
+    "to": "R8",
     "what": "saved path hours and path count"
    },
    {
-    "from": "T5",
-    "to": "T8",
+    "from": "R5",
+    "to": "R8",
     "what": "completed hours and certificate count"
    },
    {
-    "from": "T7",
-    "to": "T8",
+    "from": "R7",
+    "to": "R8",
     "what": "registered session hours"
    },
    {
-    "from": "T4",
-    "to": "T9",
+    "from": "R4",
+    "to": "R9",
     "what": "inserts recommendation into a saved path"
    },
    {
-    "from": "T1",
-    "to": "T10",
+    "from": "R1",
+    "to": "R10",
     "what": "converts services page prices"
    },
    {
-    "from": "T2",
-    "to": "T10",
+    "from": "R2",
+    "to": "R10",
     "what": "converts finder card prices"
    },
    {
-    "from": "T3",
-    "to": "T10",
+    "from": "R3",
+    "to": "R10",
     "what": "converts discounted estimator quote"
    },
    {
-    "from": "T4",
-    "to": "T10",
+    "from": "R4",
+    "to": "R10",
     "what": "converts learning path totals"
    }
   ]
@@ -821,20 +821,20 @@
  "global_rules": [
   {
    "rule": "All training durations everywhere read as hours like '6 hrs', never minutes.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Wherever a program appears, its delivery format shows as a colored pill badge reading 'Live' or 'On-Demand'.",
-   "introduced_in_turn": 3
+   "introduced_in_request": 3
   },
   {
    "rule": "Any list of user-saved or user-registered items (paths, registrations) is ordered newest first.",
-   "introduced_in_turn": 4
+   "introduced_in_request": 4
   }
  ],
  "pinned_seed": {
   "entity": "8 training programs",
-  "introduced_in_turn": 2,
+  "introduced_in_request": 2,
   "records_gist": "Foundations of Leadership (Leadership,$240,6h,Live,Managers,4.8); Difficult Conversations (Communication,$180,4h,Live,Managers,4.6); Conflict Resolution Essentials (Conflict,$180,5h,On-Demand,Individuals,4.6); Executive Presence (Leadership,$320,8h,Live,Executives,4.9); Coaching for Performance (Coaching,$260,6h,On-Demand,Managers,4.7); Strategic Decision Making (Leadership,$300,6h,On-Demand,Executives,4.8); Team Communication Basics (Communication,$150,3h,On-Demand,Individuals,4.4); Managing Remote Teams (Leadership,$210,5h,Live,Managers,4.5)"
  }
 }

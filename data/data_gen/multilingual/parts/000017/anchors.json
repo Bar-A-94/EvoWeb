@@ -4,7 +4,7 @@
       "en": "Fundraiser Day",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         1,
         5
       ],
@@ -20,7 +20,7 @@
       "en": "Supporter Wall",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         2,
         3,
         6,
@@ -38,7 +38,7 @@
       "en": "supporter wall",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         3,
         5,
         6,
@@ -57,7 +57,7 @@
       "en": "Campaign Pulse",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         4,
         5,
         9
@@ -74,7 +74,7 @@
       "en": "Day Schedule",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         5
       ],
       "translations": {
@@ -89,7 +89,7 @@
       "en": "My Day",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         5
       ],
       "translations": {
@@ -104,7 +104,7 @@
       "en": "Share Studio",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         7,
         10
       ],
@@ -120,7 +120,7 @@
       "en": "Updates Hub",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         8
       ],
       "translations": {
@@ -135,7 +135,7 @@
       "en": "Subscribers",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         8
       ],
       "translations": {
@@ -150,7 +150,7 @@
       "en": "Impact Report",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         10
       ],
       "translations": {
@@ -165,7 +165,7 @@
       "en": "partner directory",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         6,
         8,
         9
@@ -182,7 +182,7 @@
       "en": "pledge form",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         3,
         4,
         5,
@@ -203,7 +203,7 @@
       "en": "Gold",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         2,
         3,
         6,
@@ -221,7 +221,7 @@
       "en": "Silver",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         2,
         3,
         9
@@ -238,7 +238,7 @@
       "en": "Bronze",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         2,
         3,
         9
@@ -255,7 +255,7 @@
       "en": "Clean Water",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         2,
         3,
         5,
@@ -275,7 +275,7 @@
       "en": "Education",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         2,
         3,
         4,
@@ -297,7 +297,7 @@
       "en": "Food Relief",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         2,
         3,
         5,
@@ -318,7 +318,7 @@
       "en": "Event news",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         8
       ],
       "translations": {
@@ -333,7 +333,7 @@
       "en": "Opening Ceremony",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         5
       ],
       "translations": {
@@ -348,7 +348,7 @@
       "en": "Bake Sale Kickoff",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         5
       ],
       "translations": {
@@ -363,7 +363,7 @@
       "en": "Charity Fun Run",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         5
       ],
       "translations": {
@@ -378,7 +378,7 @@
       "en": "Silent Auction Preview",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         5,
         7
       ],
@@ -394,7 +394,7 @@
       "en": "Donor Lunch",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         5,
         7
       ],
@@ -410,7 +410,7 @@
       "en": "Closing Concert",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         5
       ],
       "translations": {
@@ -425,7 +425,7 @@
       "en": "water filter",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         10
       ],
       "translations": {
@@ -440,7 +440,7 @@
       "en": "water filters",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         10
       ],
       "translations": {
@@ -455,7 +455,7 @@
       "en": "book bundle",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         10
       ],
       "translations": {
@@ -470,7 +470,7 @@
       "en": "book bundles",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         10
       ],
       "translations": {
@@ -485,7 +485,7 @@
       "en": "meal box",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         10
       ],
       "translations": {
@@ -500,7 +500,7 @@
       "en": "meal boxes",
       "class": "translate",
       "kind": "content_text",
-      "turns": [
+      "requests": [
         10
       ],
       "translations": {
@@ -515,7 +515,7 @@
       "en": "total raised",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         4,
         5,
         7,
@@ -533,7 +533,7 @@
       "en": "supporter count",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         4,
         7
       ],
@@ -549,7 +549,7 @@
       "en": "team leaderboard",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         4
       ],
       "translations": {
@@ -564,7 +564,7 @@
       "en": "custom amount",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         3
       ],
       "translations": {
@@ -579,7 +579,7 @@
       "en": "processing fee",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         3,
         4
       ],
@@ -595,7 +595,7 @@
       "en": "Showing X of 9",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         6
       ],
       "translations": {
@@ -610,7 +610,7 @@
       "en": "Showing 3 of 9",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         6
       ],
       "translations": {
@@ -625,7 +625,7 @@
       "en": "North",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         6,
         8
       ],
@@ -641,7 +641,7 @@
       "en": "South",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         6
       ],
       "translations": {
@@ -656,7 +656,7 @@
       "en": "East",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         6
       ],
       "translations": {
@@ -671,7 +671,7 @@
       "en": "weekly",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         8
       ],
       "translations": {
@@ -686,7 +686,7 @@
       "en": "monthly",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [
+      "requests": [
         8
       ],
       "translations": {
@@ -701,7 +701,7 @@
       "en": "cornsilk",
       "class": "keep",
       "kind": "css_visual",
-      "turns": [
+      "requests": [
         1,
         9
       ]
@@ -710,7 +710,7 @@
       "en": "peru",
       "class": "keep",
       "kind": "css_visual",
-      "turns": [
+      "requests": [
         1,
         9
       ]
@@ -719,7 +719,7 @@
       "en": "steel blue",
       "class": "keep",
       "kind": "css_visual",
-      "turns": [
+      "requests": [
         3,
         5,
         8
@@ -729,7 +729,7 @@
       "en": "plum purple",
       "class": "keep",
       "kind": "css_visual",
-      "turns": [
+      "requests": [
         3
       ]
     },
@@ -737,7 +737,7 @@
       "en": "olive green",
       "class": "keep",
       "kind": "css_visual",
-      "turns": [
+      "requests": [
         3,
         6
       ]
@@ -746,7 +746,7 @@
       "en": "goldenrod",
       "class": "keep",
       "kind": "css_visual",
-      "turns": [
+      "requests": [
         9
       ]
     },
@@ -754,7 +754,7 @@
       "en": "slate gray",
       "class": "keep",
       "kind": "css_visual",
-      "turns": [
+      "requests": [
         9
       ]
     },
@@ -762,7 +762,7 @@
       "en": "chocolate brown",
       "class": "keep",
       "kind": "css_visual",
-      "turns": [
+      "requests": [
         9
       ]
     },
@@ -770,7 +770,7 @@
       "en": "Maria Alvarez",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2,
         3,
         4,
@@ -782,7 +782,7 @@
       "en": "James O'Neil",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2
       ]
     },
@@ -790,7 +790,7 @@
       "en": "Priya Shah",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2,
         9
       ]
@@ -799,7 +799,7 @@
       "en": "Tom Becker",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2,
         3
       ]
@@ -808,7 +808,7 @@
       "en": "Lena Fischer",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2,
         9
       ]
@@ -817,7 +817,7 @@
       "en": "Sam Waters",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2
       ]
     },
@@ -825,7 +825,7 @@
       "en": "Dana Cole",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2
       ]
     },
@@ -833,7 +833,7 @@
       "en": "Rita Vale",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         3
       ]
     },
@@ -841,7 +841,7 @@
       "en": "Noah Kim",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         3
       ]
     },
@@ -849,7 +849,7 @@
       "en": "Ivy Chen",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         4
       ]
     },
@@ -857,7 +857,7 @@
       "en": "Ava Long",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         7
       ]
     },
@@ -865,7 +865,7 @@
       "en": "Omar Reyes",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         10
       ]
     },
@@ -873,7 +873,7 @@
       "en": "River Runners",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2,
         4
       ]
@@ -882,7 +882,7 @@
       "en": "Bright Sparks",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2,
         4
       ]
@@ -891,7 +891,7 @@
       "en": "Green Hearts",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         2,
         4
       ]
@@ -900,7 +900,7 @@
       "en": "Clearwater Trust",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         6,
         8
       ]
@@ -909,7 +909,7 @@
       "en": "BlueDrop Foundation",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         6
       ]
     },
@@ -917,7 +917,7 @@
       "en": "Riverside Rotary",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         6
       ]
     },
@@ -925,7 +925,7 @@
       "en": "ReadRight Alliance",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         6,
         8
       ]
@@ -934,7 +934,7 @@
       "en": "Book Bridge Co.",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         6
       ]
     },
@@ -942,7 +942,7 @@
       "en": "ScholarWorks",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         6
       ]
     },
@@ -950,7 +950,7 @@
       "en": "Meal Makers Guild",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         6,
         9
       ]
@@ -959,7 +959,7 @@
       "en": "Harvest Hands",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         6,
         9
       ]
@@ -968,7 +968,7 @@
       "en": "PantryLink",
       "class": "keep",
       "kind": "proper_noun",
-      "turns": [
+      "requests": [
         6,
         9
       ]
@@ -977,7 +977,7 @@
       "en": "ross@maplemail.org",
       "class": "keep",
       "kind": "tech",
-      "turns": [
+      "requests": [
         8
       ]
     },
@@ -985,7 +985,7 @@
       "en": "amina@riverpost.net",
       "class": "keep",
       "kind": "tech",
-      "turns": [
+      "requests": [
         8
       ]
     },
@@ -993,7 +993,7 @@
       "en": "kai@sunmail.co",
       "class": "keep",
       "kind": "tech",
-      "turns": [
+      "requests": [
         8
       ]
     },
@@ -1001,7 +1001,7 @@
       "en": "jamie@site",
       "class": "keep",
       "kind": "tech",
-      "turns": [
+      "requests": [
         8
       ]
     },
@@ -1009,7 +1009,7 @@
       "en": "jamie@hillpost.org",
       "class": "keep",
       "kind": "tech",
-      "turns": [
+      "requests": [
         8
       ]
     }

@@ -4,7 +4,7 @@
    "en": "trading opportunities",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -19,7 +19,7 @@
    "en": "trading history",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1,
     2,
     3
@@ -36,7 +36,7 @@
    "en": "screener",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -56,7 +56,7 @@
    "en": "Collectibles",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3
    ],
@@ -72,7 +72,7 @@
    "en": "Metals",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -91,7 +91,7 @@
    "en": "Furniture",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     5
    ],
@@ -107,7 +107,7 @@
    "en": "Closing",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     4,
     5,
@@ -126,7 +126,7 @@
    "en": "Settled",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -145,7 +145,7 @@
    "en": "bid ticket",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     5,
@@ -163,7 +163,7 @@
    "en": "buyer's premium",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     5,
@@ -181,7 +181,7 @@
    "en": "handling fee",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     5,
@@ -199,7 +199,7 @@
    "en": "total due",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     5,
@@ -217,7 +217,7 @@
    "en": "My Watchlist",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     8,
     10
@@ -234,7 +234,7 @@
    "en": "watched-only",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     9
    ],
@@ -250,7 +250,7 @@
    "en": "close-and-settle",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     7
    ],
@@ -266,7 +266,7 @@
    "en": "Completed Sales",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     8,
     10
@@ -283,7 +283,7 @@
    "en": "Market Movers",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6,
     9,
     10
@@ -300,7 +300,7 @@
    "en": "Top Gainers",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6,
     9
    ],
@@ -316,7 +316,7 @@
    "en": "Top Losers",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6
    ],
    "translations": {
@@ -331,7 +331,7 @@
    "en": "Most Active",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6
    ],
    "translations": {
@@ -346,7 +346,7 @@
    "en": "price-level",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7
    ],
    "translations": {
@@ -361,7 +361,7 @@
    "en": "seller profile",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8,
     10
    ],
@@ -377,7 +377,7 @@
    "en": "Top Sellers",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -392,7 +392,7 @@
    "en": "1968 Rolex Submariner",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     6,
@@ -404,7 +404,7 @@
    "en": "10oz Silver Bullion Bar",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -417,7 +417,7 @@
    "en": "Signed First-Edition Dune",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -429,7 +429,7 @@
    "en": "Antique Oak Writing Desk",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     4,
     5,
@@ -444,7 +444,7 @@
    "en": "Gold Krugerrand Coin",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -458,7 +458,7 @@
    "en": "Persian Heriz Rug",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     4,
     6,
@@ -469,7 +469,7 @@
    "en": "1974 Fender Stratocaster",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -482,7 +482,7 @@
    "en": "Georgian Side Table",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     8
    ]
   },
@@ -490,7 +490,7 @@
    "en": "Regency Mantel Clock",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     8
    ]
   },
@@ -498,7 +498,7 @@
    "en": "Rolex",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     6,
@@ -510,7 +510,7 @@
    "en": "Fender",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -524,7 +524,7 @@
    "en": "Harbor Trade Co",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     8
    ]
@@ -533,7 +533,7 @@
    "en": "MetalWorks",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     8
    ]
@@ -542,7 +542,7 @@
    "en": "PageTurners",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     8,
     10
@@ -552,7 +552,7 @@
    "en": "Attic Finds",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     5,
     8
@@ -562,7 +562,7 @@
    "en": "lemon chiffon",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1
    ]
   },
@@ -570,7 +570,7 @@
    "en": "chocolate",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1,
     10
    ]
@@ -579,7 +579,7 @@
    "en": "1W",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     7
    ]
   },
@@ -587,7 +587,7 @@
    "en": "1M",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     7
    ]
   },
@@ -595,7 +595,7 @@
    "en": "12px",
    "class": "keep",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     10
    ]
   }

@@ -164,8 +164,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 1,
+     "kind": "backward",
+     "copied_from_request": 1,
      "task": "From the site navigation, open the About Us page.",
      "expected_result": "The About Us page loads with visible content and the site navigation remains available.",
      "task_category": {
@@ -231,8 +231,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "On the jobs page, type 1340 into the minimum weekly pay input and select Ohio in the state filter.",
      "expected_result": "Exactly two listings remain: Redline Freight ($1,560/wk) and Northgate Carriers ($1,340/wk) — Northgate, which pays exactly $1,340, is included.",
      "task_category": {
@@ -300,8 +300,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "On the pay calculator, type 63 into cents per mile and 2470 into miles per week, then change the miles to 2400.",
      "expected_result": "Weekly gross updates live without any submit: $1,556/wk after typing 2470, changing to $1,512/wk once miles reads 2400.",
      "task_category": {
@@ -369,8 +369,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "On the jobs page, select both Ohio and Texas as states and OTR as the job type, then use the clear-all control.",
      "expected_result": "With the filters on, only Redline Freight, Summit Logistics, and Northgate Carriers are shown (jobs from either state, but only OTR); after clear-all, all seven listings return.",
      "task_category": {
@@ -438,8 +438,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 4,
+     "kind": "backward",
+     "copied_from_request": 4,
      "task": "Open the jobs page with no filters applied and read the order of the listings.",
      "expected_result": "The featured spot on top shows Redline Freight then Prairie Tankers, each with a featured badge; the regular section starts Summit Logistics, then Bluegrass Haulers, then Northgate Carriers — Bluegrass above Northgate even though both pay $1,340/wk and Northgate was seeded first (alphabetical tiebreak, not seed order).",
      "task_category": {
@@ -507,8 +507,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 5,
+     "kind": "backward",
+     "copied_from_request": 5,
      "task": "On the jobs page, try to apply to Redline Freight as Marcus.",
      "expected_result": "The app stops it with a note that Marcus already has an application in for that job and points him to My Applications; no second Redline Freight row shows up there.",
      "task_category": {
@@ -574,8 +574,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "On the pay calculator, type 67 into cents per mile and 2000 into miles per week.",
      "expected_result": "Weekly gross shows $1,340/wk, and the openings readout says 5 openings pay at least that — Bluegrass Haulers and Northgate Carriers at exactly $1,340/wk are counted.",
      "task_category": {
@@ -643,8 +643,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 6,
+     "kind": "backward",
+     "copied_from_request": 6,
      "task": "Open the client applications dashboard and read the overall numbers at the top.",
      "expected_result": "Total applications is 6 and distinct drivers is 4 — Marcus Webb and Dana Ortiz each applied twice but are counted once in the driver figure.",
      "task_category": {
@@ -712,8 +712,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 7,
+     "kind": "backward",
+     "copied_from_request": 7,
      "task": "On the drivers page match tuner, choose Class A, choose Ohio, and type 1340 into the minimum pay box.",
      "expected_result": "Redline Freight tops the list at 100 points; next come Bluegrass Haulers, Prairie Tankers, and Summit Logistics all at 70, in that alphabetical order — not in the order the jobs were added.",
      "task_category": {
@@ -731,140 +731,140 @@
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "job screener",
     "archetype": "derived-state"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "pay calculator",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "featured ranking",
     "archetype": "derived-state"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "my applications tracker",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "client applications dashboard",
     "archetype": "derived-state"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "match score tuner",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "company directory profiles",
     "archetype": "derived-state"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "full-site restyle",
     "archetype": "design-restyle"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "interview scheduling",
     "archetype": "multi-surface-workflow"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T2",
+    "from": "R1",
+    "to": "R2",
     "what": "jobs page hosts the screener"
    },
    {
-    "from": "T2",
-    "to": "T4",
+    "from": "R2",
+    "to": "R4",
     "what": "featured pinning and ranking apply within the screener's filtered set"
    },
    {
-    "from": "T1",
-    "to": "T5",
+    "from": "R1",
+    "to": "R5",
     "what": "tracker rows and Applied markers reflect applications made through the base apply flow"
    },
    {
-    "from": "T5",
-    "to": "T6",
+    "from": "R5",
+    "to": "R6",
     "what": "dashboard aggregates the tracked applications and its status moves show on My Applications rows"
    },
    {
-    "from": "T1",
-    "to": "T7",
+    "from": "R1",
+    "to": "R7",
     "what": "drivers page hosts the match tuner"
    },
    {
-    "from": "T3",
-    "to": "T7",
+    "from": "R3",
+    "to": "R7",
     "what": "saved pay target pre-fills the tuner's minimum-pay box"
    },
    {
-    "from": "T2",
-    "to": "T8",
+    "from": "R2",
+    "to": "R8",
     "what": "new Redline listing must surface through the screener"
    },
    {
-    "from": "T6",
-    "to": "T8",
+    "from": "R6",
+    "to": "R8",
     "what": "profile application counts mirror the dashboard pipeline"
    },
    {
-    "from": "T1",
-    "to": "T9",
+    "from": "R1",
+    "to": "R9",
     "what": "restyles home/nav headings and links"
    },
    {
-    "from": "T2",
-    "to": "T9",
+    "from": "R2",
+    "to": "R9",
     "what": "restyles the jobs/screener page cards"
    },
    {
-    "from": "T3",
-    "to": "T9",
+    "from": "R3",
+    "to": "R9",
     "what": "restyles the calculator's save-target button"
    },
    {
-    "from": "T4",
-    "to": "T9",
+    "from": "R4",
+    "to": "R9",
     "what": "restyles the featured badge"
    },
    {
-    "from": "T5",
-    "to": "T9",
+    "from": "R5",
+    "to": "R9",
     "what": "restyles My Applications rows"
    },
    {
-    "from": "T6",
-    "to": "T9",
+    "from": "R6",
+    "to": "R9",
     "what": "restyles dashboard cards"
    },
    {
-    "from": "T8",
-    "to": "T9",
+    "from": "R8",
+    "to": "R9",
     "what": "restyles directory company cards"
    },
    {
-    "from": "T6",
-    "to": "T10",
+    "from": "R6",
+    "to": "R10",
     "what": "scheduling launches from dashboard's Interview-stage applications"
    },
    {
-    "from": "T5",
-    "to": "T10",
+    "from": "R5",
+    "to": "R10",
     "what": "booked slot lands on the driver's My Applications row"
    }
   ]
@@ -872,20 +872,20 @@
  "global_rules": [
   {
    "rule": "Weekly pay is always written as whole dollars with a comma and a /wk suffix (e.g. $1,560/wk) everywhere in the app.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Job type is always shown as a colored tag wherever a job appears: green for Local, amber for Regional, blue for OTR.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Any action that withdraws, removes, or cancels something asks for confirmation first, app-wide.",
-   "introduced_in_turn": 5
+   "introduced_in_request": 5
   }
  ],
  "pinned_seed": {
   "entity": "7 driver job listings",
-  "introduced_in_turn": 2,
+  "introduced_in_request": 2,
   "records_gist": "Redline Freight OTR/A/OH $1,560 featured; Summit Logistics OTR/A/TX $1,560; Prairie Tankers Regional/A/TX $1,480 featured; Northgate Carriers OTR/B/OH $1,340; Bluegrass Haulers Regional/A/KY $1,340; Metro Movers Local/B/OH $1,120; Harbor Express Local/B/TX $980"
  }
 }

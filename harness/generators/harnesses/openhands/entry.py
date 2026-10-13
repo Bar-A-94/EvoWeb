@@ -212,7 +212,7 @@ if __name__ == "__main__":
         spec["filter_tools_regex"] = f"^(?!{'|'.join(f'{name}$' for name in sorted(excluded))}).*"
     # litellm's default 300s HTTP timeout is too short for a thinking model on a large
     # late-ladder context: sonnet 4.6 deterministically exceeded it on 3/32 EvoWeb ladders
-    # (same sample+turn on rerun), killing each ladder. 1200s stays bounded but clears the
+    # (same sample+request on rerun), killing each ladder. 1200s stays bounded but clears the
     # observed worst case with margin. Applied to the condenser too — it sends the same
     # oversized history.
     timeout = int(

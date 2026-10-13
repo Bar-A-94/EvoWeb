@@ -189,7 +189,7 @@ CMD=(
 [ -n "${EVAL_PROVIDER:-}" ] && CMD+=(--eval-provider "$EVAL_PROVIDER")
 [ -n "${RUN_ID:-}" ]        && CMD+=(--run-id "$RUN_ID")
 # Appearance grading is opt-in: only runs when APPEARANCE_API_MODEL is set (and never on
-# multi-turn ladders). URL/key fall back to EVAL_API_URL/EVAL_API_KEY inside run_single_sample.py.
+# multi-request ladders). URL/key fall back to EVAL_API_URL/EVAL_API_KEY inside run_single_sample.py.
 [ -n "${APPEARANCE_API_MODEL:-}"     ] && CMD+=(--appearance-api-model "$APPEARANCE_API_MODEL")
 [ -n "${APPEARANCE_API_URL:-}"       ] && CMD+=(--appearance-api-url "$APPEARANCE_API_URL")
 [ -n "${APPEARANCE_API_KEY:-}"       ] && CMD+=(--appearance-api-key "$APPEARANCE_API_KEY")

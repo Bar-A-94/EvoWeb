@@ -130,8 +130,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 1,
+     "kind": "backward",
+     "copied_from_request": 1,
      "task": "Find the contact information on the site.",
      "expected_result": "A customer service phone number and an email address are both displayed.",
      "task_category": {
@@ -198,8 +198,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "On the instant quote page, select the Deep Shine package and type 1 in the bedrooms field and 1 in the bathrooms field.",
      "expected_result": "The quote shows a duration of 3h 15m and a price of $178.75.",
      "task_category": {
@@ -267,8 +267,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "Open the Certificates page.",
      "expected_result": "The pre-loaded certificate GIFT-2201 for Hannah is listed with a $100 amount, $100 remaining balance, and an unredeemed status.",
      "task_category": {
@@ -336,8 +336,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "On the quote page, select Sparkle Standard, type 0 for bedrooms and 1 for bathrooms; then change bedrooms to -2.",
      "expected_result": "With 0 bedrooms it still quotes normally (2h 15m, $94.50); with -2 a validation note appears and no price is shown.",
      "task_category": {
@@ -405,8 +405,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 4,
+     "kind": "backward",
+     "copied_from_request": 4,
      "task": "On the Reviews page, use the package filter to show only Eco Fresh reviews.",
      "expected_result": "Exactly the reviews from Dana, Elena, and Leo are shown, and the average reads 4.7 (not 4.6 or 4.67).",
      "task_category": {
@@ -474,8 +474,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 5,
+     "kind": "backward",
+     "copied_from_request": 5,
      "task": "In the service-area checker type 98188, then on the quote page select Deep Shine and type 1 bedroom and 1 bathroom.",
      "expected_result": "98188 is recognized as the South zone with a $25 travel fee, and the quote shows the fee as its own line with a $203.75 total.",
      "task_category": {
@@ -543,8 +543,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 6,
+     "kind": "backward",
+     "copied_from_request": 6,
      "task": "Open the Compare Packages page and tick Quick Tidy, Eco Fresh, and Office Refresh.",
      "expected_result": "Columns run cheapest first: Quick Tidy ($35/hr), then Eco Fresh ($48/hr), then Office Refresh ($48/hr) — Eco Fresh ahead of Office Refresh on the alphabetical tiebreak at the same rate.",
      "task_category": {
@@ -612,8 +612,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 7,
+     "kind": "backward",
+     "copied_from_request": 7,
      "task": "Book a Deep Shine 1-bedroom/1-bathroom quote, and in checkout type the certificate code GIFT-2201.",
      "expected_result": "The $100 balance comes off and the total due reads $78.75.",
      "task_category": {
@@ -681,8 +681,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 8,
+     "kind": "backward",
+     "copied_from_request": 8,
      "task": "On the Plans page pick Eco Fresh and look at the Weekly card.",
      "expected_result": "It shows $57.60 per visit and $748.80 in yearly savings.",
      "task_category": {
@@ -700,125 +700,125 @@
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "instant quote estimator",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "gift certificates",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "reviews hub",
     "archetype": "derived-state"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "service-area checker",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "package comparison table",
     "archetype": "derived-state"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "quote checkout & redemption",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "membership plans",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "site restyle",
     "archetype": "design-restyle"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "business snapshot dashboard",
     "archetype": "derived-state"
    }
   ],
   "edges": [
    {
-    "from": "T2",
-    "to": "T5",
+    "from": "R2",
+    "to": "R5",
     "what": "live quote that the travel fee lands in"
    },
    {
-    "from": "T2",
-    "to": "T6",
+    "from": "R2",
+    "to": "R6",
     "what": "estimator pricing formula for sample quotes"
    },
    {
-    "from": "T4",
-    "to": "T6",
+    "from": "R4",
+    "to": "R6",
     "what": "per-package average stars from reviews"
    },
    {
-    "from": "T2",
-    "to": "T7",
+    "from": "R2",
+    "to": "R7",
     "what": "quote carried into checkout via Book this quote"
    },
    {
-    "from": "T5",
-    "to": "T7",
+    "from": "R5",
+    "to": "R7",
     "what": "travel fee line carried into checkout total"
    },
    {
-    "from": "T3",
-    "to": "T7",
+    "from": "R3",
+    "to": "R7",
     "what": "certificate balances redeemed at checkout"
    },
    {
-    "from": "T1",
-    "to": "T7",
+    "from": "R1",
+    "to": "R7",
     "what": "confirmed jobs surface in base status-check area"
    },
    {
-    "from": "T7",
-    "to": "T10",
+    "from": "R7",
+    "to": "R10",
     "what": "count and revenue sum of confirmed bookings"
    },
    {
-    "from": "T3",
-    "to": "T10",
+    "from": "R3",
+    "to": "R10",
     "what": "outstanding balance across certificates"
    },
    {
-    "from": "T4",
-    "to": "T10",
+    "from": "R4",
+    "to": "R10",
     "what": "overall average across all reviews"
    },
    {
-    "from": "T1",
-    "to": "T9",
+    "from": "R1",
+    "to": "R9",
     "what": "restyles home page"
    },
    {
-    "from": "T2",
-    "to": "T9",
+    "from": "R2",
+    "to": "R9",
     "what": "restyles estimator page"
    },
    {
-    "from": "T4",
-    "to": "T9",
+    "from": "R4",
+    "to": "R9",
     "what": "restyles Reviews page"
    },
    {
-    "from": "T8",
-    "to": "T9",
+    "from": "R8",
+    "to": "R9",
     "what": "restyles Plans page"
    }
   ]
@@ -826,20 +826,20 @@
  "global_rules": [
   {
    "rule": "All durations are displayed as 'Xh Ym' (e.g. '3h 15m'), never as decimal hours, everywhere in the app.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Wherever a cleaning package name appears, its hourly rate is appended right after it, e.g. 'Deep Shine ($55/hr)'.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Statuses everywhere are shown as colored pills: green for done/confirmed/redeemed-type states, amber for pending/unredeemed-type states.",
-   "introduced_in_turn": 3
+   "introduced_in_request": 3
   }
  ],
  "pinned_seed": {
   "entity": "6 cleaning packages",
-  "introduced_in_turn": 2,
+  "introduced_in_request": 2,
   "records_gist": "Quick Tidy $35/hr 60m one-time; Sparkle Standard $42/hr 90m recurring; Eco Fresh $48/hr 90m recurring eco; Office Refresh $48/hr 120m recurring; Deep Shine $55/hr 120m one-time; Move-Out Master $60/hr 150m one-time"
  }
 }

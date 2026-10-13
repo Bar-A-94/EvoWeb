@@ -120,8 +120,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 1,
+     "kind": "backward",
+     "copied_from_request": 1,
      "task": "As a seller, add a new cryptocurrency product.",
      "expected_result": "The product is added and immediately appears in the seller's product list.",
      "task_category": {
@@ -188,8 +188,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "On the Fee Calculator page, type 10000 into the USD amount box, pick BTC, and look at the crypto amount readout.",
      "expected_result": "It reads 0.16666667 BTC - eight decimal places correctly rounded to end in 67, not truncated to 0.16666666, with the ticker after the number.",
      "task_category": {
@@ -256,8 +256,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "Open the Trade Ledger page and read the total released volume summary card.",
      "expected_result": "It reads $94,500.00 - only the five Released trades count, not the $214,000.00 you'd get by summing all eight.",
      "task_category": {
@@ -325,8 +325,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 4,
+     "kind": "backward",
+     "copied_from_request": 4,
      "task": "Open the Payout Center, pick Marcus, and read his numbers.",
      "expected_result": "His lifetime earned and his available balance both read $35,730.00 - his two Released trades gross $36,000.00 minus the seller's 0.75% fee share - not the plain $36,000.00 gross, and his disputed $12,000.00 trade contributes nothing.",
      "task_category": {
@@ -394,8 +394,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "Open the Trade Ledger page and read the locked-in-escrow summary card.",
      "expected_result": "It reads $49,500.00 - the $37,500.00 trade currently In Escrow plus the $12,000.00 Disputed trade, since disputed funds are still locked.",
      "task_category": {
@@ -462,8 +462,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 5,
+     "kind": "backward",
+     "copied_from_request": 5,
      "task": "Open the Leaderboard page and read the ranking order and scores.",
      "expected_result": "Top to bottom it reads Lena, Marcus, Omar, Priya. Lena and Marcus are tied at score 2 and Lena ranks first because her $37,500.00 released volume beats his $36,000.00; Omar's score reads 0, not the 1 a build that skipped the refund penalty would show - his $70,000.00 refund cancels his released trade - and he edges out Priya at the same score only because his $21,000.00 released volume beats her $0.00.",
      "task_category": {
@@ -530,8 +530,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "On the Fee Calculator page, type 10000 into the USD amount box and pick BTC as the coin.",
      "expected_result": "The breakdown updates as the amount is entered, with no separate submit step: the buyer's total reads $10,077.50 and the seller's take reads $9,925.00.",
      "task_category": {
@@ -599,8 +599,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 7,
+     "kind": "backward",
+     "copied_from_request": 7,
      "task": "On the Offer Screener, type 5 into the minimum reputation box, then clear that box.",
      "expected_result": "At 5, no offers match and a friendly no-results note shows instead of a blank or broken page; clearing the box brings all six offers back.",
      "task_category": {
@@ -668,8 +668,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 6,
+     "kind": "backward",
+     "copied_from_request": 6,
      "task": "Turn on Practice Mode from the header, open the 0.20000000 BTC practice listing priced at $12,000.00, and try to deposit into escrow.",
      "expected_result": "The deposit is refused with an insufficient-balance message and the practice wallet still reads $10,000.00.",
      "task_category": {
@@ -683,149 +683,149 @@
    ]
   }
  ],
- "target_app_summary": "The base crypto escrow marketplace has grown into a full P2P trading platform. It gained a live fee-and-payout calculator, a platform-wide Trade Ledger with released/locked rollups seeded with eight pinned trades, a seller Payout Center with fee-netted lifetime earnings and a hold-then-approve withdrawal queue, a seller reputation leaderboard with refund penalties and volume tiebreaks, a sandboxed practice mode with a mock wallet and its own seeded practice listings, a multi-criteria offer screener with saved presets and a reputation filter, a per-keystroke counter-offer negotiation console that re-prices screener offers, a brand restyle across five pages, and copyable seller statements that reconcile ledger records against the fee schedule and the Payout Center. The ledger (T3) is the hub: payout balances and reputation scores are computed from it, practice mode must leave it untouched, and statements are generated from it; the fee schedule (T2) feeds the Payout Center, the negotiation console, and the statements; reputation chains into the screener and the screener into the negotiation console, giving deep chains like T1->T3->T5->T7->T8 and T1->T3->T4->T10.",
+ "target_app_summary": "The base crypto escrow marketplace has grown into a full P2P trading platform. It gained a live fee-and-payout calculator, a platform-wide Trade Ledger with released/locked rollups seeded with eight pinned trades, a seller Payout Center with fee-netted lifetime earnings and a hold-then-approve withdrawal queue, a seller reputation leaderboard with refund penalties and volume tiebreaks, a sandboxed practice mode with a mock wallet and its own seeded practice listings, a multi-criteria offer screener with saved presets and a reputation filter, a per-keystroke counter-offer negotiation console that re-prices screener offers, a brand restyle across five pages, and copyable seller statements that reconcile ledger records against the fee schedule and the Payout Center. The ledger (R3) is the hub: payout balances and reputation scores are computed from it, practice mode must leave it untouched, and statements are generated from it; the fee schedule (R2) feeds the Payout Center, the negotiation console, and the statements; reputation chains into the screener and the screener into the negotiation console, giving deep chains like R1->R3->R5->R7->R8 and R1->R3->R4->R10.",
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "Fee Calculator",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "Trade Ledger",
     "archetype": "derived-state"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "Seller Payout Center",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "Reputation Leaderboard",
     "archetype": "derived-state"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "Practice Mode",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "Offer Screener",
     "archetype": "derived-state"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "Counter-Offer Negotiation Console",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "Brand Restyle",
     "archetype": "design-restyle"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "Seller Statements",
     "archetype": "derived-state"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T3",
+    "from": "R1",
+    "to": "R3",
     "what": "buy-flow trades land in the ledger"
    },
    {
-    "from": "T2",
-    "to": "T4",
+    "from": "R2",
+    "to": "R4",
     "what": "payout nets deduct the seller's 0.75% share from the fee schedule"
    },
    {
-    "from": "T3",
-    "to": "T4",
+    "from": "R3",
+    "to": "R4",
     "what": "lifetime earnings computed from Released ledger trades"
    },
    {
-    "from": "T1",
-    "to": "T5",
+    "from": "R1",
+    "to": "R5",
     "what": "scores shown beside seller names on their product listings"
    },
    {
-    "from": "T3",
-    "to": "T5",
+    "from": "R3",
+    "to": "R5",
     "what": "scores computed from ledger trade statuses"
    },
    {
-    "from": "T1",
-    "to": "T6",
+    "from": "R1",
+    "to": "R6",
     "what": "reuses the select-and-deposit escrow flow with mock funds"
    },
    {
-    "from": "T3",
-    "to": "T6",
+    "from": "R3",
+    "to": "R6",
     "what": "ledger totals must stay untouched by practice trades"
    },
    {
-    "from": "T5",
-    "to": "T7",
+    "from": "R5",
+    "to": "R7",
     "what": "reputation filter and tie-break scores"
    },
    {
-    "from": "T7",
-    "to": "T8",
+    "from": "R7",
+    "to": "R8",
     "what": "negotiation opens from screener offers and accepted counters re-price the board"
    },
    {
-    "from": "T2",
-    "to": "T8",
+    "from": "R2",
+    "to": "R8",
     "what": "seller-take readout follows the fee schedule"
    },
    {
-    "from": "T1",
-    "to": "T9",
+    "from": "R1",
+    "to": "R9",
     "what": "restyles browse page"
    },
    {
-    "from": "T2",
-    "to": "T9",
+    "from": "R2",
+    "to": "R9",
     "what": "restyles calculator page"
    },
    {
-    "from": "T3",
-    "to": "T9",
+    "from": "R3",
+    "to": "R9",
     "what": "restyles ledger cards and headings"
    },
    {
-    "from": "T5",
-    "to": "T9",
+    "from": "R5",
+    "to": "R9",
     "what": "restyles leaderboard rows and volume column"
    },
    {
-    "from": "T7",
-    "to": "T9",
+    "from": "R7",
+    "to": "R9",
     "what": "restyles screener cards and buttons"
    },
    {
-    "from": "T2",
-    "to": "T10",
+    "from": "R2",
+    "to": "R10",
     "what": "per-trade net must match the fee calculator"
    },
    {
-    "from": "T3",
-    "to": "T10",
+    "from": "R3",
+    "to": "R10",
     "what": "statement lines built from ledger records"
    },
    {
-    "from": "T4",
-    "to": "T10",
+    "from": "R4",
+    "to": "R10",
     "what": "statement net totals reconcile with Payout Center lifetime earnings"
    }
   ]
@@ -833,20 +833,20 @@
  "global_rules": [
   {
    "rule": "Crypto amounts are always shown to exactly 8 decimal places with the ticker after the number (e.g. 0.16666667 BTC), and dollar figures always as $1,234.56 with commas and two decimals.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Every trade status is a color-coded pill badge everywhere: amber In Escrow, green Released, gray Refunded, dark red Disputed.",
-   "introduced_in_turn": 3
+   "introduced_in_request": 3
   },
   {
    "rule": "Any action that moves or releases funds shows a confirmation with the exact dollar amounts before it completes.",
-   "introduced_in_turn": 4
+   "introduced_in_request": 4
   }
  ],
  "pinned_seed": {
   "entity": "8 escrow trades (TX-101 through TX-108)",
-  "introduced_in_turn": 3,
+  "introduced_in_request": 3,
   "records_gist": "5 Released ($30,000 + $25,000 + $12,500 + $21,000 + $6,000 = $94,500), 1 Refunded ($70,000 Omar), 1 Disputed ($12,000 Marcus), 1 In Escrow ($37,500 Priya); sellers Marcus/Lena/Omar/Priya; naive all-status top seller (Omar $91,000) differs from correct released top (Lena $37,500)."
  }
 }

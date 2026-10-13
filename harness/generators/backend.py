@@ -132,7 +132,7 @@ there is no extensionless config file for a `.jsx` sibling to shadow."""
 # Fallback only: run_sample.sh and the Kubernetes job template always pass AGENT_MAX_TURNS.
 DEFAULT_MAX_STEPS = 20
 # Must match acp/client.py's BUDGET_MARKER: the client is a separate process, so the two cannot
-# share an import. A turn that spends its budget returns this instead of a reply.
+# share an import. A request that spends its turn budget returns this instead of a reply.
 BUDGET_MARKER = "[turn budget exhausted]"
 
 
@@ -141,7 +141,7 @@ def agent_calls(model_calls: list[dict]) -> list[dict]:
 
     Selection is by modal tool count, tie-broken toward the HIGHER count: openhands' history
     condenser sends no tools, so a plain `key=tools.count` resolves an even split by set-iteration
-    order and picks the condenser, reporting a healthy turn as a lost conversation.
+    order and picks the condenser, reporting a healthy request as a lost conversation.
     """
     tools = [call.get("tools") or 0 for call in model_calls]
     if not tools:
@@ -151,20 +151,20 @@ def agent_calls(model_calls: list[dict]) -> list[dict]:
 
 
 def agent_first(model_calls: list[dict]) -> dict:
-    """The agent's first call, or the turn's first if it made none."""
+    """The agent's first call, or the request's first if it made none."""
     return (agent_calls(model_calls) or model_calls)[0]
 
 
 def budget_exhausted(reply: str, max_steps: int, model_calls: list[dict]) -> bool:
-    """Did this turn stop because it ran out of turns rather than because it finished?
+    """Did this request stop because it ran out of turns rather than because it finished?
 
-    Only the ACP path reports a spent budget, and it is the minority case: over 774 turns of the
+    Only the ACP path reports a spent budget, and it is the minority case: over 774 requests of the
     first wave, 6 carried the marker while 109 had actually stopped at the cap. So the call count
-    is the reliable signal, or a truncated turn reads as a finished one in every non-ACP harness.
+    is the reliable signal, or a truncated request reads as a finished one in every non-ACP harness.
 
     Counts the AGENT's calls, not everything that crossed the proxy: the cap each harness enforces
     is on its own iterations, so a harness that interleaves helper calls (openhands runs a history
-    condenser on long contexts) would otherwise report a turn that finished on its own as
+    condenser on long contexts) would otherwise report a request that finished on its own as
     truncated. Not reproduced in the short runs here, where the condenser never fires.
     """
     spent = len(agent_calls(model_calls))
@@ -174,13 +174,13 @@ def budget_exhausted(reply: str, max_steps: int, model_calls: list[dict]) -> boo
 def resume_lost_history(
     history: list[dict] | None, model_calls: list[dict]
 ) -> tuple[bool, int, int]:
-    """Did the agent start this turn without the conversation it was given?
+    """Did the agent start this request without the conversation it was given?
 
     Returns (lost, context seen on the agent's first call, context the history implies).
 
     The test is whether the history ARRIVED, measured in tokens, because harnesses disagree on
     how to carry it: some send one message per turn, others inline the whole trace into a single
-    message. Counting messages calls the second kind a loss on every turn.
+    message. Counting messages calls the second kind a loss on every request.
     """
     if not history or not model_calls:
         return False, 0, 0
@@ -245,8 +245,8 @@ def _publish_failure(
         summary,
         [],
         instruction="",
-        # Same session as the success path: a turn that raised is the one you most want to read
-        # next to the rest of the ladder, and a per-turn id filed it on its own.
+        # Same session as the success path: a request that raised is the one you most want to read
+        # next to the rest of the ladder, and a per-request id filed it on its own.
         session_id=os.environ.get("LANGFUSE_SESSION_ID") or workspaces.parent.name,
         model_calls=calls,
     )
@@ -268,7 +268,7 @@ def generate(
     system_prompt: str | None = HARNESS_DEFAULT,
     exclude_tools: list[str] | None = None,
     pkgs: Path | None = None,
-    # Whole-turn wall clock. Env-overridable because two sonnet EvoWeb turns (2@T7, 3@T9)
+    # Whole-request wall clock. Env-overridable because two sonnet EvoWeb requests (2@R7, 3@R9)
     # deterministically outlive 2700s once the per-call ceiling was lifted — a repair pod
     # sets WEBGEN_TURN_TIMEOUT rather than needing a code change per experiment.
     timeout: int | None = None,
@@ -279,12 +279,12 @@ def generate(
 ) -> dict:
     """Build one sample's app with `harness`. Returns {"app_dir", "start_action", "reply"}.
 
-    On a multi-turn ladder the caller passes the accumulated `history` and a per-sample
-    `session_file`, and appends the returned `reply` before the next turn. `reply` is in the
+    On a multi-request ladder the caller passes the accumulated `history` and a per-sample
+    `session_file`, and appends the returned `reply` before the next request. `reply` is in the
     result so the conversation can grow without the caller re-reading the trajectory.
     """
     workspace = workspaces / f"sample_{index:06d}"
-    # A ladder on a harness that cannot continue a conversation is not multi-turn, it is N
+    # A ladder on a harness that cannot continue a conversation is not multi-request, it is N
     # one-shot builds sharing a directory — and it looks like a valid result. Refuse instead.
     # Default False so a harness that never declares it fails here rather than silently.
     if history and not MODULES[harness].SUPPORTS_RESUME:
@@ -374,7 +374,7 @@ def generate(
     # looked like harness quality. Derived from the calls themselves, not from what we asked
     # for, since a harness sets these inside its own client.
     # Every distinct value, not just the first: setdefault kept the earliest non-None and a
-    # harness that varies max_tokens mid-turn was then under-reported by the very field whose
+    # harness that varies max_tokens mid-request was then under-reported by the very field whose
     # job is recording what the arm sampled at. Collapses to the scalar when it never varied.
     sampled = {}
     for key in ("max_tokens", "temperature", "thinking"):
@@ -393,18 +393,18 @@ def generate(
         int(((c.get("usage") or {}).get("output_tokens_details") or {}).get("thinking_tokens") or 0)
         for c in model_calls
     )
-    # A resumed turn is trusted on file existence alone: the ACP client sets is_new from
-    # session_path.exists(), so when the agent no longer holds that conversation the turn runs
+    # A resumed request is trusted on file existence alone: the ACP client sets is_new from
+    # session_path.exists(), so when the agent no longer holds that conversation the request runs
     # on the instruction alone and still reports success. Record it rather than hide it.
     #
     # Judged on CONTEXT, not message count. A count alone misfires on any harness that inlines
-    # the whole trace into one message: measured over the v3 runs, 13 turns tripped the
+    # the whole trace into one message: measured over the v3 runs, 13 requests tripped the
     # count-only rule and 10 of them carried 13,500-32,100 tokens on that single message, i.e.
     # the history was plainly there. Only 3 (~1,500-1,900 tokens) had genuinely started fresh.
     history_lost, first_ctx, want_ctx = resume_lost_history(history, model_calls)
     if history_lost:
         _log(
-            f"warning: sample {index}: resume lost the conversation, this turn ran without "
+            f"warning: sample {index}: resume lost the conversation, this request ran without "
             f"history ({first_ctx:,} tokens of context on the first call, expected around "
             f"{want_ctx:,} from the history handed over)"
         )

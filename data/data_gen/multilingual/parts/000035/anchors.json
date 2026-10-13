@@ -4,7 +4,7 @@
       "en": "Fee Calculator",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [2, 3, 8, 9, 10],
+      "requests": [2, 3, 8, 9, 10],
       "translations": {
         "zh": "费用计算器",
         "he": "מחשבון עמלות",
@@ -17,7 +17,7 @@
       "en": "Trade Ledger",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [3, 4, 5, 6, 9],
+      "requests": [3, 4, 5, 6, 9],
       "translations": {
         "zh": "交易账本",
         "he": "יומן עסקאות",
@@ -30,7 +30,7 @@
       "en": "Payout Center",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [4, 5, 10],
+      "requests": [4, 5, 10],
       "translations": {
         "zh": "提现中心",
         "he": "מרכז התשלומים",
@@ -43,7 +43,7 @@
       "en": "Leaderboard",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [5, 7, 9],
+      "requests": [5, 7, 9],
       "translations": {
         "zh": "排行榜",
         "he": "לוח המובילים",
@@ -56,7 +56,7 @@
       "en": "Practice Mode",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [6, 10],
+      "requests": [6, 10],
       "translations": {
         "zh": "练习模式",
         "he": "מצב תרגול",
@@ -69,7 +69,7 @@
       "en": "Offer Screener",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [7, 8, 9],
+      "requests": [7, 8, 9],
       "translations": {
         "zh": "报价筛选器",
         "he": "מסנן הצעות",
@@ -82,7 +82,7 @@
       "en": "Seller Statements",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [10],
+      "requests": [10],
       "translations": {
         "zh": "卖家结算单",
         "he": "דוחות מוכר",
@@ -95,7 +95,7 @@
       "en": "Negotiate",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [8],
+      "requests": [8],
       "translations": {
         "zh": "议价",
         "he": "משא ומתן",
@@ -108,7 +108,7 @@
       "en": "In Escrow",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [3, 4, 5, 6, 9, 10],
+      "requests": [3, 4, 5, 6, 9, 10],
       "translations": {
         "zh": "托管中",
         "he": "בנאמנות",
@@ -121,7 +121,7 @@
       "en": "Released",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [3, 4, 5, 10],
+      "requests": [3, 4, 5, 10],
       "translations": {
         "zh": "已放行",
         "he": "שוחרר",
@@ -134,7 +134,7 @@
       "en": "Refunded",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [3, 4, 5],
+      "requests": [3, 4, 5],
       "translations": {
         "zh": "已退款",
         "he": "הוחזר",
@@ -147,7 +147,7 @@
       "en": "Disputed",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [3, 4, 5, 6, 9, 10],
+      "requests": [3, 4, 5, 6, 9, 10],
       "translations": {
         "zh": "有争议",
         "he": "במחלוקת",
@@ -160,7 +160,7 @@
       "en": "disputed",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [1],
+      "requests": [1],
       "translations": {
         "zh": "有争议",
         "he": "במחלוקת",
@@ -173,7 +173,7 @@
       "en": "lifetime earned",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [4, 5, 10],
+      "requests": [4, 5, 10],
       "translations": {
         "zh": "累计收入",
         "he": "רווח מצטבר",
@@ -186,7 +186,7 @@
       "en": "available balance",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [4, 5],
+      "requests": [4, 5],
       "translations": {
         "zh": "可用余额",
         "he": "יתרה זמינה",
@@ -199,7 +199,7 @@
       "en": "total released volume",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [3, 4, 6, 9],
+      "requests": [3, 4, 6, 9],
       "translations": {
         "zh": "已放行总额",
         "he": "סך הנפח ששוחרר",
@@ -212,7 +212,7 @@
       "en": "locked in escrow",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [3],
+      "requests": [3],
       "translations": {
         "zh": "托管锁定金额",
         "he": "נעול בנאמנות",
@@ -225,7 +225,7 @@
       "en": "locked-in-escrow",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [3, 6],
+      "requests": [3, 6],
       "translations": {
         "zh": "托管锁定金额",
         "he": "נעול בנאמנות",
@@ -238,7 +238,7 @@
       "en": "per-seller breakdown",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [3],
+      "requests": [3],
       "translations": {
         "zh": "各卖家明细",
         "he": "פילוח לפי מוכר",
@@ -251,7 +251,7 @@
       "en": "minimum reputation",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [7, 9],
+      "requests": [7, 9],
       "translations": {
         "zh": "最低信誉分",
         "he": "מוניטין מינימלי",
@@ -264,7 +264,7 @@
       "en": "max price",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [7],
+      "requests": [7],
       "translations": {
         "zh": "最高价格",
         "he": "מחיר מקסימלי",
@@ -277,7 +277,7 @@
       "en": "proposed price",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [8],
+      "requests": [8],
       "translations": {
         "zh": "提议价格",
         "he": "מחיר מוצע",
@@ -290,7 +290,7 @@
       "en": "Bank Transfer",
       "class": "translate",
       "kind": "content_text",
-      "turns": [7],
+      "requests": [7],
       "translations": {
         "zh": "银行转账",
         "he": "העברה בנקאית",
@@ -303,7 +303,7 @@
       "en": "Cash",
       "class": "translate",
       "kind": "content_text",
-      "turns": [7],
+      "requests": [7],
       "translations": {
         "zh": "现金",
         "he": "מזומן",
@@ -316,7 +316,7 @@
       "en": "Showing X of Y offers",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [7],
+      "requests": [7],
       "translations": {
         "zh": "显示 X 个报价，共 Y 个",
         "he": "מוצגות X מתוך Y הצעות",
@@ -329,7 +329,7 @@
       "en": "Showing 2 of 6 offers",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [7],
+      "requests": [7],
       "translations": {
         "zh": "显示 2 个报价，共 6 个",
         "he": "מוצגות 2 מתוך 6 הצעות",
@@ -342,7 +342,7 @@
       "en": "Showing 4 of 6 offers",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [7],
+      "requests": [7],
       "translations": {
         "zh": "显示 4 个报价，共 6 个",
         "he": "מוצגות 4 מתוך 6 הצעות",
@@ -351,35 +351,35 @@
         "fr": "Affichage de 4 offres sur 6"
       }
     },
-    {"en": "light gray", "class": "keep", "kind": "css_visual", "turns": [1, 2, 9]},
-    {"en": "dark red", "class": "keep", "kind": "css_visual", "turns": [1, 2, 3, 9]},
-    {"en": "amber", "class": "keep", "kind": "css_visual", "turns": [3, 6, 9]},
-    {"en": "green", "class": "keep", "kind": "css_visual", "turns": [3]},
-    {"en": "gray", "class": "keep", "kind": "css_visual", "turns": [3]},
-    {"en": "white", "class": "keep", "kind": "css_visual", "turns": [9]},
-    {"en": "dark charcoal", "class": "keep", "kind": "css_visual", "turns": [9]},
-    {"en": "monospace", "class": "keep", "kind": "tech", "turns": [9]},
-    {"en": "NaN", "class": "keep", "kind": "tech", "turns": [2, 5]},
-    {"en": "USD", "class": "keep", "kind": "value_format", "turns": [2, 3, 8]},
-    {"en": "BTC", "class": "keep", "kind": "value_format", "turns": [2, 3, 6, 7, 8, 10]},
-    {"en": "ETH", "class": "keep", "kind": "value_format", "turns": [2, 3, 6, 7, 10]},
-    {"en": "SOL", "class": "keep", "kind": "value_format", "turns": [2, 3, 6, 7]},
-    {"en": "PayPal", "class": "keep", "kind": "proper_noun", "turns": [7]},
-    {"en": "Dana", "class": "keep", "kind": "proper_noun", "turns": [3]},
-    {"en": "Felix", "class": "keep", "kind": "proper_noun", "turns": [3]},
-    {"en": "Ravi", "class": "keep", "kind": "proper_noun", "turns": [3]},
-    {"en": "Ana", "class": "keep", "kind": "proper_noun", "turns": [3]},
-    {"en": "Marcus", "class": "keep", "kind": "proper_noun", "turns": [3, 4, 5, 7, 8, 10]},
-    {"en": "Lena", "class": "keep", "kind": "proper_noun", "turns": [3, 4, 5, 7, 8, 10]},
-    {"en": "Omar", "class": "keep", "kind": "proper_noun", "turns": [3, 4, 5, 7, 10]},
-    {"en": "Priya", "class": "keep", "kind": "proper_noun", "turns": [3, 5, 7]},
-    {"en": "TX-101", "class": "keep", "kind": "tech", "turns": [3]},
-    {"en": "TX-102", "class": "keep", "kind": "tech", "turns": [3]},
-    {"en": "TX-103", "class": "keep", "kind": "tech", "turns": [3]},
-    {"en": "TX-104", "class": "keep", "kind": "tech", "turns": [3, 5, 9, 10]},
-    {"en": "TX-105", "class": "keep", "kind": "tech", "turns": [3]},
-    {"en": "TX-106", "class": "keep", "kind": "tech", "turns": [3]},
-    {"en": "TX-107", "class": "keep", "kind": "tech", "turns": [3, 5, 9]},
-    {"en": "TX-108", "class": "keep", "kind": "tech", "turns": [3]}
+    {"en": "light gray", "class": "keep", "kind": "css_visual", "requests": [1, 2, 9]},
+    {"en": "dark red", "class": "keep", "kind": "css_visual", "requests": [1, 2, 3, 9]},
+    {"en": "amber", "class": "keep", "kind": "css_visual", "requests": [3, 6, 9]},
+    {"en": "green", "class": "keep", "kind": "css_visual", "requests": [3]},
+    {"en": "gray", "class": "keep", "kind": "css_visual", "requests": [3]},
+    {"en": "white", "class": "keep", "kind": "css_visual", "requests": [9]},
+    {"en": "dark charcoal", "class": "keep", "kind": "css_visual", "requests": [9]},
+    {"en": "monospace", "class": "keep", "kind": "tech", "requests": [9]},
+    {"en": "NaN", "class": "keep", "kind": "tech", "requests": [2, 5]},
+    {"en": "USD", "class": "keep", "kind": "value_format", "requests": [2, 3, 8]},
+    {"en": "BTC", "class": "keep", "kind": "value_format", "requests": [2, 3, 6, 7, 8, 10]},
+    {"en": "ETH", "class": "keep", "kind": "value_format", "requests": [2, 3, 6, 7, 10]},
+    {"en": "SOL", "class": "keep", "kind": "value_format", "requests": [2, 3, 6, 7]},
+    {"en": "PayPal", "class": "keep", "kind": "proper_noun", "requests": [7]},
+    {"en": "Dana", "class": "keep", "kind": "proper_noun", "requests": [3]},
+    {"en": "Felix", "class": "keep", "kind": "proper_noun", "requests": [3]},
+    {"en": "Ravi", "class": "keep", "kind": "proper_noun", "requests": [3]},
+    {"en": "Ana", "class": "keep", "kind": "proper_noun", "requests": [3]},
+    {"en": "Marcus", "class": "keep", "kind": "proper_noun", "requests": [3, 4, 5, 7, 8, 10]},
+    {"en": "Lena", "class": "keep", "kind": "proper_noun", "requests": [3, 4, 5, 7, 8, 10]},
+    {"en": "Omar", "class": "keep", "kind": "proper_noun", "requests": [3, 4, 5, 7, 10]},
+    {"en": "Priya", "class": "keep", "kind": "proper_noun", "requests": [3, 5, 7]},
+    {"en": "TX-101", "class": "keep", "kind": "tech", "requests": [3]},
+    {"en": "TX-102", "class": "keep", "kind": "tech", "requests": [3]},
+    {"en": "TX-103", "class": "keep", "kind": "tech", "requests": [3]},
+    {"en": "TX-104", "class": "keep", "kind": "tech", "requests": [3, 5, 9, 10]},
+    {"en": "TX-105", "class": "keep", "kind": "tech", "requests": [3]},
+    {"en": "TX-106", "class": "keep", "kind": "tech", "requests": [3]},
+    {"en": "TX-107", "class": "keep", "kind": "tech", "requests": [3, 5, 9]},
+    {"en": "TX-108", "class": "keep", "kind": "tech", "requests": [3]}
   ]
 }

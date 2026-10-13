@@ -4,7 +4,7 @@
    "en": "archive",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -23,7 +23,7 @@
    "en": "Review Desk",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6,
     7,
     8
@@ -40,7 +40,7 @@
    "en": "Ask the Community",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     10
    ],
@@ -56,7 +56,7 @@
    "en": "My Feed",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -71,7 +71,7 @@
    "en": "Trending This Week",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -86,7 +86,7 @@
    "en": "This Week in Health",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7
    ],
    "translations": {
@@ -101,7 +101,7 @@
    "en": "engagement dashboard",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -116,7 +116,7 @@
    "en": "digest composer",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7
    ],
    "translations": {
@@ -131,7 +131,7 @@
    "en": "subscribe box",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7,
     9
    ],
@@ -147,7 +147,7 @@
    "en": "discussion board",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4
    ],
    "translations": {
@@ -162,7 +162,7 @@
    "en": "community landing page",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     9
    ],
@@ -178,7 +178,7 @@
    "en": "reviewed-only",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     4,
     6
@@ -195,7 +195,7 @@
    "en": "maximum read time",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3
    ],
@@ -211,7 +211,7 @@
    "en": "score cutoff",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -226,7 +226,7 @@
    "en": "Medically Reviewed",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     6,
@@ -245,7 +245,7 @@
    "en": "Editorial",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     6,
@@ -265,7 +265,7 @@
    "en": "min read",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     7
@@ -282,7 +282,7 @@
    "en": "Showing X of 8 articles",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2
    ],
    "translations": {
@@ -297,7 +297,7 @@
    "en": "Showing 2 of 8 articles",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     4
    ],
@@ -313,7 +313,7 @@
    "en": "Following",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -328,7 +328,7 @@
    "en": "Quiz pick",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -343,7 +343,7 @@
    "en": "Quiz-pick",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -358,7 +358,7 @@
    "en": "What's your wellness focus?",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3
    ],
    "translations": {
@@ -373,7 +373,7 @@
    "en": "wellness focus",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     5
    ],
@@ -389,7 +389,7 @@
    "en": "Nutrition",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -409,7 +409,7 @@
    "en": "Fitness",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -430,7 +430,7 @@
    "en": "Sleep",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -452,7 +452,7 @@
    "en": "Mind",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -470,7 +470,7 @@
    "en": "Understanding Gut Bacteria",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     4,
     6,
@@ -491,7 +491,7 @@
    "en": "Gut Bacteria",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     4,
     6,
@@ -512,7 +512,7 @@
    "en": "Beginner's Guide to Meal Prep",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     4,
     7,
@@ -530,7 +530,7 @@
    "en": "Meal Prep",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     4,
     7,
@@ -549,7 +549,7 @@
    "en": "Hydration Myths Debunked",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     6,
@@ -567,7 +567,7 @@
    "en": "10-Minute Morning Stretch Routine",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     7,
@@ -585,7 +585,7 @@
    "en": "Strength Training After 50",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     7
@@ -602,7 +602,7 @@
    "en": "The Science of Cold Showers",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     3,
     6
@@ -619,7 +619,7 @@
    "en": "Sleep Debt: Myth or Real?",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     6,
     8,
@@ -638,7 +638,7 @@
    "en": "Managing Stress at Work",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     6,
     7,
@@ -656,7 +656,7 @@
    "en": "Best protein sources for vegetarians?",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     4
    ],
    "translations": {
@@ -671,7 +671,7 @@
    "en": "Is intermittent fasting safe?",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     4
    ],
    "translations": {
@@ -686,7 +686,7 @@
    "en": "Knee pain after running",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     4,
     5,
     7,
@@ -705,7 +705,7 @@
    "en": "Can't fall asleep before 2am",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     4,
     5
    ],
@@ -721,7 +721,7 @@
    "en": "My knee hurts after every workout and my sleep is a mess",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     5,
     10
    ],
@@ -737,7 +737,7 @@
    "en": "Does stress ruin sleep?",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     5
    ],
    "translations": {
@@ -752,7 +752,7 @@
    "en": "How much protein do I need",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     5
    ],
    "translations": {
@@ -767,7 +767,7 @@
    "en": "Is a short nap good for sleep debt?",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     5
    ],
    "translations": {
@@ -782,7 +782,7 @@
    "en": "protein",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     4,
     5
    ],
@@ -798,7 +798,7 @@
    "en": "workout",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     5,
     10
    ],
@@ -814,7 +814,7 @@
    "en": "knee",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     5,
     10
    ],
@@ -830,7 +830,7 @@
    "en": "sleep",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     5,
     10
    ],
@@ -846,7 +846,7 @@
    "en": "stress",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     5
    ],
    "translations": {
@@ -861,7 +861,7 @@
    "en": "nap",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     5
    ],
    "translations": {
@@ -876,7 +876,7 @@
    "en": "Great tips, thanks!",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2
    ],
    "translations": {
@@ -891,7 +891,7 @@
    "en": "Try foam rolling",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     4,
     7
    ],
@@ -907,7 +907,7 @@
    "en": "Same here",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -922,7 +922,7 @@
    "en": "Sam Wexler",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     6
    ]
@@ -931,7 +931,7 @@
    "en": "Lena Ortiz",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     6
    ]
@@ -940,7 +940,7 @@
    "en": "misty rose",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1,
     9
    ]
@@ -949,7 +949,7 @@
    "en": "firebrick",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1
    ]
   },
@@ -957,7 +957,7 @@
    "en": "sam@wellness.com",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     7,
     9
    ]

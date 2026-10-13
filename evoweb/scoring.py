@@ -1,4 +1,4 @@
-"""EvoWeb turn scoring: the metric arithmetic and the error classification behind it.
+"""EvoWeb request scoring: the metric arithmetic and the error classification behind it.
 
 This module is the single definition of the arithmetic. The harness (`harness/scoring.py`, a
 byte-identical copy that it imports at run time) and the analysis code in `evoweb/` both use it, so
@@ -6,37 +6,38 @@ a run and a re-score of its traces cannot disagree. Do not re-implement any of i
 
 THE CONVENTION
 --------------
-A turn's score is always ``(yes + 0.5*partial) / tasks``. What differs between metrics is only which
-turns are counted and what a non-scoring turn contributes.
+A request's score is always ``(yes + 0.5*partial) / tasks``. What differs between metrics is only
+which requests are counted and what a non-scoring request contributes.
 
-``raw`` -- **survivor**: mean over turns that actually produced a verdict. Errored and gated turns are
-    excluded, not zeroed. Answers *"when it ran, how good was it?"*.
+``raw`` -- **survivor**: mean over requests that actually produced a verdict. Errored and gated
+    requests are excluded, not zeroed. Answers *"when it ran, how good was it?"*.
 
-``delivered`` -- **normalised**: an errored **or** gated turn contributes **0**, over the full expected
-    denominator (``samples * tasks_per_turn``). Answers *"how much of the expected work actually
-    shipped?"*. Gate-faithful by construction: once a ladder dies its later turns are absent and
+``delivered`` -- **normalised**: an errored **or** gated request contributes **0**, over the full expected
+    denominator (``samples * tasks_per_request``). Answers *"how much of the expected work actually
+    shipped?"*. Gate-faithful by construction: once a ladder dies its later requests are absent and
     therefore score 0.
 
 ``norm`` -- the same quantity written as ``raw * evaluated / samples``, where ``evaluated`` counts the
-    turns that produced a verdict (errored turns are NOT evaluated: they delivered nothing). With a
+    requests that produced a verdict (errored requests are NOT evaluated: they delivered nothing). With a
     uniform task count this is algebraically identical to ``delivered``. ``norm`` is the number the
     paper's Q(t) reads (``score_ladders(...)["avg_norm"]`` in `evoweb/metrics.py`); ``legacy_norm``
-    keeps an older definition that counted errored turns as evaluated, for reconciling old logs only.
+    keeps an older definition that counted errored requests as evaluated, for reconciling old logs only.
 
-Infra censoring (``censor_infra=True``): a turn that failed for infrastructure reasons (connection
+Infra censoring (``censor_infra=True``): a request that failed for infrastructure reasons (connection
     reset, read timeout, provider rate limit) is not evidence about the model, so it is dropped from
-    every metric -- as are that ladder's later turns, which the model never got to attempt. Callers
-    may supply the classification via ``infra_turns``; by default it is read from each turn's recorded
+    every metric -- as are that ladder's later requests, which the model never got to attempt. Callers
+    may supply the classification via ``infra_requests``; by default it is read from each request's recorded
     ``error_class`` (see the error classification section).
 
 VARIABLE TASK COUNTS
 --------------------
-Follow-up turns (T2+) carry exactly 5 validation tasks each, but **turn 1 (the original WebGen-Bench
-build) does not**: observed counts range 4-11 per app (mode 6, mean ~6.4). So ``delivered`` must
-never use ``samples * 5``; it takes an explicit ``expected_tasks`` denominator. A gated or errored
-turn logged no task count, so the aggregator infers the missing ones from the median observed count
-for that turn unless the caller supplies ``tasks_per_turn`` (safe only for T2+) or ``expected_tasks``
-(always preferred -- e.g. from the dataset's ``ui_instruct`` lengths via ``load_expected_tasks``).
+Follow-up requests (2+) carry exactly 5 validation tasks each, but **request 1 (the original
+WebGen-Bench build) does not**: observed counts range 4-11 per app (mode 6, mean ~6.4). So
+``delivered`` must never use ``samples * 5``; it takes an explicit ``expected_tasks`` denominator. A
+gated or errored request logged no task count, so the aggregator infers the missing ones from the
+median observed count for that request unless the caller supplies ``tasks_per_request`` (safe only
+for requests 2+) or ``expected_tasks`` (always preferred -- e.g. from the dataset's ``ui_instruct``
+lengths via ``load_expected_tasks``).
 """
 
 from __future__ import annotations
@@ -50,17 +51,17 @@ from pathlib import Path
 # Status vocabulary
 # ---------------------------------------------------------------------------
 
-# Turn status values that mean "this turn was never attempted": the harness writes "skipped" for
-# the turns after a ladder died, and the offline gate replay (evoweb/metrics.py) writes the same.
+# Request status values that mean "this request was never attempted": the harness writes "skipped"
+# for the requests after a ladder died, and the offline gate replay (evoweb/metrics.py) writes the same.
 GATED_STATUSES = ("skipped",)
 
-# Validation tasks per follow-up turn; the fallback when nothing observed can tell us.
-DEFAULT_TASKS_PER_TURN = 5
+# Validation tasks per follow-up request; the fallback when nothing observed can tell us.
+DEFAULT_TASKS_PER_REQUEST = 5
 
 # ---------------------------------------------------------------------------
 # Error classification
 # ---------------------------------------------------------------------------
-# A turn that failed tells you nothing about the model unless you know WHY it failed. The harness
+# A request that failed tells you nothing about the model unless you know WHY it failed. The harness
 # classifies at failure time, with the exception in hand, and records the class in result.json as
 # `error_class`; grepping logs afterwards is the fallback for runs that predate that. INFRA_CLASSES
 # are censored from metrics; MODEL_CLASSES count as real failures.
@@ -89,7 +90,7 @@ TRANSIENT_INFRA = ("provider_overloaded", "provider_rate_limit", "provider_conne
 
 # Matched against the lowercased exception text or log line; order matters (first hit wins).
 # Needles must not be words an app spec, a prompt or a judge transcript could plausibly contain:
-# a false infra hit censors the turn, which deletes a real model failure and inflates the score.
+# a false infra hit censors the request, which deletes a real model failure and inflates the score.
 _ERROR_PATTERNS = (
     ("model_repetition", ("repeating the same chunk",)),
     (
@@ -217,7 +218,7 @@ _TRANSCRIPT_MARKERS = (
 #   `exception_mapping_utils.py, line 402`-> 402  (a traceback line number, on every container)
 #   `22:24:53,401 - INFO - Iter: 3`       -> 401  (log timestamp milliseconds, on a CLEAN run)
 # That last one reports a healthy run as a fatal auth failure, which is the worst direction of
-# error: a false infra hit censors the turn, deleting a real model failure and inflating the
+# error: a false infra hit censors the request, deleting a real model failure and inflating the
 # model's score. Textual needles ("payment required", "rate limit", "too many requests",
 # "overloaded") already carry every real case, so the numeric codes are pure backup and are allowed
 # to be conservative.
@@ -258,7 +259,7 @@ def classify_error(text: str | None) -> str:
 
 
 def classify_from_log(text: str | None) -> str:
-    """Attribute a turn's failure from its full log, for runs that predate `error_class` recording.
+    """Attribute a request's failure from its full log, for runs that predate `error_class` recording.
 
     NOT the same as classify_error(text): a raw log holds prompt echoes, UI specs and judge
     transcripts, so it must go through scan_log's line filters (transcript markers, numeric-context
@@ -338,7 +339,7 @@ def triage(hits: dict[str, dict]) -> tuple[str, str | None]:
         "clean"     -- nothing found (dominant_class is None)
 
     Precedence here is deliberately NOT the same as classify_from_log's. That one answers a
-    scoring question -- "who is to blame for this turn?" -- and puts model first so a wrapper
+    scoring question -- "who is to blame for this request?" -- and puts model first so a wrapper
     exception cannot let a bad model off the hook. triage answers an operations question -- "is it
     worth launching more?" -- and puts fatal first, because a dead key blocks every sample
     regardless of how any one of them happened to fail.
@@ -365,12 +366,12 @@ def triage(hits: dict[str, dict]) -> tuple[str, str | None]:
 
 
 def load_expected_tasks(jsonl_path: str | Path) -> dict[int, dict[int, int]]:
-    """Exact validation-task counts from a dataset jsonl -> {sample_index: {turn: n_tasks}}.
+    """Exact validation-task counts from a dataset jsonl -> {sample_index: {request: n_tasks}}.
 
     The sample index is the 1-based line number of the row (that is how runs name their apps).
-    Turn 1 is ``len(ui_instruct)`` (VARIABLE: 4-11 observed) and turn k+1 is
+    Request 1 is ``len(ui_instruct)`` (VARIABLE: 4-11 observed) and request k+1 is
     ``len(follow_ups[k-1]["ui_instruct"])``. Prefer this over any inferred denominator: a gated
-    or errored turn records no task count of its own, and guessing one biases `delivered`.
+    or errored request records no task count of its own, and guessing one biases `delivered`.
     """
     expected: dict[int, dict[int, int]] = {}
     with open(jsonl_path, encoding="utf-8") as fh:
@@ -382,15 +383,15 @@ def load_expected_tasks(jsonl_path: str | Path) -> dict[int, dict[int, int]]:
                 row = json.loads(line)
             except Exception:
                 continue
-            per_turn = {1: len(row.get("ui_instruct") or [])}
+            per_request = {1: len(row.get("ui_instruct") or [])}
             for k, fu in enumerate(row.get("follow_ups") or [], start=2):
-                per_turn[k] = len(fu.get("ui_instruct") or [])
-            expected[idx] = per_turn
+                per_request[k] = len(fu.get("ui_instruct") or [])
+            expected[idx] = per_request
     return expected
 
 
 # ---------------------------------------------------------------------------
-# Per-turn arithmetic
+# Per-request arithmetic
 # ---------------------------------------------------------------------------
 
 
@@ -400,11 +401,11 @@ def raw_pct(yes: float, partial: float, tasks: int) -> float:
 
 
 def delivered_pct(yes: float, partial: float, expected_tasks: float) -> float:
-    """Normalised score (percent): errored and gated turns contribute 0.
+    """Normalised score (percent): errored and gated requests contribute 0.
 
-    `expected_tasks` is the number of validation tasks the turn *should* have produced across all
-    samples -- NOT samples * 5. Turn 1 has a variable number of tasks per app (observed 4-11,
-    mode 6), so a fixed multiplier is wrong there. Follow-up turns (T2+) happen to be uniformly 5,
+    `expected_tasks` is the number of validation tasks the request *should* have produced across all
+    samples -- NOT samples * 5. Request 1 has a variable number of tasks per app (observed 4-11,
+    mode 6), so a fixed multiplier is wrong there. Follow-up requests (2+) happen to be uniformly 5,
     but callers must still pass the expected count.
     """
     return (yes + 0.5 * partial) / expected_tasks * 100.0 if expected_tasks else 0.0
@@ -413,33 +414,33 @@ def delivered_pct(yes: float, partial: float, expected_tasks: float) -> float:
 def norm_pct(raw: float, evaluated: int, n_samples: int) -> float:
     """``raw`` scaled by the share of samples that produced a verdict: ``raw * evaluated / n``.
 
-    Equal to `delivered_pct` when every sample has the same task count. `aggregate_turn` passes
-    ``evaluated = scored`` (errored turns excluded); passing ``scored + errored`` instead gives the
+    Equal to `delivered_pct` when every sample has the same task count. `aggregate_request` passes
+    ``evaluated = scored`` (errored requests excluded); passing ``scored + errored`` instead gives the
     older ``legacy_norm``, which flatters error-prone models.
     """
     return raw * evaluated / n_samples if n_samples else 0.0
 
 
-def turn_score(turn: dict | None) -> float | None:
-    """Score (percent) for one turn dict, or None if it produced no verdict.
+def request_score(request: dict | None) -> float | None:
+    """Score (percent) for one request dict, or None if it produced no verdict.
 
-    None covers gated turns, errored turns and pre-eval failures -- anything without tasks.
+    None covers gated requests, errored requests and pre-eval failures -- anything without tasks.
     """
-    if not turn:
+    if not request:
         return None
-    if (turn.get("total") or 0) <= 0:
+    if (request.get("total") or 0) <= 0:
         return None
-    return (turn.get("yes", 0) + 0.5 * turn.get("partial", 0)) / turn["total"] * 100.0
+    return (request.get("yes", 0) + 0.5 * request.get("partial", 0)) / request["total"] * 100.0
 
 
-def classify_turn(turn: dict | None) -> str:
-    """Kind of one turn dict: 'scored' | 'gated' | 'errored' | 'absent' (None or empty)."""
-    if not turn:
+def classify_request(request: dict | None) -> str:
+    """Kind of one request dict: 'scored' | 'gated' | 'errored' | 'absent' (None or empty)."""
+    if not request:
         return "absent"
-    status = turn.get("status", "success")
+    status = request.get("status", "success")
     if status in GATED_STATUSES:
         return "gated"
-    if (turn.get("total") or 0) > 0:
+    if (request.get("total") or 0) > 0:
         return "scored"
     return "errored"
 
@@ -449,20 +450,20 @@ def classify_turn(turn: dict | None) -> str:
 # ---------------------------------------------------------------------------
 
 
-def aggregate_turn(
+def aggregate_request(
     entries: Iterable[dict | None],
-    tasks_per_turn: int | None = None,
+    tasks_per_request: int | None = None,
     n_samples: int | None = None,
     expected_tasks: float | None = None,
 ) -> dict:
-    """Aggregate one turn across samples.
+    """Aggregate one request across samples.
 
-    entries : per-sample turn dicts (or None where the sample has no such turn)
+    entries : per-sample request dicts (or None where the sample has no such request)
     n_samples : denominator for `norm`; defaults to len(entries)
-    expected_tasks : total tasks the turn should have produced. If omitted it is inferred as
-        observed_tasks + missing_turns * (median observed tasks per sample) -- necessary because a
-        gated/errored turn records no task count, and turn 1 task counts are VARIABLE (4-11).
-        Pass `tasks_per_turn` only for turns known to be uniform (T2+ are all 5).
+    expected_tasks : total tasks the request should have produced. If omitted it is inferred as
+        observed_tasks + missing_requests * (median observed tasks per sample) -- necessary because a
+        gated/errored request records no task count, and request 1 task counts are VARIABLE (4-11).
+        Pass `tasks_per_request` only for requests known to be uniform (2+ are all 5).
 
     Returns a dict with the counts ("samples", "scored", "gated", "errored", "evaluated", "yes",
     "partial", "no", "tasks", "expected_tasks") and the percentages ("raw", "delivered", "norm",
@@ -474,7 +475,7 @@ def aggregate_turn(
     yes = partial = no = tasks = 0
     scored = gated = errored = 0
     for e in entries:
-        kind = classify_turn(e)
+        kind = classify_request(e)
         if kind == "absent":
             continue
         if kind == "gated":
@@ -489,22 +490,22 @@ def aggregate_turn(
         no += e.get("no", 0)
         tasks += e.get("total", 0) or 0
 
-    # An errored turn delivered nothing, so it is NOT `evaluated`. legacy_norm keeps the older
+    # An errored request delivered nothing, so it is NOT `evaluated`. legacy_norm keeps the older
     # value that counted it, so old logs can still be reconciled.
     evaluated = scored
     raw = raw_pct(yes, partial, tasks)
 
-    # Expected-task denominator. A gated/errored turn logs no task count, and turn 1 counts vary per
-    # sample, so infer the missing ones from the observed median rather than assuming a constant.
+    # Expected-task denominator. A gated/errored request logs no task count, and request 1 counts vary
+    # per sample, so infer the missing ones from the observed median rather than assuming a constant.
     missing = gated + errored
     if expected_tasks is None:
-        if tasks_per_turn is not None:
-            expected_tasks = (scored + missing) * tasks_per_turn
+        if tasks_per_request is not None:
+            expected_tasks = (scored + missing) * tasks_per_request
         else:
             per_sample = sorted(
-                e.get("total", 0) or 0 for e in entries if classify_turn(e) == "scored"
+                e.get("total", 0) or 0 for e in entries if classify_request(e) == "scored"
             )
-            med = per_sample[len(per_sample) // 2] if per_sample else DEFAULT_TASKS_PER_TURN
+            med = per_sample[len(per_sample) // 2] if per_sample else DEFAULT_TASKS_PER_REQUEST
             expected_tasks = tasks + missing * med
     delivered = delivered_pct(yes, partial, expected_tasks)
     norm = norm_pct(raw, evaluated, n) if tasks else 0.0
@@ -530,65 +531,65 @@ def aggregate_turn(
 
 def score_ladders(
     ladders: dict,
-    turns: Iterable[int],
-    tasks_per_turn: int | None = None,
-    infra_turns: set[tuple] | None = None,
+    requests: Iterable[int],
+    tasks_per_request: int | None = None,
+    infra_requests: set[tuple] | None = None,
     censor_infra: bool = False,
     expected_by_sample: dict | None = None,
 ) -> dict:
     """Score a whole run.
 
-    ladders : {sample_id: {turn_number: turn_dict}}
-    turns   : ordered turn numbers to report (e.g. (2, 3, 4) or range(2, 11))
-    infra_turns : set of (sample_id, turn_number) whose failure was infrastructure-caused. Omit it
-        and they are derived from each turn's recorded ``error_class`` (falling back to
+    ladders : {sample_id: {request_number: request_dict}}
+    requests : ordered request numbers to report (e.g. (2, 3, 4) or range(2, 11))
+    infra_requests : set of (sample_id, request_number) whose failure was infrastructure-caused. Omit it
+        and they are derived from each request's recorded ``error_class`` (falling back to
         classify_error on its ``error`` / ``error_detail`` text).
-    censor_infra : drop those turns AND that ladder's later turns from every metric
-    expected_by_sample : {sample_id: {turn: n_tasks}} from load_expected_tasks() -- EXACT
-        denominators for `delivered`. Strongly preferred: without it a gated/errored turn's task
-        count has to be inferred, which is wrong wherever counts vary per sample (turn 1: 4-11).
+    censor_infra : drop those requests AND that ladder's later requests from every metric
+    expected_by_sample : {sample_id: {request: n_tasks}} from load_expected_tasks() -- EXACT
+        denominators for `delivered`. Strongly preferred: without it a gated/errored request's task
+        count has to be inferred, which is wrong wherever counts vary per sample (request 1: 4-11).
 
-    Returns {"total_samples", "turns": {t: aggregate_turn(...)}, "censored_turns",
+    Returns {"total_samples", "turns": {t: aggregate_request(...)}, "censored_turns",
              "error_classes": {class: n}, "infra_errors", "model_errors",
-             "avg_raw", "avg_delivered", "avg_norm"} (the averages are means over `turns`).
+             "avg_raw", "avg_delivered", "avg_norm"} (the averages are means over `requests`).
     """
-    turns = list(turns)
+    requests = list(requests)
     censored = 0
-    if infra_turns is None:
+    if infra_requests is None:
         # Prefer the classification recorded at failure time; fall back to any error text present.
-        infra_turns = set()
-        for sid, by_turn in ladders.items():
-            for t in turns:
-                e = by_turn.get(t) or {}
-                if classify_turn(e) != "errored":
+        infra_requests = set()
+        for sid, by_request in ladders.items():
+            for t in requests:
+                e = by_request.get(t) or {}
+                if classify_request(e) != "errored":
                     continue
                 cls = e.get("error_class") or classify_error(
                     e.get("error") or e.get("error_detail")
                 )
                 if is_infra(cls):
-                    infra_turns.add((sid, t))
+                    infra_requests.add((sid, t))
 
     per_sample = {}
-    for sid, by_turn in ladders.items():
+    for sid, by_request in ladders.items():
         censor_from = None
         if censor_infra:
-            for t in turns:
-                if (sid, t) in infra_turns and classify_turn(by_turn.get(t)) == "errored":
+            for t in requests:
+                if (sid, t) in infra_requests and classify_request(by_request.get(t)) == "errored":
                     censor_from = t
                     break
         kept = {}
-        for t in turns:
+        for t in requests:
             if censor_from is not None and t >= censor_from:
                 censored += 1
                 continue
-            kept[t] = by_turn.get(t)
+            kept[t] = by_request.get(t)
         per_sample[sid] = kept
 
     # a censored ladder must not inflate the delivered/norm denominator either
-    n_by_turn = {t: sum(1 for v in per_sample.values() if t in v) for t in turns}
+    n_by_request = {t: sum(1 for v in per_sample.values() if t in v) for t in requests}
 
     out, raws, delivs, norms = {}, [], [], []
-    for t in turns:
+    for t in requests:
         exp_total = None
         if expected_by_sample:
             counts = [
@@ -596,10 +597,10 @@ def score_ladders(
             ]
             if any(c is not None for c in counts):
                 exp_total = sum(c for c in counts if c is not None)
-        agg = aggregate_turn(
+        agg = aggregate_request(
             [v.get(t) for v in per_sample.values() if t in v],
-            tasks_per_turn=tasks_per_turn,
-            n_samples=n_by_turn[t],
+            tasks_per_request=tasks_per_request,
+            n_samples=n_by_request[t],
             expected_tasks=exp_total,
         )
         out[t] = agg
@@ -609,10 +610,10 @@ def score_ladders(
 
     mean = lambda xs: sum(xs) / len(xs) if xs else 0.0  # noqa: E731
     error_classes: dict[str, int] = {}
-    for by_turn in ladders.values():
-        for t in turns:
-            e = by_turn.get(t) or {}
-            if classify_turn(e) != "errored":
+    for by_request in ladders.values():
+        for t in requests:
+            e = by_request.get(t) or {}
+            if classify_request(e) != "errored":
                 continue
             cls = e.get("error_class") or classify_error(e.get("error") or e.get("error_detail"))
             error_classes[cls] = error_classes.get(cls, 0) + 1
@@ -637,19 +638,19 @@ def score_ladders(
 
 
 def ladder_from_result(result: dict) -> dict:
-    """Normalise a sample's result.json into {turn_number: turn_dict}, whichever shape it uses.
+    """Normalise a sample's result.json into {request_number: request_dict}, whichever shape it uses.
 
     Two shapes exist:
-      * multi-turn samples put per-turn dicts in ``result["turns"]``
-      * SINGLE-TURN samples (a dataset row with no ``follow_ups``) leave ``turns`` empty and put the
+      * multi-request samples put per-request dicts in ``result["turns"]``
+      * SINGLE-REQUEST samples (a dataset row with no ``follow_ups``) leave ``turns`` empty and put the
         verdict at the ROOT (``yes``/``partial``/``no``/``total``/``accuracy``), with a flat
         ``generation/`` + ``eval/`` artifact layout instead of ``turn1/...``.
-    Without this, every single-turn sample scores as absent -- silently dropping the original
-    WebGen-Bench (turn-1-only) numbers from any aggregate. Returns {} when neither shape is present.
+    Without this, every single-request sample scores as absent -- silently dropping the original
+    WebGen-Bench (request-1-only) numbers from any aggregate. Returns {} when neither shape is present.
     """
-    turns = {t.get("turn"): t for t in (result.get("turns") or []) if t.get("turn") is not None}
-    if turns:
-        return turns
+    requests = {t.get("turn"): t for t in (result.get("turns") or []) if t.get("turn") is not None}
+    if requests:
+        return requests
     if (result.get("total") or 0) > 0:
         return {
             1: {

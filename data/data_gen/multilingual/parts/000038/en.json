@@ -130,8 +130,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 1,
+     "kind": "backward",
+     "copied_from_request": 1,
      "task": "Perform a search for apartments using a specific location keyword.",
      "expected_result": "A list of apartments relevant to the search keyword is displayed.",
      "task_category": {
@@ -196,8 +196,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "On the fit ranker, click the Pet-friendly chip, click the Budget chip, and type 130 into the nightly budget box.",
      "expected_result": "All seven listings stay on screen — nothing gets hidden — with the line reading 3 top fits of 7: Dockside Nook · Old Port, Garden Studio · Midtown, and Willow Walk-up · Riverside rank on top, each scored Fit 3/5, the $95 tie putting Dockside before Garden alphabetically, while Sunset Flat · Old Port sits last at Fit 0/5.",
      "task_category": {
@@ -265,8 +265,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "Open the trip cost estimator, pick Cedar Corner, and type Sep 1 2026 as check-in and Sep 8 2026 as check-out.",
      "expected_result": "It shows 7 nights with a $1,260 nightly subtotal, a $126 long-stay discount taken off, a $60 cleaning fee, a $131 service fee, and a $1,325 total — not 8 nights, and not a total missing the discount.",
      "task_category": {
@@ -334,8 +334,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "On the fit ranker, with no chips picked, type 100 into the nightly budget box.",
      "expected_result": "All seven listings stay visible; Dockside Nook · Old Port and Garden Studio · Midtown move to the top each scored Fit 1/1, the line reads 2 top fits of 7, and the rest follow in price low-to-high order with Maple Suite before Willow Walk-up on the $120 tie.",
      "task_category": {
@@ -404,8 +404,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 5,
+     "kind": "backward",
+     "copied_from_request": 5,
      "task": "Open Harbor Loft's listing page and look at its August 2026 availability calendar.",
      "expected_result": "Exactly four nights are blocked — Aug 10, 11, 12, and 13 — while Aug 14 is still open, because that's the checkout day.",
      "task_category": {
@@ -473,8 +473,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 4,
+     "kind": "backward",
+     "copied_from_request": 4,
      "task": "Open the host inbox and look at Priya's request for Sunset Flat.",
      "expected_result": "The row reads Aug 12 → Aug 15 with 3 nights and a $435 nightly subtotal (3 × $145), carrying an amber Pending badge — not 4 nights or $580.",
      "task_category": {
@@ -542,8 +542,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 5,
+     "kind": "backward",
+     "copied_from_request": 5,
      "task": "On Harbor Loft's listing page, try to book Aug 8 2026 to Aug 12 2026.",
      "expected_result": "The booking is stopped with a message about unavailable nights; no booking is created and the page does not crash.",
      "task_category": {
@@ -611,8 +611,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 7,
+     "kind": "backward",
+     "copied_from_request": 7,
      "task": "Open the shortlist page, where Willow Walk-up starts out saved, and type Sep 1 2026 to Sep 6 2026 as the trip dates.",
      "expected_result": "Willow Walk-up · Riverside shows a $733 total — $600 for 5 nights plus the $60 cleaning fee plus a $73 service fee, with $72.60 rounded up to $73, not a $732 total.",
      "task_category": {
@@ -680,8 +680,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "On the fit ranker, click only the Waterfront chip, then click it again to turn it off.",
      "expected_result": "With the chip on, all seven listings remain visible, the line reads 3 top fits of 7, and Dockside Nook, Harbor Loft, and Sunset Flat rise to the top each scored Fit 2/2, Harbor before Sunset on the $145 price tie; turning the chip off drops the scores, returns the plain 7 stays line, and leaves the grid in price low-to-high order.",
      "task_category": {
@@ -699,130 +699,130 @@
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "seeded catalog fit ranker",
     "archetype": "derived-state"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "trip cost estimator",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "booking request pipeline",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "availability calendars",
     "archetype": "derived-state"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "warm cross-page restyle",
     "archetype": "design-restyle"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "shortlist and compare",
     "archetype": "derived-state"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "multi-stop trip planner",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "neighborhood insights",
     "archetype": "derived-state"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "flexible-stay finder",
     "archetype": "interactive-tool"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T4",
+    "from": "R1",
+    "to": "R4",
     "what": "base booking flow and records extended with request statuses"
    },
    {
-    "from": "T4",
-    "to": "T5",
+    "from": "R4",
+    "to": "R5",
     "what": "confirmed bookings block calendar nights"
    },
    {
-    "from": "T1",
-    "to": "T5",
+    "from": "R1",
+    "to": "R5",
     "what": "calendar gates the base booking date selection"
    },
    {
-    "from": "T1",
-    "to": "T6",
+    "from": "R1",
+    "to": "R6",
     "what": "restyles base browse and booking records pages"
    },
    {
-    "from": "T2",
-    "to": "T6",
+    "from": "R2",
+    "to": "R6",
     "what": "restyles fit ranker chips and cards"
    },
    {
-    "from": "T3",
-    "to": "T6",
+    "from": "R3",
+    "to": "R6",
     "what": "restyles estimator page"
    },
    {
-    "from": "T4",
-    "to": "T6",
+    "from": "R4",
+    "to": "R6",
     "what": "restyles host inbox status badges"
    },
    {
-    "from": "T5",
-    "to": "T6",
+    "from": "R5",
+    "to": "R6",
     "what": "restyles listing calendar pages"
    },
    {
-    "from": "T2",
-    "to": "T7",
+    "from": "R2",
+    "to": "R7",
     "what": "save toggle lives on fit ranker result cards"
    },
    {
-    "from": "T3",
-    "to": "T7",
+    "from": "R3",
+    "to": "R7",
     "what": "compare totals reuse estimator fee math"
    },
    {
-    "from": "T7",
-    "to": "T8",
+    "from": "R7",
+    "to": "R8",
     "what": "planner stops are picked from the shortlist"
    },
    {
-    "from": "T5",
-    "to": "T8",
+    "from": "R5",
+    "to": "R8",
     "what": "stop dates validated against availability calendars"
    },
    {
-    "from": "T3",
-    "to": "T8",
+    "from": "R3",
+    "to": "R8",
     "what": "stop breakdowns use estimator pricing"
    },
    {
-    "from": "T4",
-    "to": "T9",
+    "from": "R4",
+    "to": "R9",
     "what": "confirmed-stay counts come from inbox statuses"
    },
    {
-    "from": "T5",
-    "to": "T10",
+    "from": "R5",
+    "to": "R10",
     "what": "gap search runs over calendar blocked nights"
    }
   ]
@@ -830,20 +830,20 @@
  "global_rules": [
   {
    "rule": "Apartments are always labeled with name and neighborhood together, like 'Harbor Loft · Old Port', on every surface of the app.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Date ranges are always shown as abbreviated month with an arrow, like 'Sep 1 → Sep 8', everywhere in the app.",
-   "introduced_in_turn": 3
+   "introduced_in_request": 3
   },
   {
    "rule": "Declining or cancelling anything always asks for confirmation first, app-wide.",
-   "introduced_in_turn": 4
+   "introduced_in_request": 4
   }
  ],
  "pinned_seed": {
   "entity": "7 apartments",
-  "introduced_in_turn": 2,
+  "introduced_in_request": 2,
   "records_gist": "Harbor Loft/Old Port $145 1bd 4.8 Waterfront+Pet; Garden Studio/Midtown $95 studio 4.6 Pet; Sunset Flat/Old Port $145 2bd 4.4 Waterfront; Maple Suite/Midtown $120 1bd 4.8 Family; Cedar Corner/Riverside $180 3bd 4.9 Family+Pet; Dockside Nook/Old Port $95 studio 4.2 Waterfront+Budget; Willow Walk-up/Riverside $120 2bd 4.6 Budget"
  }
 }

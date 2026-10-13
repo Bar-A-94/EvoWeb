@@ -4,7 +4,7 @@
       "en": "calculator",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [2, 3, 4, 5, 6, 9, 10],
+      "requests": [2, 3, 4, 5, 6, 9, 10],
       "translations": {
         "zh": "计算器",
         "he": "מחשבון",
@@ -17,7 +17,7 @@
       "en": "Basic Arithmetic",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [1, 2],
+      "requests": [1, 2],
       "translations": {
         "zh": "基础算术",
         "he": "אריתמטיקה בסיסית",
@@ -30,7 +30,7 @@
       "en": "Arithmetic",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [2, 5, 6],
+      "requests": [2, 5, 6],
       "translations": {
         "zh": "算术",
         "he": "אריתמטיקה",
@@ -43,7 +43,7 @@
       "en": "ARITHMETIC",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [2, 6],
+      "requests": [2, 6],
       "translations": {
         "zh": "算术",
         "he": "אריתמטיקה",
@@ -56,7 +56,7 @@
       "en": "Scientific",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [2, 5, 6],
+      "requests": [2, 5, 6],
       "translations": {
         "zh": "科学",
         "he": "מדעי",
@@ -69,7 +69,7 @@
       "en": "SCIENTIFIC",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [2, 6],
+      "requests": [2, 6],
       "translations": {
         "zh": "科学",
         "he": "מדעי",
@@ -82,7 +82,7 @@
       "en": "Percent",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [2, 5, 6],
+      "requests": [2, 5, 6],
       "translations": {
         "zh": "百分比",
         "he": "אחוז",
@@ -95,7 +95,7 @@
       "en": "PERCENT",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [6],
+      "requests": [6],
       "translations": {
         "zh": "百分比",
         "he": "אחוז",
@@ -108,7 +108,7 @@
       "en": "history panel",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [2, 3],
+      "requests": [2, 3],
       "translations": {
         "zh": "历史面板",
         "he": "לוח היסטוריה",
@@ -121,7 +121,7 @@
       "en": "history page",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [8, 10],
+      "requests": [8, 10],
       "translations": {
         "zh": "历史页面",
         "he": "עמוד היסטוריה",
@@ -134,7 +134,7 @@
       "en": "variables page",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [3],
+      "requests": [3],
       "translations": {
         "zh": "变量页面",
         "he": "עמוד משתנים",
@@ -147,7 +147,7 @@
       "en": "Saved",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [4, 6],
+      "requests": [4, 6],
       "translations": {
         "zh": "已保存",
         "he": "שמורים",
@@ -160,7 +160,7 @@
       "en": "Report",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [8],
+      "requests": [8],
       "translations": {
         "zh": "报告",
         "he": "דוח",
@@ -173,7 +173,7 @@
       "en": "display settings",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [5, 7, 8],
+      "requests": [5, 7, 8],
       "translations": {
         "zh": "显示设置",
         "he": "הגדרות תצוגה",
@@ -186,7 +186,7 @@
       "en": "stats page",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [6, 8],
+      "requests": [6, 8],
       "translations": {
         "zh": "统计页面",
         "he": "עמוד סטטיסטיקה",
@@ -199,7 +199,7 @@
       "en": "search page",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [9],
+      "requests": [9],
       "translations": {
         "zh": "搜索页面",
         "he": "עמוד חיפוש",
@@ -212,7 +212,7 @@
       "en": "converter",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [7, 9, 10],
+      "requests": [7, 9, 10],
       "translations": {
         "zh": "换算器",
         "he": "ממיר",
@@ -225,7 +225,7 @@
       "en": "Grid area",
       "class": "translate",
       "kind": "content_text",
-      "turns": [4, 6, 9],
+      "requests": [4, 6, 9],
       "translations": {
         "zh": "网格面积",
         "he": "שטח רשת",
@@ -238,7 +238,7 @@
       "en": "garden plot",
       "class": "translate",
       "kind": "content_text",
-      "turns": [4, 9],
+      "requests": [4, 9],
       "translations": {
         "zh": "花园地块",
         "he": "חלקת גינה",
@@ -251,7 +251,7 @@
       "en": "GARDEN",
       "class": "translate",
       "kind": "content_text",
-      "turns": [9],
+      "requests": [9],
       "translations": {
         "zh": "花园",
         "he": "גינה",
@@ -264,7 +264,7 @@
       "en": "temperature",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [7, 9],
+      "requests": [7, 9],
       "translations": {
         "zh": "温度",
         "he": "טמפרטורה",
@@ -277,7 +277,7 @@
       "en": "Fahrenheit",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [7, 9],
+      "requests": [7, 9],
       "translations": {
         "zh": "华氏度",
         "he": "פרנהייט",
@@ -290,7 +290,7 @@
       "en": "Celsius",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [7, 9],
+      "requests": [7, 9],
       "translations": {
         "zh": "摄氏度",
         "he": "צלזיוס",
@@ -303,7 +303,7 @@
       "en": "length",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [7],
+      "requests": [7],
       "translations": {
         "zh": "长度",
         "he": "אורך",
@@ -316,7 +316,7 @@
       "en": "inches",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [7],
+      "requests": [7],
       "translations": {
         "zh": "英寸",
         "he": "אינצ'ים",
@@ -329,7 +329,7 @@
       "en": "centimeters",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [7],
+      "requests": [7],
       "translations": {
         "zh": "厘米",
         "he": "סנטימטרים",
@@ -342,7 +342,7 @@
       "en": "weight",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [7],
+      "requests": [7],
       "translations": {
         "zh": "重量",
         "he": "משקל",
@@ -355,7 +355,7 @@
       "en": "pounds",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [7],
+      "requests": [7],
       "translations": {
         "zh": "磅",
         "he": "ליברות",
@@ -368,7 +368,7 @@
       "en": "grams",
       "class": "translate",
       "kind": "ui_label",
-      "turns": [7],
+      "requests": [7],
       "translations": {
         "zh": "克",
         "he": "גרמים",
@@ -381,73 +381,73 @@
       "en": "tax",
       "class": "keep",
       "kind": "tech",
-      "turns": [3, 4, 10]
+      "requests": [3, 4, 10]
     },
     {
       "en": "dozen",
       "class": "keep",
       "kind": "tech",
-      "turns": [3, 9]
+      "requests": [3, 9]
     },
     {
       "en": "width",
       "class": "keep",
       "kind": "tech",
-      "turns": [3]
+      "requests": [3]
     },
     {
       "en": "sqrt",
       "class": "keep",
       "kind": "tech",
-      "turns": [2, 3, 5]
+      "requests": [2, 3, 5]
     },
     {
       "en": "pi",
       "class": "keep",
       "kind": "tech",
-      "turns": [3]
+      "requests": [3]
     },
     {
       "en": "2fast",
       "class": "keep",
       "kind": "tech",
-      "turns": [3]
+      "requests": [3]
     },
     {
       "en": "mint cream",
       "class": "keep",
       "kind": "css_visual",
-      "turns": [1, 10]
+      "requests": [1, 10]
     },
     {
       "en": "teal",
       "class": "keep",
       "kind": "css_visual",
-      "turns": [1, 10]
+      "requests": [1, 10]
     },
     {
       "en": "soft ivory",
       "class": "keep",
       "kind": "css_visual",
-      "turns": [10]
+      "requests": [10]
     },
     {
       "en": "#FAFAF7",
       "class": "keep",
       "kind": "css_visual",
-      "turns": [10]
+      "requests": [10]
     },
     {
       "en": "#0F766E",
       "class": "keep",
       "kind": "css_visual",
-      "turns": [10]
+      "requests": [10]
     },
     {
       "en": "12px",
       "class": "keep",
       "kind": "value_format",
-      "turns": [10]
+      "requests": [10]
     }
   ]
 }

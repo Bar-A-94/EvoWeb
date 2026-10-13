@@ -122,8 +122,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 1,
+     "kind": "backward",
+     "copied_from_request": 1,
      "task": "Open the trading history section of the account area.",
      "expected_result": "A trading history view renders without errors, showing past trading and bidding activity (or a sensible empty state if nothing has happened yet).",
      "task_category": {
@@ -191,7 +191,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "On the screener, check the Collectibles and Metals category boxes, type 800 into the minimum price field, and set the status filter to Open.",
      "expected_result": "Exactly three listings show: 1968 Rolex Submariner, Signed First-Edition Dune, and Gold Krugerrand Coin — the 1974 Fender Stratocaster stays hidden even though it's a Collectible over $800, because it's Settled.",
      "task_category": {
@@ -201,7 +201,7 @@
        "Boolean Composition"
       ]
      },
-     "copied_from_turn": 2
+     "copied_from_request": 2
     }
    ]
   },
@@ -260,7 +260,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the bid ticket on the Signed First-Edition Dune listing and type 905 as your bid amount.",
      "expected_result": "Before any submit, the ticket live-shows a buyer's premium of $113.13, a $25.00 handling fee, and a total due of $1,043.13 — the half-cent on the premium rounds up, so $113.13 rather than $113.12.",
      "task_category": {
@@ -270,7 +270,7 @@
        "Rounding Precision"
       ]
      },
-     "copied_from_turn": 3
+     "copied_from_request": 3
     }
    ]
   },
@@ -329,7 +329,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Check only the Metals category box on the screener, then additionally check the Furniture box.",
      "expected_result": "With Metals alone the live match counter reads 2 with exactly the 10oz Silver Bullion Bar and Gold Krugerrand Coin visible; after adding Furniture the counter reads 4 and both furniture listings join the results — categories combine as either-or, not both-and.",
      "task_category": {
@@ -339,7 +339,7 @@
        "Count Consistency"
       ]
      },
-     "copied_from_turn": 2
+     "copied_from_request": 2
     }
    ]
   },
@@ -398,7 +398,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the bid ticket on the Gold Krugerrand Coin, type 2100, then change it to 2150.",
      "expected_result": "2100 is rejected with a message about the $100 minimum increment (current bid is $2,050.00 so the floor is $2,150.00) and cannot be submitted; changing to 2150 clears the error and the ticket becomes submittable.",
      "task_category": {
@@ -408,7 +408,7 @@
        "Boundary Conditions"
       ]
      },
-     "copied_from_turn": 3
+     "copied_from_request": 3
     }
    ]
   },
@@ -467,7 +467,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Start the close-and-settle flow on the Antique Oak Writing Desk and look at the invoice review step.",
      "expected_result": "The invoice shows the winning bid of $1,150.00, a buyer's premium of $143.75, a $25.00 handling fee, and a total due of $1,318.75.",
      "task_category": {
@@ -477,7 +477,7 @@
        "Computed Values"
       ]
      },
-     "copied_from_turn": 5
+     "copied_from_request": 5
     }
    ]
   },
@@ -536,7 +536,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the My Watchlist section on the dashboard.",
      "expected_result": "The Gold Krugerrand Coin and Antique Oak Writing Desk are there from the start, the combined current-bid value reads $3,200.00, and the Desk wears the amber Closing pill.",
      "task_category": {
@@ -546,7 +546,7 @@
        "Details Information"
       ]
      },
-     "copied_from_turn": 4
+     "copied_from_request": 4
     }
    ]
   },
@@ -605,7 +605,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the Market Movers panel on the dashboard and read the Top Gainers column.",
      "expected_result": "Top Gainers reads 1968 Rolex Submariner, Signed First-Edition Dune, Gold Krugerrand Coin in that order — the 1974 Fender Stratocaster (+6.40%) is absent because it's Settled, and the Rolex outranks the Dune on their +5.25% tie because its current bid is higher.",
      "task_category": {
@@ -615,7 +615,7 @@
        "Tie-breaking"
       ]
      },
-     "copied_from_turn": 6
+     "copied_from_request": 6
     }
    ]
   },
@@ -674,7 +674,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the PageTurners seller profile.",
      "expected_result": "The average rating reads 4.7 from 3 reviews — 5, 5 and 4 average to 4.666..., which rounds half-up to 4.7, not a truncated 4.6.",
      "task_category": {
@@ -684,7 +684,7 @@
        "Rounding Precision"
       ]
      },
-     "copied_from_turn": 8
+     "copied_from_request": 8
     }
    ]
   }
@@ -693,130 +693,130 @@
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "market screener + seed",
     "archetype": "derived-state"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "live bid ticket",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "watchlist",
     "archetype": "derived-state"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "settlement desk",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "market movers panel",
     "archetype": "derived-state"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "price history charts",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "seller reputation",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "auction calendar",
     "archetype": "derived-state"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "chocolate restyle",
     "archetype": "design-restyle"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T2",
+    "from": "R1",
+    "to": "R2",
     "what": "screens the base listing catalog"
    },
    {
-    "from": "T1",
-    "to": "T3",
+    "from": "R1",
+    "to": "R3",
     "what": "extends base bid placement and trading history"
    },
    {
-    "from": "T2",
-    "to": "T4",
+    "from": "R2",
+    "to": "R4",
     "what": "watched-only toggle composes with screener filters"
    },
    {
-    "from": "T3",
-    "to": "T5",
+    "from": "R3",
+    "to": "R5",
     "what": "invoice applies the ticket's fee schedule and latest high bid"
    },
    {
-    "from": "T3",
-    "to": "T6",
+    "from": "R3",
+    "to": "R6",
     "what": "ticket bids update counts feeding Most Active ranking"
    },
    {
-    "from": "T1",
-    "to": "T7",
+    "from": "R1",
+    "to": "R7",
     "what": "adds detail chart onto base catalog listings"
    },
    {
-    "from": "T5",
-    "to": "T8",
+    "from": "R5",
+    "to": "R8",
     "what": "reviews gated on Completed Sales records from settlement"
    },
    {
-    "from": "T4",
-    "to": "T9",
+    "from": "R4",
+    "to": "R9",
     "what": "watched-only calendar filter driven by watchlist stars"
    },
    {
-    "from": "T1",
-    "to": "T10",
+    "from": "R1",
+    "to": "R10",
     "what": "restyles base browse and history pages"
    },
    {
-    "from": "T2",
-    "to": "T10",
+    "from": "R2",
+    "to": "R10",
     "what": "restyles screener buttons and prices"
    },
    {
-    "from": "T4",
-    "to": "T10",
+    "from": "R4",
+    "to": "R10",
     "what": "restyles watchlist cards"
    },
    {
-    "from": "T5",
-    "to": "T10",
+    "from": "R5",
+    "to": "R10",
     "what": "restyles Completed Sales page"
    },
    {
-    "from": "T6",
-    "to": "T10",
+    "from": "R6",
+    "to": "R10",
     "what": "restyles movers panel cards"
    },
    {
-    "from": "T8",
-    "to": "T10",
+    "from": "R8",
+    "to": "R10",
     "what": "restyles seller profiles"
    },
    {
-    "from": "T9",
-    "to": "T10",
+    "from": "R9",
+    "to": "R10",
     "what": "restyles calendar entries and pills"
    }
   ]
@@ -824,20 +824,20 @@
  "global_rules": [
   {
    "rule": "Session change percentages always display signed with exactly two decimals (e.g. +5.25%, -1.10%) on every surface.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Listing status always renders as a colored pill badge — green Open, amber Closing, gray Settled — wherever a listing appears.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Any money-committing or irreversible action (bids, settlements) always shows a confirmation summary before executing.",
-   "introduced_in_turn": 3
+   "introduced_in_request": 3
   }
  ],
  "pinned_seed": {
   "entity": "7 auction listings",
-  "introduced_in_turn": 2,
+  "introduced_in_request": 2,
   "records_gist": "Rolex $4,200 +5.25% 12 bids Open Jul21; Silver Bar $310 -1.10% 4 Open Jul18; Dune $850 +5.25% 7 Open Jul25; Oak Desk $1,150 -0.40% 9 Closing Jul17; Krugerrand $2,050 +2.75% 15 Open Jul30; Heriz Rug $980 -3.60% 2 Open Jul22; Fender $3,300 +6.40% 21 Settled"
  }
 }

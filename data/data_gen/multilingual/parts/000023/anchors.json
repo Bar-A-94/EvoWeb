@@ -4,7 +4,7 @@
    "en": "Add New Lead",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -19,7 +19,7 @@
    "en": "best practice and integration advice",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -34,7 +34,7 @@
    "en": "leads page",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     6,
@@ -53,7 +53,7 @@
    "en": "reports page",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     6,
     8
@@ -70,7 +70,7 @@
    "en": "tasks page",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     6
    ],
@@ -86,7 +86,7 @@
    "en": "settings",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1,
     4,
     5,
@@ -106,7 +106,7 @@
    "en": "reports dashboard",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8,
     10
    ],
@@ -122,7 +122,7 @@
    "en": "template studio",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     6
    ],
@@ -138,7 +138,7 @@
    "en": "template editor",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     8
    ],
@@ -154,7 +154,7 @@
    "en": "form builder",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9,
     10
    ],
@@ -170,7 +170,7 @@
    "en": "outreach hub",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7,
     9
    ],
@@ -186,7 +186,7 @@
    "en": "automation rules panel",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5
    ],
    "translations": {
@@ -201,7 +201,7 @@
    "en": "message history",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     7
    ],
@@ -217,7 +217,7 @@
    "en": "message-sending flow",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3
    ],
    "translations": {
@@ -232,7 +232,7 @@
    "en": "activity log",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     5
    ],
@@ -248,7 +248,7 @@
    "en": "preview pane",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     9
    ],
@@ -264,7 +264,7 @@
    "en": "embed snippet",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -279,7 +279,7 @@
    "en": "simulate-open control",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7,
     9
    ],
@@ -295,7 +295,7 @@
    "en": "Inbox",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -310,7 +310,7 @@
    "en": "Pipeline",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -325,7 +325,7 @@
    "en": "engagement score",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     7,
@@ -345,7 +345,7 @@
    "en": "weighted pipeline forecast",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     6
    ],
@@ -361,7 +361,7 @@
    "en": "weighted forecast",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -376,7 +376,7 @@
    "en": "average deal size",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8,
     10
    ],
@@ -392,7 +392,7 @@
    "en": "leads by stage",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -407,7 +407,7 @@
    "en": "leads-by-stage",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -422,7 +422,7 @@
    "en": "deal value",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     4,
     5,
@@ -441,7 +441,7 @@
    "en": "estimated deal value",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -456,7 +456,7 @@
    "en": "first name",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9,
     10
    ],
@@ -472,7 +472,7 @@
    "en": "last name",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9,
     10
    ],
@@ -488,7 +488,7 @@
    "en": "company",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     9,
     10
@@ -505,7 +505,7 @@
    "en": "email",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -520,7 +520,7 @@
    "en": "New",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     4,
     8,
@@ -538,7 +538,7 @@
    "en": "Contacted",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     4,
     8,
@@ -556,7 +556,7 @@
    "en": "Qualified",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     4,
     5,
@@ -574,7 +574,7 @@
    "en": "Proposal",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -594,7 +594,7 @@
    "en": "Won",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     8
    ],
@@ -610,7 +610,7 @@
    "en": "Lost",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     4,
     6,
@@ -629,7 +629,7 @@
    "en": "Cold",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     5,
     6,
@@ -647,7 +647,7 @@
    "en": "Warm",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     5,
     6,
@@ -667,7 +667,7 @@
    "en": "Hot",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     6,
@@ -686,7 +686,7 @@
    "en": "Sent",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7
    ],
    "translations": {
@@ -701,7 +701,7 @@
    "en": "Opened",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7
    ],
    "translations": {
@@ -716,7 +716,7 @@
    "en": "Intro Outreach",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     3,
     5,
     7
@@ -733,7 +733,7 @@
    "en": "Proposal Follow-Up",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     3,
     4,
     5,
@@ -751,7 +751,7 @@
    "en": "Follow up on proposal",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     5
    ],
    "translations": {
@@ -766,7 +766,7 @@
    "en": "Get a Quote",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -781,7 +781,7 @@
    "en": "Get a Quote Now",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -796,7 +796,7 @@
    "en": "Web Form",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -811,7 +811,7 @@
    "en": "Hi Rosa, I'd love to connect about Brightline Media.",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     3
    ],
    "translations": {
@@ -826,7 +826,7 @@
    "en": "Hi Priya, checking in on the $22,000 proposal for Cobalt Analytics.",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     3,
     4
    ],
@@ -842,7 +842,7 @@
    "en": "Hi Rosa, checking in on the $12,000 proposal for Brightline Media.",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     5,
     7
    ],
@@ -858,7 +858,7 @@
    "en": "Marcus Webb",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -871,7 +871,7 @@
    "en": "Rosa Delgado",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -883,7 +883,7 @@
    "en": "Lena Fischer",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     6,
@@ -894,7 +894,7 @@
    "en": "Priya Nair",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -906,7 +906,7 @@
    "en": "Tom Okafor",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     6
    ]
@@ -915,7 +915,7 @@
    "en": "Diego Santos",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     4,
     5,
@@ -926,7 +926,7 @@
    "en": "Nadia Boone",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     10
    ]
   },
@@ -934,7 +934,7 @@
    "en": "Omar Haddad",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     10
    ]
   },
@@ -942,7 +942,7 @@
    "en": "Alex",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     9,
     10
    ]
@@ -951,7 +951,7 @@
    "en": "Rivera",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     9,
     10
    ]
@@ -960,7 +960,7 @@
    "en": "Ironpeak Logistics",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -971,7 +971,7 @@
    "en": "Brightline Media",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -982,7 +982,7 @@
    "en": "Quartzline Systems",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     7
    ]
@@ -991,7 +991,7 @@
    "en": "Cobalt Analytics",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4
@@ -1001,7 +1001,7 @@
    "en": "Harbor & Finch",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2
    ]
   },
@@ -1009,7 +1009,7 @@
    "en": "Alturas Group",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2
    ]
   },
@@ -1017,7 +1017,7 @@
    "en": "Skylark Dental",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     10
    ]
   },
@@ -1025,7 +1025,7 @@
    "en": "Petra Foods",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     10
    ]
   },
@@ -1033,7 +1033,7 @@
    "en": "Rivertown Co",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     9,
     10
    ]
@@ -1042,7 +1042,7 @@
    "en": "{{first_name}}",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     3
    ]
   },
@@ -1050,7 +1050,7 @@
    "en": "{{last_name}}",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     3
    ]
   },
@@ -1058,7 +1058,7 @@
    "en": "{{company}}",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     3
    ]
   },
@@ -1066,7 +1066,7 @@
    "en": "{{deal_value}}",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     3
    ]
   },
@@ -1074,7 +1074,7 @@
    "en": "{{firstname}}",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     3,
     8
    ]
@@ -1083,7 +1083,7 @@
    "en": "HTML",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     9
    ]
   },
@@ -1091,7 +1091,7 @@
    "en": "CRM",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     9
    ]
   },
@@ -1099,7 +1099,7 @@
    "en": "papaya whip",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1
    ]
   },
@@ -1107,7 +1107,7 @@
    "en": "dark orange",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1
    ]
   },
@@ -1115,7 +1115,7 @@
    "en": "dark-orange",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     6
    ]
   },
@@ -1123,7 +1123,7 @@
    "en": "deep teal",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     6
    ]
   },
@@ -1131,7 +1131,7 @@
    "en": "light blue",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     6
    ]
   },
@@ -1139,7 +1139,7 @@
    "en": "amber",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     6
    ]
   },
@@ -1147,7 +1147,7 @@
    "en": "red",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     6
    ]
   },
@@ -1155,7 +1155,7 @@
    "en": "white",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     6
    ]
   }

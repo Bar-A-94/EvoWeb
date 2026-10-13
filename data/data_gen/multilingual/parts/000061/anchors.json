@@ -4,7 +4,7 @@
    "en": "leaderboard",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1,
     2
    ],
@@ -20,7 +20,7 @@
    "en": "Avatar Studio",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -38,7 +38,7 @@
    "en": "frog",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2
    ],
    "translations": {
@@ -53,7 +53,7 @@
    "en": "My Journey",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     7,
@@ -71,7 +71,7 @@
    "en": "Park Patrol",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     3
    ],
    "translations": {
@@ -86,7 +86,7 @@
    "en": "Kitchen Cleanup",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     3,
     7,
     10
@@ -103,7 +103,7 @@
    "en": "recent form",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3
    ],
    "translations": {
@@ -118,7 +118,7 @@
    "en": "all-time average",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3
    ],
    "translations": {
@@ -133,7 +133,7 @@
    "en": "overall accuracy",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4
    ],
@@ -149,7 +149,7 @@
    "en": "best-round spotlight",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     7,
     10
@@ -166,7 +166,7 @@
    "en": "best round",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -181,7 +181,7 @@
    "en": "total stars banked",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     7,
     10
@@ -198,7 +198,7 @@
    "en": "Done for now",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3
    ],
    "translations": {
@@ -213,7 +213,7 @@
    "en": "Done",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     5,
@@ -233,7 +233,7 @@
    "en": "Recycle City",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     6,
     7
@@ -250,7 +250,7 @@
    "en": "Park",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     6,
@@ -268,7 +268,7 @@
    "en": "Kitchen",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     6,
@@ -289,7 +289,7 @@
    "en": "School",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     6,
     7,
@@ -307,7 +307,7 @@
    "en": "Factory",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     6,
     7,
@@ -325,7 +325,7 @@
    "en": "crumpled paper",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     4
    ],
    "translations": {
@@ -340,7 +340,7 @@
    "en": "juice boxes",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     4
    ],
    "translations": {
@@ -355,7 +355,7 @@
    "en": "broken crayons",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     4
    ],
    "translations": {
@@ -370,7 +370,7 @@
    "en": "Impact Calculator",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     8
    ],
@@ -386,7 +386,7 @@
    "en": "aluminium cans",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     8
    ],
@@ -402,7 +402,7 @@
    "en": "energy saved",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5
    ],
    "translations": {
@@ -417,7 +417,7 @@
    "en": "TV hours",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5
    ],
    "translations": {
@@ -432,7 +432,7 @@
    "en": "Sticker Shop",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6,
     7,
     9,
@@ -450,7 +450,7 @@
    "en": "Super Worm",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     6,
     10
    ],
@@ -466,7 +466,7 @@
    "en": "Rainbow Frog",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     6
    ],
    "translations": {
@@ -481,7 +481,7 @@
    "en": "Dancing Banana",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     6
    ],
    "translations": {
@@ -496,7 +496,7 @@
    "en": "Golden Raccoon",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     6
    ],
    "translations": {
@@ -511,7 +511,7 @@
    "en": "Diamond Turtle",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     6
    ],
    "translations": {
@@ -526,7 +526,7 @@
    "en": "owned",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6,
     9,
     10
@@ -543,7 +543,7 @@
    "en": "Challenge Builder",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8,
     10
    ],
@@ -559,7 +559,7 @@
    "en": "Challenge",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8,
     10
    ],
@@ -575,7 +575,7 @@
    "en": "target score",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8,
     10
    ],
@@ -591,7 +591,7 @@
    "en": "Fact Card Album",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -606,7 +606,7 @@
    "en": "fact cards",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -621,7 +621,7 @@
    "en": "Eco Hero Certificate",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -636,7 +636,7 @@
    "en": "ECO HERO",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -651,7 +651,7 @@
    "en": "seashell",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1,
     7
    ]
@@ -660,7 +660,7 @@
    "en": "crimson",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1,
     7
    ]
@@ -669,7 +669,7 @@
    "en": "navy",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     7
    ]
   },
@@ -677,7 +677,7 @@
    "en": "#E0F7FA",
    "class": "keep",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     7
    ]
   },
@@ -685,7 +685,7 @@
    "en": "#00695C",
    "class": "keep",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     7
    ]
   },
@@ -693,7 +693,7 @@
    "en": "#1A237E",
    "class": "keep",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     7
    ]
   },
@@ -701,7 +701,7 @@
    "en": "16px",
    "class": "keep",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     7
    ]
   },
@@ -709,7 +709,7 @@
    "en": "kWh",
    "class": "keep",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     5
    ]
   },
@@ -717,7 +717,7 @@
    "en": "pts",
    "class": "keep",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     3,
     4,
     6,
@@ -730,7 +730,7 @@
    "en": "RECYCLERAY",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2
    ]
   },
@@ -738,7 +738,7 @@
    "en": "GREENGRETA",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2
    ]
   },
@@ -746,7 +746,7 @@
    "en": "greengreta",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3
    ]
@@ -755,7 +755,7 @@
    "en": "Ziggy",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2
    ]
   },
@@ -763,7 +763,7 @@
    "en": "ziggy",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2
    ]
   },
@@ -771,7 +771,7 @@
    "en": "ZIGGY",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2
    ]
   },
@@ -779,7 +779,7 @@
    "en": "milo",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     10
    ]
   },
@@ -787,7 +787,7 @@
    "en": "MILO",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     10
    ]
   }

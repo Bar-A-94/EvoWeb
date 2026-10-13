@@ -128,8 +128,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 1,
+     "kind": "backward",
+     "copied_from_request": 1,
      "task": "Fill out the health survey with valid answers and submit it.",
      "expected_result": "A confirmation message appears indicating the survey was submitted successfully.",
      "task_category": {
@@ -195,8 +195,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "On the cohort screener, select the 18-29 and 30-44 age group filters, then also select the Black ethnicity filter.",
      "expected_result": "Exactly two respondents remain — WHS-1002 and WHS-1005. The two age picks widen the age side (OR), but adding Black narrows across dimensions (AND), so it is not the six respondents a match-any build would show.",
      "task_category": {
@@ -264,8 +264,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "On the Wellness Self-Check page, type 7 for sleep hours, 3 for exercise days, and 4 for stress.",
      "expected_result": "The score reads 6.6 / 10 with the 'Fair' label, and it appears as soon as the last field is filled — no submit button needed.",
      "task_category": {
@@ -333,8 +333,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "Select only the Hispanic ethnicity filter on the cohort screener.",
      "expected_result": "Exactly WHS-1001 and WHS-1006 are listed, and no other respondents show.",
      "task_category": {
@@ -401,8 +401,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 4,
+     "kind": "backward",
+     "copied_from_request": 4,
      "task": "Start the survey, answer Section A's three questions (age group 30-44, ethnicity Hispanic, overall wellness 8), click Next, and in Section B choose Yes on the pregnancy question.",
      "expected_result": "Section B initially shows only the pregnancy question; choosing Yes reveals exactly two additional questions (number of pregnancies and most recent year).",
      "task_category": {
@@ -469,8 +469,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 5,
+     "kind": "backward",
+     "copied_from_request": 5,
      "task": "In the insights strip, click the toggle to view just the two most recent weeks.",
      "expected_result": "The average wellness reads 7.0 / 10 for the recent window (Weeks 3 and 4: WHS-1005, WHS-1006, WHS-1007, WHS-1008) — different from the all-time 6.7 / 10.",
      "task_category": {
@@ -538,8 +538,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 6,
+     "kind": "backward",
+     "copied_from_request": 6,
      "task": "Open the Follow-Up Queue page.",
      "expected_result": "The three seeded flags show in their stages — WHS-1006 Pending with the note 'score under 5', WHS-1003 Contacted with 'left voicemail', WHS-1004 Resolved with 'all good' — and each stage count reads 1.",
      "task_category": {
@@ -606,8 +606,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 7,
+     "kind": "backward",
+     "copied_from_request": 7,
      "task": "With no screener filters set, open the export composer's preview.",
      "expected_result": "The preview shows one line per respondent — 8 lines — and the summary line reports 8 respondents with an average wellness of 6.7 / 10.",
      "task_category": {
@@ -675,8 +675,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "On the Wellness Self-Check page, type 8 for sleep hours, 7 for exercise days, and 10 for stress.",
      "expected_result": "The score reads 7.0 / 10 labeled 'Thriving' — the exact 7.0 boundary lands in Thriving, not Fair — and the stress nudge toward the full survey shows since stress is 7 or higher.",
      "task_category": {
@@ -690,134 +690,134 @@
    ]
   }
  ],
- "target_app_summary": "The single-form women's health survey site grows into a small research-program platform. Discovery and intake expand into a sectioned survey wizard with conditional questions and a demo fill, plus a standalone wellness self-check calculator that nudges high-stress and low-sleep users toward taking the full survey. On the analysis side, a cohort screener with AND/OR demographic filtering becomes the hub: an insights strip cross-filters live stats over it, an export composer renders copyable extracts of the filtered set, and a flag-based follow-up queue with Pending/Contacted/Resolved adjudication feeds a Program Outcomes report that rolls up a resolution rate and a reached-stage outcome funnel, with suggested flags scanned from the cohort. A question bank with per-question versioning governs the wizard's wording, and a site-wide restyle unifies buttons, headings, cards, ID chips and tables across all surfaces. The graph hangs off the screener (T2) with a deep chain T1 -> T2 -> T6 -> T10 (T2 also feeding T10's suggested flags), wizard chains T2 -> T4 -> T9, and a calculator nudge T1 -> T3.",
+ "target_app_summary": "The single-form women's health survey site grows into a small research-program platform. Discovery and intake expand into a sectioned survey wizard with conditional questions and a demo fill, plus a standalone wellness self-check calculator that nudges high-stress and low-sleep users toward taking the full survey. On the analysis side, a cohort screener with AND/OR demographic filtering becomes the hub: an insights strip cross-filters live stats over it, an export composer renders copyable extracts of the filtered set, and a flag-based follow-up queue with Pending/Contacted/Resolved adjudication feeds a Program Outcomes report that rolls up a resolution rate and a reached-stage outcome funnel, with suggested flags scanned from the cohort. A question bank with per-question versioning governs the wizard's wording, and a site-wide restyle unifies buttons, headings, cards, ID chips and tables across all surfaces. The graph hangs off the screener (R2) with a deep chain R1 -> R2 -> R6 -> R10 (R2 also feeding R10's suggested flags), wizard chains R2 -> R4 -> R9, and a calculator nudge R1 -> R3.",
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "cohort screener",
     "archetype": "derived-state"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "wellness self-check calculator",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "sectioned survey wizard",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "cohort insights strip",
     "archetype": "derived-state"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "follow-up queue",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "export composer",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "site-wide restyle",
     "archetype": "design-restyle"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "question bank versioning",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "program outcomes report",
     "archetype": "derived-state"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T2",
+    "from": "R1",
+    "to": "R2",
     "what": "survey submissions join the screener cohort with next WHS ID"
    },
    {
-    "from": "T1",
-    "to": "T4",
+    "from": "R1",
+    "to": "R4",
     "what": "replaces the base survey form with the wizard"
    },
    {
-    "from": "T1",
-    "to": "T3",
+    "from": "R1",
+    "to": "R3",
     "what": "high stress or low sleep in the calculator nudges users toward taking the base survey"
    },
    {
-    "from": "T2",
-    "to": "T4",
+    "from": "R2",
+    "to": "R4",
     "what": "wizard submissions register in the screener as WHS-1009+"
    },
    {
-    "from": "T2",
-    "to": "T5",
+    "from": "R2",
+    "to": "R5",
     "what": "insights recompute over the screener's filtered cohort"
    },
    {
-    "from": "T2",
-    "to": "T6",
+    "from": "R2",
+    "to": "R6",
     "what": "flags are raised from screener rows"
    },
    {
-    "from": "T2",
-    "to": "T7",
+    "from": "R2",
+    "to": "R7",
     "what": "export renders the screener's current filtered set"
    },
    {
-    "from": "T4",
-    "to": "T9",
+    "from": "R4",
+    "to": "R9",
     "what": "version manager edits the wizard's questions; wizard shows active wording"
    },
    {
-    "from": "T6",
-    "to": "T10",
+    "from": "R6",
+    "to": "R10",
     "what": "report rolls up the queue's stage counts into a resolution rate and reached-stage funnel"
    },
    {
-    "from": "T2",
-    "to": "T10",
+    "from": "R2",
+    "to": "R10",
     "what": "suggested flags scan the screener cohort's wellness scores against the queue"
    },
    {
-    "from": "T1",
-    "to": "T8",
+    "from": "R1",
+    "to": "R8",
     "what": "restyles the home page"
    },
    {
-    "from": "T2",
-    "to": "T8",
+    "from": "R2",
+    "to": "R8",
     "what": "restyles the screener page"
    },
    {
-    "from": "T4",
-    "to": "T8",
+    "from": "R4",
+    "to": "R8",
     "what": "restyles the survey wizard"
    },
    {
-    "from": "T5",
-    "to": "T8",
+    "from": "R5",
+    "to": "R8",
     "what": "restyles the insights strip panels"
    },
    {
-    "from": "T6",
-    "to": "T8",
+    "from": "R6",
+    "to": "R8",
     "what": "restyles the follow-up queue cards"
    }
   ]
@@ -825,20 +825,20 @@
  "global_rules": [
   {
    "rule": "Respondents are always referred to by IDs in the WHS-#### style (WHS- prefix plus number) everywhere in the app, now and in anything added later.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Wellness scores are always displayed with exactly one decimal place followed by ' / 10' (e.g. 6.4 / 10) on every surface of the app.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Follow-up statuses always render as colored pill badges anywhere they appear: amber for Pending, dark cyan for Contacted, green for Resolved.",
-   "introduced_in_turn": 6
+   "introduced_in_request": 6
   }
  ],
  "pinned_seed": {
   "entity": "8 seeded survey respondents",
-  "introduced_in_turn": 2,
+  "introduced_in_request": 2,
   "records_gist": "Seeded in this roster order (deliberately not ID order): WHS-1004 45-59 White 6.4 Wk2; WHS-1001 18-29 Hispanic 6.4 Wk1; WHS-1002 30-44 Black 8.2 Wk1; WHS-1003 30-44 Asian 5.0 Wk2; WHS-1005 18-29 Black 9.1 Wk3; WHS-1006 60+ Hispanic 4.8 Wk3; WHS-1007 45-59 Black 6.4 Wk4; WHS-1008 30-44 White 7.6 Wk4 (6.4 three-way tie with WHS-1004 seeded ahead of WHS-1001, so ID tie-breaks visibly beat insertion order; Wks3-4 avg 7.0 vs all-time 6.7)"
  }
 }

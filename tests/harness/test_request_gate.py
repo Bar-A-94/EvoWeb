@@ -1,4 +1,4 @@
-"""Score gating is disabled (threshold -1): only a non-success turn ends the ladder."""
+"""Score gating is disabled (threshold -1): only a non-success request ends the ladder."""
 
 from __future__ import annotations
 
@@ -24,11 +24,11 @@ def gate():
         ("success", 1.0, True),
         ("success", 0.5, True),
         ("success", 0.0, True),  # score gating is off: even a zero continues the ladder
-        ("gen_failed", 1.0, False),  # a high score on a failed turn still stops the ladder
+        ("gen_failed", 1.0, False),  # a high score on a failed request still stops the ladder
         ("error", 1.0, False),
     ],
 )
-def test_only_a_non_success_turn_ends_the_ladder(gate, status, score, expected):
+def test_only_a_non_success_request_ends_the_ladder(gate, status, score, expected):
     assert gate(status, score)[0] is expected
 
 

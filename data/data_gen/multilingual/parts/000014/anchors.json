@@ -4,7 +4,7 @@
    "en": "credit score inquiry",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1,
     2
    ],
@@ -20,7 +20,7 @@
    "en": "credit repair services",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -35,7 +35,7 @@
    "en": "personal information",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1,
     2
    ],
@@ -51,7 +51,7 @@
    "en": "credit status",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1,
     2
    ],
@@ -67,7 +67,7 @@
    "en": "Score Improvement Estimator",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     6,
@@ -85,7 +85,7 @@
    "en": "project my improvement",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2
    ],
    "translations": {
@@ -100,7 +100,7 @@
    "en": "Start over",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     10
    ],
@@ -116,7 +116,7 @@
    "en": "current score",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     6,
@@ -134,7 +134,7 @@
    "en": "projected score",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     6
@@ -151,7 +151,7 @@
    "en": "collections",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     6
@@ -168,7 +168,7 @@
    "en": "collection",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     8
    ],
@@ -184,7 +184,7 @@
    "en": "late payments",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3
    ],
@@ -200,7 +200,7 @@
    "en": "late payment",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     8
    ],
@@ -216,7 +216,7 @@
    "en": "hard inquiries",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3
    ],
@@ -232,7 +232,7 @@
    "en": "recommended plan",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2
    ],
    "translations": {
@@ -247,7 +247,7 @@
    "en": "Poor",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     6
@@ -264,7 +264,7 @@
    "en": "Fair",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     6
    ],
@@ -280,7 +280,7 @@
    "en": "Good",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3
    ],
@@ -296,7 +296,7 @@
    "en": "Very Good",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2
    ],
    "translations": {
@@ -311,7 +311,7 @@
    "en": "Excellent",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3
    ],
@@ -327,7 +327,7 @@
    "en": "Basic",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     8
@@ -344,7 +344,7 @@
    "en": "Standard",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     8,
@@ -362,7 +362,7 @@
    "en": "Premium",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     8
@@ -379,7 +379,7 @@
    "en": "Client Success Stories",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     8
@@ -396,7 +396,7 @@
    "en": "success stories",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6,
     7
    ],
@@ -412,7 +412,7 @@
    "en": "minimum points gained",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3
    ],
    "translations": {
@@ -427,7 +427,7 @@
    "en": "biggest gain",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4
    ],
@@ -443,7 +443,7 @@
    "en": "average gain",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     6,
@@ -462,7 +462,7 @@
    "en": "Dispute Letter Builder",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     5,
     7
@@ -479,7 +479,7 @@
    "en": "Not my account",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     5
    ],
@@ -495,7 +495,7 @@
    "en": "[Your Name]",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     4
    ],
    "translations": {
@@ -510,7 +510,7 @@
    "en": "reference code",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     5
    ],
@@ -526,7 +526,7 @@
    "en": "account number",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     5,
     7
@@ -543,7 +543,7 @@
    "en": "creditor name",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     4,
     5,
     9
@@ -560,7 +560,7 @@
    "en": "Dispute Tracker",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5
    ],
    "translations": {
@@ -575,7 +575,7 @@
    "en": "dispute tracker",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     6,
     7,
@@ -593,7 +593,7 @@
    "en": "save to my disputes",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5
    ],
    "translations": {
@@ -608,7 +608,7 @@
    "en": "save-to-my-disputes",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5
    ],
    "translations": {
@@ -623,7 +623,7 @@
    "en": "Draft",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     7,
     9
@@ -640,7 +640,7 @@
    "en": "Sent",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     6,
     7,
@@ -658,7 +658,7 @@
    "en": "Resolved",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     6,
     7,
@@ -676,7 +676,7 @@
    "en": "Impact Dashboard",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6,
     9
    ],
@@ -692,7 +692,7 @@
    "en": "impact dashboard",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7
    ],
    "translations": {
@@ -707,7 +707,7 @@
    "en": "clients helped",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6
    ],
    "translations": {
@@ -722,7 +722,7 @@
    "en": "Clients helped",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6
    ],
    "translations": {
@@ -737,7 +737,7 @@
    "en": "clients-helped",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6
    ],
    "translations": {
@@ -752,7 +752,7 @@
    "en": "total points recovered",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6
    ],
    "translations": {
@@ -767,7 +767,7 @@
    "en": "total-points-recovered",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6
    ],
    "translations": {
@@ -782,7 +782,7 @@
    "en": "items resolved",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6
    ],
    "translations": {
@@ -797,7 +797,7 @@
    "en": "items-resolved",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6
    ],
    "translations": {
@@ -812,7 +812,7 @@
    "en": "Rebuild. Restore. Rise.",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     7
    ],
    "translations": {
@@ -827,7 +827,7 @@
    "en": "Dispute Strategy Advisor",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -842,7 +842,7 @@
    "en": "Send the pending letter",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -857,7 +857,7 @@
    "en": "Await the bureau's response",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -872,7 +872,7 @@
    "en": "Request an updated credit report",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -887,7 +887,7 @@
    "en": "multi-bureau",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -902,7 +902,7 @@
    "en": "priority",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -917,7 +917,7 @@
    "en": "enrollment",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8,
     10
    ],
@@ -933,7 +933,7 @@
    "en": "rush processing",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8
    ],
    "translations": {
@@ -948,7 +948,7 @@
    "en": "credit monitoring",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8,
     10
    ],
@@ -964,7 +964,7 @@
    "en": "monthly total",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8,
     10
    ],
@@ -980,7 +980,7 @@
    "en": "first payment",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8,
     10
    ],
@@ -996,7 +996,7 @@
    "en": "consultation booking",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -1011,7 +1011,7 @@
    "en": "consultations list",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -1026,7 +1026,7 @@
    "en": "Monday",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -1041,7 +1041,7 @@
    "en": "Tuesday",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -1056,7 +1056,7 @@
    "en": "Wednesday",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -1071,7 +1071,7 @@
    "en": "old lace",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1
    ]
   },
@@ -1079,7 +1079,7 @@
    "en": "rosy brown",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1,
     7
    ]
@@ -1088,7 +1088,7 @@
    "en": "saddle brown",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     7
    ]
   },
@@ -1096,7 +1096,7 @@
    "en": "white",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     7
    ]
   },
@@ -1104,7 +1104,7 @@
    "en": "Equifax",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     4,
     5,
     9
@@ -1114,7 +1114,7 @@
    "en": "Experian",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     4,
     5
    ]
@@ -1123,7 +1123,7 @@
    "en": "TransUnion",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     4,
     5,
     7,
@@ -1134,7 +1134,7 @@
    "en": "Capital One",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     4,
     5
    ]
@@ -1143,7 +1143,7 @@
    "en": "Midland",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     4,
     5,
     9
@@ -1153,7 +1153,7 @@
    "en": "Midland Funding",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     5,
     9
    ]
@@ -1162,7 +1162,7 @@
    "en": "LVNV Funding",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     5,
     6,
     9
@@ -1172,7 +1172,7 @@
    "en": "Portfolio Recovery",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     5,
     7,
     9
@@ -1182,7 +1182,7 @@
    "en": "First Premier Bank",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     5,
     9
    ]
@@ -1191,7 +1191,7 @@
    "en": "Cavalry",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     4,
     5,
     7
@@ -1201,7 +1201,7 @@
    "en": "EQ",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     4,
     5
    ]
@@ -1210,7 +1210,7 @@
    "en": "EX",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     4
    ]
   },
@@ -1218,7 +1218,7 @@
    "en": "TU",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     4
    ]
   },
@@ -1226,7 +1226,7 @@
    "en": "EQ-CAPI-8",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     4,
     5
    ]
@@ -1235,7 +1235,7 @@
    "en": "Gloria Mendez",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     4
    ]
   },
@@ -1243,7 +1243,7 @@
    "en": "Dana Cole",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     8,
     10
    ]
@@ -1252,7 +1252,7 @@
    "en": "Angela Ruiz",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     10
    ]
   },
@@ -1260,7 +1260,7 @@
    "en": "Marcus Webb",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     10
    ]
   },
@@ -1268,7 +1268,7 @@
    "en": "Robert M.",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     10
    ]
   },
@@ -1276,7 +1276,7 @@
    "en": "Sofia",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3,
     4,
     6,
@@ -1287,7 +1287,7 @@
    "en": "Marcus",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3,
     4,
     8,
@@ -1298,7 +1298,7 @@
    "en": "Priya",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3,
     4,
     8
@@ -1308,7 +1308,7 @@
    "en": "Denise",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3,
     4
    ]
@@ -1317,7 +1317,7 @@
    "en": "Walter",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3
    ]
   },
@@ -1325,7 +1325,7 @@
    "en": "James",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3
    ]
   },
@@ -1333,7 +1333,7 @@
    "en": "Keisha",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3
    ]
   },
@@ -1341,7 +1341,7 @@
    "en": "Atlanta",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3
    ]
   },
@@ -1349,7 +1349,7 @@
    "en": "Tampa",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3
    ]
   },
@@ -1357,7 +1357,7 @@
    "en": "Austin",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3
    ]
   },
@@ -1365,7 +1365,7 @@
    "en": "Cleveland",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3
    ]
   },
@@ -1373,7 +1373,7 @@
    "en": "Phoenix",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3,
     6
    ]
@@ -1382,7 +1382,7 @@
    "en": "Baltimore",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3
    ]
   },
@@ -1390,7 +1390,7 @@
    "en": "Memphis",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     3
    ]
   },
@@ -1398,7 +1398,7 @@
    "en": "pts",
    "class": "keep",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     3,
     4,
     6,
@@ -1410,7 +1410,7 @@
    "en": "9:00 AM",
    "class": "keep",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     10
    ]
   },
@@ -1418,7 +1418,7 @@
    "en": "2:00 PM",
    "class": "keep",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     10
    ]
   },
@@ -1426,7 +1426,7 @@
    "en": "10:00 AM",
    "class": "keep",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     10
    ]
   },
@@ -1434,7 +1434,7 @@
    "en": "4:00 PM",
    "class": "keep",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     10
    ]
   }

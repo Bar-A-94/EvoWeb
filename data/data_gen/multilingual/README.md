@@ -12,7 +12,7 @@ writes in changes. Every $-amount, decimal, percentage and signed odds figure, a
 ```
 parts/<app id>/
   en.json            the EN row (written by split_parts.py)
-  anchors.json       {anchors: [{en, class: translate|keep, kind, turns, translations{lang}}]}
+  anchors.json       {anchors: [{en, class: translate|keep, kind, requests, translations{lang}}]}
                      the app's anchor inventory: the UI labels and seeded strings kept across requests
   <lang>_enui.json   {app, lang, variant, instructions{"1".."10"}}: the translated requests
 split_parts.py       evoweb_benchmark.jsonl -> parts/*/en.json

@@ -131,8 +131,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 1,
+     "kind": "backward",
+     "copied_from_request": 1,
      "task": "Type Night Ferry into the search box.",
      "expected_result": "Night Ferry by Priya Anand appears in the results, and poems that don't match are not shown.",
      "task_category": {
@@ -199,8 +199,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "Open the browse list and click the sparkle button on Salt Meadow four times.",
      "expected_result": "The sparkle count climbs from 12 to 13, 14, then 15, and the fourth click does not raise it past 15 — the control indicates the 3-sparkle limit is reached.",
      "task_category": {
@@ -268,8 +268,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "Open the homepage and read the This Week's Board top three on a fresh load.",
      "expected_result": "The top three read, in order: Harbor Glass (score 17), Wren Song (score 17), Night Ferry (score 15) — Harbor Glass beats Wren Song alphabetically on the tie, and Night Ferry is not first despite having the most sparkles.",
      "task_category": {
@@ -336,8 +336,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 4,
+     "kind": "backward",
+     "copied_from_request": 4,
      "task": "In the Form Lab pick Haiku and type four lines into the checker: 'cold stars', 'a lantern gutters', a blank line, then 'snow begins'.",
      "expected_result": "The live line counter reads 3 — the blank line is not counted — and the Certify button becomes enabled.",
      "task_category": {
@@ -405,8 +405,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "Find Juniper in the browse list.",
      "expected_result": "A pill badge reading Limerick sits next to Juniper's title, and the poem shows its line count of 5 lines.",
      "task_category": {
@@ -474,8 +474,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 5,
+     "kind": "backward",
+     "copied_from_request": 5,
      "task": "Open the Contests page on a fresh load.",
      "expected_result": "The Turning Tide shows two entries with Cinders listed above Salt Meadow, both at 12 sparkles — alphabetical order on the tie, even though Salt Meadow entered first.",
      "task_category": {
@@ -543,8 +543,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 6,
+     "kind": "backward",
+     "copied_from_request": 6,
      "task": "Open the Poets page on a fresh load.",
      "expected_result": "The roster reads, in order: Ivy Chen (20 sparkles), Mara Voss (19), Priya Anand (15), Theo Rin (15) — Priya listed above Theo on the alphabetical tie.",
      "task_category": {
@@ -612,8 +612,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 7,
+     "kind": "backward",
+     "copied_from_request": 7,
      "task": "Open the Poets page.",
      "expected_result": "Buttons are deep plum with white text, the page heading is centered and set in a serif face, and the cards are cream with olive drab borders and clearly rounded corners.",
      "task_category": {
@@ -681,8 +681,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 8,
+     "kind": "backward",
+     "copied_from_request": 8,
      "task": "Open the Critique Corner on a fresh load.",
      "expected_result": "Wren Song sits above The Unsent Letter, showing 1 critique and 2 critiques respectively — ordered by fewest critiques first, not by their comment counts (5 and 2) and not alphabetically.",
      "task_category": {
@@ -696,144 +696,144 @@
    ]
   }
  ],
- "target_app_summary": "The poetry blog has grown into a full community poetry platform. Readers cheer poems with capped, retractable sparkles; a homepage This Week's Board ranks poems by a buzz score of sparkles plus weighted comments; and a Form Lab checks haiku/limerick/sonnet line counts live per keystroke and certifies poems as form-true. On top of these grew a haiku contest with sparkle-driven voting and a crowned winner, a deduplicated Poets roster ranked by rolled-up sparkle totals, a structured Critique Corner peer-feedback workflow, a chapbook anthology builder with computed line totals, rounded read times, and a grouped table-of-contents export, and a Season Laurels ceremony that reconciles the board, contest, sparkles, and critiques into published awards. A mid-ladder restyle (plum buttons, centered serif headings, cream cards, amber sparkle counts, outlined form badges) sweeps four pages. The graph runs deep: sparkles feed the board, roster, contest, and laurels; the Form Lab's line check gates fresh contest entries; and the board's top three feed the anthology importer — so early breakage compounds through the late turns.",
+ "target_app_summary": "The poetry blog has grown into a full community poetry platform. Readers cheer poems with capped, retractable sparkles; a homepage This Week's Board ranks poems by a buzz score of sparkles plus weighted comments; and a Form Lab checks haiku/limerick/sonnet line counts live per keystroke and certifies poems as form-true. On top of these grew a haiku contest with sparkle-driven voting and a crowned winner, a deduplicated Poets roster ranked by rolled-up sparkle totals, a structured Critique Corner peer-feedback workflow, a chapbook anthology builder with computed line totals, rounded read times, and a grouped table-of-contents export, and a Season Laurels ceremony that reconciles the board, contest, sparkles, and critiques into published awards. A mid-ladder restyle (plum buttons, centered serif headings, cream cards, amber sparkle counts, outlined form badges) sweeps four pages. The graph runs deep: sparkles feed the board, roster, contest, and laurels; the Form Lab's line check gates fresh contest entries; and the board's top three feed the anthology importer — so early breakage compounds through the late requests.",
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "sparkle voting + seed",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "This Week's Board",
     "archetype": "derived-state"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "Form Lab line checker",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "haiku contest",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "poets roster",
     "archetype": "derived-state"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "plum-and-cream restyle",
     "archetype": "design-restyle"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "Critique Corner",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "anthology builder",
     "archetype": "derived-state"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "Season Laurels ceremony",
     "archetype": "multi-surface-workflow"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T2",
+    "from": "R1",
+    "to": "R2",
     "what": "adds sparkle controls to base poem cards and pages"
    },
    {
-    "from": "T2",
-    "to": "T3",
+    "from": "R2",
+    "to": "R3",
     "what": "board score aggregates live sparkle counts"
    },
    {
-    "from": "T1",
-    "to": "T4",
+    "from": "R1",
+    "to": "R4",
     "what": "Form Lab loads and certifies poems from the base catalog"
    },
    {
-    "from": "T4",
-    "to": "T5",
+    "from": "R4",
+    "to": "R5",
     "what": "fresh contest entries must pass the Form Lab's haiku line check"
    },
    {
-    "from": "T2",
-    "to": "T5",
+    "from": "R2",
+    "to": "R5",
     "what": "entries ranked and winner picked by sparkle counts"
    },
    {
-    "from": "T2",
-    "to": "T6",
+    "from": "R2",
+    "to": "R6",
     "what": "roster aggregates sparkle totals per poet, live"
    },
    {
-    "from": "T1",
-    "to": "T7",
+    "from": "R1",
+    "to": "R7",
     "what": "restyles the browse page"
    },
    {
-    "from": "T2",
-    "to": "T7",
+    "from": "R2",
+    "to": "R7",
     "what": "restyles sparkle counts to amber"
    },
    {
-    "from": "T3",
-    "to": "T7",
+    "from": "R3",
+    "to": "R7",
     "what": "restyles the homepage board"
    },
    {
-    "from": "T5",
-    "to": "T7",
+    "from": "R5",
+    "to": "R7",
     "what": "restyles the Contests page"
    },
    {
-    "from": "T6",
-    "to": "T7",
+    "from": "R6",
+    "to": "R7",
     "what": "restyles the Poets page"
    },
    {
-    "from": "T1",
-    "to": "T8",
+    "from": "R1",
+    "to": "R8",
     "what": "feedback-welcome switch in posting flow and poem pages"
    },
    {
-    "from": "T3",
-    "to": "T9",
+    "from": "R3",
+    "to": "R9",
     "what": "imports the board's current top three"
    },
    {
-    "from": "T2",
-    "to": "T10",
+    "from": "R2",
+    "to": "R10",
     "what": "Most Sparkled laurel from sparkle counts"
    },
    {
-    "from": "T3",
-    "to": "T10",
+    "from": "R3",
+    "to": "R10",
     "what": "Board Champion laurel from board rank #1"
    },
    {
-    "from": "T5",
-    "to": "T10",
+    "from": "R5",
+    "to": "R10",
     "what": "Contest Laureate from the closed contest's winner"
    },
    {
-    "from": "T8",
-    "to": "T10",
+    "from": "R8",
+    "to": "R10",
     "what": "Top Critic from critique authorship counts"
    }
   ]
@@ -841,20 +841,20 @@
  "global_rules": [
   {
    "rule": "Every poem's form (Haiku, Sonnet, Limerick, Free Verse) is shown as a small pill badge next to its title, everywhere a poem appears.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Any ranked or ordered list breaks ties alphabetically (by poem title or poet name).",
-   "introduced_in_turn": 3
+   "introduced_in_request": 3
   },
   {
    "rule": "Anything closed out or deleted for good asks for confirmation before it happens.",
-   "introduced_in_turn": 5
+   "introduced_in_request": 5
   }
  ],
  "pinned_seed": {
   "entity": "7 seeded poems",
-  "introduced_in_turn": 2,
+  "introduced_in_request": 2,
   "records_gist": "Cinders/Mara Voss/haiku/3ln/12sp/1cm; Harbor Glass/Theo Rin/sonnet/14ln/9sp/4cm; Wren Song/Mara Voss/free verse/21ln/7sp/5cm; Salt Meadow/Ivy Chen/haiku/3ln/12sp/0cm; The Unsent Letter/Theo Rin/free verse/30ln/6sp/2cm; Juniper/Ivy Chen/limerick/5ln/8sp/3cm; Night Ferry/Priya Anand/sonnet/14ln/15sp/0cm"
  }
 }

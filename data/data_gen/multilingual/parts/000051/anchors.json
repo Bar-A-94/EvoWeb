@@ -4,7 +4,7 @@
    "en": "home page",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1
    ],
    "translations": {
@@ -19,7 +19,7 @@
    "en": "About Us",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     1,
     2
    ],
@@ -35,7 +35,7 @@
    "en": "jobs page",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -57,7 +57,7 @@
    "en": "pay calculator",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     7,
@@ -76,7 +76,7 @@
    "en": "My Applications",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     6,
     7,
@@ -95,7 +95,7 @@
    "en": "client dashboard",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6,
     8,
     9,
@@ -113,7 +113,7 @@
    "en": "client applications dashboard",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6,
     9
    ],
@@ -129,7 +129,7 @@
    "en": "applications dashboard",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6,
     9
    ],
@@ -145,7 +145,7 @@
    "en": "directory",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8,
     9
    ],
@@ -161,7 +161,7 @@
    "en": "clients directory",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     8,
     9
    ],
@@ -177,7 +177,7 @@
    "en": "company directory",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     9
    ],
    "translations": {
@@ -192,7 +192,7 @@
    "en": "drivers page",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7,
     10
    ],
@@ -208,7 +208,7 @@
    "en": "match tuner",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7,
     10
    ],
@@ -224,7 +224,7 @@
    "en": "state",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -243,7 +243,7 @@
    "en": "job type",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     4,
     5,
@@ -262,7 +262,7 @@
    "en": "CDL class",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2
    ],
    "translations": {
@@ -277,7 +277,7 @@
    "en": "Class A",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     5,
     7,
@@ -296,7 +296,7 @@
    "en": "Class B",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2
    ],
    "translations": {
@@ -311,7 +311,7 @@
    "en": "minimum weekly pay",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -329,7 +329,7 @@
    "en": "minimum pay box",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7,
     10
    ],
@@ -345,7 +345,7 @@
    "en": "clear-all",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     5
    ],
@@ -361,7 +361,7 @@
    "en": "cents per mile",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     7,
@@ -379,7 +379,7 @@
    "en": "miles per week",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     7,
@@ -397,7 +397,7 @@
    "en": "weeks on the road per year",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3
    ],
    "translations": {
@@ -412,7 +412,7 @@
    "en": "weekly gross",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3
    ],
    "translations": {
@@ -427,7 +427,7 @@
    "en": "Weekly gross",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3,
     4,
     8
@@ -444,7 +444,7 @@
    "en": "save-target",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     7,
     9
    ],
@@ -460,7 +460,7 @@
    "en": "save-as-my-pay-target",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     3
    ],
    "translations": {
@@ -475,7 +475,7 @@
    "en": "featured",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     2,
     4,
     6,
@@ -494,7 +494,7 @@
    "en": "Applied",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5
    ],
    "translations": {
@@ -509,7 +509,7 @@
    "en": "withdraw",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5
    ],
    "translations": {
@@ -524,7 +524,7 @@
    "en": "Local",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     4
    ],
@@ -540,7 +540,7 @@
    "en": "Regional",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     2,
     5,
     8
@@ -557,7 +557,7 @@
    "en": "Submitted",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     5,
     6,
     10
@@ -574,7 +574,7 @@
    "en": "Under Review",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6,
     10
    ],
@@ -590,7 +590,7 @@
    "en": "Interview",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6,
     10
    ],
@@ -606,7 +606,7 @@
    "en": "Hired",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6
    ],
    "translations": {
@@ -621,7 +621,7 @@
    "en": "Rejected",
    "class": "translate",
    "kind": "ui_label",
-   "turns": [
+   "requests": [
     6
    ],
    "translations": {
@@ -636,7 +636,7 @@
    "en": "Mon 9:00 AM",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -651,7 +651,7 @@
    "en": "Tue 2:00 PM",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -666,7 +666,7 @@
    "en": "Thu 10:30 AM",
    "class": "translate",
    "kind": "content_text",
-   "turns": [
+   "requests": [
     10
    ],
    "translations": {
@@ -681,7 +681,7 @@
    "en": "Redline Freight",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -697,7 +697,7 @@
    "en": "Summit Logistics",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     4,
     5,
@@ -711,7 +711,7 @@
    "en": "Prairie Tankers",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     4,
     5,
@@ -725,7 +725,7 @@
    "en": "Northgate Carriers",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -738,7 +738,7 @@
    "en": "Bluegrass Haulers",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -752,7 +752,7 @@
    "en": "Metro Movers",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     4,
     6,
@@ -764,7 +764,7 @@
    "en": "Harbor Express",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     4,
     6,
@@ -775,7 +775,7 @@
    "en": "Redline",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -791,7 +791,7 @@
    "en": "Summit",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     4,
     5,
@@ -805,7 +805,7 @@
    "en": "Prairie",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     4,
     5,
@@ -819,7 +819,7 @@
    "en": "Northgate",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -832,7 +832,7 @@
    "en": "Bluegrass",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     4,
@@ -846,7 +846,7 @@
    "en": "Metro",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     4,
     6,
@@ -858,7 +858,7 @@
    "en": "Harbor",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     4,
     6,
@@ -869,7 +869,7 @@
    "en": "Marcus Webb",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     5,
     6,
     9,
@@ -880,7 +880,7 @@
    "en": "Dana Ortiz",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     6,
     9,
     10
@@ -890,7 +890,7 @@
    "en": "Luis Romero",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     6,
     10
    ]
@@ -899,7 +899,7 @@
    "en": "Priya Nair",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     6,
     10
    ]
@@ -908,7 +908,7 @@
    "en": "Marcus",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     5,
     6,
     7,
@@ -920,7 +920,7 @@
    "en": "Dana",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     6,
     9,
     10
@@ -930,7 +930,7 @@
    "en": "Priya",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     6,
     10
    ]
@@ -939,7 +939,7 @@
    "en": "Luis",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     6,
     10
    ]
@@ -948,7 +948,7 @@
    "en": "Ohio",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     3,
     5,
@@ -960,7 +960,7 @@
    "en": "Texas",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2,
     5,
     7,
@@ -971,7 +971,7 @@
    "en": "Kentucky",
    "class": "keep",
    "kind": "proper_noun",
-   "turns": [
+   "requests": [
     2
    ]
   },
@@ -979,7 +979,7 @@
    "en": "OTR",
    "class": "keep",
    "kind": "value_format",
-   "turns": [
+   "requests": [
     2,
     5,
     9
@@ -989,7 +989,7 @@
    "en": "CDL",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     2
    ]
   },
@@ -997,7 +997,7 @@
    "en": "NaN",
    "class": "keep",
    "kind": "tech",
-   "turns": [
+   "requests": [
     3
    ]
   },
@@ -1005,7 +1005,7 @@
    "en": "navy",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1,
     9
    ]
@@ -1014,7 +1014,7 @@
    "en": "white",
    "class": "keep",
    "kind": "css_visual",
-   "turns": [
+   "requests": [
     1,
     9
    ]

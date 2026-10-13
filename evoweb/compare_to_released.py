@@ -66,9 +66,11 @@ def main() -> None:
 
         def by_request(lad):
             out = {}
-            for t in metrics.TURNS:
+            for t in metrics.REQUESTS:
                 v = [
-                    s for s in (metrics.turn_score(b.get(t)) for b in lad.values()) if s is not None
+                    s
+                    for s in (metrics.request_score(b.get(t)) for b in lad.values())
+                    if s is not None
                 ]
                 out[t] = st.mean(v) if v else None
             return out
@@ -77,7 +79,7 @@ def main() -> None:
         errors = [
             (i, t, (b.get(t) or {}).get("error_class"))
             for i, b in ladders[fresh].items()
-            for t in metrics.TURNS
+            for t in metrics.REQUESTS
             if (b.get(t) or {}).get("status") == "error"
         ]
 

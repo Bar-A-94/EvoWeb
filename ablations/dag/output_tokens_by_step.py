@@ -2,7 +2,7 @@
 """Output tokens per agent step: model x step 1..20, mean +- std (EvoWeb, paper arms).
 
 Every request lets the OpenHands agent take up to 20 steps, one model call each. The
-capture proxy recorded each call in <sample>/turnN/generation/model_calls.jsonl (turn 1 at
+capture proxy recorded each call in <sample>/turnN/generation/model_calls.jsonl (request 1 at
 the sample root), one file per request; the released traces keep {ts, duration_s, status,
 model, tools, usage} of every record. Step k of a request is its k-th successful (HTTP 200)
 call. Output tokens are the provider's completion count, which includes reasoning/thinking

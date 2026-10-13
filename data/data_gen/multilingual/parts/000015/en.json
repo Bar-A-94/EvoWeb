@@ -115,7 +115,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Click on the Contact Us link in the navigation menu.",
      "expected_result": "The Contact Us page loads and displays a way to contact the office, and the navigation menu is still visible on that page.",
      "task_category": {
@@ -124,7 +124,7 @@
        "Navigation"
       ]
      },
-     "copied_from_turn": 1
+     "copied_from_request": 1
     }
    ]
   },
@@ -181,7 +181,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the Meet Our Team page from the navigation menu and look at the order of the provider cards.",
      "expected_result": "The cards run Dr. Natarajan (Internal Medicine), Dr. Reyes (Family Medicine), Dr. Okafor (Pediatrics), Dr. Vasquez (Dermatology), Dr. Webb (Family Medicine), Dr. Chen (Pediatrics), Dr. Hardin (Sports Medicine) — years of experience descending, with the 15-year tie putting Natarajan before Reyes and the 8-year tie putting Vasquez before Webb alphabetically — clearly not the shuffled order the providers were originally given in.",
      "task_category": {
@@ -191,7 +191,7 @@
        "Dynamic Content Rendering"
       ]
      },
-     "copied_from_turn": 2
+     "copied_from_request": 2
     }
    ]
   },
@@ -248,7 +248,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the Cost Estimator page, select Dr. Hardin as the provider, and check the self-pay option.",
      "expected_result": "The total reads exactly $165.75 (Dr. Hardin's $195 fee minus 15%), displayed to the cent — not rounded to $166 and not shown as $165.8.",
      "task_category": {
@@ -258,7 +258,7 @@
        "Instant Feedback"
       ]
      },
-     "copied_from_turn": 3
+     "copied_from_request": 3
     }
    ]
   },
@@ -315,7 +315,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "On the Meet Our Team page, click the Family Medicine specialty filter.",
      "expected_result": "Only Dr. Reyes and Dr. Webb remain visible, with Dr. Reyes (15 years) listed before Dr. Webb (8 years); the other five providers are no longer shown.",
      "task_category": {
@@ -324,7 +324,7 @@
        "Filtering"
       ]
      },
-     "copied_from_turn": 2
+     "copied_from_request": 2
     }
    ]
   },
@@ -382,7 +382,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the Plan Your Visit page and read the totals row at the bottom of the weekly coverage grid.",
      "expected_result": "The totals read Monday 3, Tuesday 4, Wednesday 3, Thursday 3, Friday 4, Saturday 0 — and both Tuesday and Friday carry the fullest-coverage highlight (the two-way tie means both are marked, not just one).",
      "task_category": {
@@ -392,7 +392,7 @@
        "Tie-Breaking"
       ]
      },
-     "copied_from_turn": 4
+     "copied_from_request": 4
     }
    ]
   },
@@ -449,7 +449,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Click the Request an Appointment button and look at the provider choices in the form.",
      "expected_result": "Exactly five providers are selectable — Dr. Okafor, Dr. Reyes, Dr. Webb, Dr. Chen, and Dr. Hardin; Dr. Natarajan and Dr. Vasquez appear as waitlist-only and cannot be chosen.",
      "task_category": {
@@ -459,7 +459,7 @@
        "Validation"
       ]
      },
-     "copied_from_turn": 5
+     "copied_from_request": 5
     }
    ]
   },
@@ -516,7 +516,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Type 'medicine' (all lowercase) into the header search bar.",
      "expected_result": "The doctor results are exactly Dr. Natarajan, Dr. Reyes, Dr. Webb, and Dr. Hardin in that order — the four whose specialties contain 'Medicine', sorted most-experienced-first with the 15-year tie broken alphabetically — matched despite the lowercase query, with no other doctors listed.",
      "task_category": {
@@ -526,7 +526,7 @@
        "Case Insensitivity"
       ]
      },
-     "copied_from_turn": 6
+     "copied_from_request": 6
     }
    ]
   },
@@ -585,7 +585,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "On the Plan Your Visit page, look at the Saturday column of the coverage grid and look for Sunday anywhere on the page.",
      "expected_result": "Saturday's column totals zero and shows a walk-ins-only reminder instead of a bare 0, while Sunday has no column in the grid at all — only a friendly closed-on-Sundays note appears, and the page does not go blank or crash.",
      "task_category": {
@@ -594,7 +594,7 @@
        "Edge Case Handling"
       ]
      },
-     "copied_from_turn": 4
+     "copied_from_request": 4
     }
    ]
   },
@@ -653,7 +653,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "On the Requests Board, click Confirm on Dr. Webb's pending request, then open the My Requests page and find Dr. Webb's request.",
      "expected_result": "Dr. Webb's request now shows a green Confirmed pill on My Requests, matching the action taken on the board.",
      "task_category": {
@@ -663,7 +663,7 @@
        "Status Indicators"
       ]
      },
-     "copied_from_turn": 7
+     "copied_from_request": 7
     }
    ]
   }
@@ -672,155 +672,155 @@
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "team directory",
     "archetype": "derived-state"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "cost estimator",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "visit planner",
     "archetype": "derived-state"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "appointment requests",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "site-wide search",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "requests board",
     "archetype": "derived-state"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "notices center",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "brand restyle",
     "archetype": "design-restyle"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "language toggle",
     "archetype": "derived-state"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T2",
+    "from": "R1",
+    "to": "R2",
     "what": "nav menu hosts the team page"
    },
    {
-    "from": "T2",
-    "to": "T3",
+    "from": "R2",
+    "to": "R3",
     "what": "provider new-patient fees seed the estimator"
    },
    {
-    "from": "T2",
-    "to": "T4",
+    "from": "R2",
+    "to": "R4",
     "what": "provider on-site days drive the weekly coverage grid"
    },
    {
-    "from": "T2",
-    "to": "T5",
+    "from": "R2",
+    "to": "R5",
     "what": "accepting status and on-site days gate the request form"
    },
    {
-    "from": "T3",
-    "to": "T5",
+    "from": "R3",
+    "to": "R5",
     "what": "self-pay 15% pricing reused in the form's cost preview"
    },
    {
-    "from": "T2",
-    "to": "T6",
+    "from": "R2",
+    "to": "R6",
     "what": "search indexes the provider directory"
    },
    {
-    "from": "T1",
-    "to": "T6",
+    "from": "R1",
+    "to": "R6",
     "what": "search indexes base services and pages"
    },
    {
-    "from": "T4",
-    "to": "T6",
+    "from": "R4",
+    "to": "R6",
     "what": "search indexes the Plan Your Visit page"
    },
    {
-    "from": "T5",
-    "to": "T7",
+    "from": "R5",
+    "to": "R7",
     "what": "board aggregates and resolves appointment requests"
    },
    {
-    "from": "T2",
-    "to": "T7",
+    "from": "R2",
+    "to": "R7",
     "what": "board rows for all seven providers incl. zero tallies"
    },
    {
-    "from": "T1",
-    "to": "T8",
+    "from": "R1",
+    "to": "R8",
     "what": "homepage hosts the top-3 notices"
    },
    {
-    "from": "T2",
-    "to": "T8",
+    "from": "R2",
+    "to": "R8",
     "what": "welcome notice introduces Dr. Chen per the roster's labeling rule"
    },
    {
-    "from": "T1",
-    "to": "T9",
+    "from": "R1",
+    "to": "R9",
     "what": "restyles base pages + homepage quick-link cards"
    },
    {
-    "from": "T2",
-    "to": "T9",
+    "from": "R2",
+    "to": "R9",
     "what": "restyles team directory cards"
    },
    {
-    "from": "T3",
-    "to": "T9",
+    "from": "R3",
+    "to": "R9",
     "what": "restyles estimator page"
    },
    {
-    "from": "T4",
-    "to": "T9",
+    "from": "R4",
+    "to": "R9",
     "what": "restyles Plan Your Visit page"
    },
    {
-    "from": "T5",
-    "to": "T9",
+    "from": "R5",
+    "to": "R9",
     "what": "restyles My Requests while preserving pills"
    },
    {
-    "from": "T1",
-    "to": "T10",
+    "from": "R1",
+    "to": "R10",
     "what": "translates base pages (Home, Contact)"
    },
    {
-    "from": "T2",
-    "to": "T10",
+    "from": "R2",
+    "to": "R10",
     "what": "reorders directory for Spanish speakers"
    },
    {
-    "from": "T4",
-    "to": "T10",
+    "from": "R4",
+    "to": "R10",
     "what": "translates Plan Your Visit headings"
    }
   ]
@@ -828,20 +828,20 @@
  "global_rules": [
   {
    "rule": "Any doctor shown anywhere in the app is written as 'Dr. Lastname' with their specialty displayed alongside.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "All times of day are displayed in 12-hour format with AM/PM, never 24-hour.",
-   "introduced_in_turn": 4
+   "introduced_in_request": 4
   },
   {
    "rule": "Request statuses always render as colored pills: Pending amber, Confirmed green, Declined red.",
-   "introduced_in_turn": 5
+   "introduced_in_request": 5
   }
  ],
  "pinned_seed": {
   "entity": "7 clinic providers",
-  "introduced_in_turn": 2,
+  "introduced_in_request": 2,
   "records_gist": "Seeded shuffled (display must re-sort): Chen/Peds/6y/Tue,Wed,Fri/ZH/accepting/$180; Reyes/Family/15y/Mon,Wed,Fri/ES/accepting/$160; Hardin/Sports/3y/Mon,Fri/accepting/$195; Webb/Family/8y/Wed,Thu,Fri/accepting/$160; Natarajan/Internal/15y/Tue,Thu/waitlist/$175; Vasquez/Derm/8y/Tue/ES/waitlist/$210; Okafor/Peds/12y/Mon,Tue,Thu/ES/accepting/$180 — display order is experience-desc with alphabetical last-name tie-break: Natarajan, Reyes, Okafor, Vasquez, Webb, Chen, Hardin"
  }
 }

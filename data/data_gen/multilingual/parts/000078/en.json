@@ -127,8 +127,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 1,
+     "kind": "backward",
+     "copied_from_request": 1,
      "task": "Type 7*6 into the expression input, select Basic Arithmetic as the calculation type, and execute the calculation.",
      "expected_result": "The result 42 is displayed in the results area.",
      "task_category": {
@@ -193,8 +193,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "Open the history panel and look at the entry at the very top of the list.",
      "expected_result": "The top entry is 3^5 with result = 243 — the list runs newest to oldest, so 3^5 comes first, not sqrt(1444) (the entry that was given first in the original order).",
      "task_category": {
@@ -261,8 +261,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "In the calculator, type 200*tax into the expression input and execute the calculation.",
      "expected_result": "The result = 16.5 is displayed, showing the predefined variable tax (0.0825) was substituted into the expression.",
      "task_category": {
@@ -327,8 +327,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 2,
+     "kind": "backward",
+     "copied_from_request": 2,
      "task": "Use the history panel's category filter to show only Scientific entries.",
      "expected_result": "Exactly the three entries sqrt(1444), 2^10, and 3^5 are visible; the Arithmetic and Percent entries are hidden.",
      "task_category": {
@@ -393,8 +393,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 4,
+     "kind": "backward",
+     "copied_from_request": 4,
      "task": "Go to the Saved page, open the Grid area item, and click its load control.",
      "expected_result": "You land in the calculator with 24*36 in the expression input and the result = 864 displayed.",
      "task_category": {
@@ -462,8 +462,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 5,
+     "kind": "backward",
+     "copied_from_request": 5,
      "task": "Open display settings, set decimal places to 2, then look at the history entry for 10.7/4.",
      "expected_result": "The entry's result reads = 2.68 — 2.675 rounded half-up — not = 2.67.",
      "task_category": {
@@ -530,8 +530,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 6,
+     "kind": "backward",
+     "copied_from_request": 6,
      "task": "Open the stats page on a fresh load and look at the average of all results.",
      "expected_result": "The average reads 205.93 — 205.925 rounded half-up to two decimals — not the 205.92 that plain floating-point rounding produces.",
      "task_category": {
@@ -598,8 +598,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 7,
+     "kind": "backward",
+     "copied_from_request": 7,
      "task": "On the converter, choose temperature with Fahrenheit to Celsius and type 100 into the value input.",
      "expected_result": "37.7778 appears as the converted value while typing, computed with the real temperature formula — not a value near 55 from a multiply-only conversion.",
      "task_category": {
@@ -668,8 +668,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 3,
+     "kind": "backward",
+     "copied_from_request": 3,
      "task": "In the calculator, type 200*tax into the expression input and execute the calculation.",
      "expected_result": "The result = 16.5 is displayed, showing the predefined variable tax (0.0825) was substituted into the expression.",
      "task_category": {
@@ -683,144 +683,144 @@
    ]
   }
  ],
- "target_app_summary": "The one-page expression calculator has grown into a full computing workbench. The original evaluator is now surrounded by a persistent, filterable calculation history (seeded with seven pinned entries), a user-defined variables library that substitutes named values into expressions live while keeping variable names visible in logged expressions, a save/restore workflow for keeper calculations, and a display-settings engine (decimal places, half-up rounding, scientific notation) whose formatting flows into every surface. On top of the history sit a stats dashboard with tie-aware category rollups and a checkbox-driven report builder with on-screen copyable output; alongside sit a live unit converter and an everything-search page that hunts through history entries, saved calculations, and variables with every keystroke, matching result values as well as expression text. A final app-wide restyle unifies calculator, history, stats, and converter. The feature graph is history-centric: the history feeds formatting, stats, reports, and the live search, with the precision engine forming a second hub, giving chains four turns deep from the base calculator.",
+ "target_app_summary": "The one-page expression calculator has grown into a full computing workbench. The original evaluator is now surrounded by a persistent, filterable calculation history (seeded with seven pinned entries), a user-defined variables library that substitutes named values into expressions live while keeping variable names visible in logged expressions, a save/restore workflow for keeper calculations, and a display-settings engine (decimal places, half-up rounding, scientific notation) whose formatting flows into every surface. On top of the history sit a stats dashboard with tie-aware category rollups and a checkbox-driven report builder with on-screen copyable output; alongside sit a live unit converter and an everything-search page that hunts through history entries, saved calculations, and variables with every keystroke, matching result values as well as expression text. A final app-wide restyle unifies calculator, history, stats, and converter. The feature graph is history-centric: the history feeds formatting, stats, reports, and the live search, with the precision engine forming a second hub, giving chains four requests deep from the base calculator.",
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "calculation history panel",
     "archetype": "derived-state"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "variables library",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "saved calculations workflow",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "precision & notation settings",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "usage stats dashboard",
     "archetype": "derived-state"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "live unit converter",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "history report builder",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "everything-search page",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "app-wide facelift",
     "archetype": "design-restyle"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T2",
+    "from": "R1",
+    "to": "R2",
     "what": "logs each executed calculation with its selected type as tag"
    },
    {
-    "from": "T1",
-    "to": "T3",
+    "from": "R1",
+    "to": "R3",
     "what": "variables substitute into calculator expressions"
    },
    {
-    "from": "T2",
-    "to": "T3",
+    "from": "R2",
+    "to": "R3",
     "what": "variable-based calculations are logged in the history panel with variable names kept intact"
    },
    {
-    "from": "T1",
-    "to": "T4",
+    "from": "R1",
+    "to": "R4",
     "what": "saves and reloads the calculator's expression and result"
    },
    {
-    "from": "T1",
-    "to": "T5",
+    "from": "R1",
+    "to": "R5",
     "what": "reformats the live calculator result"
    },
    {
-    "from": "T2",
-    "to": "T5",
+    "from": "R2",
+    "to": "R5",
     "what": "reformats seeded history entries"
    },
    {
-    "from": "T2",
-    "to": "T6",
+    "from": "R2",
+    "to": "R6",
     "what": "aggregates history entries and category tags"
    },
    {
-    "from": "T5",
-    "to": "T7",
+    "from": "R5",
+    "to": "R7",
     "what": "converter output honors decimal-places setting"
    },
    {
-    "from": "T2",
-    "to": "T8",
+    "from": "R2",
+    "to": "R8",
     "what": "report is built from selected history entries"
    },
    {
-    "from": "T5",
-    "to": "T8",
+    "from": "R5",
+    "to": "R8",
     "what": "report numbers follow precision setting"
    },
    {
-    "from": "T1",
-    "to": "T10",
+    "from": "R1",
+    "to": "R10",
     "what": "restyles calculator page"
    },
    {
-    "from": "T2",
-    "to": "T10",
+    "from": "R2",
+    "to": "R10",
     "what": "restyles history panel"
    },
    {
-    "from": "T6",
-    "to": "T10",
+    "from": "R6",
+    "to": "R10",
     "what": "restyles stats page"
    },
    {
-    "from": "T7",
-    "to": "T10",
+    "from": "R7",
+    "to": "R10",
     "what": "restyles converter page"
    },
    {
-    "from": "T2",
-    "to": "T9",
+    "from": "R2",
+    "to": "R9",
     "what": "history expressions and results are searchable, including newly logged calculations"
    },
    {
-    "from": "T4",
-    "to": "T9",
+    "from": "R4",
+    "to": "R9",
     "what": "saved items searchable by name, note, and expression"
    },
    {
-    "from": "T3",
-    "to": "T9",
+    "from": "R3",
+    "to": "R9",
     "what": "variables searchable by name and value"
    }
   ]
@@ -828,20 +828,20 @@
  "global_rules": [
   {
    "rule": "Every calculated result, on every surface, is displayed in a monospace font prefixed with an equals sign, e.g. '= 42'.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Category tags always render as uppercase pills (ARITHMETIC, SCIENTIFIC, PERCENT) wherever they appear.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Any calculation performed with variables keeps the variable names visible in its expression wherever it is shown or logged — 200*tax stays 200*tax, never the substituted 200*0.0825.",
-   "introduced_in_turn": 3
+   "introduced_in_request": 3
   }
  ],
  "pinned_seed": {
   "entity": "7 seeded history calculations",
-  "introduced_in_turn": 2,
+  "introduced_in_request": 2,
   "records_gist": "oldest to newest: sqrt(1444)=38 (Scientific), 40+2=42 (Arithmetic), 15% of 212=31.8 (Percent), 2^10=1024 (Scientific), 10.7/4=2.675 (Arithmetic), 12*(8-3)=60 (Arithmetic), 3^5=243 (Scientific); Arithmetic/Scientific tie 3-3 with Scientific both the first-logged and the most recent category, sum 1441.475, avg 205.925 (float rounding shows 205.92, half-up 205.93)"
  }
 }

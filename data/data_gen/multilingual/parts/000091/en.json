@@ -139,8 +139,8 @@
      }
     },
     {
-     "kind": "regression",
-     "copied_from_turn": 1,
+     "kind": "backward",
+     "copied_from_request": 1,
      "task": "Use the search or filtering controls to filter member profiles by a single criterion such as age or location.",
      "expected_result": "Only profiles matching the chosen criterion remain in the results; profiles that do not match are no longer shown.",
      "task_category": {
@@ -207,7 +207,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the kundali matching tool and set the first person's moon sign to Cancer, gana to Manushya, and nadi to Madhya, then set the second person's moon sign to Libra, gana to Deva, and nadi to Adi.",
      "expected_result": "The score reads 22 out of 36 (nadi 8 for differing nadis + gana 5 for the Deva-Manushya pairing + 0 for mismatched elements = 13 raw, scaled to 36 and rounded) and it carries a Moderate tag.",
      "task_category": {
@@ -217,7 +217,7 @@
        "Computed Values"
       ]
      },
-     "copied_from_turn": 2
+     "copied_from_request": 2
     }
    ]
   },
@@ -276,7 +276,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the Interests area and click through the Received, Sent, and Connections tabs.",
      "expected_result": "Received lists exactly Rohan Mehta, Sara Khan, and Vikram Singh; Sent lists only Meera Nair; Connections lists only Priya Reddy.",
      "task_category": {
@@ -286,7 +286,7 @@
        "List Membership"
       ]
      },
-     "copied_from_turn": 3
+     "copied_from_request": 3
     }
    ]
   },
@@ -345,7 +345,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the Partner Preferences page and read the ranked list of members from top to bottom.",
      "expected_result": "The order is Ananya Iyer 100%, Priya Reddy 100%, Meera Nair 75%, Sara Khan 50%, Rohan Mehta 50%, Vikram Singh 50%, Daniel D'Souza 25% — ties broken younger-first, so Ananya (27) sits above Priya (29) and the 50% group runs Sara (29), Rohan (31), Vikram (33), not alphabetically.",
      "task_category": {
@@ -355,7 +355,7 @@
        "Tie-breaking"
       ]
      },
-     "copied_from_turn": 4
+     "copied_from_request": 4
     }
    ]
   },
@@ -414,7 +414,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "In the kundali matching tool, set the first person to Taurus moon sign, Manushya gana, Adi nadi, and the second person to Gemini moon sign, Rakshasa gana, Adi nadi.",
      "expected_result": "The score reads 2 out of 36 with a Weak tag — 1 raw point (gana only) scales to 1.71 which rounds up to 2, not down to 1.",
      "task_category": {
@@ -424,7 +424,7 @@
        "Rounding"
       ]
      },
-     "copied_from_turn": 2
+     "copied_from_request": 2
     }
    ]
   },
@@ -483,7 +483,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Start the Quick Connect session, mark Interested on Ananya Iyer, then use the end-early option and look at the results.",
      "expected_result": "The results show zero mutual matches — Ananya had not flagged interest in me, so my Interested alone does not create a mutual.",
      "task_category": {
@@ -493,7 +493,7 @@
        "Boolean Composition"
       ]
      },
-     "copied_from_turn": 5
+     "copied_from_request": 5
     }
    ]
   },
@@ -552,7 +552,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the search/browse page, then open the Interests area, and look at each page's background, content blocks, and heading.",
      "expected_result": "Both pages use an ivory page background with deep maroon content blocks in cream text, and the page headings are centered on both.",
      "task_category": {
@@ -562,7 +562,7 @@
        "Cross-page Styling"
       ]
      },
-     "copied_from_turn": 6
+     "copied_from_request": 6
     }
    ]
   },
@@ -621,7 +621,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "In the Received tab, decline Rohan Mehta's interest.",
      "expected_result": "A confirmation prompt appears before anything happens; after confirming, Rohan is removed from Received and does not appear in Connections.",
      "task_category": {
@@ -631,7 +631,7 @@
        "Workflow"
       ]
      },
-     "copied_from_turn": 3
+     "copied_from_request": 3
     }
    ]
   },
@@ -690,7 +690,7 @@
      }
     },
     {
-     "kind": "regression",
+     "kind": "backward",
      "task": "Open the activity dashboard on a fresh load and read the tiles.",
      "expected_result": "Pending received interests shows 3, pending sent shows 1, connections shows 1, the acceptance rate reads 50% (Priya accepted, Meera still pending), and the average match of connections reads 100% with a Strong tag.",
      "task_category": {
@@ -700,7 +700,7 @@
        "Seeded Data"
       ]
      },
-     "copied_from_turn": 7
+     "copied_from_request": 7
     }
    ]
   }
@@ -709,155 +709,155 @@
  "dependency_graph": {
   "nodes": [
    {
-    "id": "T1",
+    "id": "R1",
     "label": "base app",
     "archetype": "base"
    },
    {
-    "id": "T2",
+    "id": "R2",
     "label": "kundali calculator",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T3",
+    "id": "R3",
     "label": "interests & connections hub",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T4",
+    "id": "R4",
     "label": "preference match meter",
     "archetype": "derived-state"
    },
    {
-    "id": "T5",
+    "id": "R5",
     "label": "Quick Connect sessions",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T6",
+    "id": "R6",
     "label": "royal theme restyle",
     "archetype": "design-restyle"
    },
    {
-    "id": "T7",
+    "id": "R7",
     "label": "activity dashboard",
     "archetype": "derived-state"
    },
    {
-    "id": "T8",
+    "id": "R8",
     "label": "verification center",
     "archetype": "multi-surface-workflow"
    },
    {
-    "id": "T9",
+    "id": "R9",
     "label": "privacy panel & gates",
     "archetype": "interactive-tool"
    },
    {
-    "id": "T10",
+    "id": "R10",
     "label": "compatibility report builder",
     "archetype": "derived-state"
    }
   ],
   "edges": [
    {
-    "from": "T1",
-    "to": "T3",
+    "from": "R1",
+    "to": "R3",
     "what": "Send Interest action on base browse/search profiles"
    },
    {
-    "from": "T1",
-    "to": "T4",
+    "from": "R1",
+    "to": "R4",
     "what": "match meter rendered on base profile cards"
    },
    {
-    "from": "T3",
-    "to": "T5",
+    "from": "R3",
+    "to": "R5",
     "what": "mutuals become connections and clear pending interests"
    },
    {
-    "from": "T4",
-    "to": "T5",
+    "from": "R4",
+    "to": "R5",
     "what": "lineup picked and ordered by match meter"
    },
    {
-    "from": "T1",
-    "to": "T6",
+    "from": "R1",
+    "to": "R6",
     "what": "restyles base search/browse pages"
    },
    {
-    "from": "T2",
-    "to": "T6",
+    "from": "R2",
+    "to": "R6",
     "what": "restyles kundali tool panels"
    },
    {
-    "from": "T3",
-    "to": "T6",
+    "from": "R3",
+    "to": "R6",
     "what": "restyles Interests area"
    },
    {
-    "from": "T4",
-    "to": "T6",
+    "from": "R4",
+    "to": "R6",
     "what": "restyles preferences page and verdict pills"
    },
    {
-    "from": "T5",
-    "to": "T6",
+    "from": "R5",
+    "to": "R6",
     "what": "restyles Quick Connect screens"
    },
    {
-    "from": "T3",
-    "to": "T7",
+    "from": "R3",
+    "to": "R7",
     "what": "aggregates interest/connection states"
    },
    {
-    "from": "T4",
-    "to": "T7",
+    "from": "R4",
+    "to": "R7",
     "what": "averages match percent of connections"
    },
    {
-    "from": "T5",
-    "to": "T7",
+    "from": "R5",
+    "to": "R7",
     "what": "session mutuals flow into dashboard counts"
    },
    {
-    "from": "T1",
-    "to": "T8",
+    "from": "R1",
+    "to": "R8",
     "what": "verified badge and toggle in base search"
    },
    {
-    "from": "T3",
-    "to": "T9",
+    "from": "R3",
+    "to": "R9",
     "what": "connections-only messaging gate"
    },
    {
-    "from": "T8",
-    "to": "T9",
+    "from": "R8",
+    "to": "R9",
     "what": "verified-only messaging gate"
    },
    {
-    "from": "T1",
-    "to": "T9",
+    "from": "R1",
+    "to": "R9",
     "what": "preview renders the base profile card"
    },
    {
-    "from": "T2",
-    "to": "T10",
+    "from": "R2",
+    "to": "R10",
     "what": "report recomputes kundali score with calculator rules"
    },
    {
-    "from": "T3",
-    "to": "T10",
+    "from": "R3",
+    "to": "R10",
     "what": "report picker limited to connections"
    },
    {
-    "from": "T4",
-    "to": "T10",
+    "from": "R4",
+    "to": "R10",
     "what": "match meter percent and tag in report"
    },
    {
-    "from": "T8",
-    "to": "T10",
+    "from": "R8",
+    "to": "R10",
     "what": "verified status line in report"
    }
   ]
@@ -865,20 +865,20 @@
  "global_rules": [
   {
    "rule": "Every compatibility or match score anywhere in the app carries a verdict tag: Strong when at least two-thirds of its maximum, Weak when under one-third, Moderate in between.",
-   "introduced_in_turn": 2
+   "introduced_in_request": 2
   },
   {
    "rule": "Any decline, withdraw, or remove action anywhere in the app asks for confirmation before it happens.",
-   "introduced_in_turn": 3
+   "introduced_in_request": 3
   },
   {
    "rule": "Ages are always displayed in the form '27 yrs' everywhere in the app.",
-   "introduced_in_turn": 4
+   "introduced_in_request": 4
   }
  ],
  "pinned_seed": {
   "entity": "7 member profiles",
-  "introduced_in_turn": 3,
+  "introduced_in_request": 3,
   "records_gist": "Ananya Iyer 27 Chennai Hindu Tamil 5'4\"; Rohan Mehta 31 Mumbai Hindu Gujarati 5'11\"; Sara Khan 29 Delhi Muslim Urdu 5'6\"; Vikram Singh 33 Jaipur Hindu Hindi 6'0\"; Meera Nair 26 Kochi Hindu Malayalam 5'3\"; Daniel D'Souza 34 Goa Christian Konkani 5'9\"; Priya Reddy 29 Hyderabad Hindu Telugu 5'5\"; received interests from Rohan/Sara/Vikram, sent to Meera (pending) and Priya (accepted -> connection)"
  }
 }

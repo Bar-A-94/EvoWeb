@@ -9,7 +9,7 @@ result.json files under paths.TRACES.
 
 Companion to dag_slot.py: same arms (the paper setup that reproduces Table 4), same
 four-way check split (functional / integration / global_rule / backward). For every judged
-follow-up check (T2-T10) it counts the `Iter: k` lines of the judge transcript. One iteration
+follow-up check (R2-R10) it counts the `Iter: k` lines of the judge transcript. One iteration
 = one judge LLM call = one browser action, except the last one, which is normally the ANSWER.
 The judge runs with --max_iter 20; on the 20th iteration it is forced to answer, so "hit the
 cap" means 20 iterations. Its prompt tells it a softer budget of 15 interactions, so the share
@@ -63,20 +63,20 @@ def collect(model, logs_root: Path):
             r = json.load(open(f))
             idx = int(r["index"])
             sample = tree / f"{idx:06d}"
-            for turn in r.get("turns", []):
-                tn = turn.get("turn")
-                if not tn or tn < 2:
+            for req in r.get("turns", []):  # result.json keeps the key "turns" (one per request)
+                rn = req.get("turn")
+                if not rn or rn < 2:
                     continue
-                for t in turn.get("tasks", []):
+                for t in req.get("tasks", []):
                     if t.get("verdict") not in d.VERDICT_W:
                         continue
-                    g = check_group(idx, tn, t.get("task_idx"), d.GLOBAL_RULE_TURNS)
+                    g = check_group(idx, rn, t.get("task_idx"), d.GLOBAL_RULE_REQUESTS)
                     if g is None:
                         continue
                     judged += 1
                     n = iterations(
                         sample
-                        / f"turn{tn}"
+                        / f"turn{rn}"  # log directories keep the turnN name
                         / "eval"
                         / "results"
                         / f"task{idx:06d}_{t['task_idx']}"

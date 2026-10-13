@@ -11,12 +11,19 @@ nine-hard-v5-chained.js             the benchmark's generator (dependency DAG + 
                                     -> data/evoweb_main_dataset/<idx:06d>.json -> data/evoweb_benchmark.jsonl
 nine-hard-v5_no_grounding_fable.js  the same without the real-website corpus (App. C.1)
                                     -> data/ablation_dataset_no_grounding/<idx:06d>.json -> data/ablation_no_grounding.jsonl
-audit_parts.py                      the mechanical rules: check template, banned controls, verbatim regression
+audit_parts.py                      the mechanical rules: check template, banned controls, verbatim backward
                                     checks, exact-value coverage, counter cap, archetype mix, DAG shape and
                                     depth (on a parts directory or an assembled dataset)
 assemble_dataset.py                 parts -> the dataset (one row per clean app, in app order)
+paper_terms.py                      old-name -> paper-name conversion, applied by audit_parts.py and
+                                    assemble_dataset.py (see below)
 multilingual/                       the translation parts and scripts (own README)
 ```
+
+The `.js` prompts are kept exactly as run, so they still emit the pre-paper names (`turn` for
+request, `regression` for the backward check: `copied_from_turn`, `introduced_in_turn`, kind
+`regression`, graph ids `T1`..`T10`); `paper_terms.py` converts them to the dataset's names
+(`copied_from_request`, `introduced_in_request`, kind `backward`, `R1`..`R10`).
 
 ## The generator workflows
 
