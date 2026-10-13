@@ -16,3 +16,5 @@ __pycache__/
 tests/smoke_sets/
 .nfs*
 .DS_Store
+# pip install -e .
+*.egg-info/

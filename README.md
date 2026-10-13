@@ -33,73 +33,97 @@ app. **Grade** summarises how much working functionality survives the whole sequ
 
 ## Running examples
 
-Build the harness image once, then use one of the three entry points below. Each takes a run
+Build the harness image once, then serve the model and run it. A run takes a
 name, which apps (`1-32` for all, or `1,4,6,11`) and how many run in parallel; results land in
-`runs/<run name>/`, and `python3 -m evoweb.score_run` scores them exactly like the paper. The outputs
-shown are from our own runs of these commands on all 32 apps. Any provider or model works in
+`runs/<run name>/`, and `python3 -m evoweb.score_run` scores them exactly like the paper. Any provider or model works in
 their place: Anthropic, OpenAI, OpenRouter, any OpenAI-compatible API, or weights served
 locally with vLLM; [`harness/README.md`](harness/README.md) lists every variable.
+
+### 1. Install
 
 ```bash
 docker build -f harness/Dockerfile -t evoweb-harness:latest .
 pip install -r requirements.txt        # scoring: Python >= 3.10
+pip install -e .                       # the evoweb command
 ```
 
-### 1. Model and judge on APIs
+### 2. Serve the model
 
-```bash
-export API_KEY=<anthropic key> EVAL_API_KEY=<anthropic key>
-export MODEL=anthropic/claude-haiku-4-5-20251001 PROVIDER=Anthropic
-harness/run_local.sh haiku 1-32 8
-python3 -m evoweb.score_run runs/haiku
-```
-```
-| run   | apps | Grade | Survival | Turns / request |
-| haiku | 32   | 0.365 | 4.29     | 12.6            |
-```
-
-Another API is `PROVIDER=OpenAILike API_URL=https://<host>/v1 MODEL=openai/<model>` (or
-`PROVIDER=OpenRouter API_URL=https://openrouter.ai/api`) with its key in `API_KEY`; the judge
-moves the same way with `EVAL_MODEL`, `EVAL_API_URL` and `EVAL_API_KEY`.
-
-### 2. Model served locally with vLLM, judge on the API
+Example for vLLM ([recipe for your model](https://docs.vllm.ai/projects/recipes/en/latest/)):
 
 ```bash
-EVAL_API_KEY=<anthropic key> GPUS=0,1,2,3 VLLM_ARGS="--kv-cache-dtype fp8" \
-  harness/serve_and_run.sh Qwen/Qwen3.5-397B-A17B-FP8 qwen397b 1-32 8
-python3 -m evoweb.score_run runs/qwen397b
-```
-```
-| run      | apps | Grade | Survival | Turns / request |
-| qwen397b | 32   | 0.310 | 3.67     | 5.7             |
+docker pull vllm/vllm-openai:v0.31.0
+
+docker run --rm --gpus '"device=0,1,2,3"' --ipc=host --network=host \
+  -v ~/.cache/huggingface:/root/.cache/huggingface \
+  vllm/vllm-openai:v0.31.0 Qwen/Qwen3.5-397B-A17B-FP8 \
+  --tensor-parallel-size 4 \
+  --max-model-len 262144 \
+  --kv-cache-dtype fp8 \
+  --enable-auto-tool-choice --tool-call-parser qwen3_coder \
+  --reasoning-parser qwen3 \
+  --port 8000
 ```
 
-The first argument is the Hugging Face repo of the weights; another model family names its
-vLLM parsers, for example GLM 5.2 on eight GPUs:
-
-```bash
-EVAL_API_KEY=<anthropic key> GPUS=0,1,2,3,4,5,6,7 TOOL_PARSER=glm47 REASONING_PARSER=glm47 \
-  VLLM_ARGS="--kv-cache-dtype fp8" \
-  harness/serve_and_run.sh nvidia/GLM-5.2-NVFP4 glm52 1-32 8
-```
-```
-| run   | apps | Grade | Survival | Turns / request |
-| glm52 | 32   | 0.518 | 5.54     | 12.4            |
-```
-
-### 3. Model and judge both served locally with vLLM
-
-The same launcher with a config file naming the two servers, their weights, GPUs and ports
-(the shipped one puts Qwen3.5 397B on GPUs 0-3 as the agent and on GPUs 4-7 as the judge):
+Check that it answers:
 
 ```bash
-harness/serve_and_run.sh harness/configs/b300-qwen397b.env qwen-both 1-32 8
-python3 -m evoweb.score_run runs/qwen-both
+curl -s localhost:8000/v1/models
 ```
+
+### 3. Run
+
+The model and the judge are each set by a name plus where it's served. With a local vLLM server
+you only need the port; the host defaults to `localhost`.
+
+```bash
+export ANTHROPIC_API_KEY=<key>      # for the judge
+
+evoweb run --name qwen397b --model Qwen/Qwen3.5-397B-A17B-FP8 --model-port 8000
 ```
-| run       | apps | Grade | Survival | Turns / request |
-| qwen-both | 32   | 0.322 | 3.88     | 5.7             |
+
+The judge defaults to Claude Sonnet 4.6 on the Anthropic API. To serve the judge yourself
+(a vision model: it reads screenshots, so add `--limit-mm-per-prompt '{"image":4}'` to its vLLM command):
+
+```bash
+evoweb run --name qwen-both \
+  --model Qwen/Qwen3.5-397B-A17B-FP8 --model-port 8000 \
+  --judge Qwen/Qwen3.5-397B-A17B-FP8 --judge-port 8001
 ```
+
+A server on another machine: add `--model-host 10.0.0.5` (or `--judge-host`).
+
+#### Using an API model instead
+
+Skip step 2. Give the model with its provider prefix and no port; the key comes from that
+provider's usual environment variable:
+
+```bash
+export ANTHROPIC_API_KEY=<key>
+evoweb run --name haiku --model anthropic/claude-haiku-4-5
+
+export OPENAI_API_KEY=<key>
+evoweb run --name gpt5 --model openai/gpt-5
+
+export OPENROUTER_API_KEY=<key>
+evoweb run --name glm52 --model openrouter/z-ai/glm-5.2
+```
+
+Any other OpenAI-compatible API: `--model-url https://<host>/v1 --model <name>`,
+with the key in `MODEL_API_KEY`.
+
+#### Options
+
+| Flag | Default | |
+|---|---|---|
+| `--name` | required | run name; results go to `runs/<name>/` |
+| `--model` | required | served name, or `provider/model` for an API |
+| `--model-port` | | port of a vLLM / OpenAI-compatible server |
+| `--model-host` | `localhost` | host of that server |
+| `--model-url` | | full base URL instead of host + port |
+| `--judge`, `--judge-port`, `--judge-host`, `--judge-url` | `anthropic/claude-sonnet-4-6` | same, for the judge |
+| `--apps` | `1-32` | subset, e.g. `1,4,6` |
+| `--parallel` | `8` | apps run at once |
 
 To compare a run with the paper's runs of the same model (released for the four Anthropic
 models): `python3 -m evoweb.compare_to_released "Haiku 4.5" runs/haiku`.

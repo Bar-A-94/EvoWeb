@@ -12,8 +12,6 @@ What is in here:
 | `run_single_sample.py` | The ladder loop: agent -> build -> serve -> judge, per request; writes `result.json` |
 | `run_sample.sh` | Env-var front end for one ladder (Docker entrypoint and bare-metal launcher); holds the paper defaults |
 | `run_local.sh` | N ladders in parallel with Docker, one container each |
-| `vllm_serve.sh` | Starts one vLLM server in Docker and waits until it answers a completion (and an image question for a judge) |
-| `serve_and_run.sh`, `configs/` | vLLM for the model under test with the judge on the API, or, given a config file, two vLLM servers and no API at all |
 | `generators/` | The agent harnesses (`openhands`, the paper's; `bash`, `mini_swe_agent` and `claude_code` ship too but were not used in the paper), the capture proxy that records every model call, the Vite+React template the agent starts from; see `generators/README.md` |
 | `webvoyager/` | The judge: drives the served app in headless Chrome and returns YES / PARTIAL / NO per check |
 | `scoring.py` | Error taxonomy + verdict parsing; **byte-identical** to `../evoweb/scoring.py` (enforced by a test) |
@@ -44,47 +42,6 @@ EVAL_API_KEY=sk-ant-... harness/run_local.sh my-run 1,4,6 3
 Any OpenAI-compatible endpoint: `PROVIDER=OpenAILike API_URL=https://host/v1 MODEL=openai/<served-name>`.
 For Anthropic, `MODEL` is `anthropic/<id>` (`anthropic/claude-sonnet-4-6`,
 `anthropic/claude-haiku-4-5-20251001`, ...), the form the paper's runs used.
-
-### Open-weights models on your own GPUs: `serve_and_run.sh`
-
-One command starts vLLM in Docker, waits until the server answers a completion, runs the
-benchmark against it with Sonnet as the judge, and stops the server at the end:
-
-```bash
-EVAL_API_KEY=sk-ant-... GPUS=0,1,2,3 VLLM_ARGS="--kv-cache-dtype fp8" \
-  harness/serve_and_run.sh Qwen/Qwen3.5-397B-A17B-FP8 qwen397b-r1 1-32 8
-```
-
-The first argument is the Hugging Face repo of the weights, downloaded into `HF_CACHE`
-(default `~/.cache/huggingface`) on first use; the rest are `run_local.sh`'s arguments. Knobs,
-all optional: `GPUS` (default all), `TP` (default the number of GPUs), `PORT` (8003),
-`SERVED_NAME` (the name the API answers to; default the repo), `VLLM_IMAGE`
-(`vllm/vllm-openai:v0.27.0`), `MAX_MODEL_LEN` (262144), `TOOL_PARSER` and `REASONING_PARSER`
-(vLLM's `qwen3_coder` and `qwen3`; change them for another model family), `READY_TIMEOUT`
-(3600 s to wait for the server), `VLLM_ARGS` and `VLLM_DOCKER_ARGS` for anything else,
-`KEEP_SERVER=1` to leave vLLM up.
-The benchmark containers reach the server through the host's first IP (`API_HOST` overrides).
-If a server already answers on `PORT`, it is used as is.
-
-### No API at all: `serve_and_run.sh` with a config file
-
-Given a config file instead of a model, the same launcher starts two vLLM servers, one for the
-agent and one for the judge:
-
-```bash
-harness/serve_and_run.sh harness/configs/b300-qwen397b.env qwen-both-r1 1-32 8
-```
-
-The config is a plain shell file with `AGENT_*` and `JUDGE_*` variables: `MODEL` (Hugging Face
-repo) and optionally `SERVED_NAME`, `GPUS`, `TP`, `PORT`, `VLLM_ARGS`, `TOOL_PARSER`,
-`REASONING_PARSER`, `MAX_MODEL_LEN`; shared `VLLM_IMAGE`, `HF_CACHE`, `VLLM_DOCKER_ARGS`,
-`READY_TIMEOUT`.
-The judge's server gets `--limit-mm-per-prompt` from `JUDGE_IMAGES` (default 4) and must answer
-an image question before the run starts, so a text-only judge fails early. The shipped config
-puts Qwen3.5 397B (FP8) on GPUs 0-3 as the agent and on GPUs 4-7 as the judge. Servers that
-already answer on a role's port are used as is and left running; servers the script started are
-stopped at the end unless `KEEP_SERVER=1`. `vllm_serve.sh` starts each server and holds every
-server knob.
 
 ### `run_local.sh` contract
 

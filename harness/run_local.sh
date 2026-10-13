@@ -57,6 +57,15 @@ if [ "${#SAMPLES[@]}" -eq 0 ]; then
     exit 2
 fi
 
+# A server on this host (localhost) is host.docker.internal inside the containers.
+h=//host.docker.internal
+for v in API_URL EVAL_API_URL; do
+    if [ -n "${!v:-}" ]; then
+        u="${!v/\/\/localhost/$h}"
+        export "$v=${u/\/\/127.0.0.1/$h}"
+    fi
+done
+
 # Environment passthrough: only variables that are set reach the container, so run_sample.sh's
 # paper defaults apply to everything the user did not override.
 PASS=(
@@ -83,7 +92,7 @@ done
 # and three of four ladders died at request 1 with an empty settings file. Anonymous volumes
 # make them private per container (removed with --rm).
 PRIVATE=(-v /output/acp-packages -v /output/acp-workspaces)
-DOCKER_CMD=(docker run --rm "${ENV_ARGS[@]}" -e RUN_ID="$RUN_ID" -v "${OUT_ABS}:/output" "${PRIVATE[@]}" "$EVOWEB_IMAGE")
+DOCKER_CMD=(docker run --rm --add-host=host.docker.internal:host-gateway "${ENV_ARGS[@]}" -e RUN_ID="$RUN_ID" -v "${OUT_ABS}:/output" "${PRIVATE[@]}" "$EVOWEB_IMAGE")
 echo "[run_local] run=${RUN_ID} samples=${SAMPLES[*]} parallelism=${PAR} out=${OUT_ABS}"
 echo "[run_local] docker command (per sample, SAMPLE_INDEX added):"
 echo "  ${DOCKER_CMD[*]} <-e SAMPLE_INDEX=N>"
@@ -94,7 +103,7 @@ printf '%s\n' "${SAMPLES[@]}" | xargs -P "$PAR" -I{} bash -c '
     idx="$1"
     log="${OUT_ABS}/launcher_$(printf "%06d" "$idx").log"
     # shellcheck disable=SC2086
-    docker run --rm $ENV_ARGS_STR -e RUN_ID="$RUN_ID" -e SAMPLE_INDEX="$idx" \
+    docker run --rm --add-host=host.docker.internal:host-gateway $ENV_ARGS_STR -e RUN_ID="$RUN_ID" -e SAMPLE_INDEX="$idx" \
         -v "${OUT_ABS}:/output" -v /output/acp-packages -v /output/acp-workspaces \
         "$EVOWEB_IMAGE" > "$log" 2>&1
     rc=$?
