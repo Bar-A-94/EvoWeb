@@ -40,7 +40,6 @@ ui_instruct         [ {task, expected_result, task_category{primary_category, su
                     the judge's checks for the first request (4-9 per app)
 follow_ups          [ 9 x {                                   request k = follow_ups[k-2], k = 2..10
     archetype       derived-state | multi-surface-workflow | interactive-tool | design-restyle
-    difficulty      "hard" on every follow-up; unused
     instruction     the user's request
     source_website, source_feature      the real product feature the request was grounded in
                     (the no-grounding set carries `feature_rationale` instead)

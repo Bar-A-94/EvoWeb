@@ -65,6 +65,7 @@ def test_every_evoweb_row_has_9_follow_ups_with_5_checks_in_the_slot_template():
             kinds = [t["kind"] for t in tasks]
             assert all(x in ("exact-value", "feature") for x in kinds[:3]), (row["id"], k, kinds)
             assert kinds[3] == "integration" and kinds[4] == "backward", (row["id"], k, kinds)
+            assert "difficulty" not in fu  # dropped: it was "hard" on every follow-up
             assert fu["archetype"] in (
                 "derived-state",
                 "multi-surface-workflow",
