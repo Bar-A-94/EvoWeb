@@ -45,6 +45,34 @@ def _cap_iterations() -> None:
     LocalConversation.__init__ = capped
 
 
+def _tolerate_missing_security_risk() -> None:
+    """Treat a tool call without `security_risk` as risk UNKNOWN instead of a failed call.
+
+    The ACP server attaches an LLMSecurityAnalyzer even with --always-approve (NeverConfirm), so
+    the field is required but its value is never used. A call that omits it was rejected, and a
+    first response of 3+ such calls tripped the stuck detector, ending the request after one model
+    call with an empty reply (request 1 then scored 0 on the bare template; Qwen 3.5 397B and
+    GPT-5.6 Luna, up to a third of apps). The tool schema always carries the field, so the
+    prompt is unchanged; a call that does set it is handled as before.
+
+    This is the upstream fix backported: openhands-sdk 1.22.0 made the field optional in exactly
+    this way, but openhands 1.16.0 (the latest CLI) pins openhands-sdk==1.21.0, and taking 1.22.0
+    would also bring ~1.8k lines of unrelated agent changes.
+    """
+    from openhands.sdk.agent.agent import Agent
+    from openhands.sdk.security.risk import SecurityRisk
+
+    original = Agent._extract_security_risk
+
+    def tolerant(self, arguments, tool_name, read_only_tool, security_analyzer=None):
+        if arguments.get("security_risk") is None:
+            arguments.pop("security_risk", None)
+            return SecurityRisk.UNKNOWN
+        return original(self, arguments, tool_name, read_only_tool, security_analyzer)
+
+    Agent._extract_security_risk = tolerant
+
+
 def _sort_skill_discovery() -> None:
     """List public skills in path order on every filesystem.
 
@@ -225,4 +253,5 @@ if __name__ == "__main__":
     settings.write_text(json.dumps(spec))
     _cap_iterations()
     _sort_skill_discovery()
+    _tolerate_missing_security_risk()
     main()
