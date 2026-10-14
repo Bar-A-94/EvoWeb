@@ -1,0 +1,595 @@
+{
+  "index": 9,
+  "status": "success",
+  "model": "anthropic/claude-haiku-4-5-20251001",
+  "generator": "openhands",
+  "base_trajectory": {
+    "source": "none",
+    "messages": 0
+  },
+  "artifacts": {
+    "zip": null,
+    "run_json": null,
+    "generator": "openhands",
+    "screenshots": [
+      "/output/000009/screenshots/task000009_0.png",
+      "/output/000009/screenshots/task000009_1.png",
+      "/output/000009/screenshots/task000009_2.png",
+      "/output/000009/screenshots/task000009_3.png",
+      "/output/000009/screenshots/task000009_4.png"
+    ],
+    "output_dir": "/output/000009"
+  },
+  "ladder": {
+    "turns_expected": 10,
+    "turns_completed": 10,
+    "complete": true
+  },
+  "eval_model": "claude-sonnet-4-6",
+  "accuracy": 62.0,
+  "yes": 26,
+  "partial": 10,
+  "no": 14,
+  "total": 50,
+  "tasks": [
+    {
+      "task_idx": 0,
+      "task": "Navigate to the menu page using the main navigation bar.",
+      "expected": "The menu page should load successfully, displaying an up-to-date list of The All-In Bourbon Bar's available food and drink items, complete with descriptions and prices.",
+      "verdict": "no"
+    },
+    {
+      "task_idx": 1,
+      "task": "Access the private poker room information page from the main menu.",
+      "expected": "The page should provide a detailed introduction to the membership-only private poker room, including membership benefits and how to join.",
+      "verdict": "no"
+    },
+    {
+      "task_idx": 2,
+      "task": "Click on the events and promotions section from the homepage.",
+      "expected": "The events and promotions page should display current and upcoming events and any available promotions, with detailed descriptions, dates, and relevant offers.",
+      "verdict": "no"
+    },
+    {
+      "task_idx": 3,
+      "task": "Attempt to make a reservation through the website's reservation form.",
+      "expected": "The reservation form should accept input data, process it without error, and provide a confirmation message indicating the reservation was successful.",
+      "verdict": "no"
+    },
+    {
+      "task_idx": 4,
+      "task": "Verify that the website uses 'peach puff' as the background color and 'indian red' as the component color, as specified in the design requirements.",
+      "expected": "The website has a background color of 'peach puff' and components (such as buttons, cards, headers, etc.) are styled with the color 'indian red', accurately reflecting the design instruction.",
+      "verdict": "no"
+    }
+  ],
+  "turns": [
+    {
+      "turn": 1,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": false,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Navigate to the menu page using the main navigation bar.",
+          "expected": "The menu page should load successfully, displaying an up-to-date list of The All-In Bourbon Bar's available food and drink items, complete with descriptions and prices.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Access the private poker room information page from the main menu.",
+          "expected": "The page should provide a detailed introduction to the membership-only private poker room, including membership benefits and how to join.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Click on the events and promotions section from the homepage.",
+          "expected": "The events and promotions page should display current and upcoming events and any available promotions, with detailed descriptions, dates, and relevant offers.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Attempt to make a reservation through the website's reservation form.",
+          "expected": "The reservation form should accept input data, process it without error, and provide a confirmation message indicating the reservation was successful.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Verify that the website uses 'peach puff' as the background color and 'indian red' as the component color, as specified in the design requirements.",
+          "expected": "The website has a background color of 'peach puff' and components (such as buttons, cards, headers, etc.) are styled with the color 'indian red', accurately reflecting the design instruction.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 0,
+      "partial": 0,
+      "no": 5,
+      "total": 5,
+      "accuracy": 0.0,
+      "cost": {
+        "generation_usd": 0.062372,
+        "model_calls": 4,
+        "input_tokens_total": 55438,
+        "output_tokens": 7957,
+        "judge_usd": 0.3319
+      }
+    },
+    {
+      "turn": 2,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "In the Bourbon Library, check only the Bourbon style box, type 100 into the minimum proof box, and type 20 into the maximum pour price box.",
+          "expected": "Exactly three pours remain — Copper Stakes Single Barrel, Old Bluff Bottled-in-Bond, and Full House Toasted (proof-100 Old Bluff and $20 Full House sit right on the boundaries and are included); High Card Rye (a rye) and Riverboat Reserve ($22) do not appear.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the Bourbon Library with no filters set, apply the sort by pour price from low to high.",
+          "expected": "Amber Creek Small Batch ($12) is listed before High Card Rye ($12) — the $12 tie breaks alphabetically — and Dead Man's Hand Barrel Proof ($26) is last.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the Bourbon Library, type 200 into the minimum proof box, then clear it.",
+          "expected": "With 200 entered, a friendly no-results state appears (no crash, no leftover rows); clearing the box brings all 8 pours back.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 3,
+          "task": "Open the menu page and click the Bourbon Library link there.",
+          "expected": "The Bourbon Library page opens showing all 8 seeded pours, each displaying strength in the combined format like '92 proof (46% ABV)'.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Fill in and submit the online reservation form with a name and party details.",
+          "expected": "The form accepts the input and shows a confirmation message that the reservation was received.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 3,
+      "partial": 1,
+      "no": 1,
+      "total": 5,
+      "accuracy": 70.0,
+      "cost": {
+        "generation_usd": 0.150662,
+        "model_calls": 14,
+        "input_tokens_total": 503196,
+        "output_tokens": 13422,
+        "judge_usd": 0.7045
+      }
+    },
+    {
+      "turn": 3,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the tournament calendar in the events & promotions area.",
+          "expected": "Five tournaments are listed soonest-first — Summer Showdown Main Event (Aug 14), Midnight Bourbon Bounty (Aug 21), High Card Heads-Up (Sep 5), Rookie Night Freeroll (Sep 12), Autumn All-In Classic (Sep 26) — and High Card Heads-Up shows exactly 1 seat left.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 1,
+          "task": "Register for Midnight Bourbon Bounty: open it, enter name Ray and email ray@example.com, continue to the review step, and confirm.",
+          "expected": "The review step shows the $150 buy-in before confirming; afterwards Midnight Bourbon Bounty appears in My Registrations and its open-seat count drops from 40 to 39.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Start registering for Rookie Night Freeroll and enter name Ray with email 'ray@' before trying to continue.",
+          "expected": "The invalid email is rejected with a clear message and the flow does not advance to the review step.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Look at the calendar entries for Summer Showdown Main Event and Rookie Night Freeroll.",
+          "expected": "Summer Showdown (members only) wears the small gold 'Members Only' tag; Rookie Night Freeroll (open to all) has no such tag.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the Bourbon Library, check only the Bourbon style box, type 100 into the minimum proof box, and type 20 into the maximum pour price box.",
+          "expected": "Exactly three pours remain — Copper Stakes Single Barrel, Old Bluff Bottled-in-Bond, and Full House Toasted (proof-100 Old Bluff and $20 Full House sit right on the boundaries and are included); High Card Rye (a rye) and Riverboat Reserve ($22) do not appear.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 1,
+      "no": 0,
+      "total": 5,
+      "accuracy": 90.0,
+      "cost": {
+        "generation_usd": 0.274797,
+        "model_calls": 17,
+        "input_tokens_total": 1069348,
+        "output_tokens": 17710,
+        "judge_usd": 0.5825
+      }
+    },
+    {
+      "turn": 4,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "In the flight builder, select Amber Creek Small Batch, then also select Dead Man's Hand Barrel Proof.",
+          "expected": "After the first pick the running total reads $12 with average proof 92.0; the moment Dead Man's Hand is added the total updates to $38, the average proof to 110.2, and the high-proof water-back note appears.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the flight builder, select Amber Creek Small Batch, Velvet Ace Wheated, and Old Bluff Bottled-in-Bond, then add High Card Rye as a fourth pour.",
+          "expected": "At three pours the total reads $42 with no discount; as soon as the fourth pour is added the 10% flight discount kicks in and the total reads $48.60 — not $54.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Select only Amber Creek Small Batch and Velvet Ace Wheated in the flight builder and try to save the flight under the name Test.",
+          "expected": "Saving is blocked with a message that a flight needs at least 3 pours, and nothing new appears in My Flights.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the flight builder's pour picker, find Copper Stakes Single Barrel.",
+          "expected": "It shows the same $18 pour price as its Bourbon Library entry and wears the gold 'Members Only' tag.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the Bourbon Library with no filters set, apply the sort by pour price from low to high.",
+          "expected": "Amber Creek Small Batch ($12) is listed before High Card Rye ($12) — the $12 tie breaks alphabetically — and Dead Man's Hand Barrel Proof ($26) is last.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 1,
+      "no": 0,
+      "total": 5,
+      "accuracy": 90.0,
+      "cost": {
+        "generation_usd": 0.245737,
+        "model_calls": 14,
+        "input_tokens_total": 1085714,
+        "output_tokens": 10258,
+        "judge_usd": 0.4571
+      }
+    },
+    {
+      "turn": 5,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the guest pass night board, look at Aug 8, claim its pass, then cancel that pass from My Passes.",
+          "expected": "Aug 8 shows exactly 1 pass remaining before the claim; right after claiming it reads sold out (0 remaining) with no way to claim it again; cancelling the pass from My Passes flips Aug 8 back to 1 remaining and claimable.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Claim a guest pass for Aug 22 on the night board, then try to claim Aug 22 again.",
+          "expected": "The first claim drops Aug 22's remaining count from 10 to 9 and lands a pass in My Passes showing the date, the $40 price, and a code starting 'AIB-'; the second attempt is refused with a message about the one-pass-per-night rule and the count stays at 9.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 2,
+          "task": "Claim guest passes for three different nights, then try to claim a fourth night.",
+          "expected": "The fourth claim is refused with a message about the three-live-pass limit, My Passes still lists exactly three passes, and the fourth night's count does not move.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "On the guest pass night board, look at Aug 14 and Aug 21.",
+          "expected": "Both appear marked as tournament nights and cannot be claimed — there is no way to get a guest pass for either date.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the tournament calendar in the events & promotions area.",
+          "expected": "Five tournaments are listed soonest-first — Summer Showdown Main Event (Aug 14), Midnight Bourbon Bounty (Aug 21), High Card Heads-Up (Sep 5), Rookie Night Freeroll (Sep 12), Autumn All-In Classic (Sep 26) — and High Card Heads-Up shows exactly 1 seat left.",
+          "verdict": "partial"
+        }
+      ],
+      "yes": 3,
+      "partial": 2,
+      "no": 0,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.25838,
+        "model_calls": 14,
+        "input_tokens_total": 1244676,
+        "output_tokens": 7090,
+        "judge_usd": 0.316
+      }
+    },
+    {
+      "turn": 6,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "In the gift card studio, pick the $150 card, then switch the pick to the $50 card.",
+          "expected": "With $150 picked the preview shows $165 of total value — the printed $15 bonus included; the moment the pick changes to $50 the preview shows exactly $50, with no bonus.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the gift card studio, type Lena as the recipient and 'Happy birthday' as the message.",
+          "expected": "The card preview updates with each keystroke — the name and message appear on the preview while still being typed, not only after leaving the field — and the character countdown reads 106 left once the 14-character message is in.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the gift card message box, keep typing until the text would pass 120 characters.",
+          "expected": "Input stops at exactly 120 characters — the countdown reads 0, and nothing beyond the 120th character shows up in the box or on the card preview.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Buy a $25 gift card for recipient Lena.",
+          "expected": "The purchase completes with a confirmation code starting 'AIB-', and the $25 card appears in the purchase history with no bonus attached.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the flight builder, select Amber Creek Small Batch, Velvet Ace Wheated, and Old Bluff Bottled-in-Bond, then add High Card Rye as a fourth pour.",
+          "expected": "At three pours the total reads $42 with no discount; as soon as the fourth pour is added the 10% flight discount kicks in and the total reads $48.60 — not $54.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 1,
+      "no": 0,
+      "total": 5,
+      "accuracy": 90.0,
+      "cost": {
+        "generation_usd": 0.279465,
+        "model_calls": 13,
+        "input_tokens_total": 1298343,
+        "output_tokens": 7676,
+        "judge_usd": 0.2978
+      }
+    },
+    {
+      "turn": 7,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Player's Ledger page.",
+          "expected": "The total reads exactly 297 points and the tier shows High Roller — 97 from the Dealer's Choice flight (2 per dollar of the discounted $48.60), 50 from the Summer Showdown seat, 150 from the $150 gift card (bonus value earns nothing).",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Look at the ledger's item-by-item breakdown.",
+          "expected": "The Dealer's Choice line shows 97 points — figured on the discounted $48.60, not the $54 pre-discount price — and the gift card line shows 150 points, on the amount paid rather than the $165 bonus value.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 2,
+          "task": "Check the next-tier line on the Player's Ledger.",
+          "expected": "It says 203 more points are needed to reach All-In, the 500-point tier.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the gift card studio, purchase a $25 card for recipient Lena, then return to the Player's Ledger.",
+          "expected": "The total has moved from 297 to 322 points and the tier still reads High Roller.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Claim a guest pass for Aug 22 on the night board, then try to claim Aug 22 again.",
+          "expected": "The first claim drops Aug 22's remaining count from 10 to 9 and lands a pass in My Passes showing the date, the $40 price, and a code starting 'AIB-'; the second attempt is refused with a message about the one-pass-per-night rule and the count stays at 9.",
+          "verdict": "partial"
+        }
+      ],
+      "yes": 1,
+      "partial": 2,
+      "no": 2,
+      "total": 5,
+      "accuracy": 40.0,
+      "cost": {
+        "generation_usd": 0.30846,
+        "model_calls": 13,
+        "input_tokens_total": 1441603,
+        "output_tokens": 8096,
+        "judge_usd": 0.8719
+      }
+    },
+    {
+      "turn": 8,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Visit the menu page, the tournament calendar, and the flight builder and look at each page's primary action buttons.",
+          "expected": "On all three pages the primary buttons are pill-shaped, indian red, with white text — none left in an older style.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the home page and then the Bourbon Library, looking at the nav bar on each.",
+          "expected": "The nav bar is dark charcoal on both pages, and the link for whichever page is currently open renders in gold.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the Bourbon Library, find Dead Man's Hand Barrel Proof and look at its price.",
+          "expected": "Its $26 pour price renders bold in dark green, the same price styling the menu page's prices now use.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Open the Bourbon Library and then the flight builder and compare their headings and cards.",
+          "expected": "Both pages show centered main headings and cards with 12px rounded corners and a saddle-brown border — the restyle reached both features consistently.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the gift card studio, pick the $150 card, then switch the pick to the $50 card.",
+          "expected": "With $150 picked the preview shows $165 of total value — the printed $15 bonus included; the moment the pick changes to $50 the preview shows exactly $50, with no bonus.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 3,
+      "partial": 1,
+      "no": 1,
+      "total": 5,
+      "accuracy": 70.0,
+      "cost": {
+        "generation_usd": 0.516426,
+        "model_calls": 20,
+        "input_tokens_total": 1788329,
+        "output_tokens": 19219,
+        "judge_usd": 0.4155
+      }
+    },
+    {
+      "turn": 9,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Top Shelf leaderboard.",
+          "expected": "It reads, in order: Riverboat Reserve 4.5, Dead Man's Hand Barrel Proof 4.5, Velvet Ace Wheated 4.0, Amber Creek Small Batch 3.5 — Riverboat outranks Dead Man's Hand on rating count (4 vs 2), and Old Bluff, with only one 5-star rating, is not on the board at all.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the Tasting Journal, add a 4-star rating to Old Bluff Bottled-in-Bond, then check the leaderboard.",
+          "expected": "Old Bluff (now averaging 4.5 from 2 ratings) joins the board in second place — behind Riverboat Reserve (4 ratings) but ahead of Dead Man's Hand, which also sits at 4.5 from 2 ratings yet pours at $26 to Old Bluff's $16.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the Tasting Journal, look for High Card Rye, Copper Stakes Single Barrel, and Full House Toasted.",
+          "expected": "All three show a not-yet-rated state (no average, no crash or blank section), and none of them appears on the Top Shelf leaderboard.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Open the Bourbon Library and find the Riverboat Reserve entry.",
+          "expected": "Its library card now shows the 4.5 average rating alongside its usual details.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Player's Ledger page.",
+          "expected": "The total reads exactly 297 points and the tier shows High Roller — 97 from the Dealer's Choice flight (2 per dollar of the discounted $48.60), 50 from the Summer Showdown seat, 150 from the $150 gift card (bonus value earns nothing).",
+          "verdict": "partial"
+        }
+      ],
+      "yes": 3,
+      "partial": 1,
+      "no": 1,
+      "total": 5,
+      "accuracy": 70.0,
+      "cost": {
+        "generation_usd": 0.312089,
+        "model_calls": 16,
+        "input_tokens_total": 1377803,
+        "output_tokens": 14633,
+        "judge_usd": 0.5343
+      }
+    },
+    {
+      "turn": 10,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "runtime": {
+        "checks_affected": 4,
+        "errors": [
+          "http://localhost:5200/src/pages/NightOutPlanner.jsx 48:23 Uncaught TypeError: Cannot read properties of null (reading 'type')",
+          "http://localhost:5200/node_modules/.vite/deps/chunk-QXLG2TGQ.js?v=db00a08f 9173:14 Uncaught TypeError: Cannot read properties of null (reading 'type')"
+        ]
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "In the Night Out Planner, pick Midnight Bourbon Bounty as the anchor, attach the Dealer's Choice flight, continue to review, and confirm.",
+          "expected": "The review itemizes the $150 buy-in and the flight at its discounted $48.60; after confirming, the plan appears on the My Night page.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the Night Out Planner, select Midnight Bourbon Bounty as the anchor and attach Dealer's Choice, then read the review totals.",
+          "expected": "The grand total reads $198.60 and the ledger points preview reads 147 — 97 for the flight plus 50 for the tournament.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the planner, switch the anchor to the Aug 29 guest night, keep Dealer's Choice attached, and add the plus-one guest pass.",
+          "expected": "The totals recompute on the spot: grand total $88.60 ($48.60 flight plus $40 pass, no buy-in) and a points preview of 97, since no tournament is involved.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "With Midnight Bourbon Bounty selected as the planner's anchor, try to add the plus-one guest pass.",
+          "expected": "The pass option is blocked or disabled with a note that guest passes aren't available on tournament nights.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the flight builder, select Amber Creek Small Batch, then also select Dead Man's Hand Barrel Proof.",
+          "expected": "After the first pick the running total reads $12 with average proof 92.0; the moment Dead Man's Hand is added the total updates to $38, the average proof to 110.2, and the high-proof water-back note appears.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 1,
+      "partial": 0,
+      "no": 4,
+      "total": 5,
+      "accuracy": 20.0,
+      "cost": {
+        "generation_usd": 0.339373,
+        "model_calls": 7,
+        "input_tokens_total": 593242,
+        "output_tokens": 16229,
+        "judge_usd": 0.4122
+      }
+    }
+  ]
+}

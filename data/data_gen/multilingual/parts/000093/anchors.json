@@ -1,0 +1,839 @@
+{
+ "anchors": [
+  {
+   "en": "creative works",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1,
+    2
+   ],
+   "translations": {
+    "zh": "创意作品",
+    "he": "יצירות",
+    "hi": "रचनात्मक कृतियाँ",
+    "de": "kreative Werke",
+    "fr": "œuvres créatives"
+   }
+  },
+  {
+   "en": "Creative Works",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1
+   ],
+   "translations": {
+    "zh": "创意作品",
+    "he": "יצירות",
+    "hi": "रचनात्मक कृतियाँ",
+    "de": "Kreative Werke",
+    "fr": "Œuvres créatives"
+   }
+  },
+  {
+   "en": "Home",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1
+   ],
+   "translations": {
+    "zh": "首页",
+    "he": "בית",
+    "hi": "होम",
+    "de": "Startseite",
+    "fr": "Accueil"
+   }
+  },
+  {
+   "en": "Share Ideas",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1
+   ],
+   "translations": {
+    "zh": "分享创意",
+    "he": "שיתוף רעיונות",
+    "hi": "विचार साझा करें",
+    "de": "Ideen teilen",
+    "fr": "Partager des idées"
+   }
+  },
+  {
+   "en": "Discussions",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1
+   ],
+   "translations": {
+    "zh": "讨论",
+    "he": "דיונים",
+    "hi": "चर्चाएँ",
+    "de": "Diskussionen",
+    "fr": "Discussions"
+   }
+  },
+  {
+   "en": "discussions",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1,
+    2
+   ],
+   "translations": {
+    "zh": "讨论",
+    "he": "דיונים",
+    "hi": "चर्चाएँ",
+    "de": "Diskussionen",
+    "fr": "discussions"
+   }
+  },
+  {
+   "en": "Interactions",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1
+   ],
+   "translations": {
+    "zh": "互动",
+    "he": "אינטראקציות",
+    "hi": "इंटरैक्शन",
+    "de": "Interaktionen",
+    "fr": "Interactions"
+   }
+  },
+  {
+   "en": "share ideas form",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1
+   ],
+   "translations": {
+    "zh": "分享创意表单",
+    "he": "טופס שיתוף רעיונות",
+    "hi": "विचार साझा करने का फ़ॉर्म",
+    "de": "Formular zum Teilen von Ideen",
+    "fr": "formulaire de partage d'idées"
+   }
+  },
+  {
+   "en": "shared ideas section",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1
+   ],
+   "translations": {
+    "zh": "已分享创意专区",
+    "he": "אזור הרעיונות המשותפים",
+    "hi": "साझा किए गए विचार अनुभाग",
+    "de": "Bereich für geteilte Ideen",
+    "fr": "section des idées partagées"
+   }
+  },
+  {
+   "en": "#nature",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    2,
+    5,
+    7
+   ],
+   "translations": {
+    "zh": "#自然",
+    "he": "#טבע",
+    "hi": "#प्रकृति",
+    "de": "#natur",
+    "fr": "#nature"
+   }
+  },
+  {
+   "en": "#abstract",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    2
+   ],
+   "translations": {
+    "zh": "#抽象",
+    "he": "#מופשט",
+    "hi": "#अमूर्त",
+    "de": "#abstrakt",
+    "fr": "#abstrait"
+   }
+  },
+  {
+   "en": "#animals",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    2,
+    4
+   ],
+   "translations": {
+    "zh": "#动物",
+    "he": "#חיות",
+    "hi": "#जानवर",
+    "de": "#tiere",
+    "fr": "#animaux"
+   }
+  },
+  {
+   "en": "#urban",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    4
+   ],
+   "translations": {
+    "zh": "#都市",
+    "he": "#אורבני",
+    "hi": "#शहरी",
+    "de": "#urban",
+    "fr": "#urbain"
+   }
+  },
+  {
+   "en": "#space",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    5,
+    9
+   ],
+   "translations": {
+    "zh": "#太空",
+    "he": "#חלל",
+    "hi": "#अंतरिक्ष",
+    "de": "#weltraum",
+    "fr": "#espace"
+   }
+  },
+  {
+   "en": "Digital Art",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2
+   ],
+   "translations": {
+    "zh": "数字艺术",
+    "he": "אמנות דיגיטלית",
+    "hi": "डिजिटल आर्ट",
+    "de": "Digitale Kunst",
+    "fr": "Art numérique"
+   }
+  },
+  {
+   "en": "Sculpture",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    4
+   ],
+   "translations": {
+    "zh": "雕塑",
+    "he": "פיסול",
+    "hi": "मूर्तिकला",
+    "de": "Skulptur",
+    "fr": "Sculpture"
+   }
+  },
+  {
+   "en": "Papercraft",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    4
+   ],
+   "translations": {
+    "zh": "纸艺",
+    "he": "אומנות נייר",
+    "hi": "पेपरक्राफ्ट",
+    "de": "Papierkunst",
+    "fr": "Art du papier"
+   }
+  },
+  {
+   "en": "Photography",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2
+   ],
+   "translations": {
+    "zh": "摄影",
+    "he": "צילום",
+    "hi": "फ़ोटोग्राफ़ी",
+    "de": "Fotografie",
+    "fr": "Photographie"
+   }
+  },
+  {
+   "en": "sort-by-likes",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3
+   ],
+   "translations": {
+    "zh": "按点赞数排序",
+    "he": "מיון לפי לייקים",
+    "hi": "लाइक के अनुसार क्रमबद्ध",
+    "de": "nach Likes sortieren",
+    "fr": "trier par j'aime"
+   }
+  },
+  {
+   "en": "Spark Score",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    3,
+    5,
+    8,
+    10
+   ],
+   "translations": {
+    "zh": "火花分数",
+    "he": "ניקוד ניצוץ",
+    "hi": "स्पार्क स्कोर",
+    "de": "Funken-Score",
+    "fr": "Score Étincelle"
+   }
+  },
+  {
+   "en": "spark",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    3,
+    4,
+    10
+   ],
+   "translations": {
+    "zh": "火花",
+    "he": "ניצוץ",
+    "hi": "चिंगारी",
+    "de": "Funke",
+    "fr": "étincelle"
+   }
+  },
+  {
+   "en": "Ember",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    3,
+    5
+   ],
+   "translations": {
+    "zh": "余烬",
+    "he": "גחלת",
+    "hi": "अंगारा",
+    "de": "Glut",
+    "fr": "Braise"
+   }
+  },
+  {
+   "en": "Flame",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    3,
+    5
+   ],
+   "translations": {
+    "zh": "火焰",
+    "he": "להבה",
+    "hi": "लौ",
+    "de": "Flamme",
+    "fr": "Flamme"
+   }
+  },
+  {
+   "en": "Blaze",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    3,
+    8
+   ],
+   "translations": {
+    "zh": "烈焰",
+    "he": "מדורה",
+    "hi": "ज्वाला",
+    "de": "Inferno",
+    "fr": "Brasier"
+   }
+  },
+  {
+   "en": "Favorites",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    4,
+    6
+   ],
+   "translations": {
+    "zh": "收藏",
+    "he": "מועדפים",
+    "hi": "पसंदीदा",
+    "de": "Favoriten",
+    "fr": "Favoris"
+   }
+  },
+  {
+   "en": "Communities",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5,
+    7
+   ],
+   "translations": {
+    "zh": "社区",
+    "he": "קהילות",
+    "hi": "समुदाय",
+    "de": "Gemeinschaften",
+    "fr": "Communautés"
+   }
+  },
+  {
+   "en": "join",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5,
+    9
+   ],
+   "translations": {
+    "zh": "加入",
+    "he": "הצטרף",
+    "hi": "शामिल हों",
+    "de": "Beitreten",
+    "fr": "Rejoindre"
+   }
+  },
+  {
+   "en": "Weekly Spotlight",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    6,
+    9
+   ],
+   "translations": {
+    "zh": "每周聚光灯",
+    "he": "זרקור שבועי",
+    "hi": "साप्ताहिक स्पॉटलाइट",
+    "de": "Wöchentliches Rampenlicht",
+    "fr": "Coup de projecteur hebdomadaire"
+   }
+  },
+  {
+   "en": "champion badge",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    7
+   ],
+   "translations": {
+    "zh": "冠军徽章",
+    "he": "תג אלוף",
+    "hi": "चैंपियन बैज",
+    "de": "Champion-Abzeichen",
+    "fr": "badge de champion"
+   }
+  },
+  {
+   "en": "champion",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    7
+   ],
+   "translations": {
+    "zh": "冠军",
+    "he": "אלוף",
+    "hi": "चैंपियन",
+    "de": "Champion",
+    "fr": "champion"
+   }
+  },
+  {
+   "en": "close-and-crown",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    7,
+    10
+   ],
+   "translations": {
+    "zh": "关闭并加冕",
+    "he": "סגור והכתר",
+    "hi": "बंद करें और ताज पहनाएँ",
+    "de": "schließen und krönen",
+    "fr": "clôturer et couronner"
+   }
+  },
+  {
+   "en": "artists insights",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    8,
+    9,
+    10
+   ],
+   "translations": {
+    "zh": "艺术家洞察",
+    "he": "תובנות אמנים",
+    "hi": "कलाकार इनसाइट्स",
+    "de": "Künstler-Statistiken",
+    "fr": "statistiques des artistes"
+   }
+  },
+  {
+   "en": "Artists insights",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    8
+   ],
+   "translations": {
+    "zh": "艺术家洞察",
+    "he": "תובנות אמנים",
+    "hi": "कलाकार इनसाइट्स",
+    "de": "Künstler-Statistiken",
+    "fr": "Statistiques des artistes"
+   }
+  },
+  {
+   "en": "activity feed",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    10
+   ],
+   "translations": {
+    "zh": "活动动态",
+    "he": "פיד פעילות",
+    "hi": "गतिविधि फ़ीड",
+    "de": "Aktivitäts-Feed",
+    "fr": "fil d'activité"
+   }
+  },
+  {
+   "en": "Wild Growth challenge opened",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    10
+   ],
+   "translations": {
+    "zh": "Wild Growth 挑战已开启",
+    "he": "אתגר Wild Growth נפתח",
+    "hi": "Wild Growth चुनौती शुरू हुई",
+    "de": "Wild Growth Challenge eröffnet",
+    "fr": "Défi Wild Growth ouvert"
+   }
+  },
+  {
+   "en": "Space Dreamers community created",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    10
+   ],
+   "translations": {
+    "zh": "Space Dreamers 社区已创建",
+    "he": "קהילת Space Dreamers נוצרה",
+    "hi": "Space Dreamers समुदाय बनाया गया",
+    "de": "Space Dreamers Gemeinschaft erstellt",
+    "fr": "Communauté Space Dreamers créée"
+   }
+  },
+  {
+   "en": "Nebula Whale featured",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    10
+   ],
+   "translations": {
+    "zh": "Nebula Whale 被设为精选",
+    "he": "Nebula Whale הוצג כמומלץ",
+    "hi": "Nebula Whale को फीचर किया गया",
+    "de": "Nebula Whale hervorgehoben",
+    "fr": "Nebula Whale mis en avant"
+   }
+  },
+  {
+   "en": "3 days ago",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    10
+   ],
+   "translations": {
+    "zh": "3天前",
+    "he": "לפני 3 ימים",
+    "hi": "3 दिन पहले",
+    "de": "vor 3 Tagen",
+    "fr": "il y a 3 jours"
+   }
+  },
+  {
+   "en": "5 days ago",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    10
+   ],
+   "translations": {
+    "zh": "5天前",
+    "he": "לפני 5 ימים",
+    "hi": "5 दिन पहले",
+    "de": "vor 5 Tagen",
+    "fr": "il y a 5 jours"
+   }
+  },
+  {
+   "en": "8 days ago",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    10
+   ],
+   "translations": {
+    "zh": "8天前",
+    "he": "לפני 8 ימים",
+    "hi": "8 दिन पहले",
+    "de": "vor 8 Tagen",
+    "fr": "il y a 8 jours"
+   }
+  },
+  {
+   "en": "World of Imagination",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    1
+   ]
+  },
+  {
+   "en": "azure mist",
+   "class": "keep",
+   "kind": "css_visual",
+   "requests": [
+    1
+   ]
+  },
+  {
+   "en": "dark slate blue",
+   "class": "keep",
+   "kind": "css_visual",
+   "requests": [
+    1
+   ]
+  },
+  {
+   "en": "warm coral",
+   "class": "keep",
+   "kind": "css_visual",
+   "requests": [
+    9
+   ]
+  },
+  {
+   "en": "#FF6F61",
+   "class": "keep",
+   "kind": "value_format",
+   "requests": [
+    9
+   ]
+  },
+  {
+   "en": "Love this place",
+   "class": "keep",
+   "kind": "content_text",
+   "requests": [
+    2
+   ]
+  },
+  {
+   "en": "Nebula Whale",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    4,
+    6,
+    7,
+    10
+   ]
+  },
+  {
+   "en": "Clockwork Garden",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    5,
+    6,
+    7,
+    9,
+    10
+   ]
+  },
+  {
+   "en": "Paper Dragons",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    4,
+    6,
+    9
+   ]
+  },
+  {
+   "en": "Midnight Library",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    3,
+    6,
+    9
+   ]
+  },
+  {
+   "en": "Rust & Roses",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    3,
+    4,
+    5,
+    7,
+    9
+   ]
+  },
+  {
+   "en": "Glass Comet",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    3,
+    4,
+    6,
+    9
+   ]
+  },
+  {
+   "en": "Ink Tempest",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    3,
+    6,
+    8
+   ]
+  },
+  {
+   "en": "Origami Tide",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    3,
+    5,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "en": "Mira Chen",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    8
+   ]
+  },
+  {
+   "en": "Theo Voss",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    8,
+    10
+   ]
+  },
+  {
+   "en": "Sana Okafor",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    8,
+    10
+   ]
+  },
+  {
+   "en": "Lena Petrov",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    8
+   ]
+  },
+  {
+   "en": "Nature Collective",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    5,
+    7,
+    9,
+    10
+   ]
+  },
+  {
+   "en": "Space Dreamers",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    5,
+    10
+   ]
+  },
+  {
+   "en": "Wild Growth",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    7,
+    10
+   ]
+  }
+ ]
+}

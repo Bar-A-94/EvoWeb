@@ -1,0 +1,385 @@
+{
+  "anchors": [
+    {
+      "en": "Fee Calculator",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [2, 3, 8, 9, 10],
+      "translations": {
+        "zh": "费用计算器",
+        "he": "מחשבון עמלות",
+        "hi": "फ़ीस कैलकुलेटर",
+        "de": "Gebührenrechner",
+        "fr": "Calculateur de Frais"
+      }
+    },
+    {
+      "en": "Trade Ledger",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [3, 4, 5, 6, 9],
+      "translations": {
+        "zh": "交易账本",
+        "he": "יומן עסקאות",
+        "hi": "ट्रेड लेजर",
+        "de": "Handelsbuch",
+        "fr": "Registre des Transactions"
+      }
+    },
+    {
+      "en": "Payout Center",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [4, 5, 10],
+      "translations": {
+        "zh": "提现中心",
+        "he": "מרכז התשלומים",
+        "hi": "पेआउट सेंटर",
+        "de": "Auszahlungszentrum",
+        "fr": "Centre de Paiement"
+      }
+    },
+    {
+      "en": "Leaderboard",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [5, 7, 9],
+      "translations": {
+        "zh": "排行榜",
+        "he": "לוח המובילים",
+        "hi": "लीडरबोर्ड",
+        "de": "Bestenliste",
+        "fr": "Classement"
+      }
+    },
+    {
+      "en": "Practice Mode",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [6, 10],
+      "translations": {
+        "zh": "练习模式",
+        "he": "מצב תרגול",
+        "hi": "प्रैक्टिस मोड",
+        "de": "Übungsmodus",
+        "fr": "Mode Entraînement"
+      }
+    },
+    {
+      "en": "Offer Screener",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [7, 8, 9],
+      "translations": {
+        "zh": "报价筛选器",
+        "he": "מסנן הצעות",
+        "hi": "ऑफ़र स्क्रीनर",
+        "de": "Angebotsfilter",
+        "fr": "Filtre des Offres"
+      }
+    },
+    {
+      "en": "Seller Statements",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [10],
+      "translations": {
+        "zh": "卖家结算单",
+        "he": "דוחות מוכר",
+        "hi": "विक्रेता स्टेटमेंट",
+        "de": "Verkäuferabrechnungen",
+        "fr": "Relevés Vendeur"
+      }
+    },
+    {
+      "en": "Negotiate",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [8],
+      "translations": {
+        "zh": "议价",
+        "he": "משא ומתן",
+        "hi": "मोलभाव करें",
+        "de": "Verhandeln",
+        "fr": "Négocier"
+      }
+    },
+    {
+      "en": "In Escrow",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [3, 4, 5, 6, 9, 10],
+      "translations": {
+        "zh": "托管中",
+        "he": "בנאמנות",
+        "hi": "एस्क्रो में",
+        "de": "In Treuhand",
+        "fr": "Sous Séquestre"
+      }
+    },
+    {
+      "en": "Released",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [3, 4, 5, 10],
+      "translations": {
+        "zh": "已放行",
+        "he": "שוחרר",
+        "hi": "जारी किया गया",
+        "de": "Freigegeben",
+        "fr": "Libéré"
+      }
+    },
+    {
+      "en": "Refunded",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [3, 4, 5],
+      "translations": {
+        "zh": "已退款",
+        "he": "הוחזר",
+        "hi": "वापस किया गया",
+        "de": "Erstattet",
+        "fr": "Remboursé"
+      }
+    },
+    {
+      "en": "Disputed",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [3, 4, 5, 6, 9, 10],
+      "translations": {
+        "zh": "有争议",
+        "he": "במחלוקת",
+        "hi": "विवादित",
+        "de": "Strittig",
+        "fr": "En Litige"
+      }
+    },
+    {
+      "en": "disputed",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [1],
+      "translations": {
+        "zh": "有争议",
+        "he": "במחלוקת",
+        "hi": "विवादित",
+        "de": "strittig",
+        "fr": "en litige"
+      }
+    },
+    {
+      "en": "lifetime earned",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [4, 5, 10],
+      "translations": {
+        "zh": "累计收入",
+        "he": "רווח מצטבר",
+        "hi": "कुल अर्जित राशि",
+        "de": "Gesamtverdienst",
+        "fr": "gains cumulés"
+      }
+    },
+    {
+      "en": "available balance",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [4, 5],
+      "translations": {
+        "zh": "可用余额",
+        "he": "יתרה זמינה",
+        "hi": "उपलब्ध शेष",
+        "de": "verfügbares Guthaben",
+        "fr": "solde disponible"
+      }
+    },
+    {
+      "en": "total released volume",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [3, 4, 6, 9],
+      "translations": {
+        "zh": "已放行总额",
+        "he": "סך הנפח ששוחרר",
+        "hi": "कुल जारी की गई राशि",
+        "de": "gesamtes freigegebenes Volumen",
+        "fr": "volume total libéré"
+      }
+    },
+    {
+      "en": "locked in escrow",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [3],
+      "translations": {
+        "zh": "托管锁定金额",
+        "he": "נעול בנאמנות",
+        "hi": "एस्क्रो में लॉक",
+        "de": "in Treuhand gesperrt",
+        "fr": "bloqué sous séquestre"
+      }
+    },
+    {
+      "en": "locked-in-escrow",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [3, 6],
+      "translations": {
+        "zh": "托管锁定金额",
+        "he": "נעול בנאמנות",
+        "hi": "एस्क्रो में लॉक",
+        "de": "in Treuhand gesperrt",
+        "fr": "bloqué sous séquestre"
+      }
+    },
+    {
+      "en": "per-seller breakdown",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [3],
+      "translations": {
+        "zh": "各卖家明细",
+        "he": "פילוח לפי מוכר",
+        "hi": "प्रति-विक्रेता विवरण",
+        "de": "Aufschlüsselung pro Verkäufer",
+        "fr": "répartition par vendeur"
+      }
+    },
+    {
+      "en": "minimum reputation",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [7, 9],
+      "translations": {
+        "zh": "最低信誉分",
+        "he": "מוניטין מינימלי",
+        "hi": "न्यूनतम प्रतिष्ठा",
+        "de": "Mindestreputation",
+        "fr": "réputation minimale"
+      }
+    },
+    {
+      "en": "max price",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [7],
+      "translations": {
+        "zh": "最高价格",
+        "he": "מחיר מקסימלי",
+        "hi": "अधिकतम मूल्य",
+        "de": "Höchstpreis",
+        "fr": "prix maximum"
+      }
+    },
+    {
+      "en": "proposed price",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [8],
+      "translations": {
+        "zh": "提议价格",
+        "he": "מחיר מוצע",
+        "hi": "प्रस्तावित मूल्य",
+        "de": "Vorschlagspreis",
+        "fr": "prix proposé"
+      }
+    },
+    {
+      "en": "Bank Transfer",
+      "class": "translate",
+      "kind": "content_text",
+      "requests": [7],
+      "translations": {
+        "zh": "银行转账",
+        "he": "העברה בנקאית",
+        "hi": "बैंक ट्रांसफ़र",
+        "de": "Banküberweisung",
+        "fr": "Virement Bancaire"
+      }
+    },
+    {
+      "en": "Cash",
+      "class": "translate",
+      "kind": "content_text",
+      "requests": [7],
+      "translations": {
+        "zh": "现金",
+        "he": "מזומן",
+        "hi": "नकद",
+        "de": "Bargeld",
+        "fr": "Espèces"
+      }
+    },
+    {
+      "en": "Showing X of Y offers",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [7],
+      "translations": {
+        "zh": "显示 X 个报价，共 Y 个",
+        "he": "מוצגות X מתוך Y הצעות",
+        "hi": "Y में से X ऑफ़र दिखाए जा रहे हैं",
+        "de": "X von Y Angeboten werden angezeigt",
+        "fr": "Affichage de X offres sur Y"
+      }
+    },
+    {
+      "en": "Showing 2 of 6 offers",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [7],
+      "translations": {
+        "zh": "显示 2 个报价，共 6 个",
+        "he": "מוצגות 2 מתוך 6 הצעות",
+        "hi": "6 में से 2 ऑफ़र दिखाए जा रहे हैं",
+        "de": "2 von 6 Angeboten werden angezeigt",
+        "fr": "Affichage de 2 offres sur 6"
+      }
+    },
+    {
+      "en": "Showing 4 of 6 offers",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [7],
+      "translations": {
+        "zh": "显示 4 个报价，共 6 个",
+        "he": "מוצגות 4 מתוך 6 הצעות",
+        "hi": "6 में से 4 ऑफ़र दिखाए जा रहे हैं",
+        "de": "4 von 6 Angeboten werden angezeigt",
+        "fr": "Affichage de 4 offres sur 6"
+      }
+    },
+    {"en": "light gray", "class": "keep", "kind": "css_visual", "requests": [1, 2, 9]},
+    {"en": "dark red", "class": "keep", "kind": "css_visual", "requests": [1, 2, 3, 9]},
+    {"en": "amber", "class": "keep", "kind": "css_visual", "requests": [3, 6, 9]},
+    {"en": "green", "class": "keep", "kind": "css_visual", "requests": [3]},
+    {"en": "gray", "class": "keep", "kind": "css_visual", "requests": [3]},
+    {"en": "white", "class": "keep", "kind": "css_visual", "requests": [9]},
+    {"en": "dark charcoal", "class": "keep", "kind": "css_visual", "requests": [9]},
+    {"en": "monospace", "class": "keep", "kind": "tech", "requests": [9]},
+    {"en": "NaN", "class": "keep", "kind": "tech", "requests": [2, 5]},
+    {"en": "USD", "class": "keep", "kind": "value_format", "requests": [2, 3, 8]},
+    {"en": "BTC", "class": "keep", "kind": "value_format", "requests": [2, 3, 6, 7, 8, 10]},
+    {"en": "ETH", "class": "keep", "kind": "value_format", "requests": [2, 3, 6, 7, 10]},
+    {"en": "SOL", "class": "keep", "kind": "value_format", "requests": [2, 3, 6, 7]},
+    {"en": "PayPal", "class": "keep", "kind": "proper_noun", "requests": [7]},
+    {"en": "Dana", "class": "keep", "kind": "proper_noun", "requests": [3]},
+    {"en": "Felix", "class": "keep", "kind": "proper_noun", "requests": [3]},
+    {"en": "Ravi", "class": "keep", "kind": "proper_noun", "requests": [3]},
+    {"en": "Ana", "class": "keep", "kind": "proper_noun", "requests": [3]},
+    {"en": "Marcus", "class": "keep", "kind": "proper_noun", "requests": [3, 4, 5, 7, 8, 10]},
+    {"en": "Lena", "class": "keep", "kind": "proper_noun", "requests": [3, 4, 5, 7, 8, 10]},
+    {"en": "Omar", "class": "keep", "kind": "proper_noun", "requests": [3, 4, 5, 7, 10]},
+    {"en": "Priya", "class": "keep", "kind": "proper_noun", "requests": [3, 5, 7]},
+    {"en": "TX-101", "class": "keep", "kind": "tech", "requests": [3]},
+    {"en": "TX-102", "class": "keep", "kind": "tech", "requests": [3]},
+    {"en": "TX-103", "class": "keep", "kind": "tech", "requests": [3]},
+    {"en": "TX-104", "class": "keep", "kind": "tech", "requests": [3, 5, 9, 10]},
+    {"en": "TX-105", "class": "keep", "kind": "tech", "requests": [3]},
+    {"en": "TX-106", "class": "keep", "kind": "tech", "requests": [3]},
+    {"en": "TX-107", "class": "keep", "kind": "tech", "requests": [3, 5, 9]},
+    {"en": "TX-108", "class": "keep", "kind": "tech", "requests": [3]}
+  ]
+}

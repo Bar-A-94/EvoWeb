@@ -1,0 +1,628 @@
+{
+  "index": 1,
+  "status": "success",
+  "model": "anthropic/claude-haiku-4-5-20251001",
+  "generator": "openhands",
+  "base_trajectory": {
+    "source": "none",
+    "messages": 0
+  },
+  "artifacts": {
+    "zip": null,
+    "run_json": null,
+    "generator": "openhands",
+    "screenshots": [
+      "/output/000001/screenshots/task000001_0.png",
+      "/output/000001/screenshots/task000001_1.png",
+      "/output/000001/screenshots/task000001_2.png",
+      "/output/000001/screenshots/task000001_3.png",
+      "/output/000001/screenshots/task000001_4.png",
+      "/output/000001/screenshots/task000001_5.png",
+      "/output/000001/screenshots/task000001_6.png"
+    ],
+    "output_dir": "/output/000001"
+  },
+  "ladder": {
+    "turns_expected": 10,
+    "turns_completed": 10,
+    "complete": true
+  },
+  "eval_model": "claude-sonnet-4-6",
+  "accuracy": 65.4,
+  "yes": 31,
+  "partial": 6,
+  "no": 15,
+  "total": 52,
+  "tasks": [
+    {
+      "task_idx": 0,
+      "task": "Verify the stock search functionality by entering a valid stock code.",
+      "expected": "The system returns relevant stock information and analysis corresponding to the entered stock code, displaying details such as basic stock information, market trends, and financial data.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 1,
+      "task": "Test the report customization feature by selecting different report formats and content options.",
+      "expected": "The system provides options for various report formats and content customization, enabling users to choose according to their preferences.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 2,
+      "task": "Input a stock name instead of a stock code to search for stock information.",
+      "expected": "The website successfully recognizes the stock name, retrieving and displaying the relevant stock information and analysis.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 3,
+      "task": "Generate a customized stock report by choosing specific elements to include (e.g., market trends, financial data).",
+      "expected": "The generated report correctly includes the selected elements, accurately reflecting the user's specified choices.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 4,
+      "task": "Navigate through the website and test all buttons function correctly by clicking each of them and back to the homepage.",
+      "expected": "Each click on a button leads to the appropriate page or action without any errors, ensuring smooth navigation.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 5,
+      "task": "Evaluate the website's form inputs by submitting incomplete or incorrect stock information.",
+      "expected": "The system displays appropriate error messages and guidance on how to correct the input errors, ensuring robust input validation.",
+      "verdict": "no"
+    },
+    {
+      "task_idx": 6,
+      "task": "Verify that the website uses 'white' as the background color and 'navy' as the component color, as specified in the design requirements.",
+      "expected": "The website has a background color of 'white' and components (such as buttons, cards, headers, etc.) are styled with the color 'navy', accurately reflecting the design instruction.",
+      "verdict": "yes"
+    }
+  ],
+  "turns": [
+    {
+      "turn": 1,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": false,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Verify the stock search functionality by entering a valid stock code.",
+          "expected": "The system returns relevant stock information and analysis corresponding to the entered stock code, displaying details such as basic stock information, market trends, and financial data.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 1,
+          "task": "Test the report customization feature by selecting different report formats and content options.",
+          "expected": "The system provides options for various report formats and content customization, enabling users to choose according to their preferences.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Input a stock name instead of a stock code to search for stock information.",
+          "expected": "The website successfully recognizes the stock name, retrieving and displaying the relevant stock information and analysis.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Generate a customized stock report by choosing specific elements to include (e.g., market trends, financial data).",
+          "expected": "The generated report correctly includes the selected elements, accurately reflecting the user's specified choices.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Navigate through the website and test all buttons function correctly by clicking each of them and back to the homepage.",
+          "expected": "Each click on a button leads to the appropriate page or action without any errors, ensuring smooth navigation.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 5,
+          "task": "Evaluate the website's form inputs by submitting incomplete or incorrect stock information.",
+          "expected": "The system displays appropriate error messages and guidance on how to correct the input errors, ensuring robust input validation.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 6,
+          "task": "Verify that the website uses 'white' as the background color and 'navy' as the component color, as specified in the design requirements.",
+          "expected": "The website has a background color of 'white' and components (such as buttons, cards, headers, etc.) are styled with the color 'navy', accurately reflecting the design instruction.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 1,
+      "no": 1,
+      "total": 7,
+      "accuracy": 78.6,
+      "cost": {
+        "generation_usd": 0.119612,
+        "model_calls": 11,
+        "input_tokens_total": 237301,
+        "output_tokens": 12540,
+        "judge_usd": 1.0013
+      }
+    },
+    {
+      "turn": 2,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the screener, check the Technology and Healthcare sector boxes and type 1.0 into the minimum dividend yield box.",
+          "expected": "Only Fjord Pharma and Helix Software remain in the results — Argent Micro and Ember Semiconductor are excluded for low yield — and the match readout says 2 of 8.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the screener, clear any active filters, then sort the results by the P/E column in ascending order.",
+          "expected": "The first three rows are Baltic Freight (9.8), Comet Energy (12.6), then Fjord Pharma (12.6) — the 12.6 tie is broken alphabetically by ticker, so CMET comes before FJRD.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Click the built-in 'Dividend Payers' preset on the screener.",
+          "expected": "Results show exactly Baltic Freight, Comet Energy, Fjord Pharma, and Greenline Utilities — the boundary stock Fjord Pharma at exactly 2.5% is included.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Click the Comet Energy row in the screener results.",
+          "expected": "You land in report generation with Comet Energy pre-selected, and generating produces the report for Comet Energy.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Type CMET into the stock search and generate a report with all content options selected.",
+          "expected": "A report for the searched stock appears, including basic stock information, market trends, and financial data sections.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.34436,
+        "model_calls": 20,
+        "input_tokens_total": 1170356,
+        "output_tokens": 23081,
+        "judge_usd": 0.4189
+      }
+    },
+    {
+      "turn": 3,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Watchlist page on a fresh load.",
+          "expected": "The Core group shows Comet Energy and Fjord Pharma, Speculative shows Helix Software, and Fjord Pharma displays the note 'watch Q3 margins'.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "From the screener results, click the add-to-watchlist control on the Comet Energy row and choose the Core group, then open the Watchlist page.",
+          "expected": "No duplicate is created — the watchlist still has exactly three entries with a single Comet Energy row, and the app indicates it was already saved.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the Watchlist, move Helix Software from Speculative to Core.",
+          "expected": "Helix Software now appears under Core alongside the other two stocks and no longer appears under Speculative.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the screener, click add-to-watchlist on the Greenline Utilities row, choose Speculative, then open the Watchlist page.",
+          "expected": "Greenline Utilities appears under the Speculative group on the watchlist.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the screener, clear any active filters, then sort the results by the P/E column in ascending order.",
+          "expected": "The first three rows are Baltic Freight (9.8), Comet Energy (12.6), then Fjord Pharma (12.6) — the 12.6 tie is broken alphabetically by ticker, so CMET comes before FJRD.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 1,
+      "no": 0,
+      "total": 5,
+      "accuracy": 90.0,
+      "cost": {
+        "generation_usd": 0.352978,
+        "model_calls": 13,
+        "input_tokens_total": 1298801,
+        "output_tokens": 19088,
+        "judge_usd": 0.266
+      }
+    },
+    {
+      "turn": 4,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Positions view on a fresh load and read the weight column.",
+          "expected": "Fjord Pharma's weight reads 37.1% (not 37.0%), so the three weights 33.7%, 37.1%, and 29.2% total exactly 100.0%, and total market value shows $9,070.50.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the Positions view, change Comet Energy's shares from 50 to 60.",
+          "expected": "After entering 60, CMET's market value updates to $3,672.00 without any save button, the totals row recalculates immediately, and the three weights still add up to exactly 100.0%.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Clear Helix Software's shares box so it is empty.",
+          "expected": "The HLXS row drops out of the totals — total market value becomes $6,420.00 for the two remaining positions, no NaN or error appears, and the two remaining weights still total exactly 100.0%.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Add Baltic Freight to the watchlist from the screener, then open the Positions view and type 10 into Baltic Freight's shares box and 20.00 into its buy price box.",
+          "expected": "Baltic Freight appears as a position row and shows market value $237.50 with a gain of +18.8%.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "From the screener results, click the add-to-watchlist control on the Comet Energy row and choose the Core group, then open the Watchlist page.",
+          "expected": "No duplicate is created — the watchlist still has exactly three entries with a single Comet Energy row, and the app indicates it was already saved.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 1,
+      "partial": 0,
+      "no": 4,
+      "total": 5,
+      "accuracy": 20.0,
+      "cost": {
+        "generation_usd": 0.272104,
+        "model_calls": 7,
+        "input_tokens_total": 875734,
+        "output_tokens": 8351,
+        "judge_usd": 0.7781
+      }
+    },
+    {
+      "turn": 5,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Ratings page and read the ranking from the top.",
+          "expected": "Baltic Freight ranks first with a total of 20 and grade A (20 lands on the A boundary, not B), and the three stocks tied at 16 appear in the order Ember Semiconductor, Greenline Utilities, Helix Software.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the Ratings page, find Greenline Utilities and read its Value and Dividend scores.",
+          "expected": "Greenline's Value score is 3 (P/E 15.5 falls in the 15-to-25 bucket, not the bucket below) and its Dividend score is 4 (yield 3.9%).",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Check Comet Energy's entry on the Ratings page.",
+          "expected": "Comet Energy shows Dividend 5 (yield 5.1% clears the 4.5% bucket), Value 4, a total of 17 with grade B, and all five dimensions visible on its pentagon or radar snapshot.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Generate a report for Baltic Freight with the Health Score section included.",
+          "expected": "The generated report contains a Health Score section showing Baltic Freight's grade A and total of 20 alongside the other selected report content.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the screener, check the Technology and Healthcare sector boxes and type 1.0 into the minimum dividend yield box.",
+          "expected": "Only Fjord Pharma and Helix Software remain in the results — Argent Micro and Ember Semiconductor are excluded for low yield — and the match readout says 2 of 8.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.338684,
+        "model_calls": 7,
+        "input_tokens_total": 1014148,
+        "output_tokens": 11874,
+        "judge_usd": 0.4066
+      }
+    },
+    {
+      "turn": 6,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Alerts Center on a fresh load.",
+          "expected": "The CMET price-below-$65 rule shows triggered, the FJRD and HLXS rules show watching, and the rollup reads 1 triggered and 2 watching.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the Alerts Center, dismiss the triggered Comet Energy rule.",
+          "expected": "The rule moves out of the active list into the history section, and the triggered count in the rollup decreases by one while the history section now shows it.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the Alerts Center, edit the Fjord Pharma yield rule's threshold from 3 to 2.5.",
+          "expected": "The rule still shows watching — Fjord's yield is exactly 2.5%, and 'above' is strict, so an exactly-equal value does not trigger.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "On the Watchlist page, use the set-alert control on the Helix Software row to create a rule for price above 50.",
+          "expected": "The new rule appears in the Alerts Center attached to Helix Software and immediately shows triggered, since 58.90 is strictly above 50.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Positions view on a fresh load and read the weight column.",
+          "expected": "Fjord Pharma's weight reads 37.1% (not 37.0%), so the three weights 33.7%, 37.1%, and 29.2% total exactly 100.0%, and total market value shows $9,070.50.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 3,
+      "partial": 0,
+      "no": 2,
+      "total": 5,
+      "accuracy": 60.0,
+      "cost": {
+        "generation_usd": 0.227857,
+        "model_calls": 8,
+        "input_tokens_total": 1320483,
+        "output_tokens": 9865,
+        "judge_usd": 0.4193
+      }
+    },
+    {
+      "turn": 7,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "runtime": {
+        "checks_affected": 3,
+        "errors": [
+          "http://localhost:5200/node_modules/.vite/deps/chunk-QXLG2TGQ.js?v=8c3a0b23 9173:14 Uncaught TypeError: Cannot read properties of null (reading 'results')",
+          "http://localhost:5200/src/pages/Earnings.jsx 189:86 Uncaught TypeError: Cannot read properties of null (reading 'results')"
+        ]
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Type automation into the earnings highlights search box.",
+          "expected": "Three stocks appear in the order Ember Semiconductor (2 matches), Argent Micro (1 match), Helix Software (1 match) — most matches first, the 1-1 tie alphabetical by ticker — with a grand total of 4 and every occurrence of 'automation' highlighted.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Type crypto into the earnings highlights search box.",
+          "expected": "A clear no-results message appears — no crash and no blank results area — and any total shown reads zero.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Type TARIFFS in capital letters into the earnings highlights search box.",
+          "expected": "Baltic Freight's matching quote appears despite the different capitalization, and Baltic Freight is the only stock listed.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Type automation into the search box and look at how each result stock is labeled.",
+          "expected": "Each result group shows the ticker in a small navy badge in front of the company name — [EMBR] Ember Semiconductor, [ARGN] Argent Micro, [HLXS] Helix Software.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Ratings page and read the ranking from the top.",
+          "expected": "Baltic Freight ranks first with a total of 20 and grade A (20 lands on the A boundary, not B), and the three stocks tied at 16 appear in the order Ember Semiconductor, Greenline Utilities, Helix Software.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 1,
+      "partial": 0,
+      "no": 4,
+      "total": 5,
+      "accuracy": 20.0,
+      "cost": {
+        "generation_usd": 0.526059,
+        "model_calls": 9,
+        "input_tokens_total": 1089250,
+        "output_tokens": 11346,
+        "judge_usd": 0.4459
+      }
+    },
+    {
+      "turn": 8,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "In the Compare tool, select Comet Energy and Fjord Pharma.",
+          "expected": "The P/E row highlights both columns (each is 12.6), dividend yield highlights Comet Energy (5.1% vs 2.5%), health score highlights Fjord Pharma (18 vs 17), and the win tally reads 2 for Comet Energy and 2 for Fjord Pharma.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 1,
+          "task": "With Comet Energy and Fjord Pharma selected, add Baltic Freight as a third stock.",
+          "expected": "Highlights recompute instantly: Baltic Freight now solely wins P/E (9.8, so the 12.6 pair loses its highlight) and health (20), Comet Energy keeps yield, and the tally reads Baltic 2, Comet 1, Fjord 0.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 2,
+          "task": "Remove selected stocks until only one remains.",
+          "expected": "Instead of a one-column grid or an error, a friendly prompt appears asking to pick at least two stocks to compare.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Select Comet Energy and Fjord Pharma and look at the dividend yield row.",
+          "expected": "Yields display with exactly one decimal and a % sign — 5.1% and 2.5% — never 5.10% or 5%.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the Alerts Center, edit the Fjord Pharma yield rule's threshold from 3 to 2.5.",
+          "expected": "The rule still shows watching — Fjord's yield is exactly 2.5%, and 'above' is strict, so an exactly-equal value does not trigger.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 2,
+      "partial": 2,
+      "no": 1,
+      "total": 5,
+      "accuracy": 60.0,
+      "cost": {
+        "generation_usd": 0.243773,
+        "model_calls": 6,
+        "input_tokens_total": 758229,
+        "output_tokens": 5250,
+        "judge_usd": 0.6925
+      }
+    },
+    {
+      "turn": 9,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "runtime": {
+        "checks_affected": 1,
+        "errors": [
+          "http://localhost:5200/node_modules/.vite/deps/chunk-QXLG2TGQ.js?v=8c3a0b23 9173:14 Uncaught TypeError: Cannot read properties of null (reading 'results')",
+          "http://localhost:5200/src/pages/Earnings.jsx 189:86 Uncaught TypeError: Cannot read properties of null (reading 'results')"
+        ]
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Click the theme toggle on the screener page, then navigate to the Watchlist page and then the Alerts Center.",
+          "expected": "All three pages render with the deep navy background and light text — the dark theme persists across navigation with no page left on the light background.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "In light mode, look at the primary generate button on the report page and the apply/run control on the screener.",
+          "expected": "Both are amber with dark navy text and match each other, and nearby page titles or section headings render uppercase with wide letter-spacing.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Switch to dark mode and open the Ratings page.",
+          "expected": "The page is dark-themed and still ranks Baltic Freight first with grade A and a total of 20 — the restyle did not break the ratings order.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "In dark mode, open the Watchlist page and check the Fjord Pharma entry.",
+          "expected": "The watchlist cards show 12px rounded corners with a visible border on the dark background, the FJRD ticker badge is still legible, and the note 'watch Q3 margins' still displays.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "Type automation into the earnings highlights search box.",
+          "expected": "Three stocks appear in the order Ember Semiconductor (2 matches), Argent Micro (1 match), Helix Software (1 match) — most matches first, the 1-1 tie alphabetical by ticker — with a grand total of 4 and every occurrence of 'automation' highlighted.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 1,
+      "partial": 1,
+      "no": 3,
+      "total": 5,
+      "accuracy": 30.0,
+      "cost": {
+        "generation_usd": 0.577164,
+        "model_calls": 15,
+        "input_tokens_total": 2147613,
+        "output_tokens": 13323,
+        "judge_usd": 0.8551
+      }
+    },
+    {
+      "turn": 10,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Command Center on a fresh load.",
+          "expected": "The Portfolio tile reads $9,070.50 with overall gain +8.0%, the Alerts tile reads 1 triggered of 3, Top Rated names Baltic Freight with grade A, and the Watchlist tile shows Core 2 and Speculative 1.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Click the Portfolio tile on the Command Center.",
+          "expected": "You land on the Positions view with the three seeded positions visible.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open the Positions view, change Comet Energy's shares from 50 to 60, then return to the Command Center.",
+          "expected": "The Portfolio tile's total now reads $9,682.50 — the tile recomputed instead of showing the stale $9,070.50.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the Alerts Center, dismiss the triggered Comet Energy rule, then return to the Command Center.",
+          "expected": "The Alerts tile now shows 0 triggered, consistent with the Alerts Center rollup after the dismissal.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the Compare tool, select Comet Energy and Fjord Pharma.",
+          "expected": "The P/E row highlights both columns (each is 12.6), dividend yield highlights Comet Energy (5.1% vs 2.5%), health score highlights Fjord Pharma (18 vs 17), and the win tally reads 2 for Comet Energy and 2 for Fjord Pharma.",
+          "verdict": "partial"
+        }
+      ],
+      "yes": 4,
+      "partial": 1,
+      "no": 0,
+      "total": 5,
+      "accuracy": 90.0,
+      "cost": {
+        "generation_usd": 0.354772,
+        "model_calls": 6,
+        "input_tokens_total": 1004034,
+        "output_tokens": 10042,
+        "judge_usd": 0.2975
+      }
+    }
+  ]
+}

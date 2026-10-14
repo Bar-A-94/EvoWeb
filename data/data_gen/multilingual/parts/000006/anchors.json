@@ -1,0 +1,775 @@
+{
+ "anchors": [
+  {
+   "en": "Panels",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3,
+    4,
+    5,
+    7,
+    9
+   ],
+   "translations": {
+    "zh": "面板",
+    "he": "פאנלים",
+    "hi": "पैनल",
+    "de": "Paneele",
+    "fr": "Panneaux"
+   }
+  },
+  {
+   "en": "Peak 1",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    2,
+    3,
+    5
+   ],
+   "translations": {
+    "zh": "顶峰 1",
+    "he": "פסגה 1",
+    "hi": "चोटी 1",
+    "de": "Gipfel 1",
+    "fr": "Sommet 1"
+   }
+  },
+  {
+   "en": "Ridge West",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "translations": {
+    "zh": "屋脊西",
+    "he": "רכס מערב",
+    "hi": "रिज पश्चिम",
+    "de": "First West",
+    "fr": "Faîtage Ouest"
+   }
+  },
+  {
+   "en": "Ridge East",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "translations": {
+    "zh": "屋脊东",
+    "he": "רכס מזרח",
+    "hi": "रिज पूर्व",
+    "de": "First Ost",
+    "fr": "Faîtage Est"
+   }
+  },
+  {
+   "en": "Gable 1",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    2,
+    3,
+    4,
+    6
+   ],
+   "translations": {
+    "zh": "山墙 1",
+    "he": "גמלון 1",
+    "hi": "गेबल 1",
+    "de": "Giebel 1",
+    "fr": "Pignon 1"
+   }
+  },
+  {
+   "en": "Corner 2",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "translations": {
+    "zh": "角落 2",
+    "he": "פינה 2",
+    "hi": "कोना 2",
+    "de": "Ecke 2",
+    "fr": "Coin 2"
+   }
+  },
+  {
+   "en": "Chimney 3",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    10
+   ],
+   "translations": {
+    "zh": "烟囱 3",
+    "he": "ארובה 3",
+    "hi": "चिमनी 3",
+    "de": "Schornstein 3",
+    "fr": "Cheminée 3"
+   }
+  },
+  {
+   "en": "South",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    5,
+    8
+   ],
+   "translations": {
+    "zh": "南",
+    "he": "דרום",
+    "hi": "दक्षिण",
+    "de": "Süd",
+    "fr": "Sud"
+   }
+  },
+  {
+   "en": "East",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "translations": {
+    "zh": "东",
+    "he": "מזרח",
+    "hi": "पूर्व",
+    "de": "Ost",
+    "fr": "Est"
+   }
+  },
+  {
+   "en": "fleet",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "translations": {
+    "zh": "全站",
+    "he": "כלל המערכת",
+    "hi": "फ्लीट",
+    "de": "Gesamtanlage",
+    "fr": "parc"
+   }
+  },
+  {
+   "en": "yield",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3,
+    4,
+    5,
+    7,
+    10
+   ],
+   "translations": {
+    "zh": "产出率",
+    "he": "תשואה",
+    "hi": "यील्ड",
+    "de": "Ertrag",
+    "fr": "rendement"
+   }
+  },
+  {
+   "en": "savings calculator",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    3,
+    4,
+    8
+   ],
+   "translations": {
+    "zh": "节省计算器",
+    "he": "מחשבון חיסכון",
+    "hi": "बचत कैलकुलेटर",
+    "de": "Sparrechner",
+    "fr": "calculateur d'économies"
+   }
+  },
+  {
+   "en": "alert center",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    4,
+    6,
+    7,
+    10
+   ],
+   "translations": {
+    "zh": "警报中心",
+    "he": "מרכז התראות",
+    "hi": "अलर्ट सेंटर",
+    "de": "Alarmzentrale",
+    "fr": "centre d'alertes"
+   }
+  },
+  {
+   "en": "report builder",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5,
+    7
+   ],
+   "translations": {
+    "zh": "报告生成器",
+    "he": "בונה דוחות",
+    "hi": "रिपोर्ट बिल्डर",
+    "de": "Berichtsgenerator",
+    "fr": "générateur de rapports"
+   }
+  },
+  {
+   "en": "environmental impact",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    8,
+    10
+   ],
+   "translations": {
+    "zh": "环境影响",
+    "he": "השפעה סביבתית",
+    "hi": "पर्यावरणीय प्रभाव",
+    "de": "Umweltbilanz",
+    "fr": "impact environnemental"
+   }
+  },
+  {
+   "en": "power flow",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    9
+   ],
+   "translations": {
+    "zh": "能量流",
+    "he": "זרימת אנרגיה",
+    "hi": "पावर फ्लो",
+    "de": "Energiefluss",
+    "fr": "flux d'énergie"
+   }
+  },
+  {
+   "en": "System Health",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    10
+   ],
+   "translations": {
+    "zh": "系统健康",
+    "he": "תקינות המערכת",
+    "hi": "सिस्टम हेल्थ",
+    "de": "Systemzustand",
+    "fr": "État du Système"
+   }
+  },
+  {
+   "en": "historical data",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1,
+    2
+   ],
+   "translations": {
+    "zh": "历史数据",
+    "he": "נתונים היסטוריים",
+    "hi": "ऐतिहासिक डेटा",
+    "de": "historische Daten",
+    "fr": "données historiques"
+   }
+  },
+  {
+   "en": "historical chart",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    6,
+    9
+   ],
+   "translations": {
+    "zh": "历史图表",
+    "he": "גרף היסטורי",
+    "hi": "ऐतिहासिक चार्ट",
+    "de": "Verlaufsdiagramm",
+    "fr": "graphique historique"
+   }
+  },
+  {
+   "en": "real-time data",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1
+   ],
+   "translations": {
+    "zh": "实时数据",
+    "he": "נתונים בזמן אמת",
+    "hi": "रियल-टाइम डेटा",
+    "de": "Echtzeitdaten",
+    "fr": "données en temps réel"
+   }
+  },
+  {
+   "en": "solar power generation",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1
+   ],
+   "translations": {
+    "zh": "太阳能发电量",
+    "he": "ייצור סולארי",
+    "hi": "सौर उत्पादन",
+    "de": "Solarstromerzeugung",
+    "fr": "production solaire"
+   }
+  },
+  {
+   "en": "power consumption",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1
+   ],
+   "translations": {
+    "zh": "用电量",
+    "he": "צריכת חשמל",
+    "hi": "बिजली खपत",
+    "de": "Stromverbrauch",
+    "fr": "consommation électrique"
+   }
+  },
+  {
+   "en": "battery percentage",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1
+   ],
+   "translations": {
+    "zh": "电池百分比",
+    "he": "אחוז הסוללה",
+    "hi": "बैटरी प्रतिशत",
+    "de": "Batterieprozentsatz",
+    "fr": "pourcentage de batterie"
+   }
+  },
+  {
+   "en": "Healthy",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    6,
+    9,
+    10
+   ],
+   "translations": {
+    "zh": "健康",
+    "he": "תקין",
+    "hi": "स्वस्थ",
+    "de": "Gesund",
+    "fr": "Sain"
+   }
+  },
+  {
+   "en": "Watch",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    6,
+    9,
+    10
+   ],
+   "translations": {
+    "zh": "关注",
+    "he": "מעקב",
+    "hi": "निगरानी",
+    "de": "Beobachtung",
+    "fr": "Surveillance"
+   }
+  },
+  {
+   "en": "Fault",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    6,
+    9,
+    10
+   ],
+   "translations": {
+    "zh": "故障",
+    "he": "תקלה",
+    "hi": "खराबी",
+    "de": "Störung",
+    "fr": "Panne"
+   }
+  },
+  {
+   "en": "Active",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    4
+   ],
+   "translations": {
+    "zh": "活动",
+    "he": "פעילה",
+    "hi": "सक्रिय",
+    "de": "Aktiv",
+    "fr": "Active"
+   }
+  },
+  {
+   "en": "Resolved",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    4,
+    7
+   ],
+   "translations": {
+    "zh": "已解决",
+    "he": "טופלה",
+    "hi": "हल हो गया",
+    "de": "Erledigt",
+    "fr": "Résolue"
+   }
+  },
+  {
+   "en": "everything",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5
+   ],
+   "translations": {
+    "zh": "全部",
+    "he": "הכול",
+    "hi": "सभी",
+    "de": "alle",
+    "fr": "tout"
+   }
+  },
+  {
+   "en": "none",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5
+   ],
+   "translations": {
+    "zh": "无",
+    "he": "ללא",
+    "hi": "कोई नहीं",
+    "de": "keine",
+    "fr": "aucun"
+   }
+  },
+  {
+   "en": "electricity rate",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    3,
+    4
+   ],
+   "translations": {
+    "zh": "电价",
+    "he": "תעריף חשמל",
+    "hi": "बिजली दर",
+    "de": "Stromtarif",
+    "fr": "tarif électrique"
+   }
+  },
+  {
+   "en": "system cost",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    3,
+    4
+   ],
+   "translations": {
+    "zh": "系统成本",
+    "he": "עלות המערכת",
+    "hi": "सिस्टम लागत",
+    "de": "Systemkosten",
+    "fr": "coût du système"
+   }
+  },
+  {
+   "en": "rate",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    3,
+    4,
+    8
+   ],
+   "translations": {
+    "zh": "电价",
+    "he": "תעריף",
+    "hi": "दर",
+    "de": "Tarif",
+    "fr": "tarif"
+   }
+  },
+  {
+   "en": "cost",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    3,
+    4,
+    8
+   ],
+   "translations": {
+    "zh": "成本",
+    "he": "עלות",
+    "hi": "लागत",
+    "de": "Kosten",
+    "fr": "coût"
+   }
+  },
+  {
+   "en": "sun level",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    9
+   ],
+   "translations": {
+    "zh": "日照强度",
+    "he": "עוצמת שמש",
+    "hi": "धूप स्तर",
+    "de": "Sonnenintensität",
+    "fr": "niveau de soleil"
+   }
+  },
+  {
+   "en": "home load",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    9
+   ],
+   "translations": {
+    "zh": "家庭负载",
+    "he": "עומס הבית",
+    "hi": "घरेलू लोड",
+    "de": "Hauslast",
+    "fr": "consommation du foyer"
+   }
+  },
+  {
+   "en": "battery percent",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    9
+   ],
+   "translations": {
+    "zh": "电池百分比",
+    "he": "אחוז הסוללה",
+    "hi": "बैटरी प्रतिशत",
+    "de": "Batterieprozentsatz",
+    "fr": "pourcentage de batterie"
+   }
+  },
+  {
+   "en": "peak sun hours",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    6,
+    9
+   ],
+   "translations": {
+    "zh": "峰值日照小时数",
+    "he": "שעות שמש שיא",
+    "hi": "पीक सन आवर्स",
+    "de": "Spitzensonnenstunden",
+    "fr": "heures de soleil de pointe"
+   }
+  },
+  {
+   "en": "expected baseline",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    6,
+    9
+   ],
+   "translations": {
+    "zh": "预期基准线",
+    "he": "קו בסיס צפוי",
+    "hi": "अपेक्षित बेसलाइन",
+    "de": "erwartete Basislinie",
+    "fr": "ligne de base attendue"
+   }
+  },
+  {
+   "en": "yearly savings",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    3,
+    8
+   ],
+   "translations": {
+    "zh": "年度节省",
+    "he": "חיסכון שנתי",
+    "hi": "वार्षिक बचत",
+    "de": "jährliche Ersparnis",
+    "fr": "économies annuelles"
+   }
+  },
+  {
+   "en": "payback",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    3,
+    4,
+    8
+   ],
+   "translations": {
+    "zh": "回本时间",
+    "he": "זמן החזר",
+    "hi": "पेबैक अवधि",
+    "de": "Amortisationszeit",
+    "fr": "délai de rentabilité"
+   }
+  },
+  {
+   "en": "honeydew",
+   "class": "keep",
+   "kind": "css_visual",
+   "requests": [
+    1,
+    7
+   ]
+  },
+  {
+   "en": "dark olive green",
+   "class": "keep",
+   "kind": "css_visual",
+   "requests": [
+    1
+   ]
+  },
+  {
+   "en": "kWh",
+   "class": "keep",
+   "kind": "value_format",
+   "requests": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  {
+   "en": "kW",
+   "class": "keep",
+   "kind": "value_format",
+   "requests": [
+    2,
+    9
+   ]
+  },
+  {
+   "en": "W",
+   "class": "keep",
+   "kind": "value_format",
+   "requests": [
+    2,
+    5,
+    9
+   ]
+  },
+  {
+   "en": "kg",
+   "class": "keep",
+   "kind": "value_format",
+   "requests": [
+    8,
+    10
+   ]
+  },
+  {
+   "en": "CO2",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    8,
+    10
+   ]
+  },
+  {
+   "en": "NaN",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    3,
+    5,
+    8
+   ]
+  }
+ ]
+}

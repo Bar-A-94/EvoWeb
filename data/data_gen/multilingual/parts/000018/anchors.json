@@ -1,0 +1,811 @@
+{
+  "anchors": [
+    {
+      "en": "Home",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        1
+      ],
+      "translations": {
+        "zh": "首页",
+        "he": "דף הבית",
+        "hi": "होम",
+        "de": "Startseite",
+        "fr": "Accueil"
+      }
+    },
+    {
+      "en": "Services",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        1
+      ],
+      "translations": {
+        "zh": "服务",
+        "he": "שירותים",
+        "hi": "सेवाएँ",
+        "de": "Leistungen",
+        "fr": "Services"
+      }
+    },
+    {
+      "en": "Book Now",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        1
+      ],
+      "translations": {
+        "zh": "立即预订",
+        "he": "הזמנה עכשיו",
+        "hi": "अभी बुक करें",
+        "de": "Jetzt buchen",
+        "fr": "Réserver maintenant"
+      }
+    },
+    {
+      "en": "Contact Us",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        1
+      ],
+      "translations": {
+        "zh": "联系我们",
+        "he": "צור קשר",
+        "hi": "संपर्क करें",
+        "de": "Kontakt",
+        "fr": "Nous contacter"
+      }
+    },
+    {
+      "en": "service status",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        1,
+        7,
+        10
+      ],
+      "translations": {
+        "zh": "服务状态",
+        "he": "סטטוס שירות",
+        "hi": "सेवा स्थिति",
+        "de": "Servicestatus",
+        "fr": "statut du service"
+      }
+    },
+    {
+      "en": "Instant Quote",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        2
+      ],
+      "translations": {
+        "zh": "即时报价",
+        "he": "הצעת מחיר מיידית",
+        "hi": "तुरंत कोटेशन",
+        "de": "Sofortangebot",
+        "fr": "Devis instantané"
+      }
+    },
+    {
+      "en": "enter a valid number",
+      "class": "translate",
+      "kind": "content_text",
+      "requests": [
+        2
+      ],
+      "translations": {
+        "zh": "请输入有效数字",
+        "he": "הזן מספר תקין",
+        "hi": "कोई मान्य संख्या दर्ज करें",
+        "de": "gib eine gültige Zahl ein",
+        "fr": "saisis un nombre valide"
+      }
+    },
+    {
+      "en": "Certificates",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        3,
+        4,
+        7
+      ],
+      "translations": {
+        "zh": "礼品券",
+        "he": "תעודות",
+        "hi": "प्रमाणपत्र",
+        "de": "Gutscheine",
+        "fr": "Certificats"
+      }
+    },
+    {
+      "en": "unredeemed",
+      "class": "translate",
+      "kind": "content_text",
+      "requests": [
+        3,
+        4
+      ],
+      "translations": {
+        "zh": "未兑换",
+        "he": "לא מומשה",
+        "hi": "अप्रयुक्त",
+        "de": "Nicht eingelöst",
+        "fr": "Non utilisé"
+      }
+    },
+    {
+      "en": "Enjoy a spotless kitchen!",
+      "class": "translate",
+      "kind": "content_text",
+      "requests": [
+        3
+      ],
+      "translations": {
+        "zh": "享受一尘不染的厨房！",
+        "he": "תיהנו ממטבח נקי בוהק!",
+        "hi": "एक बेदाग रसोई का आनंद लें!",
+        "de": "Genieße eine blitzsaubere Küche!",
+        "fr": "Profitez d'une cuisine impeccable !"
+      }
+    },
+    {
+      "en": "Reviews",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        4,
+        6,
+        9,
+        10
+      ],
+      "translations": {
+        "zh": "评价",
+        "he": "ביקורות",
+        "hi": "समीक्षाएँ",
+        "de": "Bewertungen",
+        "fr": "Avis"
+      }
+    },
+    {
+      "en": "Compare Packages",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        6,
+        8
+      ],
+      "translations": {
+        "zh": "套餐对比",
+        "he": "השוואת חבילות",
+        "hi": "पैकेज तुलना",
+        "de": "Pakete vergleichen",
+        "fr": "Comparer les forfaits"
+      }
+    },
+    {
+      "en": "Central",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        5
+      ],
+      "translations": {
+        "zh": "中心区",
+        "he": "מרכז",
+        "hi": "केंद्रीय",
+        "de": "Zentrum",
+        "fr": "Centre"
+      }
+    },
+    {
+      "en": "North",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        5
+      ],
+      "translations": {
+        "zh": "北区",
+        "he": "צפון",
+        "hi": "उत्तरी",
+        "de": "Nord",
+        "fr": "Nord"
+      }
+    },
+    {
+      "en": "South",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        5,
+        7
+      ],
+      "translations": {
+        "zh": "南区",
+        "he": "דרום",
+        "hi": "दक्षिणी",
+        "de": "Süd",
+        "fr": "Sud"
+      }
+    },
+    {
+      "en": "travel fee",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        5,
+        7
+      ],
+      "translations": {
+        "zh": "路程费",
+        "he": "דמי נסיעה",
+        "hi": "यात्रा शुल्क",
+        "de": "Anfahrtsgebühr",
+        "fr": "frais de déplacement"
+      }
+    },
+    {
+      "en": "ZIP",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        5,
+        7
+      ],
+      "translations": {
+        "zh": "邮编",
+        "he": "מיקוד",
+        "hi": "ज़िप कोड",
+        "de": "PLZ",
+        "fr": "code postal"
+      }
+    },
+    {
+      "en": "service-area checker",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        5,
+        7
+      ],
+      "translations": {
+        "zh": "服务区域查询",
+        "he": "בודק אזור השירות",
+        "hi": "सेवा क्षेत्र जाँचक",
+        "de": "Servicegebiet-Prüfer",
+        "fr": "vérificateur de zone de service"
+      }
+    },
+    {
+      "en": "Book this quote",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        7
+      ],
+      "translations": {
+        "zh": "预订此报价",
+        "he": "הזמן הצעה זו",
+        "hi": "यह कोटेशन बुक करें",
+        "de": "Dieses Angebot buchen",
+        "fr": "Réserver ce devis"
+      }
+    },
+    {
+      "en": "confirmed",
+      "class": "translate",
+      "kind": "content_text",
+      "requests": [
+        7
+      ],
+      "translations": {
+        "zh": "已确认",
+        "he": "מאושר",
+        "hi": "पुष्ट",
+        "de": "Bestätigt",
+        "fr": "Confirmé"
+      }
+    },
+    {
+      "en": "Plans",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        8,
+        9,
+        10
+      ],
+      "translations": {
+        "zh": "会员方案",
+        "he": "תוכניות",
+        "hi": "योजनाएँ",
+        "de": "Abos",
+        "fr": "Formules"
+      }
+    },
+    {
+      "en": "Weekly",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        8,
+        10
+      ],
+      "translations": {
+        "zh": "每周",
+        "he": "שבועי",
+        "hi": "साप्ताहिक",
+        "de": "Wöchentlich",
+        "fr": "Hebdomadaire"
+      }
+    },
+    {
+      "en": "Biweekly",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        8
+      ],
+      "translations": {
+        "zh": "每两周",
+        "he": "דו-שבועי",
+        "hi": "पाक्षिक",
+        "de": "Zweiwöchentlich",
+        "fr": "Bimensuel"
+      }
+    },
+    {
+      "en": "Monthly",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        8
+      ],
+      "translations": {
+        "zh": "每月",
+        "he": "חודשי",
+        "hi": "मासिक",
+        "de": "Monatlich",
+        "fr": "Mensuel"
+      }
+    },
+    {
+      "en": "Enroll",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        8
+      ],
+      "translations": {
+        "zh": "加入",
+        "he": "הצטרף",
+        "hi": "नामांकन करें",
+        "de": "Abonnieren",
+        "fr": "S'inscrire"
+      }
+    },
+    {
+      "en": "Business Snapshot",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        10
+      ],
+      "translations": {
+        "zh": "业务概览",
+        "he": "תמונת מצב עסקית",
+        "hi": "व्यापार सारांश",
+        "de": "Geschäftsüberblick",
+        "fr": "Aperçu de l'activité"
+      }
+    },
+    {
+      "en": "booked revenue",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        10
+      ],
+      "translations": {
+        "zh": "已预订收入",
+        "he": "הכנסות מוזמנות",
+        "hi": "बुक किया गया राजस्व",
+        "de": "gebuchter Umsatz",
+        "fr": "chiffre d'affaires réservé"
+      }
+    },
+    {
+      "en": "outstanding gift balance",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        10
+      ],
+      "translations": {
+        "zh": "未使用礼品余额",
+        "he": "יתרת מתנה פתוחה",
+        "hi": "बकाया उपहार शेष",
+        "de": "offenes Gutscheinguthaben",
+        "fr": "solde cadeau restant"
+      }
+    },
+    {
+      "en": "Quick Tidy",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        2,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "en": "Sparkle Standard",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        2,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "en": "Eco Fresh",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        2,
+        3,
+        4,
+        6,
+        8,
+        10
+      ]
+    },
+    {
+      "en": "Office Refresh",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        2,
+        6,
+        8
+      ]
+    },
+    {
+      "en": "Deep Shine",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "en": "Move-Out Master",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        2,
+        6,
+        7
+      ]
+    },
+    {
+      "en": "Hannah",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        3,
+        4
+      ]
+    },
+    {
+      "en": "Omar",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        3
+      ]
+    },
+    {
+      "en": "Dana",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        4,
+        6
+      ]
+    },
+    {
+      "en": "Priya",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        4,
+        6
+      ]
+    },
+    {
+      "en": "Marcus",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        4
+      ]
+    },
+    {
+      "en": "Elena",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        4,
+        6
+      ]
+    },
+    {
+      "en": "Tom",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        4
+      ]
+    },
+    {
+      "en": "Aisha",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        4,
+        6
+      ]
+    },
+    {
+      "en": "Leo",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        4,
+        6
+      ]
+    },
+    {
+      "en": "Grace",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        4
+      ]
+    },
+    {
+      "en": "Rosa",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        7,
+        10
+      ]
+    },
+    {
+      "en": "Ben",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        7,
+        10
+      ]
+    },
+    {
+      "en": "Nina",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        10
+      ]
+    },
+    {
+      "en": "GIFT-2201",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [
+        3,
+        4,
+        7,
+        9,
+        10
+      ]
+    },
+    {
+      "en": "GIFT-2214",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [
+        3
+      ]
+    },
+    {
+      "en": "azure mist",
+      "class": "keep",
+      "kind": "css_visual",
+      "requests": [
+        1
+      ]
+    },
+    {
+      "en": "dark slate blue",
+      "class": "keep",
+      "kind": "css_visual",
+      "requests": [
+        1,
+        9
+      ]
+    },
+    {
+      "en": "deep teal",
+      "class": "keep",
+      "kind": "css_visual",
+      "requests": [
+        9
+      ]
+    },
+    {
+      "en": "golden yellow",
+      "class": "keep",
+      "kind": "css_visual",
+      "requests": [
+        9
+      ]
+    },
+    {
+      "en": "light-gray",
+      "class": "keep",
+      "kind": "css_visual",
+      "requests": [
+        9
+      ]
+    },
+    {
+      "en": "3h 15m",
+      "class": "keep",
+      "kind": "value_format",
+      "requests": [
+        2,
+        3,
+        7
+      ]
+    },
+    {
+      "en": "2h 45m",
+      "class": "keep",
+      "kind": "value_format",
+      "requests": [
+        2
+      ]
+    },
+    {
+      "en": "2h 15m",
+      "class": "keep",
+      "kind": "value_format",
+      "requests": [
+        2,
+        5
+      ]
+    },
+    {
+      "en": "1h 30m",
+      "class": "keep",
+      "kind": "value_format",
+      "requests": [
+        6,
+        8
+      ]
+    },
+    {
+      "en": "Jun 14",
+      "class": "keep",
+      "kind": "value_format",
+      "requests": [
+        4
+      ]
+    },
+    {
+      "en": "Jun 10",
+      "class": "keep",
+      "kind": "value_format",
+      "requests": [
+        4
+      ]
+    },
+    {
+      "en": "Jun 8",
+      "class": "keep",
+      "kind": "value_format",
+      "requests": [
+        4
+      ]
+    },
+    {
+      "en": "Jun 5",
+      "class": "keep",
+      "kind": "value_format",
+      "requests": [
+        4
+      ]
+    },
+    {
+      "en": "Jun 1",
+      "class": "keep",
+      "kind": "value_format",
+      "requests": [
+        4
+      ]
+    },
+    {
+      "en": "May 28",
+      "class": "keep",
+      "kind": "value_format",
+      "requests": [
+        4
+      ]
+    },
+    {
+      "en": "Jul 12",
+      "class": "keep",
+      "kind": "value_format",
+      "requests": [
+        7
+      ]
+    },
+    {
+      "en": "Jul 19",
+      "class": "keep",
+      "kind": "value_format",
+      "requests": [
+        7
+      ]
+    },
+    {
+      "en": "9:00 AM",
+      "class": "keep",
+      "kind": "value_format",
+      "requests": [
+        7
+      ]
+    },
+    {
+      "en": "12:30 PM",
+      "class": "keep",
+      "kind": "value_format",
+      "requests": [
+        7
+      ]
+    },
+    {
+      "en": "3:00 PM",
+      "class": "keep",
+      "kind": "value_format",
+      "requests": [
+        7
+      ]
+    }
+  ]
+}

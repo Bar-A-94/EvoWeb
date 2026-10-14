@@ -1,0 +1,601 @@
+{
+  "index": 26,
+  "status": "success",
+  "model": "anthropic/claude-haiku-4-5-20251001",
+  "generator": "openhands",
+  "base_trajectory": {
+    "source": "none",
+    "messages": 0
+  },
+  "artifacts": {
+    "zip": null,
+    "run_json": null,
+    "generator": "openhands",
+    "screenshots": [
+      "/output/000026/screenshots/task000026_0.png",
+      "/output/000026/screenshots/task000026_1.png",
+      "/output/000026/screenshots/task000026_2.png",
+      "/output/000026/screenshots/task000026_3.png",
+      "/output/000026/screenshots/task000026_4.png",
+      "/output/000026/screenshots/task000026_5.png"
+    ],
+    "output_dir": "/output/000026"
+  },
+  "ladder": {
+    "turns_expected": 10,
+    "turns_completed": 10,
+    "complete": true
+  },
+  "eval_model": "claude-sonnet-4-6",
+  "accuracy": 49.0,
+  "yes": 22,
+  "partial": 6,
+  "no": 23,
+  "total": 51,
+  "tasks": [
+    {
+      "task_idx": 0,
+      "task": "Navigate to the obituary publishing section and submit a new obituary with a title, content, and image.",
+      "expected": "The obituary should be successfully published, appear on the user's dashboard, and be accessible to other users from the main obituaries page.",
+      "verdict": "no"
+    },
+    {
+      "task_idx": 1,
+      "task": "Look up the list of local mortuaries available on the website.",
+      "expected": "The list should display comprehensive details about each mortuary, including name, location, and contact information.",
+      "verdict": "no"
+    },
+    {
+      "task_idx": 2,
+      "task": "Leave a condolence message on an existing obituary.",
+      "expected": "The message should be successfully posted under the selected obituary and visible to other users.",
+      "verdict": "no"
+    },
+    {
+      "task_idx": 3,
+      "task": "Check the statistics page for the statistical analysis of obituary-related data.",
+      "expected": "The page should display clear and relevant statistics, such as the number of obituaries published, the most recent obituaries, or any trend analysis available.",
+      "verdict": "no"
+    },
+    {
+      "task_idx": 4,
+      "task": "Navigate through the website using the main navigation menu.",
+      "expected": "Each link in the navigation menu should lead to the appropriate section or page, and the navigation menu should remain consistent across all pages.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 5,
+      "task": "Verify that the website uses 'cornsilk' as the background color and 'peru' as the component color, as specified in the design requirements.",
+      "expected": "The website has a background color of 'cornsilk' and components (such as buttons, cards, headers, etc.) are styled with the color 'peru', accurately reflecting the design instruction.",
+      "verdict": "no"
+    }
+  ],
+  "turns": [
+    {
+      "turn": 1,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": false,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Navigate to the obituary publishing section and submit a new obituary with a title, content, and image.",
+          "expected": "The obituary should be successfully published, appear on the user's dashboard, and be accessible to other users from the main obituaries page.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Look up the list of local mortuaries available on the website.",
+          "expected": "The list should display comprehensive details about each mortuary, including name, location, and contact information.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Leave a condolence message on an existing obituary.",
+          "expected": "The message should be successfully posted under the selected obituary and visible to other users.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Check the statistics page for the statistical analysis of obituary-related data.",
+          "expected": "The page should display clear and relevant statistics, such as the number of obituaries published, the most recent obituaries, or any trend analysis available.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Navigate through the website using the main navigation menu.",
+          "expected": "Each link in the navigation menu should lead to the appropriate section or page, and the navigation menu should remain consistent across all pages.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 5,
+          "task": "Verify that the website uses 'cornsilk' as the background color and 'peru' as the component color, as specified in the design requirements.",
+          "expected": "The website has a background color of 'cornsilk' and components (such as buttons, cards, headers, etc.) are styled with the color 'peru', accurately reflecting the design instruction.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 0,
+      "partial": 1,
+      "no": 5,
+      "total": 6,
+      "accuracy": 8.3,
+      "cost": {
+        "generation_usd": 0.061699,
+        "model_calls": 3,
+        "input_tokens_total": 40723,
+        "output_tokens": 8177,
+        "judge_usd": 0.3681
+      }
+    },
+    {
+      "turn": 2,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "In the inscription designer, pick Rosa Delgado from the memorial list and look at the preview.",
+          "expected": "The preview fills in 'Rosa Delgado' with her dates July 4, 1945 – January 18, 2024 and shows the age she reached as 78 — not 79 — because the July birthday had not yet arrived by January.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Pick any memorial in the inscription designer and type a few characters of an epitaph while watching the preview and the character count.",
+          "expected": "The engraved preview and the remaining-character count update as each character is typed, without needing to submit or save.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the inscription designer, pick Harold Finch, type the epitaph 'A devoted father, grandfather, and friend to absolutely everyone' (well over 40 characters), and try to save.",
+          "expected": "The designer flags the epitaph as over the 40-character limit and refuses to save; no inscription appears on Harold Finch's obituary page.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 3,
+          "task": "Pick Rosa Delgado in the inscription designer, type the epitaph 'Beloved teacher and friend', save it, then open Rosa Delgado's obituary page.",
+          "expected": "The finished inscription appears on Rosa Delgado's obituary page showing 'Beloved teacher and friend', with her dates written with the month spelled out, like 'July 4, 1945'.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open an obituary from the main obituaries listing, type a condolence message into its message form, and submit it.",
+          "expected": "The condolence message appears under that obituary, visible with the rest of its messages.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 3,
+      "partial": 1,
+      "no": 1,
+      "total": 5,
+      "accuracy": 70.0,
+      "cost": {
+        "generation_usd": 0.250139,
+        "model_calls": 11,
+        "input_tokens_total": 519244,
+        "output_tokens": 27976,
+        "judge_usd": 0.6614
+      }
+    },
+    {
+      "turn": 3,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the browse page, select both the Veteran and Educator categories.",
+          "expected": "Exactly 4 memorials show — Harold Finch, Walter Brandt, Samuel Whitcombe, and Rosa Delgado — with Samuel Whitcombe listed once (not duplicated for holding both tags), and the visible count reads 4.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the browse page with no filters applied, choose the 'newest passing first' sort.",
+          "expected": "The order is Harold Finch, Miriam Okafor, Lena Kowalski, Samuel Whitcombe, Rosa Delgado, Walter Brandt — Harold and Miriam share April 5, 2024 and tie alphabetically, and Walter (December 2, 2023) comes last, proving real date ordering rather than text ordering.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Select the Artist category together with the 1920s birth-decade filter.",
+          "expected": "No memorials match, and the page shows a clear no-results message instead of a blank or broken area.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Publish a new obituary for 'Clara Voss' (born February 2, 1950, died March 3, 2024, category Artist), then open the browse page and filter by Artist.",
+          "expected": "Clara Voss appears in the Artist results together with Miriam Okafor (1958–2024).",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the inscription designer, pick Rosa Delgado from the memorial list and look at the preview.",
+          "expected": "The preview fills in 'Rosa Delgado' with her dates July 4, 1945 – January 18, 2024 and shows the age she reached as 78 — not 79 — because the July birthday had not yet arrived by January.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 1,
+      "partial": 0,
+      "no": 4,
+      "total": 5,
+      "accuracy": 20.0,
+      "cost": {
+        "generation_usd": 0.269067,
+        "model_calls": 11,
+        "input_tokens_total": 860855,
+        "output_tokens": 17497,
+        "judge_usd": 0.6768
+      }
+    },
+    {
+      "turn": 4,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the 'On This Date' page, type April 5 as the date.",
+          "expected": "Exactly two people appear — Harold Finch (1932–2024) and Miriam Okafor (1958–2024) — both marked as passing anniversaries.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Type March 12 into the date lookup.",
+          "expected": "Harold Finch appears labeled as a birthday anniversary and Lena Kowalski as a passing anniversary — the two kinds are visibly distinguished.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Type August 1 into the date lookup, then change it to February 29.",
+          "expected": "August 1 shows a friendly no-matches message without the page blanking; February 29 then shows Walter Brandt, born February 29, 1940.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 3,
+          "task": "Publish a new obituary for 'Nora Bell' (born May 5, 1950, died April 5, 2025), then look up April 5 on the 'On This Date' page.",
+          "expected": "Nora Bell now appears in the April 5 results along with Harold Finch and Miriam Okafor.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the browse page, select both the Veteran and Educator categories.",
+          "expected": "Exactly 4 memorials show — Harold Finch, Walter Brandt, Samuel Whitcombe, and Rosa Delgado — with Samuel Whitcombe listed once (not duplicated for holding both tags), and the visible count reads 4.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 0,
+      "partial": 2,
+      "no": 3,
+      "total": 5,
+      "accuracy": 20.0,
+      "cost": {
+        "generation_usd": 0.207812,
+        "model_calls": 6,
+        "input_tokens_total": 575645,
+        "output_tokens": 7329,
+        "judge_usd": 0.4338
+      }
+    },
+    {
+      "turn": 5,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the pending memories queue on the dashboard, then approve the memory from Tomás Rivera.",
+          "expected": "The queue starts with exactly 3 pending memories for Rosa Delgado; after approving, 2 remain pending and Tomás Rivera's memory appears in the Tributes section on Rosa's obituary page.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the pending queue, decline the memory from Grace Lin.",
+          "expected": "A confirmation prompt appears before anything happens; after confirming, Grace Lin's memory leaves the queue and never shows up in Rosa's Tributes section.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "On any obituary page, submit a new memory — type 'She taught my daughter piano' signed 'A neighbor'.",
+          "expected": "The memory does not appear publicly on the obituary page yet; it shows up in the dashboard's pending queue instead.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Look at how the deceased is referenced in the pending memories queue entries on the dashboard.",
+          "expected": "Each pending entry names the person with their years, e.g. 'Rosa Delgado (1945–2024)'.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the 'On This Date' page, type April 5 as the date.",
+          "expected": "Exactly two people appear — Harold Finch (1932–2024) and Miriam Okafor (1958–2024) — both marked as passing anniversaries.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 4,
+      "partial": 0,
+      "no": 1,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.318474,
+        "model_calls": 17,
+        "input_tokens_total": 1981345,
+        "output_tokens": 15433,
+        "judge_usd": 0.5882
+      }
+    },
+    {
+      "turn": 6,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open Harold Finch's memorial fund.",
+          "expected": "It shows $2,175 raised toward the $4,000 goal, with progress reading 54% — a whole number, not 54.4% or 54.375%.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open Rosa Delgado's memorial fund.",
+          "expected": "The total shows $1,600 raised against the $1,500 goal, and the progress bar sits full at 100% rather than overflowing past its end.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "On Harold Finch's fund, type '-50' as a pledge amount with the name 'Test Donor' and submit; then pledge 25 instead.",
+          "expected": "The negative amount is rejected with a message and the total stays $2,175; the $25 pledge then brings the total to $2,200 and the percent to 55%.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "On the browse page, turn on the filter for memorials with an active fund.",
+          "expected": "Only Harold Finch (1932–2024) and Rosa Delgado (1945–2024) are shown.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the inscription designer, pick Harold Finch, type the epitaph 'A devoted father, grandfather, and friend to absolutely everyone' (well over 40 characters), and try to save.",
+          "expected": "The designer flags the epitaph as over the 40-character limit and refuses to save; no inscription appears on Harold Finch's obituary page.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 2,
+      "partial": 0,
+      "no": 3,
+      "total": 5,
+      "accuracy": 40.0,
+      "cost": {
+        "generation_usd": 0.379426,
+        "model_calls": 12,
+        "input_tokens_total": 1646305,
+        "output_tokens": 10159,
+        "judge_usd": 0.8133
+      }
+    },
+    {
+      "turn": 7,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the dashboard's headcount view for Harold Finch's service.",
+          "expected": "The expected headcount reads 6 (Ellen Finch's 4 plus Marcus Webb's 2, with Dana Cruz's 3 regrets excluded — not 9 and not 3), and all three responses are listed.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On Harold Finch's service, submit an RSVP for 'Ira Gold' attending with a party size of 0; then correct the party size to 2 and resubmit.",
+          "expected": "The 0 party size is rejected with a validation message; after resubmitting with 2, the service's expected headcount rises from 6 to 8.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Submit an RSVP for 'Faye Marsh', party of 5, sending regrets, then check the headcount view for Harold Finch's service.",
+          "expected": "Faye Marsh appears in the response list marked as regrets, but the expected headcount does not increase.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Look at how the date of Harold Finch's service is written on the service listing and in the RSVP area.",
+          "expected": "It reads with the month spelled out — 'April 12, 2024' — not a numeric form like 04/12/2024.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the pending memories queue on the dashboard, then approve the memory from Tomás Rivera.",
+          "expected": "The queue starts with exactly 3 pending memories for Rosa Delgado; after approving, 2 remain pending and Tomás Rivera's memory appears in the Tributes section on Rosa's obituary page.",
+          "verdict": "partial"
+        }
+      ],
+      "yes": 3,
+      "partial": 1,
+      "no": 1,
+      "total": 5,
+      "accuracy": 70.0,
+      "cost": {
+        "generation_usd": 0.517181,
+        "model_calls": 16,
+        "input_tokens_total": 1643592,
+        "output_tokens": 13577,
+        "judge_usd": 0.5661
+      }
+    },
+    {
+      "turn": 8,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the browse page, sort by busiest guestbook.",
+          "expected": "Miriam Okafor ranks ahead of Harold Finch — her 5 messages counting the three replies beat his 4 — even though Harold has more top-level condolences.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "On Miriam Okafor's obituary, use the reply control on June Park's condolence and type 'Thank you, June'.",
+          "expected": "The reply appears nested under June Park's message rather than as a new top-level condolence, and the guestbook's message total rises from 5 to 6.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open Harold Finch's obituary and check the guestbook's message total.",
+          "expected": "It reads 4 — his four condolences with no replies — matching the number of messages visible on the page.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Post two new top-level condolences on Harold Finch's obituary, then sort the browse page by busiest guestbook.",
+          "expected": "Harold Finch's guestbook total rises to 6, and he now ranks ahead of Miriam Okafor's 5 in the busiest-guestbook order — the sort picks up the new messages immediately.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the browse page with no filters applied, choose the 'newest passing first' sort.",
+          "expected": "The order is Harold Finch, Miriam Okafor, Lena Kowalski, Samuel Whitcombe, Rosa Delgado, Walter Brandt — Harold and Miriam share April 5, 2024 and tie alphabetically, and Walter (December 2, 2023) comes last, proving real date ordering rather than text ordering.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 2,
+      "partial": 0,
+      "no": 3,
+      "total": 5,
+      "accuracy": 40.0,
+      "cost": {
+        "generation_usd": 0.356408,
+        "model_calls": 15,
+        "input_tokens_total": 1537994,
+        "output_tokens": 14753,
+        "judge_usd": 0.8646
+      }
+    },
+    {
+      "turn": 9,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the checklist overview on the dashboard.",
+          "expected": "Overall progress reads 38% with 3 of 8 tasks done — rounded up from 37.5, not shown as 37% or 37.5%.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the checklist, check off 'Cancel the newspaper', then look at the overview.",
+          "expected": "Marcus's progress becomes 2 of 3 (67%) and the overall figure updates to 50% (4 of 8) — both stay consistent with the checkboxes.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Look at Priya's row in the checklist overview.",
+          "expected": "It shows 0 of 2 done and 0%, rendered cleanly — no blank cell, error, or 'NaN'.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Remove the task 'Return the wheelchair rental' from the checklist.",
+          "expected": "A confirmation prompt appears before the task is removed; after confirming, it is gone and Marcus's counts drop to 1 of 2.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the dashboard's headcount view for Harold Finch's service.",
+          "expected": "The expected headcount reads 6 (Ellen Finch's 4 plus Marcus Webb's 2, with Dana Cruz's 3 regrets excluded — not 9 and not 3), and all three responses are listed.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.223196,
+        "model_calls": 4,
+        "input_tokens_total": 467715,
+        "output_tokens": 7589,
+        "judge_usd": 0.4315
+      }
+    },
+    {
+      "turn": 10,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the inscription designer and then a memorial fund page, and look at their primary buttons (save and pledge).",
+          "expected": "Both buttons are forest green — neither keeps the old peru color.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Check the main heading on the browse archive and then on the dashboard.",
+          "expected": "Both page headings are centered.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Find Harold Finch's card on the browse archive.",
+          "expected": "His name reads 'Harold Finch (1932–2024)' in a serif typeface, his Veteran badge is a wheat-background pill with dark brown text, and the card has rounded corners.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 3,
+          "task": "Open Harold Finch's service page with the RSVP area.",
+          "expected": "The RSVP submit button is forest green and the page's main heading is centered — the restyle reached the service pages too.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open Harold Finch's memorial fund.",
+          "expected": "It shows $2,175 raised toward the $4,000 goal, with progress reading 54% — a whole number, not 54.4% or 54.375%.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 2,
+      "partial": 1,
+      "no": 2,
+      "total": 5,
+      "accuracy": 50.0,
+      "cost": {
+        "generation_usd": 0.385655,
+        "model_calls": 20,
+        "input_tokens_total": 1615923,
+        "output_tokens": 18955,
+        "judge_usd": 0.9242
+      }
+    }
+  ]
+}

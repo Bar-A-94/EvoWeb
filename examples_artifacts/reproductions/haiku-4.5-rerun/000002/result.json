@@ -1,0 +1,638 @@
+{
+  "index": 2,
+  "status": "success",
+  "model": "anthropic/claude-haiku-4-5-20251001",
+  "generator": "openhands",
+  "base_trajectory": {
+    "source": "none",
+    "messages": 0
+  },
+  "artifacts": {
+    "zip": null,
+    "run_json": null,
+    "generator": "openhands",
+    "screenshots": [
+      "/output/000002/screenshots/task000002_0.png",
+      "/output/000002/screenshots/task000002_1.png",
+      "/output/000002/screenshots/task000002_2.png",
+      "/output/000002/screenshots/task000002_3.png",
+      "/output/000002/screenshots/task000002_4.png",
+      "/output/000002/screenshots/task000002_5.png",
+      "/output/000002/screenshots/task000002_6.png"
+    ],
+    "output_dir": "/output/000002"
+  },
+  "ladder": {
+    "turns_expected": 10,
+    "turns_completed": 10,
+    "complete": true
+  },
+  "eval_model": "claude-sonnet-4-6",
+  "accuracy": 46.2,
+  "yes": 18,
+  "partial": 12,
+  "no": 22,
+  "total": 52,
+  "tasks": [
+    {
+      "task_idx": 0,
+      "task": "Navigate to the sports data visualization section for basketball.",
+      "expected": "The page displays graphical representations of sports data relevant to the basketball, such as charts or graphs, without any layout issues or missing data points.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 1,
+      "task": "Access the match prediction feature for an upcoming game.",
+      "expected": "The match prediction page correctly shows predicted outcomes with percentage probabilities, based on current data and analysis, without any technical errors or missing information.",
+      "verdict": "no"
+    },
+    {
+      "task_idx": 2,
+      "task": "Use the search function to find a specific team's historical match data.",
+      "expected": "The search results page displays a list of matches involving the specified team, sorted chronologically, with complete match details such as scores and dates.",
+      "verdict": "no"
+    },
+    {
+      "task_idx": 3,
+      "task": "Check the team rankings page.",
+      "expected": "The page lists teams ranked according to their current standings, with clear markers indicating any ties, and contains accurate data consistent with known league standings.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 4,
+      "task": "Evaluate the player performance section for individual stats.",
+      "expected": "The section shows detailed statistics for players, including metrics like goals, assists, and average ratings, with data clearly labeled and easy to interpret.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 5,
+      "task": "Assess the betting recommendations provided for a specific match.",
+      "expected": "The recommendations offer actionable betting advice backed by data analysis, including relevant statistics or trends that support the suggestions.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 6,
+      "task": "Verify that the website uses 'ghost white' as the background color and 'slate gray' as the component color, as specified in the design requirements.",
+      "expected": "The website has a background color of 'ghost white' and components (such as buttons, cards, headers, etc.) are styled with the color 'slate gray', accurately reflecting the design instruction.",
+      "verdict": "partial"
+    }
+  ],
+  "turns": [
+    {
+      "turn": 1,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": false,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Navigate to the sports data visualization section for basketball.",
+          "expected": "The page displays graphical representations of sports data relevant to the basketball, such as charts or graphs, without any layout issues or missing data points.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 1,
+          "task": "Access the match prediction feature for an upcoming game.",
+          "expected": "The match prediction page correctly shows predicted outcomes with percentage probabilities, based on current data and analysis, without any technical errors or missing information.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Use the search function to find a specific team's historical match data.",
+          "expected": "The search results page displays a list of matches involving the specified team, sorted chronologically, with complete match details such as scores and dates.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Check the team rankings page.",
+          "expected": "The page lists teams ranked according to their current standings, with clear markers indicating any ties, and contains accurate data consistent with known league standings.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "Evaluate the player performance section for individual stats.",
+          "expected": "The section shows detailed statistics for players, including metrics like goals, assists, and average ratings, with data clearly labeled and easy to interpret.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 5,
+          "task": "Assess the betting recommendations provided for a specific match.",
+          "expected": "The recommendations offer actionable betting advice backed by data analysis, including relevant statistics or trends that support the suggestions.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 6,
+          "task": "Verify that the website uses 'ghost white' as the background color and 'slate gray' as the component color, as specified in the design requirements.",
+          "expected": "The website has a background color of 'ghost white' and components (such as buttons, cards, headers, etc.) are styled with the color 'slate gray', accurately reflecting the design instruction.",
+          "verdict": "partial"
+        }
+      ],
+      "yes": 0,
+      "partial": 5,
+      "no": 2,
+      "total": 7,
+      "accuracy": 35.7,
+      "cost": {
+        "generation_usd": 0.151057,
+        "model_calls": 12,
+        "input_tokens_total": 289031,
+        "output_tokens": 13918,
+        "judge_usd": 0.9808
+      }
+    },
+    {
+      "turn": 2,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the odds board and read the implied win probability shown for the Celtics @ Knicks game's best price.",
+          "expected": "It reads 55.6%, derived from the best home price of -125 at HoopLine — not 56.5%, which would mean it was computed from BetNova's -130.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Find the Nuggets @ Raptors game on the odds board and look at how the best price is marked.",
+          "expected": "The +170 price is flagged as best at both BetNova and CourtSide — both books marked — while HoopLine's +165 is not marked as best.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Look at the Warriors @ Mavericks game on the odds board.",
+          "expected": "CourtSide's -148 is highlighted as the best home price, not HoopLine's -155 — for negative American odds the number closest to even money is the better payout.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Scan the six games on the odds board.",
+          "expected": "Every matchup is written away team @ home team (e.g. Celtics @ Knicks) and every price carries an explicit + or - sign in American form, with no decimal odds anywhere.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Navigate to the team rankings section.",
+          "expected": "A ranked list of basketball teams is displayed with standings information for each team.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.105783,
+        "model_calls": 7,
+        "input_tokens_total": 264364,
+        "output_tokens": 6016,
+        "judge_usd": 0.3208
+      }
+    },
+    {
+      "turn": 3,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Add the Celtics @ Knicks and Lakers @ Bulls games to the bet slip, then type 10 into the stake box.",
+          "expected": "The slip shows payout $44.10 and profit $34.10 at combined odds of +341, with a 25.5% chance of hitting — not $42.46, which would mean the legs were priced off the first-listed book instead of the best prices (-125 and +145).",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 1,
+          "task": "Add the Suns @ Heat game to the slip and type abc into the stake box.",
+          "expected": "A clear invalid-stake error appears and no payout figure is shown — no NaN, no $NaN, no stale leftover number presented as valid.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Use the add-to-slip control on the Bucks @ Hornets game twice, then look at the slip.",
+          "expected": "The slip holds exactly one Hornets leg — the second add is refused or the control is disabled — and the slip's totals reflect a single leg.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "On the odds board, add the Nuggets @ Raptors game to the slip and look at the leg's listed price.",
+          "expected": "The leg shows the Raptors at +170, the same price the board flags as best for that game.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Find the Nuggets @ Raptors game on the odds board and look at how the best price is marked.",
+          "expected": "The +170 price is flagged as best at both BetNova and CourtSide — both books marked — while HoopLine's +165 is not marked as best.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 2,
+      "partial": 1,
+      "no": 2,
+      "total": 5,
+      "accuracy": 50.0,
+      "cost": {
+        "generation_usd": 0.184899,
+        "model_calls": 12,
+        "input_tokens_total": 692761,
+        "output_tokens": 15823,
+        "judge_usd": 0.7669
+      }
+    },
+    {
+      "turn": 4,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "runtime": {
+        "checks_affected": 4,
+        "errors": [
+          "http://localhost:5200/node_modules/.vite/deps/chunk-QXLG2TGQ.js?v=3e474013 11600:22 Uncaught Error: Too many re-renders. React limits the number of renders to prevent an infinite loop."
+        ]
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Best Bets page on a fresh load and read the top three plays in order.",
+          "expected": "Top three are Bulls (+3.2), Hornets (+2.6), Knicks (+2.4). The Mavericks are not in the top three — if they appear second, edges were computed from first-listed book prices instead of best prices.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Type 2.5 into the minimum-edge box on the Best Bets page.",
+          "expected": "Exactly two plays remain — Bulls (+3.2) and Hornets (+2.6) — and the displayed count reads 2, matching the visible list; the Knicks at +2.4 are excluded.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Type 9 into the minimum-edge box on the Best Bets page.",
+          "expected": "A friendly nothing-clears-the-bar note is shown — no blank area, no broken list, no crash.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Compare the Suns @ Heat entry on Best Bets with the odds board's highlighted best price for that game.",
+          "expected": "Best Bets shows the Heat at edge +0.5 (51.0% minus the 50.5% implied by CourtSide's -102 best price), consistent with the price the board flags — an edge of -0.2 would mean it used BetNova's -105 instead.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Add the Celtics @ Knicks and Lakers @ Bulls games to the bet slip, then type 10 into the stake box.",
+          "expected": "The slip shows payout $44.10 and profit $34.10 at combined odds of +341, with a 25.5% chance of hitting — not $42.46, which would mean the legs were priced off the first-listed book instead of the best prices (-125 and +145).",
+          "verdict": "partial"
+        }
+      ],
+      "yes": 0,
+      "partial": 1,
+      "no": 4,
+      "total": 5,
+      "accuracy": 10.0,
+      "cost": {
+        "generation_usd": 0.249332,
+        "model_calls": 12,
+        "input_tokens_total": 890660,
+        "output_tokens": 13589,
+        "judge_usd": 0.4866
+      }
+    },
+    {
+      "turn": 5,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the My Tickets page, settle the pending $20 Mavericks ticket as Won and read the bankroll.",
+          "expected": "The bankroll reads $1,013.51 — the full $33.51 payout at -148 credited on top of $980. Not $1,013.33 (that used -150 instead of the best price) and not $993.51 (that credited profit without returning the stake).",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Add the Suns @ Heat game to the slip, type 5000 into the stake box, and try to place the ticket.",
+          "expected": "Placement is refused with a message about exceeding the bankroll; no ticket is created and the bankroll still reads $980.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Add the Bucks @ Hornets game to the slip, type 25 into the stake box, and go to the place-ticket review screen without confirming.",
+          "expected": "The review shows the Hornets leg at +125 with a $25 stake and a potential payout of $56.25, and the bankroll still reads $980 because nothing has been confirmed yet.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Add the Celtics @ Knicks and Lakers @ Bulls games to the slip, type 10 into the stake box, place and confirm the ticket, then open My Tickets.",
+          "expected": "A two-leg ticket appears with a pending status shown as an amber pill and a potential payout of $44.10, and the bankroll reads $970.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the odds board and read the implied win probability shown for the Celtics @ Knicks game's best price.",
+          "expected": "It reads 55.6%, derived from the best home price of -125 at HoopLine — not 56.5%, which would mean it was computed from BetNova's -130.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 0,
+      "no": 1,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.342447,
+        "model_calls": 18,
+        "input_tokens_total": 1716770,
+        "output_tokens": 12009,
+        "judge_usd": 0.4455
+      }
+    },
+    {
+      "turn": 6,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "runtime": {
+        "checks_affected": 3,
+        "errors": [
+          "http://localhost:5200/node_modules/.vite/deps/chunk-QXLG2TGQ.js?v=3e474013 11600:22 Uncaught Error: Too many re-renders. React limits the number of renders to prevent an infinite loop."
+        ]
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Flip the star-player-sidelined switch for the Celtics @ Knicks game, then open the Best Bets rankings.",
+          "expected": "The Knicks' adjusted probability shows 50.0% with an edge of -5.6, the Knicks drop out of the top three, and the top three now read Bulls, Hornets, Mavericks, with an 'adj' marker on the Knicks play.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the adjustments panel, type 150 into the manual win-probability box for the Suns @ Heat game.",
+          "expected": "The value is rejected with a validation message and the Heat's probability stays 51.0% — no adjusted value of 150 shows up anywhere.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Flip both the star-player-sidelined and back-to-back switches for the Bucks @ Hornets game, then use the reset control.",
+          "expected": "With both switches on, the Hornets' adjusted probability reads 36.0% (47 minus 8 minus 3); after reset it returns to 47.0% and no 'adj' markers remain anywhere.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Flip the back-to-back switch for the Lakers @ Bulls game, then check the top of the Best Bets rankings.",
+          "expected": "The Bulls' edge falls to +0.2 (41.0% minus the 40.8% implied by +145) and they lose the top spot; the Hornets (+2.6) move to #1 and the Bulls play carries an 'adj' marker.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Best Bets page on a fresh load and read the top three plays in order.",
+          "expected": "Top three are Bulls (+3.2), Hornets (+2.6), Knicks (+2.4). The Mavericks are not in the top three — if they appear second, edges were computed from first-listed book prices instead of best prices.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 1,
+      "partial": 1,
+      "no": 3,
+      "total": 5,
+      "accuracy": 30.0,
+      "cost": {
+        "generation_usd": 0.318529,
+        "model_calls": 12,
+        "input_tokens_total": 1357819,
+        "output_tokens": 10643,
+        "judge_usd": 0.6272
+      }
+    },
+    {
+      "turn": 7,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "In the research center, pick the Knicks and the Celtics and read the summary strip above the meetings list.",
+          "expected": "Straight-up record 3-3, against-the-spread 3-3, and over/under 1-4-1 — the 232-point game on a 232 line counted as a push, not folded into overs or unders — with all 6 of 6 meetings showing.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "With the Knicks-Celtics meetings loaded, check the back-to-back-only box and type 2 and 7 into the min and max spread boxes.",
+          "expected": "Only the 99-121 and 105-103 meetings remain (the back-to-back games at +2.5 and +6.5 — the rested +4.5 game and the +7.5 game are both excluded) and the ATS record in the summary reads 1-1, recomputed over just the visible rows.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Pick the Knicks and the Celtics in the research center and look for the upcoming-game banner.",
+          "expected": "A banner shows Friday's Celtics @ Knicks slate game with its best price of -125 at HoopLine.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 3,
+          "task": "On the odds board, use the research link on the Warriors @ Mavericks card.",
+          "expected": "The research center opens pre-filtered to the Warriors and Mavericks, shows the tidy no-meetings-on-file note instead of a blank or broken list, and banners the upcoming Sunday game with its best price of -148 at CourtSide.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the My Tickets page, settle the pending $20 Mavericks ticket as Won and read the bankroll.",
+          "expected": "The bankroll reads $1,013.51 — the full $33.51 payout at -148 credited on top of $980. Not $1,013.33 (that used -150 instead of the best price) and not $993.51 (that credited profit without returning the stake).",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 3,
+      "partial": 2,
+      "no": 0,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.401681,
+        "model_calls": 15,
+        "input_tokens_total": 1946409,
+        "output_tokens": 11279,
+        "judge_usd": 0.2103
+      }
+    },
+    {
+      "turn": 8,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "runtime": {
+        "checks_affected": 5,
+        "errors": [
+          "http://localhost:5200/node_modules/.vite/deps/chunk-QXLG2TGQ.js?v=3e474013 11600:22 Uncaught Error: Too many re-renders. React limits the number of renders to prevent an infinite loop."
+        ]
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On Best Bets, set a watch on the Mavericks play with a target edge of 2.2, then open the Alerts page.",
+          "expected": "The Mavericks watch shows a live edge of +2.3 against the 2.2 target and reads fired with a green pill — not armed at +2.0, which is what you'd see if the edge were figured off BetNova's -150 instead of the best-price -148.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Set a watch on the Heat play with a target edge of 1.0, then open the Alerts page and glance back at the Best Bets list.",
+          "expected": "The Heat watch reads armed with an amber pill — its +0.5 edge is short of the 1.0 target — and the Heat play carries a watched marker on the Best Bets list.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Set a watch on the Hornets play with a target edge of 1.0, then remove it from the Alerts page and look back at Best Bets.",
+          "expected": "The removed watch disappears from the Alerts page and the Hornets play's watched marker is gone from the Best Bets list — removing on one page cleans up the other.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Set a watch on the Bulls play with a target edge of 1.0, then flip the back-to-back switch for the Lakers @ Bulls game in the adjustments panel.",
+          "expected": "The watch flips from fired to armed on the spot — the Bulls' live edge falls to +0.2 (41.0% minus the 40.8% implied by +145), short of the 1.0 target — and its pill turns from green to amber.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Flip the star-player-sidelined switch for the Celtics @ Knicks game, then open the Best Bets rankings.",
+          "expected": "The Knicks' adjusted probability shows 50.0% with an edge of -5.6, the Knicks drop out of the top three, and the top three now read Bulls, Hornets, Mavericks, with an 'adj' marker on the Knicks play.",
+          "verdict": "partial"
+        }
+      ],
+      "yes": 0,
+      "partial": 1,
+      "no": 4,
+      "total": 5,
+      "accuracy": 10.0,
+      "cost": {
+        "generation_usd": 0.475319,
+        "model_calls": 16,
+        "input_tokens_total": 1541201,
+        "output_tokens": 12088,
+        "judge_usd": 0.4726
+      }
+    },
+    {
+      "turn": 9,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Performance page on a fresh load and read the headline figures.",
+          "expected": "Net profit +$25.64, ROI 51.3%, and an overall record of 2-1 — not +$24.67 / 49.3%, which would mean the wins were priced off first-listed books instead of the best prices (-148 and +125).",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "On My Tickets, settle the pending $20 Mavericks ticket as Lost, then open the Performance page.",
+          "expected": "Net profit drops to +$5.64, ROI reads 8.1% ($5.64 over $70 now staked), the record reads 2-2, and the singles split reads 2-1.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open the Performance page while the $20 Mavericks ticket is still pending and read the singles-versus-parlays split and the total staked.",
+          "expected": "Singles 2-0, parlays 0-1, and total staked $50 — the pending $20 ticket is not counted in any figure on the page.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Settle the pending $20 Mavericks ticket as Won on My Tickets, then open the Performance page.",
+          "expected": "Net profit rises to +$39.15 (up exactly $13.51), the record reads 3-1, the singles split reads 3-0, and ROI reads 55.9%.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the research center, pick the Knicks and the Celtics and read the summary strip above the meetings list.",
+          "expected": "Straight-up record 3-3, against-the-spread 3-3, and over/under 1-4-1 — the 232-point game on a 232 line counted as a push, not folded into overs or unders — with all 6 of 6 meetings showing.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 1,
+      "partial": 0,
+      "no": 4,
+      "total": 5,
+      "accuracy": 20.0,
+      "cost": {
+        "generation_usd": 0.285552,
+        "model_calls": 16,
+        "input_tokens_total": 1380928,
+        "output_tokens": 9640,
+        "judge_usd": 0.2857
+      }
+    },
+    {
+      "turn": 10,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "runtime": {
+        "checks_affected": 2,
+        "errors": [
+          "http://localhost:5200/node_modules/.vite/deps/chunk-QXLG2TGQ.js?v=3e474013 11600:22 Uncaught Error: Too many re-renders. React limits the number of renders to prevent an infinite loop."
+        ]
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Best Bets page and look at the Bulls play's edge figure.",
+          "expected": "It reads +3.2 and is rendered in green, per the positive-numbers-green rule of the rebrand.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the odds board, then the research center, then the team rankings page, and look at each page title.",
+          "expected": "All three page titles are uppercase and left-aligned — including the original team rankings page, not just the newer pages.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "On My Tickets, look at the pending $20 Mavericks ticket card, then find the Warriors @ Mavericks game on the odds board.",
+          "expected": "The ticket card has rounded corners with a visible border and its pending status is still an amber pill; on the odds board, each of that game's three prices carries its sportsbook name as a small uppercase tag (BETNOVA, HOOPLINE, COURTSIDE).",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Open the Performance page and check how the backfilled profit and loss figures are colored.",
+          "expected": "The positive net profit (+$25.64) renders in green and the lost parlay's -$10.00 line in the settled-ticket ledger renders in red, with the page title uppercase and left-aligned.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "On Best Bets, set a watch on the Mavericks play with a target edge of 2.2, then open the Alerts page.",
+          "expected": "The Mavericks watch shows a live edge of +2.3 against the 2.2 target and reads fired with a green pill — not armed at +2.0, which is what you'd see if the edge were figured off BetNova's -150 instead of the best-price -148.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 2,
+      "partial": 1,
+      "no": 2,
+      "total": 5,
+      "accuracy": 50.0,
+      "cost": {
+        "generation_usd": 0.479132,
+        "model_calls": 20,
+        "input_tokens_total": 1917037,
+        "output_tokens": 16182,
+        "judge_usd": 0.5667
+      }
+    }
+  ]
+}

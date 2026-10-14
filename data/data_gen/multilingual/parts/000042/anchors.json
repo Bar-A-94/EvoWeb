@@ -1,0 +1,594 @@
+{
+  "anchors": [
+    {
+      "en": "Delivery Log",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        9
+      ],
+      "translations": {
+        "zh": "发送记录",
+        "he": "יומן שליחה",
+        "hi": "डिलीवरी लॉग",
+        "de": "Zustellungsprotokoll",
+        "fr": "Journal d'envoi"
+      }
+    },
+    {
+      "en": "Blocklist",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        3,
+        5,
+        9
+      ],
+      "translations": {
+        "zh": "屏蔽名单",
+        "he": "רשימת חסימה",
+        "hi": "ब्लॉकलिस्ट",
+        "de": "Sperrliste",
+        "fr": "Liste de blocage"
+      }
+    },
+    {
+      "en": "Outbox",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        5,
+        7,
+        9,
+        10
+      ],
+      "translations": {
+        "zh": "发件箱",
+        "he": "תיבת יוצאים",
+        "hi": "आउटबॉक्स",
+        "de": "Postausgang",
+        "fr": "Boîte d'envoi"
+      }
+    },
+    {
+      "en": "Analytics",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        4,
+        6,
+        9,
+        10
+      ],
+      "translations": {
+        "zh": "数据分析",
+        "he": "אנליטיקה",
+        "hi": "एनालिटिक्स",
+        "de": "Analysen",
+        "fr": "Analyses"
+      }
+    },
+    {
+      "en": "Digest",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        10
+      ],
+      "translations": {
+        "zh": "摘要",
+        "he": "תקציר",
+        "hi": "डाइजेस्ट",
+        "de": "Zusammenfassung",
+        "fr": "Récapitulatif"
+      }
+    },
+    {
+      "en": "Send now",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        5,
+        9,
+        10
+      ],
+      "translations": {
+        "zh": "立即发送",
+        "he": "שלח עכשיו",
+        "hi": "अभी भेजें",
+        "de": "Jetzt senden",
+        "fr": "Envoyer maintenant"
+      }
+    },
+    {
+      "en": "delivered",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        10
+      ],
+      "translations": {
+        "zh": "已送达",
+        "he": "נמסר",
+        "hi": "डिलीवर्ड",
+        "de": "Zugestellt",
+        "fr": "Livré"
+      }
+    },
+    {
+      "en": "bounced",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        2,
+        3,
+        4,
+        6,
+        10
+      ],
+      "translations": {
+        "zh": "已退回",
+        "he": "הוחזר",
+        "hi": "बाउंस",
+        "de": "Unzustellbar",
+        "fr": "Rejeté"
+      }
+    },
+    {
+      "en": "failed",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        2,
+        3,
+        4,
+        6,
+        10
+      ],
+      "translations": {
+        "zh": "失败",
+        "he": "נכשל",
+        "hi": "विफल",
+        "de": "Fehlgeschlagen",
+        "fr": "Échoué"
+      }
+    },
+    {
+      "en": "Delivered",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        9
+      ],
+      "translations": {
+        "zh": "已送达",
+        "he": "נמסר",
+        "hi": "डिलीवर्ड",
+        "de": "Zugestellt",
+        "fr": "Livré"
+      }
+    },
+    {
+      "en": "Bounced",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        9
+      ],
+      "translations": {
+        "zh": "已退回",
+        "he": "הוחזר",
+        "hi": "बाउंस",
+        "de": "Unzustellbar",
+        "fr": "Rejeté"
+      }
+    },
+    {
+      "en": "Failed",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        9
+      ],
+      "translations": {
+        "zh": "失败",
+        "he": "נכשל",
+        "hi": "विफल",
+        "de": "Fehlgeschlagen",
+        "fr": "Échoué"
+      }
+    },
+    {
+      "en": "open rate",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        4,
+        6,
+        7,
+        9,
+        10
+      ],
+      "translations": {
+        "zh": "打开率",
+        "he": "שיעור פתיחה",
+        "hi": "ओपन रेट",
+        "de": "Öffnungsrate",
+        "fr": "taux d'ouverture"
+      }
+    },
+    {
+      "en": "bounce rate",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        4
+      ],
+      "translations": {
+        "zh": "退回率",
+        "he": "שיעור החזרות",
+        "hi": "बाउंस रेट",
+        "de": "Rückläuferquote",
+        "fr": "taux de rejet"
+      }
+    },
+    {
+      "en": "Total emails",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        4
+      ],
+      "translations": {
+        "zh": "邮件总数",
+        "he": "סך המיילים",
+        "hi": "कुल ईमेल",
+        "de": "Gesamtzahl der E-Mails",
+        "fr": "Nombre total d'e-mails"
+      }
+    },
+    {
+      "en": "total emails",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        4,
+        10
+      ],
+      "translations": {
+        "zh": "邮件总数",
+        "he": "סך המיילים",
+        "hi": "कुल ईमेल",
+        "de": "Gesamtzahl der E-Mails",
+        "fr": "nombre total d'e-mails"
+      }
+    },
+    {
+      "en": "Nova fans",
+      "class": "translate",
+      "kind": "content_text",
+      "requests": [
+        8,
+        10
+      ],
+      "translations": {
+        "zh": "Nova 粉丝",
+        "he": "אוהדי Nova",
+        "hi": "Nova प्रशंसक",
+        "de": "Nova-Fans",
+        "fr": "Fans de Nova"
+      }
+    },
+    {
+      "en": "Quarterly review",
+      "class": "translate",
+      "kind": "content_text",
+      "requests": [
+        5
+      ],
+      "translations": {
+        "zh": "季度回顾",
+        "he": "סקירה רבעונית",
+        "hi": "तिमाही समीक्षा",
+        "de": "Quartalsrückblick",
+        "fr": "Bilan trimestriel"
+      }
+    },
+    {
+      "en": "Spring sale starts now",
+      "class": "translate",
+      "kind": "content_text",
+      "requests": [
+        7,
+        9
+      ],
+      "translations": {
+        "zh": "春季大促现已开启",
+        "he": "מבצע האביב מתחיל עכשיו",
+        "hi": "स्प्रिंग सेल अभी शुरू",
+        "de": "Frühlingsangebot startet jetzt",
+        "fr": "Les soldes de printemps commencent"
+      }
+    },
+    {
+      "en": "Sale ends soon",
+      "class": "translate",
+      "kind": "content_text",
+      "requests": [
+        7,
+        9
+      ],
+      "translations": {
+        "zh": "大促即将结束",
+        "he": "המבצע נגמר בקרוב",
+        "hi": "सेल जल्द खत्म",
+        "de": "Angebot endet bald",
+        "fr": "Les soldes finissent bientôt"
+      }
+    },
+    {
+      "en": "To:",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        6
+      ],
+      "translations": {
+        "zh": "收件人:",
+        "he": "אל:",
+        "hi": "प्रति:",
+        "de": "An:",
+        "fr": "À :"
+      }
+    },
+    {
+      "en": "cornsilk",
+      "class": "keep",
+      "kind": "css_visual",
+      "requests": [
+        1,
+        9
+      ]
+    },
+    {
+      "en": "peru",
+      "class": "keep",
+      "kind": "css_visual",
+      "requests": [
+        1,
+        9
+      ]
+    },
+    {
+      "en": "#2D6A4F",
+      "class": "keep",
+      "kind": "css_visual",
+      "requests": [
+        9
+      ]
+    },
+    {
+      "en": "dev@nova.io",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [
+        2,
+        4,
+        7,
+        8,
+        10
+      ]
+    },
+    {
+      "en": "ben@acme.com",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "en": "cara@nova.io",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [
+        2,
+        3,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "en": "ana@acme.com",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "en": "eli@orbit.dev",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [
+        2,
+        3
+      ]
+    },
+    {
+      "en": "fay@orbit.dev",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [
+        2,
+        5,
+        7
+      ]
+    },
+    {
+      "en": "gus@acme.com",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "en": "spam-trap@bait.org",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [
+        3
+      ]
+    },
+    {
+      "en": "test@example.com",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [
+        2
+      ]
+    },
+    {
+      "en": "temp@late.io",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [
+        10
+      ]
+    },
+    {
+      "en": "CARA@NOVA.IO",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [
+        3
+      ]
+    },
+    {
+      "en": "ANA@ACME.COM",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [
+        6
+      ]
+    },
+    {
+      "en": "not-an-email",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [
+        3,
+        5
+      ]
+    },
+    {
+      "en": "nova.io",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "en": "acme.com",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "en": "legacy.net",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [
+        8
+      ]
+    },
+    {
+      "en": "{{first_name}}",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [
+        6,
+        8
+      ]
+    },
+    {
+      "en": "{{company}}",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [
+        6
+      ]
+    },
+    {
+      "en": "{{firstname}}",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [
+        6
+      ]
+    },
+    {
+      "en": "A/B",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [
+        7,
+        9
+      ]
+    },
+    {
+      "en": "Slack",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        10
+      ]
+    }
+  ]
+}

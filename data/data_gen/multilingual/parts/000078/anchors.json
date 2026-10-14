@@ -1,0 +1,453 @@
+{
+  "anchors": [
+    {
+      "en": "calculator",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [2, 3, 4, 5, 6, 9, 10],
+      "translations": {
+        "zh": "计算器",
+        "he": "מחשבון",
+        "hi": "कैलकुलेटर",
+        "de": "Rechner",
+        "fr": "calculatrice"
+      }
+    },
+    {
+      "en": "Basic Arithmetic",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [1, 2],
+      "translations": {
+        "zh": "基础算术",
+        "he": "אריתמטיקה בסיסית",
+        "hi": "मूल अंकगणित",
+        "de": "Grundlegende Arithmetik",
+        "fr": "Arithmétique de base"
+      }
+    },
+    {
+      "en": "Arithmetic",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [2, 5, 6],
+      "translations": {
+        "zh": "算术",
+        "he": "אריתמטיקה",
+        "hi": "अंकगणित",
+        "de": "Arithmetik",
+        "fr": "Arithmétique"
+      }
+    },
+    {
+      "en": "ARITHMETIC",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [2, 6],
+      "translations": {
+        "zh": "算术",
+        "he": "אריתמטיקה",
+        "hi": "अंकगणित",
+        "de": "ARITHMETIK",
+        "fr": "ARITHMÉTIQUE"
+      }
+    },
+    {
+      "en": "Scientific",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [2, 5, 6],
+      "translations": {
+        "zh": "科学",
+        "he": "מדעי",
+        "hi": "वैज्ञानिक",
+        "de": "Wissenschaftlich",
+        "fr": "Scientifique"
+      }
+    },
+    {
+      "en": "SCIENTIFIC",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [2, 6],
+      "translations": {
+        "zh": "科学",
+        "he": "מדעי",
+        "hi": "वैज्ञानिक",
+        "de": "WISSENSCHAFTLICH",
+        "fr": "SCIENTIFIQUE"
+      }
+    },
+    {
+      "en": "Percent",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [2, 5, 6],
+      "translations": {
+        "zh": "百分比",
+        "he": "אחוז",
+        "hi": "प्रतिशत",
+        "de": "Prozent",
+        "fr": "Pourcentage"
+      }
+    },
+    {
+      "en": "PERCENT",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [6],
+      "translations": {
+        "zh": "百分比",
+        "he": "אחוז",
+        "hi": "प्रतिशत",
+        "de": "PROZENT",
+        "fr": "POURCENTAGE"
+      }
+    },
+    {
+      "en": "history panel",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [2, 3],
+      "translations": {
+        "zh": "历史面板",
+        "he": "לוח היסטוריה",
+        "hi": "हिस्ट्री पैनल",
+        "de": "Verlaufspanel",
+        "fr": "panneau d'historique"
+      }
+    },
+    {
+      "en": "history page",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [8, 10],
+      "translations": {
+        "zh": "历史页面",
+        "he": "עמוד היסטוריה",
+        "hi": "हिस्ट्री पेज",
+        "de": "Verlaufsseite",
+        "fr": "page d'historique"
+      }
+    },
+    {
+      "en": "variables page",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [3],
+      "translations": {
+        "zh": "变量页面",
+        "he": "עמוד משתנים",
+        "hi": "वेरिएबल पेज",
+        "de": "Variablenseite",
+        "fr": "page des variables"
+      }
+    },
+    {
+      "en": "Saved",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [4, 6],
+      "translations": {
+        "zh": "已保存",
+        "he": "שמורים",
+        "hi": "सहेजे गए",
+        "de": "Gespeichert",
+        "fr": "Enregistrés"
+      }
+    },
+    {
+      "en": "Report",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [8],
+      "translations": {
+        "zh": "报告",
+        "he": "דוח",
+        "hi": "रिपोर्ट",
+        "de": "Bericht",
+        "fr": "Rapport"
+      }
+    },
+    {
+      "en": "display settings",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [5, 7, 8],
+      "translations": {
+        "zh": "显示设置",
+        "he": "הגדרות תצוגה",
+        "hi": "डिस्प्ले सेटिंग्स",
+        "de": "Anzeigeeinstellungen",
+        "fr": "paramètres d'affichage"
+      }
+    },
+    {
+      "en": "stats page",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [6, 8],
+      "translations": {
+        "zh": "统计页面",
+        "he": "עמוד סטטיסטיקה",
+        "hi": "स्टैट्स पेज",
+        "de": "Statistikseite",
+        "fr": "page de statistiques"
+      }
+    },
+    {
+      "en": "search page",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [9],
+      "translations": {
+        "zh": "搜索页面",
+        "he": "עמוד חיפוש",
+        "hi": "सर्च पेज",
+        "de": "Suchseite",
+        "fr": "page de recherche"
+      }
+    },
+    {
+      "en": "converter",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [7, 9, 10],
+      "translations": {
+        "zh": "换算器",
+        "he": "ממיר",
+        "hi": "कन्वर्टर",
+        "de": "Umrechner",
+        "fr": "convertisseur"
+      }
+    },
+    {
+      "en": "Grid area",
+      "class": "translate",
+      "kind": "content_text",
+      "requests": [4, 6, 9],
+      "translations": {
+        "zh": "网格面积",
+        "he": "שטח רשת",
+        "hi": "ग्रिड क्षेत्रफल",
+        "de": "Gitterfläche",
+        "fr": "Aire de la grille"
+      }
+    },
+    {
+      "en": "garden plot",
+      "class": "translate",
+      "kind": "content_text",
+      "requests": [4, 9],
+      "translations": {
+        "zh": "花园地块",
+        "he": "חלקת גינה",
+        "hi": "बगीचा प्लॉट",
+        "de": "Gartenbeet",
+        "fr": "parcelle de jardin"
+      }
+    },
+    {
+      "en": "GARDEN",
+      "class": "translate",
+      "kind": "content_text",
+      "requests": [9],
+      "translations": {
+        "zh": "花园",
+        "he": "גינה",
+        "hi": "बगीचा",
+        "de": "GARTEN",
+        "fr": "JARDIN"
+      }
+    },
+    {
+      "en": "temperature",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [7, 9],
+      "translations": {
+        "zh": "温度",
+        "he": "טמפרטורה",
+        "hi": "तापमान",
+        "de": "Temperatur",
+        "fr": "température"
+      }
+    },
+    {
+      "en": "Fahrenheit",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [7, 9],
+      "translations": {
+        "zh": "华氏度",
+        "he": "פרנהייט",
+        "hi": "फ़ारेनहाइट",
+        "de": "Fahrenheit",
+        "fr": "Fahrenheit"
+      }
+    },
+    {
+      "en": "Celsius",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [7, 9],
+      "translations": {
+        "zh": "摄氏度",
+        "he": "צלזיוס",
+        "hi": "सेल्सियस",
+        "de": "Celsius",
+        "fr": "Celsius"
+      }
+    },
+    {
+      "en": "length",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [7],
+      "translations": {
+        "zh": "长度",
+        "he": "אורך",
+        "hi": "लंबाई",
+        "de": "Länge",
+        "fr": "longueur"
+      }
+    },
+    {
+      "en": "inches",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [7],
+      "translations": {
+        "zh": "英寸",
+        "he": "אינצ'ים",
+        "hi": "इंच",
+        "de": "Zoll",
+        "fr": "pouces"
+      }
+    },
+    {
+      "en": "centimeters",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [7],
+      "translations": {
+        "zh": "厘米",
+        "he": "סנטימטרים",
+        "hi": "सेंटीमीटर",
+        "de": "Zentimeter",
+        "fr": "centimètres"
+      }
+    },
+    {
+      "en": "weight",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [7],
+      "translations": {
+        "zh": "重量",
+        "he": "משקל",
+        "hi": "वज़न",
+        "de": "Gewicht",
+        "fr": "poids"
+      }
+    },
+    {
+      "en": "pounds",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [7],
+      "translations": {
+        "zh": "磅",
+        "he": "ליברות",
+        "hi": "पाउंड",
+        "de": "Pfund",
+        "fr": "livres"
+      }
+    },
+    {
+      "en": "grams",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [7],
+      "translations": {
+        "zh": "克",
+        "he": "גרמים",
+        "hi": "ग्राम",
+        "de": "Gramm",
+        "fr": "grammes"
+      }
+    },
+    {
+      "en": "tax",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [3, 4, 10]
+    },
+    {
+      "en": "dozen",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [3, 9]
+    },
+    {
+      "en": "width",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [3]
+    },
+    {
+      "en": "sqrt",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [2, 3, 5]
+    },
+    {
+      "en": "pi",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [3]
+    },
+    {
+      "en": "2fast",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [3]
+    },
+    {
+      "en": "mint cream",
+      "class": "keep",
+      "kind": "css_visual",
+      "requests": [1, 10]
+    },
+    {
+      "en": "teal",
+      "class": "keep",
+      "kind": "css_visual",
+      "requests": [1, 10]
+    },
+    {
+      "en": "soft ivory",
+      "class": "keep",
+      "kind": "css_visual",
+      "requests": [10]
+    },
+    {
+      "en": "#FAFAF7",
+      "class": "keep",
+      "kind": "css_visual",
+      "requests": [10]
+    },
+    {
+      "en": "#0F766E",
+      "class": "keep",
+      "kind": "css_visual",
+      "requests": [10]
+    },
+    {
+      "en": "12px",
+      "class": "keep",
+      "kind": "value_format",
+      "requests": [10]
+    }
+  ]
+}

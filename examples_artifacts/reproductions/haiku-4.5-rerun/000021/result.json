@@ -1,0 +1,601 @@
+{
+  "index": 21,
+  "status": "success",
+  "model": "anthropic/claude-haiku-4-5-20251001",
+  "generator": "openhands",
+  "base_trajectory": {
+    "source": "none",
+    "messages": 0
+  },
+  "artifacts": {
+    "zip": null,
+    "run_json": null,
+    "generator": "openhands",
+    "screenshots": [
+      "/output/000021/screenshots/task000021_0.png",
+      "/output/000021/screenshots/task000021_1.png",
+      "/output/000021/screenshots/task000021_2.png",
+      "/output/000021/screenshots/task000021_3.png",
+      "/output/000021/screenshots/task000021_4.png",
+      "/output/000021/screenshots/task000021_5.png"
+    ],
+    "output_dir": "/output/000021"
+  },
+  "ladder": {
+    "turns_expected": 10,
+    "turns_completed": 10,
+    "complete": true
+  },
+  "eval_model": "claude-sonnet-4-6",
+  "accuracy": 71.6,
+  "yes": 34,
+  "partial": 5,
+  "no": 12,
+  "total": 51,
+  "tasks": [
+    {
+      "task_idx": 0,
+      "task": "Clock in for the start of a work shift.",
+      "expected": "The system records the clock-in time, and confirmation is displayed to the employee on their dashboard.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 1,
+      "task": "Clock out at the end of a work shift.",
+      "expected": "The system records the clock-out time, and confirmation is displayed to the employee on their dashboard.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 2,
+      "task": "View your personal attendance record.",
+      "expected": "The attendance records, including attendance time and any absence time, are accurately displayed.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 3,
+      "task": "View the attendance records of all employees as dministrators.",
+      "expected": "A complete list of attendance records for all employees is displayed in the admin panel.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 4,
+      "task": "Perform a statistical analysis of employee attendance.",
+      "expected": "The system generates and displays statistical data regarding overall attendance trends without errors.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 5,
+      "task": "Verify that the website uses 'papaya whip' as the background color and 'dark orange' as the component color, as specified in the design requirements.",
+      "expected": "The website has a background color of 'papaya whip' and components (such as buttons, cards, headers, etc.) are styled with the color 'dark orange', accurately reflecting the design instruction.",
+      "verdict": "yes"
+    }
+  ],
+  "turns": [
+    {
+      "turn": 1,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": false,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Clock in for the start of a work shift.",
+          "expected": "The system records the clock-in time, and confirmation is displayed to the employee on their dashboard.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Clock out at the end of a work shift.",
+          "expected": "The system records the clock-out time, and confirmation is displayed to the employee on their dashboard.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "View your personal attendance record.",
+          "expected": "The attendance records, including attendance time and any absence time, are accurately displayed.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "View the attendance records of all employees as dministrators.",
+          "expected": "A complete list of attendance records for all employees is displayed in the admin panel.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Perform a statistical analysis of employee attendance.",
+          "expected": "The system generates and displays statistical data regarding overall attendance trends without errors.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 5,
+          "task": "Verify that the website uses 'papaya whip' as the background color and 'dark orange' as the component color, as specified in the design requirements.",
+          "expected": "The website has a background color of 'papaya whip' and components (such as buttons, cards, headers, etc.) are styled with the color 'dark orange', accurately reflecting the design instruction.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 6,
+      "partial": 0,
+      "no": 0,
+      "total": 6,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.143864,
+        "model_calls": 15,
+        "input_tokens_total": 353882,
+        "output_tokens": 14394,
+        "judge_usd": 0.1894
+      }
+    },
+    {
+      "turn": 2,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the weekly rollup board and read the ranking from top to bottom.",
+          "expected": "Leo Vance (42h 0m), Maya Chen (40h 0m), Ana Beck (37h 0m), Priya Nair (37h 0m), Sam Ortiz (32h 0m), Omar Diaz (20h 0m) - Ana Beck sits above Priya Nair because the 37h 0m tie breaks alphabetically.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Find Leo Vance on the weekly rollup board and read his weekly total.",
+          "expected": "42h 0m - his Saturday 7h is counted, so it is not 35h 0m.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open Sam Ortiz's timesheet history for the week of Mar 2.",
+          "expected": "Wednesday shows no worked hours (an empty/absent state, not a crash or a wrong number), and his weekly total reads 32h 0m.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Clock in as Maya Chen using the clock-in the app already has, then open her timesheet history.",
+          "expected": "A new in-progress entry (clocked in, no clock-out yet) appears in Maya's timesheet alongside her seeded week.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Clock in as any employee and then clock out, then open that employee's attendance records.",
+          "expected": "A completed attendance entry for that session appears in the employee's records.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 3,
+      "partial": 0,
+      "no": 2,
+      "total": 5,
+      "accuracy": 60.0,
+      "cost": {
+        "generation_usd": 0.167395,
+        "model_calls": 12,
+        "input_tokens_total": 522518,
+        "output_tokens": 13264,
+        "judge_usd": 0.3134
+      }
+    },
+    {
+      "turn": 3,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the kiosk, type just 42 into the PIN entry.",
+          "expected": "No employee is matched yet and the punch action is unavailable - the kiosk shows two of four digits entered, nothing more.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Type 9999 on the kiosk.",
+          "expected": "A clear no-match message appears and no punch action is offered.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Type 4217, use the offered Clock In, then enter 4217 again.",
+          "expected": "The second entry identifies Maya Chen again but now offers Clock Out instead of Clock In - her status toggled.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Type 8830 on the kiosk and clock Leo Vance in, then open Leo's timesheet history.",
+          "expected": "A new in-progress entry (clock-in with no clock-out yet) appears in Leo's timesheet history.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the weekly rollup board and read the ranking from top to bottom.",
+          "expected": "Leo Vance (42h 0m), Maya Chen (40h 0m), Ana Beck (37h 0m), Priya Nair (37h 0m), Sam Ortiz (32h 0m), Omar Diaz (20h 0m) - Ana Beck sits above Priya Nair because the 37h 0m tie breaks alphabetically.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 1,
+      "no": 0,
+      "total": 5,
+      "accuracy": 90.0,
+      "cost": {
+        "generation_usd": 0.126334,
+        "model_calls": 8,
+        "input_tokens_total": 409383,
+        "output_tokens": 6246,
+        "judge_usd": 0.4758
+      }
+    },
+    {
+      "turn": 4,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Find Leo Vance on the overtime board.",
+          "expected": "He carries a weekly overtime flag of 2h 0m over, and no daily flags at all (every day was 7h) - a build that only checks days over 8h shows Leo clean, which is wrong.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Find Priya Nair on the overtime board.",
+          "expected": "A daily flag of 1h 30m over on Mon, Mar 2, and no weekly flag - her 37h 0m week is under 40.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 2,
+          "task": "Find Maya Chen on the overtime board.",
+          "expected": "No flags of any kind - 8h days and an exactly-40h week are not overtime.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Check Leo Vance's total on the weekly rollup board, then his weekly overtime amount on the overtime board.",
+          "expected": "The rollup shows 42h 0m and the overtime board shows 2h 0m over - the overage is exactly his rollup total minus 40h.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Type 4217, use the offered Clock In, then enter 4217 again.",
+          "expected": "The second entry identifies Maya Chen again but now offers Clock Out instead of Clock In - her status toggled.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 1,
+      "no": 0,
+      "total": 5,
+      "accuracy": 90.0,
+      "cost": {
+        "generation_usd": 0.28929,
+        "model_calls": 14,
+        "input_tokens_total": 971028,
+        "output_tokens": 13573,
+        "judge_usd": 0.219
+      }
+    },
+    {
+      "turn": 5,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the leave view and read Priya Nair's and Omar Diaz's remaining PTO balances.",
+          "expected": "Priya shows 12 of 15 remaining (her 3 approved vacation days deducted); Omar still shows 6 of 6 - his pending request deducts nothing, so not 4.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the admin pending-requests view, approve Sam Ortiz's sick day.",
+          "expected": "A confirmation is asked first; after confirming, the request leaves the pending list and Sam's balance drops from 10 to 9.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Submit a vacation request for Omar Diaz from Mar 23 to Mar 31.",
+          "expected": "It is blocked with a message - that's 9 inclusive days against his 6 remaining - and his balance stays at 6.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Look at Sam Ortiz's pending sick-day request in the admin view.",
+          "expected": "Its date is written weekday-first as 'Wed, Mar 4', following the app-wide date style.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Find Leo Vance on the weekly rollup board and read his weekly total.",
+          "expected": "42h 0m - his Saturday 7h is counted, so it is not 35h 0m.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 2,
+      "partial": 0,
+      "no": 3,
+      "total": 5,
+      "accuracy": 40.0,
+      "cost": {
+        "generation_usd": 0.254974,
+        "model_calls": 11,
+        "input_tokens_total": 961598,
+        "output_tokens": 12195,
+        "judge_usd": 0.5483
+      }
+    },
+    {
+      "turn": 6,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Select Leo Vance in the pay calculator with the multiplier at its starting 1.5.",
+          "expected": "Total gross is $817.00 - regular $760.00 plus overtime $57.00 - not the flat $798.00 you'd get by ignoring his 2h of weekly overtime.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Select Priya Nair with the multiplier at 1.5.",
+          "expected": "Total gross is $906.00 with an overtime portion of $54.00 - her Monday excess counts even though her week is under 40h.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "With Leo Vance selected, clear the multiplier box and type 2.",
+          "expected": "Figures update immediately as typed with no submit step - overtime pay becomes $76.00 and the total $836.00.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Select Leo Vance and find where the calculator shows his overtime hours.",
+          "expected": "They read '2h 0m' in the app-wide hours-and-minutes style, not a decimal like 2.0.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Find Leo Vance on the overtime board.",
+          "expected": "He carries a weekly overtime flag of 2h 0m over, and no daily flags at all (every day was 7h) - a build that only checks days over 8h shows Leo clean, which is wrong.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 0,
+      "no": 1,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.251348,
+        "model_calls": 9,
+        "input_tokens_total": 909553,
+        "output_tokens": 9446,
+        "judge_usd": 0.4526
+      }
+    },
+    {
+      "turn": 7,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Set the department filter to Warehouse with leave included, and read the export block.",
+          "expected": "Only Leo Vance (42h 0m) and Sam Ortiz (32h 0m) appear, and there is no leave line for Sam - his sick day is still pending and pending never exports.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Set the department filter to Front Desk with leave included, and read the export block.",
+          "expected": "Maya Chen at 40h 0m and Priya Nair at 37h 0m, plus a leave line for Priya's 3 approved vacation days (Mar 16 to Mar 18).",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Filter department to Sales, then also pick Omar Diaz as the specific person.",
+          "expected": "The export narrows to just Omar Diaz (20h 0m) - the two filters combine with AND, so Ana Beck drops out.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Approve Sam Ortiz's pending sick day in the leave area (confirming it), then set the report to Warehouse with leave included and read the export block.",
+          "expected": "Sam now has a sick-leave line for Wed, Mar 4 that was absent while the request was pending.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the leave view and read Priya Nair's and Omar Diaz's remaining PTO balances.",
+          "expected": "Priya shows 12 of 15 remaining (her 3 approved vacation days deducted); Omar still shows 6 of 6 - his pending request deducts nothing, so not 4.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 4,
+      "partial": 0,
+      "no": 1,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.232633,
+        "model_calls": 7,
+        "input_tokens_total": 774021,
+        "output_tokens": 6535,
+        "judge_usd": 0.6192
+      }
+    },
+    {
+      "turn": 8,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "In the corrections queue, approve Ana Beck's request (confirming it), then open her timesheet history.",
+          "expected": "A confirmation was required before it went through, and her Thursday now reads 9h 30m where 6h 0m used to be.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 1,
+          "task": "Approve Ana Beck's correction, then open the weekly rollup board.",
+          "expected": "Ana Beck now shows 40h 30m and sits 2nd, between Leo Vance (42h 0m) and Maya Chen (40h 0m) - no longer tied with Priya Nair at 37h 0m.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Reject Omar Diaz's correction (confirming it), then check his timesheet.",
+          "expected": "The request leaves the queue but his Friday still reads 4h 0m and his weekly total stays 20h 0m - nothing changed.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Approve Ana Beck's correction, then open the overtime board.",
+          "expected": "Ana - previously flag-free - is now flagged: 1h 30m over on Thu, Mar 5 and 0h 30m over for the week.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "Select Leo Vance in the pay calculator with the multiplier at its starting 1.5.",
+          "expected": "Total gross is $817.00 - regular $760.00 plus overtime $57.00 - not the flat $798.00 you'd get by ignoring his 2h of weekly overtime.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 2,
+      "partial": 2,
+      "no": 1,
+      "total": 5,
+      "accuracy": 60.0,
+      "cost": {
+        "generation_usd": 0.16598,
+        "model_calls": 7,
+        "input_tokens_total": 861805,
+        "output_tokens": 10817,
+        "judge_usd": 0.4911
+      }
+    },
+    {
+      "turn": 9,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Find Sam Ortiz on the adherence scoreboard.",
+          "expected": "He scores 80% with Wed, Mar 4 listed as uncovered - his sick request is still pending, and pending leave doesn't count as coverage (so not 100%).",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 1,
+          "task": "Find Omar Diaz on the adherence scoreboard.",
+          "expected": "Exactly 83% - he worked 5 of his 6 scheduled days (Saturday missed) and 5/6 rounds to 83, not 84 and not 83.3%.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Look at Maya Chen, Leo Vance, Priya Nair and Ana Beck on the scoreboard.",
+          "expected": "All four show 100% with no uncovered days listed - clean rows, nothing blank or broken.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Approve Sam Ortiz's pending sick day in the leave area (confirming it), then return to the adherence scoreboard.",
+          "expected": "Sam now scores 100% and Wed, Mar 4 is no longer listed as uncovered - the approved leave covers it.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the kiosk, type just 42 into the PIN entry.",
+          "expected": "No employee is matched yet and the punch action is unavailable - the kiosk shows two of four digits entered, nothing more.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 2,
+      "partial": 1,
+      "no": 2,
+      "total": 5,
+      "accuracy": 50.0,
+      "cost": {
+        "generation_usd": 0.286281,
+        "model_calls": 11,
+        "input_tokens_total": 1125465,
+        "output_tokens": 9534,
+        "judge_usd": 0.5102
+      }
+    },
+    {
+      "turn": 10,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the kiosk page and look at its top bar and punch button.",
+          "expected": "The top bar is deep navy with cream text, and the punch action is a dark orange fully-rounded pill button.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the overtime board and look at its heading, flags, and table.",
+          "expected": "The main heading is uppercase, overtime flags render as rounded pill badges, and the table rows are zebra-striped.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open the leave center's admin view and look at the approve control and the top bar.",
+          "expected": "The navy top bar with cream text is present and the approve action is a dark orange pill-shaped button.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Open the weekly rollup board and then the pay calculator, checking the top bar and main heading on each.",
+          "expected": "Both pages show the same deep navy top bar with cream text and an uppercase main heading - no page missed by the restyle.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Find Omar Diaz on the adherence scoreboard.",
+          "expected": "Exactly 83% - he worked 5 of his 6 scheduled days (Saturday missed) and 5/6 rounds to 83, not 84 and not 83.3%.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 3,
+      "partial": 0,
+      "no": 2,
+      "total": 5,
+      "accuracy": 60.0,
+      "cost": {
+        "generation_usd": 0.432514,
+        "model_calls": 20,
+        "input_tokens_total": 1902962,
+        "output_tokens": 12612,
+        "judge_usd": 0.782
+      }
+    }
+  ]
+}

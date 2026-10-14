@@ -1,0 +1,601 @@
+{
+  "index": 8,
+  "status": "success",
+  "model": "anthropic/claude-haiku-4-5-20251001",
+  "generator": "openhands",
+  "base_trajectory": {
+    "source": "none",
+    "messages": 0
+  },
+  "artifacts": {
+    "zip": null,
+    "run_json": null,
+    "generator": "openhands",
+    "screenshots": [
+      "/output/000008/screenshots/task000008_0.png",
+      "/output/000008/screenshots/task000008_1.png",
+      "/output/000008/screenshots/task000008_2.png",
+      "/output/000008/screenshots/task000008_3.png",
+      "/output/000008/screenshots/task000008_4.png",
+      "/output/000008/screenshots/task000008_5.png"
+    ],
+    "output_dir": "/output/000008"
+  },
+  "ladder": {
+    "turns_expected": 10,
+    "turns_completed": 10,
+    "complete": true
+  },
+  "eval_model": "claude-sonnet-4-6",
+  "accuracy": 85.3,
+  "yes": 41,
+  "partial": 5,
+  "no": 5,
+  "total": 51,
+  "tasks": [
+    {
+      "task_idx": 0,
+      "task": "Navigate to the homepage and verify the presence of main navigation links (Home, Services, Book Now, Contact Us).",
+      "expected": "All navigation links are present and correctly labeled, facilitating easy access to different sections of the website.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 1,
+      "task": "Click on the \"Services\" link and ensure all available cleaning services are listed with descriptions.",
+      "expected": "A comprehensive list of cleaning services is displayed, each accompanied by a clear and accurate description.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 2,
+      "task": "Access the \"Book Now\" page and successfully submit a booking form with all required fields completed (e.g., service type, date, customer details).",
+      "expected": "The form is submitted without errors, and a confirmation message is displayed indicating a successful booking.",
+      "verdict": "no"
+    },
+    {
+      "task_idx": 3,
+      "task": "Navigate to the \"Contact Us\" page and check that contact information is provided, including a phone number and email address.",
+      "expected": "The page displays accurate contact details, allowing users to reach out for support.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 4,
+      "task": "From the homepage, use the navigation to access the service status feature and input a booking reference to check its status.",
+      "expected": "The service status related to the entered booking reference is displayed clearly, providing users with current information.",
+      "verdict": "no"
+    },
+    {
+      "task_idx": 5,
+      "task": "Verify that the website uses 'azure mist' as the background color and 'dark slate blue' as the component color, as specified in the design requirements.",
+      "expected": "The website has a background color of 'azure mist' and components (such as buttons, cards, headers, etc.) are styled with the color 'dark slate blue', accurately reflecting the design instruction.",
+      "verdict": "yes"
+    }
+  ],
+  "turns": [
+    {
+      "turn": 1,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": false,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Navigate to the homepage and verify the presence of main navigation links (Home, Services, Book Now, Contact Us).",
+          "expected": "All navigation links are present and correctly labeled, facilitating easy access to different sections of the website.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 1,
+          "task": "Click on the \"Services\" link and ensure all available cleaning services are listed with descriptions.",
+          "expected": "A comprehensive list of cleaning services is displayed, each accompanied by a clear and accurate description.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Access the \"Book Now\" page and successfully submit a booking form with all required fields completed (e.g., service type, date, customer details).",
+          "expected": "The form is submitted without errors, and a confirmation message is displayed indicating a successful booking.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Navigate to the \"Contact Us\" page and check that contact information is provided, including a phone number and email address.",
+          "expected": "The page displays accurate contact details, allowing users to reach out for support.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "From the homepage, use the navigation to access the service status feature and input a booking reference to check its status.",
+          "expected": "The service status related to the entered booking reference is displayed clearly, providing users with current information.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 5,
+          "task": "Verify that the website uses 'azure mist' as the background color and 'dark slate blue' as the component color, as specified in the design requirements.",
+          "expected": "The website has a background color of 'azure mist' and components (such as buttons, cards, headers, etc.) are styled with the color 'dark slate blue', accurately reflecting the design instruction.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 3,
+      "partial": 1,
+      "no": 2,
+      "total": 6,
+      "accuracy": 58.3,
+      "cost": {
+        "generation_usd": 0.137124,
+        "model_calls": 20,
+        "input_tokens_total": 448043,
+        "output_tokens": 11266,
+        "judge_usd": 0.5249
+      }
+    },
+    {
+      "turn": 2,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the instant quote page, select the Deep Shine package and type 1 in the bedrooms field and 1 in the bathrooms field.",
+          "expected": "The quote shows a duration of 3h 15m and a price of $178.75.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the quote page, select Quick Tidy, type 2 bedrooms and 1 bathroom, then change the bedrooms value to 3 without clicking any submit button.",
+          "expected": "The quote updates live: with 2 bed/1 bath it shows 2h 45m and $96.25, and immediately after changing to 3 bedrooms it shows 3h 15m and $113.75.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the quote page, select Sparkle Standard, type 0 for bedrooms and 1 for bathrooms; then change bedrooms to -2.",
+          "expected": "With 0 bedrooms it still quotes normally (2h 15m, $94.50); with -2 a validation note appears and no price is shown.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Select the Eco Fresh package on the quote page and look at how the selected package is labeled in the quote summary.",
+          "expected": "The package name appears with its rate right after it, as Eco Fresh ($48/hr).",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Find the contact information on the site.",
+          "expected": "A customer service phone number and an email address are both displayed.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.204182,
+        "model_calls": 20,
+        "input_tokens_total": 823086,
+        "output_tokens": 12458,
+        "judge_usd": 0.3121
+      }
+    },
+    {
+      "turn": 3,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Start a gift certificate purchase, type 20 as the amount, then change it to 150.50, then to 150.",
+          "expected": "20 and 150.50 are both rejected with a validation message (below the $25 minimum, and not whole dollars), while 150 is accepted.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the Certificates page.",
+          "expected": "The pre-loaded certificate GIFT-2201 for Hannah is listed with a $100 amount, $100 remaining balance, and an unredeemed status.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Buy a $50 certificate for recipient Omar with the message 'Happy birthday', going through the review step and issuing it.",
+          "expected": "The review step shows $50, Omar, and the message before issuing; after issuing, a certificate with a code starting GIFT- is displayed on screen and it appears on the Certificates page as unredeemed.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "While buying a certificate, pick Eco Fresh as the suggested package and continue to the review step.",
+          "expected": "The suggested package is labeled Eco Fresh ($48/hr) — the rate appears right after the name wherever it shows in the flow.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the instant quote page, select the Deep Shine package and type 1 in the bedrooms field and 1 in the bathrooms field.",
+          "expected": "The quote shows a duration of 3h 15m and a price of $178.75.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.251304,
+        "model_calls": 20,
+        "input_tokens_total": 1209067,
+        "output_tokens": 11693,
+        "judge_usd": 0.3707
+      }
+    },
+    {
+      "turn": 4,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the Reviews page, use the package filter to show only Eco Fresh reviews.",
+          "expected": "Exactly the reviews from Dana, Elena, and Leo are shown, and the average reads 4.7 (not 4.6 or 4.67).",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Filter reviews to 5-star only, then also filter to the Sparkle Standard package.",
+          "expected": "Both filters apply together: only Grace's review remains visible and the average updates to 5.0.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Clear all filters and look at the order of the first two reviews; then filter to 1-star only.",
+          "expected": "With no filters the two Jun 14 reviews lead with Dana before Priya (same-day alphabetical tiebreak); the 1-star filter shows a friendly no-reviews message rather than a blank or broken page.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Look at the package label on Priya's review card.",
+          "expected": "The package is shown with its rate attached, as Deep Shine ($55/hr).",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Certificates page.",
+          "expected": "The pre-loaded certificate GIFT-2201 for Hannah is listed with a $100 amount, $100 remaining balance, and an unredeemed status.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.234706,
+        "model_calls": 14,
+        "input_tokens_total": 1072661,
+        "output_tokens": 7814,
+        "judge_usd": 0.152
+      }
+    },
+    {
+      "turn": 5,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "In the service-area checker type 98188, then on the quote page select Deep Shine and type 1 bedroom and 1 bathroom.",
+          "expected": "98188 is recognized as the South zone with a $25 travel fee, and the quote shows the fee as its own line with a $203.75 total.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 1,
+          "task": "Type 981 into the ZIP field, then replace it with 98abc, then with 99999.",
+          "expected": "Partial input 981 gives no in/out-of-area verdict, non-numeric input is rejected or ignored, and 99999 gets an out-of-area notice — all reacting as typed without any submit button.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Type 98115 in the checker, then clear it and type 98101.",
+          "expected": "98115 shows the North zone with a $15 fee; after switching to 98101 it shows Central with no travel fee, and no leftover $15 remains anywhere in the quote.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Set the ZIP to 98115, then on the quote page pick Quick Tidy with 1 bedroom and 1 bathroom.",
+          "expected": "The quote lists a $15 travel fee line and totals $93.75 (the $78.75 job plus the fee).",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the quote page, select Sparkle Standard, type 0 for bedrooms and 1 for bathrooms; then change bedrooms to -2.",
+          "expected": "With 0 bedrooms it still quotes normally (2h 15m, $94.50); with -2 a validation note appears and no price is shown.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 3,
+      "partial": 2,
+      "no": 0,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.350261,
+        "model_calls": 19,
+        "input_tokens_total": 1804401,
+        "output_tokens": 11102,
+        "judge_usd": 0.6789
+      }
+    },
+    {
+      "turn": 6,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Compare Packages page and tick Quick Tidy, Eco Fresh, and Office Refresh.",
+          "expected": "Columns run cheapest first: Quick Tidy ($35/hr), then Eco Fresh ($48/hr), then Office Refresh ($48/hr) — Eco Fresh ahead of Office Refresh on the alphabetical tiebreak at the same rate.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Tick Eco Fresh and Sparkle Standard on the compare page.",
+          "expected": "The 3-bed/2-bath sample prices read $216.00 for Eco Fresh and $189.00 for Sparkle Standard, and both base times display as 1h 30m.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Tick Quick Tidy, Deep Shine, and Move-Out Master, then try to tick a fourth package.",
+          "expected": "The fourth package cannot be selected while three are picked, and Move-Out Master's rating column shows a dash since it has no reviews.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Tick Deep Shine on the compare page, then go to the Reviews page and filter to Deep Shine.",
+          "expected": "Both places agree: the compare column shows a 4.5 average, and the filtered Reviews page also averages 4.5 over Priya's and Aisha's reviews.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the Reviews page, use the package filter to show only Eco Fresh reviews.",
+          "expected": "Exactly the reviews from Dana, Elena, and Leo are shown, and the average reads 4.7 (not 4.6 or 4.67).",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.327509,
+        "model_calls": 13,
+        "input_tokens_total": 1475995,
+        "output_tokens": 8396,
+        "judge_usd": 0.3054
+      }
+    },
+    {
+      "turn": 7,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the quote page pick Deep Shine with 1 bedroom and 1 bathroom, then click the button to book this quote.",
+          "expected": "The checkout shows the carried-over details — Deep Shine ($55/hr), 3h 15m, and a $178.75 total — before any date, window, or certificate is entered.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Book a Deep Shine 1-bedroom/1-bathroom quote, and in checkout type the certificate code GIFT-2201.",
+          "expected": "The $100 balance comes off and the total due reads $78.75.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Book a Quick Tidy quote with 0 bedrooms and 1 bathroom, then type GIFT-2201 in checkout.",
+          "expected": "The $61.25 job drops to a total due of $0.00 — never a negative amount.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Open the service status area.",
+          "expected": "The two pre-loaded jobs are listed — Rosa's Sparkle Standard on Jul 12 and Ben's Move-Out Master on Jul 19 — each marked with a confirmed status.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the service-area checker type 98188, then on the quote page select Deep Shine and type 1 bedroom and 1 bathroom.",
+          "expected": "98188 is recognized as the South zone with a $25 travel fee, and the quote shows the fee as its own line with a $203.75 total.",
+          "verdict": "partial"
+        }
+      ],
+      "yes": 2,
+      "partial": 1,
+      "no": 2,
+      "total": 5,
+      "accuracy": 50.0,
+      "cost": {
+        "generation_usd": 0.555808,
+        "model_calls": 20,
+        "input_tokens_total": 2193966,
+        "output_tokens": 14061,
+        "judge_usd": 0.7722
+      }
+    },
+    {
+      "turn": 8,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the Plans page pick Eco Fresh and look at the Weekly card.",
+          "expected": "It shows $57.60 per visit and $748.80 in yearly savings.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the Plans page pick Sparkle Standard and check the Biweekly card, then switch to Office Refresh.",
+          "expected": "Sparkle Standard biweekly shows $53.55 per visit with $245.70 yearly savings, and after switching, Office Refresh biweekly immediately shows $81.60 per visit with $374.40 savings.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Try to pick Deep Shine on the Plans page, then pick Eco Fresh and click Enroll on the Monthly card.",
+          "expected": "Deep Shine cannot be chosen for a plan (marked one-time/unavailable), while enrolling in Eco Fresh Monthly shows a current-plan summary right on the page.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Pick Sparkle Standard on the Plans page and look at the visit length shown on the plan cards.",
+          "expected": "The visit length reads 1h 30m — hours-and-minutes style, not 1.5 hours or 90 minutes as a decimal figure.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Compare Packages page and tick Quick Tidy, Eco Fresh, and Office Refresh.",
+          "expected": "Columns run cheapest first: Quick Tidy ($35/hr), then Eco Fresh ($48/hr), then Office Refresh ($48/hr) — Eco Fresh ahead of Office Refresh on the alphabetical tiebreak at the same rate.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.351219,
+        "model_calls": 16,
+        "input_tokens_total": 1657149,
+        "output_tokens": 10829,
+        "judge_usd": 0.2546
+      }
+    },
+    {
+      "turn": 9,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Look at the primary action buttons on the home page and then on the quote estimator page.",
+          "expected": "Both pages' primary buttons are deep teal with white text — no dark slate blue primary buttons remain on either.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the Reviews page with no filters applied.",
+          "expected": "Star ratings render in golden yellow, and the overall average still reads 4.1.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open the Plans page and inspect a plan card and the page's section heading.",
+          "expected": "The card has rounded corners with a thin light-gray border and no drop shadow, and the heading is uppercase with letter spacing.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 3,
+          "task": "Compare the section headings on the home page, the Reviews page, and the Plans page.",
+          "expected": "All three pages use the same uppercase, letter-spaced heading style — no page kept the old heading style.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Book a Deep Shine 1-bedroom/1-bathroom quote, and in checkout type the certificate code GIFT-2201.",
+          "expected": "The $100 balance comes off and the total due reads $78.75.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 3,
+      "partial": 1,
+      "no": 1,
+      "total": 5,
+      "accuracy": 70.0,
+      "cost": {
+        "generation_usd": 0.493026,
+        "model_calls": 20,
+        "input_tokens_total": 2584971,
+        "output_tokens": 14889,
+        "judge_usd": 0.7524
+      }
+    },
+    {
+      "turn": 10,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Business Snapshot page on a fresh load.",
+          "expected": "The tiles read 2 confirmed jobs, $519.00 booked revenue, $100.00 outstanding gift balance, and a 4.1 overall average rating.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the Business Snapshot page, then open the service status area.",
+          "expected": "The confirmed-jobs tile count matches exactly the confirmed jobs listed in the status area (Rosa's and Ben's).",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Look at the overall rating tile on Business Snapshot, then open the Reviews page with no filters and compare.",
+          "expected": "Both read 4.1 — the average over all eight individual reviews, not the 3.8 you'd get by averaging the per-package averages.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Buy a $50 gift certificate for recipient Nina with the message 'Enjoy!' and issue it, then open the Business Snapshot page.",
+          "expected": "The outstanding gift balance tile now reads $150.00, reflecting the new unredeemed certificate on top of GIFT-2201.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the Plans page pick Eco Fresh and look at the Weekly card.",
+          "expected": "It shows $57.60 per visit and $748.80 in yearly savings.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.471618,
+        "model_calls": 16,
+        "input_tokens_total": 2461749,
+        "output_tokens": 8033,
+        "judge_usd": 0.2106
+      }
+    }
+  ]
+}

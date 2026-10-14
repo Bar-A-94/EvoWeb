@@ -1,0 +1,1442 @@
+{
+ "anchors": [
+  {
+   "en": "credit score inquiry",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1,
+    2
+   ],
+   "translations": {
+    "zh": "信用评分查询",
+    "he": "בדיקת דירוג אשראי",
+    "hi": "क्रेडिट स्कोर जाँच",
+    "de": "Kredit-Score-Abfrage",
+    "fr": "consultation du score de crédit"
+   }
+  },
+  {
+   "en": "credit repair services",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1
+   ],
+   "translations": {
+    "zh": "信用修复服务",
+    "he": "שירותי תיקון אשראי",
+    "hi": "क्रेडिट सुधार सेवाएँ",
+    "de": "Dienstleistungen zur Kreditsanierung",
+    "fr": "services de réparation de crédit"
+   }
+  },
+  {
+   "en": "personal information",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1,
+    2
+   ],
+   "translations": {
+    "zh": "个人信息",
+    "he": "פרטים אישיים",
+    "hi": "व्यक्तिगत जानकारी",
+    "de": "persönliche Daten",
+    "fr": "informations personnelles"
+   }
+  },
+  {
+   "en": "credit status",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1,
+    2
+   ],
+   "translations": {
+    "zh": "信用状况",
+    "he": "מצב אשראי",
+    "hi": "क्रेडिट स्थिति",
+    "de": "Kreditstatus",
+    "fr": "situation de crédit"
+   }
+  },
+  {
+   "en": "Score Improvement Estimator",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3,
+    6,
+    8
+   ],
+   "translations": {
+    "zh": "评分提升估算器",
+    "he": "מחשבון שיפור הדירוג",
+    "hi": "स्कोर सुधार अनुमानक",
+    "de": "Score-Verbesserungsrechner",
+    "fr": "Estimateur d'Amélioration du Score"
+   }
+  },
+  {
+   "en": "project my improvement",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2
+   ],
+   "translations": {
+    "zh": "预测我的提升",
+    "he": "חשב את השיפור שלי",
+    "hi": "मेरे सुधार का अनुमान लगाएँ",
+    "de": "meine Verbesserung berechnen",
+    "fr": "projeter mon amélioration"
+   }
+  },
+  {
+   "en": "Start over",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    10
+   ],
+   "translations": {
+    "zh": "重新开始",
+    "he": "התחל מחדש",
+    "hi": "फिर से शुरू करें",
+    "de": "Neu beginnen",
+    "fr": "Recommencer"
+   }
+  },
+  {
+   "en": "current score",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3,
+    6,
+    8
+   ],
+   "translations": {
+    "zh": "当前评分",
+    "he": "דירוג נוכחי",
+    "hi": "वर्तमान स्कोर",
+    "de": "aktueller Score",
+    "fr": "score actuel"
+   }
+  },
+  {
+   "en": "projected score",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3,
+    6
+   ],
+   "translations": {
+    "zh": "预计评分",
+    "he": "דירוג צפוי",
+    "hi": "अनुमानित स्कोर",
+    "de": "voraussichtlicher Score",
+    "fr": "score projeté"
+   }
+  },
+  {
+   "en": "collections",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3,
+    6
+   ],
+   "translations": {
+    "zh": "催收记录",
+    "he": "חשבונות בגבייה",
+    "hi": "कलेक्शन",
+    "de": "Inkassofälle",
+    "fr": "recouvrements"
+   }
+  },
+  {
+   "en": "collection",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    8
+   ],
+   "translations": {
+    "zh": "催收记录",
+    "he": "חשבון בגבייה",
+    "hi": "कलेक्शन",
+    "de": "Inkassofall",
+    "fr": "recouvrement"
+   }
+  },
+  {
+   "en": "late payments",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3
+   ],
+   "translations": {
+    "zh": "逾期还款",
+    "he": "תשלומים באיחור",
+    "hi": "लेट पेमेंट",
+    "de": "verspätete Zahlungen",
+    "fr": "retards de paiement"
+   }
+  },
+  {
+   "en": "late payment",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    8
+   ],
+   "translations": {
+    "zh": "逾期还款",
+    "he": "תשלום באיחור",
+    "hi": "लेट पेमेंट",
+    "de": "verspätete Zahlung",
+    "fr": "retard de paiement"
+   }
+  },
+  {
+   "en": "hard inquiries",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3
+   ],
+   "translations": {
+    "zh": "硬查询",
+    "he": "בירורים קשיחים",
+    "hi": "हार्ड इंक्वायरी",
+    "de": "harte Bonitätsanfragen",
+    "fr": "enquêtes de crédit strictes"
+   }
+  },
+  {
+   "en": "recommended plan",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2
+   ],
+   "translations": {
+    "zh": "推荐方案",
+    "he": "תוכנית מומלצת",
+    "hi": "अनुशंसित प्लान",
+    "de": "empfohlener Plan",
+    "fr": "plan recommandé"
+   }
+  },
+  {
+   "en": "Poor",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3,
+    6
+   ],
+   "translations": {
+    "zh": "较差",
+    "he": "נמוך",
+    "hi": "खराब",
+    "de": "Schwach",
+    "fr": "Faible"
+   }
+  },
+  {
+   "en": "Fair",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    6
+   ],
+   "translations": {
+    "zh": "一般",
+    "he": "בינוני",
+    "hi": "ठीक-ठाक",
+    "de": "Ausreichend",
+    "fr": "Moyen"
+   }
+  },
+  {
+   "en": "Good",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3
+   ],
+   "translations": {
+    "zh": "良好",
+    "he": "טוב",
+    "hi": "अच्छा",
+    "de": "Gut",
+    "fr": "Bon"
+   }
+  },
+  {
+   "en": "Very Good",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2
+   ],
+   "translations": {
+    "zh": "非常良好",
+    "he": "טוב מאוד",
+    "hi": "बहुत अच्छा",
+    "de": "Sehr Gut",
+    "fr": "Très Bon"
+   }
+  },
+  {
+   "en": "Excellent",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3
+   ],
+   "translations": {
+    "zh": "优秀",
+    "he": "מצוין",
+    "hi": "उत्कृष्ट",
+    "de": "Ausgezeichnet",
+    "fr": "Excellent"
+   }
+  },
+  {
+   "en": "Basic",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3,
+    8
+   ],
+   "translations": {
+    "zh": "基础版",
+    "he": "בסיסי",
+    "hi": "बेसिक",
+    "de": "Basis",
+    "fr": "Basique"
+   }
+  },
+  {
+   "en": "Standard",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3,
+    8,
+    10
+   ],
+   "translations": {
+    "zh": "标准版",
+    "he": "סטנדרטי",
+    "hi": "स्टैंडर्ड",
+    "de": "Standard",
+    "fr": "Standard"
+   }
+  },
+  {
+   "en": "Premium",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3,
+    8
+   ],
+   "translations": {
+    "zh": "高级版",
+    "he": "פרימיום",
+    "hi": "प्रीमियम",
+    "de": "Premium",
+    "fr": "Premium"
+   }
+  },
+  {
+   "en": "Client Success Stories",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    3,
+    4,
+    8
+   ],
+   "translations": {
+    "zh": "客户成功故事",
+    "he": "סיפורי הצלחה של לקוחות",
+    "hi": "ग्राहक सफलता की कहानियाँ",
+    "de": "Kundenerfolgsgeschichten",
+    "fr": "Témoignages de Réussite des Clients"
+   }
+  },
+  {
+   "en": "success stories",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    6,
+    7
+   ],
+   "translations": {
+    "zh": "成功故事",
+    "he": "סיפורי הצלחה",
+    "hi": "सफलता की कहानियाँ",
+    "de": "Erfolgsgeschichten",
+    "fr": "Témoignages de Réussite"
+   }
+  },
+  {
+   "en": "minimum points gained",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    3
+   ],
+   "translations": {
+    "zh": "最少提升分数",
+    "he": "מינימום נקודות שהושגו",
+    "hi": "न्यूनतम अंक वृद्धि",
+    "de": "Mindestpunktgewinn",
+    "fr": "minimum de points gagnés"
+   }
+  },
+  {
+   "en": "biggest gain",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    3,
+    4
+   ],
+   "translations": {
+    "zh": "最大提升",
+    "he": "השיפור הגדול ביותר",
+    "hi": "सबसे बड़ी वृद्धि",
+    "de": "größter Zuwachs",
+    "fr": "plus grand gain"
+   }
+  },
+  {
+   "en": "average gain",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    3,
+    4,
+    6,
+    8,
+    9
+   ],
+   "translations": {
+    "zh": "平均提升",
+    "he": "השיפור הממוצע",
+    "hi": "औसत वृद्धि",
+    "de": "durchschnittlicher Zuwachs",
+    "fr": "gain moyen"
+   }
+  },
+  {
+   "en": "Dispute Letter Builder",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    4,
+    5,
+    7
+   ],
+   "translations": {
+    "zh": "争议信生成器",
+    "he": "מחולל מכתבי ערעור",
+    "hi": "विवाद पत्र निर्माता",
+    "de": "Widerspruchsbrief-Generator",
+    "fr": "Générateur de Lettres de Contestation"
+   }
+  },
+  {
+   "en": "Not my account",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    4,
+    5
+   ],
+   "translations": {
+    "zh": "不是我的账户",
+    "he": "לא החשבון שלי",
+    "hi": "यह मेरा खाता नहीं है",
+    "de": "Nicht mein Konto",
+    "fr": "Ce n'est pas mon compte"
+   }
+  },
+  {
+   "en": "[Your Name]",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    4
+   ],
+   "translations": {
+    "zh": "[您的姓名]",
+    "he": "[השם שלך]",
+    "hi": "[आपका नाम]",
+    "de": "[Ihr Name]",
+    "fr": "[Votre Nom]"
+   }
+  },
+  {
+   "en": "reference code",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    4,
+    5
+   ],
+   "translations": {
+    "zh": "参考编号",
+    "he": "קוד סימוכין",
+    "hi": "संदर्भ कोड",
+    "de": "Referenzcode",
+    "fr": "code de référence"
+   }
+  },
+  {
+   "en": "account number",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    4,
+    5,
+    7
+   ],
+   "translations": {
+    "zh": "账号",
+    "he": "מספר חשבון",
+    "hi": "खाता संख्या",
+    "de": "Kontonummer",
+    "fr": "numéro de compte"
+   }
+  },
+  {
+   "en": "creditor name",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    4,
+    5,
+    9
+   ],
+   "translations": {
+    "zh": "债权人名称",
+    "he": "שם הנושה",
+    "hi": "लेनदार का नाम",
+    "de": "Gläubigername",
+    "fr": "nom du créancier"
+   }
+  },
+  {
+   "en": "Dispute Tracker",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5
+   ],
+   "translations": {
+    "zh": "争议追踪器",
+    "he": "מעקב ערעורים",
+    "hi": "विवाद ट्रैकर",
+    "de": "Widerspruchs-Tracker",
+    "fr": "Suivi des Contestations"
+   }
+  },
+  {
+   "en": "dispute tracker",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5,
+    6,
+    7,
+    9
+   ],
+   "translations": {
+    "zh": "争议追踪器",
+    "he": "מעקב ערעורים",
+    "hi": "विवाद ट्रैकर",
+    "de": "Widerspruchs-Tracker",
+    "fr": "Suivi des Contestations"
+   }
+  },
+  {
+   "en": "save to my disputes",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5
+   ],
+   "translations": {
+    "zh": "保存到我的争议",
+    "he": "שמור לערעורים שלי",
+    "hi": "मेरे विवादों में सहेजें",
+    "de": "In meinen Widersprüchen speichern",
+    "fr": "enregistrer dans mes contestations"
+   }
+  },
+  {
+   "en": "save-to-my-disputes",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5
+   ],
+   "translations": {
+    "zh": "保存到我的争议",
+    "he": "שמור לערעורים שלי",
+    "hi": "मेरे विवादों में सहेजें",
+    "de": "In meinen Widersprüchen speichern",
+    "fr": "enregistrer dans mes contestations"
+   }
+  },
+  {
+   "en": "Draft",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5,
+    7,
+    9
+   ],
+   "translations": {
+    "zh": "草稿",
+    "he": "טיוטה",
+    "hi": "ड्राफ़्ट",
+    "de": "Entwurf",
+    "fr": "Brouillon"
+   }
+  },
+  {
+   "en": "Sent",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5,
+    6,
+    7,
+    9
+   ],
+   "translations": {
+    "zh": "已发送",
+    "he": "נשלח",
+    "hi": "भेजा गया",
+    "de": "Gesendet",
+    "fr": "Envoyé"
+   }
+  },
+  {
+   "en": "Resolved",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5,
+    6,
+    7,
+    9
+   ],
+   "translations": {
+    "zh": "已解决",
+    "he": "טופל",
+    "hi": "समाधान हुआ",
+    "de": "Erledigt",
+    "fr": "Résolu"
+   }
+  },
+  {
+   "en": "Impact Dashboard",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    6,
+    9
+   ],
+   "translations": {
+    "zh": "影响力仪表板",
+    "he": "לוח השפעה",
+    "hi": "प्रभाव डैशबोर्ड",
+    "de": "Wirkungs-Dashboard",
+    "fr": "Tableau de Bord d'Impact"
+   }
+  },
+  {
+   "en": "impact dashboard",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    7
+   ],
+   "translations": {
+    "zh": "影响力仪表板",
+    "he": "לוח השפעה",
+    "hi": "प्रभाव डैशबोर्ड",
+    "de": "Wirkungs-Dashboard",
+    "fr": "Tableau de Bord d'Impact"
+   }
+  },
+  {
+   "en": "clients helped",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    6
+   ],
+   "translations": {
+    "zh": "已帮助客户",
+    "he": "לקוחות שנעזרו",
+    "hi": "सहायता प्राप्त ग्राहक",
+    "de": "unterstützte Kunden",
+    "fr": "clients aidés"
+   }
+  },
+  {
+   "en": "Clients helped",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    6
+   ],
+   "translations": {
+    "zh": "已帮助客户",
+    "he": "לקוחות שנעזרו",
+    "hi": "सहायता प्राप्त ग्राहक",
+    "de": "unterstützte Kunden",
+    "fr": "clients aidés"
+   }
+  },
+  {
+   "en": "clients-helped",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    6
+   ],
+   "translations": {
+    "zh": "已帮助客户",
+    "he": "לקוחות שנעזרו",
+    "hi": "सहायता प्राप्त ग्राहक",
+    "de": "unterstützte Kunden",
+    "fr": "clients aidés"
+   }
+  },
+  {
+   "en": "total points recovered",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    6
+   ],
+   "translations": {
+    "zh": "累计恢复分数",
+    "he": "סך הנקודות שהוחזרו",
+    "hi": "कुल पुनर्प्राप्त अंक",
+    "de": "insgesamt zurückgewonnene Punkte",
+    "fr": "total des points récupérés"
+   }
+  },
+  {
+   "en": "total-points-recovered",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    6
+   ],
+   "translations": {
+    "zh": "累计恢复分数",
+    "he": "סך הנקודות שהוחזרו",
+    "hi": "कुल पुनर्प्राप्त अंक",
+    "de": "insgesamt zurückgewonnene Punkte",
+    "fr": "total des points récupérés"
+   }
+  },
+  {
+   "en": "items resolved",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    6
+   ],
+   "translations": {
+    "zh": "已解决项目",
+    "he": "פריטים שטופלו",
+    "hi": "समाधान किए गए आइटम",
+    "de": "erledigte Fälle",
+    "fr": "éléments résolus"
+   }
+  },
+  {
+   "en": "items-resolved",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    6
+   ],
+   "translations": {
+    "zh": "已解决项目",
+    "he": "פריטים שטופלו",
+    "hi": "समाधान किए गए आइटम",
+    "de": "erledigte Fälle",
+    "fr": "éléments résolus"
+   }
+  },
+  {
+   "en": "Rebuild. Restore. Rise.",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    7
+   ],
+   "translations": {
+    "zh": "重建。恢复。崛起。",
+    "he": "לבנות מחדש. לשקם. להתרומם.",
+    "hi": "फिर से बनाएँ। बहाल करें। ऊपर उठें।",
+    "de": "Neu aufbauen. Wiederherstellen. Aufsteigen.",
+    "fr": "Reconstruire. Restaurer. S'élever."
+   }
+  },
+  {
+   "en": "Dispute Strategy Advisor",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    9
+   ],
+   "translations": {
+    "zh": "争议策略顾问",
+    "he": "יועץ אסטרטגיית ערעורים",
+    "hi": "विवाद रणनीति सलाहकार",
+    "de": "Widerspruchsstrategie-Berater",
+    "fr": "Conseiller en Stratégie de Contestation"
+   }
+  },
+  {
+   "en": "Send the pending letter",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    9
+   ],
+   "translations": {
+    "zh": "发送待处理的信件",
+    "he": "שלח את המכתב הממתין",
+    "hi": "लंबित पत्र भेजें",
+    "de": "Ausstehenden Brief senden",
+    "fr": "Envoyer la lettre en attente"
+   }
+  },
+  {
+   "en": "Await the bureau's response",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    9
+   ],
+   "translations": {
+    "zh": "等待征信机构的回复",
+    "he": "המתן לתשובת הלשכה",
+    "hi": "ब्यूरो के उत्तर की प्रतीक्षा करें",
+    "de": "Auf die Antwort der Auskunftei warten",
+    "fr": "Attendre la réponse du bureau"
+   }
+  },
+  {
+   "en": "Request an updated credit report",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    9
+   ],
+   "translations": {
+    "zh": "索取更新后的信用报告",
+    "he": "בקש דוח אשראי מעודכן",
+    "hi": "अद्यतन क्रेडिट रिपोर्ट का अनुरोध करें",
+    "de": "Aktualisierte Kreditauskunft anfordern",
+    "fr": "Demander un rapport de crédit à jour"
+   }
+  },
+  {
+   "en": "multi-bureau",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    9
+   ],
+   "translations": {
+    "zh": "多机构",
+    "he": "רב-לשכתי",
+    "hi": "मल्टी-ब्यूरो",
+    "de": "mehrere Auskunfteien",
+    "fr": "multi-bureaux"
+   }
+  },
+  {
+   "en": "priority",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    9
+   ],
+   "translations": {
+    "zh": "优先级",
+    "he": "עדיפות",
+    "hi": "प्राथमिकता",
+    "de": "Priorität",
+    "fr": "priorité"
+   }
+  },
+  {
+   "en": "enrollment",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    8,
+    10
+   ],
+   "translations": {
+    "zh": "注册",
+    "he": "הרשמה",
+    "hi": "नामांकन",
+    "de": "Anmeldung",
+    "fr": "inscription"
+   }
+  },
+  {
+   "en": "rush processing",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    8
+   ],
+   "translations": {
+    "zh": "加急处理",
+    "he": "טיפול מזורז",
+    "hi": "त्वरित प्रोसेसिंग",
+    "de": "Eilbearbeitung",
+    "fr": "traitement express"
+   }
+  },
+  {
+   "en": "credit monitoring",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    8,
+    10
+   ],
+   "translations": {
+    "zh": "信用监控",
+    "he": "ניטור אשראי",
+    "hi": "क्रेडिट निगरानी",
+    "de": "Kreditüberwachung",
+    "fr": "surveillance de crédit"
+   }
+  },
+  {
+   "en": "monthly total",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    8,
+    10
+   ],
+   "translations": {
+    "zh": "每月总额",
+    "he": "סך חודשי",
+    "hi": "मासिक कुल",
+    "de": "Monatssumme",
+    "fr": "total mensuel"
+   }
+  },
+  {
+   "en": "first payment",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    8,
+    10
+   ],
+   "translations": {
+    "zh": "首次付款",
+    "he": "תשלום ראשון",
+    "hi": "पहला भुगतान",
+    "de": "erste Zahlung",
+    "fr": "premier paiement"
+   }
+  },
+  {
+   "en": "consultation booking",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    10
+   ],
+   "translations": {
+    "zh": "咨询预约",
+    "he": "הזמנת ייעוץ",
+    "hi": "परामर्श बुकिंग",
+    "de": "Beratungsbuchung",
+    "fr": "réservation de consultation"
+   }
+  },
+  {
+   "en": "consultations list",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    10
+   ],
+   "translations": {
+    "zh": "咨询列表",
+    "he": "רשימת ייעוצים",
+    "hi": "परामर्श सूची",
+    "de": "Beratungsliste",
+    "fr": "liste des consultations"
+   }
+  },
+  {
+   "en": "Monday",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    10
+   ],
+   "translations": {
+    "zh": "周一",
+    "he": "יום שני",
+    "hi": "सोमवार",
+    "de": "Montag",
+    "fr": "lundi"
+   }
+  },
+  {
+   "en": "Tuesday",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    10
+   ],
+   "translations": {
+    "zh": "周二",
+    "he": "יום שלישי",
+    "hi": "मंगलवार",
+    "de": "Dienstag",
+    "fr": "mardi"
+   }
+  },
+  {
+   "en": "Wednesday",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    10
+   ],
+   "translations": {
+    "zh": "周三",
+    "he": "יום רביעי",
+    "hi": "बुधवार",
+    "de": "Mittwoch",
+    "fr": "mercredi"
+   }
+  },
+  {
+   "en": "old lace",
+   "class": "keep",
+   "kind": "css_visual",
+   "requests": [
+    1
+   ]
+  },
+  {
+   "en": "rosy brown",
+   "class": "keep",
+   "kind": "css_visual",
+   "requests": [
+    1,
+    7
+   ]
+  },
+  {
+   "en": "saddle brown",
+   "class": "keep",
+   "kind": "css_visual",
+   "requests": [
+    7
+   ]
+  },
+  {
+   "en": "white",
+   "class": "keep",
+   "kind": "css_visual",
+   "requests": [
+    7
+   ]
+  },
+  {
+   "en": "Equifax",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    4,
+    5,
+    9
+   ]
+  },
+  {
+   "en": "Experian",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    4,
+    5
+   ]
+  },
+  {
+   "en": "TransUnion",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    4,
+    5,
+    7,
+    9
+   ]
+  },
+  {
+   "en": "Capital One",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    4,
+    5
+   ]
+  },
+  {
+   "en": "Midland",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    4,
+    5,
+    9
+   ]
+  },
+  {
+   "en": "Midland Funding",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    5,
+    9
+   ]
+  },
+  {
+   "en": "LVNV Funding",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    5,
+    6,
+    9
+   ]
+  },
+  {
+   "en": "Portfolio Recovery",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    5,
+    7,
+    9
+   ]
+  },
+  {
+   "en": "First Premier Bank",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    5,
+    9
+   ]
+  },
+  {
+   "en": "Cavalry",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    4,
+    5,
+    7
+   ]
+  },
+  {
+   "en": "EQ",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    4,
+    5
+   ]
+  },
+  {
+   "en": "EX",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    4
+   ]
+  },
+  {
+   "en": "TU",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    4
+   ]
+  },
+  {
+   "en": "EQ-CAPI-8",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    4,
+    5
+   ]
+  },
+  {
+   "en": "Gloria Mendez",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    4
+   ]
+  },
+  {
+   "en": "Dana Cole",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    8,
+    10
+   ]
+  },
+  {
+   "en": "Angela Ruiz",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    10
+   ]
+  },
+  {
+   "en": "Marcus Webb",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    10
+   ]
+  },
+  {
+   "en": "Robert M.",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    10
+   ]
+  },
+  {
+   "en": "Sofia",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    3,
+    4,
+    6,
+    8
+   ]
+  },
+  {
+   "en": "Marcus",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    3,
+    4,
+    8,
+    10
+   ]
+  },
+  {
+   "en": "Priya",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    3,
+    4,
+    8
+   ]
+  },
+  {
+   "en": "Denise",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    3,
+    4
+   ]
+  },
+  {
+   "en": "Walter",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    3
+   ]
+  },
+  {
+   "en": "James",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    3
+   ]
+  },
+  {
+   "en": "Keisha",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    3
+   ]
+  },
+  {
+   "en": "Atlanta",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    3
+   ]
+  },
+  {
+   "en": "Tampa",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    3
+   ]
+  },
+  {
+   "en": "Austin",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    3
+   ]
+  },
+  {
+   "en": "Cleveland",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    3
+   ]
+  },
+  {
+   "en": "Phoenix",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    3,
+    6
+   ]
+  },
+  {
+   "en": "Baltimore",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    3
+   ]
+  },
+  {
+   "en": "Memphis",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    3
+   ]
+  },
+  {
+   "en": "pts",
+   "class": "keep",
+   "kind": "value_format",
+   "requests": [
+    3,
+    4,
+    6,
+    8,
+    9
+   ]
+  },
+  {
+   "en": "9:00 AM",
+   "class": "keep",
+   "kind": "value_format",
+   "requests": [
+    10
+   ]
+  },
+  {
+   "en": "2:00 PM",
+   "class": "keep",
+   "kind": "value_format",
+   "requests": [
+    10
+   ]
+  },
+  {
+   "en": "10:00 AM",
+   "class": "keep",
+   "kind": "value_format",
+   "requests": [
+    10
+   ]
+  },
+  {
+   "en": "4:00 PM",
+   "class": "keep",
+   "kind": "value_format",
+   "requests": [
+    10
+   ]
+  }
+ ]
+}

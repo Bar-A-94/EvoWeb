@@ -1,0 +1,1024 @@
+{
+ "anchors": [
+  {
+   "en": "infrastructure management",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1
+   ],
+   "translations": {
+    "zh": "基建管理",
+    "he": "ניהול תשתיות",
+    "hi": "अवसंरचना प्रबंधन",
+    "de": "Infrastrukturverwaltung",
+    "fr": "gestion des infrastructures"
+   }
+  },
+  {
+   "en": "procurement management",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1,
+    2
+   ],
+   "translations": {
+    "zh": "采购管理",
+    "he": "ניהול רכש",
+    "hi": "खरीद प्रबंधन",
+    "de": "Beschaffungsverwaltung",
+    "fr": "gestion des achats"
+   }
+  },
+  {
+   "en": "personnel management",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1,
+    2
+   ],
+   "translations": {
+    "zh": "人事管理",
+    "he": "ניהול כוח אדם",
+    "hi": "कार्मिक प्रबंधन",
+    "de": "Personalverwaltung",
+    "fr": "gestion du personnel"
+   }
+  },
+  {
+   "en": "financial management",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1,
+    2,
+    6,
+    8
+   ],
+   "translations": {
+    "zh": "财务管理",
+    "he": "ניהול פיננסי",
+    "hi": "वित्तीय प्रबंधन",
+    "de": "Finanzverwaltung",
+    "fr": "gestion financière"
+   }
+  },
+  {
+   "en": "leave management",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1
+   ],
+   "translations": {
+    "zh": "请假管理",
+    "he": "ניהול חופשות",
+    "hi": "अवकाश प्रबंधन",
+    "de": "Urlaubsverwaltung",
+    "fr": "gestion des congés"
+   }
+  },
+  {
+   "en": "leave",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1,
+    2
+   ],
+   "translations": {
+    "zh": "请假",
+    "he": "חופשות",
+    "hi": "अवकाश",
+    "de": "Urlaub",
+    "fr": "congés"
+   }
+  },
+  {
+   "en": "decision-making",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1,
+    4,
+    9,
+    10
+   ],
+   "translations": {
+    "zh": "决策",
+    "he": "קבלת החלטות",
+    "hi": "निर्णय-निर्माण",
+    "de": "Entscheidungsfindung",
+    "fr": "prise de décision"
+   }
+  },
+  {
+   "en": "Vehicle Fleet",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    2,
+    4,
+    5,
+    6,
+    8,
+    9
+   ],
+   "translations": {
+    "zh": "车队",
+    "he": "צי רכב",
+    "hi": "वाहन बेड़ा",
+    "de": "Fuhrpark",
+    "fr": "Parc de véhicules"
+   }
+  },
+  {
+   "en": "Roads & Bridges",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9
+   ],
+   "translations": {
+    "zh": "道路与桥梁",
+    "he": "כבישים וגשרים",
+    "hi": "सड़क एवं पुल",
+    "de": "Straßen & Brücken",
+    "fr": "Routes & Ponts"
+   }
+  },
+  {
+   "en": "Office Supplies",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    2,
+    4,
+    5,
+    6,
+    10
+   ],
+   "translations": {
+    "zh": "办公用品",
+    "he": "ציוד משרדי",
+    "hi": "कार्यालय सामग्री",
+    "de": "Bürobedarf",
+    "fr": "Fournitures de bureau"
+   }
+  },
+  {
+   "en": "IT Equipment",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    9,
+    10
+   ],
+   "translations": {
+    "zh": "IT设备",
+    "he": "ציוד מחשוב",
+    "hi": "आईटी उपकरण",
+    "de": "IT-Ausstattung",
+    "fr": "Équipement informatique"
+   }
+  },
+  {
+   "en": "Staff Training",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    9
+   ],
+   "translations": {
+    "zh": "员工培训",
+    "he": "הכשרת עובדים",
+    "hi": "स्टाफ प्रशिक्षण",
+    "de": "Personalschulung",
+    "fr": "Formation du personnel"
+   }
+  },
+  {
+   "en": "Public Parks",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    2,
+    4,
+    6,
+    7,
+    9
+   ],
+   "translations": {
+    "zh": "公共公园",
+    "he": "פארקים ציבוריים",
+    "hi": "सार्वजनिक उद्यान",
+    "de": "Öffentliche Parks",
+    "fr": "Parcs publics"
+   }
+  },
+  {
+   "en": "budget lines",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    7,
+    8,
+    10
+   ],
+   "translations": {
+    "zh": "预算科目",
+    "he": "סעיפי תקציב",
+    "hi": "बजट मदें",
+    "de": "Budgetpositionen",
+    "fr": "lignes budgétaires"
+   }
+  },
+  {
+   "en": "Office department",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    4,
+    10
+   ],
+   "translations": {
+    "zh": "办公部门",
+    "he": "מחלקת משרד",
+    "hi": "कार्यालय विभाग",
+    "de": "Abteilung Büro",
+    "fr": "département Bureau"
+   }
+  },
+  {
+   "en": "requisition builder",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3,
+    5,
+    7
+   ],
+   "translations": {
+    "zh": "申购单生成器",
+    "he": "בונה דרישות רכש",
+    "hi": "मांग-पत्र बिल्डर",
+    "de": "Bedarfsanforderungs-Generator",
+    "fr": "générateur de demandes d'achat"
+   }
+  },
+  {
+   "en": "expense report form",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    3,
+    4,
+    7
+   ],
+   "translations": {
+    "zh": "费用报销表单",
+    "he": "טופס דוח הוצאות",
+    "hi": "व्यय रिपोर्ट फ़ॉर्म",
+    "de": "Spesenabrechnungsformular",
+    "fr": "formulaire de note de frais"
+   }
+  },
+  {
+   "en": "approvals queue",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    3,
+    4,
+    7,
+    8,
+    9,
+    10
+   ],
+   "translations": {
+    "zh": "审批队列",
+    "he": "תור אישורים",
+    "hi": "अनुमोदन कतार",
+    "de": "Genehmigungswarteschlange",
+    "fr": "file d'approbations"
+   }
+  },
+  {
+   "en": "budget utilization report",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    4,
+    6,
+    7
+   ],
+   "translations": {
+    "zh": "预算使用率报表",
+    "he": "דוח ניצול תקציב",
+    "hi": "बजट उपयोग रिपोर्ट",
+    "de": "Budget-Auslastungsbericht",
+    "fr": "rapport d'utilisation du budget"
+   }
+  },
+  {
+   "en": "utilization report",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    4,
+    6,
+    7,
+    10
+   ],
+   "translations": {
+    "zh": "使用率报表",
+    "he": "דוח ניצול",
+    "hi": "उपयोग रिपोर्ट",
+    "de": "Auslastungsbericht",
+    "fr": "rapport d'utilisation"
+   }
+  },
+  {
+   "en": "vendor portal",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5,
+    7,
+    8
+   ],
+   "translations": {
+    "zh": "供应商门户",
+    "he": "פורטל ספקים",
+    "hi": "विक्रेता पोर्टल",
+    "de": "Lieferantenportal",
+    "fr": "portail fournisseurs"
+   }
+  },
+  {
+   "en": "grants section",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    6,
+    7,
+    9
+   ],
+   "translations": {
+    "zh": "拨款专区",
+    "he": "מדור מענקים",
+    "hi": "अनुदान अनुभाग",
+    "de": "Fördermittelbereich",
+    "fr": "section des subventions"
+   }
+  },
+  {
+   "en": "what-if planner",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    8
+   ],
+   "translations": {
+    "zh": "假设情景规划器",
+    "he": "מתכנן תרחישים",
+    "hi": "परिदृश्य योजनाकार",
+    "de": "Was-wäre-wenn-Planer",
+    "fr": "planificateur de scénarios"
+   }
+  },
+  {
+   "en": "KPI dashboard",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    9
+   ],
+   "translations": {
+    "zh": "KPI仪表板",
+    "he": "לוח מחווני KPI",
+    "hi": "KPI डैशबोर्ड",
+    "de": "KPI-Dashboard",
+    "fr": "tableau de bord KPI"
+   }
+  },
+  {
+   "en": "council view",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    10
+   ],
+   "translations": {
+    "zh": "议会视图",
+    "he": "תצוגת מועצה",
+    "hi": "परिषद दृश्य",
+    "de": "Ratsansicht",
+    "fr": "vue du conseil"
+   }
+  },
+  {
+   "en": "Submit to Council",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    10
+   ],
+   "translations": {
+    "zh": "提交议会",
+    "he": "שליחה למועצה",
+    "hi": "परिषद को भेजें",
+    "de": "An den Rat senden",
+    "fr": "Soumettre au Conseil"
+   }
+  },
+  {
+   "en": "Department Head",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    5
+   ],
+   "translations": {
+    "zh": "部门负责人",
+    "he": "ראש מחלקה",
+    "hi": "विभाग प्रमुख",
+    "de": "Abteilungsleiter",
+    "fr": "Chef de Département"
+   }
+  },
+  {
+   "en": "Finance Director",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    5
+   ],
+   "translations": {
+    "zh": "财务总监",
+    "he": "מנהל כספים",
+    "hi": "वित्त निदेशक",
+    "de": "Finanzdirektor",
+    "fr": "Directeur Financier"
+   }
+  },
+  {
+   "en": "City Council",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    10
+   ],
+   "translations": {
+    "zh": "市议会",
+    "he": "מועצת העיר",
+    "hi": "नगर परिषद",
+    "de": "Stadtrat",
+    "fr": "Conseil Municipal"
+   }
+  },
+  {
+   "en": "Pending",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3,
+    7,
+    10
+   ],
+   "translations": {
+    "zh": "待审",
+    "he": "ממתין",
+    "hi": "लंबित",
+    "de": "Ausstehend",
+    "fr": "En attente"
+   }
+  },
+  {
+   "en": "Approved",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2
+   ],
+   "translations": {
+    "zh": "已批准",
+    "he": "מאושר",
+    "hi": "अनुमोदित",
+    "de": "Genehmigt",
+    "fr": "Approuvé"
+   }
+  },
+  {
+   "en": "Rejected",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3,
+    10
+   ],
+   "translations": {
+    "zh": "已拒绝",
+    "he": "נדחה",
+    "hi": "अस्वीकृत",
+    "de": "Abgelehnt",
+    "fr": "Rejeté"
+   }
+  },
+  {
+   "en": "At Risk",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    4,
+    9,
+    10
+   ],
+   "translations": {
+    "zh": "有风险",
+    "he": "בסיכון",
+    "hi": "जोखिम में",
+    "de": "Gefährdet",
+    "fr": "À Risque"
+   }
+  },
+  {
+   "en": "Exhausted",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    4
+   ],
+   "translations": {
+    "zh": "已用尽",
+    "he": "מוצה",
+    "hi": "समाप्त",
+    "de": "Erschöpft",
+    "fr": "Épuisé"
+   }
+  },
+  {
+   "en": "On Track",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    9,
+    10
+   ],
+   "translations": {
+    "zh": "按计划",
+    "he": "בדרך הנכונה",
+    "hi": "पटरी पर",
+    "de": "Im Plan",
+    "fr": "Dans les Temps"
+   }
+  },
+  {
+   "en": "Off Track",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    9,
+    10
+   ],
+   "translations": {
+    "zh": "偏离计划",
+    "he": "מחוץ למסלול",
+    "hi": "पटरी से उतरा",
+    "de": "Außer Plan",
+    "fr": "Hors Délais"
+   }
+  },
+  {
+   "en": "Award",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5
+   ],
+   "translations": {
+    "zh": "授标",
+    "he": "הענקה",
+    "hi": "आवंटित करें",
+    "de": "Zuschlag erteilen",
+    "fr": "Attribuer"
+   }
+  },
+  {
+   "en": "Awarded",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5
+   ],
+   "translations": {
+    "zh": "已授标",
+    "he": "הוענק",
+    "hi": "आवंटित",
+    "de": "Zuschlag erteilt",
+    "fr": "Attribué"
+   }
+  },
+  {
+   "en": "Not selected",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5
+   ],
+   "translations": {
+    "zh": "未选中",
+    "he": "לא נבחר",
+    "hi": "चयनित नहीं",
+    "de": "Nicht ausgewählt",
+    "fr": "Non retenu"
+   }
+  },
+  {
+   "en": "Clean Water Initiative",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    6,
+    9
+   ],
+   "translations": {
+    "zh": "清洁水计划",
+    "he": "יוזמת מים נקיים",
+    "hi": "स्वच्छ जल पहल",
+    "de": "Initiative Sauberes Wasser",
+    "fr": "Initiative Eau Potable"
+   }
+  },
+  {
+   "en": "Digital Services Modernization",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    6
+   ],
+   "translations": {
+    "zh": "数字服务现代化",
+    "he": "מודרניזציה של שירותים דיגיטליים",
+    "hi": "डिजिटल सेवा आधुनिकीकरण",
+    "de": "Modernisierung der digitalen Dienste",
+    "fr": "Modernisation des Services Numériques"
+   }
+  },
+  {
+   "en": "Community Health Outreach",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    6
+   ],
+   "translations": {
+    "zh": "社区健康外展",
+    "he": "הסברת בריאות קהילתית",
+    "hi": "सामुदायिक स्वास्थ्य पहुंच",
+    "de": "Gemeindegesundheitsprogramm",
+    "fr": "Sensibilisation à la Santé Communautaire"
+   }
+  },
+  {
+   "en": "Potholes repaired",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    9
+   ],
+   "translations": {
+    "zh": "已修补坑洼",
+    "he": "מפגעי כביש שתוקנו",
+    "hi": "गड्ढे मरम्मत किए गए",
+    "de": "Reparierte Schlaglöcher",
+    "fr": "Nids-de-poule réparés"
+   }
+  },
+  {
+   "en": "Permits digitized",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    9
+   ],
+   "translations": {
+    "zh": "已数字化许可证",
+    "he": "היתרים שעברו דיגיטציה",
+    "hi": "परमिट डिजिटल किए गए",
+    "de": "Digitalisierte Genehmigungen",
+    "fr": "Permis numérisés"
+   }
+  },
+  {
+   "en": "Training sessions held",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    9
+   ],
+   "translations": {
+    "zh": "已举办培训场次",
+    "he": "מפגשי הדרכה שהתקיימו",
+    "hi": "आयोजित प्रशिक्षण सत्र",
+    "de": "Durchgeführte Schulungen",
+    "fr": "Sessions de formation tenues"
+   }
+  },
+  {
+   "en": "Park inspections",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    9
+   ],
+   "translations": {
+    "zh": "公园巡检",
+    "he": "ביקורות בפארקים",
+    "hi": "उद्यान निरीक्षण",
+    "de": "Parkinspektionen",
+    "fr": "Inspections de parcs"
+   }
+  },
+  {
+   "en": "Fleet vehicles serviced",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    9
+   ],
+   "translations": {
+    "zh": "已保养车队车辆",
+    "he": "רכבי צי שטופלו",
+    "hi": "बेड़े के वाहन सर्विस किए गए",
+    "de": "Gewartete Fuhrparkfahrzeuge",
+    "fr": "Véhicules du parc entretenus"
+   }
+  },
+  {
+   "en": "Gravel resurfacing, Nanshan section",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    5,
+    10
+   ],
+   "translations": {
+    "zh": "Nanshan路段砾石路面翻新",
+    "he": "ריבוד מחדש בחצץ, מקטע Nanshan",
+    "hi": "बजरी पुनःसतहीकरण, Nanshan खंड",
+    "de": "Schottererneuerung, Abschnitt Nanshan",
+    "fr": "Réfection en gravier, section Nanshan"
+   }
+  },
+  {
+   "en": "June Infrastructure Addendum",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    10
+   ],
+   "translations": {
+    "zh": "六月基建补充文件",
+    "he": "נספח תשתיות יוני",
+    "hi": "जून अवसंरचना परिशिष्ट",
+    "de": "Infrastruktur-Nachtrag Juni",
+    "fr": "Addendum Infrastructure de Juin"
+   }
+  },
+  {
+   "en": "Li Wei",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    3,
+    7
+   ]
+  },
+  {
+   "en": "Chen Fang",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    3
+   ]
+  },
+  {
+   "en": "Zhang Min",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    8,
+    9,
+    10
+   ]
+  },
+  {
+   "en": "Shenzhen",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    1
+   ]
+  },
+  {
+   "en": "Shenzhen Tech Supply",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    5
+   ]
+  },
+  {
+   "en": "Pearl Office Systems",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    5,
+    8
+   ]
+  },
+  {
+   "en": "Huaqiang Electronics",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    5,
+    8
+   ]
+  },
+  {
+   "en": "Bay Rubber Co",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    5
+   ]
+  },
+  {
+   "en": "light pink",
+   "class": "keep",
+   "kind": "css_visual",
+   "requests": [
+    1,
+    2,
+    7
+   ]
+  },
+  {
+   "en": "medium violet red",
+   "class": "keep",
+   "kind": "css_visual",
+   "requests": [
+    1,
+    7
+   ]
+  },
+  {
+   "en": "dark plum",
+   "class": "keep",
+   "kind": "css_visual",
+   "requests": [
+    7
+   ]
+  },
+  {
+   "en": "REQ-001",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    2,
+    5,
+    8
+   ]
+  },
+  {
+   "en": "REQ-002",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    2,
+    5,
+    10
+   ]
+  },
+  {
+   "en": "REQ-003",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    5
+   ]
+  },
+  {
+   "en": "EXP-001",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    3,
+    4,
+    7
+   ]
+  },
+  {
+   "en": "EXP-002",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    3
+   ]
+  },
+  {
+   "en": "EXP-003",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    8,
+    9,
+    10
+   ]
+  },
+  {
+   "en": "BID",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    5
+   ]
+  },
+  {
+   "en": "BID-001",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    5,
+    8
+   ]
+  },
+  {
+   "en": "BID-002",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    5
+   ]
+  },
+  {
+   "en": "BID-003",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    5
+   ]
+  },
+  {
+   "en": "DEC",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    10
+   ]
+  },
+  {
+   "en": "DEC-001",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    10
+   ]
+  },
+  {
+   "en": "DEC-002",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    10
+   ]
+  }
+ ]
+}

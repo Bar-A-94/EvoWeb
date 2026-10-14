@@ -1,0 +1,614 @@
+{
+  "index": 27,
+  "status": "success",
+  "model": "anthropic/claude-haiku-4-5-20251001",
+  "generator": "openhands",
+  "base_trajectory": {
+    "source": "none",
+    "messages": 0
+  },
+  "artifacts": {
+    "zip": null,
+    "run_json": null,
+    "generator": "openhands",
+    "screenshots": [
+      "/output/000027/screenshots/task000027_0.png",
+      "/output/000027/screenshots/task000027_1.png",
+      "/output/000027/screenshots/task000027_2.png",
+      "/output/000027/screenshots/task000027_3.png",
+      "/output/000027/screenshots/task000027_4.png",
+      "/output/000027/screenshots/task000027_5.png",
+      "/output/000027/screenshots/task000027_6.png"
+    ],
+    "output_dir": "/output/000027"
+  },
+  "ladder": {
+    "turns_expected": 10,
+    "turns_completed": 10,
+    "complete": true
+  },
+  "eval_model": "claude-sonnet-4-6",
+  "accuracy": 93.3,
+  "yes": 46,
+  "partial": 5,
+  "no": 1,
+  "total": 52,
+  "tasks": [
+    {
+      "task_idx": 0,
+      "task": "Navigate to the homepage of the health blog website and check for the presence of a search bar.",
+      "expected": "The homepage displays a functional search bar prominently, enabling users to input search queries.",
+      "verdict": "no"
+    },
+    {
+      "task_idx": 1,
+      "task": "Perform a search for a specific health topic using the search bar.",
+      "expected": "The search results page displays articles related to the inputted health topic, with titles and short descriptions that match the search query.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 2,
+      "task": "Access a specific article from the search results and verify the presence of a comment section.",
+      "expected": "The article page contains a comment section where users can read existing comments and write their own.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 3,
+      "task": "Post a comment on an article and check the comment's appearance in the comment section.",
+      "expected": "The posted comment appears in the comment section immediately after submission, displaying correctly with the user's input.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 4,
+      "task": "Browse the category section to view available health topics.",
+      "expected": "The categories are clearly listed, allowing the user to select and view articles associated with each category.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 5,
+      "task": "Follow a specific health topic or category from the category list.",
+      "expected": "The website confirms that the user is now following the selected topic, and it is added to a personal list or notification service.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 6,
+      "task": "Verify that the website uses 'misty rose' as the background color and 'firebrick' as the component color, as specified in the design requirements.",
+      "expected": "The website has a background color of 'misty rose' and components (such as buttons, cards, headers, etc.) are styled with the color 'firebrick', accurately reflecting the design instruction.",
+      "verdict": "yes"
+    }
+  ],
+  "turns": [
+    {
+      "turn": 1,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": false,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Navigate to the homepage of the health blog website and check for the presence of a search bar.",
+          "expected": "The homepage displays a functional search bar prominently, enabling users to input search queries.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Perform a search for a specific health topic using the search bar.",
+          "expected": "The search results page displays articles related to the inputted health topic, with titles and short descriptions that match the search query.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Access a specific article from the search results and verify the presence of a comment section.",
+          "expected": "The article page contains a comment section where users can read existing comments and write their own.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Post a comment on an article and check the comment's appearance in the comment section.",
+          "expected": "The posted comment appears in the comment section immediately after submission, displaying correctly with the user's input.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Browse the category section to view available health topics.",
+          "expected": "The categories are clearly listed, allowing the user to select and view articles associated with each category.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 5,
+          "task": "Follow a specific health topic or category from the category list.",
+          "expected": "The website confirms that the user is now following the selected topic, and it is added to a personal list or notification service.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 6,
+          "task": "Verify that the website uses 'misty rose' as the background color and 'firebrick' as the component color, as specified in the design requirements.",
+          "expected": "The website has a background color of 'misty rose' and components (such as buttons, cards, headers, etc.) are styled with the color 'firebrick', accurately reflecting the design instruction.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 6,
+      "partial": 0,
+      "no": 1,
+      "total": 7,
+      "accuracy": 85.7,
+      "cost": {
+        "generation_usd": 0.12004,
+        "model_calls": 14,
+        "input_tokens_total": 292652,
+        "output_tokens": 11523,
+        "judge_usd": 0.2866
+      }
+    },
+    {
+      "turn": 2,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the archive page, check the Nutrition category and switch on the reviewed-only toggle.",
+          "expected": "Exactly two articles remain — Understanding Gut Bacteria and Beginner's Guide to Meal Prep — and the counter reads 'Showing 2 of 8 articles'.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the archive page with no filters applied and look at the top of the list.",
+          "expected": "Sleep Debt: Myth or Real? sits above Understanding Gut Bacteria — both have 3,200 views, and the newer article wins the tie.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the archive page, type 5 into the maximum read time box.",
+          "expected": "Only the three articles of 5 minutes or less remain visible — Hydration Myths Debunked at exactly '5 min read', 10-Minute Morning Stretch Routine, and The Science of Cold Showers.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "From the archive, click the row for Understanding Gut Bacteria.",
+          "expected": "Its full article page opens and shows the Medically Reviewed tag naming Dr. Sam Wexler.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open any article and submit a comment that says 'Great tips, thanks!'.",
+          "expected": "The comment appears in the article's comment section immediately after posting.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 1,
+      "no": 0,
+      "total": 5,
+      "accuracy": 90.0,
+      "cost": {
+        "generation_usd": 0.286418,
+        "model_calls": 15,
+        "input_tokens_total": 944345,
+        "output_tokens": 22624,
+        "judge_usd": 0.2482
+      }
+    },
+    {
+      "turn": 3,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Take the quiz, picking the Nutrition-tagged option on questions 1 and 3, the Fitness-tagged option on questions 2 and 4, and the Sleep-tagged option on question 5.",
+          "expected": "The results card names Fitness as the wellness focus — the two-two tie with Nutrition breaks toward Fitness because it was picked more recently.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Start the quiz and answer question 1 with a Fitness-tagged option, then pause.",
+          "expected": "The running tally shows Fitness at 1 with the other topics at 0, and the progress indicator shows you are now on question 2 of 5 — all before the quiz is finished.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Answer question 1 with a Fitness-tagged option, click the back control, and change your answer to a Sleep-tagged option.",
+          "expected": "The tally now shows Sleep at 1 and Fitness back at 0 — the old pick is removed, not double-counted.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Finish the quiz picking a Fitness-tagged option every time, then look at the recommended articles on the results card.",
+          "expected": "The recommendations are Fitness articles listed most-viewed first — Strength Training After 50 on top — and each one shows an 'X min read' label plus its Medically Reviewed or Editorial tag.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the archive page, type 5 into the maximum read time box.",
+          "expected": "Only the three articles of 5 minutes or less remain visible — Hydration Myths Debunked at exactly '5 min read', 10-Minute Morning Stretch Routine, and The Science of Cold Showers.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.197391,
+        "model_calls": 9,
+        "input_tokens_total": 722964,
+        "output_tokens": 7402,
+        "judge_usd": 0.3038
+      }
+    },
+    {
+      "turn": 4,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Nutrition discussion board.",
+          "expected": "Exactly two threads show, with 'Best protein sources for vegetarians?' listed above 'Is intermittent fasting safe?' — both have 4 replies, and the newer May 2 thread wins the tie.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the Fitness board, open 'Knee pain after running', type a reply saying 'Try foam rolling' and post it, then go back to the board's thread list.",
+          "expected": "The reply appears in the thread and the thread's reply count in the board list now shows 2.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open the Mind discussion board.",
+          "expected": "Instead of a blank area, a friendly message says there's nothing here yet and nudges you to start the first thread.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Go to the Nutrition category page and click its link to the discussion board.",
+          "expected": "You land on the Nutrition board showing its two seeded threads.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the archive page, check the Nutrition category and switch on the reviewed-only toggle.",
+          "expected": "Exactly two articles remain — Understanding Gut Bacteria and Beginner's Guide to Meal Prep — and the counter reads 'Showing 2 of 8 articles'.",
+          "verdict": "partial"
+        }
+      ],
+      "yes": 4,
+      "partial": 1,
+      "no": 0,
+      "total": 5,
+      "accuracy": 90.0,
+      "cost": {
+        "generation_usd": 0.246556,
+        "model_calls": 16,
+        "input_tokens_total": 1527230,
+        "output_tokens": 12566,
+        "judge_usd": 0.2748
+      }
+    },
+    {
+      "turn": 5,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Type 'My knee hurts after every workout and my sleep is a mess' into the Ask the Community box.",
+          "expected": "The helper routes to the Fitness board — two keyword hits (knee, workout) beat Sleep's single hit even though 'sleep' comes last — and beneath the verdict it lists Fitness's one seeded thread, 'Knee pain after running'.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Type 'Does stress ruin sleep?' into the Ask the Community box.",
+          "expected": "The helper routes to the Mind board — the one-hit tie between Mind (stress) and Sleep (sleep) breaks toward stress because it appears first in the question — and since the Mind board has no threads yet, the duplicate-check list shows a friendly nothing-here message with a nudge rather than a blank space.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Slowly type 'How much protein do I need' into the Ask the Community box, watching after each keystroke.",
+          "expected": "The moment the word 'protein' is completed the helper flips to the Nutrition board and lists its two seeded threads — all without pressing Enter or clicking anything.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Type 'Is a short nap good for sleep debt?' into the Ask the Community box, click the post button, and submit the pre-filled thread.",
+          "expected": "You land on the Sleep board with the new-thread form already titled 'Is a short nap good for sleep debt?', and after submitting, the new thread sits at the top of the board above 'Can't fall asleep before 2am' — both are replyless, so the newer thread wins.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Take the quiz, picking the Nutrition-tagged option on questions 1 and 3, the Fitness-tagged option on questions 2 and 4, and the Sleep-tagged option on question 5.",
+          "expected": "The results card names Fitness as the wellness focus — the two-two tie with Nutrition breaks toward Fitness because it was picked more recently.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.293282,
+        "model_calls": 12,
+        "input_tokens_total": 1292983,
+        "output_tokens": 8517,
+        "judge_usd": 0.3679
+      }
+    },
+    {
+      "turn": 6,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Review Desk.",
+          "expected": "The queue holds exactly four articles — Sleep Debt: Myth or Real?, Managing Stress at Work, Hydration Myths Debunked, and The Science of Cold Showers — only the Editorial ones, not all eight.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "At the Review Desk, open Sleep Debt: Myth or Real?, tick both checklist items but leave the reviewer unpicked, and try to approve.",
+          "expected": "Approval is blocked (button disabled or a clear message) until a reviewer is chosen; the article stays in the queue tagged Editorial.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "At the Review Desk, open Managing Stress at Work and click approve, then return to the queue.",
+          "expected": "The queue now holds three articles with Managing Stress at Work gone, and its article page now shows Medically Reviewed with Dr. Sam Wexler.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "At the Review Desk, open Managing Stress at Work and click approve, then go to the archive and switch on the reviewed-only toggle.",
+          "expected": "Five articles now pass the reviewed-only filter, and Managing Stress at Work is among them.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the archive page with no filters applied and look at the top of the list.",
+          "expected": "Sleep Debt: Myth or Real? sits above Understanding Gut Bacteria — both have 3,200 views, and the newer article wins the tie.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.531596,
+        "model_calls": 19,
+        "input_tokens_total": 2664571,
+        "output_tokens": 19198,
+        "judge_usd": 0.4191
+      }
+    },
+    {
+      "turn": 7,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the digest composer and add every article it offers.",
+          "expected": "Exactly four articles are offered — Understanding Gut Bacteria, Beginner's Guide to Meal Prep, 10-Minute Morning Stretch Routine, and Strength Training After 50 — and with all four added the live summary reads 4 picks totaling '33 min read'.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the digest composer, add Understanding Gut Bacteria and 10-Minute Morning Stretch Routine, then remove Understanding Gut Bacteria.",
+          "expected": "The live summary first shows '13 min read' for the two picks, then drops to 1 pick at '4 min read' after the removal — no stale total.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the digest subscribe box, type sam@wellness and submit, then change it to sam@wellness.com and submit again.",
+          "expected": "The first attempt shows an inline error and no confirmation; the second shows a success confirmation.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 3,
+          "task": "At the Review Desk, open Managing Stress at Work and click approve, then open the digest composer.",
+          "expected": "The composer now offers five articles, with Managing Stress at Work newly available to pick.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the Fitness board, open 'Knee pain after running', type a reply saying 'Try foam rolling' and post it, then go back to the board's thread list.",
+          "expected": "The reply appears in the thread and the thread's reply count in the board list now shows 2.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 1,
+      "no": 0,
+      "total": 5,
+      "accuracy": 90.0,
+      "cost": {
+        "generation_usd": 0.371889,
+        "model_calls": 9,
+        "input_tokens_total": 1442382,
+        "output_tokens": 8027,
+        "judge_usd": 0.5479
+      }
+    },
+    {
+      "turn": 8,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the engagement dashboard and read the Trending This Week leaderboard.",
+          "expected": "The top three are Sleep Debt: Myth or Real? (533.3), Managing Stress at Work (392.9), then Understanding Gut Bacteria (355.6) — score order, not raw-view order.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the engagement dashboard, type 245 into the score cutoff box.",
+          "expected": "Exactly four articles are highlighted, including 10-Minute Morning Stretch Routine sitting right at 245.0, and the count of matches reads 4.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the engagement dashboard, find the Nutrition rollup.",
+          "expected": "Nutrition shows 5,260 total article views alongside its board activity of 2 threads and 8 replies.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the Fitness board, open 'Knee pain after running', post a reply saying 'Same here', then open the engagement dashboard and check the Fitness rollup.",
+          "expected": "The Fitness board activity now counts 2 replies, reflecting the reply you just posted.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "At the Review Desk, open Sleep Debt: Myth or Real?, tick both checklist items but leave the reviewer unpicked, and try to approve.",
+          "expected": "Approval is blocked (button disabled or a clear message) until a reviewer is chosen; the article stays in the queue tagged Editorial.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.484007,
+        "model_calls": 13,
+        "input_tokens_total": 1240316,
+        "output_tokens": 10137,
+        "judge_usd": 0.2901
+      }
+    },
+    {
+      "turn": 9,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open any article page and look at its comment submit button, then open a community board and look at the start-a-thread control.",
+          "expected": "Both are deep teal with white text — the same primary-action styling on both pages.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the archive and look at the cards for Understanding Gut Bacteria and Sleep Debt: Myth or Real?.",
+          "expected": "Understanding Gut Bacteria carries a green Medically Reviewed pill and Sleep Debt: Myth or Real? a gray Editorial pill, both on rounded cards with a soft shadow.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Visit the homepage, the archive, and the community landing page and look at each page's main heading and any visible dates.",
+          "expected": "All three headings are centered and the dates shown on those pages are in italics.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 3,
+          "task": "Finish the wellness quiz picking any option on each question and look at the results card.",
+          "expected": "The recommended articles on the card use the new green/gray pill badges, and any action button on the card is deep teal with white text.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the digest subscribe box, type sam@wellness and submit, then change it to sam@wellness.com and submit again.",
+          "expected": "The first attempt shows an inline error and no confirmation; the second shows a success confirmation.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 3,
+      "partial": 2,
+      "no": 0,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.327463,
+        "model_calls": 20,
+        "input_tokens_total": 1917196,
+        "output_tokens": 5473,
+        "judge_usd": 0.5595
+      }
+    },
+    {
+      "turn": 10,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the My Feed page fresh, before taking any quiz.",
+          "expected": "Exactly three articles show, in this order: Sleep Debt: Myth or Real? first, Understanding Gut Bacteria second (the 3,200-view tie breaks to the newer one), then Beginner's Guide to Meal Prep — Hydration Myths Debunked stays out because only Nutrition's top two make the feed.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the My Feed page, toggle the Sleep topic off.",
+          "expected": "Sleep Debt: Myth or Real? disappears, leaving just Nutrition's top two — Understanding Gut Bacteria and Beginner's Guide to Meal Prep — each still tagged as coming from a followed topic.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the My Feed page, toggle both Nutrition and Sleep off without having taken the quiz.",
+          "expected": "The feed shows a friendly nothing-here message with a nudge to act — not a blank area or a crash.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Take the wellness quiz picking a Nutrition-tagged option on every question, then open My Feed.",
+          "expected": "The feed still shows exactly three articles — no duplicates even though Nutrition is both followed and the quiz focus — and the two Nutrition articles now carry both the Following and Quiz-pick tags.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Type 'My knee hurts after every workout and my sleep is a mess' into the Ask the Community box.",
+          "expected": "The helper routes to the Fitness board — two keyword hits (knee, workout) beat Sleep's single hit even though 'sleep' comes last — and beneath the verdict it lists Fitness's one seeded thread, 'Knee pain after running'.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.336389,
+        "model_calls": 14,
+        "input_tokens_total": 1547636,
+        "output_tokens": 9697,
+        "judge_usd": 0.2554
+      }
+    }
+  ]
+}

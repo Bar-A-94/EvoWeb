@@ -1,0 +1,1143 @@
+{
+ "anchors": [
+  {
+   "en": "data visualization",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1
+   ],
+   "translations": {
+    "zh": "数据可视化",
+    "he": "הדמיית נתונים",
+    "hi": "डेटा विज़ुअलाइज़ेशन",
+    "de": "Datenvisualisierung",
+    "fr": "Visualisation des données"
+   }
+  },
+  {
+   "en": "match prediction",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1
+   ],
+   "translations": {
+    "zh": "比赛预测",
+    "he": "חיזוי משחקים",
+    "hi": "मैच भविष्यवाणी",
+    "de": "Spielprognose",
+    "fr": "Prédiction de matchs"
+   }
+  },
+  {
+   "en": "search",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1
+   ],
+   "translations": {
+    "zh": "搜索",
+    "he": "חיפוש",
+    "hi": "खोज",
+    "de": "Suche",
+    "fr": "Recherche"
+   }
+  },
+  {
+   "en": "team rankings",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1,
+    2,
+    10
+   ],
+   "translations": {
+    "zh": "球队排名",
+    "he": "דירוג קבוצות",
+    "hi": "टीम रैंकिंग",
+    "de": "Teamrangliste",
+    "fr": "Classement des équipes"
+   }
+  },
+  {
+   "en": "player performance",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1
+   ],
+   "translations": {
+    "zh": "球员表现",
+    "he": "ביצועי שחקנים",
+    "hi": "खिलाड़ी प्रदर्शन",
+    "de": "Spielerleistung",
+    "fr": "Performance des joueurs"
+   }
+  },
+  {
+   "en": "betting recommendations",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1,
+    4
+   ],
+   "translations": {
+    "zh": "投注推荐",
+    "he": "המלצות הימורים",
+    "hi": "सट्टेबाज़ी सिफ़ारिशें",
+    "de": "Wettempfehlungen",
+    "fr": "Recommandations de paris"
+   }
+  },
+  {
+   "en": "odds board",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3,
+    4,
+    5,
+    7,
+    10
+   ],
+   "translations": {
+    "zh": "赔率板",
+    "he": "לוח יחסי הימור",
+    "hi": "ऑड्स बोर्ड",
+    "de": "Quotenboard",
+    "fr": "Tableau des cotes"
+   }
+  },
+  {
+   "en": "implied win probability",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    4,
+    5
+   ],
+   "translations": {
+    "zh": "隐含胜率",
+    "he": "הסתברות ניצחון גלומה",
+    "hi": "निहित जीत संभावना",
+    "de": "implizite Siegwahrscheinlichkeit",
+    "fr": "probabilité de victoire implicite"
+   }
+  },
+  {
+   "en": "best price",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9
+   ],
+   "translations": {
+    "zh": "最佳赔率",
+    "he": "המחיר הטוב ביותר",
+    "hi": "सर्वश्रेष्ठ भाव",
+    "de": "Bestpreis",
+    "fr": "meilleur prix"
+   }
+  },
+  {
+   "en": "Friday",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    7
+   ],
+   "translations": {
+    "zh": "周五",
+    "he": "שישי",
+    "hi": "शुक्रवार",
+    "de": "Freitag",
+    "fr": "vendredi"
+   }
+  },
+  {
+   "en": "Sunday",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    7
+   ],
+   "translations": {
+    "zh": "周日",
+    "he": "ראשון",
+    "hi": "रविवार",
+    "de": "Sonntag",
+    "fr": "dimanche"
+   }
+  },
+  {
+   "en": "bet slip",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    3,
+    4,
+    5
+   ],
+   "translations": {
+    "zh": "投注单",
+    "he": "טופס הימור",
+    "hi": "बेट स्लिप",
+    "de": "Wettschein",
+    "fr": "coupon de pari"
+   }
+  },
+  {
+   "en": "stake",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    3,
+    5,
+    9
+   ],
+   "translations": {
+    "zh": "投注金额",
+    "he": "סכום הימור",
+    "hi": "दांव राशि",
+    "de": "Einsatz",
+    "fr": "mise"
+   }
+  },
+  {
+   "en": "add-to-slip",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    3,
+    5,
+    10
+   ],
+   "translations": {
+    "zh": "加入投注单",
+    "he": "הוספה לטופס",
+    "hi": "स्लिप में जोड़ें",
+    "de": "Zum Wettschein hinzufügen",
+    "fr": "Ajouter au coupon"
+   }
+  },
+  {
+   "en": "payout",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    3,
+    5
+   ],
+   "translations": {
+    "zh": "派彩",
+    "he": "תשלום",
+    "hi": "भुगतान",
+    "de": "Auszahlung",
+    "fr": "gain"
+   }
+  },
+  {
+   "en": "profit",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    3,
+    9,
+    10
+   ],
+   "translations": {
+    "zh": "盈利",
+    "he": "רווח",
+    "hi": "लाभ",
+    "de": "Gewinn",
+    "fr": "bénéfice"
+   }
+  },
+  {
+   "en": "combined odds",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    3,
+    4
+   ],
+   "translations": {
+    "zh": "综合赔率",
+    "he": "יחס משולב",
+    "hi": "संयुक्त ऑड्स",
+    "de": "Gesamtquote",
+    "fr": "cote combinée"
+   }
+  },
+  {
+   "en": "Best Bets",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    4,
+    6,
+    8,
+    10
+   ],
+   "translations": {
+    "zh": "最佳投注",
+    "he": "ההימורים הטובים ביותר",
+    "hi": "सर्वश्रेष्ठ दांव",
+    "de": "Beste Wetten",
+    "fr": "Meilleurs paris"
+   }
+  },
+  {
+   "en": "minimum-edge",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    4
+   ],
+   "translations": {
+    "zh": "最小优势",
+    "he": "יתרון מינימלי",
+    "hi": "न्यूनतम बढ़त",
+    "de": "Mindestvorteil",
+    "fr": "avantage minimum"
+   }
+  },
+  {
+   "en": "edge",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    4,
+    6,
+    8,
+    10
+   ],
+   "translations": {
+    "zh": "优势",
+    "he": "יתרון",
+    "hi": "बढ़त",
+    "de": "Vorteil",
+    "fr": "avantage"
+   }
+  },
+  {
+   "en": "target edge",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    8
+   ],
+   "translations": {
+    "zh": "目标优势",
+    "he": "יתרון יעד",
+    "hi": "लक्ष्य बढ़त",
+    "de": "Zielvorteil",
+    "fr": "avantage cible"
+   }
+  },
+  {
+   "en": "My Tickets",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5,
+    7,
+    9,
+    10
+   ],
+   "translations": {
+    "zh": "我的注单",
+    "he": "הכרטיסים שלי",
+    "hi": "मेरे टिकट",
+    "de": "Meine Tickets",
+    "fr": "Mes tickets"
+   }
+  },
+  {
+   "en": "bankroll",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5,
+    7
+   ],
+   "translations": {
+    "zh": "本金",
+    "he": "קופה",
+    "hi": "बैंकरोल",
+    "de": "Bankroll",
+    "fr": "bankroll"
+   }
+  },
+  {
+   "en": "Won",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5,
+    7,
+    9
+   ],
+   "translations": {
+    "zh": "已赢",
+    "he": "זכה",
+    "hi": "जीता",
+    "de": "Gewonnen",
+    "fr": "Gagné"
+   }
+  },
+  {
+   "en": "Lost",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5,
+    9
+   ],
+   "translations": {
+    "zh": "已输",
+    "he": "הפסיד",
+    "hi": "हारा",
+    "de": "Verloren",
+    "fr": "Perdu"
+   }
+  },
+  {
+   "en": "pending",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5,
+    9,
+    10
+   ],
+   "translations": {
+    "zh": "待定",
+    "he": "ממתין",
+    "hi": "लंबित",
+    "de": "ausstehend",
+    "fr": "en attente"
+   }
+  },
+  {
+   "en": "place-ticket",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5
+   ],
+   "translations": {
+    "zh": "提交注单",
+    "he": "הנחת כרטיס",
+    "hi": "टिकट लगाएँ",
+    "de": "Ticket platzieren",
+    "fr": "Placer le ticket"
+   }
+  },
+  {
+   "en": "review screen",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5
+   ],
+   "translations": {
+    "zh": "复核页面",
+    "he": "מסך סקירה",
+    "hi": "समीक्षा स्क्रीन",
+    "de": "Prüfungsansicht",
+    "fr": "écran de vérification"
+   }
+  },
+  {
+   "en": "adjustments panel",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    6,
+    8
+   ],
+   "translations": {
+    "zh": "调整面板",
+    "he": "לוח התאמות",
+    "hi": "समायोजन पैनल",
+    "de": "Anpassungspanel",
+    "fr": "panneau d'ajustements"
+   }
+  },
+  {
+   "en": "star-player-sidelined",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    6,
+    8
+   ],
+   "translations": {
+    "zh": "主力球员缺阵",
+    "he": "שחקן מפתח נעדר",
+    "hi": "स्टार खिलाड़ी बाहर",
+    "de": "Starspieler fällt aus",
+    "fr": "joueur vedette absent"
+   }
+  },
+  {
+   "en": "back-to-back",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    6,
+    7,
+    8
+   ],
+   "translations": {
+    "zh": "背靠背",
+    "he": "משחקים רצופים",
+    "hi": "बैक-टू-बैक",
+    "de": "Back-to-Back",
+    "fr": "back-to-back"
+   }
+  },
+  {
+   "en": "reset",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    6
+   ],
+   "translations": {
+    "zh": "重置",
+    "he": "איפוס",
+    "hi": "रीसेट",
+    "de": "Zurücksetzen",
+    "fr": "Réinitialiser"
+   }
+  },
+  {
+   "en": "adj",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    6,
+    8
+   ],
+   "translations": {
+    "zh": "调",
+    "he": "מות'",
+    "hi": "समा.",
+    "de": "ang.",
+    "fr": "aj."
+   }
+  },
+  {
+   "en": "win-probability box",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    6
+   ],
+   "translations": {
+    "zh": "胜率",
+    "he": "הסתברות ניצחון",
+    "hi": "जीत संभावना",
+    "de": "Siegwahrscheinlichkeit",
+    "fr": "probabilité de victoire"
+   }
+  },
+  {
+   "en": "research center",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    7,
+    10
+   ],
+   "translations": {
+    "zh": "对阵研究中心",
+    "he": "מרכז מחקר",
+    "hi": "रिसर्च सेंटर",
+    "de": "Recherchezentrum",
+    "fr": "centre de recherche"
+   }
+  },
+  {
+   "en": "research link",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    7
+   ],
+   "translations": {
+    "zh": "研究",
+    "he": "מחקר",
+    "hi": "रिसर्च",
+    "de": "Recherche",
+    "fr": "Recherche"
+   }
+  },
+  {
+   "en": "straight-up",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    7
+   ],
+   "translations": {
+    "zh": "胜负",
+    "he": "ניצחון ישיר",
+    "hi": "सीधा",
+    "de": "Direkt",
+    "fr": "Direct"
+   }
+  },
+  {
+   "en": "against-the-spread",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    7
+   ],
+   "translations": {
+    "zh": "让分战绩",
+    "he": "מול הפער",
+    "hi": "स्प्रेड के विरुद्ध",
+    "de": "Gegen das Handicap",
+    "fr": "contre le handicap"
+   }
+  },
+  {
+   "en": "over/under",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    7
+   ],
+   "translations": {
+    "zh": "大小分",
+    "he": "מעל/מתחת",
+    "hi": "ओवर/अंडर",
+    "de": "Über/Unter",
+    "fr": "Plus/Moins"
+   }
+  },
+  {
+   "en": "push",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    7
+   ],
+   "translations": {
+    "zh": "走盘",
+    "he": "תיקו",
+    "hi": "पुश",
+    "de": "Unentschieden",
+    "fr": "Égalité"
+   }
+  },
+  {
+   "en": "spread",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    7
+   ],
+   "translations": {
+    "zh": "让分",
+    "he": "פער",
+    "hi": "स्प्रेड",
+    "de": "Handicap",
+    "fr": "handicap"
+   }
+  },
+  {
+   "en": "no-meetings-on-file",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    7
+   ],
+   "translations": {
+    "zh": "暂无交手记录",
+    "he": "אין מפגשים בתיק",
+    "hi": "फ़ाइल में मुकाबले दर्ज नहीं हैं",
+    "de": "Keine Duelle erfasst",
+    "fr": "Pas de confrontations enregistrées"
+   }
+  },
+  {
+   "en": "summary strip",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    7
+   ],
+   "translations": {
+    "zh": "汇总栏",
+    "he": "רצועת סיכום",
+    "hi": "सारांश पट्टी",
+    "de": "Zusammenfassung",
+    "fr": "Résumé"
+   }
+  },
+  {
+   "en": "meetings",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    7
+   ],
+   "translations": {
+    "zh": "交手记录",
+    "he": "מפגשים",
+    "hi": "मुकाबले",
+    "de": "Duelle",
+    "fr": "Confrontations"
+   }
+  },
+  {
+   "en": "Alerts",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    8
+   ],
+   "translations": {
+    "zh": "提醒",
+    "he": "התראות",
+    "hi": "अलर्ट",
+    "de": "Warnungen",
+    "fr": "Alertes"
+   }
+  },
+  {
+   "en": "watch",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    8
+   ],
+   "translations": {
+    "zh": "关注",
+    "he": "מעקב",
+    "hi": "निगरानी",
+    "de": "Beobachten",
+    "fr": "Surveiller"
+   }
+  },
+  {
+   "en": "watched",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    8
+   ],
+   "translations": {
+    "zh": "已关注",
+    "he": "במעקב",
+    "hi": "निगरानी में",
+    "de": "Beobachtet",
+    "fr": "Surveillé"
+   }
+  },
+  {
+   "en": "fired",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    8
+   ],
+   "translations": {
+    "zh": "已触发",
+    "he": "הופעלה",
+    "hi": "सक्रिय",
+    "de": "Ausgelöst",
+    "fr": "Déclenchée"
+   }
+  },
+  {
+   "en": "armed",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    8
+   ],
+   "translations": {
+    "zh": "待触发",
+    "he": "דרוכה",
+    "hi": "तैयार",
+    "de": "Scharf",
+    "fr": "Armée"
+   }
+  },
+  {
+   "en": "Performance",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    9,
+    10
+   ],
+   "translations": {
+    "zh": "业绩",
+    "he": "ביצועים",
+    "hi": "प्रदर्शन",
+    "de": "Leistung",
+    "fr": "Performance"
+   }
+  },
+  {
+   "en": "net profit",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    9,
+    10
+   ],
+   "translations": {
+    "zh": "净盈利",
+    "he": "רווח נטו",
+    "hi": "शुद्ध लाभ",
+    "de": "Nettogewinn",
+    "fr": "bénéfice net"
+   }
+  },
+  {
+   "en": "ROI",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    9
+   ],
+   "translations": {
+    "zh": "投资回报率",
+    "he": "ROI",
+    "hi": "ROI",
+    "de": "ROI",
+    "fr": "ROI"
+   }
+  },
+  {
+   "en": "singles",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    9
+   ],
+   "translations": {
+    "zh": "单注",
+    "he": "בודדים",
+    "hi": "सिंगल",
+    "de": "Einzelwetten",
+    "fr": "paris simples"
+   }
+  },
+  {
+   "en": "parlays",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    9
+   ],
+   "translations": {
+    "zh": "串关",
+    "he": "משולבים",
+    "hi": "पार्ले",
+    "de": "Kombiwetten",
+    "fr": "paris combinés"
+   }
+  },
+  {
+   "en": "total staked",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    9
+   ],
+   "translations": {
+    "zh": "总投注额",
+    "he": "סך ההימורים",
+    "hi": "कुल दांव",
+    "de": "Gesamteinsatz",
+    "fr": "total misé"
+   }
+  },
+  {
+   "en": "settled-ticket ledger",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    9,
+    10
+   ],
+   "translations": {
+    "zh": "已结算注单明细",
+    "he": "יומן כרטיסים שנסגרו",
+    "hi": "निपटाए गए टिकट बहीखाता",
+    "de": "Journal der abgerechneten Tickets",
+    "fr": "registre des tickets réglés"
+   }
+  },
+  {
+   "en": "record",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    7,
+    9
+   ],
+   "translations": {
+    "zh": "战绩",
+    "he": "מאזן",
+    "hi": "रिकॉर्ड",
+    "de": "Bilanz",
+    "fr": "bilan"
+   }
+  },
+  {
+   "en": "Celtics",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    3,
+    4,
+    5,
+    7,
+    9
+   ]
+  },
+  {
+   "en": "Knicks",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    9
+   ]
+  },
+  {
+   "en": "Lakers",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    3,
+    5,
+    6,
+    8
+   ]
+  },
+  {
+   "en": "Bulls",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10
+   ]
+  },
+  {
+   "en": "Suns",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  },
+  {
+   "en": "Heat",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    8
+   ]
+  },
+  {
+   "en": "Nuggets",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    3
+   ]
+  },
+  {
+   "en": "Raptors",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    3
+   ]
+  },
+  {
+   "en": "Warriors",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    7,
+    10
+   ]
+  },
+  {
+   "en": "Mavericks",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  {
+   "en": "Bucks",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    3,
+    5,
+    6
+   ]
+  },
+  {
+   "en": "Hornets",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9
+   ]
+  },
+  {
+   "en": "BetNova",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    3,
+    4,
+    5,
+    8,
+    10
+   ]
+  },
+  {
+   "en": "HoopLine",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    3,
+    5,
+    7,
+    10
+   ]
+  },
+  {
+   "en": "CourtSide",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    3,
+    4,
+    7,
+    10
+   ]
+  },
+  {
+   "en": "ghost white",
+   "class": "keep",
+   "kind": "css_visual",
+   "requests": [
+    1,
+    10
+   ]
+  },
+  {
+   "en": "slate gray",
+   "class": "keep",
+   "kind": "css_visual",
+   "requests": [
+    1
+   ]
+  },
+  {
+   "en": "emerald",
+   "class": "keep",
+   "kind": "css_visual",
+   "requests": [
+    10
+   ]
+  },
+  {
+   "en": "@",
+   "class": "keep",
+   "kind": "value_format",
+   "requests": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    10
+   ]
+  },
+  {
+   "en": "NaN",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    3
+   ]
+  }
+ ]
+}

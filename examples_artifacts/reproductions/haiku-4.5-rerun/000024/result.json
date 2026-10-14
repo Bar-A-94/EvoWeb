@@ -1,0 +1,629 @@
+{
+  "index": 24,
+  "status": "success",
+  "model": "anthropic/claude-haiku-4-5-20251001",
+  "generator": "openhands",
+  "base_trajectory": {
+    "source": "none",
+    "messages": 0
+  },
+  "artifacts": {
+    "zip": null,
+    "run_json": null,
+    "generator": "openhands",
+    "screenshots": [
+      "/output/000024/screenshots/task000024_0.png",
+      "/output/000024/screenshots/task000024_1.png",
+      "/output/000024/screenshots/task000024_2.png",
+      "/output/000024/screenshots/task000024_3.png",
+      "/output/000024/screenshots/task000024_4.png",
+      "/output/000024/screenshots/task000024_5.png"
+    ],
+    "output_dir": "/output/000024"
+  },
+  "ladder": {
+    "turns_expected": 10,
+    "turns_completed": 10,
+    "complete": true
+  },
+  "eval_model": "claude-sonnet-4-6",
+  "accuracy": 73.5,
+  "yes": 33,
+  "partial": 9,
+  "no": 9,
+  "total": 51,
+  "tasks": [
+    {
+      "task_idx": 0,
+      "task": "Assess the personality assessment functionality by completing the full assessment.",
+      "expected": "The system should display an assessment summary or results, and these results should be saved to the user’s profile.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 1,
+      "task": "Examine the profile creation feature by updating the user profile information.",
+      "expected": "Updated profile details should be saved correctly and displayed on the user profile page.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 2,
+      "task": "Check the coaching and mentorship matching feature by searching for available coaches.",
+      "expected": "The system should list suitable coaches based on user preferences and assessment results.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 3,
+      "task": "Test scheduling a new coaching session with a selected coach.",
+      "expected": "The session should be added to the user’s and coach’s calendars, and both parties should receive a confirmation notification.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 4,
+      "task": "Evaluate goal-setting and progress tracking by creating and updating a personal goal.",
+      "expected": "The goal should be saved successfully, and progress updates should reflect accurately in the system.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 5,
+      "task": "Verify that the website uses 'beige' as the background color and 'saddle brown' as the component color, as specified in the design requirements.",
+      "expected": "The website has a background color of 'beige' and components (such as buttons, cards, headers, etc.) are styled with the color 'saddle brown', accurately reflecting the design instruction.",
+      "verdict": "yes"
+    }
+  ],
+  "turns": [
+    {
+      "turn": 1,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": false,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Assess the personality assessment functionality by completing the full assessment.",
+          "expected": "The system should display an assessment summary or results, and these results should be saved to the user’s profile.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 1,
+          "task": "Examine the profile creation feature by updating the user profile information.",
+          "expected": "Updated profile details should be saved correctly and displayed on the user profile page.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Check the coaching and mentorship matching feature by searching for available coaches.",
+          "expected": "The system should list suitable coaches based on user preferences and assessment results.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 3,
+          "task": "Test scheduling a new coaching session with a selected coach.",
+          "expected": "The session should be added to the user’s and coach’s calendars, and both parties should receive a confirmation notification.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "Evaluate goal-setting and progress tracking by creating and updating a personal goal.",
+          "expected": "The goal should be saved successfully, and progress updates should reflect accurately in the system.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 5,
+          "task": "Verify that the website uses 'beige' as the background color and 'saddle brown' as the component color, as specified in the design requirements.",
+          "expected": "The website has a background color of 'beige' and components (such as buttons, cards, headers, etc.) are styled with the color 'saddle brown', accurately reflecting the design instruction.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 3,
+      "partial": 3,
+      "no": 0,
+      "total": 6,
+      "accuracy": 75.0,
+      "cost": {
+        "generation_usd": 0.16975,
+        "model_calls": 19,
+        "input_tokens_total": 438612,
+        "output_tokens": 17129,
+        "judge_usd": 0.7356
+      }
+    },
+    {
+      "turn": 2,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "runtime": {
+        "checks_affected": 1,
+        "errors": [
+          "http://localhost:5200/node_modules/.vite/deps/chunk-QXLG2TGQ.js?v=ff728795 9173:14 Uncaught ReferenceError: firstName is not defined",
+          "http://localhost:5200/src/pages/Coaches.jsx 125:36 Uncaught ReferenceError: firstName is not defined"
+        ]
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the coach screener, check the Career and Wellness specialty boxes and type 120 into the max price field.",
+          "expected": "Exactly four coaches remain, listed cheapest-first as Derek Okafor, Tom Alvarez, Hana Suzuki, Maya Chen (each price tie A-to-Z by first name); Sofia Ricci, who has Career but costs $180, is filtered out.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Check only the Executive specialty box and look at the result list and the 'Showing X of 7 coaches' line.",
+          "expected": "Only Priya Nair and Sofia Ricci are listed, Priya first ($150 before $180), and the counter line agrees with the two visible cards.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "With no specialty boxes checked, type 50 into the max price field, then clear the field.",
+          "expected": "At 50 no coaches match and a friendly empty state shows instead of cards or a crash; clearing the field brings all seven coaches back.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 3,
+          "task": "From the screener results, click Maya Chen's card.",
+          "expected": "Her full profile opens with her details — rate shown as $120 per session — and the usual profile actions like scheduling a session are still available.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the goal tracking area and add a new goal named 'Improve delegation'.",
+          "expected": "The new goal appears in the goal list right after being added.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 3,
+      "partial": 1,
+      "no": 1,
+      "total": 5,
+      "accuracy": 70.0,
+      "cost": {
+        "generation_usd": 0.103637,
+        "model_calls": 4,
+        "input_tokens_total": 169825,
+        "output_tokens": 6590,
+        "judge_usd": 0.5565
+      }
+    },
+    {
+      "turn": 3,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the cost estimator on Derek Okafor's profile and type 8 into the sessions field.",
+          "expected": "The 15% tier applies: total $646.00, savings $114.00, and an effective rate of $80.75 per session — all shown without pressing any calculate button.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "In Derek Okafor's estimator, type 3 into the sessions field, then change it to 4.",
+          "expected": "At 3 the total is $285.00 with no discount; at 4 it becomes $342.00 with the 10% tier shown — the figures update as the number changes.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Type 0 into the sessions field of Derek Okafor's estimator.",
+          "expected": "No totals are shown — a friendly validation note appears instead, with no NaN, crash, or bogus $0.00 breakdown.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "On the screener, check only the Mindfulness specialty, then open the cost estimator for the one coach that remains.",
+          "expected": "Tom Alvarez is the only coach shown, and his estimator is based on his $95 per session rate (typing 1 gives a $95.00 total).",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the coach screener, check the Career and Wellness specialty boxes and type 120 into the max price field.",
+          "expected": "Exactly four coaches remain, listed cheapest-first as Derek Okafor, Tom Alvarez, Hana Suzuki, Maya Chen (each price tie A-to-Z by first name); Sofia Ricci, who has Career but costs $180, is filtered out.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.104167,
+        "model_calls": 9,
+        "input_tokens_total": 466976,
+        "output_tokens": 6643,
+        "judge_usd": 0.2973
+      }
+    },
+    {
+      "turn": 4,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "runtime": {
+        "checks_affected": 2,
+        "errors": [
+          "http://localhost:5200/node_modules/.vite/deps/chunk-QXLG2TGQ.js?v=ff728795 9173:14 Uncaught ReferenceError: firstName is not defined",
+          "http://localhost:5200/src/pages/Coaches.jsx 126:36 Uncaught ReferenceError: firstName is not defined"
+        ]
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open Sofia Ricci's profile, start a free intro call request, pick a time slot, and click send with the message box empty; then type 'Excited to explore executive coaching' and send again.",
+          "expected": "The empty attempt is blocked with a validation message and nothing is created; the second attempt goes through and shows up as Pending under My requests.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the Coach Inbox screen for intro-call requests.",
+          "expected": "Exactly one request is waiting: a Pending request to Priya Nair with the message 'Hoping to prep for a VP-level move this fall.'",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the Coach Inbox, click Decline on the Priya Nair request, then back out of the confirmation instead of confirming.",
+          "expected": "A confirmation prompt appears before anything changes; after backing out, the request still shows Pending in both the Coach Inbox and My requests.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 3,
+          "task": "On the screener, check only the Resume specialty, open the single coach that matches, and send an intro call request with the message 'Quick resume review please'.",
+          "expected": "Ben Whitaker is the only coach that matches, and the new request appears as Pending in both My requests and the Coach Inbox.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the cost estimator on Derek Okafor's profile and type 8 into the sessions field.",
+          "expected": "The 15% tier applies: total $646.00, savings $114.00, and an effective rate of $80.75 per session — all shown without pressing any calculate button.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 2,
+      "partial": 2,
+      "no": 1,
+      "total": 5,
+      "accuracy": 60.0,
+      "cost": {
+        "generation_usd": 0.159493,
+        "model_calls": 14,
+        "input_tokens_total": 861996,
+        "output_tokens": 9622,
+        "judge_usd": 0.4552
+      }
+    },
+    {
+      "turn": 5,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the screener, switch the sort to rating, highest first, with no filters applied.",
+          "expected": "The order reads Priya Nair 4.8, Maya Chen 4.7, Tom Alvarez 4.7, Sofia Ricci 4.5, Hana Suzuki 4.5, Derek Okafor 4.0, then Ben Whitaker with no rating — Sofia sits above Hana because her 4.5 comes from four reviews versus Hana's two, and Maya sits above Tom on the first-name tiebreak.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Look at Maya Chen's and Ben Whitaker's coach cards.",
+          "expected": "Maya's average shows 4.7 (not 4.6 or 4.67); Ben's card says 'No reviews yet' or similar wording rather than 0, 0.0, or a blank/NaN.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open the upcoming Aug 5 session with Derek Okafor and look for a way to rate it.",
+          "expected": "No rating can be submitted on an upcoming session — the star input is absent or disabled until the session is completed.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "On the screener, check the Leadership specialty and type 4.5 into the minimum rating box, then change the minimum to 4.6.",
+          "expected": "At 4.5 all three Leadership coaches remain — Maya Chen, Hana Suzuki, Priya Nair (4.5 counts as meeting a 4.5 minimum); at 4.6 Hana drops out, leaving Maya and Priya.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Coach Inbox screen for intro-call requests.",
+          "expected": "Exactly one request is waiting: a Pending request to Priya Nair with the message 'Hoping to prep for a VP-level move this fall.'",
+          "verdict": "no"
+        }
+      ],
+      "yes": 4,
+      "partial": 0,
+      "no": 1,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.311792,
+        "model_calls": 19,
+        "input_tokens_total": 1505348,
+        "output_tokens": 13080,
+        "judge_usd": 0.2733
+      }
+    },
+    {
+      "turn": 6,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "runtime": {
+        "checks_affected": 1,
+        "errors": [
+          "http://localhost:5200/node_modules/.vite/deps/chunk-QXLG2TGQ.js?v=ff728795 9173:14 Uncaught ReferenceError: firstName is not defined",
+          "http://localhost:5200/src/pages/Coaches.jsx 151:36 Uncaught ReferenceError: firstName is not defined"
+        ]
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the session planner, set the start date to Jul 22, pick the every-two-weeks rhythm, and type 4 for the number of sessions.",
+          "expected": "Four dates appear — Jul 22, Aug 5, Aug 19, Sep 2 — with the wraps-up line reading Sep 2, and the Aug 5 row flagged as clashing with the Derek Okafor session already on the calendar.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 1,
+          "task": "With Jul 22, every two weeks and 4 sessions still set, change the session count from 4 to 5.",
+          "expected": "A fifth row for Sep 16 appears the moment the digit changes — no button press — and the wraps-up line moves from Sep 2 to Sep 16.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Type 2.5 into the session count field of the planner.",
+          "expected": "The date list gives way to a gentle validation note — no crash, no NaN, and no half-session schedule rendered.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Schedule a new session with Tom Alvarez for Aug 19 from his profile like usual, then return to the planner with Jul 22, every two weeks and 4 sessions set.",
+          "expected": "The Aug 19 row now carries a clash flag naming the new Tom Alvarez session, alongside the existing Aug 5 Derek Okafor flag — the planner reads the live calendar, not a stale snapshot.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "With no specialty boxes checked, type 50 into the max price field, then clear the field.",
+          "expected": "At 50 no coaches match and a friendly empty state shows instead of cards or a crash; clearing the field brings all seven coaches back.",
+          "verdict": "partial"
+        }
+      ],
+      "yes": 2,
+      "partial": 2,
+      "no": 1,
+      "total": 5,
+      "accuracy": 60.0,
+      "cost": {
+        "generation_usd": 0.182784,
+        "model_calls": 6,
+        "input_tokens_total": 558109,
+        "output_tokens": 4918,
+        "judge_usd": 0.5994
+      }
+    },
+    {
+      "turn": 7,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open My coaching hub and read the upcoming-sessions tile.",
+          "expected": "The sessions are in date order — Maya Chen Jul 30 first, then Derek Okafor Aug 5, then Priya Nair Aug 14 — not in the order they were booked or mentioned.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the hub's awaiting-rating tile, rate the Ben Whitaker session from Mar 12 with 4 stars, then find Ben's card on the screener.",
+          "expected": "The tile immediately shrinks to just the Sofia Ricci session (its count matching what's visible), and Ben's card now shows a 4.0 average instead of 'No reviews yet'.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Look at the intro-call tile on the hub.",
+          "expected": "The pending Priya Nair request is shown there with an accept action available directly on the tile.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Accept the Priya Nair request from the hub tile, then open the Coach Inbox and My requests.",
+          "expected": "The request leaves the pending tile, and both the Coach Inbox and My requests now show it as Accepted — the hub and the request screens agree.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the screener, switch the sort to rating, highest first, with no filters applied.",
+          "expected": "The order reads Priya Nair 4.8, Maya Chen 4.7, Tom Alvarez 4.7, Sofia Ricci 4.5, Hana Suzuki 4.5, Derek Okafor 4.0, then Ben Whitaker with no rating — Sofia sits above Hana because her 4.5 comes from four reviews versus Hana's two, and Maya sits above Tom on the first-name tiebreak.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.14172,
+        "model_calls": 8,
+        "input_tokens_total": 813008,
+        "output_tokens": 8236,
+        "judge_usd": 0.3208
+      }
+    },
+    {
+      "turn": 8,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "runtime": {
+        "checks_affected": 4,
+        "errors": [
+          "http://localhost:5200/node_modules/.vite/deps/chunk-QXLG2TGQ.js?v=ff728795 9173:14 Uncaught ReferenceError: firstName is not defined",
+          "http://localhost:5200/src/pages/Coaches.jsx 151:36 Uncaught ReferenceError: firstName is not defined"
+        ]
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open Maya Chen's engagement journal.",
+          "expected": "Three entries appear oldest first: Feb 3 (5 stars, 'Set a 90-day leadership plan'), then Mar 10 (4 stars, 'Practiced difficult feedback conversation'), then Apr 21 (5 stars, a dash where the note would be) — Feb 3 on top even though Mar 10 was mentioned first.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "In Maya Chen's journal, look at the Copy summary block beneath the timeline.",
+          "expected": "A plain-text rendering of the same three entries appears on screen, in the same oldest-first order, including the Apr 21 entry with its dash — nothing skipped.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open the Apr 21 session with Maya Chen, type 'Wrapped up quarterly review prep' into its notes box, save, then return to her journal.",
+          "expected": "The Apr 21 entry now shows that note in place of the dash, still third in the timeline, and the Copy summary text reflects it too.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Open Sofia Ricci's engagement journal and find her Apr 2 session.",
+          "expected": "The Apr 2 entry appears with a dash where its stars would be — it was never rated — and the journal renders without a crash or a fake 0 rating.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "In Derek Okafor's estimator, type 3 into the sessions field, then change it to 4.",
+          "expected": "At 3 the total is $285.00 with no discount; at 4 it becomes $342.00 with the 10% tier shown — the figures update as the number changes.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 1,
+      "partial": 0,
+      "no": 4,
+      "total": 5,
+      "accuracy": 20.0,
+      "cost": {
+        "generation_usd": 0.18463,
+        "model_calls": 9,
+        "input_tokens_total": 1038497,
+        "output_tokens": 10192,
+        "judge_usd": 0.6792
+      }
+    },
+    {
+      "turn": 9,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the goals page and read the overall progress figure at the top.",
+          "expected": "It reads 67% (6 of 9 milestones done) — not 69%, which is what averaging the three goals' own percentages would give.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Check off one unchecked milestone under 'Improve public speaking'.",
+          "expected": "That goal's percent moves from 33% to 67% and the overall figure moves from 67% to 78%, both without a page reload.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Look at 'Find a mentor in fintech', then try to add a milestone to it with the name left empty.",
+          "expected": "The goal shows a clear no-milestones-yet state (no 0-of-0 bar or NaN), and the empty milestone is rejected with a message rather than saved.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 3,
+          "task": "Delete one of the milestones under 'Get promoted to Senior PM' and confirm when asked.",
+          "expected": "A confirmation prompt appears before the delete happens; after confirming, the milestone is gone and the goal's percent recalculates to match its remaining milestones.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the session planner, set the start date to Jul 22, pick the every-two-weeks rhythm, and type 4 for the number of sessions.",
+          "expected": "Four dates appear — Jul 22, Aug 5, Aug 19, Sep 2 — with the wraps-up line reading Sep 2, and the Aug 5 row flagged as clashing with the Derek Okafor session already on the calendar.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 3,
+      "partial": 1,
+      "no": 1,
+      "total": 5,
+      "accuracy": 70.0,
+      "cost": {
+        "generation_usd": 0.213334,
+        "model_calls": 8,
+        "input_tokens_total": 1053094,
+        "output_tokens": 12794,
+        "judge_usd": 0.3
+      }
+    },
+    {
+      "turn": 10,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Visit the screener, My coaching hub, and the goals page and look at the main action button on each.",
+          "expected": "All three pages show pill-shaped saddle-brown buttons with white text for their primary actions — no page keeps the old button style.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Find Priya Nair's card on the screener.",
+          "expected": "Her rating reads 4.8 in the warm amber/gold treatment, her rate still reads $150 per session, and the card has the new rounded-corner, light-shadow look.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open the trial-request screens and look at the Priya Nair request's status label.",
+          "expected": "The status is a small rounded chip — amber while it's pending — rather than plain text.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Compare a coach card on the screener with a tile on My coaching hub, and check each page's main heading.",
+          "expected": "Cards and tiles share the same rounded-corner, light-shadow treatment, and both pages' main headings carry the short saddle-brown underline accent.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open My coaching hub and read the upcoming-sessions tile.",
+          "expected": "The sessions are in date order — Maya Chen Jul 30 first, then Derek Okafor Aug 5, then Priya Nair Aug 14 — not in the order they were booked or mentioned.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.434436,
+        "model_calls": 20,
+        "input_tokens_total": 3121756,
+        "output_tokens": 13611,
+        "judge_usd": 0.2392
+      }
+    }
+  ]
+}

@@ -1,0 +1,619 @@
+{
+  "index": 3,
+  "status": "success",
+  "model": "anthropic/claude-haiku-4-5-20251001",
+  "generator": "openhands",
+  "base_trajectory": {
+    "source": "none",
+    "messages": 0
+  },
+  "artifacts": {
+    "zip": null,
+    "run_json": null,
+    "generator": "openhands",
+    "screenshots": [
+      "/output/000003/screenshots/task000003_0.png",
+      "/output/000003/screenshots/task000003_1.png",
+      "/output/000003/screenshots/task000003_2.png",
+      "/output/000003/screenshots/task000003_3.png",
+      "/output/000003/screenshots/task000003_4.png",
+      "/output/000003/screenshots/task000003_5.png"
+    ],
+    "output_dir": "/output/000003"
+  },
+  "ladder": {
+    "turns_expected": 10,
+    "turns_completed": 10,
+    "complete": true
+  },
+  "eval_model": "claude-sonnet-4-6",
+  "accuracy": 63.7,
+  "yes": 28,
+  "partial": 9,
+  "no": 14,
+  "total": 51,
+  "tasks": [
+    {
+      "task_idx": 0,
+      "task": "Verify the display of real-time solar power generation data.",
+      "expected": "The dashboard should show a continuously updating numerical value or graph indicating the current solar power generation.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 1,
+      "task": "Test the display of real-time power consumption data.",
+      "expected": "The dashboard should present a real-time updating figure or chart that accurately reflects the current power consumption levels.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 2,
+      "task": "Validate the real-time display of battery percentage.",
+      "expected": "The dashboard should continuously update to show the current percentage of battery charge, clearly and accurately.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 3,
+      "task": "Check the functionality of querying historical data from the solar power generation data by a start and end date.",
+      "expected": "Users should be able to input a start and end date, and the dashboard should return relevant data trends for the selected period.",
+      "verdict": "no"
+    },
+    {
+      "task_idx": 4,
+      "task": "Test the navigation functionality between the real-time data display and historical data query sections.",
+      "expected": "Users should be able to smoothly navigate between sections using clearly labeled tabs or buttons without page reload issues.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 5,
+      "task": "Verify that the website uses 'honeydew' as the background color and 'dark olive green' as the component color, as specified in the design requirements.",
+      "expected": "The website has a background color of 'honeydew' and components (such as buttons, cards, headers, etc.) are styled with the color 'dark olive green', accurately reflecting the design instruction.",
+      "verdict": "yes"
+    }
+  ],
+  "turns": [
+    {
+      "turn": 1,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": false,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Verify the display of real-time solar power generation data.",
+          "expected": "The dashboard should show a continuously updating numerical value or graph indicating the current solar power generation.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Test the display of real-time power consumption data.",
+          "expected": "The dashboard should present a real-time updating figure or chart that accurately reflects the current power consumption levels.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Validate the real-time display of battery percentage.",
+          "expected": "The dashboard should continuously update to show the current percentage of battery charge, clearly and accurately.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Check the functionality of querying historical data from the solar power generation data by a start and end date.",
+          "expected": "Users should be able to input a start and end date, and the dashboard should return relevant data trends for the selected period.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Test the navigation functionality between the real-time data display and historical data query sections.",
+          "expected": "Users should be able to smoothly navigate between sections using clearly labeled tabs or buttons without page reload issues.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 5,
+          "task": "Verify that the website uses 'honeydew' as the background color and 'dark olive green' as the component color, as specified in the design requirements.",
+          "expected": "The website has a background color of 'honeydew' and components (such as buttons, cards, headers, etc.) are styled with the color 'dark olive green', accurately reflecting the design instruction.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 1,
+      "no": 1,
+      "total": 6,
+      "accuracy": 75.0,
+      "cost": {
+        "generation_usd": 0.111839,
+        "model_calls": 10,
+        "input_tokens_total": 205056,
+        "output_tokens": 12034,
+        "judge_usd": 0.5399
+      }
+    },
+    {
+      "turn": 2,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Panels page and read the ranked panel list from top to bottom.",
+          "expected": "The order is Peak 1 (yield 35.0), Ridge East (33.0), Ridge West (33.0), Corner 2 (30.0), Gable 1 (28.0), Chimney 3 (18.0) — Ridge East sits above Ridge West on the alphabetical tiebreak, and Corner 2 sits above Gable 1 even though Gable 1 produced more kWh.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the Panels page, compare the rows for Corner 2 and Gable 1.",
+          "expected": "Corner 2 (yield 30.0) is ranked above Gable 1 (yield 28.0) despite Gable 1's higher weekly output (9.80 kWh vs 9.00 kWh), showing the ranking uses kWh per rated kW rather than raw output.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the Panels page, find the rollup figures for the South array, the East array, and the whole fleet.",
+          "expected": "South shows 38.75 kWh, East shows 24.20 kWh, and the fleet shows 62.95 kWh with a total rated capacity of 2,100 W — the two array totals sum exactly to the fleet total.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "On the Panels page, read Corner 2's weekly output figure.",
+          "expected": "It reads exactly 9.00 kWh — two decimals with the kWh unit, not 9 kWh or 9.0 kWh — and the other energy figures on the page also carry two decimals.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the historical data section, enter a start date and an end date to run a query.",
+          "expected": "A chart or trend view for the selected period is displayed without errors.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 1,
+      "no": 0,
+      "total": 5,
+      "accuracy": 90.0,
+      "cost": {
+        "generation_usd": 0.091221,
+        "model_calls": 5,
+        "input_tokens_total": 165384,
+        "output_tokens": 6630,
+        "judge_usd": 0.2348
+      }
+    },
+    {
+      "turn": 3,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "runtime": {
+        "checks_affected": 4,
+        "errors": [
+          "http://localhost:5200/node_modules/.vite/deps/chunk-QXLG2TGQ.js?v=c17c656e 11600:22 Uncaught Error: Too many re-renders. React limits the number of renders to prevent an infinite loop."
+        ]
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the savings calculator, type 0.30 into the electricity rate field and 9000 into the system cost field.",
+          "expected": "Yearly savings show $982.02 (3,273.40 kWh x $0.30) and the payback reads 9 years, 2 months — the partial month rounds up, so not 9 years 1 month and not a bare decimal like 9.2 years.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Type 0.40 into the rate field and 9000 into the cost field, then change the rate to 0.20.",
+          "expected": "The results update immediately as the rate changes with no submit step, and yearly savings at 0.20 read exactly half of what they showed at 0.40 ($654.68 vs $1,309.36).",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Type 0.30 into the rate field and 9000 into the cost field, then replace the rate with the letters abc.",
+          "expected": "The last good results (yearly savings $982.02, payback 9 years 2 months) stay on screen with a small note about the invalid input — no blanked results, no NaN, no crash.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Check the annual generation figure the calculator is using, then open the Panels page and read the fleet weekly rollup.",
+          "expected": "The calculator's annual figure is 3,273.40 kWh, exactly 52 times the 62.95 kWh fleet weekly total shown on the Panels page.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Panels page and read the ranked panel list from top to bottom.",
+          "expected": "The order is Peak 1 (yield 35.0), Ridge East (33.0), Ridge West (33.0), Corner 2 (30.0), Gable 1 (28.0), Chimney 3 (18.0) — Ridge East sits above Ridge West on the alphabetical tiebreak, and Corner 2 sits above Gable 1 even though Gable 1 produced more kWh.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 1,
+      "partial": 0,
+      "no": 4,
+      "total": 5,
+      "accuracy": 20.0,
+      "cost": {
+        "generation_usd": 0.047612,
+        "model_calls": 3,
+        "input_tokens_total": 116170,
+        "output_tokens": 4046,
+        "judge_usd": 0.4451
+      }
+    },
+    {
+      "turn": 4,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "runtime": {
+        "checks_affected": 1,
+        "errors": [
+          "http://localhost:5200/node_modules/.vite/deps/chunk-QXLG2TGQ.js?v=c17c656e 11600:22 Uncaught Error: Too many re-renders. React limits the number of renders to prevent an infinite loop."
+        ]
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "In the alert center's rules area, type 33.0 as a new rule threshold and add the rule.",
+          "expected": "Exactly 3 alerts are active — Corner 2, Gable 1, and Chimney 3 — while Ridge East and Ridge West (sitting exactly at 33.0) are not flagged, Chimney 3 appears only once even though the pre-set 25.0 rule also catches it, and the navigation badge reads 3.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the alert center on a fresh load and look at the active alerts list.",
+          "expected": "One alert is active — Chimney 3, caught by the pre-set 25.0 rule — shown with a red dot plus the word Active, and the navigation badge shows 1.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Acknowledge the Chimney 3 alert and confirm when asked.",
+          "expected": "A confirmation step appears before anything moves; after confirming, Chimney 3 leaves the active list, shows up in the resolved log with a green dot plus the word Resolved, and the navigation badge drops to 0.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Read the yield figure shown on Chimney 3's alert, then open the Panels page and find Chimney 3's row.",
+          "expected": "Both show the same 18.0 yield, and Chimney 3 sits at the bottom of the panel ranking — consistent with it being the only panel below the 25.0 rule.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the savings calculator, type 0.30 into the electricity rate field and 9000 into the system cost field.",
+          "expected": "Yearly savings show $982.02 (3,273.40 kWh x $0.30) and the payback reads 9 years, 2 months — the partial month rounds up, so not 9 years 1 month and not a bare decimal like 9.2 years.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 2,
+      "partial": 0,
+      "no": 3,
+      "total": 5,
+      "accuracy": 40.0,
+      "cost": {
+        "generation_usd": 0.096625,
+        "model_calls": 3,
+        "input_tokens_total": 135529,
+        "output_tokens": 5640,
+        "judge_usd": 0.3546
+      }
+    },
+    {
+      "turn": 5,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "In the report builder, click the East quick button and read the generated report.",
+          "expected": "The report shows 3 panels, combined output 24.20 kWh, average yield 25.3 (the plain mean of 30.0, 28.0 and 18.0 — not the size-weighted 25.5), best panel Corner 2, worst panel Chimney 3.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Tick only Ridge East and Ridge West in the report builder.",
+          "expected": "The report shows 2 panels, combined output 24.75 kWh, and names Ridge East as the best panel — the 33.0 yield tie breaks alphabetically.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Click the none quick button in the report builder, then tick a single panel.",
+          "expected": "With nothing ticked a friendly empty message replaces the report — no zeros, NaN, or crash — and the report reappears the moment one panel is ticked.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Click the everything quick button and compare the report's combined output with the fleet rollup on the Panels page.",
+          "expected": "Both read 62.95 kWh, and the report names Peak 1 as best and Chimney 3 as worst across all 6 panels.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the Panels page, find the rollup figures for the South array, the East array, and the whole fleet.",
+          "expected": "South shows 38.75 kWh, East shows 24.20 kWh, and the fleet shows 62.95 kWh with a total rated capacity of 2,100 W — the two array totals sum exactly to the fleet total.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.05463,
+        "model_calls": 3,
+        "input_tokens_total": 153642,
+        "output_tokens": 4951,
+        "judge_usd": 0.2143
+      }
+    },
+    {
+      "turn": 6,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the historical chart, toggle the expected baseline on and leave peak sun hours at the default 5.0.",
+          "expected": "The performance readout shows 85.6% (62.95 kWh actual vs 73.50 kWh expected for the week) with a Watch health read — not 85.7%, not 86%, and not Healthy or Fault.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "With the baseline on, change the peak sun hours to 4.0.",
+          "expected": "The expected week drops to 58.80 kWh and the ratio rises to 107.1% with the health read flipping to Healthy, updating as the value is typed with no submit step.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 2,
+          "task": "With the baseline on, change the peak sun hours to 8.0.",
+          "expected": "The ratio falls to 53.5% and the health read shows Fault (the under-75 band), while the chart still renders both the actual and expected series.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "With the baseline on and hours at 5.0, replace the hours value with the letters xyz.",
+          "expected": "The last valid readout (85.6% with the Watch read) stays visible with a small note about the invalid input — the baseline and chart do not blank or crash.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the alert center's rules area, type 33.0 as a new rule threshold and add the rule.",
+          "expected": "Exactly 3 alerts are active — Corner 2, Gable 1, and Chimney 3 — while Ridge East and Ridge West (sitting exactly at 33.0) are not flagged, Chimney 3 appears only once even though the pre-set 25.0 rule also catches it, and the navigation badge reads 3.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 0,
+      "partial": 2,
+      "no": 3,
+      "total": 5,
+      "accuracy": 20.0,
+      "cost": {
+        "generation_usd": 0.101014,
+        "model_calls": 9,
+        "input_tokens_total": 533865,
+        "output_tokens": 5797,
+        "judge_usd": 1.0393
+      }
+    },
+    {
+      "turn": 7,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the main dashboard, then the Panels page.",
+          "expected": "Both pages show the new soft cream background, a centered page title at the top, and content wrapped in white cards with rounded corners and a thin olive border — neither page keeps the old honeydew look.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the alert center and look at the status badges and action buttons.",
+          "expected": "Status indicators still show a colored dot plus a word but are now pill-shaped badges, and primary action buttons like acknowledge are warm amber with white text.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the restyled Panels page, read the fleet rollup.",
+          "expected": "The fleet total still reads 62.95 kWh, presented inside a white rounded-corner card with a thin olive border like the other sections.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 3,
+          "task": "On the restyled alert center, acknowledge the Chimney 3 alert and confirm when asked.",
+          "expected": "The confirmation step and the move to the resolved log still work as before, with the confirm control styled warm amber with white text and the Resolved badge shown as a pill.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the report builder, click the East quick button and read the generated report.",
+          "expected": "The report shows 3 panels, combined output 24.20 kWh, average yield 25.3 (the plain mean of 30.0, 28.0 and 18.0 — not the size-weighted 25.5), best panel Corner 2, worst panel Chimney 3.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 2,
+      "partial": 3,
+      "no": 0,
+      "total": 5,
+      "accuracy": 70.0,
+      "cost": {
+        "generation_usd": 0.332182,
+        "model_calls": 19,
+        "input_tokens_total": 1588426,
+        "output_tokens": 13590,
+        "judge_usd": 0.3657
+      }
+    },
+    {
+      "turn": 8,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "runtime": {
+        "checks_affected": 2,
+        "errors": [
+          "http://localhost:5200/node_modules/.vite/deps/chunk-QXLG2TGQ.js?v=c17c656e 11600:22 Uncaught Error: Too many re-renders. React limits the number of renders to prevent an infinite loop."
+        ]
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the environmental impact page and read the weekly and annual CO2 figures.",
+          "expected": "The weekly figure reads 25.18 kg (62.95 kWh x 0.4) and the annual projection reads 1.31 t — the 1,309.36 kg crosses the 1,000 kg line so it shows in tonnes with two decimals, not as 1,309.36 kg and not rounded to 1.3 t.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the environmental impact page, read the tree equivalence line.",
+          "expected": "It reads 62 trees — the annual 1,309.36 kg divided by 21 and rounded down to a whole number, not 62.4 trees and not the 1 tree a weekly-based calculation would give.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the environmental impact page, read the per-array impact split.",
+          "expected": "South shows 15.50 kg at 61.6% and East shows 9.68 kg at 38.4% — the two kg figures sum exactly to the weekly 25.18 kg and the two shares add up to exactly 100.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Read the annual energy figure on the environmental impact page, then open the savings calculator and check the annual generation it uses.",
+          "expected": "Both read exactly 3,273.40 kWh — the impact page and the calculator share the same 52-week projection of the panels page's 62.95 kWh fleet weekly total, shown with two decimals.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "Type 0.30 into the rate field and 9000 into the cost field, then replace the rate with the letters abc.",
+          "expected": "The last good results (yearly savings $982.02, payback 9 years 2 months) stay on screen with a small note about the invalid input — no blanked results, no NaN, no crash.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 3,
+      "partial": 1,
+      "no": 1,
+      "total": 5,
+      "accuracy": 70.0,
+      "cost": {
+        "generation_usd": 0.210504,
+        "model_calls": 7,
+        "input_tokens_total": 683382,
+        "output_tokens": 6838,
+        "judge_usd": 0.2591
+      }
+    },
+    {
+      "turn": 9,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the power flow page, type 100 into the sun level and 1.50 into the home load, leaving the battery at its default 60.",
+          "expected": "Generation reads 2.10 kW, the home takes 1.50 kW, the battery charges at 0.60 kW, and the grid shows 0.00 kW — the flows add up exactly.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Type 50 into the sun level and 3.00 into the home load, leaving the battery at 60.",
+          "expected": "Generation reads 1.05 kW and the 1.95 kW shortfall is covered by the battery discharging, with the grid at 0.00 kW — generation plus battery discharge equals the home's 3.00 kW.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Type 100 into the battery percent, 100 into the sun level, and 1.00 into the home load.",
+          "expected": "With the battery already full, the 1.10 kW surplus flows entirely to the grid as export and the battery flow reads 0.00 kW.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Type 100 into the sun level on the power flow page, then open the Panels page and read the fleet's total rated capacity.",
+          "expected": "The simulator's full-sun generation of 2.10 kW matches the 2,100 W rated capacity in the fleet rollup.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the historical chart, toggle the expected baseline on and leave peak sun hours at the default 5.0.",
+          "expected": "The performance readout shows 85.6% (62.95 kWh actual vs 73.50 kWh expected for the week) with a Watch health read — not 85.7%, not 86%, and not Healthy or Fault.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 4,
+      "partial": 0,
+      "no": 1,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.155928,
+        "model_calls": 8,
+        "input_tokens_total": 868432,
+        "output_tokens": 9113,
+        "judge_usd": 0.4007
+      }
+    },
+    {
+      "turn": 10,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the System Health page on a fresh load and read the score and its breakdown.",
+          "expected": "The score is 75 with a Watch health read (75 lands in Watch, not Fault), broken down as 100 minus 15 for the one active alert (Chimney 3) minus 10 because the fleet's average yield of 29.5 is under 30.0.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the System Health page, read the to-do list.",
+          "expected": "Exactly two to-do lines show — one for the active Chimney 3 alert and one for the low fleet average yield — matching the two deductions in the breakdown.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Compare the displayed score with the deduction lines on the System Health page.",
+          "expected": "The score equals 100 minus the sum of the listed deductions — the breakdown shown is internally consistent with the headline number.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Go to the alert center, acknowledge the Chimney 3 alert and confirm, then return to the System Health page.",
+          "expected": "The score rises to exactly 90 with a Healthy read (90 is the Healthy boundary), and the to-do list drops to a single line about the low fleet yield.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the environmental impact page and read the weekly and annual CO2 figures.",
+          "expected": "The weekly figure reads 25.18 kg (62.95 kWh x 0.4) and the annual projection reads 1.31 t — the 1,309.36 kg crosses the 1,000 kg line so it shows in tonnes with two decimals, not as 1,309.36 kg and not rounded to 1.3 t.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 3,
+      "partial": 1,
+      "no": 1,
+      "total": 5,
+      "accuracy": 70.0,
+      "cost": {
+        "generation_usd": 0.233186,
+        "model_calls": 11,
+        "input_tokens_total": 890975,
+        "output_tokens": 8753,
+        "judge_usd": 0.3052
+      }
+    }
+  ]
+}

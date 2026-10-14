@@ -1,0 +1,601 @@
+{
+  "index": 30,
+  "status": "success",
+  "model": "anthropic/claude-haiku-4-5-20251001",
+  "generator": "openhands",
+  "base_trajectory": {
+    "source": "none",
+    "messages": 0
+  },
+  "artifacts": {
+    "zip": null,
+    "run_json": null,
+    "generator": "openhands",
+    "screenshots": [
+      "/output/000030/screenshots/task000030_0.png",
+      "/output/000030/screenshots/task000030_1.png",
+      "/output/000030/screenshots/task000030_2.png",
+      "/output/000030/screenshots/task000030_3.png",
+      "/output/000030/screenshots/task000030_4.png",
+      "/output/000030/screenshots/task000030_5.png"
+    ],
+    "output_dir": "/output/000030"
+  },
+  "ladder": {
+    "turns_expected": 10,
+    "turns_completed": 10,
+    "complete": true
+  },
+  "eval_model": "claude-sonnet-4-6",
+  "accuracy": 64.7,
+  "yes": 29,
+  "partial": 8,
+  "no": 14,
+  "total": 51,
+  "tasks": [
+    {
+      "task_idx": 0,
+      "task": "Input a basic mathematical expression (e.g., \"2 + 2\") into the expression input field.",
+      "expected": "The expression \"2 + 2\" is correctly displayed in the input field without any modification.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 1,
+      "task": "Select a calculation type from the available options (e.g., \"Basic Arithmetic\").",
+      "expected": "The selected calculation type is visibly confirmed on the interface, ensuring the system understands the user's choice.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 2,
+      "task": "Click the button to execute the calculation after entering a mathematical expression and selecting a calculation type.",
+      "expected": "The system processes the equation and a result is displayed on the results screen.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 3,
+      "task": "Input an invalid mathematical expression (e.g., \"2 ++ 2\") and attempt to execute the calculation.",
+      "expected": "An error message is displayed, indicating that the expression is invalid and guiding the user to input a valid expression.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 4,
+      "task": "Test the website's navigation by moving from the home page to the calculation page.",
+      "expected": "The transition should be smooth, and the calculation page should load without errors and allow immediate interaction.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 5,
+      "task": "Verify that the website uses 'mint cream' as the background color and 'teal' as the component color, as specified in the design requirements.",
+      "expected": "The website has a background color of 'mint cream' and components (such as buttons, cards, headers, etc.) are styled with the color 'teal', accurately reflecting the design instruction.",
+      "verdict": "partial"
+    }
+  ],
+  "turns": [
+    {
+      "turn": 1,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": false,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Input a basic mathematical expression (e.g., \"2 + 2\") into the expression input field.",
+          "expected": "The expression \"2 + 2\" is correctly displayed in the input field without any modification.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Select a calculation type from the available options (e.g., \"Basic Arithmetic\").",
+          "expected": "The selected calculation type is visibly confirmed on the interface, ensuring the system understands the user's choice.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Click the button to execute the calculation after entering a mathematical expression and selecting a calculation type.",
+          "expected": "The system processes the equation and a result is displayed on the results screen.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Input an invalid mathematical expression (e.g., \"2 ++ 2\") and attempt to execute the calculation.",
+          "expected": "An error message is displayed, indicating that the expression is invalid and guiding the user to input a valid expression.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Test the website's navigation by moving from the home page to the calculation page.",
+          "expected": "The transition should be smooth, and the calculation page should load without errors and allow immediate interaction.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 5,
+          "task": "Verify that the website uses 'mint cream' as the background color and 'teal' as the component color, as specified in the design requirements.",
+          "expected": "The website has a background color of 'mint cream' and components (such as buttons, cards, headers, etc.) are styled with the color 'teal', accurately reflecting the design instruction.",
+          "verdict": "partial"
+        }
+      ],
+      "yes": 5,
+      "partial": 1,
+      "no": 0,
+      "total": 6,
+      "accuracy": 91.7,
+      "cost": {
+        "generation_usd": 0.09688,
+        "model_calls": 13,
+        "input_tokens_total": 261586,
+        "output_tokens": 8149,
+        "judge_usd": 0.1562
+      }
+    },
+    {
+      "turn": 2,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the history panel and look at the entry at the very top of the list.",
+          "expected": "The top entry is 3^5 with result = 243 — the list runs newest to oldest, so 3^5 comes first, not sqrt(1444) (the entry that was given first in the original order).",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Use the history panel's category filter to show only Scientific entries.",
+          "expected": "Exactly the three entries sqrt(1444), 2^10, and 3^5 are visible; the Arithmetic and Percent entries are hidden.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 2,
+          "task": "Find the history entry for 40+2 and look at how it is displayed.",
+          "expected": "Its result appears as = 42 in a monospace font, and the entry carries an uppercase ARITHMETIC pill.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the calculator, type 6*7 into the expression input, execute it, then look at the history panel.",
+          "expected": "A new entry for 6*7 with result = 42 appears at the very top of the history, above 3^5.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "Type 7*6 into the expression input, select Basic Arithmetic as the calculation type, and execute the calculation.",
+          "expected": "The result 42 is displayed in the results area.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 2,
+      "partial": 2,
+      "no": 1,
+      "total": 5,
+      "accuracy": 60.0,
+      "cost": {
+        "generation_usd": 0.100577,
+        "model_calls": 10,
+        "input_tokens_total": 321317,
+        "output_tokens": 6290,
+        "judge_usd": 0.5688
+      }
+    },
+    {
+      "turn": 3,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "In the calculator, type 200*tax into the expression input and execute the calculation.",
+          "expected": "The result = 16.5 is displayed, showing the predefined variable tax (0.0825) was substituted into the expression.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the variables page, try to add a variable named 2fast with value 3.",
+          "expected": "The variable is rejected with a visible reason about the invalid name, and 2fast does not appear in the variables list.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Click into the calculator's expression input and type dozen+1 without executing.",
+          "expected": "While typing, a helper under the input lists the variable dozen with its value 12, before any calculation is run.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 3,
+          "task": "On the variables page add a variable named width with value 5, then in the calculator type width*3 and execute, then look at the top of the history panel.",
+          "expected": "The result = 15 is displayed — the freshly defined variable is picked up by the calculator — and the newest history entry shows the expression as width*3 with the variable name intact, not 5*3.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the history panel and look at the entry at the very top of the list.",
+          "expected": "The top entry is 3^5 with result = 243 — the list runs newest to oldest, so 3^5 comes first, not sqrt(1444) (the entry that was given first in the original order).",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 1,
+      "no": 0,
+      "total": 5,
+      "accuracy": 90.0,
+      "cost": {
+        "generation_usd": 0.158989,
+        "model_calls": 11,
+        "input_tokens_total": 537995,
+        "output_tokens": 8361,
+        "judge_usd": 0.4647
+      }
+    },
+    {
+      "turn": 4,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Go to the Saved page, open the Grid area item, and click its load control.",
+          "expected": "You land in the calculator with 24*36 in the expression input and the result = 864 displayed.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Type 5+5 in the calculator, execute it, click save, and enter the name Grid area.",
+          "expected": "The save is refused with a message that the name is already taken, and the Saved page still shows only one Grid area item.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Type 5+5 in the calculator, execute it, click save, and try to submit the save form with the name left empty.",
+          "expected": "The form refuses to save, indicates a name is required, and nothing new appears on the Saved page.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "On the Saved page, click delete on the Grid area item, then confirm when asked.",
+          "expected": "A confirmation prompt appears before anything is removed, and after confirming the Saved page shows a friendly empty message rather than a blank area.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the calculator, type 200*tax into the expression input and execute the calculation.",
+          "expected": "The result = 16.5 is displayed, showing the predefined variable tax (0.0825) was substituted into the expression.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 2,
+      "partial": 0,
+      "no": 3,
+      "total": 5,
+      "accuracy": 40.0,
+      "cost": {
+        "generation_usd": 0.277689,
+        "model_calls": 16,
+        "input_tokens_total": 1141540,
+        "output_tokens": 14384,
+        "judge_usd": 0.5879
+      }
+    },
+    {
+      "turn": 5,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open display settings, set decimal places to 2, then look at the history entry for 10.7/4.",
+          "expected": "The entry's result reads = 2.68 — 2.675 rounded half-up — not = 2.67.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "In display settings, type 9 into the decimal places input.",
+          "expected": "The value is refused with an indication that only 0 through 8 is allowed, and results keep formatting with the previous setting.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Switch notation to scientific and look at the history entry for 2^10, then switch back to standard.",
+          "expected": "In scientific mode the result reads = 1.024e+3, and back in standard mode it returns to = 1024.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 3,
+          "task": "Type 1/8 into the calculator and execute, then in display settings set decimal places to 1.",
+          "expected": "The calculator's displayed result changes from = 0.125 to = 0.1 without re-running the calculation.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Use the history panel's category filter to show only Scientific entries.",
+          "expected": "Exactly the three entries sqrt(1444), 2^10, and 3^5 are visible; the Arithmetic and Percent entries are hidden.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 2,
+      "partial": 1,
+      "no": 2,
+      "total": 5,
+      "accuracy": 50.0,
+      "cost": {
+        "generation_usd": 0.337141,
+        "model_calls": 19,
+        "input_tokens_total": 1711967,
+        "output_tokens": 10677,
+        "judge_usd": 0.7882
+      }
+    },
+    {
+      "turn": 6,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the stats page on a fresh load and look at the most-used category.",
+          "expected": "It reads Arithmetic — Arithmetic and Scientific are tied at 3 entries each and the tie breaks alphabetically — not Scientific, even though Scientific is both the first-logged and the most recent category in the history.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the stats page on a fresh load and look at the average of all results.",
+          "expected": "The average reads 205.93 — 205.925 rounded half-up to two decimals — not the 205.92 that plain floating-point rounding produces.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open the stats page and compare the per-category counts to the total count of calculations, noting how each category is labeled.",
+          "expected": "The category counts add up exactly to the displayed total (3 Arithmetic + 3 Scientific + 1 Percent = 7 on a fresh load), and each category label on the stats page renders as an uppercase pill — ARITHMETIC, SCIENTIFIC, PERCENT — matching the app-wide category convention.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the calculator, select the Scientific calculation type, run 2*2, then open the stats page.",
+          "expected": "The Scientific count is now 4, the total is 8, and the most-used category flips to Scientific.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "Go to the Saved page, open the Grid area item, and click its load control.",
+          "expected": "You land in the calculator with 24*36 in the expression input and the result = 864 displayed.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 3,
+      "partial": 1,
+      "no": 1,
+      "total": 5,
+      "accuracy": 70.0,
+      "cost": {
+        "generation_usd": 0.206853,
+        "model_calls": 6,
+        "input_tokens_total": 611164,
+        "output_tokens": 5244,
+        "judge_usd": 0.7375
+      }
+    },
+    {
+      "turn": 7,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the converter, choose temperature with Fahrenheit to Celsius and type 100 into the value input.",
+          "expected": "37.7778 appears as the converted value while typing, computed with the real temperature formula — not a value near 55 from a multiply-only conversion.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Choose length with inches to centimeters, type 4 into the value input, then click the swap control.",
+          "expected": "10.16 appears immediately while typing with no button press, and after swapping the direction the same 4 converts as centimeters to inches, showing 1.5748.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Type 4 into the converter's value input, then delete it so the input is completely empty.",
+          "expected": "The output area goes empty or shows a gentle placeholder — never NaN, undefined, or an error.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "In display settings set decimal places to 2, then on the converter choose temperature Fahrenheit to Celsius and type 100.",
+          "expected": "The converted value reads 37.78, following the two-decimal setting.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open display settings, set decimal places to 2, then look at the history entry for 10.7/4.",
+          "expected": "The entry's result reads = 2.68 — 2.675 rounded half-up — not = 2.67.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 3,
+      "partial": 0,
+      "no": 2,
+      "total": 5,
+      "accuracy": 60.0,
+      "cost": {
+        "generation_usd": 0.241498,
+        "model_calls": 7,
+        "input_tokens_total": 773349,
+        "output_tokens": 6739,
+        "judge_usd": 0.4542
+      }
+    },
+    {
+      "turn": 8,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the history page, tick the checkboxes for the entries 40+2, 10.7/4, and 12*(8-3), send them to the report, and open the Report page.",
+          "expected": "The report lists exactly those three entries with each entry's result shown in a monospace font prefixed with an equals sign (= 42, = 2.675, = 60), shows 3 picked with a total of 104.675, and renders a plain-text block of the selection on screen.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Tick 40+2 and 2^10 on the history page, send them to the report, open the Report page, and remove 2^10 from the report there.",
+          "expected": "The count drops to 1 and the total to 42, matching the single entry still listed.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open the Report page before ticking anything on the history page.",
+          "expected": "The page says it is waiting for selections — no error, no stale count or total.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "In display settings set decimal places to 1, then on the history page tick the 10.7/4 entry, send it to the report, and open the Report page.",
+          "expected": "The entry's result and the report total both read 2.7, following the decimal-places setting.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the stats page on a fresh load and look at the average of all results.",
+          "expected": "The average reads 205.93 — 205.925 rounded half-up to two decimals — not the 205.92 that plain floating-point rounding produces.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 3,
+      "partial": 1,
+      "no": 1,
+      "total": 5,
+      "accuracy": 70.0,
+      "cost": {
+        "generation_usd": 0.296774,
+        "model_calls": 15,
+        "input_tokens_total": 1372019,
+        "output_tokens": 9919,
+        "judge_usd": 0.8362
+      }
+    },
+    {
+      "turn": 9,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the search page, type 24 into the search box.",
+          "expected": "Exactly three hits appear while typing, with no button press: the history entries 2^10 and 3^5 (matched through their result values 1024 and 243) and the saved item Grid area (matched on its expression 24*36) — not just the single Grid area hit that matching expression text alone would produce.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Type GARDEN in all caps into the search box.",
+          "expected": "The saved item Grid area comes back as a hit, matched case-insensitively on its note garden plot and listed under its saved-calculations grouping — and no history or variable hits appear.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Type xyz into the search box, then clear the box completely.",
+          "expected": "With xyz entered the page plainly says nothing matches, and once the box is empty it shows a nudge to start typing — at no point an error, a blank void, or a dump of every record.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the calculator run dozen*18.5, then on the search page type 222.",
+          "expected": "The freshly logged history entry appears as a hit, matched through its result = 222, and the hit shows its expression as dozen*18.5 with the variable name intact — never the substituted 12*18.5 — the search picks up new calculations immediately.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the converter, choose temperature with Fahrenheit to Celsius and type 100 into the value input.",
+          "expected": "37.7778 appears as the converted value while typing, computed with the real temperature formula — not a value near 55 from a multiply-only conversion.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 3,
+      "partial": 0,
+      "no": 2,
+      "total": 5,
+      "accuracy": 60.0,
+      "cost": {
+        "generation_usd": 0.174145,
+        "model_calls": 8,
+        "input_tokens_total": 577199,
+        "output_tokens": 5956,
+        "judge_usd": 0.4087
+      }
+    },
+    {
+      "turn": 10,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the calculator, history, and stats pages in turn and look at the page background and page title on each.",
+          "expected": "All three show the soft ivory #FAFAF7 background with a centered page title — none is left on the old mint cream look.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 1,
+          "task": "Look at the primary action button on the calculator page and then on the converter page.",
+          "expected": "Both are deep teal #0F766E with white text and a full pill shape — consistent across the two pages.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open the history page and look at the top entry's card.",
+          "expected": "Cards have 12px rounded corners with a thin teal border, and the top card still reads 3^5 with result = 243.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Run 2+2 in the calculator and look at its displayed result, then look at any history entry's result.",
+          "expected": "Both still render in a monospace font with the equals-sign prefix (= 4 in the calculator) — the facelift didn't break the result formatting convention.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the calculator, type 200*tax into the expression input and execute the calculation.",
+          "expected": "The result = 16.5 is displayed, showing the predefined variable tax (0.0825) was substituted into the expression.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 2,
+      "partial": 1,
+      "no": 2,
+      "total": 5,
+      "accuracy": 50.0,
+      "cost": {
+        "generation_usd": 0.278595,
+        "model_calls": 20,
+        "input_tokens_total": 1784478,
+        "output_tokens": 12264,
+        "judge_usd": 0.5922
+      }
+    }
+  ]
+}

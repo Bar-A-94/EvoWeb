@@ -1,0 +1,608 @@
+{
+  "index": 15,
+  "status": "success",
+  "model": "anthropic/claude-haiku-4-5-20251001",
+  "generator": "openhands",
+  "base_trajectory": {
+    "source": "none",
+    "messages": 0
+  },
+  "artifacts": {
+    "zip": null,
+    "run_json": null,
+    "generator": "openhands",
+    "screenshots": [
+      "/output/000015/screenshots/task000015_0.png",
+      "/output/000015/screenshots/task000015_1.png",
+      "/output/000015/screenshots/task000015_2.png",
+      "/output/000015/screenshots/task000015_3.png",
+      "/output/000015/screenshots/task000015_4.png",
+      "/output/000015/screenshots/task000015_5.png"
+    ],
+    "output_dir": "/output/000015"
+  },
+  "ladder": {
+    "turns_expected": 10,
+    "turns_completed": 10,
+    "complete": true
+  },
+  "eval_model": "claude-sonnet-4-6",
+  "accuracy": 69.6,
+  "yes": 31,
+  "partial": 9,
+  "no": 11,
+  "total": 51,
+  "tasks": [
+    {
+      "task_idx": 0,
+      "task": "Perform a search for apartments using a specific location keyword.",
+      "expected": "A list of apartments relevant to the search keyword is displayed.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 1,
+      "task": "Apply a filter to the apartment search results by selecting one-bedroom.",
+      "expected": "Only apartments that match the one-bedroom are displayed in the search results.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 2,
+      "task": "Book an apartment by selecting available dates and confirming the booking.",
+      "expected": "Booking confirmation is displayed, and the selected dates are marked as unavailable in the calendar.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 3,
+      "task": "View booking records from the user account section.",
+      "expected": "The booking records show accurate information of all past and current bookings made by the user.",
+      "verdict": "no"
+    },
+    {
+      "task_idx": 4,
+      "task": "Navigate to the homepage from a different page (e.g., booking confirmation page) using the website's main navigation menu.",
+      "expected": "The user is redirected to the homepage, which is fully loaded and functional.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 5,
+      "task": "Verify that the website uses 'linen' as the background color and 'maroon' as the component color, as specified in the design requirements.",
+      "expected": "The website has a background color of 'linen' and components (such as buttons, cards, headers, etc.) are styled with the color 'maroon', accurately reflecting the design instruction.",
+      "verdict": "yes"
+    }
+  ],
+  "turns": [
+    {
+      "turn": 1,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": false,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Perform a search for apartments using a specific location keyword.",
+          "expected": "A list of apartments relevant to the search keyword is displayed.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Apply a filter to the apartment search results by selecting one-bedroom.",
+          "expected": "Only apartments that match the one-bedroom are displayed in the search results.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 2,
+          "task": "Book an apartment by selecting available dates and confirming the booking.",
+          "expected": "Booking confirmation is displayed, and the selected dates are marked as unavailable in the calendar.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 3,
+          "task": "View booking records from the user account section.",
+          "expected": "The booking records show accurate information of all past and current bookings made by the user.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Navigate to the homepage from a different page (e.g., booking confirmation page) using the website's main navigation menu.",
+          "expected": "The user is redirected to the homepage, which is fully loaded and functional.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 5,
+          "task": "Verify that the website uses 'linen' as the background color and 'maroon' as the component color, as specified in the design requirements.",
+          "expected": "The website has a background color of 'linen' and components (such as buttons, cards, headers, etc.) are styled with the color 'maroon', accurately reflecting the design instruction.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 3,
+      "partial": 2,
+      "no": 1,
+      "total": 6,
+      "accuracy": 66.7,
+      "cost": {
+        "generation_usd": 0.089967,
+        "model_calls": 10,
+        "input_tokens_total": 191635,
+        "output_tokens": 8407,
+        "judge_usd": 0.4036
+      }
+    },
+    {
+      "turn": 2,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the fit ranker, click the Pet-friendly chip, click the Budget chip, and type 130 into the nightly budget box.",
+          "expected": "All seven listings stay on screen — nothing gets hidden — with the line reading 3 top fits of 7: Dockside Nook · Old Port, Garden Studio · Midtown, and Willow Walk-up · Riverside rank on top, each scored Fit 3/5, the $95 tie putting Dockside before Garden alphabetically, while Sunset Flat · Old Port sits last at Fit 0/5.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the fit ranker, click only the Waterfront chip, then click it again to turn it off.",
+          "expected": "With the chip on, all seven listings remain visible, the line reads 3 top fits of 7, and Dockside Nook, Harbor Loft, and Sunset Flat rise to the top each scored Fit 2/2, Harbor before Sunset on the $145 price tie; turning the chip off drops the scores, returns the plain 7 stays line, and leaves the grid in price low-to-high order.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the fit ranker, with no chips picked, type 100 into the nightly budget box.",
+          "expected": "All seven listings stay visible; Dockside Nook · Old Port and Garden Studio · Midtown move to the top each scored Fit 1/1, the line reads 2 top fits of 7, and the rest follow in price low-to-high order with Maple Suite before Willow Walk-up on the $120 tie.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Open the fit ranker page and look at its overall styling and how listings are labeled.",
+          "expected": "The page keeps the linen background with maroon component highlights, and every apartment is labeled with its name and neighborhood together, like Harbor Loft · Old Port.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "Perform a search for apartments using a specific location keyword.",
+          "expected": "A list of apartments relevant to the search keyword is displayed.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 1,
+      "no": 0,
+      "total": 5,
+      "accuracy": 90.0,
+      "cost": {
+        "generation_usd": 0.12591,
+        "model_calls": 9,
+        "input_tokens_total": 334446,
+        "output_tokens": 9531,
+        "judge_usd": 0.2992
+      }
+    },
+    {
+      "turn": 3,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the trip cost estimator, pick Cedar Corner, and type Sep 1 2026 as check-in and Sep 8 2026 as check-out.",
+          "expected": "It shows 7 nights with a $1,260 nightly subtotal, a $126 long-stay discount taken off, a $60 cleaning fee, a $131 service fee, and a $1,325 total — not 8 nights, and not a total missing the discount.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "With Cedar Corner selected and check-in Sep 1 2026, type Sep 7 2026 as check-out, then change the check-out to Sep 8 2026.",
+          "expected": "At 6 nights the breakdown shows no discount line and a $1,265 total; the instant the check-out makes it 7 nights, a $126 long-stay discount line appears and the total reads $1,325 — all without pressing any calculate button.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the estimator, type a check-out date that is earlier than the check-in date.",
+          "expected": "A clear validation message appears and no negative or nonsense total is shown; entering a valid later check-out makes the breakdown reappear.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Open the apartment picker inside the trip cost estimator.",
+          "expected": "Every option is labeled with name and neighborhood together, like Cedar Corner · Riverside.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the fit ranker, click the Pet-friendly chip, click the Budget chip, and type 130 into the nightly budget box.",
+          "expected": "All seven listings stay on screen — nothing gets hidden — with the line reading 3 top fits of 7: Dockside Nook · Old Port, Garden Studio · Midtown, and Willow Walk-up · Riverside rank on top, each scored Fit 3/5, the $95 tie putting Dockside before Garden alphabetically, while Sunset Flat · Old Port sits last at Fit 0/5.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.14692,
+        "model_calls": 8,
+        "input_tokens_total": 438779,
+        "output_tokens": 8537,
+        "judge_usd": 0.4672
+      }
+    },
+    {
+      "turn": 4,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the host inbox and look at Priya's request for Sunset Flat.",
+          "expected": "The row reads Aug 12 → Aug 15 with 3 nights and a $435 nightly subtotal (3 × $145), carrying an amber Pending badge — not 4 nights or $580.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the host inbox, approve Priya's request for Sunset Flat, then open the booking records.",
+          "expected": "The request switches to a green Confirmed badge in the inbox, and the same booking appears as Confirmed in the booking records too.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the host inbox, click decline on Marco's Maple Suite request.",
+          "expected": "A confirmation prompt appears before anything happens; after confirming, the request shows a gray Declined badge.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Book Harbor Loft, which carries the Instant Book badge, for Oct 20 2026 to Oct 22 2026.",
+          "expected": "No approval step happens: the booking is immediately Confirmed with a green badge in the booking records, and it never shows up as Pending in the host inbox.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the trip cost estimator, pick Cedar Corner, and type Sep 1 2026 as check-in and Sep 8 2026 as check-out.",
+          "expected": "It shows 7 nights with a $1,260 nightly subtotal, a $126 long-stay discount taken off, a $60 cleaning fee, a $131 service fee, and a $1,325 total — not 8 nights, and not a total missing the discount.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 0,
+      "no": 1,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.318632,
+        "model_calls": 20,
+        "input_tokens_total": 1514501,
+        "output_tokens": 15310,
+        "judge_usd": 0.3802
+      }
+    },
+    {
+      "turn": 5,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open Harbor Loft's listing page and look at its August 2026 availability calendar.",
+          "expected": "Exactly four nights are blocked — Aug 10, 11, 12, and 13 — while Aug 14 is still open, because that's the checkout day.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "On Harbor Loft's listing page, try to book Aug 8 2026 to Aug 12 2026.",
+          "expected": "The booking is stopped with a message about unavailable nights; no booking is created and the page does not crash.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open Maple Suite's listing page and look at Sep 3 through Sep 5 on its calendar.",
+          "expected": "Those nights show as available — Marco's request is only Pending, and pending requests don't block the calendar.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the host inbox, approve Priya's Sunset Flat request, then open Sunset Flat's listing page and look at its August calendar.",
+          "expected": "Aug 12, 13, and 14 are now blocked on Sunset Flat's calendar, while Aug 15 stays open as the checkout day.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the fit ranker, with no chips picked, type 100 into the nightly budget box.",
+          "expected": "All seven listings stay visible; Dockside Nook · Old Port and Garden Studio · Midtown move to the top each scored Fit 1/1, the line reads 2 top fits of 7, and the rest follow in price low-to-high order with Maple Suite before Willow Walk-up on the $120 tie.",
+          "verdict": "partial"
+        }
+      ],
+      "yes": 0,
+      "partial": 2,
+      "no": 3,
+      "total": 5,
+      "accuracy": 20.0,
+      "cost": {
+        "generation_usd": 0.369456,
+        "model_calls": 19,
+        "input_tokens_total": 1862037,
+        "output_tokens": 13902,
+        "judge_usd": 1.0224
+      }
+    },
+    {
+      "turn": 6,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the fit ranker page and then the trip cost estimator page and compare their styling.",
+          "expected": "On both pages the primary action buttons are pill-shaped maroon with white text and the page headings are left-aligned in a serif typeface — the same treatment on both.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the host inbox and the booking records and look at the status badges on each.",
+          "expected": "On both pages the status badges are outlined pills — amber outline for Pending, green for Confirmed, gray for Declined — instead of solid fills, styled the same in both places.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open the fit ranker with no chips picked and nothing typed in the budget box.",
+          "expected": "All 7 apartments appear as rounded soft-shadow cards with the plain 7 stays line above them, still in price low-to-high order starting with Dockside Nook, then Garden Studio, then Maple Suite.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the restyled host inbox, approve Marco's Maple Suite request.",
+          "expected": "Its outlined amber Pending pill switches to an outlined green Confirmed pill, and the booking shows as Confirmed in the booking records as well.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open Harbor Loft's listing page and look at its August 2026 availability calendar.",
+          "expected": "Exactly four nights are blocked — Aug 10, 11, 12, and 13 — while Aug 14 is still open, because that's the checkout day.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 2,
+      "partial": 0,
+      "no": 3,
+      "total": 5,
+      "accuracy": 40.0,
+      "cost": {
+        "generation_usd": 0.437481,
+        "model_calls": 16,
+        "input_tokens_total": 1510120,
+        "output_tokens": 14013,
+        "judge_usd": 0.6051
+      }
+    },
+    {
+      "turn": 7,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the shortlist page, where Willow Walk-up starts out saved, and type Sep 1 2026 to Sep 6 2026 as the trip dates.",
+          "expected": "Willow Walk-up · Riverside shows a $733 total — $600 for 5 nights plus the $60 cleaning fee plus a $73 service fee, with $72.60 rounded up to $73, not a $732 total.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the fit ranker, click Willow Walk-up's save toggle to remove it, then open the shortlist page.",
+          "expected": "The shortlist shows a friendly empty message — no blank screen, no leftover comparison table, no crash.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the fit ranker, save Maple Suite, then on the shortlist page type Sep 1 2026 to Sep 6 2026 as the trip dates.",
+          "expected": "Maple Suite and Willow Walk-up both show a $733 total and both carry the cheapest-stay highlight — the tie doesn't leave one of them unmarked.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "On the fit ranker, save Cedar Corner, then on the shortlist page type Sep 1 2026 to Sep 8 2026 as the trip dates.",
+          "expected": "Cedar Corner's total reads $1,325 — the same figure the trip cost estimator produces for those dates, long-stay discount included.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the host inbox and look at Priya's request for Sunset Flat.",
+          "expected": "The row reads Aug 12 → Aug 15 with 3 nights and a $435 nightly subtotal (3 × $145), carrying an amber Pending badge — not 4 nights or $580.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.241655,
+        "model_calls": 17,
+        "input_tokens_total": 1150426,
+        "output_tokens": 10094,
+        "judge_usd": 0.76
+      }
+    },
+    {
+      "turn": 8,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "In the trip planner, add a stop with Willow Walk-up for Sep 1 2026 to Sep 4 2026, then finalize the plan.",
+          "expected": "The review shows the stop with its price breakdown, and finalizing leads to a confirmation view with the itinerary as plain text in a copyable block on screen.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the trip planner, add Willow Walk-up for Sep 1 2026 to Sep 4 2026 and Cedar Corner for Sep 4 2026 to Sep 7 2026, then look at the review totals.",
+          "expected": "No overlap complaint appears — checking out and into the next place on Sep 4 is allowed — and the grand total reads $1,132, which is $466 for Willow plus $666 for Cedar.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the trip planner, add Willow Walk-up for Sep 1 2026 to Sep 4 2026 and Cedar Corner for Sep 3 2026 to Sep 7 2026.",
+          "expected": "The planner flags the overlap between the two stops and blocks finalizing until it's fixed.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the trip planner, try to add a stop with Harbor Loft for Aug 11 2026 to Aug 13 2026.",
+          "expected": "The planner rejects the stop because those nights are blocked by Harbor Loft's confirmed Aug 10 → Aug 14 stay on its availability calendar.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "On Harbor Loft's listing page, try to book Aug 8 2026 to Aug 12 2026.",
+          "expected": "The booking is stopped with a message about unavailable nights; no booking is created and the page does not crash.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 2,
+      "partial": 1,
+      "no": 2,
+      "total": 5,
+      "accuracy": 50.0,
+      "cost": {
+        "generation_usd": 0.208821,
+        "model_calls": 9,
+        "input_tokens_total": 702916,
+        "output_tokens": 8710,
+        "judge_usd": 0.6421
+      }
+    },
+    {
+      "turn": 9,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the neighborhood insights page and look at the Old Port card.",
+          "expected": "It shows 3 listings, a $128 average nightly rate, a 4.5 average rating (4.466 rounded up, not 4.4), and 2 confirmed stays — Priya's pending request doesn't count.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 1,
+          "task": "Look at the order of the neighborhood cards on the insights page.",
+          "expected": "Old Port comes first with 3 listings, then Midtown, then Riverside — the two-listing tie between Midtown and Riverside is broken alphabetically.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the Old Port card, check which listing is named most-booked.",
+          "expected": "It reads Dockside Nook — tied with Harbor Loft at one confirmed stay each, and the tie goes alphabetically, so it is not Harbor Loft.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the host inbox, approve Marco's Maple Suite request, then return to the neighborhood insights page.",
+          "expected": "Midtown's confirmed-stay count rises from 0 to 1 and its most-booked listing now reads Maple Suite.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the shortlist page, where Willow Walk-up starts out saved, and type Sep 1 2026 to Sep 6 2026 as the trip dates.",
+          "expected": "Willow Walk-up · Riverside shows a $733 total — $600 for 5 nights plus the $60 cleaning fee plus a $73 service fee, with $72.60 rounded up to $73, not a $732 total.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 1,
+      "no": 0,
+      "total": 5,
+      "accuracy": 90.0,
+      "cost": {
+        "generation_usd": 0.240576,
+        "model_calls": 11,
+        "input_tokens_total": 980756,
+        "output_tokens": 7057,
+        "judge_usd": 0.1746
+      }
+    },
+    {
+      "turn": 10,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "runtime": {
+        "checks_affected": 1,
+        "errors": [
+          "http://localhost:5200/src/pages/FlexibleStay.jsx 43:37 Uncaught RangeError: Invalid time value",
+          "http://localhost:5200/node_modules/.vite/deps/chunk-QXLG2TGQ.js?v=433cad89 9173:14 Uncaught RangeError: Invalid time value"
+        ]
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "In the flexible-stay finder, choose August 2026 and type 10 into the nights box.",
+          "expected": "Harbor Loft's row shows Aug 14 as its earliest possible check-in — the stretch before the booking is only 9 nights, and checkout day Aug 14 counts as free — not Aug 15.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "With August 2026 chosen in the finder, type 31 into the nights box, then change it to 32.",
+          "expected": "At 31 nights six apartments qualify and Harbor Loft is missing from the list; at 32 a clear no-results or validation message appears instead of a crash, updating live as the number changes.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the finder, choose September 2026 and type 4 into the nights box.",
+          "expected": "All seven apartments are listed, ordered by nightly rate low-to-high, with Dockside Nook before Garden Studio on the $95 tie.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the host inbox, approve Priya's Sunset Flat request, then in the finder choose August 2026 and type 20 into the nights box.",
+          "expected": "Sunset Flat is not in the results — once Aug 12 through 14 are blocked its longest open August stretch is 17 nights, too short for 20.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the fit ranker, click only the Waterfront chip, then click it again to turn it off.",
+          "expected": "With the chip on, all seven listings remain visible, the line reads 3 top fits of 7, and Dockside Nook, Harbor Loft, and Sunset Flat rise to the top each scored Fit 2/2, Harbor before Sunset on the $145 price tie; turning the chip off drops the scores, returns the plain 7 stays line, and leaves the grid in price low-to-high order.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 2,
+      "partial": 2,
+      "no": 1,
+      "total": 5,
+      "accuracy": 60.0,
+      "cost": {
+        "generation_usd": 0.260705,
+        "model_calls": 8,
+        "input_tokens_total": 483579,
+        "output_tokens": 6729,
+        "judge_usd": 0.4877
+      }
+    }
+  ]
+}

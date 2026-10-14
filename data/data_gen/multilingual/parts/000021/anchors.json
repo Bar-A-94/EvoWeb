@@ -1,0 +1,623 @@
+{
+ "anchors": [
+  {
+   "en": "menu page",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1,
+    2,
+    8
+   ],
+   "translations": {
+    "zh": "菜单页面",
+    "he": "עמוד התפריט",
+    "hi": "मेन्यू पेज",
+    "de": "Menüseite",
+    "fr": "page Menu"
+   }
+  },
+  {
+   "en": "private poker room",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1
+   ],
+   "translations": {
+    "zh": "私人扑克房",
+    "he": "חדר הפוקר הפרטי",
+    "hi": "प्राइवेट पोकर रूम",
+    "de": "Privater Pokerraum",
+    "fr": "salle de poker privée"
+   }
+  },
+  {
+   "en": "events and promotions",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1
+   ],
+   "translations": {
+    "zh": "活动与优惠",
+    "he": "אירועים ומבצעים",
+    "hi": "इवेंट्स और प्रमोशन्स",
+    "de": "Veranstaltungen und Aktionen",
+    "fr": "événements et promotions"
+   }
+  },
+  {
+   "en": "events & promotions",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    3,
+    5
+   ],
+   "translations": {
+    "zh": "活动与优惠",
+    "he": "אירועים ומבצעים",
+    "hi": "इवेंट्स और प्रमोशन्स",
+    "de": "Veranstaltungen und Aktionen",
+    "fr": "événements et promotions"
+   }
+  },
+  {
+   "en": "reservation form",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    1,
+    2
+   ],
+   "translations": {
+    "zh": "预订表单",
+    "he": "טופס ההזמנות",
+    "hi": "रिज़र्वेशन फ़ॉर्म",
+    "de": "Reservierungsformular",
+    "fr": "formulaire de réservation"
+   }
+  },
+  {
+   "en": "Bourbon Library",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3,
+    4,
+    8,
+    9
+   ],
+   "translations": {
+    "zh": "波本酒库",
+    "he": "ספריית הבורבון",
+    "hi": "बर्बन लाइब्रेरी",
+    "de": "Bourbon-Bibliothek",
+    "fr": "Bibliothèque des Bourbons"
+   }
+  },
+  {
+   "en": "Bourbon style box",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3
+   ],
+   "translations": {
+    "zh": "波本类型复选框",
+    "he": "תיבת הסימון של סגנון בורבון",
+    "hi": "बर्बन स्टाइल बॉक्स",
+    "de": "Stil-Kästchen Bourbon",
+    "fr": "case de style Bourbon"
+   }
+  },
+  {
+   "en": "minimum proof",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3
+   ],
+   "translations": {
+    "zh": "最低酒度",
+    "he": "פרוף מינימלי",
+    "hi": "न्यूनतम प्रूफ़",
+    "de": "Mindest-Proof",
+    "fr": "proof minimum"
+   }
+  },
+  {
+   "en": "maximum pour price",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3
+   ],
+   "translations": {
+    "zh": "最高单杯价格",
+    "he": "מחיר מקסימלי למנה",
+    "hi": "अधिकतम पोर कीमत",
+    "de": "Höchstpreis pro Ausschank",
+    "fr": "prix maximum par verre"
+   }
+  },
+  {
+   "en": "Members Only",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3,
+    4
+   ],
+   "translations": {
+    "zh": "仅限会员",
+    "he": "חברים בלבד",
+    "hi": "केवल सदस्य",
+    "de": "Nur für Mitglieder",
+    "fr": "Réservé aux membres"
+   }
+  },
+  {
+   "en": "high proof — water back recommended",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    4
+   ],
+   "translations": {
+    "zh": "高酒度 — 建议配水",
+    "he": "פרוף גבוה — מומלץ מים בצד",
+    "hi": "हाई प्रूफ़ — साथ में पानी लेने की सलाह",
+    "de": "hoher Proof — Wasser dazu empfohlen",
+    "fr": "proof élevé — verre d'eau recommandé"
+   }
+  },
+  {
+   "en": "tournament calendar",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    3,
+    5,
+    8
+   ],
+   "translations": {
+    "zh": "锦标赛日历",
+    "he": "לוח הטורנירים",
+    "hi": "टूर्नामेंट कैलेंडर",
+    "de": "Turnierkalender",
+    "fr": "calendrier des tournois"
+   }
+  },
+  {
+   "en": "My Registrations",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    3
+   ],
+   "translations": {
+    "zh": "我的报名",
+    "he": "ההרשמות שלי",
+    "hi": "मेरी रजिस्ट्रेशन",
+    "de": "Meine Anmeldungen",
+    "fr": "Mes inscriptions"
+   }
+  },
+  {
+   "en": "flight builder",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    4,
+    6,
+    8,
+    10
+   ],
+   "translations": {
+    "zh": "品鉴套组搭配器",
+    "he": "בונה הפלייטים",
+    "hi": "फ़्लाइट बिल्डर",
+    "de": "Verkostungs-Baukasten",
+    "fr": "assembleur de dégustations"
+   }
+  },
+  {
+   "en": "My Flights",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    4
+   ],
+   "translations": {
+    "zh": "我的品鉴套组",
+    "he": "הפלייטים שלי",
+    "hi": "मेरी फ़्लाइट्स",
+    "de": "Meine Verkostungen",
+    "fr": "Mes dégustations"
+   }
+  },
+  {
+   "en": "night board",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5,
+    7
+   ],
+   "translations": {
+    "zh": "夜场看板",
+    "he": "לוח הלילות",
+    "hi": "नाइट बोर्ड",
+    "de": "Nächte-Tafel",
+    "fr": "tableau des soirées"
+   }
+  },
+  {
+   "en": "My Passes",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5,
+    7
+   ],
+   "translations": {
+    "zh": "我的通行证",
+    "he": "הכרטיסים שלי",
+    "hi": "मेरे पासेस",
+    "de": "Meine Pässe",
+    "fr": "Mes pass"
+   }
+  },
+  {
+   "en": "guest pass",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5,
+    7,
+    10
+   ],
+   "translations": {
+    "zh": "访客通行证",
+    "he": "כרטיס אורח",
+    "hi": "गेस्ट पास",
+    "de": "Gästepass",
+    "fr": "pass invité"
+   }
+  },
+  {
+   "en": "sold out",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5
+   ],
+   "translations": {
+    "zh": "已售罄",
+    "he": "אזל",
+    "hi": "सोल्ड आउट",
+    "de": "ausverkauft",
+    "fr": "complet"
+   }
+  },
+  {
+   "en": "tournament nights",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5,
+    10
+   ],
+   "translations": {
+    "zh": "锦标赛之夜",
+    "he": "לילות טורניר",
+    "hi": "टूर्नामेंट नाइट्स",
+    "de": "Turnierabende",
+    "fr": "soirées de tournoi"
+   }
+  },
+  {
+   "en": "gift card studio",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    6,
+    7,
+    8
+   ],
+   "translations": {
+    "zh": "礼品卡工作室",
+    "he": "סטודיו כרטיסי המתנה",
+    "hi": "गिफ़्ट कार्ड स्टूडियो",
+    "de": "Geschenkkarten-Studio",
+    "fr": "studio de cartes-cadeaux"
+   }
+  },
+  {
+   "en": "purchase history",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    6
+   ],
+   "translations": {
+    "zh": "购买记录",
+    "he": "היסטוריית הרכישות",
+    "hi": "खरीद इतिहास",
+    "de": "Kaufhistorie",
+    "fr": "historique des achats"
+   }
+  },
+  {
+   "en": "Player's Ledger",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    7,
+    9
+   ],
+   "translations": {
+    "zh": "玩家积分簿",
+    "he": "פנקס השחקן",
+    "hi": "प्लेयर लेजर",
+    "de": "Spielerbuch",
+    "fr": "Carnet du Joueur"
+   }
+  },
+  {
+   "en": "Tasting Journal",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    9
+   ],
+   "translations": {
+    "zh": "品鉴日志",
+    "he": "יומן הטעימות",
+    "hi": "टेस्टिंग जर्नल",
+    "de": "Verkostungsjournal",
+    "fr": "Journal de Dégustation"
+   }
+  },
+  {
+   "en": "Top Shelf",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    9
+   ],
+   "translations": {
+    "zh": "顶级酒架",
+    "he": "המדף העליון",
+    "hi": "टॉप शेल्फ",
+    "de": "Spitzenregal",
+    "fr": "Haut de Gamme"
+   }
+  },
+  {
+   "en": "Night Out Planner",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    10
+   ],
+   "translations": {
+    "zh": "夜晚行程规划器",
+    "he": "מתכנן ערב הבילוי",
+    "hi": "नाइट आउट प्लानर",
+    "de": "Abendplaner",
+    "fr": "Planificateur de Soirée"
+   }
+  },
+  {
+   "en": "My Night",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    10
+   ],
+   "translations": {
+    "zh": "我的夜晚",
+    "he": "הלילה שלי",
+    "hi": "मेरी नाइट",
+    "de": "Mein Abend",
+    "fr": "Ma Soirée"
+   }
+  },
+  {
+   "en": "The All-In Bourbon Bar",
+   "class": "keep",
+   "kind": "proper_noun"
+  },
+  {
+   "en": "All-In",
+   "class": "keep",
+   "kind": "proper_noun"
+  },
+  {
+   "en": "Amber Creek Small Batch",
+   "class": "keep",
+   "kind": "proper_noun"
+  },
+  {
+   "en": "Amber Creek",
+   "class": "keep",
+   "kind": "proper_noun"
+  },
+  {
+   "en": "Copper Stakes Single Barrel",
+   "class": "keep",
+   "kind": "proper_noun"
+  },
+  {
+   "en": "Riverboat Reserve",
+   "class": "keep",
+   "kind": "proper_noun"
+  },
+  {
+   "en": "High Card Rye",
+   "class": "keep",
+   "kind": "proper_noun"
+  },
+  {
+   "en": "Dead Man's Hand Barrel Proof",
+   "class": "keep",
+   "kind": "proper_noun"
+  },
+  {
+   "en": "Dead Man's Hand",
+   "class": "keep",
+   "kind": "proper_noun"
+  },
+  {
+   "en": "Velvet Ace Wheated",
+   "class": "keep",
+   "kind": "proper_noun"
+  },
+  {
+   "en": "Velvet Ace",
+   "class": "keep",
+   "kind": "proper_noun"
+  },
+  {
+   "en": "Old Bluff Bottled-in-Bond",
+   "class": "keep",
+   "kind": "proper_noun"
+  },
+  {
+   "en": "Old Bluff",
+   "class": "keep",
+   "kind": "proper_noun"
+  },
+  {
+   "en": "Full House Toasted",
+   "class": "keep",
+   "kind": "proper_noun"
+  },
+  {
+   "en": "Summer Showdown Main Event",
+   "class": "keep",
+   "kind": "proper_noun"
+  },
+  {
+   "en": "Summer Showdown",
+   "class": "keep",
+   "kind": "proper_noun"
+  },
+  {
+   "en": "Midnight Bourbon Bounty",
+   "class": "keep",
+   "kind": "proper_noun"
+  },
+  {
+   "en": "High Card Heads-Up",
+   "class": "keep",
+   "kind": "proper_noun"
+  },
+  {
+   "en": "Rookie Night Freeroll",
+   "class": "keep",
+   "kind": "proper_noun"
+  },
+  {
+   "en": "Autumn All-In Classic",
+   "class": "keep",
+   "kind": "proper_noun"
+  },
+  {
+   "en": "Dealer's Choice",
+   "class": "keep",
+   "kind": "proper_noun"
+  },
+  {
+   "en": "Ante",
+   "class": "keep",
+   "kind": "proper_noun"
+  },
+  {
+   "en": "High Roller",
+   "class": "keep",
+   "kind": "proper_noun"
+  },
+  {
+   "en": "Ray",
+   "class": "keep",
+   "kind": "proper_noun"
+  },
+  {
+   "en": "Lena",
+   "class": "keep",
+   "kind": "proper_noun"
+  },
+  {
+   "en": "Danny",
+   "class": "keep",
+   "kind": "proper_noun"
+  },
+  {
+   "en": "ray@example.com",
+   "class": "keep",
+   "kind": "tech"
+  },
+  {
+   "en": "AIB-",
+   "class": "keep",
+   "kind": "tech"
+  },
+  {
+   "en": "Happy birthday",
+   "class": "keep",
+   "kind": "content_text"
+  },
+  {
+   "en": "proof",
+   "class": "keep",
+   "kind": "value_format"
+  },
+  {
+   "en": "ABV",
+   "class": "keep",
+   "kind": "value_format"
+  },
+  {
+   "en": "12px",
+   "class": "keep",
+   "kind": "value_format"
+  },
+  {
+   "en": "peach puff",
+   "class": "keep",
+   "kind": "css_visual"
+  },
+  {
+   "en": "indian red",
+   "class": "keep",
+   "kind": "css_visual"
+  },
+  {
+   "en": "saddle-brown",
+   "class": "keep",
+   "kind": "css_visual"
+  },
+  {
+   "en": "dark green",
+   "class": "keep",
+   "kind": "css_visual"
+  },
+  {
+   "en": "gold",
+   "class": "keep",
+   "kind": "css_visual",
+   "requests": [
+    8
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1017 @@
+{
+  "anchors": [
+    {
+      "en": "Fundraiser Day",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        1,
+        5
+      ],
+      "translations": {
+        "zh": "募捐日",
+        "he": "יום ההתרמה",
+        "hi": "धन संग्रह दिवस",
+        "de": "Spendentag",
+        "fr": "Journée de Collecte"
+      }
+    },
+    {
+      "en": "Supporter Wall",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        2,
+        3,
+        6,
+        9
+      ],
+      "translations": {
+        "zh": "支持者墙",
+        "he": "קיר התומכים",
+        "hi": "समर्थक दीवार",
+        "de": "Unterstützerwand",
+        "fr": "Mur des Donateurs"
+      }
+    },
+    {
+      "en": "supporter wall",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        3,
+        5,
+        6,
+        8,
+        9
+      ],
+      "translations": {
+        "zh": "支持者墙",
+        "he": "קיר התומכים",
+        "hi": "समर्थक दीवार",
+        "de": "Unterstützerwand",
+        "fr": "Mur des Donateurs"
+      }
+    },
+    {
+      "en": "Campaign Pulse",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        4,
+        5,
+        9
+      ],
+      "translations": {
+        "zh": "活动脉搏",
+        "he": "דופק הקמפיין",
+        "hi": "अभियान की धड़कन",
+        "de": "Kampagnenpuls",
+        "fr": "Pouls de la Campagne"
+      }
+    },
+    {
+      "en": "Day Schedule",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        5
+      ],
+      "translations": {
+        "zh": "当日日程",
+        "he": "לוח היום",
+        "hi": "दिन का कार्यक्रम",
+        "de": "Tagesprogramm",
+        "fr": "Programme de la Journée"
+      }
+    },
+    {
+      "en": "My Day",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        5
+      ],
+      "translations": {
+        "zh": "我的一天",
+        "he": "היום שלי",
+        "hi": "मेरा दिन",
+        "de": "Mein Tag",
+        "fr": "Ma Journée"
+      }
+    },
+    {
+      "en": "Share Studio",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        7,
+        10
+      ],
+      "translations": {
+        "zh": "分享工作室",
+        "he": "סטודיו השיתוף",
+        "hi": "शेयर स्टूडियो",
+        "de": "Teilen-Studio",
+        "fr": "Studio de Partage"
+      }
+    },
+    {
+      "en": "Updates Hub",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        8
+      ],
+      "translations": {
+        "zh": "更新中心",
+        "he": "מרכז העדכונים",
+        "hi": "अपडेट केंद्र",
+        "de": "Neuigkeiten-Zentrale",
+        "fr": "Centre des Actualités"
+      }
+    },
+    {
+      "en": "Subscribers",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        8
+      ],
+      "translations": {
+        "zh": "订阅者",
+        "he": "מנויים",
+        "hi": "सब्सक्राइबर",
+        "de": "Abonnenten",
+        "fr": "Abonnés"
+      }
+    },
+    {
+      "en": "Impact Report",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        10
+      ],
+      "translations": {
+        "zh": "影响力报告",
+        "he": "דוח ההשפעה",
+        "hi": "प्रभाव रिपोर्ट",
+        "de": "Wirkungsbericht",
+        "fr": "Rapport d'Impact"
+      }
+    },
+    {
+      "en": "partner directory",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        6,
+        8,
+        9
+      ],
+      "translations": {
+        "zh": "合作伙伴目录",
+        "he": "מדריך השותפים",
+        "hi": "साझेदार निर्देशिका",
+        "de": "Partnerverzeichnis",
+        "fr": "annuaire des partenaires"
+      }
+    },
+    {
+      "en": "pledge form",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10
+      ],
+      "translations": {
+        "zh": "捐赠表单",
+        "he": "טופס התרומה",
+        "hi": "दान फ़ॉर्म",
+        "de": "Spendenformular",
+        "fr": "formulaire de don"
+      }
+    },
+    {
+      "en": "Gold",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        2,
+        3,
+        6,
+        9
+      ],
+      "translations": {
+        "zh": "金级",
+        "he": "זהב",
+        "hi": "स्वर्ण",
+        "de": "Gold",
+        "fr": "Or"
+      }
+    },
+    {
+      "en": "Silver",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        2,
+        3,
+        9
+      ],
+      "translations": {
+        "zh": "银级",
+        "he": "כסף",
+        "hi": "रजत",
+        "de": "Silber",
+        "fr": "Argent"
+      }
+    },
+    {
+      "en": "Bronze",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        2,
+        3,
+        9
+      ],
+      "translations": {
+        "zh": "铜级",
+        "he": "ארד",
+        "hi": "कांस्य",
+        "de": "Bronze",
+        "fr": "Bronze"
+      }
+    },
+    {
+      "en": "Clean Water",
+      "class": "translate",
+      "kind": "content_text",
+      "requests": [
+        2,
+        3,
+        5,
+        6,
+        8,
+        10
+      ],
+      "translations": {
+        "zh": "清洁水",
+        "he": "מים נקיים",
+        "hi": "स्वच्छ जल",
+        "de": "Sauberes Wasser",
+        "fr": "Eau Potable"
+      }
+    },
+    {
+      "en": "Education",
+      "class": "translate",
+      "kind": "content_text",
+      "requests": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10
+      ],
+      "translations": {
+        "zh": "教育",
+        "he": "חינוך",
+        "hi": "शिक्षा",
+        "de": "Bildung",
+        "fr": "Éducation"
+      }
+    },
+    {
+      "en": "Food Relief",
+      "class": "translate",
+      "kind": "content_text",
+      "requests": [
+        2,
+        3,
+        5,
+        6,
+        8,
+        9,
+        10
+      ],
+      "translations": {
+        "zh": "食品援助",
+        "he": "סיוע מזון",
+        "hi": "भोजन सहायता",
+        "de": "Lebensmittelhilfe",
+        "fr": "Aide Alimentaire"
+      }
+    },
+    {
+      "en": "Event news",
+      "class": "translate",
+      "kind": "content_text",
+      "requests": [
+        8
+      ],
+      "translations": {
+        "zh": "活动资讯",
+        "he": "חדשות האירוע",
+        "hi": "कार्यक्रम समाचार",
+        "de": "Neuigkeiten zur Veranstaltung",
+        "fr": "Actualités de l'événement"
+      }
+    },
+    {
+      "en": "Opening Ceremony",
+      "class": "translate",
+      "kind": "content_text",
+      "requests": [
+        5
+      ],
+      "translations": {
+        "zh": "开幕式",
+        "he": "טקס הפתיחה",
+        "hi": "उद्घाटन समारोह",
+        "de": "Eröffnungsfeier",
+        "fr": "Cérémonie d'Ouverture"
+      }
+    },
+    {
+      "en": "Bake Sale Kickoff",
+      "class": "translate",
+      "kind": "content_text",
+      "requests": [
+        5
+      ],
+      "translations": {
+        "zh": "烘焙义卖启动",
+        "he": "פתיחת מכירת המאפים",
+        "hi": "बेक सेल शुरुआत",
+        "de": "Auftakt des Kuchenverkaufs",
+        "fr": "Lancement de la Vente de Gâteaux"
+      }
+    },
+    {
+      "en": "Charity Fun Run",
+      "class": "translate",
+      "kind": "content_text",
+      "requests": [
+        5
+      ],
+      "translations": {
+        "zh": "慈善趣味跑",
+        "he": "ריצת הצדקה",
+        "hi": "चैरिटी फन रन",
+        "de": "Wohltätigkeitslauf",
+        "fr": "Course Solidaire"
+      }
+    },
+    {
+      "en": "Silent Auction Preview",
+      "class": "translate",
+      "kind": "content_text",
+      "requests": [
+        5,
+        7
+      ],
+      "translations": {
+        "zh": "无声拍卖预展",
+        "he": "תצוגה מקדימה של המכירה השקטה",
+        "hi": "साइलेंट नीलामी पूर्वावलोकन",
+        "de": "Vorschau der Stillen Auktion",
+        "fr": "Avant-première de la Vente aux Enchères Silencieuse"
+      }
+    },
+    {
+      "en": "Donor Lunch",
+      "class": "translate",
+      "kind": "content_text",
+      "requests": [
+        5,
+        7
+      ],
+      "translations": {
+        "zh": "捐赠者午宴",
+        "he": "ארוחת התורמים",
+        "hi": "दानदाता भोज",
+        "de": "Spender-Mittagessen",
+        "fr": "Déjeuner des Donateurs"
+      }
+    },
+    {
+      "en": "Closing Concert",
+      "class": "translate",
+      "kind": "content_text",
+      "requests": [
+        5
+      ],
+      "translations": {
+        "zh": "闭幕音乐会",
+        "he": "קונצרט הסיום",
+        "hi": "समापन संगीत कार्यक्रम",
+        "de": "Abschlusskonzert",
+        "fr": "Concert de Clôture"
+      }
+    },
+    {
+      "en": "water filter",
+      "class": "translate",
+      "kind": "content_text",
+      "requests": [
+        10
+      ],
+      "translations": {
+        "zh": "净水滤芯",
+        "he": "מסנן מים",
+        "hi": "पानी का फ़िल्टर",
+        "de": "Wasserfilter",
+        "fr": "filtre à eau"
+      }
+    },
+    {
+      "en": "water filters",
+      "class": "translate",
+      "kind": "content_text",
+      "requests": [
+        10
+      ],
+      "translations": {
+        "zh": "净水滤芯",
+        "he": "מסנני מים",
+        "hi": "पानी के फ़िल्टर",
+        "de": "Wasserfilter",
+        "fr": "filtres à eau"
+      }
+    },
+    {
+      "en": "book bundle",
+      "class": "translate",
+      "kind": "content_text",
+      "requests": [
+        10
+      ],
+      "translations": {
+        "zh": "图书包",
+        "he": "חבילת ספרים",
+        "hi": "पुस्तक बंडल",
+        "de": "Bücherpaket",
+        "fr": "lot de livres"
+      }
+    },
+    {
+      "en": "book bundles",
+      "class": "translate",
+      "kind": "content_text",
+      "requests": [
+        10
+      ],
+      "translations": {
+        "zh": "图书包",
+        "he": "חבילות ספרים",
+        "hi": "पुस्तक बंडल",
+        "de": "Bücherpakete",
+        "fr": "lots de livres"
+      }
+    },
+    {
+      "en": "meal box",
+      "class": "translate",
+      "kind": "content_text",
+      "requests": [
+        10
+      ],
+      "translations": {
+        "zh": "餐食箱",
+        "he": "ארגז מזון",
+        "hi": "भोजन बॉक्स",
+        "de": "Essenspaket",
+        "fr": "boîte-repas"
+      }
+    },
+    {
+      "en": "meal boxes",
+      "class": "translate",
+      "kind": "content_text",
+      "requests": [
+        10
+      ],
+      "translations": {
+        "zh": "餐食箱",
+        "he": "ארגזי מזון",
+        "hi": "भोजन बॉक्स",
+        "de": "Essenspakete",
+        "fr": "boîtes-repas"
+      }
+    },
+    {
+      "en": "total raised",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        4,
+        5,
+        7,
+        9
+      ],
+      "translations": {
+        "zh": "已筹总额",
+        "he": "סך הכל שגויס",
+        "hi": "कुल जुटाई गई राशि",
+        "de": "gesammelte Gesamtsumme",
+        "fr": "total collecté"
+      }
+    },
+    {
+      "en": "supporter count",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        4,
+        7
+      ],
+      "translations": {
+        "zh": "支持者人数",
+        "he": "מספר התומכים",
+        "hi": "समर्थकों की संख्या",
+        "de": "Anzahl der Unterstützer",
+        "fr": "nombre de donateurs"
+      }
+    },
+    {
+      "en": "team leaderboard",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        4
+      ],
+      "translations": {
+        "zh": "团队排行榜",
+        "he": "טבלת הקבוצות",
+        "hi": "टीम लीडरबोर्ड",
+        "de": "Team-Rangliste",
+        "fr": "classement des équipes"
+      }
+    },
+    {
+      "en": "custom amount",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        3
+      ],
+      "translations": {
+        "zh": "自定义金额",
+        "he": "סכום מותאם אישית",
+        "hi": "कस्टम राशि",
+        "de": "eigener Betrag",
+        "fr": "montant libre"
+      }
+    },
+    {
+      "en": "processing fee",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        3,
+        4
+      ],
+      "translations": {
+        "zh": "手续费",
+        "he": "עמלת עיבוד",
+        "hi": "प्रोसेसिंग शुल्क",
+        "de": "Bearbeitungsgebühr",
+        "fr": "frais de traitement"
+      }
+    },
+    {
+      "en": "Showing X of 9",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        6
+      ],
+      "translations": {
+        "zh": "显示 X 个，共 9 个",
+        "he": "מציג X מתוך 9",
+        "hi": "9 में से X दिखा रहे हैं",
+        "de": "Zeige X von 9",
+        "fr": "Affichage de X sur 9"
+      }
+    },
+    {
+      "en": "Showing 3 of 9",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        6
+      ],
+      "translations": {
+        "zh": "显示 3 个，共 9 个",
+        "he": "מציג 3 מתוך 9",
+        "hi": "9 में से 3 दिखा रहे हैं",
+        "de": "Zeige 3 von 9",
+        "fr": "Affichage de 3 sur 9"
+      }
+    },
+    {
+      "en": "North",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        6,
+        8
+      ],
+      "translations": {
+        "zh": "北部",
+        "he": "צפון",
+        "hi": "उत्तर",
+        "de": "Norden",
+        "fr": "Nord"
+      }
+    },
+    {
+      "en": "South",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        6
+      ],
+      "translations": {
+        "zh": "南部",
+        "he": "דרום",
+        "hi": "दक्षिण",
+        "de": "Süden",
+        "fr": "Sud"
+      }
+    },
+    {
+      "en": "East",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        6
+      ],
+      "translations": {
+        "zh": "东部",
+        "he": "מזרח",
+        "hi": "पूर्व",
+        "de": "Osten",
+        "fr": "Est"
+      }
+    },
+    {
+      "en": "weekly",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        8
+      ],
+      "translations": {
+        "zh": "每周",
+        "he": "שבועי",
+        "hi": "साप्ताहिक",
+        "de": "wöchentlich",
+        "fr": "hebdomadaire"
+      }
+    },
+    {
+      "en": "monthly",
+      "class": "translate",
+      "kind": "ui_label",
+      "requests": [
+        8
+      ],
+      "translations": {
+        "zh": "每月",
+        "he": "חודשי",
+        "hi": "मासिक",
+        "de": "monatlich",
+        "fr": "mensuel"
+      }
+    },
+    {
+      "en": "cornsilk",
+      "class": "keep",
+      "kind": "css_visual",
+      "requests": [
+        1,
+        9
+      ]
+    },
+    {
+      "en": "peru",
+      "class": "keep",
+      "kind": "css_visual",
+      "requests": [
+        1,
+        9
+      ]
+    },
+    {
+      "en": "steel blue",
+      "class": "keep",
+      "kind": "css_visual",
+      "requests": [
+        3,
+        5,
+        8
+      ]
+    },
+    {
+      "en": "plum purple",
+      "class": "keep",
+      "kind": "css_visual",
+      "requests": [
+        3
+      ]
+    },
+    {
+      "en": "olive green",
+      "class": "keep",
+      "kind": "css_visual",
+      "requests": [
+        3,
+        6
+      ]
+    },
+    {
+      "en": "goldenrod",
+      "class": "keep",
+      "kind": "css_visual",
+      "requests": [
+        9
+      ]
+    },
+    {
+      "en": "slate gray",
+      "class": "keep",
+      "kind": "css_visual",
+      "requests": [
+        9
+      ]
+    },
+    {
+      "en": "chocolate brown",
+      "class": "keep",
+      "kind": "css_visual",
+      "requests": [
+        9
+      ]
+    },
+    {
+      "en": "Maria Alvarez",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        2,
+        3,
+        4,
+        6,
+        9
+      ]
+    },
+    {
+      "en": "James O'Neil",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        2
+      ]
+    },
+    {
+      "en": "Priya Shah",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        2,
+        9
+      ]
+    },
+    {
+      "en": "Tom Becker",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        2,
+        3
+      ]
+    },
+    {
+      "en": "Lena Fischer",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        2,
+        9
+      ]
+    },
+    {
+      "en": "Sam Waters",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        2
+      ]
+    },
+    {
+      "en": "Dana Cole",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        2
+      ]
+    },
+    {
+      "en": "Rita Vale",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        3
+      ]
+    },
+    {
+      "en": "Noah Kim",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        3
+      ]
+    },
+    {
+      "en": "Ivy Chen",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        4
+      ]
+    },
+    {
+      "en": "Ava Long",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        7
+      ]
+    },
+    {
+      "en": "Omar Reyes",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        10
+      ]
+    },
+    {
+      "en": "River Runners",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        2,
+        4
+      ]
+    },
+    {
+      "en": "Bright Sparks",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        2,
+        4
+      ]
+    },
+    {
+      "en": "Green Hearts",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        2,
+        4
+      ]
+    },
+    {
+      "en": "Clearwater Trust",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        6,
+        8
+      ]
+    },
+    {
+      "en": "BlueDrop Foundation",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        6
+      ]
+    },
+    {
+      "en": "Riverside Rotary",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        6
+      ]
+    },
+    {
+      "en": "ReadRight Alliance",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        6,
+        8
+      ]
+    },
+    {
+      "en": "Book Bridge Co.",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        6
+      ]
+    },
+    {
+      "en": "ScholarWorks",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        6
+      ]
+    },
+    {
+      "en": "Meal Makers Guild",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        6,
+        9
+      ]
+    },
+    {
+      "en": "Harvest Hands",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        6,
+        9
+      ]
+    },
+    {
+      "en": "PantryLink",
+      "class": "keep",
+      "kind": "proper_noun",
+      "requests": [
+        6,
+        9
+      ]
+    },
+    {
+      "en": "ross@maplemail.org",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [
+        8
+      ]
+    },
+    {
+      "en": "amina@riverpost.net",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [
+        8
+      ]
+    },
+    {
+      "en": "kai@sunmail.co",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [
+        8
+      ]
+    },
+    {
+      "en": "jamie@site",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [
+        8
+      ]
+    },
+    {
+      "en": "jamie@hillpost.org",
+      "class": "keep",
+      "kind": "tech",
+      "requests": [
+        8
+      ]
+    }
+  ]
+}

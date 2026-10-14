@@ -1,0 +1,614 @@
+{
+  "index": 20,
+  "status": "success",
+  "model": "anthropic/claude-haiku-4-5-20251001",
+  "generator": "openhands",
+  "base_trajectory": {
+    "source": "none",
+    "messages": 0
+  },
+  "artifacts": {
+    "zip": null,
+    "run_json": null,
+    "generator": "openhands",
+    "screenshots": [
+      "/output/000020/screenshots/task000020_0.png",
+      "/output/000020/screenshots/task000020_1.png",
+      "/output/000020/screenshots/task000020_2.png",
+      "/output/000020/screenshots/task000020_3.png",
+      "/output/000020/screenshots/task000020_4.png",
+      "/output/000020/screenshots/task000020_5.png",
+      "/output/000020/screenshots/task000020_6.png"
+    ],
+    "output_dir": "/output/000020"
+  },
+  "ladder": {
+    "turns_expected": 10,
+    "turns_completed": 10,
+    "complete": true
+  },
+  "eval_model": "claude-sonnet-4-6",
+  "accuracy": 26.9,
+  "yes": 11,
+  "partial": 6,
+  "no": 35,
+  "total": 52,
+  "tasks": [
+    {
+      "task_idx": 0,
+      "task": "Navigate to the infrastructure management section and browse through the available information.",
+      "expected": "User can view detailed and accurate information related to infrastructure management, with options to further query specific infrastructure details.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 1,
+      "task": "Fill out and submit a procurement application form.",
+      "expected": "The form submits successfully, and a confirmation message is displayed. The application status should be viewable in the user's procurement management section.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 2,
+      "task": "Navigate to the leave management section and complete an application for leave.",
+      "expected": "User is able to submit a leave application successfully and receive a confirmation of submission. The application appears in the user's leave management history.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 3,
+      "task": "As a manager, review and approve a personnel management request.",
+      "expected": "The request is moved to an approved status. The requester is notified of the approval, and it reflects in the personnel management records.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 4,
+      "task": "Perform a query for financial reports within the financial management section.",
+      "expected": "The query returns accurate, comprehensive financial information in a timely manner, supporting decision-making processes.",
+      "verdict": "no"
+    },
+    {
+      "task_idx": 5,
+      "task": "Initiate a decision-making process and submit it for internal review.",
+      "expected": "The process initiates without error, and all involved parties receive a notification for review. The status updates reflect the ongoing process stages accurately.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 6,
+      "task": "Verify that the website uses 'light pink' as the background color and 'medium violet red' as the component color, as specified in the design requirements.",
+      "expected": "The website has a background color of 'light pink' and components (such as buttons, cards, headers, etc.) are styled with the color 'medium violet red', accurately reflecting the design instruction.",
+      "verdict": "yes"
+    }
+  ],
+  "turns": [
+    {
+      "turn": 1,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": false,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Navigate to the infrastructure management section and browse through the available information.",
+          "expected": "User can view detailed and accurate information related to infrastructure management, with options to further query specific infrastructure details.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Fill out and submit a procurement application form.",
+          "expected": "The form submits successfully, and a confirmation message is displayed. The application status should be viewable in the user's procurement management section.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Navigate to the leave management section and complete an application for leave.",
+          "expected": "User is able to submit a leave application successfully and receive a confirmation of submission. The application appears in the user's leave management history.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "As a manager, review and approve a personnel management request.",
+          "expected": "The request is moved to an approved status. The requester is notified of the approval, and it reflects in the personnel management records.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "Perform a query for financial reports within the financial management section.",
+          "expected": "The query returns accurate, comprehensive financial information in a timely manner, supporting decision-making processes.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 5,
+          "task": "Initiate a decision-making process and submit it for internal review.",
+          "expected": "The process initiates without error, and all involved parties receive a notification for review. The status updates reflect the ongoing process stages accurately.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 6,
+          "task": "Verify that the website uses 'light pink' as the background color and 'medium violet red' as the component color, as specified in the design requirements.",
+          "expected": "The website has a background color of 'light pink' and components (such as buttons, cards, headers, etc.) are styled with the color 'medium violet red', accurately reflecting the design instruction.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 2,
+      "no": 1,
+      "total": 7,
+      "accuracy": 71.4,
+      "cost": {
+        "generation_usd": 0.215641,
+        "model_calls": 15,
+        "input_tokens_total": 466258,
+        "output_tokens": 24146,
+        "judge_usd": 0.6638
+      }
+    },
+    {
+      "turn": 2,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the requisition builder and select IT Equipment as the budget line.",
+          "expected": "The remaining funds shown for IT Equipment read $1,500 (allocated $60,000 minus $58,500 spent), not the allocated amount.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the requisition builder select Staff Training, then type quantity 2 and unit price 2500.",
+          "expected": "The live total reads $5,000 and the approval tier shows Finance Director — exactly $5,000 does NOT fall in the Department Head tier.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the requisition builder select Public Parks, then type quantity 1 and unit price 100 without submitting.",
+          "expected": "Remaining funds show $0 and the over-budget warning/red state appears while typing, since any positive amount exceeds Public Parks' remaining funds.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "From the procurement management section open the requisition builder, enter description 'Copy paper', budget line Office Supplies, quantity 1, unit price 100, and submit.",
+          "expected": "The submitted requisition appears with a REQ-prefixed three-digit reference and an amber Pending status pill.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Navigate to the personnel management area and open the leave section.",
+          "expected": "A leave application area (form or list) is visible, the page renders with content (not blank), and the page background is light pink.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 1,
+      "partial": 0,
+      "no": 4,
+      "total": 5,
+      "accuracy": 20.0,
+      "cost": {
+        "generation_usd": 0.286242,
+        "model_calls": 16,
+        "input_tokens_total": 1032450,
+        "output_tokens": 18692,
+        "judge_usd": 0.6805
+      }
+    },
+    {
+      "turn": 3,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the expense approvals queue and look at EXP-001 from Li Wei.",
+          "expected": "Its itemized total reads $785 (340 + 360 + 85) and it carries an amber Pending pill.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the expense report form, enter purpose 'Test trip', departure date 2026-03-10, return date 2026-03-08, add one item 'Taxi' at $20, and try to submit.",
+          "expected": "Submission is blocked because the return date is before departure, and no new report appears in the approvals queue.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the approvals queue open EXP-001 and reject it, typing the reason 'Missing receipts'.",
+          "expected": "EXP-001 shows a red Rejected pill with 'Missing receipts' visible on it, and Staff Training's spent/remaining figures are unchanged (rejected reports never post).",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the approvals queue approve EXP-002, then open the requisition builder and select Roads & Bridges as the budget line.",
+          "expected": "Roads & Bridges' remaining funds now read $35,695 (the $305 approved expense posted onto its spent total).",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the requisition builder and select IT Equipment as the budget line.",
+          "expected": "The remaining funds shown for IT Equipment read $1,500 (allocated $60,000 minus $58,500 spent), not the allocated amount.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 1,
+      "partial": 0,
+      "no": 4,
+      "total": 5,
+      "accuracy": 20.0,
+      "cost": {
+        "generation_usd": 0.386609,
+        "model_calls": 16,
+        "input_tokens_total": 1621431,
+        "output_tokens": 21150,
+        "judge_usd": 0.6743
+      }
+    },
+    {
+      "turn": 4,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the budget utilization report and read the line ordering.",
+          "expected": "Order is: Public Parks 100.0%, IT Equipment 97.5%, Roads & Bridges 70.0%, Vehicle Fleet 70.0%, Office Supplies 61.3%, Staff Training 44.0% — Roads & Bridges comes before Vehicle Fleet on the 70.0% tie per the alphabetical tie-break (the ledger seeds Vehicle Fleet first, so a sort that just keeps ledger order would show the pair flipped), and the headline flag count reads 2.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the utilization report find the Office department rollup.",
+          "expected": "The Office department (Office Supplies + IT Equipment) shows 90.3% used ($67,700 of $75,000, rounded to one decimal — not 90.2 or 90.27).",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the utilization report look at the flags on IT Equipment and Public Parks.",
+          "expected": "IT Equipment (97.5%) is flagged At Risk while Public Parks (100%) is flagged Exhausted, not At Risk.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the expense approvals queue approve EXP-001, then open the budget utilization report.",
+          "expected": "Staff Training now shows 47.1% used ($11,785 of $25,000) — the approved expense moved the report's figures.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the expense report form, enter purpose 'Test trip', departure date 2026-03-10, return date 2026-03-08, add one item 'Taxi' at $20, and try to submit.",
+          "expected": "Submission is blocked because the return date is before departure, and no new report appears in the approvals queue.",
+          "verdict": "partial"
+        }
+      ],
+      "yes": 1,
+      "partial": 2,
+      "no": 2,
+      "total": 5,
+      "accuracy": 40.0,
+      "cost": {
+        "generation_usd": 0.287802,
+        "model_calls": 10,
+        "input_tokens_total": 1158283,
+        "output_tokens": 7213,
+        "judge_usd": 0.5701
+      }
+    },
+    {
+      "turn": 5,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the review screen for REQ-001 in the vendor portal area.",
+          "expected": "Huaqiang Electronics' $10,850 quote (BID-001, submitted June 2) is highlighted as best — it ties Pearl Office Systems on amount but came in four days earlier, so the earliest-submitted tie-break wins even though Pearl sits higher in the quote list.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the vendor portal submit a quote on REQ-003 as company 'Bay Rubber Co' with amount 0, then again with amount 5900.",
+          "expected": "The zero-amount quote is refused by validation; the $5,900 quote is accepted and appears under REQ-003 with a BID-prefixed three-digit reference.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "On REQ-001's review screen award the highlighted quote.",
+          "expected": "REQ-001 is marked Awarded, and Shenzhen Tech Supply's and Pearl Office Systems' quotes both show 'Not selected' while Huaqiang Electronics' quote does not.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the requisition builder submit a requisition 'Projector for council chamber' on Office Supplies with quantity 1 and unit price 900, then open the vendor portal.",
+          "expected": "The new requisition appears in the vendor portal as an open request that suppliers could quote on.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the requisition builder select Staff Training, then type quantity 2 and unit price 2500.",
+          "expected": "The live total reads $5,000 and the approval tier shows Finance Director — exactly $5,000 does NOT fall in the Department Head tier.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 0,
+      "partial": 0,
+      "no": 5,
+      "total": 5,
+      "accuracy": 0.0,
+      "cost": {
+        "generation_usd": 0.394994,
+        "model_calls": 13,
+        "input_tokens_total": 1701026,
+        "output_tokens": 13746,
+        "judge_usd": 0.8429
+      }
+    },
+    {
+      "turn": 6,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the grants section and look at Clean Water Initiative.",
+          "expected": "It shows $20,800 spent, $29,200 remaining, and 41% used — 20,800 of 50,000 is 41.6%, which rounds down to 41; a build that rounds to nearest would show 42%.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "On Digital Services Modernization try to log an expenditure of $10.",
+          "expected": "The expenditure is refused (the grant is fully spent), remaining stays $0 and progress stays 100%.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Look at Community Health Outreach in the grants section.",
+          "expected": "It renders cleanly with 0% used, $0 spent and $75,000 remaining — no crash, blank, or NaN despite having no expenditures.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Create a new grant named 'River Cleanup' with an award amount of $10,000.",
+          "expected": "The new grant gets a sequential three-digit reference with the same letter prefix as the three seeded grants, numbered 004.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the budget utilization report and read the line ordering.",
+          "expected": "Order is: Public Parks 100.0%, IT Equipment 97.5%, Roads & Bridges 70.0%, Vehicle Fleet 70.0%, Office Supplies 61.3%, Staff Training 44.0% — Roads & Bridges comes before Vehicle Fleet on the 70.0% tie per the alphabetical tie-break (the ledger seeds Vehicle Fleet first, so a sort that just keeps ledger order would show the pair flipped), and the headline flag count reads 2.",
+          "verdict": "partial"
+        }
+      ],
+      "yes": 0,
+      "partial": 1,
+      "no": 4,
+      "total": 5,
+      "accuracy": 10.0,
+      "cost": {
+        "generation_usd": 0.551262,
+        "model_calls": 20,
+        "input_tokens_total": 2409893,
+        "output_tokens": 10882,
+        "judge_usd": 0.5232
+      }
+    },
+    {
+      "turn": 7,
+      "status": "success",
+      "build": {
+        "ok": false
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the budget utilization report page.",
+          "expected": "The page has a dark plum header bar with a white left-aligned title, the content sits in white rounded cards, money amounts in the table are right-aligned, and the report still leads with Public Parks at 100.0%.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the vendor portal, then open the grants section.",
+          "expected": "Both pages show the dark plum header bar with white left-aligned title and their primary action buttons are medium violet red pills with white text — the restyle is consistent across both, not applied to only one.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open the expense report form page.",
+          "expected": "Its submit button is medium violet red with white text and pill-shaped corners, the form sits in a white rounded card, and the page background is still light pink.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Open the expense approvals queue and look at a pending report's status badge.",
+          "expected": "The Pending pill is still amber on the restyled page — the app-wide badge color convention survived the facelift.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the expense approvals queue and look at EXP-001 from Li Wei.",
+          "expected": "Its itemized total reads $785 (340 + 360 + 85) and it carries an amber Pending pill.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 0,
+      "partial": 0,
+      "no": 5,
+      "total": 5,
+      "accuracy": 0.0,
+      "cost": {
+        "generation_usd": 0.304448,
+        "model_calls": 20,
+        "input_tokens_total": 1563999,
+        "output_tokens": 10965,
+        "judge_usd": 0.2941
+      }
+    },
+    {
+      "turn": 8,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the what-if planner without changing anything.",
+          "expected": "The scenario column starts as a clone of the current budget: total proposed allocation reads $345,000 and the difference versus today's total reads $0 (no blank or NaN on first load).",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the planner type 100000 as the proposed allocation for Roads & Bridges.",
+          "expected": "While typing, Roads & Bridges' projected remaining updates to $16,000 (100,000 minus 84,000 spent) and the bottom total shows the scenario $20,000 below today's total allocation.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the planner type 30000 as the proposed allocation for Roads & Bridges.",
+          "expected": "The line flags red immediately as you type, because $30,000 is below the $84,000 already spent — no save or submit needed.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the expense approvals queue approve EXP-003 from Zhang Min, then open the what-if planner.",
+          "expected": "Vehicle Fleet's current spent shows $32,000, and with its proposed allocation still at the cloned $45,000 its projected remaining reads $13,000 — the planner baseline picked up the newly posted expense.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the review screen for REQ-001 in the vendor portal area.",
+          "expected": "Huaqiang Electronics' $10,850 quote (BID-001, submitted June 2) is highlighted as best — it ties Pearl Office Systems on amount but came in four days earlier, so the earliest-submitted tie-break wins even though Pearl sits higher in the quote list.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 2,
+      "partial": 1,
+      "no": 2,
+      "total": 5,
+      "accuracy": 50.0,
+      "cost": {
+        "generation_usd": 0.356249,
+        "model_calls": 20,
+        "input_tokens_total": 1969728,
+        "output_tokens": 9339,
+        "judge_usd": 0.3767
+      }
+    },
+    {
+      "turn": 9,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the KPI dashboard and read the headline tallies.",
+          "expected": "Tallies read 3 On Track, 1 At Risk, 1 Off Track.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the KPI dashboard look at 'Potholes repaired' and 'Park inspections'.",
+          "expected": "Potholes repaired (60% progress vs 70.0% utilization, exactly 10 points behind) is On Track in green, and Park inspections (75% vs 100%, exactly 25 points behind) is At Risk in amber — neither slips into the worse status on its boundary.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "On the KPI dashboard look at 'Training sessions held' and 'Permits digitized'.",
+          "expected": "Training sessions held shows On Track in green even at only 45% progress (it's ahead of Staff Training's 44% utilization), while Permits digitized shows Off Track in red (60% vs 97.5%).",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the expense approvals queue approve EXP-003 from Zhang Min, then open the KPI dashboard.",
+          "expected": "'Fleet vehicles serviced' flips from On Track to At Risk in amber (Vehicle Fleet utilization rose to about 71.1%, putting the KPI more than 10 points behind), and the tallies now read 2 On Track, 2 At Risk, 1 Off Track.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the grants section and look at Clean Water Initiative.",
+          "expected": "It shows $20,800 spent, $29,200 remaining, and 41% used — 20,800 of 50,000 is 41.6%, which rounds down to 41; a build that rounds to nearest would show 42%.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 0,
+      "partial": 0,
+      "no": 5,
+      "total": 5,
+      "accuracy": 0.0,
+      "cost": {
+        "generation_usd": 0.287238,
+        "model_calls": 10,
+        "input_tokens_total": 578037,
+        "output_tokens": 8229,
+        "judge_usd": 0.7312
+      }
+    },
+    {
+      "turn": 10,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Create a packet titled 'Q3 Budget Review' and open its review screen.",
+          "expected": "The brief shows total allocated $345,000, spent $274,200, remaining $70,800, 2 flagged budget lines, KPI tallies of 3 On Track / 1 At Risk / 1 Off Track, and exactly one council-tier request: REQ-002 'Gravel resurfacing, Nanshan section' at $28,000 (the $12,000 and $6,400 requests excluded).",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "From the 'Q3 Budget Review' review screen hit Submit to Council, then open the council view.",
+          "expected": "The packet is filed with reference DEC-002 (DEC-001 already exists) and an amber Pending pill, and it appears in the council view alongside DEC-001.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the council view open DEC-001 'June Infrastructure Addendum' and try to send it back without typing anything, then type the reason 'Need updated figures' and send it back.",
+          "expected": "Sending back is blocked until a reason is typed; afterwards DEC-001 shows a red Rejected pill with 'Need updated figures' visible on it.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the expense approvals queue approve EXP-003 from Zhang Min, then create a new packet titled 'Post-Approval Check' and open its review screen.",
+          "expected": "The freshly compiled brief shows total spent $274,700 and KPI tallies of 2 On Track / 2 At Risk / 1 Off Track — it picked up the just-approved expense and the flipped fleet KPI, not stale numbers.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the utilization report find the Office department rollup.",
+          "expected": "The Office department (Office Supplies + IT Equipment) shows 90.3% used ($67,700 of $75,000, rounded to one decimal — not 90.2 or 90.27).",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 2,
+      "partial": 0,
+      "no": 3,
+      "total": 5,
+      "accuracy": 40.0,
+      "cost": {
+        "generation_usd": 0.258414,
+        "model_calls": 18,
+        "input_tokens_total": 1236217,
+        "output_tokens": 9965,
+        "judge_usd": 0.6032
+      }
+    }
+  ]
+}

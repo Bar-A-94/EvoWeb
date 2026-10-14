@@ -1,0 +1,637 @@
+{
+  "index": 10,
+  "status": "success",
+  "model": "anthropic/claude-haiku-4-5-20251001",
+  "generator": "openhands",
+  "base_trajectory": {
+    "source": "none",
+    "messages": 0
+  },
+  "artifacts": {
+    "zip": null,
+    "run_json": null,
+    "generator": "openhands",
+    "screenshots": [
+      "/output/000010/screenshots/task000010_0.png",
+      "/output/000010/screenshots/task000010_1.png",
+      "/output/000010/screenshots/task000010_2.png",
+      "/output/000010/screenshots/task000010_3.png",
+      "/output/000010/screenshots/task000010_4.png"
+    ],
+    "output_dir": "/output/000010"
+  },
+  "ladder": {
+    "turns_expected": 10,
+    "turns_completed": 10,
+    "complete": true
+  },
+  "eval_model": "claude-sonnet-4-6",
+  "accuracy": 54.0,
+  "yes": 24,
+  "partial": 6,
+  "no": 20,
+  "total": 50,
+  "tasks": [
+    {
+      "task_idx": 0,
+      "task": "Verify that the \"Add New Lead\" form allows users to fill out and submit details correctly.",
+      "expected": "The form submissions successfully add the lead to the system.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 1,
+      "task": "Test the automated message-sending functionality by initiating a message to a specific lead.",
+      "expected": "The message is sent automatically, and a confirmation notification is displayed.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 2,
+      "task": "Confirm that lead information can be updated by modifying an existing lead's status.",
+      "expected": "The lead’s status is successfully updated, and the new status is accurately displayed on the lead’s profile.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 3,
+      "task": "Test website navigation by using the provided menu to access the best practice and integration advice section.",
+      "expected": "The relevant page is successfully loaded, and users can view the information on best practices and integration advice.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 4,
+      "task": "Verify that the website uses 'papaya whip' as the background color and 'dark orange' as the component color, as specified in the design requirements.",
+      "expected": "The website has a background color of 'papaya whip' and components (such as buttons, cards, headers, etc.) are styled with the color 'dark orange', accurately reflecting the design instruction.",
+      "verdict": "yes"
+    }
+  ],
+  "turns": [
+    {
+      "turn": 1,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": false,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Verify that the \"Add New Lead\" form allows users to fill out and submit details correctly.",
+          "expected": "The form submissions successfully add the lead to the system.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Test the automated message-sending functionality by initiating a message to a specific lead.",
+          "expected": "The message is sent automatically, and a confirmation notification is displayed.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Confirm that lead information can be updated by modifying an existing lead's status.",
+          "expected": "The lead’s status is successfully updated, and the new status is accurately displayed on the lead’s profile.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Test website navigation by using the provided menu to access the best practice and integration advice section.",
+          "expected": "The relevant page is successfully loaded, and users can view the information on best practices and integration advice.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Verify that the website uses 'papaya whip' as the background color and 'dark orange' as the component color, as specified in the design requirements.",
+          "expected": "The website has a background color of 'papaya whip' and components (such as buttons, cards, headers, etc.) are styled with the color 'dark orange', accurately reflecting the design instruction.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.198243,
+        "model_calls": 13,
+        "input_tokens_total": 418764,
+        "output_tokens": 22136,
+        "judge_usd": 0.297
+      }
+    },
+    {
+      "turn": 2,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the leads page, click the engagement score column or control to sort leads from highest to lowest score, then read the top two rows.",
+          "expected": "Priya Nair is first and Lena Fischer second, both with score 6 and a Hot tag — Priya ranks above Lena because her $22,000 deal is larger than Lena's $15,750.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open Diego Santos's activity log, record one call, then look at his score and temperature tag.",
+          "expected": "His score changes from 2 to 3 and the tag flips from Cold to Warm.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Find Tom Okafor's row and open his activity log.",
+          "expected": "The log opens showing an empty state (no activities logged), and his row shows score 0 with a Cold tag — no crash or blank row.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 3,
+          "task": "Change Marcus Webb's status to Qualified using the lead's status editor, then check his score.",
+          "expected": "His status reads Qualified and the score stays 5 with a Warm tag — status changes alone add no points.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the leads page, open Tom Okafor's lead and change his status to Contacted.",
+          "expected": "Tom Okafor's row now shows status Contacted.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 1,
+      "no": 0,
+      "total": 5,
+      "accuracy": 90.0,
+      "cost": {
+        "generation_usd": 0.442675,
+        "model_calls": 20,
+        "input_tokens_total": 1300071,
+        "output_tokens": 28296,
+        "judge_usd": 0.415
+      }
+    },
+    {
+      "turn": 3,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "runtime": {
+        "checks_affected": 3,
+        "errors": [
+          "http://localhost:5200/node_modules/.vite/deps/chunk-QXLG2TGQ.js?v=b229d104 19463:12 Uncaught ReferenceError: first_name is not defined",
+          "http://localhost:5200/src/pages/Templates.jsx 604:93 Uncaught ReferenceError: first_name is not defined"
+        ]
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the template editor, choose Marcus Webb · Ironpeak Logistics as the preview lead, and type 'Hello {{first_name}} from {{company}}' into the body.",
+          "expected": "Before any save, the preview pane already reads 'Hello Marcus from Ironpeak Logistics', updating live as the text is typed.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "In the template editor, type {{firstname}} into the message body and try to save the template.",
+          "expected": "The editor flags {{firstname}} as an unsupported placeholder and the save is blocked until it's removed.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open the saved 'Proposal Follow-Up' template and preview it with Priya Nair · Cobalt Analytics selected as the lead.",
+          "expected": "The preview reads 'Hi Priya, checking in on the $22,000 proposal for Cobalt Analytics.'",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Go to the message-sending flow, pick the 'Intro Outreach' template and Rosa Delgado as the recipient, and send.",
+          "expected": "The message goes out as 'Hi Rosa, I'd love to connect about Brightline Media.' — placeholders replaced with Rosa's real details, visible in the send confirmation or on her record.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the leads page, click the engagement score column or control to sort leads from highest to lowest score, then read the top two rows.",
+          "expected": "Priya Nair is first and Lena Fischer second, both with score 6 and a Hot tag — Priya ranks above Lena because her $22,000 deal is larger than Lena's $15,750.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 2,
+      "partial": 0,
+      "no": 3,
+      "total": 5,
+      "accuracy": 40.0,
+      "cost": {
+        "generation_usd": 0.576125,
+        "model_calls": 20,
+        "input_tokens_total": 2118347,
+        "output_tokens": 29210,
+        "judge_usd": 0.4474
+      }
+    },
+    {
+      "turn": 4,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "runtime": {
+        "checks_affected": 1,
+        "errors": [
+          "http://localhost:5200/node_modules/.vite/deps/chunk-QXLG2TGQ.js?v=b229d104 19463:12 Uncaught ReferenceError: first_name is not defined",
+          "http://localhost:5200/src/pages/Templates.jsx 604:93 Uncaught ReferenceError: first_name is not defined"
+        ]
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the reports page and read the weighted pipeline forecast headline number, then scan the per-lead breakdown.",
+          "expected": "The headline reads $33,020 and Diego Santos does not appear in the breakdown — Lost leads are excluded from the weighted total.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "In settings, change the Qualified stage probability to 60, then return to the forecast.",
+          "expected": "The total updates to $35,795 without a manual refresh — Rosa and Lena's contributions rise to $7,200 and $9,450.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "In settings, type 150 into the Proposal probability field and try to apply it.",
+          "expected": "The value is rejected as out of range and the forecast still reflects Proposal at 75%.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Find Priya Nair's line in the forecast breakdown.",
+          "expected": "She is written as 'Priya Nair · Cobalt Analytics' — the name, middle dot, company style used across the app.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the saved 'Proposal Follow-Up' template and preview it with Priya Nair · Cobalt Analytics selected as the lead.",
+          "expected": "The preview reads 'Hi Priya, checking in on the $22,000 proposal for Cobalt Analytics.'",
+          "verdict": "no"
+        }
+      ],
+      "yes": 3,
+      "partial": 0,
+      "no": 2,
+      "total": 5,
+      "accuracy": 60.0,
+      "cost": {
+        "generation_usd": 0.384528,
+        "model_calls": 10,
+        "input_tokens_total": 1501036,
+        "output_tokens": 11141,
+        "judge_usd": 0.559
+      }
+    },
+    {
+      "turn": 5,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "runtime": {
+        "checks_affected": 1,
+        "errors": [
+          "http://localhost:5200/node_modules/.vite/deps/chunk-QXLG2TGQ.js?v=b229d104 19463:12 Uncaught ReferenceError: first_name is not defined",
+          "http://localhost:5200/src/pages/Templates.jsx 604:93 Uncaught ReferenceError: first_name is not defined"
+        ]
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "In the automation rules panel, start a new rule choosing stage Qualified and template 'Intro Outreach' but leave the days field blank, then try to save.",
+          "expected": "The rule refuses to save with a validation message and nothing is added to the rules list.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open Priya Nair (already in Proposal), change her deal value to $22,500 and save, then check the tasks page and her message history.",
+          "expected": "No new task and no new message appear — the Proposal rule does not re-fire for a lead already sitting in that stage.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Move Rosa Delgado into Proposal and look at her message history.",
+          "expected": "A new message reads 'Hi Rosa, checking in on the $12,000 proposal for Brightline Media.'",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 3,
+          "task": "Move Marcus Webb into Proposal, then open the tasks page.",
+          "expected": "A 'Follow up on proposal' task for Marcus Webb · Ironpeak Logistics appears due July 4, 2026, and his message history shows the Proposal Follow-Up text with his details filled in.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open Diego Santos's activity log, record one call, then look at his score and temperature tag.",
+          "expected": "His score changes from 2 to 3 and the tag flips from Cold to Warm.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 3,
+      "partial": 2,
+      "no": 0,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.541783,
+        "model_calls": 8,
+        "input_tokens_total": 976879,
+        "output_tokens": 13636,
+        "judge_usd": 0.815
+      }
+    },
+    {
+      "turn": 6,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "runtime": {
+        "checks_affected": 1,
+        "errors": [
+          "http://localhost:5200/node_modules/.vite/deps/chunk-QXLG2TGQ.js?v=b229d104 19463:12 Uncaught ReferenceError: first_name is not defined",
+          "http://localhost:5200/src/pages/Templates.jsx 597:93 Uncaught ReferenceError: first_name is not defined"
+        ]
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the leads page, then the tasks page, and look at each page title.",
+          "expected": "Both titles are centered with a thin dark-orange underline — the same treatment on both pages.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the leads page, look at the temperature tags across all six seeded leads.",
+          "expected": "Priya Nair and Lena Fischer show solid red pills (Hot), Marcus Webb and Rosa Delgado amber pills (Warm), Tom Okafor and Diego Santos light blue pills (Cold).",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open the template studio and the settings page and find the primary save/apply buttons on each.",
+          "expected": "Primary action buttons on both pages are deep teal with white text.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Compare the leads table and the forecast breakdown table on the reports page.",
+          "expected": "Both tables show alternating row striping — the restyle reached the forecast breakdown too.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the reports page and read the weighted pipeline forecast headline number, then scan the per-lead breakdown.",
+          "expected": "The headline reads $33,020 and Diego Santos does not appear in the breakdown — Lost leads are excluded from the weighted total.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 2,
+      "partial": 1,
+      "no": 2,
+      "total": 5,
+      "accuracy": 50.0,
+      "cost": {
+        "generation_usd": 0.439361,
+        "model_calls": 13,
+        "input_tokens_total": 2035737,
+        "output_tokens": 9157,
+        "judge_usd": 0.4325
+      }
+    },
+    {
+      "turn": 7,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "In the outreach hub, click the simulate-open control on Marcus Webb's message, then go to the leads page and check Marcus Webb's row.",
+          "expected": "The envelope marker on his row shows opened and his engagement score now reads 8 with a Hot tag (it was 5, Warm, before the open).",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Simulate-open Rosa Delgado's message in the hub, then click the same open control or status again.",
+          "expected": "The message stays Opened with no way to revert, and Rosa's score lands on 8 exactly once — not 11.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open the outreach hub fresh, before doing anything else.",
+          "expected": "Exactly two messages are listed — 'Intro Outreach' to Marcus Webb · Ironpeak Logistics and to Rosa Delgado · Brightline Media — both status Sent, neither opened.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "On the leads page, move Lena Fischer into Proposal, then open the outreach hub.",
+          "expected": "A new 'Proposal Follow-Up' message to Lena Fischer · Quartzline Systems appears in the feed with status Sent, and her score has not changed — sends don't add points.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Move Rosa Delgado into Proposal and look at her message history.",
+          "expected": "A new message reads 'Hi Rosa, checking in on the $12,000 proposal for Brightline Media.'",
+          "verdict": "no"
+        }
+      ],
+      "yes": 3,
+      "partial": 0,
+      "no": 2,
+      "total": 5,
+      "accuracy": 60.0,
+      "cost": {
+        "generation_usd": 0.337561,
+        "model_calls": 6,
+        "input_tokens_total": 1049707,
+        "output_tokens": 6872,
+        "judge_usd": 0.5203
+      }
+    },
+    {
+      "turn": 8,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "runtime": {
+        "checks_affected": 1,
+        "errors": [
+          "http://localhost:5200/node_modules/.vite/deps/chunk-QXLG2TGQ.js?v=b229d104 19463:12 Uncaught ReferenceError: first_name is not defined",
+          "http://localhost:5200/src/pages/Templates.jsx 597:93 Uncaught ReferenceError: first_name is not defined"
+        ]
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the reports dashboard and read the average deal size tile.",
+          "expected": "$12,690 — the average over the five open leads only ($8,500, $12,000, $15,750, $22,000, $5,200); a build that averages in the Lost lead would wrongly show $12,125.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Add the average engagement score tile from the tile picker.",
+          "expected": "It reads 4.0 with a Warm tag — the mean of scores 5, 5, 6, 6, 0 and 2 to one decimal, temperature tag included.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 2,
+          "task": "Add the leads-by-stage tile from the tile picker.",
+          "expected": "Stages appear in pipeline order New, Contacted, Qualified, Proposal, Won, Lost — not alphabetical — with Won shown at 0 rather than omitted.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 3,
+          "task": "Add the weighted forecast tile, then in settings change the Contacted probability to 40 and return to the dashboard.",
+          "expected": "The tile reads $34,295 — the same figure the forecast page now shows.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the template editor, type {{firstname}} into the message body and try to save the template.",
+          "expected": "The editor flags {{firstname}} as an unsupported placeholder and the save is blocked until it's removed.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 1,
+      "partial": 2,
+      "no": 2,
+      "total": 5,
+      "accuracy": 40.0,
+      "cost": {
+        "generation_usd": 0.128324,
+        "model_calls": 4,
+        "input_tokens_total": 745602,
+        "output_tokens": 4803,
+        "judge_usd": 0.4398
+      }
+    },
+    {
+      "turn": 9,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "runtime": {
+        "checks_affected": 4,
+        "errors": [
+          "http://localhost:5200/node_modules/.vite/deps/chunk-QXLG2TGQ.js?v=b229d104 19463:12 Uncaught ReferenceError: first_name is not defined",
+          "http://localhost:5200/src/pages/Templates.jsx 597:93 Uncaught ReferenceError: first_name is not defined"
+        ]
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "In the form builder, change the form title from 'Get a Quote' to 'Get a Quote Now' and watch the embed snippet pane while typing.",
+          "expected": "The snippet's heading text updates to match with each keystroke — no save needed.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Add the estimated deal value field to the starter form, then read the preview pane and the embed snippet.",
+          "expected": "Both show exactly five fields — first name, last name, company, email, estimated deal value — and the snippet's inputs match the preview one for one.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the preview, type 'Rivertown Co' as the company but leave first name blank, then test-submit.",
+          "expected": "The submit is blocked with a validation message and no lead gets created.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "Test-submit the preview with first name 'Alex', last name 'Rivera' and company 'Rivertown Co', then find the new lead in the leads list.",
+          "expected": "It appears as 'Alex Rivera · Rivertown Co' with source Web Form and a score of 0 tagged Cold.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the outreach hub, click the simulate-open control on Marcus Webb's message, then go to the leads page and check Marcus Webb's row.",
+          "expected": "The envelope marker on his row shows opened and his engagement score now reads 8 with a Hot tag (it was 5, Warm, before the open).",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 1,
+      "partial": 0,
+      "no": 4,
+      "total": 5,
+      "accuracy": 20.0,
+      "cost": {
+        "generation_usd": 0.240459,
+        "model_calls": 8,
+        "input_tokens_total": 749421,
+        "output_tokens": 7624,
+        "judge_usd": 0.4428
+      }
+    },
+    {
+      "turn": 10,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "runtime": {
+        "checks_affected": 1,
+        "errors": [
+          "http://localhost:5200/node_modules/.vite/deps/chunk-QXLG2TGQ.js?v=b229d104 19463:12 Uncaught ReferenceError: first_name is not defined",
+          "http://localhost:5200/src/pages/Templates.jsx 597:93 Uncaught ReferenceError: first_name is not defined"
+        ]
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "From the Inbox tab, promote Omar Haddad choosing stage Contacted and typing 4000 as the deal value, then open the forecast.",
+          "expected": "The weighted total rises from $33,020 to $34,020 — Omar's $4,000 counted at Contacted's 25%.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the Pipeline tab and sort by engagement score.",
+          "expected": "Nadia Boone and Omar Haddad appear nowhere in the Pipeline list or the score ranking — they exist only in the Inbox tab.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "In the Inbox, try promoting Nadia Boone with stage New and a deal value of 0.",
+          "expected": "The promotion is refused because the value must be above zero, and Nadia stays in the Inbox.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the form builder preview, test-submit with first name 'Alex', last name 'Rivera' and company 'Rivertown Co', then open the leads tabs.",
+          "expected": "Alex Rivera · Rivertown Co sits in the Inbox tab, not the Pipeline.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the reports dashboard and read the average deal size tile.",
+          "expected": "$12,690 — the average over the five open leads only ($8,500, $12,000, $15,750, $22,000, $5,200); a build that averages in the Lost lead would wrongly show $12,125.",
+          "verdict": "no"
+        }
+      ],
+      "yes": 0,
+      "partial": 0,
+      "no": 5,
+      "total": 5,
+      "accuracy": 0.0,
+      "cost": {
+        "generation_usd": 0.444197,
+        "model_calls": 20,
+        "input_tokens_total": 2318196,
+        "output_tokens": 14306,
+        "judge_usd": 0.5936
+      }
+    }
+  ]
+}

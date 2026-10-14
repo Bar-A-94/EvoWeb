@@ -1,0 +1,60 @@
+cff-version: 1.2.0
+message: "If you use EvoWeb, its data or this code, please cite the paper below."
+title: "EvoWeb: A Benchmark for Coding Agents on Evolving Web Applications"
+type: software
+authors:
+  - family-names: Nukrai
+    given-names: David
+  - family-names: Alon
+    given-names: Bar
+  - family-names: Levy
+    given-names: Nativ
+  - family-names: Atad
+    given-names: Ido Andrew
+  - family-names: Cohen
+    given-names: Ido
+  - family-names: Zimerman
+    given-names: Itamar
+  - family-names: Wolf
+    given-names: Lior
+  - family-names: David
+    given-names: Eli
+  - family-names: Naiman
+    given-names: Ilan
+repository-code: "https://github.com/two-delta/EvoWeb"
+url: "https://arxiv.org/abs/2610.16402"
+date-released: 2026-10-12
+license: Apache-2.0
+keywords:
+  - benchmark
+  - coding agents
+  - web applications
+  - long-horizon evaluation
+preferred-citation:
+  type: article
+  title: "EvoWeb: A Benchmark for Coding Agents on Evolving Web Applications"
+  authors:
+    - family-names: Nukrai
+      given-names: David
+    - family-names: Alon
+      given-names: Bar
+    - family-names: Levy
+      given-names: Nativ
+    - family-names: Atad
+      given-names: Ido Andrew
+    - family-names: Cohen
+      given-names: Ido
+    - family-names: Zimerman
+      given-names: Itamar
+    - family-names: Wolf
+      given-names: Lior
+    - family-names: David
+      given-names: Eli
+    - family-names: Naiman
+      given-names: Ilan
+  journal: "arXiv preprint"
+  year: 2026
+  identifiers:
+    - type: other
+      value: "arXiv:2610.16402"
+  url: "https://arxiv.org/abs/2610.16402"

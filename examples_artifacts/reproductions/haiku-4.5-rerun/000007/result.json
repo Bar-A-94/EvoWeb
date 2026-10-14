@@ -1,0 +1,601 @@
+{
+  "index": 7,
+  "status": "success",
+  "model": "anthropic/claude-haiku-4-5-20251001",
+  "generator": "openhands",
+  "base_trajectory": {
+    "source": "none",
+    "messages": 0
+  },
+  "artifacts": {
+    "zip": null,
+    "run_json": null,
+    "generator": "openhands",
+    "screenshots": [
+      "/output/000007/screenshots/task000007_0.png",
+      "/output/000007/screenshots/task000007_1.png",
+      "/output/000007/screenshots/task000007_2.png",
+      "/output/000007/screenshots/task000007_3.png",
+      "/output/000007/screenshots/task000007_4.png",
+      "/output/000007/screenshots/task000007_5.png"
+    ],
+    "output_dir": "/output/000007"
+  },
+  "ladder": {
+    "turns_expected": 10,
+    "turns_completed": 10,
+    "complete": true
+  },
+  "eval_model": "claude-sonnet-4-6",
+  "accuracy": 87.3,
+  "yes": 41,
+  "partial": 7,
+  "no": 3,
+  "total": 51,
+  "tasks": [
+    {
+      "task_idx": 0,
+      "task": "Check the accuracy of content within the introduction section about Fundraiser Day.",
+      "expected": "The introduction should clearly explain what Fundraiser Day is about, including its purpose and significance, aligning with the event's promotional goals.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 1,
+      "task": "Validate the presence and correctness of fundraiser testimonials.",
+      "expected": "The testimonials section should display real and relevant feedback from previous fundraiser participants, demonstrating positive experiences and successful outcomes.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 2,
+      "task": "Ensure that the company information section is visible and accurate.",
+      "expected": "The section should provide complete and correct details about the company, including its mission, background, and role in organizing Fundraiser Day.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 3,
+      "task": "Test the website's navigation to ensure users can easily access between the introduction, testimonials, offers, and company information sections.",
+      "expected": "Users should be able to smoothly navigate between the introduction, testimonials, offers, and company information sections with no broken links or errors.",
+      "verdict": "partial"
+    },
+    {
+      "task_idx": 4,
+      "task": "Assess the website's content for relevance to the Fundraiser Day promotion.",
+      "expected": "All text and multimedia content should focus on promoting Fundraiser Day, eliminating any unrelated information that could detract from the event's promotion.",
+      "verdict": "yes"
+    },
+    {
+      "task_idx": 5,
+      "task": "Verify that the website uses 'cornsilk' as the background color and 'peru' as the component color, as specified in the design requirements.",
+      "expected": "The website has a background color of 'cornsilk' and components (such as buttons, cards, headers, etc.) are styled with the color 'peru', accurately reflecting the design instruction.",
+      "verdict": "yes"
+    }
+  ],
+  "turns": [
+    {
+      "turn": 1,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": false,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Check the accuracy of content within the introduction section about Fundraiser Day.",
+          "expected": "The introduction should clearly explain what Fundraiser Day is about, including its purpose and significance, aligning with the event's promotional goals.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Validate the presence and correctness of fundraiser testimonials.",
+          "expected": "The testimonials section should display real and relevant feedback from previous fundraiser participants, demonstrating positive experiences and successful outcomes.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Ensure that the company information section is visible and accurate.",
+          "expected": "The section should provide complete and correct details about the company, including its mission, background, and role in organizing Fundraiser Day.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 3,
+          "task": "Test the website's navigation to ensure users can easily access between the introduction, testimonials, offers, and company information sections.",
+          "expected": "Users should be able to smoothly navigate between the introduction, testimonials, offers, and company information sections with no broken links or errors.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 4,
+          "task": "Assess the website's content for relevance to the Fundraiser Day promotion.",
+          "expected": "All text and multimedia content should focus on promoting Fundraiser Day, eliminating any unrelated information that could detract from the event's promotion.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 5,
+          "task": "Verify that the website uses 'cornsilk' as the background color and 'peru' as the component color, as specified in the design requirements.",
+          "expected": "The website has a background color of 'cornsilk' and components (such as buttons, cards, headers, etc.) are styled with the color 'peru', accurately reflecting the design instruction.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 2,
+      "no": 0,
+      "total": 6,
+      "accuracy": 83.3,
+      "cost": {
+        "generation_usd": 0.105129,
+        "model_calls": 15,
+        "input_tokens_total": 301857,
+        "output_tokens": 8693,
+        "judge_usd": 0.554
+      }
+    },
+    {
+      "turn": 2,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Scroll to the Supporter Wall and look for Maria Alvarez.",
+          "expected": "Maria Alvarez appears exactly once with a combined total of $550 and a Gold badge — not as two separate gift entries.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "On the Supporter Wall, find Priya Shah and Lena Fischer.",
+          "expected": "Priya Shah shows a Gold badge at exactly $500 and Lena Fischer shows a Silver badge at exactly $100 — the tier thresholds include the boundary amounts.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Look at the Gold section of the Supporter Wall.",
+          "expected": "It contains exactly three supporters in this order: Dana Cole $610, Maria Alvarez $550, Priya Shah $500.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Scroll down the page from the testimonials section.",
+          "expected": "The Supporter Wall section appears directly below the testimonials on the same page, with the seeded supporters visible.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the site and watch the offers area without clicking anything.",
+          "expected": "The offers carousel advances to the next offer on its own after a few seconds.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.102066,
+        "model_calls": 7,
+        "input_tokens_total": 235158,
+        "output_tokens": 6857,
+        "judge_usd": 0.111
+      }
+    },
+    {
+      "turn": 3,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "On the pledge form, click the $50 tier and check the fee-cover checkbox.",
+          "expected": "Before submitting anything, the summary updates live to show a $1.75 processing fee and a $51.75 total.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Type 4 into the custom amount box, enter the name Rita Vale, pick Clean Water as the cause, and try to pledge; then change the amount to 5.",
+          "expected": "At $4 the pledge is blocked with a message about the $5 minimum; at $5 it is accepted.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 2,
+          "task": "Make a $50 pledge under the name Tom Becker for Food Relief without covering the fee, then scroll to the Supporter Wall.",
+          "expected": "Tom Becker appears once with a combined total of $145 and a Silver badge — not as two separate entries, and no longer Bronze.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Pledge $25 under the new name Noah Kim for Clean Water, then scroll to the Supporter Wall.",
+          "expected": "Noah Kim appears as a new supporter with $25 and a Bronze badge, while Maria Alvarez still shows $550 with a Gold badge.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Scroll to the Supporter Wall and look for Maria Alvarez.",
+          "expected": "Maria Alvarez appears exactly once with a combined total of $550 and a Gold badge — not as two separate gift entries.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 4,
+      "partial": 1,
+      "no": 0,
+      "total": 5,
+      "accuracy": 90.0,
+      "cost": {
+        "generation_usd": 0.132836,
+        "model_calls": 12,
+        "input_tokens_total": 566414,
+        "output_tokens": 8893,
+        "judge_usd": 0.4172
+      }
+    },
+    {
+      "turn": 4,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Campaign Pulse dashboard.",
+          "expected": "The total raised reads $2,040 and the progress toward the $8,000 goal shows 25.5% (not a rounded 25% or 26%).",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Look at the team leaderboard on the dashboard.",
+          "expected": "Green Hearts is first at $750, and the $645 tie is broken alphabetically: Bright Sparks second, River Runners third.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Check the supporter count stat on the dashboard.",
+          "expected": "It reads 7 — unique people rather than the 8 gifts, since Maria Alvarez's two gifts count once.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the pledge form, pledge a custom $60 as Ivy Chen for Education, then open the Campaign Pulse dashboard.",
+          "expected": "Total raised now reads $2,100, the supporter count reads 8, and the Education row of the cause breakdown reads $1,315.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the pledge form, click the $50 tier and check the fee-cover checkbox.",
+          "expected": "Before submitting anything, the summary updates live to show a $1.75 processing fee and a $51.75 total.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.154435,
+        "model_calls": 8,
+        "input_tokens_total": 477899,
+        "output_tokens": 6718,
+        "judge_usd": 1.7982
+      }
+    },
+    {
+      "turn": 5,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Add Bake Sale Kickoff to the plan first, then Opening Ceremony, and open the plan review.",
+          "expected": "Opening Ceremony is listed before Bake Sale Kickoff (time order, not add order), the two are flagged as overlapping, and confirming is blocked until one is removed.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Add Silent Auction Preview and Donor Lunch to the plan and open the review.",
+          "expected": "No overlap is flagged — one ends at 12:30 PM exactly as the other starts — and the plan can be confirmed with both sessions.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Add Opening Ceremony, Bake Sale Kickoff, and Charity Fun Run to the plan, then open the review.",
+          "expected": "Exactly 2 overlapping pairs are flagged: Opening Ceremony with Bake Sale Kickoff, and Bake Sale Kickoff with Charity Fun Run — Opening Ceremony and Charity Fun Run are not flagged against each other.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "On the Day Schedule page, look at the Charity Fun Run session's cause tag.",
+          "expected": "It shows Clean Water as a steel blue chip, matching the cause chip colors used on the pledge form and supporter wall.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open the Campaign Pulse dashboard.",
+          "expected": "The total raised reads $2,040 and the progress toward the $8,000 goal shows 25.5% (not a rounded 25% or 26%).",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.181348,
+        "model_calls": 9,
+        "input_tokens_total": 624110,
+        "output_tokens": 6880,
+        "judge_usd": 0.3549
+      }
+    },
+    {
+      "turn": 6,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "In the partner directory, check the Clean Water and Education cause boxes and set the region to North.",
+          "expected": "Exactly two partners remain: Clearwater Trust and ReadRight Alliance — either checked cause counts, but both results are in the North.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Clear any filters, then check only the Education cause box.",
+          "expected": "Exactly ReadRight Alliance, Book Bridge Co., and ScholarWorks are shown and the count line reads Showing 3 of 9.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Set the region to East and type Harvest into the name search.",
+          "expected": "No partners match; a friendly no-results message appears and the page does not go blank or crash.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Find the Harvest Hands card in the directory.",
+          "expected": "Its Food Relief tag is an olive green chip, the same cause chip style used on the pledge form and supporter wall.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Scroll to the Supporter Wall and look for Maria Alvarez.",
+          "expected": "Maria Alvarez appears exactly once with a combined total of $550 and a Gold badge — not as two separate gift entries.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.154486,
+        "model_calls": 6,
+        "input_tokens_total": 465741,
+        "output_tokens": 4477,
+        "judge_usd": 0.4607
+      }
+    },
+    {
+      "turn": 7,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open Share Studio and click the progress template button.",
+          "expected": "The generated message includes $2,040 and 25.5% — the live campaign numbers, not placeholders.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 1,
+          "task": "Clear the message box and type Give big now, with no punctuation at the end.",
+          "expected": "The character counter reflects a 12-character message against the 240 limit and updates while typing, with no submit needed.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 2,
+          "task": "Click the progress template, then keep typing extra text at the end of the message until the counter passes 240.",
+          "expected": "The counter visibly flags the overage and the copy action is disabled until the message is trimmed back under the limit.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the pledge form, pledge a custom $120 as Ava Long for Education, then open Share Studio and click the progress template.",
+          "expected": "The inserted message uses the fresh numbers: $2,160 raised and 8 supporters.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 4,
+          "task": "Add Silent Auction Preview and Donor Lunch to the plan and open the review.",
+          "expected": "No overlap is flagged — one ends at 12:30 PM exactly as the other starts — and the plan can be confirmed with both sessions.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 2,
+      "partial": 2,
+      "no": 1,
+      "total": 5,
+      "accuracy": 60.0,
+      "cost": {
+        "generation_usd": 0.103807,
+        "model_calls": 7,
+        "input_tokens_total": 602335,
+        "output_tokens": 5111,
+        "judge_usd": 2.5099
+      }
+    },
+    {
+      "turn": 8,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "In the Updates Hub signup, type jamie@site as the email, pick the Education topic, choose weekly, and try to continue.",
+          "expected": "It is blocked on the form with a message about the invalid email (no dot in the domain) — the review step does not open.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Sign up as jamie@hillpost.org with the Education topic and weekly frequency, continue to the review step, and confirm.",
+          "expected": "The review step shows exactly those three choices before confirming, and afterwards jamie@hillpost.org appears in the Subscribers view.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Open the Subscribers view without adding anyone.",
+          "expected": "Exactly three seeded subscribers are listed: ross@maplemail.org, amina@riverpost.net, and kai@sunmail.co.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "Find amina@riverpost.net in the Subscribers view.",
+          "expected": "Her Clean Water topic appears as a steel blue chip, the same cause chip style used on the pledge form and supporter wall.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "In the partner directory, check the Clean Water and Education cause boxes and set the region to North.",
+          "expected": "Exactly two partners remain: Clearwater Trust and ReadRight Alliance — either checked cause counts, but both results are in the North.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 5,
+      "partial": 0,
+      "no": 0,
+      "total": 5,
+      "accuracy": 100.0,
+      "cost": {
+        "generation_usd": 0.258173,
+        "model_calls": 10,
+        "input_tokens_total": 982728,
+        "output_tokens": 8225,
+        "judge_usd": 0.4222
+      }
+    },
+    {
+      "turn": 9,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Look at the offers section on the home page.",
+          "expected": "Offer cards have rounded corners with a thin peru border on the cornsilk background, and their action buttons are deep forest green with white text instead of peru.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 1,
+          "task": "Open the Campaign Pulse dashboard.",
+          "expected": "The main heading is left-aligned with a short peru accent bar under it, and dollar figures like the total raised are bold dark brown.",
+          "verdict": "no"
+        },
+        {
+          "task_idx": 2,
+          "task": "Find Maria Alvarez on the supporter wall.",
+          "expected": "Her badge is now a goldenrod pill with white text reading Gold, and her total still reads $550.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the partner directory, check the Food Relief cause box.",
+          "expected": "Filtering still works — Meal Makers Guild, Harvest Hands, and PantryLink remain — and the partner cards show the new rounded corners with a thin peru border.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "On the Supporter Wall, find Priya Shah and Lena Fischer.",
+          "expected": "Priya Shah shows a Gold badge at exactly $500 and Lena Fischer shows a Silver badge at exactly $100 — the tier thresholds include the boundary amounts.",
+          "verdict": "yes"
+        }
+      ],
+      "yes": 3,
+      "partial": 0,
+      "no": 2,
+      "total": 5,
+      "accuracy": 60.0,
+      "cost": {
+        "generation_usd": 0.405393,
+        "model_calls": 20,
+        "input_tokens_total": 2266808,
+        "output_tokens": 9394,
+        "judge_usd": 0.4383
+      }
+    },
+    {
+      "turn": 10,
+      "status": "success",
+      "build": {
+        "ok": true
+      },
+      "resumed_trajectory": true,
+      "tasks": [
+        {
+          "task_idx": 0,
+          "task": "Open the Impact Report and look at the Clean Water row.",
+          "expected": "$590 converts to 29 water filters — rounded down, not 30.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 1,
+          "task": "Look at the Education row on the Impact Report.",
+          "expected": "It shows $1,255 raised and 83 book bundles (83, not 84).",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 2,
+          "task": "Scroll to the copyable summary block at the bottom of the Impact Report.",
+          "expected": "The plain-text summary lists all three causes with the same dollar and unit figures shown above it, and its grand total matches the dashboard's $2,040.",
+          "verdict": "partial"
+        },
+        {
+          "task_idx": 3,
+          "task": "In the pledge form, pledge a custom $45 as Omar Reyes for Food Relief, then open the Impact Report.",
+          "expected": "Food Relief now shows $240 and 30 meal boxes, up from $195 and 24.",
+          "verdict": "yes"
+        },
+        {
+          "task_idx": 4,
+          "task": "Open Share Studio and click the progress template button.",
+          "expected": "The generated message includes $2,040 and 25.5% — the live campaign numbers, not placeholders.",
+          "verdict": "partial"
+        }
+      ],
+      "yes": 3,
+      "partial": 2,
+      "no": 0,
+      "total": 5,
+      "accuracy": 80.0,
+      "cost": {
+        "generation_usd": 0.275012,
+        "model_calls": 8,
+        "input_tokens_total": 1013240,
+        "output_tokens": 6202,
+        "judge_usd": 0.3057
+      }
+    }
+  ]
+}

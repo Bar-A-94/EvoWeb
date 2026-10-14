@@ -1,0 +1,579 @@
+{
+ "anchors": [
+  {
+   "en": "Analytics",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3,
+    4,
+    5,
+    7,
+    8
+   ],
+   "translations": {
+    "zh": "数据分析",
+    "he": "אנליטיקס",
+    "hi": "एनालिटिक्स",
+    "de": "Statistiken",
+    "fr": "Statistiques"
+   }
+  },
+  {
+   "en": "Preview",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    10
+   ],
+   "translations": {
+    "zh": "预览",
+    "he": "תצוגה מקדימה",
+    "hi": "पूर्वावलोकन",
+    "de": "Vorschau",
+    "fr": "Aperçu"
+   }
+  },
+  {
+   "en": "Goals",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    8
+   ],
+   "translations": {
+    "zh": "目标",
+    "he": "יעדים",
+    "hi": "लक्ष्य",
+    "de": "Ziele",
+    "fr": "Objectifs"
+   }
+  },
+  {
+   "en": "Digest",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    9,
+    10
+   ],
+   "translations": {
+    "zh": "摘要",
+    "he": "תקציר",
+    "hi": "सारांश",
+    "de": "Zusammenfassung",
+    "fr": "Résumé"
+   }
+  },
+  {
+   "en": "link manager",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "translations": {
+    "zh": "链接管理器",
+    "he": "מנהל קישורים",
+    "hi": "लिंक मैनेजर",
+    "de": "Linkverwaltung",
+    "fr": "gestionnaire de liens"
+   }
+  },
+  {
+   "en": "Top 3",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    2,
+    3,
+    7
+   ],
+   "translations": {
+    "zh": "前3名",
+    "he": "3 המובילים",
+    "hi": "शीर्ष 3",
+    "de": "Top 3",
+    "fr": "Top 3"
+   }
+  },
+  {
+   "en": "Live",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    3,
+    4,
+    5,
+    8
+   ],
+   "translations": {
+    "zh": "上线",
+    "he": "פעיל",
+    "hi": "लाइव",
+    "de": "Aktiv",
+    "fr": "Actif"
+   }
+  },
+  {
+   "en": "Hidden",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    3,
+    4,
+    5,
+    7,
+    8
+   ],
+   "translations": {
+    "zh": "隐藏",
+    "he": "מוסתר",
+    "hi": "छिपा",
+    "de": "Versteckt",
+    "fr": "Masqué"
+   }
+  },
+  {
+   "en": "Move Up",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    6
+   ],
+   "translations": {
+    "zh": "上移",
+    "he": "הזז למעלה",
+    "hi": "ऊपर ले जाएँ",
+    "de": "Nach oben",
+    "fr": "Monter"
+   }
+  },
+  {
+   "en": "Move Down",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    6
+   ],
+   "translations": {
+    "zh": "下移",
+    "he": "הזז למטה",
+    "hi": "नीचे ले जाएँ",
+    "de": "Nach unten",
+    "fr": "Descendre"
+   }
+  },
+  {
+   "en": "Reached",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    8
+   ],
+   "translations": {
+    "zh": "已达成",
+    "he": "הושג",
+    "hi": "पूरा हुआ",
+    "de": "Erreicht",
+    "fr": "Atteint"
+   }
+  },
+  {
+   "en": "Coming up",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    9
+   ],
+   "translations": {
+    "zh": "即将开始",
+    "he": "בקרוב",
+    "hi": "आने वाले",
+    "de": "Demnächst",
+    "fr": "À venir"
+   }
+  },
+  {
+   "en": "Work",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5,
+    8
+   ],
+   "translations": {
+    "zh": "工作",
+    "he": "עבודה",
+    "hi": "काम",
+    "de": "Arbeit",
+    "fr": "Travail"
+   }
+  },
+  {
+   "en": "Content",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5,
+    6,
+    8
+   ],
+   "translations": {
+    "zh": "内容",
+    "he": "תוכן",
+    "hi": "कंटेंट",
+    "de": "Inhalte",
+    "fr": "Contenu"
+   }
+  },
+  {
+   "en": "Offers",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5,
+    6,
+    8,
+    9
+   ],
+   "translations": {
+    "zh": "优惠",
+    "he": "מבצעים",
+    "hi": "ऑफर",
+    "de": "Angebote",
+    "fr": "Offres"
+   }
+  },
+  {
+   "en": "Community",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    5,
+    8
+   ],
+   "translations": {
+    "zh": "社区",
+    "he": "קהילה",
+    "hi": "कम्युनिटी",
+    "de": "Community",
+    "fr": "Communauté"
+   }
+  },
+  {
+   "en": "clicks",
+   "class": "translate",
+   "kind": "content_text",
+   "requests": [
+    2,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9
+   ],
+   "translations": {
+    "zh": "次点击",
+    "he": "קליקים",
+    "hi": "क्लिक",
+    "de": "Klicks",
+    "fr": "clics"
+   }
+  },
+  {
+   "en": "viewing-as-of",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    4,
+    5,
+    6,
+    10
+   ],
+   "translations": {
+    "zh": "查看日期",
+    "he": "צפייה נכון לתאריך",
+    "hi": "देखने की तारीख",
+    "de": "Anzeigen zum Datum",
+    "fr": "Afficher à la date du"
+   }
+  },
+  {
+   "en": "profile setup",
+   "class": "translate",
+   "kind": "ui_label",
+   "requests": [
+    10
+   ],
+   "translations": {
+    "zh": "个人资料设置",
+    "he": "הגדרת פרופיל",
+    "hi": "प्रोफ़ाइल सेटअप",
+    "de": "Profil-Einrichtung",
+    "fr": "configuration du profil"
+   }
+  },
+  {
+   "en": "My Portfolio",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    3,
+    5,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "en": "YouTube Channel",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    3,
+    5,
+    6,
+    7,
+    8
+   ]
+  },
+  {
+   "en": "Newsletter",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    3,
+    5,
+    6,
+    7,
+    9
+   ]
+  },
+  {
+   "en": "Merch Store",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    9
+   ]
+  },
+  {
+   "en": "Podcast",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    4,
+    5,
+    6
+   ]
+  },
+  {
+   "en": "Discord",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    3,
+    4,
+    5,
+    7,
+    8
+   ]
+  },
+  {
+   "en": "Book a Call",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    2,
+    4,
+    5,
+    6,
+    9
+   ]
+  },
+  {
+   "en": "Casey Quinn",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    10
+   ]
+  },
+  {
+   "en": "CQ",
+   "class": "keep",
+   "kind": "proper_noun",
+   "requests": [
+    10
+   ]
+  },
+  {
+   "en": "myportfolio.dev",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    2
+   ]
+  },
+  {
+   "en": "youtube.com/@casey",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    2
+   ]
+  },
+  {
+   "en": "caseywrites.substack.com",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    2
+   ]
+  },
+  {
+   "en": "shop.casey.co",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    2
+   ]
+  },
+  {
+   "en": "pod.casey.co",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    2
+   ]
+  },
+  {
+   "en": "discord.gg/casey",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    2
+   ]
+  },
+  {
+   "en": "cal.com/casey",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    2
+   ]
+  },
+  {
+   "en": "blog.casey.co",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    2
+   ]
+  },
+  {
+   "en": "gallery.casey.co",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    2
+   ]
+  },
+  {
+   "en": "free.casey.co",
+   "class": "keep",
+   "kind": "tech",
+   "requests": [
+    3
+   ]
+  },
+  {
+   "en": "papaya whip",
+   "class": "keep",
+   "kind": "css_visual",
+   "requests": [
+    1,
+    7
+   ]
+  },
+  {
+   "en": "dark orange",
+   "class": "keep",
+   "kind": "css_visual",
+   "requests": [
+    1,
+    7
+   ]
+  },
+  {
+   "en": "teal",
+   "class": "keep",
+   "kind": "css_visual",
+   "requests": [
+    7,
+    10
+   ]
+  },
+  {
+   "en": "white",
+   "class": "keep",
+   "kind": "css_visual",
+   "requests": [
+    7,
+    10
+   ]
+  },
+  {
+   "en": "green",
+   "class": "keep",
+   "kind": "css_visual",
+   "requests": [
+    3
+   ]
+  },
+  {
+   "en": "gray",
+   "class": "keep",
+   "kind": "css_visual",
+   "requests": [
+    3,
+    7
+   ]
+  },
+  {
+   "en": "#0F766E",
+   "class": "keep",
+   "kind": "value_format",
+   "requests": [
+    7
+   ]
+  }
+ ]
+}
