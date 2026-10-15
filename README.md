@@ -1,14 +1,33 @@
+<div align="center">
+
+<img src="media/logo.svg" width="64" alt="">
+
 # EvoWeb
 
 Code, data and traces for **EvoWeb: A Benchmark for Coding Agents on Evolving Web Applications**
 (ICLR 2027 submission).
 
-[![Dataset on Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-yellow)](https://huggingface.co/datasets/TD-Labs/EvoWeb)
+[![Blog](https://img.shields.io/badge/Blog-EvoWeb-1f5fd1?style=for-the-badge)](https://two-delta.github.io/evoweb-blog/)
+[![Paper on arXiv](https://img.shields.io/badge/arXiv-2610.16402-b31b1b?style=for-the-badge)](https://arxiv.org/abs/2610.16402)
+[![Dataset on Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-yellow?style=for-the-badge)](https://huggingface.co/datasets/TD-Labs/EvoWeb)
+
+<a href="https://two-delta.github.io/evoweb-blog/"><img src="media/teaser.gif" width="100%" alt="EvoWeb in 30 seconds: a coding agent handles the requests of one app one by one, and after each one a browser agent judges the live app"></a>
+
+<sub><i>EvoWeb in 30 seconds: a coding agent handles one app's requests one by one, and after each one a
+browser agent judges the live app (real trace: app 000001, opus-4.8-run1). More on the
+<a href="https://two-delta.github.io/evoweb-blog/">blog</a>.</i></sub>
+
+</div>
+
+<details>
+<summary><b>How the benchmark is built and scored</b> (figure)</summary>
 
 ![EvoWeb overview. (A) Benchmark construction: WebGen-Bench seed prompts, grounded in real websites, expanded into a 10-request sequence with a dependency DAG, verified automatically and curated by hand into 32 applications times 10 requests. (B) Evaluating an evolving application: a coding agent handles the requests one after another; after each one a browser agent runs 5 tests (3 functional, 1 integration, 1 backward) and the trajectory is scored over user-tolerance thresholds.](media/method.png)
 
 *Left: how the 32 apps and their 10-request sequences were built. Right: how an agent is
 evaluated on one app, request after request.*
+
+</details>
 
 EvoWeb gives a coding agent 32 web apps to build and then extend, request by request: a first
 build and nine follow-up requests per app, each adding a feature that may depend on earlier ones.
@@ -125,7 +144,7 @@ examples_artifacts/
 ablations/      the paper's DAG, grounding and multilingual analyses
 tests/          offline tests (scoring, datasets, harness) + the opt-in live reproduction test
 infra/          running at scale on Kubernetes: launcher, job template, node pool, README
-media/          the method figure and the judge demo video
+media/          the method figure, the judge demo video, the teaser (from the blog) and the logo
 ```
 
 ## Citation
