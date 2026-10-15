@@ -20,13 +20,15 @@ app. **Grade** summarises how much working functionality survives the whole sequ
 <div align="center">
 <table>
   <tr>
-    <td align="center" width="640">
-      <a href="media/webvoyager-demo.mp4"><img src="media/webvoyager-demo.gif" width="640" alt="The judge testing a Fable 5 app: numbered screenshot, thought, action, verdict"></a>
+    <td align="center" width="720">
+      <a href="media/evaluation-teaser.mp4"><img src="media/evaluation-teaser.gif" width="720" alt="One app, request after request: the user asks, the coding agent builds, the browser agent judges the live app check by check, and the request's pass rate lands on the timeline"></a>
       <br>
-      <sub><i>The judge at work: two checks on the last of the 10 requests of a hiring app that Fable 5
-      built, about 20× faster than real time. The browser agent sees the page with numbered elements,
-      thinks, acts and gives a verdict. Every step's screenshot, thought and action is kept in the
-      traces (<a href="media/webvoyager-demo.mp4">video</a>).</i></sub>
+      <sub><i>One app, request after request. Left: the user asks, the coding agent builds. Right: the browser
+      agent judges the live app, check by check, and the request's pass rate lands on the timeline. Every
+      request, tool call, screenshot and judge step is from the released trace of app 000001 (Opus 4.8);
+      request 1's verdicts are adjusted to show every grade. <a href="media/evaluation-teaser.mp4">Video</a>,
+      <a href="media/evaluation-demo.mp4">the 80-second version</a> with the scoring, and
+      <a href="media/evaluation-demo/">the source</a>.</i></sub>
     </td>
   </tr>
 </table>

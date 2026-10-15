@@ -1,0 +1,943 @@
+{
+ "app": "000001",
+ "run": "opus-4.8-run1",
+ "model": "Opus 4.8",
+ "judge": "Claude Sonnet 4.6",
+ "requests": [
+  {
+   "id": "R1",
+   "label": "Seed app",
+   "archetype": "build",
+   "text": "Build a website that generates stock reports: search a stock by code or name, summarise it, and generate a customised report from the sections I pick.",
+   "checks": [
+    {
+     "kind": "feature",
+     "verdict": "yes",
+     "task": "Verify the stock search functionality by entering a valid stock code."
+    },
+    {
+     "kind": "feature",
+     "verdict": "yes",
+     "task": "Test the report customization feature by selecting different report formats and content options."
+    },
+    {
+     "kind": "feature",
+     "verdict": "yes",
+     "task": "Input a stock name instead of a stock code to search for stock information."
+    },
+    {
+     "kind": "feature",
+     "verdict": "yes",
+     "task": "Generate a customized stock report by choosing specific elements to include (e.g., market trends, financial data)."
+    },
+    {
+     "kind": "feature",
+     "verdict": "yes",
+     "task": "Navigate through the website and test all buttons function correctly by clicking each of them and back to the homepage."
+    },
+    {
+     "kind": "feature",
+     "verdict": "partial",
+     "task": "Evaluate the website's form inputs by submitting incomplete or incorrect stock information."
+    },
+    {
+     "kind": "feature",
+     "verdict": "yes",
+     "task": "Verify that the website uses 'white' as the background color and 'navy' as the component color, as specified in the design requirements."
+    }
+   ],
+   "accuracy": 92.9,
+   "calls": [
+    {
+     "kind": "execute",
+     "title": "Explore project structure and key files",
+     "arg": "ls -la && echo \"---APP---\" && cat src/App.jsx && echo \"---HOME---\" && "
+    },
+    {
+     "kind": "execute",
+     "title": "Check vite config and node_modules presence",
+     "arg": "cat vite.config.js && echo \"---\" && ls node_modules >/dev/null 2>&1 &&"
+    },
+    {
+     "kind": "execute",
+     "title": "Start npm install in background",
+     "arg": "(npm install > /tmp/npm-install.log 2>&1 &) && echo \"install started\""
+    },
+    {
+     "kind": "edit",
+     "title": "Create stock data module",
+     "arg": "create"
+    },
+    {
+     "kind": "edit",
+     "title": "Create Sparkline chart component",
+     "arg": "create"
+    },
+    {
+     "kind": "execute",
+     "title": "Create data and components directories",
+     "arg": "mkdir -p src/data src/components && ls src"
+    },
+    {
+     "kind": "edit",
+     "title": "Create stock data module",
+     "arg": "create"
+    },
+    {
+     "kind": "edit",
+     "title": "Create Sparkline chart component",
+     "arg": "create"
+    },
+    {
+     "kind": "edit",
+     "title": "Create Home page with search and stock cards",
+     "arg": "create"
+    },
+    {
+     "kind": "edit",
+     "title": "Rewrite Home page",
+     "arg": "str_replace"
+    },
+    {
+     "kind": "edit",
+     "title": "Create localStorage hook",
+     "arg": "create"
+    },
+    {
+     "kind": "execute",
+     "title": "Create lib directory",
+     "arg": "mkdir -p src/lib && echo done"
+    },
+    {
+     "kind": "edit",
+     "title": "Create localStorage hook",
+     "arg": "create"
+    },
+    {
+     "kind": "edit",
+     "title": "Create ReportView component",
+     "arg": "create"
+    },
+    {
+     "kind": "edit",
+     "title": "Create Generate page",
+     "arg": "create"
+    },
+    {
+     "kind": "edit",
+     "title": "Create Reports page",
+     "arg": "create"
+    },
+    {
+     "kind": "edit",
+     "title": "Register routes and nav links in App",
+     "arg": "str_replace"
+    },
+    {
+     "kind": "execute",
+     "title": "View tailwind config",
+     "arg": "cat tailwind.config.js"
+    },
+    {
+     "kind": "edit",
+     "title": "Add navy color palette to tailwind config",
+     "arg": "str_replace"
+    },
+    {
+     "kind": "execute",
+     "title": "Check npm install status",
+     "arg": "tail -3 /tmp/npm-install.log && ls node_modules >/dev/null 2>&1 && ech"
+    },
+    {
+     "kind": "execute",
+     "title": "Run production build",
+     "arg": "npm run build 2>&1 | tail -20"
+    }
+   ],
+   "app": "app/r1.png",
+   "judge": {
+    "task": "Verify the stock search functionality by entering a valid stock code.",
+    "steps": [
+     {
+      "step": 1,
+      "of": 5,
+      "thought": "I'll enter a valid stock code in the search textbox to test the stock search functionality.",
+      "action": "Type [4]; AAPL",
+      "shot": "judge/r1_1.png"
+     },
+     {
+      "step": 2,
+      "of": 5,
+      "thought": "The search for \"AAPL\" has filtered the tracked stocks to show only Apple Inc. I can see basic stock information. Now let me click on the AAPL stock card to see if it shows more detailed information like market trends and financial data.",
+      "action": "Click [6]",
+      "shot": "judge/r1_2.png"
+     },
+     {
+      "step": 3,
+      "of": 5,
+      "thought": "I can see the \"Generate a Stock Report\" page with AAPL already entered and matched to \"Apple Inc. (AAPL)\". The report content options show checkboxes for Basic stock information, Market trends, Financial data, and Analysis & outlook. Let me click \"Generate report\" to see the full stock report.",
+      "action": "Click [10]",
+      "shot": "judge/r1_3.png"
+     },
+     {
+      "step": 5,
+      "of": 5,
+      "thought": "The report is showing all the expected sections:\n- Basic stock information (price $227.52, change)\n- Market Trend (with a chart, 52W High/Low, Volume, Beta, P/E Ratio, Div Yield)\n- Financial Data (Revenue, Net Income, Gross Margin, EPS, Debt/Equity, Free Cash Flow)\n- Analysis & Outlook (text analysis)\n\nThe expected result has been fully achieved. The system returned relevant stock information and analysis corresponding to the entered stock code (AAPL), displaying basic stock information, market trends, and financial data.",
+      "action": "ANSWER; YES",
+      "shot": "judge/r1_5.png"
+     }
+    ],
+    "verdict": "YES"
+   }
+  },
+  {
+   "id": "R2",
+   "label": "Derived feature",
+   "archetype": "derived-state",
+   "text": "Pin down a demo universe of exactly these eight stocks, and add a screener that filters and sorts them by sector, P/E, dividend yield and market cap.",
+   "checks": [
+    {
+     "kind": "feature",
+     "verdict": "yes",
+     "task": "On the screener, check the Technology and Healthcare sector boxes and type 1.0 into the minimum dividend yield box."
+    },
+    {
+     "kind": "exact-value",
+     "verdict": "yes",
+     "task": "On the screener, clear any active filters, then sort the results by the P/E column in ascending order."
+    },
+    {
+     "kind": "feature",
+     "verdict": "yes",
+     "task": "Click the built-in 'Dividend Payers' preset on the screener."
+    },
+    {
+     "kind": "integration",
+     "verdict": "yes",
+     "task": "Click the Comet Energy row in the screener results."
+    },
+    {
+     "kind": "regression",
+     "verdict": "yes",
+     "task": "Type CMET into the stock search and generate a report with all content options selected."
+    }
+   ],
+   "accuracy": 100.0,
+   "calls": [
+    {
+     "kind": "execute",
+     "title": "Remove old stocks data file",
+     "arg": "rm src/data/stocks.js && echo removed"
+    },
+    {
+     "kind": "edit",
+     "title": "Rewrite stocks data with fixed 8-stock universe",
+     "arg": "create"
+    },
+    {
+     "kind": "edit",
+     "title": "Create percentage and market cap formatting helpers",
+     "arg": "create"
+    },
+    {
+     "kind": "edit",
+     "title": "Import fmtPct in Home",
+     "arg": "str_replace"
+    },
+    {
+     "kind": "edit",
+     "title": "Use fmtPct for change percent in Home",
+     "arg": "str_replace"
+    },
+    {
+     "kind": "edit",
+     "title": "Import formatters in ReportView",
+     "arg": "str_replace"
+    },
+    {
+     "kind": "edit",
+     "title": "Use fmtPct for header change percent",
+     "arg": "str_replace"
+    },
+    {
+     "kind": "edit",
+     "title": "Use formatMarketCap in overview",
+     "arg": "str_replace"
+    },
+    {
+     "kind": "edit",
+     "title": "Use fmtPct for dividend yield",
+     "arg": "str_replace"
+    },
+    {
+     "kind": "edit",
+     "title": "Use fmtPct for gross margin stat",
+     "arg": "str_replace"
+    },
+    {
+     "kind": "edit",
+     "title": "Use fmtPct for gross margin in analysis text",
+     "arg": "str_replace"
+    },
+    {
+     "kind": "edit",
+     "title": "Create Screener page with filters, presets, sorting",
+     "arg": "create"
+    },
+    {
+     "kind": "edit",
+     "title": "Import Screener page",
+     "arg": "str_replace"
+    },
+    {
+     "kind": "edit",
+     "title": "Add Screener nav link",
+     "arg": "str_replace"
+    },
+    {
+     "kind": "edit",
+     "title": "Add Screener route",
+     "arg": "str_replace"
+    },
+    {
+     "kind": "execute",
+     "title": "Run production build to verify",
+     "arg": "npm run build 2>&1 | tail -15"
+    }
+   ],
+   "app": "app/r2.png",
+   "judge": {
+    "task": "On the screener, check the Technology and Healthcare sector boxes and type 1.0 into the minimum dividend yield box.",
+    "steps": [
+     {
+      "step": 1,
+      "of": 8,
+      "thought": "I need to navigate to the Screener page to complete the task.",
+      "action": "Click [2]",
+      "shot": "judge/r2_1.png"
+     },
+     {
+      "step": 2,
+      "of": 8,
+      "thought": "I can see the Stock Screener page. I need to:\n1. Check the Technology and Healthcare sector boxes\n2. Type 1.0 into the minimum dividend yield box\n\nI can see there are sector checkboxes. Currently it seems all sectors might be selected (showing \"8 of 8 match\"). I need to first click \"None\" to deselect all, then select Technology and Healthcare. Let me first click \"None\" to clear all sectors.",
+      "action": "Click [6]",
+      "shot": "judge/r2_2.png"
+     },
+     {
+      "step": 6,
+      "of": 8,
+      "thought": "Technology sector is now selected (3 of 8 match). I can see Argent Micro, Ember Semiconductor, and Helix Software from the Technology sector. Now I need to also select Healthcare. Looking at the screenshot, I need to find the Healthcare checkbox. The sectors in order are: Technology (checked), Industrials, Energy, Consumer Goods, Healthcare, Utilities. Since [7] was Technology, [8] is Industrials, [9] or [10] could be Energy/Consumer Goods, and Healthcare would be around [11] or [12]. Let me try clicking the Healthcare checkbox - it should be element [11] or [12].",
+      "action": "Click [11]",
+      "shot": "judge/r2_6.png"
+     },
+     {
+      "step": 7,
+      "of": 8,
+      "thought": "Healthcare is now checked (4 of 8 match). I can see Technology and Healthcare stocks: Argent Micro, Ember Semiconductor, Fjord Pharma, and Helix Software. Now I need to type 1.0 into the minimum dividend yield box. The Yield % input field is visible on the left panel. I need to click element [14] or the yield textbox to type 1.0.\n\nLooking at the labels, [13] is the P/E textbox and [14] is the Yield % textbox. Let me type into the Yield % textbox.",
+      "action": "Type [14]; 1.0",
+      "shot": "judge/r2_7.png"
+     },
+     {
+      "step": 8,
+      "of": 8,
+      "thought": "The task has been completed successfully. The results show:\n- Technology and Healthcare sector boxes are checked\n- Minimum dividend yield is set to 1.0\n- The results show \"2 of 8 match\" with only Fjord Pharma (Healthcare, 2.5% yield) and Helix Software (Technology, 1.1% yield) remaining\n- Argent Micro (0.0% yield) and Ember Semiconductor (0.4% yield) are excluded for low yield\n\nThis matches the expected result exactly.",
+      "action": "ANSWER; YES",
+      "shot": "judge/r2_8.png"
+     }
+    ],
+    "verdict": "YES"
+   }
+  },
+  {
+   "id": "R3",
+   "label": "Multi-page workflow",
+   "archetype": "multi-surface-workflow",
+   "text": "Now I need somewhere to keep candidates: add a Watchlist page with two groups, Core and Speculative, fed from the screener rows.",
+   "checks": [
+    {
+     "kind": "feature",
+     "verdict": "yes",
+     "task": "Open the Watchlist page on a fresh load."
+    },
+    {
+     "kind": "exact-value",
+     "verdict": "partial",
+     "task": "From the screener results, click the add-to-watchlist control on the Comet Energy row and choose the Core group, then open the Watchlist page."
+    },
+    {
+     "kind": "feature",
+     "verdict": "yes",
+     "task": "On the Watchlist, move Helix Software from Speculative to Core."
+    },
+    {
+     "kind": "integration",
+     "verdict": "no",
+     "task": "In the screener, click add-to-watchlist on the Greenline Utilities row, choose Speculative, then open the Watchlist page."
+    },
+    {
+     "kind": "regression",
+     "verdict": "yes",
+     "task": "On the screener, clear any active filters, then sort the results by the P/E column in ascending order."
+    }
+   ],
+   "accuracy": 70.0,
+   "calls": [
+    {
+     "kind": "execute",
+     "title": "Check main.jsx router setup",
+     "arg": "cat src/main.jsx"
+    },
+    {
+     "kind": "edit",
+     "title": "Create watchlist context provider",
+     "arg": "create"
+    },
+    {
+     "kind": "edit",
+     "title": "Create TickerBadge component",
+     "arg": "create"
+    },
+    {
+     "kind": "edit",
+     "title": "Create AddToWatchlist control",
+     "arg": "create"
+    },
+    {
+     "kind": "edit",
+     "title": "Create Watchlist page",
+     "arg": "create"
+    },
+    {
+     "kind": "edit",
+     "title": "Wrap app in provider, add Watchlist route and link",
+     "arg": "str_replace"
+    },
+    {
+     "kind": "edit",
+     "title": "Import TickerBadge in Home",
+     "arg": "str_replace"
+    },
+    {
+     "kind": "edit",
+     "title": "Use TickerBadge in Home cards",
+     "arg": "str_replace"
+    },
+    {
+     "kind": "edit",
+     "title": "Import badge and add-control in ReportView",
+     "arg": "str_replace"
+    },
+    {
+     "kind": "edit",
+     "title": "Add badge and watchlist control to report header",
+     "arg": "str_replace"
+    },
+    {
+     "kind": "edit",
+     "title": "Import badge and add-control in Screener",
+     "arg": "str_replace"
+    },
+    {
+     "kind": "edit",
+     "title": "Add Watch header column",
+     "arg": "str_replace"
+    },
+    {
+     "kind": "edit",
+     "title": "Use TickerBadge in Company cell",
+     "arg": "str_replace"
+    },
+    {
+     "kind": "edit",
+     "title": "Add Watch cell and fix empty colSpan",
+     "arg": "str_replace"
+    },
+    {
+     "kind": "execute",
+     "title": "Run production build to verify",
+     "arg": "npm run build 2>&1 | tail -15"
+    }
+   ],
+   "app": "app/r3.png",
+   "judge": {
+    "task": "In the screener, click add-to-watchlist on the Greenline Utilities row, choose Speculative, then open the Watchlist page.",
+    "steps": [
+     {
+      "step": 1,
+      "of": 20,
+      "thought": "I need to navigate to the Screener page first to find the Greenline Utilities row and add it to the watchlist.",
+      "action": "Click [2]",
+      "shot": "judge/r3_1.png"
+     },
+     {
+      "step": 2,
+      "of": 20,
+      "thought": "I can see the Screener page with the Greenline Utilities row (GRNL). I need to scroll down to see the full row and find the \"+ Watch\" button for Greenline Utilities. I can see it's partially visible at the bottom. Let me scroll down to see it fully.",
+      "action": "Scroll [WINDOW]; down",
+      "shot": "judge/r3_2.png"
+     },
+     {
+      "step": 6,
+      "of": 20,
+      "thought": "I can see that clicking on element 85 (the \"CoreSpeculative\" area in the GRNL row) has opened a dropdown with options \"Core\" and \"Speculative\". I need to click on \"Speculative\" to select it. But wait - this seems to be for a different row. Looking at the screenshot, the dropdown appeared near the FJRD row area (element 75-76). Actually, looking more carefully, the dropdown with \"Core\" and \"Speculative\" options appeared in the GRNL row area. I need to click \"Speculative\".",
+      "action": "Click [95]",
+      "shot": "judge/r3_6.png"
+     },
+     {
+      "step": 13,
+      "of": 20,
+      "thought": "Clicking element 79 (Greenline Utilities) navigated me to the Generate Stock Report page with GRNL pre-filled. This is not what I wanted. I need to go back to the Screener and find the \"+ Watch\" button for the GRNL row, then select Speculative. \n\nLooking at the element layout again:\n- Element 48 is \"+ Watch\" for CMET (every ~3 rows pattern)\n- Element 76 is \"+ Watch\" for FJRD\n- Element 95 is \"+ Watch\" for HLXS\n\nBut there's no \"+ Watch\" for GRNL between elements 77-85. This means GRNL doesn't have a visible \"+ Watch\" button in the default view.\n\nWait - looking at the table from the previous screenshots, the \"+ Watch\" buttons appear to be at the far right of the table, past the \"CoreSpeculative\" toggle. Looking at the element positions:\n- CMET: elements 39-48, and 48 is \"+ Watch\"  \n- FJRD: elements 67-76, and 76 is \"+ Watch\"\n- HLXS: elements 86-95, and 95 is \"+ Watch\"\n\nSo the pattern is every 3rd row has a visible \"+ Watch\" button (rows 3, 6, 8). GRNL is row 7 and doesn't seem to have a labeled button. Maybe the button appears on hover.\n\nActually, wait - looking at this differently: CMET=row3, FJRD=row6, HLXS=row8. That's not every 3rd row. Let me look at this more carefully. The buttons 48, 76, 95 seem to appear for CMET (row 3), FJRD (row 6), HLXS (row 8). But the GRNL watch button should exist. Maybe the \"CoreSpeculative\" element 85 itself IS the watch button/toggle. When I clicked it, a dropdown with Core/Speculative appeared, which IS the watchlist categorization. \n\nLet me go back to the Screener and try again - this time clicking on element 85 and then clicking Speculative from the dropdown.",
+      "action": "Click [2]",
+      "shot": "judge/r3_13.png"
+     },
+     {
+      "step": 15,
+      "of": 20,
+      "thought": "Now I can see the full Screener table. The GRNL (Greenline Utilities) row is visible with elements 77-85. The \"+ Watch\" button for GRNL is NOT visible - only CMET (48), FJRD (76), and HLXS (95) have \"+ Watch\" buttons. \n\nBut looking at the GRNL row, element 85 is \"CoreSpeculative\" - this seems to be a toggle/button. The \"+ Watch\" buttons appear for CMET, FJRD, and HLXS but NOT for ARGN, BLTC, DRFT, EMBR, and GRNL.\n\nWait - looking at the screenshot more carefully:\n- CMET has element 47 \"CoreSpeculative\" AND element 48 \"+ Watch\" button - there's a dropdown with \"Core\" and the button\n- FJRD has element 75 \"CoreSpeculative\" AND element 76 \"+ Watch\" button\n- HLXS has element 94 \"CoreSpeculative\" AND element 95 \"+ Watch\" button\n\nBut GRNL only has element 85 \"CoreSpeculative\" - the \"+ Watch\" button is missing/not labeled.\n\nThe \"CoreSpeculative\" element for each row appears to be a dropdown button that, when clicked, shows \"Core\" and \"Speculative\" options. Maybe the \"+ Watch\" button for GRNL is hidden until I interact with element 85.\n\nWait - looking at the image again more carefully. The GRNL row shows \"Core\" on the right side with a dropdown, but no \"+ Watch\" button. Maybe GRNL is already on the watchlist? Or the button is hidden.\n\nLet me try clicking element 85 \"CoreSpeculative\" for GRNL to see the dropdown options.",
+      "action": "Click [85]",
+      "shot": "judge/r3_15.png"
+     }
+    ],
+    "verdict": "NO"
+   }
+  }
+ ],
+ "accuracy": [
+  92.9,
+  100.0,
+  70.0,
+  50.0,
+  100.0,
+  100.0,
+  80.0,
+  100.0,
+  90.0,
+  100.0
+ ],
+ "check_counts": [
+  7,
+  5,
+  5,
+  5,
+  5,
+  5,
+  5,
+  5,
+  5,
+  5
+ ],
+ "scores": {
+  "grade": 0.573,
+  "survival": 6.09,
+  "norm": 88.3,
+  "thresholds": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46,
+   47,
+   48,
+   49,
+   50,
+   51,
+   52,
+   53,
+   54,
+   55,
+   56,
+   57,
+   58,
+   59,
+   60,
+   61,
+   62,
+   63,
+   64,
+   65,
+   66,
+   67,
+   68,
+   69,
+   70,
+   71,
+   72,
+   73,
+   74,
+   75,
+   76,
+   77,
+   78,
+   79,
+   80,
+   81,
+   82,
+   83,
+   84,
+   85,
+   86,
+   87,
+   88,
+   89,
+   90,
+   91,
+   92,
+   93,
+   94,
+   95,
+   96,
+   97,
+   98,
+   99,
+   100
+  ],
+  "q_sweep": [
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   88.29,
+   31.29,
+   31.29,
+   31.29,
+   31.29,
+   31.29,
+   31.29,
+   31.29,
+   31.29,
+   31.29,
+   31.29,
+   31.29,
+   31.29,
+   31.29,
+   31.29,
+   31.29,
+   31.29,
+   31.29,
+   31.29,
+   31.29,
+   31.29,
+   26.29,
+   26.29,
+   26.29,
+   26.29,
+   26.29,
+   26.29,
+   26.29,
+   26.29,
+   26.29,
+   26.29,
+   26.29,
+   26.29,
+   26.29,
+   26.29,
+   26.29,
+   26.29,
+   26.29,
+   26.29,
+   26.29,
+   26.29,
+   26.29,
+   26.29,
+   9.29,
+   9.29,
+   9.29,
+   9.29,
+   9.29,
+   9.29,
+   9.29,
+   9.29
+  ],
+  "s_sweep": [
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   3.0,
+   3.0,
+   3.0,
+   3.0,
+   3.0,
+   3.0,
+   3.0,
+   3.0,
+   3.0,
+   3.0,
+   3.0,
+   3.0,
+   3.0,
+   3.0,
+   3.0,
+   3.0,
+   3.0,
+   3.0,
+   3.0,
+   3.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "table2": [
+  {
+   "model": "Fable 5",
+   "grade": 0.694,
+   "survival": 7.32,
+   "usd": 14.4,
+   "open": false
+  },
+  {
+   "model": "Kimi K3",
+   "grade": 0.684,
+   "survival": 7.31,
+   "usd": 4.17,
+   "open": true
+  },
+  {
+   "model": "GPT 5.6 Sol",
+   "grade": 0.622,
+   "survival": 6.72,
+   "usd": 3.18,
+   "open": false
+  },
+  {
+   "model": "Opus 4.8",
+   "grade": 0.608,
+   "survival": 6.5,
+   "usd": 8.85,
+   "open": false
+  },
+  {
+   "model": "Sonnet 4.6",
+   "grade": 0.607,
+   "survival": 6.55,
+   "usd": 9.93,
+   "open": false
+  },
+  {
+   "model": "GLM 5.2",
+   "grade": 0.552,
+   "survival": 5.93,
+   "usd": 4.02,
+   "open": true
+  },
+  {
+   "model": "DeepSeek V4-Pro",
+   "grade": 0.529,
+   "survival": 5.84,
+   "usd": 1.66,
+   "open": true
+  },
+  {
+   "model": "DeepSeek V4-Flash",
+   "grade": 0.512,
+   "survival": 5.8,
+   "usd": 0.12,
+   "open": true
+  },
+  {
+   "model": "Qwen3.8 2.4T-A95B",
+   "grade": 0.503,
+   "survival": 5.42,
+   "usd": 5.93,
+   "open": true
+  },
+  {
+   "model": "GPT 5.6 Terra",
+   "grade": 0.488,
+   "survival": 5.34,
+   "usd": 2.11,
+   "open": false
+  },
+  {
+   "model": "Haiku 4.5",
+   "grade": 0.377,
+   "survival": 4.43,
+   "usd": 2.31,
+   "open": false
+  },
+  {
+   "model": "Qwen3.5 397B-A17B",
+   "grade": 0.315,
+   "survival": 3.63,
+   "usd": 2.08,
+   "open": true
+  },
+  {
+   "model": "GPT 5.6 Luna",
+   "grade": 0.277,
+   "survival": 3.12,
+   "usd": 0.36,
+   "open": false
+  },
+  {
+   "model": "Qwen3.5 35B-A3B",
+   "grade": 0.162,
+   "survival": 2.09,
+   "usd": 1.54,
+   "open": true
+  }
+ ]
+}
